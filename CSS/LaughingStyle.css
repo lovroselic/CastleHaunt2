@@ -1,4 +1,4 @@
-/* LS CSS v0.7.2 */
+/* LS CSS v0.7.3 */
 
 @charset "utf-8";
 
@@ -136,6 +136,11 @@ h1, h2 {
     color: #FF0000;
 }
 
+.LS {
+    font-family: LaughingSkull;
+    font-size: 76px;
+    text-shadow: 1px 1px gold;
+}
 
 .emulogic, .emulogic p {
     font-family: Emulogic;
@@ -183,8 +188,6 @@ h1, h2 {
 
 .consolas {
     font-family: Consolas;
-/*     font-size: 1.5em;
-    text-shadow: 1px 1px #666; */
 }
 
 

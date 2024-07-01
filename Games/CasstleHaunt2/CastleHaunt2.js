@@ -59,8 +59,8 @@ const GAME = {
 };
 
 const PRG = {
-    VERSION: "0.01.00",
-    NAME: "CastleHaunt II",
+    VERSION: "0.01.01",
+    NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
     CSS: "color: #239AFF;",
@@ -150,7 +150,72 @@ const TITLE = {
     startTitle() {
         console.log("TITLE started");
         $("#pause").prop("disabled", true);
-    }
+        TITLE.clearAllLayers();
+        TITLE.blackBackgrounds();
+        TITLE.titlePlot();
+    },
+    clearAllLayers() {
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS",
+            "Lsideback", "potion", "time", "statusBars", "stat", "gold",
+            "sideback", "keys", "minimap", "scrolls",
+            "compassRose", "compassNeedle", "info"]);
+        ENGINE.clearLayerStack();
+        WebGL.transparent();
+    },
+    blackBackgrounds() {
+        this.topBackground();
+        this.bottomBackground();
+        this.sideBackground();
+        ENGINE.fillLayer("background", "#000");
+    },
+    topBackground() {
+        const CTX = LAYER.title;
+        CTX.fillStyle = "#000";
+        CTX.roundRect(0, 0, ENGINE.titleWIDTH, ENGINE.titleHEIGHT, { upperLeft: 20, upperRight: 20, lowerLeft: 0, lowerRight: 0 }, true, true);
+    },
+    bottomBackground() {
+        const CTX = LAYER.bottom;
+        CTX.fillStyle = "#000";
+        CTX.roundRect(0, 0, ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, { upperLeft: 0, upperRight: 0, lowerLeft: 20, lowerRight: 20 }, true, true);
+    },
+    sideBackground() {
+        ENGINE.fillLayer("sideback", "#000");
+        ENGINE.fillLayer("Lsideback", "#000");
+    },
+    makeGrad(CTX, x, y, w, h) {
+        let grad = CTX.createLinearGradient(x, y, w, h);
+        grad.addColorStop("0", "#DDD");
+        grad.addColorStop("0.1", "#EEE");
+        grad.addColorStop("0.2", "#DDD");
+        grad.addColorStop("0.3", "#AAA");
+        grad.addColorStop("0.4", "#999");
+        grad.addColorStop("0.5", "#666");
+        grad.addColorStop("0.6", "#555");
+        grad.addColorStop("0.7", "#777");
+        grad.addColorStop("0.8", "#AAA");
+        grad.addColorStop("0.9", "#CCC");
+        grad.addColorStop("1", "#EEE");
+        return grad;
+    },
+    titlePlot() {
+        const CTX = LAYER.title;
+        var fs = 76;
+        CTX.font = fs + "px LS";
+        CTX.textAlign = "center";
+        let txt = CTX.measureText(PRG.NAME);
+        let x = ENGINE.titleWIDTH / 2;
+        let y = fs - 16;
+        let gx = x - txt.width / 2;
+        let gy = y - fs;
+        let grad = this.makeGrad(CTX, gx, gy + 10, gx, gy + fs);
+        CTX.fillStyle = grad;
+        GAME.grad = grad;
+        CTX.shadowColor = "#cec967";
+        CTX.shadowOffsetX = 2;
+        CTX.shadowOffsetY = 2;
+        CTX.shadowBlur = 3;
+        CTX.fillText(PRG.NAME, x, y);
+    },
 };
 
 // -- main --
