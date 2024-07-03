@@ -25,4 +25,8 @@ LoadTextures = [
     { srcName: "Title/CastleHaunt2TitlePrincess600.jpg", name: "Title" },
 ];
 
+LoadAudio = [
+    { srcName: "And The Abyss Gazed Back - LaughingSkull.mp3", name: "Title" },
+];
+
 console.log("%cAssets for CastleHaunt ready.", "color: orange");

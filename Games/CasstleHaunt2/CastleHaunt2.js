@@ -46,20 +46,8 @@ const DEBUG = {
 };
 const INI = {};
 
-const GAME = {
-    setup() {
-        console.log("GAME SETUP started");
-        //$("#buttons").prepend("<input type='button' id='startGame' value='Start Game'>");
-        //$("#startGame").prop("disabled", true);
-        $("#conv").remove();
-
-        //$("#p1").on("click", GAME.setFirstPerson);
-        //$("#p3").on("click", GAME.setThirdPerson);
-    },
-};
-
 const PRG = {
-    VERSION: "0.01.02",
+    VERSION: "0.01.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -146,15 +134,133 @@ const PRG = {
     }
 };
 
+const GAME = {
+    start() {
+        console.log("GAME started");
+        if (AUDIO.Title) {
+            AUDIO.Title.pause();
+            AUDIO.Title.currentTime = 0;
+        }
+        $(ENGINE.topCanvas).off("mousemove", ENGINE.mouseOver);
+        $(ENGINE.topCanvas).off("click", ENGINE.mouseClick);
+        $(ENGINE.topCanvas).css("cursor", "");
+        ENGINE.hideMouse();
+
+        $("#pause").prop("disabled", false);
+        $("#pause").off();
+        GAME.paused = true;
+        //$("#p1").prop("disabled", false);
+
+        let GameRD = new RenderData("Pentagram", 50, "#f6602d", "text", "#F22", 2, 2, 2);
+        ENGINE.TEXT.setRD(GameRD);
+        ENGINE.watchVisibility(GAME.lostFocus);
+        ENGINE.GAME.start(16);
+
+        AI.immobileWander = true;
+        //AI.VERBOSE = true;
+        GAME.completed = false;
+        GAME.level = 1;                 //start
+        GAME.gold = 0;
+
+        //set hero
+        ENGINE.VECTOR2D.configure("player");
+        GAME.fps = new FPS_short_term_measurement(300);
+        GAME.prepareForRestart();
+        GAME.time = new Timer("Main");
+
+
+        //dewbug
+        ENGINE.GAME.ANIMATION.stop();
+
+    },
+    prepareForRestart() {
+        let clear = ["background", "text", "FPS", "button", "bottomText", "title"];
+        ENGINE.clearManylayers(clear);
+        TITLE.blackBackgrounds();
+        ENGINE.TIMERS.clear();
+    },
+    setup() {
+        console.log("GAME SETUP started");
+        //$("#buttons").prepend("<input type='button' id='startGame' value='Start Game'>");
+        //$("#startGame").prop("disabled", true);
+        $("#conv").remove();
+
+        //$("#p1").on("click", GAME.setFirstPerson);
+        //$("#p3").on("click", GAME.setThirdPerson);
+    },
+    setTitle() {
+        const text = GAME.generateTitleText();
+        const RD = new RenderData("Pentagram", 20, "#0E0", "bottomText");
+        const SQ = new RectArea(0, 0, LAYER.bottomText.canvas.width, LAYER.bottomText.canvas.height);
+        GAME.movingText = new MovingText(text, 4, RD, SQ);
+    },
+    generateTitleText() {
+        let text = `${PRG.NAME} ${PRG.VERSION
+            }, a game by Lovro Selič, ${"\u00A9"} LaughingSkull ${PRG.YEAR
+            }. 
+             
+            Music: 'And The Abyss Gazed Back' written and performed by LaughingSkull, ${"\u00A9"
+            } 2011 Lovro Selič. `;
+        text += "     ENGINE, SPEECH, GRID, MAZE, Burrows-Wheeler RLE Compression, WebGL and GAME code by Lovro Selič using JavaScript and GLSL. ";
+        text += "     glMatrix library by Brandon Jones and Colin MacKenzie IV. Thanks. ";
+        text = text.split("").join(String.fromCharCode(8202));
+        return text;
+    },
+    runTitle() {
+        if (ENGINE.GAME.stopAnimation) return;
+        GAME.movingText.process();
+        GAME.titleFrameDraw();
+    },
+    titleFrameDraw() {
+        GAME.movingText.draw();
+    },
+    lostFocus() {
+        if (GAME.paused || HERO.dead) return;
+        GAME.clickPause();
+    },
+    clickPause() {
+        $("#pause").trigger("click");
+        ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
+    },
+    pause() {
+        if (GAME.paused) return;
+        console.log("%cGAME paused.", PRG.CSS);
+        $("#pause").prop("value", "Resume Game [F4]");
+        $("#pause").off("click", GAME.pause);
+        $("#pause").on("click", GAME.resume);
+        ENGINE.GAME.ANIMATION.next(ENGINE.KEY.waitFor.bind(null, GAME.clickPause, "F4"));
+        ENGINE.TEXT.centeredText("Game Paused", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
+        GAME.paused = true;
+        ENGINE.TIMERS.stop();
+    },
+    resume() {
+        console.log("%cGAME resumed.", PRG.CSS);
+        $("#pause").prop("value", "Pause Game [F4]");
+        $("#pause").off("click", GAME.resume);
+        $("#pause").on("click", GAME.pause);
+        ENGINE.clearLayer("text");
+        ENGINE.TIMERS.start();
+        ENGINE.GAME.ANIMATION.resetTimer();
+        ENGINE.GAME.ANIMATION.next(GAME.run);
+        GAME.paused = false;
+    },
+};
+
 const TITLE = {
     startTitle() {
         console.log("TITLE started");
+        //if (AUDIO.Title) AUDIO.Title.play(); //dev
         $("#pause").prop("disabled", true);
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         TITLE.titlePlot();
         ENGINE.draw("background", (ENGINE.gameWIDTH - TEXTURE.Title.width) / 2, (ENGINE.gameHEIGHT - TEXTURE.Title.height) / 2, TEXTURE.Title);
         $("#DOWN")[0].scrollIntoView();
+        ENGINE.topCanvas = ENGINE.getCanvasName("ROOM");
+        TITLE.drawButtons();
+        GAME.setTitle();
+        ENGINE.GAME.start(16);
+        ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
         ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS",
@@ -186,17 +292,22 @@ const TITLE = {
     },
     makeGrad(CTX, x, y, w, h) {
         let grad = CTX.createLinearGradient(x, y, w, h);
-        grad.addColorStop("0", "#DDD");
-        grad.addColorStop("0.1", "#EEE");
+        grad.addColorStop("0", "#FF0000");
+        grad.addColorStop("0.05", "#EE0000")
+        grad.addColorStop("0.1", "#DD1111");
+        grad.addColorStop("0.15", "#d92323")
         grad.addColorStop("0.2", "#DDD");
         grad.addColorStop("0.3", "#AAA");
         grad.addColorStop("0.4", "#999");
         grad.addColorStop("0.5", "#666");
         grad.addColorStop("0.6", "#555");
+        grad.addColorStop("0.65", "#666");
         grad.addColorStop("0.7", "#777");
         grad.addColorStop("0.8", "#AAA");
-        grad.addColorStop("0.9", "#CCC");
-        grad.addColorStop("1", "#EEE");
+        grad.addColorStop("0.85", "#d92323")
+        grad.addColorStop("0.9", "#DD1111");
+        grad.addColorStop("0.95", "#EE0000")
+        grad.addColorStop("1", "#FF0000");
         return grad;
     },
     titlePlot() {
@@ -217,6 +328,35 @@ const TITLE = {
         CTX.shadowOffsetY = 2;
         CTX.shadowBlur = 3;
         CTX.fillText(PRG.NAME, x, y);
+    },
+    drawButtons() {
+        ENGINE.clearLayer("button");
+        FORM.BUTTON.POOL.clear();
+        let x = 0;
+        let y = 500;
+        const w = 132;
+        const h = 24;
+        const F = 1.5;
+        let startBA = new Area(x, y, w, h);
+        const buttonColors = new ColorInfo("#F00", "#A00", "#222", "#666", 13);
+        const musicColors = new ColorInfo("#0E0", "#090", "#222", "#666", 13);
+        const checkpointColors = new ColorInfo("#FFF", "#A0A", "#222", "#666", 10);
+        FORM.BUTTON.POOL.push(new Button("Start game", startBA, buttonColors, GAME.start));
+
+        const sg = localStorage.getItem(PRG.SG);
+        //const sg = true;
+        if (sg) {
+            y += F * h;
+            let resumeBA = new Area(x, y, w, h);
+            FORM.BUTTON.POOL.push(new Button("Resume", resumeBA, checkpointColors, GAME.checkpoint));
+        }
+
+        y += F * h;
+        let music = new Area(x, y, w, h);
+        FORM.BUTTON.POOL.push(new Button("Play title music", music, musicColors, TITLE.music));
+        FORM.BUTTON.draw();
+        $(ENGINE.topCanvas).on("mousemove", { layer: ENGINE.topCanvas }, ENGINE.mouseOver);
+        $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, ENGINE.mouseClick);
     },
 };
 
