@@ -59,7 +59,7 @@ const GAME = {
 };
 
 const PRG = {
-    VERSION: "0.01.01",
+    VERSION: "0.01.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -112,7 +112,7 @@ const PRG = {
         ENGINE.sideWIDTH = (ENGINE.titleWIDTH - ENGINE.gameWIDTH) / 2;
         ENGINE.gameHEIGHT = 600;
         ENGINE.titleHEIGHT = 80;
-        ENGINE.bottomHEIGHT = 40;
+        ENGINE.bottomHEIGHT = 80;
         ENGINE.bottomWIDTH = ENGINE.titleWIDTH;
 
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
@@ -153,6 +153,8 @@ const TITLE = {
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         TITLE.titlePlot();
+        ENGINE.draw("background", (ENGINE.gameWIDTH - TEXTURE.Title.width) / 2, (ENGINE.gameHEIGHT - TEXTURE.Title.height) / 2, TEXTURE.Title);
+        $("#DOWN")[0].scrollIntoView();
     },
     clearAllLayers() {
         ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS",
@@ -199,12 +201,12 @@ const TITLE = {
     },
     titlePlot() {
         const CTX = LAYER.title;
-        var fs = 76;
-        CTX.font = fs + "px LS";
+        var fs = 64;
+        CTX.font = fs + "px Pentagram";
         CTX.textAlign = "center";
         let txt = CTX.measureText(PRG.NAME);
         let x = ENGINE.titleWIDTH / 2;
-        let y = fs - 16;
+        let y = fs;
         let gx = x - txt.width / 2;
         let gy = y - fs;
         let grad = this.makeGrad(CTX, gx, gy + 10, gx, gy + fs);

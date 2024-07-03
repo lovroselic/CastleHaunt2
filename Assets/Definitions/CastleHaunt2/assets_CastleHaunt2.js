@@ -7,10 +7,22 @@
 console.log("%cAssets for CastleHaunt started.", "color: orange");
 
 LoadFonts = [
-    { srcName: "MoriaCitadel.ttf", name: "Moria" },
-    { srcName: "AnnieUseYourTelescope.ttf", name: "Annie" },
-    { srcName: "DeepDown.ttf", name: "DeepDown" },
-    { srcName: "LS.ttf", name: "LS" },
+    { srcName: "PentaGram.ttf", name: "Pentagram" },
+    //{ srcName: "AnnieUseYourTelescope.ttf", name: "Annie" },
+    //{ srcName: "DeepDown.ttf", name: "DeepDown" },
+    //{ srcName: "LS.ttf", name: "LS" },
+];
+
+LoadTextures = [
+    /**wall, floor, ceil */
+
+    /** decals that are textures */
+
+    /** object textures */
+
+    //decal-gates
+    //title
+    { srcName: "Title/CastleHaunt2TitlePrincess600.jpg", name: "Title" },
 ];
 
 console.log("%cAssets for CastleHaunt ready.", "color: orange");
