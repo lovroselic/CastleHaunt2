@@ -19,7 +19,7 @@ retests:
 ////////////////////////////////////////////////////
 
 const DEBUG = {
-    FPS: false,
+    FPS: true,
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
@@ -48,7 +48,7 @@ const DEBUG = {
 const INI = {};
 
 const PRG = {
-    VERSION: "0.02.00",
+    VERSION: "0.02.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -108,9 +108,9 @@ const PRG = {
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle"], null);
         ENGINE.addBOX("LSIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["Lsideback", "potion", "time", "statusBars", "stat", "gold"], "side");
-        ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "subtitle", "text", "FPS", "button", "click"], "side");
+        ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "minimap", "scrolls"], "fside");
-        ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText"], null);
+        ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
 
         if (DEBUG._2D_display) {
             ENGINE.addBOX("LEVEL", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["pacgrid", "grid", "coord", "player"], null);
@@ -396,9 +396,9 @@ const GAME = {
         //VANISHING3D.manage(lapsedTime);
         //MISSILE3D.manage(lapsedTime);
         //EXPLOSION3D.manage(date);
-        //ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
+        ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
         //DYNAMIC_ITEM3D.manage(lapsedTime, date);
-        //GAME.respond(lapsedTime);
+        GAME.respond(lapsedTime);
         //MINIMAP.unveil(Vector3.to_FP_Grid(HERO.player.pos), HERO.vision);
         ENGINE.TIMERS.update();
 
@@ -433,6 +433,107 @@ const GAME = {
         ENGINE.clearLayer(ENGINE.VECTOR2D.layerString);
         ENGINE.VECTOR2D.draw(HERO.player);
     },
+    respond(lapsedTime) {
+        if (HERO.dead) return;
+        HERO.player.respond(lapsedTime);
+        const map = ENGINE.GAME.keymap;
+        if (map[ENGINE.KEY.map["1"]]) {
+            GAME.setFirstPerson();
+            return;
+        }
+        if (map[ENGINE.KEY.map["3"]]) {
+            GAME.setThirdPerson();
+            return;
+        }
+        /* if (map[ENGINE.KEY.map.shift]) {
+            if (map[ENGINE.KEY.map.ctrl]) {
+                ENGINE.GAME.keymap[ENGINE.KEY.map.ctrl] = false;
+                HERO.shootBouncy();
+                return;
+            }
+        } */
+
+        if (map[ENGINE.KEY.map.F4]) {
+            $("#pause").trigger("click");
+            ENGINE.TIMERS.display();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
+        }
+        if (map[ENGINE.KEY.map.F7]) {
+            if (!DEBUG.keys) return;
+
+        }
+        if (map[ENGINE.KEY.map.F8]) {
+            if (!DEBUG.keys) return;
+            DEBUG.kill();
+        }
+        if (map[ENGINE.KEY.map.F9]) {
+            if (!DEBUG.keys) return;
+            console.log("\nDEBUG:");
+            console.log("#######################################################");
+            ENTITY3D.display();
+            console.log("MAP", MAP[GAME.level].map);
+            console.info("Inventory:");
+            DEBUG.displayInv();
+            console.log("#######################################################");
+            ENGINE.GAME.keymap[ENGINE.KEY.map.F9] = false;
+        }
+        /*         if (map[ENGINE.KEY.map.left]) {
+                    TITLE.stack.scrollIndex--;
+                    TITLE.stack.scrollIndex = Math.max(0, TITLE.stack.scrollIndex);
+                    TITLE.scrolls();
+                    ENGINE.GAME.keymap[ENGINE.KEY.map.left] = false;
+                    return;
+                } */
+        /*         if (map[ENGINE.KEY.map.right]) {
+                    TITLE.stack.scrollIndex++;
+                    TITLE.stack.scrollIndex = Math.min(
+                        HERO.inventory.scroll.size() - 1,
+                        TITLE.stack.scrollIndex
+                    );
+                    TITLE.scrolls();
+                    ENGINE.GAME.keymap[ENGINE.KEY.map.right] = false;
+                    return;
+                } */
+        /*         if (map[ENGINE.KEY.map.enter]) {
+                    if (HERO.inventory.scroll.size() === 0) {
+                        return;
+                    }
+                    let scroll = HERO.inventory.scroll.remove(TITLE.stack.scrollIndex);
+                    scroll.action();
+                    TITLE.scrolls();
+                    ENGINE.GAME.keymap[ENGINE.KEY.map.enter] = false;
+                } */
+        /*         if (map[ENGINE.KEY.map.H]) {
+                    if (GAME.completed) return;
+                    HERO.usePotion("health");
+                    ENGINE.GAME.keymap[ENGINE.KEY.map.H] = false; //NO repeat
+                } */
+        /*         if (map[ENGINE.KEY.map.M]) {
+                    if (GAME.completed) return;
+                    HERO.usePotion("mana");
+                    ENGINE.GAME.keymap[ENGINE.KEY.map.M] = false; //NO repeat
+                } */
+        if (map[ENGINE.KEY.map.ctrl]) {
+            HERO.shoot();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.ctrl] = false; //NO repeat
+        }
+        if (map[ENGINE.KEY.map.up]) { }
+        if (map[ENGINE.KEY.map.down]) { }
+        if (map[ENGINE.KEY.map.space]) {
+            //HERO.player.attack();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.space] = false; //NO repeat
+        }
+        return;
+    },
+    FPS(lapsedTime) {
+        let CTX = LAYER.FPS;
+        CTX.fillStyle = "white";
+        ENGINE.clearLayer("FPS");
+        let fps = 1000 / lapsedTime || 0;
+        GAME.fps.update(fps);
+        CTX.fillText(GAME.fps.getFps(), 5, 10);
+    },
+
 };
 
 const TITLE = {
