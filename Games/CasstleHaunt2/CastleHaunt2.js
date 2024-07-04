@@ -44,10 +44,11 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
 };
+
 const INI = {};
 
 const PRG = {
-    VERSION: "0.01.03",
+    VERSION: "0.02.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -116,7 +117,11 @@ const PRG = {
         }
 
         /** dev settings */
-        WebGL.verbose = true;
+        if (DEBUG.VERBOSE) {
+            WebGL.verbose = true;
+            AI.VERBOSE = true;
+            ENGINE.verbose = true;
+        }
     },
     start() {
         console.log(PRG.NAME + " started.");
@@ -134,6 +139,25 @@ const PRG = {
     }
 };
 
+const HERO = {
+    construct() {
+        this.player = null;
+        this.dead = false;
+        this.height = 0.6;
+    },
+    speak(txt) {
+        SPEECH.use("Princess");
+        SPEECH.speakWithArticulation(txt);
+        TURN.subtitle(txt);
+    },
+    concludeAction() {
+        // actions are concluded in the animation
+        if (!this.player.actionModes.includes(this.player.mode)) {
+            this.player.setMode("idle");
+        }
+    },
+};
+
 const GAME = {
     start() {
         console.log("GAME started");
@@ -149,7 +173,7 @@ const GAME = {
         $("#pause").prop("disabled", false);
         $("#pause").off();
         GAME.paused = true;
-        //$("#p1").prop("disabled", false);
+        $("#p1").prop("disabled", false);
 
         let GameRD = new RenderData("Pentagram", 50, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
@@ -157,21 +181,111 @@ const GAME = {
         ENGINE.GAME.start(16);
 
         AI.immobileWander = true;
-        //AI.VERBOSE = true;
+
         GAME.completed = false;
         GAME.level = 1;                 //start
         GAME.gold = 0;
 
-        //set hero
+        HERO.construct();
         ENGINE.VECTOR2D.configure("player");
         GAME.fps = new FPS_short_term_measurement(300);
         GAME.prepareForRestart();
         GAME.time = new Timer("Main");
 
+        //SAVE GAME
+        //end SAVE
 
-        //dewbug
-        ENGINE.GAME.ANIMATION.stop();
+        //load from checkpoint
+        //end load
 
+
+        ENGINE.GAME.ANIMATION.stop(); //debug
+        GAME.levelStart();
+    },
+    levelStart() {
+        console.log("starting level", GAME.level);
+        GAME.initLevel(GAME.level);
+        GAME.setFirstPerson();                      //my preference
+        GAME.continueLevel(GAME.level);
+    },
+    continueLevel(level) {
+        GAME.levelExecute();
+    },
+    levelExecute() {
+        GAME.drawFirstFrame(GAME.level);
+        GAME.resume();
+        HERO.speak("Tralala hopsasa!");
+    },
+    initLevel(level) {
+        console.info("init level", level);
+        this.newDungeon(level);
+
+        WebGL.MOUSE.initialize("ROOM");
+        WebGL.setContext('webgl');
+        this.buildWorld(level);
+        let start_dir, start_grid;
+
+        if (GAME.fromCheckpoint) {
+            /* start_dir = MAP[level].map[GAME.loadWayPoint].vector;
+            start_grid = Grid.toClass(MAP[level].map[GAME.loadWayPoint].grid).add(start_dir); */
+            GAME.fromCheckpoint = false;
+        } else {
+            start_dir = MAP[level].map.startPosition.vector;
+            start_grid = MAP[level].map.startPosition.grid;
+        }
+        start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
+
+        //WebGL.CONFIG.set("first_person", true);
+        WebGL.CONFIG.set("third_person", true);
+
+        if (WebGL.CONFIG.firstperson) {
+            //first person
+            HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
+        } else {
+            //third person
+            HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
+            HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
+            HERO.player.associateExternalCamera(HERO.topCamera);
+        }
+
+        AI.initialize(HERO.player, "3D");
+        this.setWorld(level);
+        ENTITY3D.resetTime();
+    },
+    setWorld(level, decalsAreSet = false) {
+        console.time("setWorld");
+        const textureData = {
+            wall: TEXTURE[MAP[level].wall],
+            floor: TEXTURE[MAP[level].floor],
+            ceil: TEXTURE[MAP[level].ceil]
+        };
+
+        WebGL.updateShaders();
+
+        if (WebGL.CONFIG.firstperson) {
+            WebGL.init('webgl', MAP[level].world, textureData, HERO.player, decalsAreSet);              //firstperson
+        } else {
+            WebGL.init('webgl', MAP[level].world, textureData, HERO.topCamera, decalsAreSet);           //thirdperson
+        }
+
+        //MINIMAP.init(MAP[level].map, INI.MIMIMAP_WIDTH, INI.MIMIMAP_HEIGHT, HERO.player);
+        console.timeEnd("setWorld");
+    },
+    buildWorld(level) {
+        console.info("building world, room/dungeon/level:", level);
+        WebGL.init_required_IAM(MAP[level].map, HERO);
+        SPAWN_TOOLS.spawn(level);
+        if (GAME.fromCheckpoint) {
+            console.log(`%c ... loading part 3: affecting MAP and SPAWN from checkpoint ...`, GAME.CSS);
+            /* SAVE_MAP_IAM.load_map(MAP);
+            WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, true);
+            MAP_TOOLS.applyStorageActions(level);
+            WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, false); */
+        }
+        MAP[level].world = WORLD.build(MAP[level].map);
+    },
+    newDungeon(level) {
+        MAP_TOOLS.unpack(level);
     },
     prepareForRestart() {
         let clear = ["background", "text", "FPS", "button", "bottomText", "title"];
@@ -185,8 +299,8 @@ const GAME = {
         //$("#startGame").prop("disabled", true);
         $("#conv").remove();
 
-        //$("#p1").on("click", GAME.setFirstPerson);
-        //$("#p3").on("click", GAME.setThirdPerson);
+        $("#p1").on("click", GAME.setFirstPerson);
+        $("#p3").on("click", GAME.setThirdPerson);
     },
     setTitle() {
         const text = GAME.generateTitleText();
@@ -243,6 +357,81 @@ const GAME = {
         ENGINE.GAME.ANIMATION.resetTimer();
         ENGINE.GAME.ANIMATION.next(GAME.run);
         GAME.paused = false;
+    },
+    setFirstPerson() {
+        $("#p1").prop("disabled", true);
+        $("#p3").prop("disabled", false);
+        WebGL.CONFIG.set("first_person", true);
+        HERO.player.clearCamera();
+        HERO.player.moveSpeed = 4.0;
+        WebGL.setCamera(HERO.player);
+    },
+    setThirdPerson() {
+        //console.info("#### Setting THIRD person view ####");
+        $("#p1").prop("disabled", false);
+        $("#p3").prop("disabled", true);
+        WebGL.CONFIG.set("third_person", true);
+        HERO.player.associateExternalCamera(HERO.topCamera);
+        HERO.player.moveSpeed = 2.0;
+        WebGL.setCamera(HERO.topCamera);
+        //position  update
+        HERO.player.camera.update();
+        HERO.player.matrixUpdate();
+    },
+    drawFirstFrame(level) {
+        console.log("drawing first frame");
+        TITLE.firstFrame();
+        if (DEBUG._2D_display) {
+            ENGINE.resizeBOX("LEVEL", MAP[level].pw, MAP[level].ph);
+            ENGINE.BLOCKGRID.configure("pacgrid", "#FFF", "#000");
+            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            GRID.grid();
+            GRID.paintCoord("coord", MAP[level].map);
+        }
+    },
+    run(lapsedTime) {
+        if (ENGINE.GAME.stopAnimation) return;
+        const date = Date.now();
+        HERO.player.animateAction();
+        //VANISHING3D.manage(lapsedTime);
+        //MISSILE3D.manage(lapsedTime);
+        //EXPLOSION3D.manage(date);
+        //ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
+        //DYNAMIC_ITEM3D.manage(lapsedTime, date);
+        //GAME.respond(lapsedTime);
+        //MINIMAP.unveil(Vector3.to_FP_Grid(HERO.player.pos), HERO.vision);
+        ENGINE.TIMERS.update();
+
+        //const interaction = WebGL.MOUSE.click(HERO);
+        //if (interaction) GAME.processInteraction(interaction);
+
+        GAME.frameDraw(lapsedTime);
+        HERO.concludeAction();
+        if (HERO.dead) GAME.checkIfProcessesComplete();
+        if (GAME.completed) GAME.won();
+    },
+    frameDraw(lapsedTime) {
+        if (DEBUG._2D_display) {
+            GAME.drawPlayer();
+        }
+        WebGL.renderScene();
+        //MINIMAP.draw(HERO.radar);
+        //TITLE.compassNeedle();
+        //TITLE.time();
+
+        if (DEBUG.FPS) {
+            GAME.FPS(lapsedTime);
+        }
+        if (DEBUG._2D_display) {
+            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            //MISSILE3D.draw();
+            //ENTITY3D.drawVector2D();
+            //DYNAMIC_ITEM3D.drawVector2D();
+        }
+    },
+    drawPlayer() {
+        ENGINE.clearLayer(ENGINE.VECTOR2D.layerString);
+        ENGINE.VECTOR2D.draw(HERO.player);
     },
 };
 
@@ -357,6 +546,9 @@ const TITLE = {
         FORM.BUTTON.draw();
         $(ENGINE.topCanvas).on("mousemove", { layer: ENGINE.topCanvas }, ENGINE.mouseOver);
         $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, ENGINE.mouseClick);
+    },
+    firstFrame() {
+        console.info("title first frame");
     },
 };
 

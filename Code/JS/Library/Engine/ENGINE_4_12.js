@@ -43,7 +43,7 @@ const DownRight = new Vector(1, 1);
 const DownLeft = new Vector(-1, 1);
 
 const ENGINE = {
-  VERSION: "4.11",
+  VERSION: "4.12",
   CSS: "color: #0FA",
   INI: {
     ANIMATION_INTERVAL: 16,
@@ -1546,7 +1546,7 @@ const ENGINE = {
         if (!arrPath) return;
         console.log(`%c...loading ${arrPath.length} Models`, ENGINE.CSS);
         ENGINE.LOAD.HMModels = arrPath.length;
-        if (ENGINE.LOAD.HMObjects) appendCanvas("Models");
+        if (ENGINE.LOAD.HMModels) appendCanvas("Models");
         try {
           const model_files = await Promise.all(arrPath.map(model => load_glTF_files(model)));
 
