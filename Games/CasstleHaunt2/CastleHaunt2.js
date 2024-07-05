@@ -45,7 +45,9 @@ const DEBUG = {
     },
 };
 
-const INI = {};
+const INI = {
+    HERO_SHOOT_TIMEOUT: 2000,
+};
 
 const PRG = {
     VERSION: "0.02.01",
@@ -118,7 +120,7 @@ const PRG = {
 
         /** dev settings */
         if (DEBUG.VERBOSE) {
-            WebGL.verbose = true;
+            WebGL.VERBOSE = true;
             AI.VERBOSE = true;
             ENGINE.verbose = true;
         }
@@ -144,6 +146,7 @@ const HERO = {
         this.player = null;
         this.dead = false;
         this.height = 0.6;
+        this.canShoot = true;
     },
     speak(txt) {
         SPEECH.use("Princess");
@@ -156,6 +159,17 @@ const HERO = {
             this.player.setMode("idle");
         }
     },
+    shoot() {
+        if (!HERO.canShoot) return;
+        HERO.canShoot = false;
+
+        console.warn("hero shooting");
+        HERO.player.matrixUpdate();
+
+
+        setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
+        return;
+    }
 };
 
 const GAME = {
@@ -175,7 +189,7 @@ const GAME = {
         GAME.paused = true;
         $("#p1").prop("disabled", false);
 
-        let GameRD = new RenderData("Pentagram", 50, "#f6602d", "text", "#F22", 2, 2, 2);
+        let GameRD = new RenderData("Pentagram", 75, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
         ENGINE.watchVisibility(GAME.lostFocus);
         ENGINE.GAME.start(16);
@@ -205,7 +219,9 @@ const GAME = {
     levelStart() {
         console.log("starting level", GAME.level);
         GAME.initLevel(GAME.level);
-        GAME.setFirstPerson();                      //my preference
+        //GAME.setFirstPerson();                        //my preference
+        //GAME.setThirdPerson();                        //
+        GAME.setTopDownView();                          //
         GAME.continueLevel(GAME.level);
     },
     continueLevel(level) {
@@ -235,17 +251,23 @@ const GAME = {
         }
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
 
-        //WebGL.CONFIG.set("first_person", true);
-        WebGL.CONFIG.set("third_person", true);
+        /** cameras and setting*/
+        HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
+        HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
+        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.0, new Vector3(0, -0.95, 0), 1, 80);
 
-        if (WebGL.CONFIG.firstperson) {
-            //first person
-            HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
-        } else {
-            //third person
-            HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
-            HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
-            HERO.player.associateExternalCamera(HERO.topCamera);
+        switch (WebGL.CONFIG.cameraType) {
+            case "first_person":
+                break;
+            case "third_person":
+                HERO.player.associateExternalCamera(HERO.topCamera);
+                break;
+            case "top_down":
+                HERO.player.associateExternalCamera(HERO.overheadCamera);
+                break;
+            default:
+                throw "WebGL.CONFIG.cameraType error";
+
         }
 
         AI.initialize(HERO.player, "3D");
@@ -295,12 +317,11 @@ const GAME = {
     },
     setup() {
         console.log("GAME SETUP started");
-        //$("#buttons").prepend("<input type='button' id='startGame' value='Start Game'>");
-        //$("#startGame").prop("disabled", true);
         $("#conv").remove();
 
         $("#p1").on("click", GAME.setFirstPerson);
         $("#p3").on("click", GAME.setThirdPerson);
+        $("#pt5").on("click", GAME.setTopDownView);
     },
     setTitle() {
         const text = GAME.generateTitleText();
@@ -359,7 +380,10 @@ const GAME = {
         GAME.paused = false;
     },
     setFirstPerson() {
+        if (WebGL.CONFIG.cameraType === "first_person") return;
+        console.info("#### Setting FIRST person view ####");
         $("#p1").prop("disabled", true);
+        $("#pt5").prop("disabled", false);
         $("#p3").prop("disabled", false);
         WebGL.CONFIG.set("first_person", true);
         HERO.player.clearCamera();
@@ -367,13 +391,29 @@ const GAME = {
         WebGL.setCamera(HERO.player);
     },
     setThirdPerson() {
-        //console.info("#### Setting THIRD person view ####");
+        if (WebGL.CONFIG.cameraType === "third_person") return;
+        console.info("#### Setting THIRD person view ####");
         $("#p1").prop("disabled", false);
+        $("#pt5").prop("disabled", false);
         $("#p3").prop("disabled", true);
         WebGL.CONFIG.set("third_person", true);
         HERO.player.associateExternalCamera(HERO.topCamera);
         HERO.player.moveSpeed = 2.0;
         WebGL.setCamera(HERO.topCamera);
+        //position  update
+        HERO.player.camera.update();
+        HERO.player.matrixUpdate();
+    },
+    setTopDownView() {
+        if (WebGL.CONFIG.cameraType === "top_down") return;
+        console.info("*** Setting TOP DOWN view ***");
+        $("#p1").prop("disabled", false);
+        $("#pt5").prop("disabled", true);
+        $("#p3").prop("disabled", false);
+        WebGL.CONFIG.set("top_down", true);
+        HERO.player.associateExternalCamera(HERO.overheadCamera);
+        HERO.player.moveSpeed = 2.0;
+        WebGL.setCamera(HERO.overheadCamera);
         //position  update
         HERO.player.camera.update();
         HERO.player.matrixUpdate();
@@ -443,6 +483,10 @@ const GAME = {
         }
         if (map[ENGINE.KEY.map["3"]]) {
             GAME.setThirdPerson();
+            return;
+        }
+        if (map[ENGINE.KEY.map["5"]]) {
+            GAME.setTopDownView();
             return;
         }
         /* if (map[ENGINE.KEY.map.shift]) {
@@ -520,7 +564,7 @@ const GAME = {
         if (map[ENGINE.KEY.map.up]) { }
         if (map[ENGINE.KEY.map.down]) { }
         if (map[ENGINE.KEY.map.space]) {
-            //HERO.player.attack();
+            HERO.player.attack();
             ENGINE.GAME.keymap[ENGINE.KEY.map.space] = false; //NO repeat
         }
         return;

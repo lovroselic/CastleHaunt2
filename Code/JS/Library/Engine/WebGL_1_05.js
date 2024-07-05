@@ -38,7 +38,7 @@
  */
 
 const WebGL = {
-    VERSION: "1.04",
+    VERSION: "1.05",
     CSS: "color: gold",
     CTX: null,
     VERBOSE: false,
@@ -67,8 +67,9 @@ const WebGL = {
     },
     CONFIG: {
         firstperson: true,
-        dual: false,
+        dual: true,
         prevent_movement_in_exlusion_grids: true,
+        cameraType: "first_person",
         set(type, dual = false, prevent = true) {
             this.dual = dual;
             this.prevent_movement_in_exlusion_grids = prevent;
@@ -77,12 +78,14 @@ const WebGL = {
                     this.firstperson = true;
                     break;
                 case "third_person":
+                case "top_down":
                     this.firstperson = false;
                     break;
                 default:
                     throw `WebGL CONFIG type error: ${type}`;
             }
-            if (WebGL.VERBOSE) console.info(`%cWebGL set to type: ${type}, dual mode: ${dual}, prevent_movement_in_exlusion_grids: ${prevent}`, WebGL.CSS);
+            this.cameraType = type;
+            if (WebGL.VERBOSE) console.info(`%cWebGL set to type: ${type}, dual mode: ${dual}, prevent_movement_in_exlusion_grids: ${prevent}; camera type: ${this.cameraType}`, WebGL.CSS);
         },
         holesSupported: true,
         supportHoles() {

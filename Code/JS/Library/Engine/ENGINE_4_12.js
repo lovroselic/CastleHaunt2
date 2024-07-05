@@ -967,7 +967,10 @@ const ENGINE = {
       LT: 60,
       LTC: 226,
       1: 49,
+      2: 50,
       3: 51,
+      4: 52,
+      5: 53,
     },
     waitFor(func, key = "enter") {
       if (ENGINE.GAME.stopAnimation) return;
@@ -1024,7 +1027,10 @@ const ENGINE = {
       60: false,    //lt
       226: false,    //lt-chrome
       49: false,     //1
+      50: false,      //2
       51: false,     //3
+      52: false,    //4
+      53: false,    //5
     },
     clearAllKeys() {
       for (var key in ENGINE.GAME.keymap) {

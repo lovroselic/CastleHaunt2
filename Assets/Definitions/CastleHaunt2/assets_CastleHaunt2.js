@@ -15,6 +15,7 @@ LoadTextures = [
     { srcName: "Wall/DarkBrick113.jpg", name: "DarkBrick113" },
     { srcName: "Wall/MarbleFloor104.jpg", name: "MarbleFloor104" },
     { srcName: "Wall/VaultedCeiling1.jpg", name: "VaultedCeiling1" },
+    { srcName: "Wall/StoneWall4.jpg", name: "StoneWall4" },
 
     /** decals that are textures */
 
@@ -27,6 +28,51 @@ LoadTextures = [
 
 LoadAudio = [
     { srcName: "And The Abyss Gazed Back - LaughingSkull.mp3", name: "Title" },
+
+    //action sounds
+    { srcName: "UseScroll.mp3", name: "PickBox" },
+    { srcName: "Scream.mp3", name: "Scream" },
+    { srcName: "SqueekyDoorOpen.mp3", name: "OpenGate" },
+    { srcName: "OpenGate.mp3", name: "LiftGate" },
+    { srcName: "ClosedDoor.mp3", name: "ClosedDoor" },
+    { srcName: "Keys.mp3", name: "Keys" },
+    { srcName: "Swallow.mp3", name: "Swallow" },
+    { srcName: "death.mp3", name: "Death" },
+    { srcName: "UseScroll.mp3", name: "UseScroll" },
+    { srcName: "Scroll.mp3", name: "Scroll" },
+    { srcName: "Potion.mp3", name: "Potion" },
+    { srcName: "Chirp.mp3", name: "Chirp" },
+    { srcName: "Failed magic.mp3", name: "MagicFail" },
+    { srcName: "Cast.mp3", name: "MagicCast" },
+    { srcName: "Power up.mp3", name: "PowerUp" },
+    { srcName: "Level up.mp3", name: "LevelUp" },
+    { srcName: "Pick up gold.mp3", name: "Pick" },
+    { srcName: "Evil laughter.mp3", name: "EvilLaughter" },
+    { srcName: "Explosion1.mp3", name: "Explosion" },
+    { srcName: "OpenChest.mp3", name: "OpenChest" },
+    { srcName: "SwordHit.mp3", name: "SwordHit" },
+    { srcName: "SwordMiss2.mp3", name: "SwordMiss" },
+    { srcName: "short-buzz.mp3", name: "Buzz" },
+    { srcName: "thud.mp3", name: "Thud" },
+    { srcName: "Fuse.mp3", name: "Fuse" },
+    { srcName: "AngryCat.mp3", name: "AngryCat" },
+    { srcName: "Sheep.mp3", name: "Sheep" },
+    { srcName: "Banshee.mp3", name: "Banshee" },
+
+    //monstersounds
+    { srcName: "MonsterDeath.mp3", name: "MonsterDeath" },
+    { srcName: "MonsterAttack1.mp3", name: "MonsterAttack1" },
+    { srcName: "MonsterAttack2.mp3", name: "MonsterAttack2" },
+    { srcName: "SnakeAttack.mp3", name: "SnakeAttack" },
+    { srcName: "MonsterHurt.mp3", name: "MonsterHurt" },
+    { srcName: "MonsterHurt2.mp3", name: "MonsterHurt2" },
+    { srcName: "BatAttack.mp3", name: "BatAttack" },
+    { srcName: "MonsterHurt3.mp3", name: "MonsterHurt3" },
+    { srcName: "PainSqueek.mp3", name: "PainSqueek" },
+    { srcName: "DeathPain1.mp3", name: "DeathPain1" },
+    { srcName: "HumanAttack1.mp3", name: "HumanAttack1" },
+    { srcName: "Ow.mp3", name: "Ow" },
+    { srcName: "MonsterRoar.mp3", name: "MonsterRoar" },
 ];
 
 LoadShaders = [
