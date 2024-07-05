@@ -51,7 +51,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.02.02",
+    VERSION: "0.03.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -220,9 +220,9 @@ const GAME = {
     levelStart() {
         console.log("starting level", GAME.level);
         GAME.initLevel(GAME.level);
-        //GAME.setFirstPerson();                        //my preference
+        GAME.setFirstPerson();                        //my preference
         //GAME.setThirdPerson();                        //
-        GAME.setTopDownView();                          //
+       // GAME.setTopDownView();                          //
         GAME.continueLevel(GAME.level);
     },
     continueLevel(level) {
@@ -436,15 +436,15 @@ const GAME = {
         HERO.player.animateAction();
         //VANISHING3D.manage(lapsedTime);
         //MISSILE3D.manage(lapsedTime);
-        //EXPLOSION3D.manage(date);
+        EXPLOSION3D.manage(date);
         ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
         //DYNAMIC_ITEM3D.manage(lapsedTime, date);
         GAME.respond(lapsedTime);
         //MINIMAP.unveil(Vector3.to_FP_Grid(HERO.player.pos), HERO.vision);
         ENGINE.TIMERS.update();
 
-        //const interaction = WebGL.MOUSE.click(HERO);
-        //if (interaction) GAME.processInteraction(interaction);
+        const interaction = WebGL.MOUSE.click(HERO);
+        if (interaction) GAME.processInteraction(interaction);
 
         GAME.frameDraw(lapsedTime);
         HERO.concludeAction();
@@ -468,6 +468,127 @@ const GAME = {
             //MISSILE3D.draw();
             //ENTITY3D.drawVector2D();
             //DYNAMIC_ITEM3D.drawVector2D();
+        }
+    },
+    processInteraction(interaction) {
+        if (interaction.text) TURN.subtitle(interaction.text);
+        switch (interaction.category) {
+            case 'error':
+                switch (interaction.which) {
+                    case "inventory_full":
+                        if (!HERO.canComplain) break;
+                        const variants = ["I can't carry any more.",
+                            "My bag is full.",
+                            "My bag is breaking at the seams.",
+                            "Don't you see my bag is already full, fool?",
+                            "Put where? There is no space left."
+                        ];
+                        HERO.speak(variants.chooseRandom());
+                        HERO.canComplain = false;
+                        setTimeout(() => HERO.canComplain = true, INI.COMPLAIN_TIMEOUT);
+                        break;
+                    default:
+                        console.error("Usupported interaction error:", interaction.which);
+                }
+                break;
+            case 'title':
+                TITLE[interaction.section]();
+                break;
+            case 'gold':
+                GAME.gold += interaction.value;
+                TITLE.gold();
+                AUDIO.Pick.play();
+                TURN.display(interaction.value, "#AB8D3F");
+                break;
+            case 'key':
+                let key = new Key(interaction.color, interaction.inventorySprite);
+                HERO.inventory.key.push(key);
+                TITLE.keys();
+                AUDIO.Keys.play();
+                display(interaction.inventorySprite);
+                delete MAP[GAME.level].map.keys[interaction.color];
+                if (interaction.text) TURN.subtitle(interaction.text);
+                break;
+            case 'potion':
+                HERO.inventory.potion[interaction.color]++;
+                display(interaction.inventorySprite);
+                TITLE.potion();
+                AUDIO.Potion.play();
+                break;
+            case 'scroll':
+                let type = null;
+                if (interaction.scrollType) {
+                    type = interaction.scrollType;
+                } else {
+                    type = SCROLL_TYPE[interaction.instanceIdentification];
+                }
+
+                let scroll = new Scroll(type);
+                scroll.display();
+                HERO.inventory.scroll.add(scroll);
+                TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
+                TITLE.scrolls();
+                AUDIO.Scroll.play();
+                break;
+            case 'shrine':
+                HERO.raiseStat(interaction.which, interaction.level);
+                display(interaction.inventorySprite);
+                AUDIO.LevelUp.play();
+                HERO.restore();
+                TITLE.status();
+                break;
+            case 'scrollshop':
+                return this.processInteraction({
+                    category: "scroll",
+                    scrollType: interaction.which,
+                });
+            case 'oracle':
+                break;
+            case 'skill':
+                console.log("SKILL", interaction);
+                HERO.raiseStat(interaction.which, interaction.level);
+                display(interaction.inventorySprite);
+                AUDIO.LevelUp.play();
+                TITLE.keys();
+                break;
+            case 'status':
+                console.log("STATUS", interaction);
+                HERO.incStatus(interaction.which, interaction.level);
+                display(interaction.inventorySprite);
+                AUDIO.PowerUp.play();
+                TITLE.keys();
+                break;
+            case 'chest':
+                AUDIO.OpenChest.play();
+                EXPLOSION3D.add(new WoodExplosion(Vector3.from_array(interaction.pos)));
+                return this.processInteraction(evalObjectString(CONTAINER_CONTENT_TYPES, interaction.instanceIdentification));
+            case "rebuild":
+                MAP_TOOLS.rebuild_3D_world(GAME.level);
+                AUDIO.Thud.play();
+                break;
+            case "interaction_item":
+                const item = new NamedInventoryItem(interaction.name, interaction.inventorySprite);
+                HERO.inventory.item.push(item);
+                TITLE.keys();
+                display(interaction.inventorySprite);
+                break;
+            case "entity_interaction":
+                TITLE.keys()
+                break;
+            case "concludeGame":
+                GAME.completed = true;
+                HERO.player.setPos(Vector3.from_Grid(new FP_Grid(10.5, 18.0), HERO.height));
+                HERO.player.setDir(Vector3.from_2D_dir(DOWN));
+                TITLE.keys()
+                break;
+            default:
+                console.error("interaction category error", interaction);
+        }
+
+        function display(inventorySprite) {
+            ENGINE.clearLayer("info");
+            ENGINE.draw("info", 7, 7, SPRITE[inventorySprite]);
+            GAME.infoTimer();
         }
     },
     drawPlayer() {

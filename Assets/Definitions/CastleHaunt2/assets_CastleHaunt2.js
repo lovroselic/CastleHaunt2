@@ -23,6 +23,7 @@ LoadTextures = [
     /** decals that are textures */
 
     /** object textures */
+    { srcName: "ObjectTextures/Bag_baseColor.jpg", name: "Bag_BaseColor" },
 
     //decal-gates
     //title
@@ -82,6 +83,10 @@ LoadShaders = [
     'vShader_1_0.glsl', 'fShader_1_0.glsl', 'pick_vShader_1_0.glsl', 'pick_fShader_1_0.glsl',
     'particle_render_fShader_1_0.glsl', 'particle_render_vShader_1_0.glsl', 'particle_transform_fShader_1_0.glsl', 'particle_transform_vShader_1_0.glsl',
     'model_vShader_1_0.glsl',
+];
+
+LoadObjects = [
+    "bag.obj",
 ];
 
 LoadModels = [
