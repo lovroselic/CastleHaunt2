@@ -13,9 +13,12 @@ LoadFonts = [
 LoadTextures = [
     /**wall, floor, ceil */
     { srcName: "Wall/DarkBrick113.jpg", name: "DarkBrick113" },
+    {srcName: "Wall/DarkBricks111.jpg", name:"DarkBricks111"},
     { srcName: "Wall/MarbleFloor104.jpg", name: "MarbleFloor104" },
     { srcName: "Wall/VaultedCeiling1.jpg", name: "VaultedCeiling1" },
-    { srcName: "Wall/StoneWall4.jpg", name: "StoneWall4" },
+    { srcName: "Wall/RedBrickFloor1.jpg", name: "RedBrickFloor1" },
+
+    { srcName: "Wall/Forest.jpg", name: "Forest" },
 
     /** decals that are textures */
 
@@ -23,7 +26,7 @@ LoadTextures = [
 
     //decal-gates
     //title
-    { srcName: "Title/CastleHaunt2TitlePrincess600.jpg", name: "Title" },
+    { srcName: "Title/CastleHaunt2TitlePrincess768.jpg", name: "Title" },
 ];
 
 LoadAudio = [

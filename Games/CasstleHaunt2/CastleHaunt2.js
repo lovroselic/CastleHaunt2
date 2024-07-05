@@ -47,10 +47,11 @@ const DEBUG = {
 
 const INI = {
     HERO_SHOOT_TIMEOUT: 2000,
+    SCREEN_BORDER: 32,
 };
 
 const PRG = {
-    VERSION: "0.02.01",
+    VERSION: "0.02.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -98,10 +99,10 @@ const PRG = {
         });
 
         //boxes
-        ENGINE.gameWIDTH = 800;
-        ENGINE.titleWIDTH = 1280;
-        ENGINE.sideWIDTH = (ENGINE.titleWIDTH - ENGINE.gameWIDTH) / 2;
-        ENGINE.gameHEIGHT = 600;
+        ENGINE.gameWIDTH = 1024;
+        ENGINE.titleWIDTH = 1280 + INI.SCREEN_BORDER;
+        ENGINE.sideWIDTH = ENGINE.titleWIDTH - ENGINE.gameWIDTH - INI.SCREEN_BORDER;
+        ENGINE.gameHEIGHT = 768;
         ENGINE.titleHEIGHT = 80;
         ENGINE.bottomHEIGHT = 80;
         ENGINE.bottomWIDTH = ENGINE.titleWIDTH;
@@ -109,7 +110,7 @@ const PRG = {
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle"], null);
-        ENGINE.addBOX("LSIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["Lsideback", "potion", "time", "statusBars", "stat", "gold"], "side");
+        ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "minimap", "scrolls"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
@@ -254,7 +255,7 @@ const GAME = {
         /** cameras and setting*/
         HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
         HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
-        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.0, new Vector3(0, -0.95, 0), 1, 80);
+        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
 
         switch (WebGL.CONFIG.cameraType) {
             case "first_person":
@@ -597,10 +598,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS",
-            "Lsideback", "potion", "time", "statusBars", "stat", "gold",
-            "sideback", "keys", "minimap", "scrolls",
-            "compassRose", "compassNeedle", "info"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -667,8 +665,8 @@ const TITLE = {
         ENGINE.clearLayer("button");
         FORM.BUTTON.POOL.clear();
         let x = 0;
-        let y = 500;
-        const w = 132;
+        let y = 668;
+        const w = 100;
         const h = 24;
         const F = 1.5;
         let startBA = new Area(x, y, w, h);
@@ -687,7 +685,7 @@ const TITLE = {
 
         y += F * h;
         let music = new Area(x, y, w, h);
-        FORM.BUTTON.POOL.push(new Button("Play title music", music, musicColors, TITLE.music));
+        FORM.BUTTON.POOL.push(new Button("Title music", music, musicColors, TITLE.music));
         FORM.BUTTON.draw();
         $(ENGINE.topCanvas).on("mousemove", { layer: ENGINE.topCanvas }, ENGINE.mouseOver);
         $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, ENGINE.mouseClick);
