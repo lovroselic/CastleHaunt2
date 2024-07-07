@@ -47,7 +47,7 @@ const DEBUG = {
 
 const INI = {
     HERO_SHOOT_TIMEOUT: 2000,
-    SCREEN_BORDER: 32,
+    SCREEN_BORDER: 256,
 };
 
 const PRG = {
@@ -110,7 +110,7 @@ const PRG = {
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle"], null);
-        ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback"], "side");
+        ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
@@ -703,7 +703,12 @@ const GAME = {
 };
 
 const TITLE = {
-    stack: {},
+    stack: {
+        Y2: 66,
+        delta2: 256 + 36,
+        delta3: 48,
+        delta4: 72,
+    },
     startTitle() {
         console.log("TITLE started");
         //if (AUDIO.Title) AUDIO.Title.play(); //dev
@@ -817,6 +822,7 @@ const TITLE = {
         TITLE.titlePlot();
         TITLE.compass();
         TITLE.sidebackground_static();
+        TITLE.health();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -838,15 +844,49 @@ const TITLE = {
         CTX.stroke();
     },
     sidebackground_static() {
+        const fs = 14;
         //lines
         let x = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
         let y = 0;
+        const dY = (SPRITE.wavyR.height / 2) | 0;
+        let cX = ((ENGINE.sideWIDTH) / 2) | 0;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
+
+
+        //2
+        y = TITLE.stack.Y2;
+        y += (SPRITE.Bag.height / 4) | 0;
+        const lX = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
+        const rX = ENGINE.sideWIDTH - lX - SPRITE.wavyR.width;
+        ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
+        ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
+        ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.Bag);
+
+        //3
+        y += TITLE.stack.delta2;
+        ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
+        ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
+
+        //4
+        y += TITLE.stack.delta3;
+        ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
+        ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
+
+        //5
+        y += TITLE.stack.delta4;
+        ENGINE.draw("sideback", x, y, SPRITE.LineTop);
+        console.info("y", y);
+
+
+        //final line
+        y = (ENGINE.gameHEIGHT - SPRITE.LineBottom.height) | 0;
+        ENGINE.draw("sideback", x, y, SPRITE.LineBottom);
     },
     time() {
-        let fs = 14;
+        const fs = 14;
         let y = (SPRITE.LineTop.height + fs * 1.2) | 0;
-        let x = ((ENGINE.sideWIDTH) / 2) | 0
+        let cX = ((ENGINE.sideWIDTH) / 2) | 0;
+
         const CTX = LAYER.time;
         ENGINE.clearLayer("time");
         CTX.font = fs + "px Consolas";
@@ -856,20 +896,20 @@ const TITLE = {
         CTX.shadowOffsetX = 1;
         CTX.shadowOffsetY = 1;
         CTX.shadowBlur = 1;
-        CTX.fillText(`${MAP[GAME.level].name}`, x, y);
+        CTX.fillText(`${MAP[GAME.level].name}`, cX, y);
         let time = `Time: ${GAME.time.timeString()}`;
         y += (fs * 1.7) | 0;
-        CTX.fillText(time, x, y);
+        CTX.fillText(time, cX, y);
         y += (fs * 1.0) | 0;
-     
-        //2
-        const lX = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
-        const rX = ENGINE.sideWIDTH - lX - SPRITE.wavyR.width;
-        ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
-        ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
-
-        console.info("y", y)
     },
+    health() {
+        /** not yet developed, just placeholder */
+        ENGINE.clearLayer("health");
+        const cX = ((INI.SCREEN_BORDER) / 2) | 0;
+        const cY = (ENGINE.gameHEIGHT / 2) | 0;
+
+        ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
+    }
 };
 
 // -- main --
