@@ -51,7 +51,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.03.01",
+    VERSION: "0.03.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -852,10 +852,22 @@ const TITLE = {
         CTX.font = fs + "px Consolas";
         CTX.fillStyle = "#0D0";
         CTX.textAlign = "center";
+        CTX.shadowColor = "#666";
+        CTX.shadowOffsetX = 1;
+        CTX.shadowOffsetY = 1;
+        CTX.shadowBlur = 1;
         CTX.fillText(`${MAP[GAME.level].name}`, x, y);
         let time = `Time: ${GAME.time.timeString()}`;
         y += (fs * 1.7) | 0;
         CTX.fillText(time, x, y);
+        y += (fs * 1.0) | 0;
+     
+        //2
+        const lX = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
+        const rX = ENGINE.sideWIDTH - lX - SPRITE.wavyR.width;
+        ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
+        ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
+
         console.info("y", y)
     },
 };
