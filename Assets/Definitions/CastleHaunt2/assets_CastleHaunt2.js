@@ -101,7 +101,10 @@ LoadSprites = [
     { srcName: "UI/LineBottom.png", name: "LineBottom" },
     { srcName: "UI/LineTop.png", name: "LineTop" },
     { srcName: "UI/Bag2.png", name: "Bag" },
-    { srcName: "UI/AvatarPrincess256w.png", name: "Avatar" },
+    { srcName: "UI/AvatarPrincess200w.png", name: "Avatar" },
+    { srcName: "UI/FireballIcon48.png", name: "FireBallIcon" },
+    { srcName: "UI/FireRing48.png", name: "FireRing" },
+    { srcName: "UI/OrnateMagicFlask48.png", name: "OrnateMagicFlask" },
 
     //lights
     { srcName: "Lights/Lamp4.png", name: "Lamp4" },

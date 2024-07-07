@@ -51,7 +51,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.03.02",
+    VERSION: "0.03.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -148,6 +148,7 @@ const HERO = {
         this.dead = false;
         this.height = 0.6;
         this.canShoot = true;
+        this.hasCapacity = false;
     },
     speak(txt) {
         SPEECH.use("Princess");
@@ -706,8 +707,8 @@ const TITLE = {
     stack: {
         Y2: 66,
         delta2: 256 + 36,
-        delta3: 48,
-        delta4: 72,
+        delta3: 96,
+        delta4: 96,
     },
     startTitle() {
         console.log("TITLE started");
@@ -867,11 +868,19 @@ const TITLE = {
         ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
 
+        // 
+        if (HERO.hasCapacity){
+            ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireBallIcon);
+        } else ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireRing);
+        
+
         //4
         y += TITLE.stack.delta3;
         ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
+        ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.OrnateMagicFlask);
 
+        
         //5
         y += TITLE.stack.delta4;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
