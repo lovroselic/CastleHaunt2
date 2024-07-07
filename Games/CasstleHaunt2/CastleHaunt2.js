@@ -51,7 +51,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.03.00",
+    VERSION: "0.03.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -112,7 +112,7 @@ const PRG = {
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
-        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "minimap", "scrolls"], "fside");
+        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
 
         if (DEBUG._2D_display) {
@@ -222,7 +222,7 @@ const GAME = {
         GAME.initLevel(GAME.level);
         GAME.setFirstPerson();                        //my preference
         //GAME.setThirdPerson();                        //
-       // GAME.setTopDownView();                          //
+        // GAME.setTopDownView();                          //
         GAME.continueLevel(GAME.level);
     },
     continueLevel(level) {
@@ -311,7 +311,7 @@ const GAME = {
         MAP_TOOLS.unpack(level);
     },
     prepareForRestart() {
-        let clear = ["background", "text", "FPS", "button", "bottomText", "title"];
+        let clear = ["background", "text", "FPS", "button", "bottomText"];
         ENGINE.clearManylayers(clear);
         TITLE.blackBackgrounds();
         ENGINE.TIMERS.clear();
@@ -457,8 +457,8 @@ const GAME = {
         }
         WebGL.renderScene();
         //MINIMAP.draw(HERO.radar);
-        //TITLE.compassNeedle();
-        //TITLE.time();
+        TITLE.compassNeedle();
+        TITLE.time();
 
         if (DEBUG.FPS) {
             GAME.FPS(lapsedTime);
@@ -703,6 +703,7 @@ const GAME = {
 };
 
 const TITLE = {
+    stack: {},
     startTitle() {
         console.log("TITLE started");
         //if (AUDIO.Title) AUDIO.Title.play(); //dev
@@ -719,7 +720,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle",]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -813,6 +814,49 @@ const TITLE = {
     },
     firstFrame() {
         console.info("title first frame");
+        TITLE.titlePlot();
+        TITLE.compass();
+        TITLE.sidebackground_static();
+    },
+    compass() {
+        let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
+        let y = (ENGINE.titleHEIGHT / 2) | 0;
+        ENGINE.spriteDraw("compassRose", x, y, SPRITE.CompassRose);
+        TITLE.stack.compassX = x;
+        TITLE.stack.compassY = y;
+        this.compassNeedle();
+    },
+    compassNeedle() {
+        ENGINE.clearLayer("compassNeedle");
+        const CTX = LAYER.compassNeedle;
+        CTX.strokeStyle = "#F00";
+        let [x, y] = [TITLE.stack.compassX, TITLE.stack.compassY];
+        CTX.beginPath();
+        CTX.moveTo(x, y);
+        let end = new Point(x, y).translate(Vector3.to_FP_Vector(HERO.player.dir), (SPRITE.CompassRose.width / 2 * 0.8) | 0);
+        CTX.lineTo(end.x, end.y);
+        CTX.stroke();
+    },
+    sidebackground_static() {
+        //lines
+        let x = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
+        let y = 0;
+        ENGINE.draw("sideback", x, y, SPRITE.LineTop);
+    },
+    time() {
+        let fs = 14;
+        let y = (SPRITE.LineTop.height + fs * 1.2) | 0;
+        let x = ((ENGINE.sideWIDTH) / 2) | 0
+        const CTX = LAYER.time;
+        ENGINE.clearLayer("time");
+        CTX.font = fs + "px Consolas";
+        CTX.fillStyle = "#0D0";
+        CTX.textAlign = "center";
+        CTX.fillText(`${MAP[GAME.level].name}`, x, y);
+        let time = `Time: ${GAME.time.timeString()}`;
+        y += (fs * 1.7) | 0;
+        CTX.fillText(time, x, y);
+        console.info("y", y)
     },
 };
 

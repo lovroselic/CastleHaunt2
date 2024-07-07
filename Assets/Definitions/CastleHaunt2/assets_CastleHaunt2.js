@@ -13,7 +13,7 @@ LoadFonts = [
 LoadTextures = [
     /**wall, floor, ceil */
     { srcName: "Wall/DarkBrick113.jpg", name: "DarkBrick113" },
-    {srcName: "Wall/DarkBricks111.jpg", name:"DarkBricks111"},
+    { srcName: "Wall/DarkBricks111.jpg", name: "DarkBricks111" },
     { srcName: "Wall/MarbleFloor104.jpg", name: "MarbleFloor104" },
     { srcName: "Wall/VaultedCeiling1.jpg", name: "VaultedCeiling1" },
     { srcName: "Wall/RedBrickFloor1.jpg", name: "RedBrickFloor1" },
@@ -94,6 +94,13 @@ LoadModels = [
 ];
 
 LoadSprites = [
+    //UI
+    { srcName: "UI/CompassRose.png", name: "CompassRose" },
+    { srcName: "UI/wavyL.png", name: "wavyL" },
+    { srcName: "UI/wavyR.png", name: "wavyR" },
+    { srcName: "UI/LineBottom.png", name: "LineBottom" },
+    { srcName: "UI/LineTop.png", name: "LineTop" },
+
     //lights
     { srcName: "Lights/Lamp4.png", name: "Lamp4" },
     { srcName: "Lights/Lamp40.png", name: "Lamp40" },
