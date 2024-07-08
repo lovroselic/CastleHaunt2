@@ -51,7 +51,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.03.03",
+    VERSION: "0.03.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -109,7 +109,7 @@ const PRG = {
 
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
-        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle"], null);
+        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls"], "fside");
@@ -199,6 +199,7 @@ const GAME = {
         AI.immobileWander = true;
 
         GAME.completed = false;
+        GAME.lives = 5;
         GAME.level = 1;                 //start
         GAME.gold = 0;
 
@@ -726,7 +727,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle",]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -824,6 +825,7 @@ const TITLE = {
         TITLE.compass();
         TITLE.sidebackground_static();
         TITLE.health();
+        TITLE.lives();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -852,6 +854,7 @@ const TITLE = {
         const dY = (SPRITE.wavyR.height / 2) | 0;
         let cX = ((ENGINE.sideWIDTH) / 2) | 0;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
+        ENGINE.draw("Lsideback", x, y, SPRITE.LineTop);
 
 
         //2
@@ -869,10 +872,10 @@ const TITLE = {
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
 
         // 
-        if (HERO.hasCapacity){
+        if (HERO.hasCapacity) {
             ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireBallIcon);
         } else ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireRing);
-        
+
 
         //4
         y += TITLE.stack.delta3;
@@ -880,7 +883,7 @@ const TITLE = {
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
         ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.OrnateMagicFlask);
 
-        
+
         //5
         y += TITLE.stack.delta4;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
@@ -890,6 +893,7 @@ const TITLE = {
         //final line
         y = (ENGINE.gameHEIGHT - SPRITE.LineBottom.height) | 0;
         ENGINE.draw("sideback", x, y, SPRITE.LineBottom);
+        ENGINE.draw("Lsideback", x, y, SPRITE.LineBottom);
     },
     time() {
         const fs = 14;
@@ -918,7 +922,18 @@ const TITLE = {
         const cY = (ENGINE.gameHEIGHT / 2) | 0;
 
         ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
+    },
+    lives() {
+        ENGINE.clearLayer("lives");
+        const CTX = LAYER.lives;
+        const cX = INI.SCREEN_BORDER / 2;
+        const y = ENGINE.titleHEIGHT / 2;
+        const spread = ENGINE.spreadAroundCenter(GAME.lives, cX, 32);
+        for (let x of spread) {
+            ENGINE.spriteDraw("lives", x, y, SPRITE.Lives);
+        }
     }
+
 };
 
 // -- main --
