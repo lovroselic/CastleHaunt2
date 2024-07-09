@@ -536,6 +536,8 @@ LoadSheetSequences = [
 ];
 
 LoadSprites = [
+    //from UI
+    { srcName: "UI/Bag2.png", name: "Bag" },
     // items
     { srcName: "Items/Acorn.png", name: "Acorn" },
     { srcName: "Items/Amethyst.png", name: "Amethyst" },

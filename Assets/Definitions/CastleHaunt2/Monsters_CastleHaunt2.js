@@ -23,15 +23,15 @@ for (let [index, key] of KEY_TYPES.entries()) {
     KEY_TYPE[key] = new KeyTypeDefinition(key, `${key}Key`, key, KEY_TEXTURES[index], MATERIAL[KEY_MATERIAL[index]]);
 }
 
-const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeapon", "BoostArmor", "DestroyArmor", "DestroyWeapon",
-    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"];
+/* const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeapon", "BoostArmor", "DestroyArmor", "DestroyWeapon",
+    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"]; */
 
 const SHRINE_TYPE = {
-   
+
 };
 
 const ORACLE_TYPE = {
-    
+
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1125,6 +1125,18 @@ const HERO_TYPE = {
  */
 
 const INTERACTION_OBJECT = {
+    Bag: {
+        name: "Bag",
+        category: "action_item",
+        which: "inventory",
+        element: "BAG",
+        scale: 1 / 2 ** 4,
+        glueToFloor: true,
+        texture: "Bag_BaseColor",
+        material: MATERIAL.standard,
+        inventorySprite: "Bag",
+        text: "Cool. More storage. I can carry the the repelling fireorbs now."
+    },
     Apple: {
         name: "Apple",
         category: "interaction_item",
@@ -1894,7 +1906,7 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
-    
+
 };
 const INTERACTION_SHRINE = {
 

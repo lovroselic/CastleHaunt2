@@ -49,10 +49,11 @@ const INI = {
     HERO_SHOOT_TIMEOUT: 2000,
     SCREEN_BORDER: 256,
     INVENTORY_HARD_LIMIT: 20,
+    ORB_MAX_CAPACITY: 5,
 };
 
 const PRG = {
-    VERSION: "0.03.06",
+    VERSION: "0.03.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -113,7 +114,7 @@ const PRG = {
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
-        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls"], "fside");
+        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
 
         if (DEBUG._2D_display) {
@@ -164,6 +165,29 @@ class Status {
     }
 }
 
+class ActionItem {
+    constructor(type, spriteClass) {
+        this.type = type;
+        this.spriteClass = spriteClass;
+        this.sprite = SPRITE[this.spriteClass];
+        this.class = "ActionItem";
+        //this.saveDefinition = ['class', 'type'];
+    }
+    action() {
+        console.warn("action item action", this);
+        switch (this.type) {
+            case "inventory":
+                HERO.bagStart();
+                TITLE.sidebackground_static();
+                TITLE.orbs();
+                break;
+            default:
+                console.error("ERROR ActionItem action", this);
+                break;
+        }
+    }
+}
+
 const HERO = {
     construct() {
         this.player = null;
@@ -174,6 +198,12 @@ const HERO = {
         this.inventory.clear();
         this.inventoryLimit = INI.INVENTORY_HARD_LIMIT;
         this.canComplain = true;
+    },
+    bagStart() {
+        this.hasCapacity = true;
+        this.capacity = 1;
+        this.maxCapacity = INI.ORB_MAX_CAPACITY;
+        this.orbs = 0;
     },
     speak(txt) {
         SPEECH.use("Princess");
@@ -256,6 +286,12 @@ const GAME = {
             HERO.inventory.item.push(item);
         }
         TITLE.keys(); */
+
+   /*      HERO.hasCapacity = true;
+        HERO.capacity = 5;
+        HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
+        HERO.orbs = 2; */
+  
         /** END DEBUG */
 
         //SAVE GAME
@@ -522,6 +558,7 @@ const GAME = {
         }
     },
     processInteraction(interaction) {
+        if (DEBUG.VERBOSE) console.info("interaction:", interaction);
         if (interaction.text) TURN.subtitle(interaction.text);
         switch (interaction.category) {
             case 'error':
@@ -566,6 +603,13 @@ const GAME = {
                 display(interaction.inventorySprite);
                 TITLE.potion();
                 AUDIO.Potion.play();
+                break;
+            case 'action_item':
+                let aItem = new ActionItem(interaction.which, interaction.inventorySprite);
+                HERO.inventory.scroll.add(aItem);
+                TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
+                TITLE.scrolls();
+                display(interaction.inventorySprite);
                 break;
             case 'scroll':
                 let type = null;
@@ -695,42 +739,27 @@ const GAME = {
             console.log("#######################################################");
             ENGINE.GAME.keymap[ENGINE.KEY.map.F9] = false;
         }
-        /*         if (map[ENGINE.KEY.map.left]) {
-                    TITLE.stack.scrollIndex--;
-                    TITLE.stack.scrollIndex = Math.max(0, TITLE.stack.scrollIndex);
-                    TITLE.scrolls();
-                    ENGINE.GAME.keymap[ENGINE.KEY.map.left] = false;
-                    return;
-                } */
-        /*         if (map[ENGINE.KEY.map.right]) {
-                    TITLE.stack.scrollIndex++;
-                    TITLE.stack.scrollIndex = Math.min(
-                        HERO.inventory.scroll.size() - 1,
-                        TITLE.stack.scrollIndex
-                    );
-                    TITLE.scrolls();
-                    ENGINE.GAME.keymap[ENGINE.KEY.map.right] = false;
-                    return;
-                } */
-        /*         if (map[ENGINE.KEY.map.enter]) {
-                    if (HERO.inventory.scroll.size() === 0) {
-                        return;
-                    }
-                    let scroll = HERO.inventory.scroll.remove(TITLE.stack.scrollIndex);
-                    scroll.action();
-                    TITLE.scrolls();
-                    ENGINE.GAME.keymap[ENGINE.KEY.map.enter] = false;
-                } */
-        /*         if (map[ENGINE.KEY.map.H]) {
-                    if (GAME.completed) return;
-                    HERO.usePotion("health");
-                    ENGINE.GAME.keymap[ENGINE.KEY.map.H] = false; //NO repeat
-                } */
-        /*         if (map[ENGINE.KEY.map.M]) {
-                    if (GAME.completed) return;
-                    HERO.usePotion("mana");
-                    ENGINE.GAME.keymap[ENGINE.KEY.map.M] = false; //NO repeat
-                } */
+        if (map[ENGINE.KEY.map.left]) {
+            TITLE.stack.scrollIndex--;
+            TITLE.stack.scrollIndex = Math.max(0, TITLE.stack.scrollIndex);
+            TITLE.scrolls();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.left] = false;
+            return;
+        }
+        if (map[ENGINE.KEY.map.right]) {
+            TITLE.stack.scrollIndex++;
+            TITLE.stack.scrollIndex = Math.min(HERO.inventory.scroll.size() - 1, TITLE.stack.scrollIndex);
+            TITLE.scrolls();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.right] = false;
+            return;
+        }
+        if (map[ENGINE.KEY.map.enter]) {
+            if (HERO.inventory.scroll.size() === 0) return;
+            let scroll = HERO.inventory.scroll.remove(TITLE.stack.scrollIndex);
+            scroll.action();
+            TITLE.scrolls();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.enter] = false;
+        }
         if (map[ENGINE.KEY.map.ctrl]) {
             HERO.shoot();
             ENGINE.GAME.keymap[ENGINE.KEY.map.ctrl] = false; //NO repeat
@@ -758,14 +787,16 @@ const TITLE = {
     stack: {
         Y2: 66,
         delta2: 256 + 36,
-        delta3: 96,
-        delta4: 96,
+        delta3: 120,
+        delta4: 120,
         DYR: 66,
         deltaItem: 48,
         keyDelta: 56,
         scrollIndex: 0,
         scrollInRow: 3,
         scrollDelta: 72,
+        SY: 540,
+        OY: 440,
     },
     startTitle() {
         console.log("TITLE started");
@@ -883,6 +914,8 @@ const TITLE = {
         TITLE.health();
         TITLE.lives();
         TITLE.keys();
+        TITLE.scrolls();
+        TITLE.orbs();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -998,6 +1031,61 @@ const TITLE = {
             let dy = Math.floor(i / NUM);
             let y = refY + (dy * TITLE.stack.deltaItem);
             ENGINE.spriteDraw("keys", x, y, SPRITE[item.spriteClass]);
+        }
+    },
+    scrolls() {
+        const INV = HERO.inventory.scroll;
+        ENGINE.clearLayer("scrolls");
+        const CTX = LAYER.scrolls;
+
+        TITLE.stack.scrollIndex = Math.min(TITLE.stack.scrollIndex, INV.size() - 1);
+        let scrollSpread = ENGINE.spreadAroundCenter(TITLE.stack.scrollInRow, ((ENGINE.sideWIDTH / 2) | 0) - 16, TITLE.stack.scrollDelta);
+
+        let LN = INV.size();
+        let startIndex = Math.min((TITLE.stack.scrollIndex - TITLE.stack.scrollInRow / 2) | 0, LN - TITLE.stack.scrollInRow);
+        startIndex = Math.max(0, startIndex);
+        let max = startIndex + Math.min(TITLE.stack.scrollInRow, LN);
+        let y = TITLE.stack.SY;
+        for (let q = startIndex; q < max; q++) {
+            let scroll = INV.list[q];
+            let x = scrollSpread.shift();
+
+            if (q === TITLE.stack.scrollIndex) {
+                CTX.globalAlpha = 1;
+            } else {
+                CTX.globalAlpha = 0.75;
+            }
+
+            ENGINE.draw("scrolls", x, y, scroll.object.sprite);
+
+            CTX.font = "10px Consolas";
+            CTX.fillStyle = "#FFF";
+            CTX.fillText(scroll.count.toString().padStart(2, "0"), x + 40, y + 48);
+
+            if (q === TITLE.stack.scrollIndex) {
+                CTX.strokeStyle = "#FFF";
+                CTX.globalAlpha = 0.5;
+                CTX.lineWidth = "1";
+                CTX.beginPath();
+                CTX.rect(x - 5, y - 10, 48 + 10, 48 + 20);
+                CTX.closePath();
+                CTX.stroke();
+            }
+        }
+    },
+    orbs() {
+        if (!HERO.hasCapacity) return;
+        ENGINE.clearLayer("orbs");
+        const orbSpread = ENGINE.spreadAroundCenter(HERO.capacity, (ENGINE.sideWIDTH / 2) | 0, 48);
+        let y = TITLE.stack.OY;
+        let full = HERO.orbs;
+        let sprite;
+        for (let x of orbSpread) {
+            if (full > 0) {
+                sprite = SPRITE.FireBall32;
+                full--;
+            } else sprite = SPRITE.FireRing32;
+            ENGINE.spriteDraw("orbs", x, y, sprite);
         }
     },
 };
