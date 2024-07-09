@@ -760,6 +760,15 @@ const ENGINE = {
     LAYER.temp.drawImage(img, 0, 0);
     return LAYER.temp.canvas;
   },
+
+  /**
+   * Retrieves image data from a given image source, with optional offsets.
+   * 
+   * @param {HTMLImageElement|SVGImageElement|HTMLVideoElement|HTMLCanvasElement|OffscreenCanvas} img - The image source from which to extract the image data.
+   * @param {number} [offX=0] - The horizontal offset from which to start extracting image data. Defaults to 0.
+   * @param {number} [offY=0] - The vertical offset from which to start extracting image data. Defaults to 0.
+   * @returns {ImageData} The image data extracted from the specified image source.
+  */
   getImgData(img, offX = 0, offY = 0) {
     const canvas = ENGINE.imgToCanvas(img);
     const ctx = canvas.getContext("2d");
@@ -1936,6 +1945,16 @@ const ENGINE = {
         }
       }
 
+      /**
+       * Asynchronously loads a font from the specified source data and directory.
+       * 
+       * @param {Object} srcData - The source data for the font, including the name and source name.
+       * @param {string} srcData.name - The name of the font.
+       * @param {string} srcData.srcName - The source file name of the font.
+       * @param {string} [dir=ENGINE.FONT_SOURCE] - The directory where the font source file is located. Defaults to ENGINE.FONT_SOURCE.
+       * @returns {Promise<FontFace>} A promise that resolves to the loaded FontFace object.
+       * @throws {Error} Throws an error if the font loading fails.
+      */
       async function loadFont(srcData, dir = ENGINE.FONT_SOURCE) {
         try {
           const fontSource = dir + srcData.srcName;
@@ -1944,7 +1963,7 @@ const ENGINE = {
           //const font = await temp.load();                       //firefox has issue with this             
           ENGINE.LOAD.Fonts++;
           ENGINE.drawLoadingGraph("Fonts");
-          console.debug("loading font", "fontSource", fontSource, "url", url, "temp", temp);
+          if (ENGINE.verbose) console.debug("loading font", "fontSource", fontSource, "url", url, "temp", temp);
           //return font;
           return temp.load();                                     //ff fix, but not really waiting for font
         } catch (error) {
@@ -2768,12 +2787,67 @@ const $3D_MODEL = {};
 const LAYER = {
   PRELOAD: {}
 };
+
 const BITMAP = {
-  async store(canvas, name) {
-    console.assert(canvas.constructor.name === "HTMLCanvasElement", `Bad canvas: ${canvas.constructor.name}, for ${name}`);
-    BITMAP[name] = await createImageBitmap(canvas);
+  /**
+   * Asynchronously stores an ImageBitmap from a given source in the BITMAP object with the specified name.
+   * 
+   * @param {HTMLImageElement|SVGImageElement|HTMLVideoElement|HTMLCanvasElement|Blob|ImageData|ImageBitmap|OffscreenCanvas} source - The source from which to create the ImageBitmap.
+   * @param {string} name - The name to be used as the key for storing the ImageBitmap in the BITMAP object.
+   * @returns {Promise<void>} A promise that resolves when the ImageBitmap is successfully stored or rejects with an error message if it fails.
+  */
+  async store(source, name) {
+    const validTypes = ["HTMLImageElement", "SVGImageElement", "HTMLVideoElement", "HTMLCanvasElement", "Blob", "ImageData", "ImageBitmap", "OffscreenCanvas"];
+
+    if (!validTypes.includes(source.constructor.name)) {
+      console.error(`Unsupported source type: ${source.constructor.name}, for ${name}`);
+      return;
+    }
+
+    try {
+      BITMAP[name] = await createImageBitmap(source);
+      if (ENGINE.verbose) console.log(`Bitmap stored successfully for ${name}`);
+    } catch (error) {
+      console.error(`Failed to create ImageBitmap for ${name}: ${error.message}`);
+    }
   }
 };
+
+const IMAGE_DATA = {
+  store(bitmap, name) {
+    const TPX = LAYER.temp;
+    const W = bitmap.width;
+    const H = bitmap.height;
+    TPX.canvas.width = W;
+    TPX.canvas.height = H;
+    ENGINE.clearLayer("temp");
+    TPX.drawImage(bitmap, 0, 0, W, H);
+    IMAGE_DATA[name] = TPX.getImageData(0, 0, W, H);
+  },
+  INDICES: {
+    /**
+     * Sets indices for a given channel and name based on pixel data and transparency criteria.
+     * 
+     * @param {number} chanel - The starting channel index to consider (e.g., 0 for red, 1 for green, 2 for blue, 3 for alpha).
+     * @param {string} name - The name to be used as the key for storing indices in IMAGE_DATA.INDICES.
+     * @param {number} pixels - The total number of pixels to process.
+     * @param {Uint8ClampedArray} data - The image data array containing pixel values.
+     * @param {boolean} [nonTransparent=true] - Flag indicating whether to only include non-transparent pixels. Defaults to true.
+    */
+    set(chanel, name, pixels, data, nonTransparent = true) {
+      IMAGE_DATA.INDICES[name] = [];
+      for (let i = chanel; i < pixels * 4; i += 4) {
+        if (nonTransparent) {
+          if (data[i] > 0) {
+            IMAGE_DATA.INDICES[name].push(i);
+          }
+        }
+        else IMAGE_DATA.INDICES[name].push(i);
+      }
+    }
+  },
+};
+
 const SPRITE = {};
 const AUDIO = {};
 const ASSET = {

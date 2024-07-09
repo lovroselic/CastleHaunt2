@@ -22,7 +22,7 @@ const DEBUG = {
     FPS: true,
     SETTING: true,
     VERBOSE: true,
-    _2D_display: true,
+    _2D_display: false,
     INVINCIBLE: false,
     FREE_MAGIC: false,
     LOAD: false,
@@ -50,10 +50,12 @@ const INI = {
     SCREEN_BORDER: 256,
     INVENTORY_HARD_LIMIT: 20,
     ORB_MAX_CAPACITY: 5,
+    MAX_HERO_HEALTH: 32,
+    AVATAR_TRANSPARENCY: 10,
 };
 
 const PRG = {
-    VERSION: "0.03.08",
+    VERSION: "0.04.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -198,6 +200,8 @@ const HERO = {
         this.inventory.clear();
         this.inventoryLimit = INI.INVENTORY_HARD_LIMIT;
         this.canComplain = true;
+        this.maxHealth = INI.MAX_HERO_HEALTH;
+        this.health = this.maxHealth;
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -460,13 +464,19 @@ const GAME = {
         TITLE.blackBackgrounds();
         ENGINE.TIMERS.clear();
     },
-    setup() {
+    async setup() {
         console.log("GAME SETUP started");
         $("#conv").remove();
-
         $("#p1").on("click", GAME.setFirstPerson);
         $("#p3").on("click", GAME.setThirdPerson);
         $("#pt5").on("click", GAME.setTopDownView);
+        await GAME.initializeImageData();
+        const totalPixels = SPRITE.Avatar.width * SPRITE.Avatar.height;
+        IMAGE_DATA.INDICES.set(3, "Avatar", totalPixels, IMAGE_DATA.Avatar.data);
+    },
+    async initializeImageData() {
+        await BITMAP.store(SPRITE.Avatar, "Avatar");
+        IMAGE_DATA.store(BITMAP.Avatar, "Avatar");
     },
     setTitle() {
         const text = GAME.generateTitleText();
@@ -1072,12 +1082,22 @@ const TITLE = {
         y += (fs * 1.0) | 0;
     },
     health() {
-        /** not yet developed, just placeholder */
         ENGINE.clearLayer("health");
         const cX = ((INI.SCREEN_BORDER) / 2) | 0;
         const cY = (ENGINE.gameHEIGHT / 2) | 0;
 
-        ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
+        if (HERO.health === HERO.maxHealth) return ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
+        const CTX = LAYER.health;
+        HERO.health = Math.min(Math.max(0, HERO.health), HERO.maxHealth);
+        const imageData = new ImageData(new Uint8ClampedArray(IMAGE_DATA.Avatar.data), IMAGE_DATA.Avatar.width, IMAGE_DATA.Avatar.height);
+        const totalPixels = IMAGE_DATA.INDICES.Avatar.length;
+        const transparentPixels = Math.floor(totalPixels * (HERO.maxHealth - HERO.health) / HERO.maxHealth);
+        const indices = Array.from(IMAGE_DATA.INDICES.Avatar).shuffle();
+        for (let i = 0; i < transparentPixels; i++) {
+            imageData.data[indices[i]] = INI.AVATAR_TRANSPARENCY;
+        }
+
+        CTX.putImageData(imageData, cX - SPRITE.Avatar.width / 2, cY - SPRITE.Avatar.height / 2);
     },
     lives() {
         ENGINE.clearLayer("lives");
