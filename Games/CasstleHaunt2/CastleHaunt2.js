@@ -27,7 +27,7 @@ const DEBUG = {
     FREE_MAGIC: false,
     LOAD: false,
     STUDY: false,
-    keys: false,
+    keys: true,
     displayInv() {
         HERO.inventory.scroll.display();
         const list = [];
@@ -48,10 +48,11 @@ const DEBUG = {
 const INI = {
     HERO_SHOOT_TIMEOUT: 2000,
     SCREEN_BORDER: 256,
+    INVENTORY_HARD_LIMIT: 20,
 };
 
 const PRG = {
-    VERSION: "0.03.05",
+    VERSION: "0.03.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -142,6 +143,27 @@ const PRG = {
     }
 };
 
+class Key {
+    constructor(color, spriteClass) {
+        this.category = "Key";
+        this.type = "Key";
+        this.color = color;
+        this.spriteClass = spriteClass;
+    }
+}
+class NamedInventoryItem {
+    constructor(name, spriteClass) {
+        this.name = name;
+        this.spriteClass = spriteClass;
+    }
+}
+class Status {
+    constructor(type, spriteClass) {
+        this.type = type;
+        this.spriteClass = spriteClass;
+    }
+}
+
 const HERO = {
     construct() {
         this.player = null;
@@ -149,6 +171,9 @@ const HERO = {
         this.height = 0.6;
         this.canShoot = true;
         this.hasCapacity = false;
+        this.inventory.clear();
+        this.inventoryLimit = INI.INVENTORY_HARD_LIMIT;
+        this.canComplain = true;
     },
     speak(txt) {
         SPEECH.use("Princess");
@@ -171,7 +196,21 @@ const HERO = {
 
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
-    }
+    },
+    inventory: {
+        clear() {
+            this.key = [];
+            this.item = [];
+            this.status = [];
+            //this.potion = {};
+            //this.potion.red = 0;
+            // this.potion.blue = 0;
+            this.scroll = new Inventory();
+        },
+        totalSize() {
+            return this.key.length + this.item.length;
+        }
+    },
 };
 
 const GAME = {
@@ -208,6 +247,16 @@ const GAME = {
         GAME.fps = new FPS_short_term_measurement(300);
         GAME.prepareForRestart();
         GAME.time = new Timer("Main");
+
+        /** DEBUG */
+
+        /* let invItem = "Apple";
+        for (let i = 0; i < 19; i++) {
+            const item = new NamedInventoryItem(invItem, invItem);
+            HERO.inventory.item.push(item);
+        }
+        TITLE.keys(); */
+        /** END DEBUG */
 
         //SAVE GAME
         //end SAVE
@@ -483,7 +532,8 @@ const GAME = {
                             "My bag is full.",
                             "My bag is breaking at the seams.",
                             "Don't you see my bag is already full, fool?",
-                            "Put where? There is no space left."
+                            "Put where? There is no space left.",
+                            "You are a greedy bastard, aren't you?"
                         ];
                         HERO.speak(variants.chooseRandom());
                         HERO.canComplain = false;
@@ -590,7 +640,7 @@ const GAME = {
         function display(inventorySprite) {
             ENGINE.clearLayer("info");
             ENGINE.draw("info", 7, 7, SPRITE[inventorySprite]);
-            GAME.infoTimer();
+            GenericTimers.infoTimer();
         }
     },
     drawPlayer() {
@@ -710,6 +760,12 @@ const TITLE = {
         delta2: 256 + 36,
         delta3: 96,
         delta4: 96,
+        DYR: 66,
+        deltaItem: 48,
+        keyDelta: 56,
+        scrollIndex: 0,
+        scrollInRow: 3,
+        scrollDelta: 72,
     },
     startTitle() {
         console.log("TITLE started");
@@ -826,6 +882,7 @@ const TITLE = {
         TITLE.sidebackground_static();
         TITLE.health();
         TITLE.lives();
+        TITLE.keys();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -856,7 +913,6 @@ const TITLE = {
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
         ENGINE.draw("Lsideback", x, y, SPRITE.LineTop);
 
-
         //2
         y = TITLE.stack.Y2;
         y += (SPRITE.Bag.height / 4) | 0;
@@ -876,19 +932,15 @@ const TITLE = {
             ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireBallIcon);
         } else ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.FireRing);
 
-
         //4
         y += TITLE.stack.delta3;
         ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
         ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.OrnateMagicFlask);
 
-
         //5
         y += TITLE.stack.delta4;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
-        console.info("y", y);
-
 
         //final line
         y = (ENGINE.gameHEIGHT - SPRITE.LineBottom.height) | 0;
@@ -925,15 +977,29 @@ const TITLE = {
     },
     lives() {
         ENGINE.clearLayer("lives");
-        const CTX = LAYER.lives;
+        //const CTX = LAYER.lives;
         const cX = INI.SCREEN_BORDER / 2;
         const y = ENGINE.titleHEIGHT / 2;
         const spread = ENGINE.spreadAroundCenter(GAME.lives, cX, 32);
         for (let x of spread) {
             ENGINE.spriteDraw("lives", x, y, SPRITE.Lives);
         }
-    }
-
+    },
+    keys() {
+        ENGINE.clearLayer("keys");
+        let refY = TITLE.stack.Y2 + TITLE.stack.DYR;
+        let list = [...HERO.inventory.key, ...HERO.inventory.status, ...HERO.inventory.item];
+        let NUM = list.length;
+        NUM = Math.min(4, NUM);
+        let spread = ENGINE.spreadAroundCenter(NUM, ENGINE.sideWIDTH / 2, TITLE.stack.keyDelta);
+        for (const [i, item] of list.entries()) {
+            if (i >= INI.INVENTORY_HARD_LIMIT) break;
+            let x = spread[i % NUM];
+            let dy = Math.floor(i / NUM);
+            let y = refY + (dy * TITLE.stack.deltaItem);
+            ENGINE.spriteDraw("keys", x, y, SPRITE[item.spriteClass]);
+        }
+    },
 };
 
 // -- main --

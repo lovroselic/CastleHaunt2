@@ -14,6 +14,18 @@
 const TURN = {
     VERSION: "1.02",
     CSS: "color: #b785a7",
+    position: "mid",
+    //position: "bottom",
+    getPosition(CTX, fs = 0) {
+        switch (this.position) {
+            case "bottom":
+                return CTX.canvas.height - fs;
+            case "mid":
+                return (CTX.canvas.height / 2) | 0;
+            default:
+                console.error("wrong subtitle position setting");
+        }
+    },
     damage(attacker, defender) {
         if (attacker.attack === 0) return 0;
         let delta = attacker.attack - defender.defense;
@@ -46,7 +58,8 @@ const TURN = {
         CTX.shadowBlur = 0;
         CTX.fillStyle = color;
         CTX.textAlign = "center";
-        CTX.fillText(text, CTX.canvas.width / 2, CTX.canvas.height - fs);
+        //CTX.fillText(text, CTX.canvas.width / 2, CTX.canvas.height - fs);
+        CTX.fillText(text, CTX.canvas.width / 2, this.getPosition(CTX, fs));
         GenericTimers.subTimer();
     }
 };
