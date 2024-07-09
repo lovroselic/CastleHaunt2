@@ -53,7 +53,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.03.07",
+    VERSION: "0.03.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -200,10 +200,15 @@ const HERO = {
         this.canComplain = true;
     },
     bagStart() {
-        this.hasCapacity = true;
-        this.capacity = 1;
-        this.maxCapacity = INI.ORB_MAX_CAPACITY;
-        this.orbs = 0;
+        if (this.hasCapacity) {
+            this.capacity++;
+            this.capacity = Math.min(this.capacity, this.maxCapacity);
+        } else {
+            this.hasCapacity = true;
+            this.capacity = 1;
+            this.maxCapacity = INI.ORB_MAX_CAPACITY;
+            this.orbs = 0;
+        }
     },
     speak(txt) {
         SPEECH.use("Princess");
@@ -241,6 +246,58 @@ const HERO = {
             return this.key.length + this.item.length;
         }
     },
+    pickOrb() {
+        console.log("picking orb");
+        if (this.orbs === this.capacity) return this.refusePickingOrb();
+        const text = [
+            "I am getting armed to the teeth.",
+            "Another orb.",
+            "I have a fiery weapon now. Beware of the Princess.",
+            "Orb secured. Watch out, enemies!",
+            "Feeling orb-tastic!",
+            "Princess powers up!",
+            "Another orb for my collection!",
+            "My orb bag is getting heavy!",
+            "More ammo for the royal arsenal!",
+            "Orb-ing my way to victory!",
+            "This orb will do nicely.",
+            "Locked and orb-loaded!",
+            "Time to bring the heat with this orb!",
+        ];
+
+        this.speak(text.chooseRandom());
+        this.orbs++;
+        TITLE.orbs();
+    },
+    refusePickingOrb() {
+        SPEECH.silence();
+        const text = [
+            "You need more bags to carry more orbs, isn't this logical?",
+            "Nah, I am full.",
+            "Put where?",
+            "Feeling greedy?",
+            "I am armed as much as I can be at the moment.",
+            "My bag is bursting at the seams.",
+            "No more room in the orb inn.",
+            "I've hit my orb limit.",
+            "This bag is maxed out.",
+            "No space for another orb.",
+            "My orb bag is officially full.",
+            "Can't carry any more, I'm at capacity.",
+            "Orb overload. No more can fit.",
+            "I need an upgrade for more orbs.",
+            "Full up. Can't take another one.",
+        ];
+
+        this.speak(text.chooseRandom());
+        this.dropOrb();
+    },
+    dropOrb() {
+        const position = Vector3.to_FP_Grid(HERO.player.pos);
+        const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
+        orb.createTexture();
+        ITEM3D.add(orb);
+    }
 };
 
 const GAME = {
@@ -287,11 +344,11 @@ const GAME = {
         }
         TITLE.keys(); */
 
-   /*      HERO.hasCapacity = true;
-        HERO.capacity = 5;
-        HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
-        HERO.orbs = 2; */
-  
+        /*      HERO.hasCapacity = true;
+             HERO.capacity = 5;
+             HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
+             HERO.orbs = 2; */
+
         /** END DEBUG */
 
         //SAVE GAME
@@ -565,12 +622,23 @@ const GAME = {
                 switch (interaction.which) {
                     case "inventory_full":
                         if (!HERO.canComplain) break;
-                        const variants = ["I can't carry any more.",
+                        const variants = [
+                            "I can't carry any more.",
                             "My bag is full.",
                             "My bag is breaking at the seams.",
                             "Don't you see my bag is already full, fool?",
                             "Put where? There is no space left.",
-                            "You are a greedy bastard, aren't you?"
+                            "You are a greedy bastard, aren't you?",
+                            "I'm carrying the castle on my back.",
+                            "Bag capacity reached, mission abort.",
+                            "No more room for knick-knacks.",
+                            "I'm not a pack mule.",
+                            "My bag says 'No more, please.'",
+                            "I'd need a second bag for that.",
+                            "Full to the brim, no more can fit.",
+                            "My bag is stuffed like a turkey.",
+                            "No vacancy in my bag.",
+                            "Trying to turn me into a hoarder?",
                         ];
                         HERO.speak(variants.chooseRandom());
                         HERO.canComplain = false;
@@ -670,6 +738,10 @@ const GAME = {
                 break;
             case "entity_interaction":
                 TITLE.keys()
+                break;
+            case "munition":
+                HERO.pickOrb();
+                display(interaction.inventorySprite);
                 break;
             case "concludeGame":
                 GAME.completed = true;
@@ -780,7 +852,6 @@ const GAME = {
         GAME.fps.update(fps);
         CTX.fillText(GAME.fps.getFps(), 5, 10);
     },
-
 };
 
 const TITLE = {

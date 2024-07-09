@@ -23,8 +23,8 @@ for (let [index, key] of KEY_TYPES.entries()) {
     KEY_TYPE[key] = new KeyTypeDefinition(key, `${key}Key`, key, KEY_TEXTURES[index], MATERIAL[KEY_MATERIAL[index]]);
 }
 
-/* const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeapon", "BoostArmor", "DestroyArmor", "DestroyWeapon",
-    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"]; */
+const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeapon", "BoostArmor", "DestroyArmor", "DestroyWeapon",
+    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"];
 
 const SHRINE_TYPE = {
 
@@ -1125,6 +1125,16 @@ const HERO_TYPE = {
  */
 
 const INTERACTION_OBJECT = {
+    Orb: {
+        name: "Orb",
+        category: "munition",
+        element: "BALL",
+        scale: 1.5 / 2 ** 5,
+        glueToFloor: true,
+        texture: "FireballTexture",
+        material: MATERIAL.fire,
+        inventorySprite: "FireBallIcon",
+    },
     Bag: {
         name: "Bag",
         category: "action_item",
@@ -1135,7 +1145,7 @@ const INTERACTION_OBJECT = {
         texture: "Bag_BaseColor",
         material: MATERIAL.standard,
         inventorySprite: "Bag",
-        text: "Cool. More storage. I can carry the the repelling fireorbs now."
+        text: "Cool. More storage. I can carry more repelling fireorbs now."
     },
     Apple: {
         name: "Apple",

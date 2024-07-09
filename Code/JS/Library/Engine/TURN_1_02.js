@@ -50,7 +50,7 @@ const TURN = {
         text = text.replace(/[<>#-]/g, '');
         ENGINE.clearLayer("subtitle");
         let CTX = LAYER.subtitle;
-        let fs = 16;
+        let fs = 18;
         CTX.font = fs + "px Times";
         CTX.shadowColor = "#666";
         CTX.shadowOffsetX = 1;
@@ -58,7 +58,6 @@ const TURN = {
         CTX.shadowBlur = 0;
         CTX.fillStyle = color;
         CTX.textAlign = "center";
-        //CTX.fillText(text, CTX.canvas.width / 2, CTX.canvas.height - fs);
         CTX.fillText(text, CTX.canvas.width / 2, this.getPosition(CTX, fs));
         GenericTimers.subTimer();
     }

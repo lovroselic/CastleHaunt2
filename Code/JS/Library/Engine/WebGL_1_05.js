@@ -801,7 +801,7 @@ const WebGL = {
 
                     let itemGrid = obj.grid;
                     if (obj.moveState) {
-                        itemGrid = obj.moveState.grid;                                                          // support fort movables
+                        itemGrid = obj.moveState.grid;                                                          // support for movables
                     }
                     else if (obj.grid.constructor.name === "Grid") {                                            // support for non FP grids
                         itemGrid = Grid.toCenter(obj.grid);
@@ -1807,6 +1807,9 @@ class Drawable_object {
     deactivate() {
         this.active = false;
         this.interactive = false;
+    }
+    createTexture(){
+        this.texture = WebGL.createTexture(this.texture);
     }
 }
 

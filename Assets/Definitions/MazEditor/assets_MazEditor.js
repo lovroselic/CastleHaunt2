@@ -538,6 +538,7 @@ LoadSheetSequences = [
 LoadSprites = [
     //from UI
     { srcName: "UI/Bag2.png", name: "Bag" },
+    { srcName: "UI/FireballIcon48.png", name: "FireBallIcon" },
     // items
     { srcName: "Items/Acorn.png", name: "Acorn" },
     { srcName: "Items/Amethyst.png", name: "Amethyst" },

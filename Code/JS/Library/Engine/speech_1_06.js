@@ -11,7 +11,7 @@ TODO:
 ////////////////////////////////////////////////////
 
 const SPEECH = {
-  VERSION: "1.05",
+  VERSION: "1.06",
   CSS: "color: #0A0",
   VERBOSE: true,
   browserSupport: true,
@@ -44,6 +44,9 @@ const SPEECH = {
     for (const setting in voice.setting) {
       SPEECH.settings[setting] = voice.setting[setting];
     }
+  },
+  silence(){
+    speechSynthesis.cancel();
   },
   speak(txt) {
     if (!SPEECH.ready) {
