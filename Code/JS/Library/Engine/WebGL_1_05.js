@@ -1808,7 +1808,7 @@ class Drawable_object {
         this.active = false;
         this.interactive = false;
     }
-    createTexture(){
+    createTexture() {
         this.texture = WebGL.createTexture(this.texture);
     }
 }
@@ -2180,6 +2180,9 @@ class Missile extends Drawable_object {
     hitWall(IAM) {
         this.explode(IAM);
     }
+    remove(IAM) {
+        IAM.remove(this.id);
+    }
     explode(IAM) {
         IAM.remove(this.id);
         EXPLOSION3D.add(new ParticleExplosion(this.pos));
@@ -2192,13 +2195,15 @@ class Missile extends Drawable_object {
 }
 
 class BouncingMissile extends Missile {
-    constructor(position, direction, type, magic) {
+    constructor(position, direction, type, magic, explosionType = GreenMetalExplosion, friendly = false) {
         super(position, direction, type, magic);
         this.name = "BouncingMissile";
         this.bounceCount = 0;
         this.maxPower = this.power;
         this.minPower = (this.power * 0.2) >>> 0;
         this.originalScale = new Float32Array(this.scale);
+        this.explosionType = explosionType;
+        this.friendly = friendly;
     }
     static calcMana(magic) {
         return (2 * (magic ** 1.25)) | 0;
@@ -2207,10 +2212,13 @@ class BouncingMissile extends Missile {
         return (3 * magic) + RND(-3, 3);
     }
     rebound(innerPoint, GA, IAM) {
+        console.log("rebound", this.bounceCount, innerPoint);
         const pos2D = Vector3.to_FP_Grid(this.pos);
         const dir2D = Vector3.to_FP_Vector(this.dir);
         const reboundDir = GRID.getReboundDir(innerPoint, pos2D, dir2D, GA);
-        if (!reboundDir) return this.explode(IAM);
+        console.log("..reboundDir", reboundDir);
+        //if (!reboundDir) return this.explode(IAM);
+        if (!reboundDir) throw "IN WALL";
         const new3D_dir = Vector3.from_2D_dir(reboundDir);
         this.dir = new3D_dir;
         this.bounceCount++;
@@ -2227,12 +2235,17 @@ class BouncingMissile extends Missile {
             glMatrix.mat4.fromScaling(mScaleMatrix, this.scale);
             this.mScaleMatrix = mScaleMatrix;
 
-        } else this.explode(IAM);
+        } else if (this.collectible) {
+            throw "COLLECT";
+        } else {
+            console.error("Explode");
+            this.explode(IAM)
+        };
 
     }
     explode(IAM) {
         IAM.remove(this.id);
-        EXPLOSION3D.add(new GreenMetalExplosion(this.pos));
+        EXPLOSION3D.add(new this.explosionType(this.pos));
         AUDIO.Explosion.volume = RAY.volume(this.distance);
         AUDIO.Explosion.play();
     }

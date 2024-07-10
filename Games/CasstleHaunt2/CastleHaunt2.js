@@ -22,7 +22,7 @@ const DEBUG = {
     FPS: true,
     SETTING: true,
     VERBOSE: true,
-    _2D_display: false,
+    _2D_display: true,
     INVINCIBLE: false,
     FREE_MAGIC: false,
     LOAD: false,
@@ -52,10 +52,11 @@ const INI = {
     ORB_MAX_CAPACITY: 5,
     MAX_HERO_HEALTH: 32,
     AVATAR_TRANSPARENCY: 10,
+    BOUNCE_COUNT: 6,
 };
 
 const PRG = {
-    VERSION: "0.04.00",
+    VERSION: "0.04.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -202,6 +203,8 @@ const HERO = {
         this.canComplain = true;
         this.maxHealth = INI.MAX_HERO_HEALTH;
         this.health = this.maxHealth;
+        this.orbs = 0;
+        this.bounceCount = INI.BOUNCE_COUNT;
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -228,13 +231,33 @@ const HERO = {
     shoot() {
         if (!HERO.canShoot) return;
         HERO.canShoot = false;
-
-        console.warn("hero shooting");
+        console.warn("hero shooting", HERO.orbs);
         HERO.player.matrixUpdate();
-
-
+        if (HERO.orbs <= 0) {
+            AUDIO.MagicFail.play();
+        } else {
+            HERO.orbs--;
+            TITLE.orbs();
+        }
+        const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
+        const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.bounceCount, ParticleExplosion, true);
+        console.log("missile", missile);
+        MISSILE3D.add(missile);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
+    },
+    hitByMissile(missile) {
+        console.log("HERO hit by missile", missile, "friendly", missile.friendly);
+        if (missile.friendly) {
+            this.catchOrb();
+            missile.remove(MISSILE3D);
+        } else {
+            /** TO CONT */
+
+            missile.explode(MISSILE3D);
+        }
+
+
     },
     inventory: {
         clear() {
@@ -250,9 +273,34 @@ const HERO = {
             return this.key.length + this.item.length;
         }
     },
-    pickOrb() {
-        console.log("picking orb");
+    getOrb(text) {
         if (this.orbs === this.capacity) return this.refusePickingOrb();
+        this.speak(text.chooseRandom());
+        this.orbs++;
+        TITLE.orbs();
+    },
+    catchOrb() {
+        const text = [
+            "Good catch.",
+            "Come to mamma.",
+            "Back to my bag.",
+            "Gotcha, orb.",
+            "Mine again.",
+            "Back in action.",
+            "Reclaimed it.",
+            "Catching skills on point.",
+            "Welcome back, little orb.",
+            "Caught it like a pro.",
+            "Back where you belong.",
+            "Snatched from the jaws of defeat.",
+            "Orb retrieval successful.",
+            "Caught and ready for round two.",
+            "Return to sender.",
+            "Boomerang orb.",
+        ];
+        return this.getOrb(text);
+    },
+    pickOrb() {
         const text = [
             "I am getting armed to the teeth.",
             "Another orb.",
@@ -268,10 +316,7 @@ const HERO = {
             "Locked and orb-loaded!",
             "Time to bring the heat with this orb!",
         ];
-
-        this.speak(text.chooseRandom());
-        this.orbs++;
-        TITLE.orbs();
+        return this.getOrb(text);
     },
     refusePickingOrb() {
         SPEECH.silence();
@@ -348,10 +393,10 @@ const GAME = {
         }
         TITLE.keys(); */
 
-        /*      HERO.hasCapacity = true;
-             HERO.capacity = 5;
-             HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
-             HERO.orbs = 2; */
+        HERO.hasCapacity = true;
+        HERO.capacity = 5;
+        HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
+        HERO.orbs = 5;
 
         /** END DEBUG */
 
@@ -589,12 +634,11 @@ const GAME = {
         const date = Date.now();
         HERO.player.animateAction();
         //VANISHING3D.manage(lapsedTime);
-        //MISSILE3D.manage(lapsedTime);
+        MISSILE3D.manage(lapsedTime);
         EXPLOSION3D.manage(date);
         ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
         //DYNAMIC_ITEM3D.manage(lapsedTime, date);
         GAME.respond(lapsedTime);
-        //MINIMAP.unveil(Vector3.to_FP_Grid(HERO.player.pos), HERO.vision);
         ENGINE.TIMERS.update();
 
         const interaction = WebGL.MOUSE.click(HERO);
@@ -610,7 +654,6 @@ const GAME = {
             GAME.drawPlayer();
         }
         WebGL.renderScene();
-        //MINIMAP.draw(HERO.radar);
         TITLE.compassNeedle();
         TITLE.time();
 
@@ -619,7 +662,7 @@ const GAME = {
         }
         if (DEBUG._2D_display) {
             ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
-            //MISSILE3D.draw();
+            MISSILE3D.draw();
             //ENTITY3D.drawVector2D();
             //DYNAMIC_ITEM3D.drawVector2D();
         }

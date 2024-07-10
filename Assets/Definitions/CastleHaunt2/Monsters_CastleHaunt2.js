@@ -243,7 +243,7 @@ const DOOR_TYPE = {
 };
 
 const COMMON_ITEM_TYPE = {
-    Scroll: {
+/*     Scroll: {
         name: "Scroll",
         category: "scroll",
         element: "SCROLL",
@@ -251,8 +251,8 @@ const COMMON_ITEM_TYPE = {
         glueToFloor: true,
         texture: "ScrollTexture",
         material: MATERIAL.paper,
-    },
-    Fireball: {
+    }, */
+   /*  Fireball: {
         name: "Fireball",
         category: 'missile',
         element: "BALL",
@@ -262,7 +262,7 @@ const COMMON_ITEM_TYPE = {
         lightColor: "#FF7700",
         material: MATERIAL.fire,
         construct: Missile,
-    },
+    }, */
     Bounceball: {
         name: "Bounceball",
         category: 'missile',
@@ -273,6 +273,18 @@ const COMMON_ITEM_TYPE = {
         lightColor: "#006600",
         material: MATERIAL.greenFluence,
         construct: BouncingMissile,
+    },
+    Orb: {
+        name: "Orb",
+        category: 'missile',
+        element: "BALL",
+        scale: 1.9 / 2 ** 5,
+        texture: "FireballTexture",
+        moveSpeed: 8.0,
+        lightColor: "#FF7700",
+        material: MATERIAL.fire,
+        construct: BouncingMissile,
+        collectible: true,
     },
 };
 

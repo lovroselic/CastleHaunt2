@@ -20,6 +20,9 @@ LoadTextures = [
 
     { srcName: "Wall/Forest.jpg", name: "Forest" },
 
+    //explorions
+    { srcName: "Wall/GreenMetal.jpg", name: "GreenMetal" },
+
     /** decals that are textures */
 
     /** object textures */
@@ -36,9 +39,11 @@ LoadTextures = [
     { srcName: "ObjectTextures/Coins.jpg", name: "Coins" },
     { srcName: "ObjectTextures/Crate.jpg", name: "Crate" },
     { srcName: "ObjectTextures/EmeraldTexture.jpg", name: "EmeraldTexture" },
-    { srcName: "ObjectTextures/Explosion.jpg", name: "Explosion" },
+    { srcName: "ObjectTextures/Explosion3.jpg", name: "Explosion" },
+    //{ srcName: "ObjectTextures/Explosion.jpg", name: "Explosion" },
     { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
-    { srcName: "ObjectTextures/FireballTexture.jpg", name: "FireballTexture" },
+    //{ srcName: "ObjectTextures/FireballTexture.jpg", name: "FireballTexture" },
+    { srcName: "ObjectTextures/FireballTexture2.jpg", name: "FireballTexture" },
     { srcName: "ObjectTextures/GhostFaceGreen.jpg", name: "GhostFaceGreen" },
     { srcName: "ObjectTextures/Gold.jpg", name: "Gold" },
     { srcName: "ObjectTextures/GreenBasilisk.jpg", name: "GreenBasilisk" },
