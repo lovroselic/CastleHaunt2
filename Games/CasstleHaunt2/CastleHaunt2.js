@@ -56,7 +56,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.04.02",
+    VERSION: "0.04.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -377,6 +377,9 @@ const GAME = {
         GAME.lives = 5;
         GAME.level = 1;                 //start
         GAME.gold = 0;
+
+        const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
+        GAME.STORE = new Store(storeList);
 
         HERO.construct();
         ENGINE.VECTOR2D.configure("player");
@@ -904,6 +907,95 @@ const GAME = {
         let fps = 1000 / lapsedTime || 0;
         GAME.fps.update(fps);
         CTX.fillText(GAME.fps.getFps(), 5, 10);
+    },
+    forceOpenDoor(waypoint) {
+        for (const gate of INTERACTIVE_BUMP3D.POOL) {
+            if (gate.destination.origin === waypoint) {
+                if (gate.locked || gate.color === "Closed") {
+                    gate.openGate();
+                    gate.storageLog();
+                }
+                return;
+            }
+        }
+    },
+    useStaircase(destination) {
+        console.info("useStaircase", destination);
+        console.time("usingStaircase");
+
+        const IAMtoClean = [EXPLOSION3D];                //clean IAM
+        for (const iam of IAMtoClean) {
+            iam.clean();
+        }
+
+        /** MISSILE3D needs to be considered, unfriendly clean, friendly drop */
+
+        GAME.STORE.storeIAM(MAP[GAME.level].map);
+        GAME.level = destination.level;
+        const level = GAME.level;
+        if (!MAP[GAME.level].map) {
+            GAME.STORE.clearPools();
+            GAME.newDungeon(level);
+            GAME.buildWorld(level);
+            GAME.STORE.linkMap(MAP[level].map);
+            GAME.setWorld(level);
+        } else {
+            GAME.STORE.loadIAM(MAP[level].map);
+            GAME.STORE.linkMap(MAP[level].map);
+            GAME.setWorld(level, true);
+        }
+
+        //MAP_TOOLS.applyStorageActions(level);             //to be developed
+        GAME.forceOpenDoor(destination.waypoint);
+        HERO.player.setMap(MAP[level].map);
+        INTERACTIVE_BUMP3D.setup();
+
+        const start_dir = MAP[level].map[this.destination.waypoint].vector;
+        let start_grid = Grid.toClass(MAP[level].map[this.destination.waypoint].grid).add(start_dir);
+        start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
+        HERO.player.setPos(start_grid);
+        HERO.player.setDir(Vector3.from_2D_dir(start_dir));
+
+        /** SAVE GAME each time */
+        //GAME.save(destination);                           //to be developed
+
+        //observe
+        if (MAP_TEXT[GAME.level]) {
+            HERO.speak(MAP_TEXT[GAME.level]);
+            MAP_TEXT[GAME.level] = null;
+        }
+        console.timeEnd("usingStaircase");
+
+        if (DEBUG._2D_display) {
+            ENGINE.resizeBOX("LEVEL", MAP[level].pw, MAP[level].ph);
+            ENGINE.BLOCKGRID.configure("pacgrid", "#FFF", "#000");
+            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            GRID.grid();
+            GRID.paintCoord("coord", MAP[level].map);
+        }
+    },
+    save(destination) {
+        const flag = SG_DICT[MAP[GAME.level].sg];
+
+        switch (flag) {
+            case "Block":
+                GAME.canBeSaved = false;
+                break;
+            case "Restore":
+                GAME.canBeSaved = true;
+                break;
+        }
+
+        MAP[GAME.level].sg = 0;
+        if (!GAME.canBeSaved) return;
+
+        console.time("save");
+        GAME.loadWayPoint = destination.waypoint;
+        SAVE_GAME.save();
+        SAVE_MAP_IAM.save_map(MAP);
+        SAVE_MAP_IAM.save_GA(MAP);
+        TURN.display("GAME SAVED", "#FFF");
+        console.timeEnd("save");
     },
 };
 
