@@ -840,7 +840,7 @@ class Missile3D extends IAM {
         this.reIndex();
         for (let obj of this.POOL) {
             if (obj) {
-                obj.move(lapsedTime);
+                obj.move(lapsedTime, this.map.GA);
                 const pos = Vector3.to_FP_Grid(obj.pos);
                 let [wallHit, point] = this.map.GA.entityInWallPoint(pos, Vector3.to_FP_Vector(obj.dir), obj.r);
                 if (wallHit) {

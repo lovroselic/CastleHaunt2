@@ -6,7 +6,7 @@
 console.clear();
 
 const LIB = {
-  VERSION: "4.04",
+  VERSION: "4.05",
   CSS: "color: #EFE",
   log: function () {
     console.log(`%cPrototype LIB ${LIB.VERSION} loaded`, LIB.CSS);
@@ -28,6 +28,7 @@ changelog:
 4.03: .limit on master grid
 4.04: Angle.getOrtoVector
       MasterGrid.manhattanDistance
+4.05: FP_Vector.scale
 
 */
 
@@ -696,6 +697,9 @@ class FP_Vector extends MasterVectorClass {
   }
   mul(vector, num = 1.0) {
     return new FP_Vector(this.x * num * vector.x, this.y * num * vector.y);
+  }
+  scale(num) {
+    return new FP_Vector(this.x * num, this.y * num);
   }
   ortoAlign() {
     let dim = ["x", "y"];

@@ -2159,9 +2159,14 @@ class Missile extends Drawable_object {
     draw() {
         ENGINE.VECTOR2D.drawPerspective(this, "#F00");
     }
-    move(lapsedTime) {
+    move(lapsedTime, GA) {
         let length = (lapsedTime / 1000) * this.moveSpeed;
-        this.pos = this.pos.translate(this.dir, length);
+        const pos = this.pos.translate(this.dir, length);
+        if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(pos)))) {
+            console.error("..moved to wall, lapsedTime", lapsedTime);
+            return this.move(lapsedTime / 2, GA);
+        }
+        this.pos = pos;
         this.distance = glMatrix.vec3.distance(this.IAM.hero.player.pos.array, this.pos.array);
 
         const mTranslationMatrix = glMatrix.mat4.create();
@@ -2195,7 +2200,7 @@ class Missile extends Drawable_object {
 }
 
 class BouncingMissile extends Missile {
-    constructor(position, direction, type, magic, explosionType = GreenMetalExplosion, friendly = false) {
+    constructor(position, direction, type, magic, explosionType = GreenMetalExplosion, friendly = false, collectibleType = null) {
         super(position, direction, type, magic);
         this.name = "BouncingMissile";
         this.bounceCount = 0;
@@ -2204,6 +2209,7 @@ class BouncingMissile extends Missile {
         this.originalScale = new Float32Array(this.scale);
         this.explosionType = explosionType;
         this.friendly = friendly;
+        this.collectibleType = collectibleType;
     }
     static calcMana(magic) {
         return (2 * (magic ** 1.25)) | 0;
@@ -2212,13 +2218,13 @@ class BouncingMissile extends Missile {
         return (3 * magic) + RND(-3, 3);
     }
     rebound(innerPoint, GA, IAM) {
-        console.log("rebound", this.bounceCount, innerPoint);
+        //console.log("rebound", this.bounceCount, innerPoint);
         const pos2D = Vector3.to_FP_Grid(this.pos);
         const dir2D = Vector3.to_FP_Vector(this.dir);
         const reboundDir = GRID.getReboundDir(innerPoint, pos2D, dir2D, GA);
-        console.log("..reboundDir", reboundDir);
+        //console.log("..reboundDir", reboundDir);
         //if (!reboundDir) return this.explode(IAM);
-        if (!reboundDir) throw "IN WALL";
+        //if (!reboundDir) throw "IN WALL";
         const new3D_dir = Vector3.from_2D_dir(reboundDir);
         this.dir = new3D_dir;
         this.bounceCount++;
@@ -2236,7 +2242,11 @@ class BouncingMissile extends Missile {
             this.mScaleMatrix = mScaleMatrix;
 
         } else if (this.collectible) {
-            throw "COLLECT";
+            //console.warn("COLLECT", this, this.pos, GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
+            const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
+            dropped.createTexture();
+            ITEM3D.add(dropped);
+            this.explode(IAM)
         } else {
             console.error("Explode");
             this.explode(IAM)
