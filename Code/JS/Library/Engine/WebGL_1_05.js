@@ -2218,13 +2218,9 @@ class BouncingMissile extends Missile {
         return (3 * magic) + RND(-3, 3);
     }
     rebound(innerPoint, GA, IAM) {
-        //console.log("rebound", this.bounceCount, innerPoint);
         const pos2D = Vector3.to_FP_Grid(this.pos);
         const dir2D = Vector3.to_FP_Vector(this.dir);
         const reboundDir = GRID.getReboundDir(innerPoint, pos2D, dir2D, GA);
-        //console.log("..reboundDir", reboundDir);
-        //if (!reboundDir) return this.explode(IAM);
-        //if (!reboundDir) throw "IN WALL";
         const new3D_dir = Vector3.from_2D_dir(reboundDir);
         this.dir = new3D_dir;
         this.bounceCount++;
@@ -2242,16 +2238,19 @@ class BouncingMissile extends Missile {
             this.mScaleMatrix = mScaleMatrix;
 
         } else if (this.collectible) {
-            //console.warn("COLLECT", this, this.pos, GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
-            const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
-            dropped.createTexture();
-            ITEM3D.add(dropped);
+            this.drop();
             this.explode(IAM)
         } else {
             console.error("Explode");
             this.explode(IAM)
         };
 
+    }
+    drop() {
+        console.log("dropping", this);
+        const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
+        dropped.createTexture();
+        ITEM3D.add(dropped);
     }
     explode(IAM) {
         IAM.remove(this.id);

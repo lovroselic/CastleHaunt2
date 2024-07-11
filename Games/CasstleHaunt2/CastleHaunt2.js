@@ -56,7 +56,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.04.03",
+    VERSION: "0.04.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -429,6 +429,25 @@ const GAME = {
         GAME.resume();
         HERO.speak("Tralala hopsasa!");
     },
+    setCamera() {
+        HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
+        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
+
+        switch (WebGL.CONFIG.cameraType) {
+            case "first_person":
+                break;
+            case "third_person":
+                HERO.player.associateExternalCamera(HERO.topCamera);
+                WebGL.setCamera(HERO.topCamera);
+                break;
+            case "top_down":
+                HERO.player.associateExternalCamera(HERO.overheadCamera);
+                WebGL.setCamera(HERO.overheadCamera);
+                break;
+            default:
+                throw "WebGL.CONFIG.cameraType error";
+        }
+    },
     initLevel(level) {
         console.info("init level", level);
         this.newDungeon(level);
@@ -447,26 +466,8 @@ const GAME = {
             start_grid = MAP[level].map.startPosition.grid;
         }
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
-
-        /** cameras and setting*/
         HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
-        HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
-        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
-
-        switch (WebGL.CONFIG.cameraType) {
-            case "first_person":
-                break;
-            case "third_person":
-                HERO.player.associateExternalCamera(HERO.topCamera);
-                break;
-            case "top_down":
-                HERO.player.associateExternalCamera(HERO.overheadCamera);
-                break;
-            default:
-                throw "WebGL.CONFIG.cameraType error";
-
-        }
-
+        this.setCamera();
         AI.initialize(HERO.player, "3D");
         this.setWorld(level);
         ENTITY3D.resetTime();
@@ -928,10 +929,14 @@ const GAME = {
             iam.clean();
         }
 
-        /** MISSILE3D needs to be considered, unfriendly clean, friendly drop */
+        for (const missile of MISSILE3D.POOL) {
+            if (missile.friendly) missile.drop();
+            MISSILE3D.remove(missile.id);
+        }
 
         GAME.STORE.storeIAM(MAP[GAME.level].map);
         GAME.level = destination.level;
+
         const level = GAME.level;
         if (!MAP[GAME.level].map) {
             GAME.STORE.clearPools();
@@ -948,6 +953,7 @@ const GAME = {
         //MAP_TOOLS.applyStorageActions(level);             //to be developed
         GAME.forceOpenDoor(destination.waypoint);
         HERO.player.setMap(MAP[level].map);
+        
         INTERACTIVE_BUMP3D.setup();
 
         const start_dir = MAP[level].map[this.destination.waypoint].vector;
@@ -955,6 +961,8 @@ const GAME = {
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
         HERO.player.setPos(start_grid);
         HERO.player.setDir(Vector3.from_2D_dir(start_dir));
+        GAME.setCamera();
+
 
         /** SAVE GAME each time */
         //GAME.save(destination);                           //to be developed
@@ -1313,6 +1321,9 @@ const TITLE = {
             } else sprite = SPRITE.FireRing32;
             ENGINE.spriteDraw("orbs", x, y, sprite);
         }
+    },
+    music() {
+        AUDIO.Title.play();
     },
 };
 
