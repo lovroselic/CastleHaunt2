@@ -150,19 +150,32 @@ LoadModels = [
 ];
 
 LoadSprites = [
+    //lairs
+    { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
+    { srcName: "Lairs/Lair02.jpg", name: "Lair02" },
+    { srcName: "Lairs/Lair03.jpg", name: "Lair03" },
+    { srcName: "Lairs/Lair04.jpg", name: "Lair04" },
+    { srcName: "Lairs/Lair05.jpg", name: "Lair05" },
+    { srcName: "Lairs/Lair06.jpg", name: "Lair06" },
+    { srcName: "Lairs/Lair07.jpg", name: "Lair07" },
+    { srcName: "Lairs/Lair08.jpg", name: "Lair08" },
+    { srcName: "Lairs/Lair09.jpg", name: "Lair09" },
+    { srcName: "Lairs/Lair10.jpg", name: "Lair10" },
+    { srcName: "Lairs/Lair11.jpg", name: "Lair11" },
+
     //doors
-    { srcName: "Doors/DungeonDoor_Blue.png", name: "DungeonDoor_Blue" },
-    { srcName: "Doors/DungeonDoor_Closed.png", name: "DungeonDoor_Closed" },
-    { srcName: "Doors/DungeonDoor_Down.jpg", name: "DungeonDoor_Down" },
-    { srcName: "Doors/DungeonDoor_Emerald.png", name: "DungeonDoor_Emerald" },
+    { srcName: "Doors/DungeonDoor_Blue2.png", name: "DungeonDoor_Blue" },
+    { srcName: "Doors/DungeonDoor_Closed2.png", name: "DungeonDoor_Closed" },
+    { srcName: "Doors/DungeonDoor_Emerald2.png", name: "DungeonDoor_Emerald" },
     { srcName: "Doors/DungeonDoor_Gold.png", name: "DungeonDoor_Gold" },
     { srcName: "Doors/DungeonDoor_Green.png", name: "DungeonDoor_Green" },
-    { srcName: "Doors/DungeonDoor_Open.png", name: "DungeonDoor_Open" },
+    { srcName: "Doors/DungeonDoor_Open3.png", name: "DungeonDoor_Open" },
     { srcName: "Doors/DungeonDoor_Pearl.png", name: "DungeonDoor_Pearl" },
     { srcName: "Doors/DungeonDoor_Purple.png", name: "DungeonDoor_Purple" },
     { srcName: "Doors/DungeonDoor_Red.png", name: "DungeonDoor_Red" },
     { srcName: "Doors/DungeonDoor_Silver.png", name: "DungeonDoor_Silver" },
-    { srcName: "Doors/DungeonDoor_Up.jpg", name: "DungeonDoor_Up" },
+    { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
+    { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
 
 
     // items

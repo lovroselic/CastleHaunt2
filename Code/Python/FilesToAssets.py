@@ -15,10 +15,11 @@ from glob import glob
 # Prefix = ''
 
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Sprites/Items'
+Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Sprites/Lairs'
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/RotatedSheetSequences'
-Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Textures/Wall'
+# Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Textures/Wall'
 # Prefix = 'Items/'
-Prefix = 'Wall/'
+Prefix = 'Lairs/'
 # Prefix = ''
 files = []
 ext = ['*.png', '*.jpg']

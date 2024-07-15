@@ -693,18 +693,18 @@ LoadSprites = [
     { srcName: "Lights/WallTorch.png", name: "WallTorch" },
 
     //doors
-    { srcName: "Doors/DungeonDoor_Blue.png", name: "DungeonDoor_Blue" },
-    { srcName: "Doors/DungeonDoor_Closed.png", name: "DungeonDoor_Closed" },
-    { srcName: "Doors/DungeonDoor_Down.jpg", name: "DungeonDoor_Down" },
-    { srcName: "Doors/DungeonDoor_Emerald.png", name: "DungeonDoor_Emerald" },
+    { srcName: "Doors/DungeonDoor_Blue2.png", name: "DungeonDoor_Blue" },
+    { srcName: "Doors/DungeonDoor_Closed2.png", name: "DungeonDoor_Closed" },
+    { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
+    { srcName: "Doors/DungeonDoor_Emerald2.png", name: "DungeonDoor_Emerald" },
     { srcName: "Doors/DungeonDoor_Gold.png", name: "DungeonDoor_Gold" },
     { srcName: "Doors/DungeonDoor_Green.png", name: "DungeonDoor_Green" },
-    { srcName: "Doors/DungeonDoor_Open.png", name: "DungeonDoor_Open" },
+    { srcName: "Doors/DungeonDoor_Open3.png", name: "DungeonDoor_Open" },
     { srcName: "Doors/DungeonDoor_Pearl.png", name: "DungeonDoor_Pearl" },
     { srcName: "Doors/DungeonDoor_Purple.png", name: "DungeonDoor_Purple" },
     { srcName: "Doors/DungeonDoor_Red.png", name: "DungeonDoor_Red" },
     { srcName: "Doors/DungeonDoor_Silver.png", name: "DungeonDoor_Silver" },
-    { srcName: "Doors/DungeonDoor_Up.jpg", name: "DungeonDoor_Up" },
+    { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
 
     //ObjDecals
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
