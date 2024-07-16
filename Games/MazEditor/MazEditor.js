@@ -54,7 +54,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.12.00",
+  VERSION: "0.12.01",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -258,6 +258,25 @@ const GAME = {
         }
         dirIndex = dirs[0].toInt();
         $MAP.map.gates.push(Array(gridIndex, dirIndex, $("#sgateID")[0].value, $("#tgateID")[0].value, $("#gatetype")[0].value));
+        break;
+      case "lair":
+        switch (currentValue) {
+          case MAPDICT.WALL:
+            break;
+          default:
+            $("#error_message").html(`Lair placement not supported on value: ${currentValue}`);
+            return;
+        }
+
+        dirs = GA.getDirections(grid, MAPDICT.EMPTY);
+        if (dirs.length > 1) {
+          alert(`bad lair position, posible exits ${dirs.length}`);
+          break;
+        }
+        dirIndex = dirs[0].toInt();
+        $MAP.map.lairs.push(Array(gridIndex, dirIndex, $("#lair_type")[0].value));
+
+        console.warn("***** LAIR *****");
         break;
       case "decal":
         switch (currentValue) {
@@ -540,7 +559,7 @@ const GAME = {
         }
 
         break;
-        case "interactor":
+      case "interactor":
         switch (currentValue) {
           case MAPDICT.WALL:
             dir = GAME.getSelectedDir();
@@ -1070,6 +1089,18 @@ const GAME = {
     });
     $("#trap_type").trigger("change");
 
+    for (const lair in LAIR_TYPE) {
+      $("#lair_type").append(`<option value="${lair}">${lair}</option>`);
+    }
+
+    $("#lair_type").change(function () {
+      ENGINE.drawToId("laircanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#lair_type")[0].value], INI.CANVAS_RESOLUTION));
+    });
+    $("#lair_type").trigger("change");
+
+    $("#randlair").click(GAME.random_lair);
+
+
     $("#randwall").click(GAME.randomTexture.bind(null, TextureList, "#walltexture", "#wallcanvas"));
     $("#randfloor").click(GAME.randomTexture.bind(null, TextureList, "#floortexture", "#floorcanvas"));
     $("#randceil").click(GAME.randomTexture.bind(null, TextureList, "#ceiltexture", "#ceilcanvas"));
@@ -1078,6 +1109,10 @@ const GAME = {
     const texture = TextureList.chooseRandom();
     $(id).val(texture).change();
     ENGINE.drawToId(canvas, 0, 0, SPRITE[$(id)[0].value]);
+  },
+  random_lair() {
+    const lair = LAIR_DECALS.chooseRandom();
+    $("#lair_type").val(lair).change();
   },
   randomLight() {
     const pic = LIGHT_DECALS.chooseRandom();

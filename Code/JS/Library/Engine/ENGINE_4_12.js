@@ -2473,6 +2473,23 @@ const ENGINE = {
           CTX.fillText(gate[3], mid.x, mid.y);
         }
       }
+      if (maze.lairs) {
+        for (const lair of maze.lairs) {
+          let grid = GA.indexToGrid(lair[0]);
+          let start = GRID.gridToCenterPX(grid);
+          let dir = Vector.fromInt(lair[1]);
+          let end = start.translate(dir, W);
+          CTX.save();
+          CTX.lineCap = "butt";
+          CTX.lineWidth = W / 2;
+          CTX.strokeStyle = "black";
+          CTX.beginPath();
+          CTX.moveTo(start.x, start.y);
+          CTX.lineTo(end.x, end.y);
+          CTX.stroke();
+          CTX.restore();
+        }
+      }
       if (maze.keys && Array.isArray(maze.keys)) {
         for (const key of maze.keys) {
           const KEY_COLORS = ["gold", "silver", "red", "green", "blue", "#50C878", "purple", "beige"];

@@ -75,4 +75,10 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
 ];
 const TRIGGER_DECALS = ["RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
+const LAIR_DECALS = [];
+/** hardcoded maxlair! */
+for (let i = 1; i <= 11; i++) {
+    LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
+}
+
 console.log("%cMAP for MazEditor loaded.", "color: #888");

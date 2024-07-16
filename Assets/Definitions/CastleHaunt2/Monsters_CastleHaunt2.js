@@ -243,26 +243,26 @@ const DOOR_TYPE = {
 };
 
 const COMMON_ITEM_TYPE = {
-/*     Scroll: {
-        name: "Scroll",
-        category: "scroll",
-        element: "SCROLL",
-        scale: 1.5 / 2 ** 4,
-        glueToFloor: true,
-        texture: "ScrollTexture",
-        material: MATERIAL.paper,
-    }, */
-   /*  Fireball: {
-        name: "Fireball",
-        category: 'missile',
-        element: "BALL",
-        scale: 1 / 2 ** 4,
-        texture: "FireballTexture",
-        moveSpeed: 8.0,
-        lightColor: "#FF7700",
-        material: MATERIAL.fire,
-        construct: Missile,
-    }, */
+    /*     Scroll: {
+            name: "Scroll",
+            category: "scroll",
+            element: "SCROLL",
+            scale: 1.5 / 2 ** 4,
+            glueToFloor: true,
+            texture: "ScrollTexture",
+            material: MATERIAL.paper,
+        }, */
+    /*  Fireball: {
+         name: "Fireball",
+         category: 'missile',
+         element: "BALL",
+         scale: 1 / 2 ** 4,
+         texture: "FireballTexture",
+         moveSpeed: 8.0,
+         lightColor: "#FF7700",
+         material: MATERIAL.fire,
+         construct: Missile,
+     }, */
     Bounceball: {
         name: "Bounceball",
         category: 'missile',
@@ -297,8 +297,12 @@ const MONSTER_TYPE = {
         midHeight: 0.5,
         deathType: "BloodExplosion",
         inventory: GOLD_ITEM_TYPE.Coins,
+
         /**
          * orbs
+         * health
+         * attack
+         * power
          */
 
         attack: 12,
@@ -1975,3 +1979,17 @@ const POTION_TYPE = {};
 for (let [index, potion] of POTION_TYPES.entries()) {
     POTION_TYPE[potion] = new PotionTypeDefinition(`${potion}Potion`, `${potion}Potion24`, potion.toLowerCase(), POTION_TEXTURES[index], MATERIAL[POTION_MATERIAL[index]]);
 }
+
+//lairs
+const maxLair = 11;
+const LairDecals = [];
+for (let i = 1; i <= maxLair; i++) {
+    LairDecals.push(`Lair${i.toString().padStart(2, "0")}`);
+}
+const LAIR_TYPE = {};
+for (const L of LairDecals) {
+    LAIR_TYPE[L] = {};
+    LAIR_TYPE[L].sprite = L;
+}
+
+console.info(LAIR_TYPE);

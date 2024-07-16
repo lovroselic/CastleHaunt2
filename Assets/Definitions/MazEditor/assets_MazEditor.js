@@ -536,6 +536,19 @@ LoadSheetSequences = [
 ];
 
 LoadSprites = [
+    //lairs
+    { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
+    { srcName: "Lairs/Lair02.jpg", name: "Lair02" },
+    { srcName: "Lairs/Lair03.jpg", name: "Lair03" },
+    { srcName: "Lairs/Lair04.jpg", name: "Lair04" },
+    { srcName: "Lairs/Lair05.jpg", name: "Lair05" },
+    { srcName: "Lairs/Lair06.jpg", name: "Lair06" },
+    { srcName: "Lairs/Lair07.jpg", name: "Lair07" },
+    { srcName: "Lairs/Lair08.jpg", name: "Lair08" },
+    { srcName: "Lairs/Lair09.jpg", name: "Lair09" },
+    { srcName: "Lairs/Lair10.jpg", name: "Lair10" },
+    { srcName: "Lairs/Lair11.jpg", name: "Lair11" },
+
     //from UI
     { srcName: "UI/Bag2.png", name: "Bag" },
     { srcName: "UI/FireballIcon48.png", name: "FireBallIcon" },
