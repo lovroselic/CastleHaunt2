@@ -97,7 +97,7 @@ const SPAWN_TOOLS = {
         const map = MAP_TOOLS.MAP[level].map;
         const GA = map.GA;
         const methods = ['decals', 'lights', 'shrines', 'oracles', 'externalGates', 'keys', 'monsters', 'scrolls', 'potions', 'gold', 'skills',
-            'containers', 'doors', 'triggers', 'entities', 'trainers', 'objects', 'movables', 'traps', 'interactors'];
+            'containers', 'doors', 'triggers', 'entities', 'trainers', 'objects', 'movables', 'traps', 'interactors', 'lairs'];
 
         methods.forEach(method => {
             this[method](map, GA);
@@ -142,6 +142,17 @@ const SPAWN_TOOLS = {
             INTERACTIVE_BUMP3D.add(externalGate);
         }
         INTERACTIVE_BUMP3D.setup();
+    },
+    lairs(map, GA) {
+        for (const L of map.lairs) {
+            const grid = GA.indexToGrid(L[0]);
+            const dir = Vector.fromInt(L[1]);
+            const pic = L[2];
+            const face = DirectionToFace(dir);
+            const lair = new Lair_Spawner(grid, face, SPRITE[pic], "lair", pic, dir);
+            LAIR.add(lair);
+            //console.log("lair", lair);
+        }
     },
     keys(map, GA) {
         for (const K of map.keys) {
@@ -302,7 +313,6 @@ const SPAWN_TOOLS = {
             INTERACTIVE_DECAL3D.add(trap);
         }
     }
-
 };
 
 class IAM_Storage {

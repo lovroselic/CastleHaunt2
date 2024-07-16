@@ -56,7 +56,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.01",
+    VERSION: "0.05.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -593,7 +593,7 @@ const GAME = {
         $("#p3").prop("disabled", false);
         WebGL.CONFIG.set("first_person", true);
         HERO.player.clearCamera();
-        HERO.player.moveSpeed = 4.0;
+        HERO.player.moveSpeed = 2.0;
         WebGL.setCamera(HERO.player);
     },
     setThirdPerson() {

@@ -12,7 +12,7 @@ TODO:
 */
 
 const IndexArrayManagers = {
-    VERSION: "3.08",
+    VERSION: "3.09",
     VERBOSE: false,
     DEAD_LAPSED_TIME: 5,
 };
@@ -1068,6 +1068,13 @@ class Animated_3d_entity extends IAM {
     }
 }
 
+class Lair3D extends IAM {
+    constructor() {
+        super();
+    }
+
+}
+
 /** GLOBAL ID */
 
 const GLOBAL_ID_MANAGER = {
@@ -1148,5 +1155,6 @@ const BUMP3D = new Decal_IA_3D();
 const ENTITY3D = new Animated_3d_entity();
 const MISSILE3D = new Missile3D("enemyIA", ENTITY3D);
 const DYNAMIC_ITEM3D = new Decal3D(256, "dynamic_item3d");
+const LAIR = new Lair3D();
 /** *********************************************** */
 console.log(`%cIndexArrayManagers (IAM) ${IndexArrayManagers.VERSION} ready.`, "color: #7FFFD4");

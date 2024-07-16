@@ -109,7 +109,7 @@ const WebGL = {
     depthBuffer: null,
     frameBuffer: null,
     playerList: [],
-    staticDecalList: [DECAL3D, LIGHTS3D, BUMP3D],
+    staticDecalList: [DECAL3D, LIGHTS3D, BUMP3D, LAIR],
     interactiveDecalList: [INTERACTIVE_DECAL3D, INTERACTIVE_BUMP3D],
     dynamicDecalList: [GATE3D, ITEM3D],
     dynamicLightSources: [MISSILE3D, EXPLOSION3D],
@@ -197,7 +197,8 @@ const WebGL = {
         BUMP3D.init(map);
         ENTITY3D.init(map, hero);
         INTERFACE3D.init(map);
-        EXPLOSION3D.init(map, hero)
+        EXPLOSION3D.init(map, hero);
+        LAIR.init(map, hero);
         this.hero = hero;
     },
     setCamera(camera) {
@@ -884,6 +885,7 @@ const WORLD = {
             case "crest":
             case "portal":
             case "texture":
+            case "lair":
                 dW = (1.0 - W / resolution) / 2;
                 dH = (1.0 - H / resolution) / 2;
                 leftX = dW;
@@ -903,10 +905,11 @@ const WORLD = {
         return Math.max(resolution, WebGL.INI.MIN_RESOLUTION);
     },
     addPic(Y, decal, type) {
+        const expandables = ["texture", "crest", "portal", "lair"];
         let resolution = WebGL.INI.DEFAULT_RESOLUTION;
         if (decal.resolution) {
             resolution = decal.resolution;
-        } else if ((decal.category === "texture") || (decal.category === "crest" || decal.category === "portal") && decal.expand) {
+        } else if (expandables.includes(decal.category) && decal.expand) {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
@@ -1706,6 +1709,15 @@ class ExternalGate extends Portal {
     storageLog() {
         if (!this.IAM.map.storage) return;
         this.IAM.map.storage.add(new IAM_Storage_item("INTERACTIVE_BUMP3D", this.id, "openGate"));
+    }
+}
+
+class Lair_Spawner extends Decal {
+    constructor(grid, face, texture, category, name, direction) {
+        super(grid, face, texture, category, name);
+        this.direction = direction;
+        this.interactive = false;
+        this.expand = true;
     }
 }
 

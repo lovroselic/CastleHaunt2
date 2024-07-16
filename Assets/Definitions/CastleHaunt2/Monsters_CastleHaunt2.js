@@ -1991,5 +1991,3 @@ for (const L of LairDecals) {
     LAIR_TYPE[L] = {};
     LAIR_TYPE[L].sprite = L;
 }
-
-console.info(LAIR_TYPE);
