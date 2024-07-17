@@ -905,11 +905,15 @@ const WORLD = {
         return Math.max(resolution, WebGL.INI.MIN_RESOLUTION);
     },
     addPic(Y, decal, type) {
-        const expandables = ["texture", "crest", "portal", "lair"];
+        const expandables = ["crest", "portal", "lair"];
         let resolution = WebGL.INI.DEFAULT_RESOLUTION;
         if (decal.resolution) {
             resolution = decal.resolution;
-        } else if (expandables.includes(decal.category) && decal.expand) {
+        } else if (
+            (decal.category === "texture")
+            ||
+            (expandables.includes(decal.category) && decal.expand)
+        ) {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }

@@ -8,6 +8,7 @@ console.log("%cAssets for CastleHaunt started.", "color: orange");
 
 LoadFonts = [
     { srcName: "PentaGram.ttf", name: "Pentagram" },
+    { srcName: "CPU.ttf", name: "CPU" },
 ];
 
 LoadTextures = [
@@ -262,6 +263,7 @@ LoadSprites = [
     { srcName: "Items/Wasp.png", name: "Wasp" },
     { srcName: "Items/Whip.png", name: "Whip" },
     { srcName: "Items/WoolenCap.png", name: "WoolenCap" },
+
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
     { srcName: "UI/wavyL.png", name: "wavyL" },
@@ -276,6 +278,9 @@ LoadSprites = [
     { srcName: "UI/PrincessLivesIcon.png", name: "Lives" },
     { srcName: "UI/Fireball32.png", name: "FireBall32" },
     { srcName: "UI/FireRing32.png", name: "FireRing32" },
+    { srcName: "UI/SkillFireball96.png", name: "SkillFireball" },
+    { srcName: "UI/SkillKick96.png", name: "SkillKick" },
+    { srcName: "UI/Heart64.png", name: "Heart" },
 
     //lights
     { srcName: "Lights/Lamp4.png", name: "Lamp4" },

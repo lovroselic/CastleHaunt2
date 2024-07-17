@@ -80,6 +80,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "CPU";
+    src: url("/Assets/Fonts/CPU.ttf");
+    font-display: swap;
+}
+
 
 /* Overrriding Bootstrap */
 

@@ -126,6 +126,9 @@ class IAM {
         }
         callback();
     }
+    getSize() {
+        return this.POOL.length || null;
+    }
 }
 
 /** Profile IA Managers */
@@ -368,7 +371,7 @@ class Floor_Object extends IAM {
     }
 }
 
-class FloorSpawner extends Floor_Object {
+class Spawner extends Floor_Object {
     constructor(byte = 1, banks = 1) {
         super();
         this.IA = `spawner`;
@@ -390,11 +393,11 @@ class FloorSpawner extends Floor_Object {
     /**
      * 
      * @param {*} timeout delay between spawns
-     * @param {*} assertionFunc assets the spawning is possible
+     * @param {*} assertionFunc asserts the spawning is possible
      * @param {*} spawnFunc actual spawning function
-     * @param {*} reference to HERO
+     * @param {*} reference to HERO, defaulrs to null
      */
-    configure(timeout, assertionFunc, spawnFunc, reference) {
+    configure(timeout, assertionFunc, spawnFunc, reference = null) {
         this.timeout = timeout;
         this.assertionFunc = assertionFunc;
         this.spawnFunc = spawnFunc;
@@ -409,6 +412,7 @@ class FloorSpawner extends Floor_Object {
     spawn() {
         if (this.assertionFunc()) {
             const nest = this.selectNest();
+            console.log("nest", nest);
             if (nest) this.spawnFunc(nest);
         }
         this.cooldown();
@@ -1068,9 +1072,12 @@ class Animated_3d_entity extends IAM {
     }
 }
 
-class Lair3D extends IAM {
+class Lair3D extends Spawner {
     constructor() {
         super();
+    }
+    selectNest() {
+        return this.POOL.chooseRandom();
     }
 
 }
@@ -1139,7 +1146,7 @@ const FLOOR_OBJECT_WIDE = new Floor_Object(4, 4);
 const DESTRUCTION_ANIMATION = new Destruction_Animation();
 const CHANGING_ANIMATION = new Changing_Animation();
 const BUMP2D = new Bump2D();
-const NEST = new FloorSpawner();
+const NEST = new Spawner();
 const MISSILE = new Missile_RC();
 const DECAL = new Decal_IA();
 const DECAL3D = new Decal3D();

@@ -8,7 +8,8 @@
 /*
       
 TODO:
-    * everything dones
+    * capture fireball sound
+
 known bugs: 
     * i don't do bugs
 retests:
@@ -52,11 +53,12 @@ const INI = {
     ORB_MAX_CAPACITY: 5,
     MAX_HERO_HEALTH: 32,
     AVATAR_TRANSPARENCY: 10,
-    BOUNCE_COUNT: 6,
+    BOUNCE_COUNT: 5,
+    SPAWN_DELAY: 3000,
 };
 
 const PRG = {
-    VERSION: "0.05.02",
+    VERSION: "0.05.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -117,7 +119,7 @@ const PRG = {
         ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
-        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs"], "fside");
+        ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs", "skills"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
 
         if (DEBUG._2D_display) {
@@ -205,9 +207,31 @@ const HERO = {
         this.health = this.maxHealth;
         this.orbs = 0;
         this.bounceCount = INI.BOUNCE_COUNT;
+        this.power = 5;
+        this.attack = 5;
     },
     bagStart() {
         if (this.hasCapacity) {
+            if (this.capacity >= this.maxCapacity) {
+
+                const text = [
+                    "I can extend the bag further. It will burst.",
+                    "This bag is about to pop.",
+                    "Expanding more? It's a risky move.",
+                    "The bag can't take much more.",
+                    "I need a sturdier bag.",
+                    "Stretching it to the limit here.",
+                    "One more orb and this bag explodes.",
+                    "Bag expansion alert: critical levels.",
+                    "I'm pushing the bag to its max.",
+                    "Another extension and we're in trouble.",
+                    "The bag's screaming for mercy.",
+                    "This bag is about to give up.",
+                ];
+
+                this.speak(text.chooseRandom());
+                return;
+            }
             this.capacity++;
             this.capacity = Math.min(this.capacity, this.maxCapacity);
         } else {
@@ -240,7 +264,7 @@ const HERO = {
             TITLE.orbs();
         }
         const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
-        const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.bounceCount, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
+        const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.power, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         console.log("missile", missile);
         MISSILE3D.add(missile);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
@@ -375,9 +399,9 @@ const GAME = {
 
         GAME.completed = false;
         GAME.lives = 5;
-        //GAME.level = 1;                 //start
+        GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases
-        GAME.level = 3;                 //lair
+        //GAME.level = 3;                 //lair
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -428,6 +452,7 @@ const GAME = {
     },
     levelExecute() {
         GAME.drawFirstFrame(GAME.level);
+        LAIR.start();
         GAME.resume();
         HERO.speak("Tralala hopsasa!");
     },
@@ -473,6 +498,7 @@ const GAME = {
         AI.initialize(HERO.player, "3D");
         this.setWorld(level);
         ENTITY3D.resetTime();
+        LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
     },
     setWorld(level, decalsAreSet = false) {
         console.time("setWorld");
@@ -838,14 +864,6 @@ const GAME = {
             GAME.setTopDownView();
             return;
         }
-        /* if (map[ENGINE.KEY.map.shift]) {
-            if (map[ENGINE.KEY.map.ctrl]) {
-                ENGINE.GAME.keymap[ENGINE.KEY.map.ctrl] = false;
-                HERO.shootBouncy();
-                return;
-            }
-        } */
-
         if (map[ENGINE.KEY.map.F4]) {
             $("#pause").trigger("click");
             ENGINE.TIMERS.display();
@@ -955,7 +973,7 @@ const GAME = {
         //MAP_TOOLS.applyStorageActions(level);             //to be developed
         GAME.forceOpenDoor(destination.waypoint);
         HERO.player.setMap(MAP[level].map);
-        
+
         INTERACTIVE_BUMP3D.setup();
 
         const start_dir = MAP[level].map[this.destination.waypoint].vector;
@@ -1007,6 +1025,15 @@ const GAME = {
         TURN.display("GAME SAVED", "#FFF");
         console.timeEnd("save");
     },
+    canSpawn() {
+        if (!LAIR.getSize()) return false;
+
+        console.error("CAN SPAWN");
+        return true;
+    },
+    spawn(lair) {
+        console.warn("spawning from", lair)
+    }
 };
 
 const TITLE = {
@@ -1021,8 +1048,9 @@ const TITLE = {
         scrollIndex: 0,
         scrollInRow: 3,
         scrollDelta: 72,
-        SY: 540,
+        SY: 540, //540
         OY: 440,
+        HEALTH_TEXT: 720,
     },
     startTitle() {
         console.log("TITLE started");
@@ -1142,6 +1170,7 @@ const TITLE = {
         TITLE.keys();
         TITLE.scrolls();
         TITLE.orbs();
+        TITLE.skills();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -1163,7 +1192,6 @@ const TITLE = {
         CTX.stroke();
     },
     sidebackground_static() {
-        const fs = 14;
         //lines
         let x = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
         let y = 0;
@@ -1176,7 +1204,7 @@ const TITLE = {
         y = TITLE.stack.Y2;
         y += (SPRITE.Bag.height / 4) | 0;
         const lX = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
-        const rX = ENGINE.sideWIDTH - lX - SPRITE.wavyR.width;
+        let rX = ENGINE.sideWIDTH - lX - SPRITE.wavyR.width;
         ENGINE.draw("sideback", lX, y, SPRITE.wavyL);
         ENGINE.draw("sideback", rX, y, SPRITE.wavyR);
         ENGINE.spriteDraw("sideback", cX, y + dY, SPRITE.Bag);
@@ -1201,14 +1229,42 @@ const TITLE = {
         y += TITLE.stack.delta4;
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
 
+        //
+        y += SPRITE.LineTop.height + 8; //10
+        ENGINE.draw("sideback", x, y, SPRITE.SkillFireball);
+        rX = ENGINE.sideWIDTH - lX - SPRITE.SkillKick.width;
+        ENGINE.draw("sideback", rX, y, SPRITE.SkillKick);
+
+        TITLE.stack.skills = y + 120; //115
+        console.log("TITLE.stack.skills", TITLE.stack.skills);
+
         //final line
         y = (ENGINE.gameHEIGHT - SPRITE.LineBottom.height) | 0;
         ENGINE.draw("sideback", x, y, SPRITE.LineBottom);
         ENGINE.draw("Lsideback", x, y, SPRITE.LineBottom);
     },
+    skills() {
+        ENGINE.clearLayer("skills");
+        const CTX = LAYER.skills;
+        const dx = ((ENGINE.sideWIDTH - SPRITE.LineTop.width) / 2) | 0;
+        const x = (ENGINE.sideWIDTH / 4 | 0);
+
+        const fs = 22;
+        CTX.font = `200 ${fs}px CPU`
+        CTX.fillStyle = "#DDD";
+        CTX.textAlign = "center";
+        CTX.shadowColor = "#666";
+        CTX.shadowOffsetX = 0;
+        CTX.shadowOffsetY = 0;
+        CTX.shadowBlur = 0;
+
+        CTX.fillText(`${HERO.power.toString().padStart(2, "0")}`, x + dx, TITLE.stack.skills);
+        CTX.fillText(`${HERO.attack.toString().padStart(2, "0")}`, 3 * x - dx, TITLE.stack.skills);
+    },
     time() {
         const fs = 14;
         let y = (SPRITE.LineTop.height + fs * 1.2) | 0;
+        y--;
         let cX = ((ENGINE.sideWIDTH) / 2) | 0;
 
         const CTX = LAYER.time;
@@ -1230,19 +1286,33 @@ const TITLE = {
         ENGINE.clearLayer("health");
         const cX = ((INI.SCREEN_BORDER) / 2) | 0;
         const cY = (ENGINE.gameHEIGHT / 2) | 0;
-
-        if (HERO.health === HERO.maxHealth) return ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
         const CTX = LAYER.health;
-        HERO.health = Math.min(Math.max(0, HERO.health), HERO.maxHealth);
-        const imageData = new ImageData(new Uint8ClampedArray(IMAGE_DATA.Avatar.data), IMAGE_DATA.Avatar.width, IMAGE_DATA.Avatar.height);
-        const totalPixels = IMAGE_DATA.INDICES.Avatar.length;
-        const transparentPixels = Math.floor(totalPixels * (HERO.maxHealth - HERO.health) / HERO.maxHealth);
-        const indices = Array.from(IMAGE_DATA.INDICES.Avatar).shuffle();
-        for (let i = 0; i < transparentPixels; i++) {
-            imageData.data[indices[i]] = INI.AVATAR_TRANSPARENCY;
+
+        ENGINE.spriteDraw("health", cX, 56, SPRITE.Heart);
+
+        if (HERO.health === HERO.maxHealth) {
+            ENGINE.spriteDraw("health", cX, cY, SPRITE.Avatar);
+        } else {
+            HERO.health = Math.min(Math.max(0, HERO.health), HERO.maxHealth);
+            const imageData = new ImageData(new Uint8ClampedArray(IMAGE_DATA.Avatar.data), IMAGE_DATA.Avatar.width, IMAGE_DATA.Avatar.height);
+            const totalPixels = IMAGE_DATA.INDICES.Avatar.length;
+            const transparentPixels = Math.floor(totalPixels * (HERO.maxHealth - HERO.health) / HERO.maxHealth);
+            const indices = Array.from(IMAGE_DATA.INDICES.Avatar).shuffle();
+            for (let i = 0; i < transparentPixels; i++) {
+                imageData.data[indices[i]] = INI.AVATAR_TRANSPARENCY;
+            }
+            CTX.putImageData(imageData, cX - SPRITE.Avatar.width / 2, cY - SPRITE.Avatar.height / 2);
         }
 
-        CTX.putImageData(imageData, cX - SPRITE.Avatar.width / 2, cY - SPRITE.Avatar.height / 2);
+        const fs = 48;
+        CTX.font = `300 ${fs}px CPU`
+        CTX.fillStyle = "#DDD";
+        CTX.textAlign = "center";
+        CTX.shadowColor = "#666";
+        CTX.shadowOffsetX = 1;
+        CTX.shadowOffsetY = 1;
+        CTX.shadowBlur = 1;
+        CTX.fillText(`${HERO.health} / ${HERO.maxHealth}`, cX, TITLE.stack.HEALTH_TEXT);
     },
     lives() {
         ENGINE.clearLayer("lives");
