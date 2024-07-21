@@ -54,11 +54,13 @@ const INI = {
     MAX_HERO_HEALTH: 32,
     AVATAR_TRANSPARENCY: 10,
     BOUNCE_COUNT: 5,
-    SPAWN_DELAY: 3000,
+    SPAWN_DELAY: 9999,
+    MONSTER_ATTACK_TIMEOUT: 2000,
+    MONSTER_SHOOT_TIMEOUT: 4000,
 };
 
 const PRG = {
-    VERSION: "0.05.03",
+    VERSION: "0.05.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -209,6 +211,9 @@ const HERO = {
         this.bounceCount = INI.BOUNCE_COUNT;
         this.power = 5;
         this.attack = 5;
+        this.defense = 0;   //defense is 0 for all
+        this.luck = 0;      //luck is 0 for all
+        this.magic = 0;     //magic is 0 for all
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -370,7 +375,19 @@ const HERO = {
         const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
         orb.createTexture();
         ITEM3D.add(orb);
-    }
+    },
+    incExp() { },
+    applyDamage(damage) {
+        HERO.health = Math.max(HERO.health - damage, 0);
+        TITLE.health();
+        if (HERO.health <= 0) {
+            HERO.die();
+        }
+    },
+    die() {
+        console.error("HERO DEATH");
+        //throw "DIE";
+    },
 };
 
 const GAME = {
@@ -399,9 +416,9 @@ const GAME = {
 
         GAME.completed = false;
         GAME.lives = 5;
-        GAME.level = 1;                 //start
+        //GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases
-        //GAME.level = 3;                 //lair
+        GAME.level = 3;                 //lair
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -436,7 +453,8 @@ const GAME = {
         //end load
 
 
-        ENGINE.GAME.ANIMATION.stop(); //debug
+        //ENGINE.GAME.ANIMATION.stop(); //debug
+        LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
         GAME.levelStart();
     },
     levelStart() {
@@ -498,7 +516,7 @@ const GAME = {
         AI.initialize(HERO.player, "3D");
         this.setWorld(level);
         ENTITY3D.resetTime();
-        LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
+        //LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
     },
     setWorld(level, decalsAreSet = false) {
         console.time("setWorld");
@@ -515,8 +533,7 @@ const GAME = {
         } else {
             WebGL.init('webgl', MAP[level].world, textureData, HERO.topCamera, decalsAreSet);           //thirdperson
         }
-
-        //MINIMAP.init(MAP[level].map, INI.MIMIMAP_WIDTH, INI.MIMIMAP_HEIGHT, HERO.player);
+        LAIR.set_timeout(MAP[level].spawnDelay);
         console.timeEnd("setWorld");
     },
     buildWorld(level) {
@@ -695,7 +712,7 @@ const GAME = {
         if (DEBUG._2D_display) {
             ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
             MISSILE3D.draw();
-            //ENTITY3D.drawVector2D();
+            ENTITY3D.drawVector2D();
             //DYNAMIC_ITEM3D.drawVector2D();
         }
     },
@@ -1027,12 +1044,17 @@ const GAME = {
     },
     canSpawn() {
         if (!LAIR.getSize()) return false;
-
+        if (ENTITY3D.getSize() >= MAP[GAME.level].maxSpawned) return false;
         console.error("CAN SPAWN");
         return true;
     },
     spawn(lair) {
-        console.warn("spawning from", lair)
+        console.warn("spawning from", lair);
+        const type = MONSTER_TYPE[MAP[GAME.level].map.monsterList.chooseRandom()];
+        const grid = Grid.toCenter(lair.grid.add(lair.direction));
+        const monster = new $3D_Entity(grid, type, lair.direction);
+        ENTITY3D.add(monster);
+        console.info("..spawned", monster);
     }
 };
 
@@ -1230,13 +1252,12 @@ const TITLE = {
         ENGINE.draw("sideback", x, y, SPRITE.LineTop);
 
         //
-        y += SPRITE.LineTop.height + 8; //10
+        y += SPRITE.LineTop.height + 8;
         ENGINE.draw("sideback", x, y, SPRITE.SkillFireball);
         rX = ENGINE.sideWIDTH - lX - SPRITE.SkillKick.width;
         ENGINE.draw("sideback", rX, y, SPRITE.SkillKick);
 
-        TITLE.stack.skills = y + 120; //115
-        console.log("TITLE.stack.skills", TITLE.stack.skills);
+        TITLE.stack.skills = y + 120;
 
         //final line
         y = (ENGINE.gameHEIGHT - SPRITE.LineBottom.height) | 0;

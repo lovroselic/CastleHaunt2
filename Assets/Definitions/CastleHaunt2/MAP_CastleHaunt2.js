@@ -43,18 +43,23 @@ const MAP = {
         keys: '[[78,4],[102,5]]',
     }
     ,
-    3 : {
+    3: {
         name: "Lair study",
         sg: 0,
+        maxSpawned: 5,
+        killCountdown: 4,
+        spawnDelay: 3000,
         data: '{"width":"15","height":"15","map":"BB9AA16BB2AA57BABB13ABB37ABB3ABB17AA3BAA3BB23ABB2ABB14ABABB14A$"}',
         wall: "DarkBricks111",
         floor: "RedBrickFloor1",
         ceil: "VaultedCeiling1",
         start: '[202,1]',
+        decals: '[[34,7,"DungeonDoor_Blocked2","crest"],[39,7,"Forest","texture"]]',
         lights: '[[112,1,"Lamp41","standard"],[112,7,"Lamp41","standard"],[112,3,"Lamp41","standard"],[112,5,"Lamp41","standard"]]',
         gates: '[[217,1,"3.1","2.2","Down"]]',
         lairs: '[[7,7,"Lair01"],[105,5,"Lair09"],[119,3,"Lair04"]]',
-        }
+        monsterList: '["MissGalaxy","MissGalaxy"]',
+    }
     ,
     4: {
         name: "down",

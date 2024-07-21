@@ -296,7 +296,15 @@ const MONSTER_TYPE = {
         rotateToNorth: Math.PI,
         midHeight: 0.5,
         deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
+        //inventory: GOLD_ITEM_TYPE.Coins,
+
+        orbs: 3,
+        health: 10,
+        attack: 5,
+        power: 5,
+
+        defense: 0,
+        magic: 0,
 
         /**
          * orbs
@@ -305,12 +313,12 @@ const MONSTER_TYPE = {
          * power
          */
 
-        attack: 12,
-        defense: 5,
-        magic: 3,
-        health: 15,
-        xp: 20,
-        gold: 15,
+        /*      attack: 12,
+             defense: 5,
+             magic: 3,
+             health: 15,
+             xp: 20,
+             gold: 15, */
 
         attackSound: "HumanAttack1",
         hurtSound: "Ow",

@@ -11,6 +11,7 @@ const MAP_TOOLS = {
     CSS: "color: #F9A",
     properties: ['start', 'decals', 'lights', 'gates', 'keys', 'monsters', 'scrolls', 'potions', 'gold', 'skills', 'containers',
         'shrines', 'doors', 'triggers', 'entities', 'objects', 'traps', 'oracles', 'movables', 'trainers', 'interactors', 'lairs'],
+    lists: ['monsterList'],
     INI: {
         FOG: true,
         GA_BYTE_SIZE: 2
@@ -51,7 +52,7 @@ const MAP_TOOLS = {
             this.MAP[level].map.startPosition = new Pointer(GA.indexToGrid(start[0]), Vector.fromInt(start[1]));
             this.MAP[level].map.start = start;
         }
-        for (const prop of this.properties) {
+        for (const prop of [...this.properties, ...this.lists]) {
             if (this.MAP[level][prop] !== undefined) {
                 this.MAP[level].map[prop] = JSON.parse(this.MAP[level][prop]);
             } else {
@@ -108,10 +109,12 @@ const SPAWN_TOOLS = {
             const grid = GA.indexToGrid(D[0]);
             const face = DirectionToFace(Vector.fromInt(D[1]));
             const picture = D[2];
-            const type = D[3];
+            let type = D[3];
             let decal = SPRITE[picture];
+            let expand = false;
             if (type === "texture") decal = TEXTURE[picture];
-            DECAL3D.add(new StaticDecal(grid, face, decal, type, picture));
+            if (decal.width > 256) type = "texture";                                // all decals with width above legacy 256 will be expanded
+            DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }
     },
     lights(map, GA) {
@@ -120,7 +123,8 @@ const SPAWN_TOOLS = {
             const face = DirectionToFace(Vector.fromInt(L[1]));
             const picture = L[2];
             const type = L[3];
-            LIGHTS3D.add(new LightDecal(grid, face, SPRITE[picture], "light", picture, LIGHT_COLORS[type]));
+            const sprite = SPRITE[picture];
+            LIGHTS3D.add(new LightDecal(grid, face, sprite, "light", picture, LIGHT_COLORS[type]));
         }
     },
     externalGates(map, GA) {
@@ -151,7 +155,7 @@ const SPAWN_TOOLS = {
             const face = DirectionToFace(dir);
             const lair = new Lair_Spawner(grid, face, SPRITE[pic], "lair", pic, dir);
             LAIR.add(lair);
-            //console.log("lair", lair);
+            console.log("lair", lair);
         }
     },
     keys(map, GA) {

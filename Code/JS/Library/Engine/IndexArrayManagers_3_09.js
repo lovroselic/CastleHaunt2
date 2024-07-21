@@ -23,6 +23,7 @@ class IAM {
         this.map = null;
         this.IA = null;
         this.reIndexRequired = false;
+        this.reIndexSwitch = false;
     }
     setReindex() {
         this.reIndexRequired = true;
@@ -69,6 +70,7 @@ class IAM {
         for (const [index, obj] of this.POOL.entries()) {
             obj.id = index + 1;
         }
+        if (this.reIndexSwitch) this.reIndexRequired = false;
     }
     init(map, hero) {
         this.POOL = [];
@@ -402,6 +404,9 @@ class Spawner extends Floor_Object {
         this.assertionFunc = assertionFunc;
         this.spawnFunc = spawnFunc;
         this.reference = reference;
+    }
+    set_timeout(timeout) {
+        this.timeout = timeout;
     }
     start() {
         this.cooldown();
@@ -905,6 +910,7 @@ class Animated_3d_entity extends IAM {
         super();
         this.POOL = [];
         this.IA = "enemyIA";
+        this.reIndexSwitch = true;
     }
     resetTime() {
         for (const enemy of this.POOL) {

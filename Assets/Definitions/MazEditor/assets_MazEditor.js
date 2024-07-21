@@ -552,6 +552,7 @@ LoadSprites = [
     //from UI
     { srcName: "UI/Bag2.png", name: "Bag" },
     { srcName: "UI/FireballIcon48.png", name: "FireBallIcon" },
+
     // items
     { srcName: "Items/Acorn.png", name: "Acorn" },
     { srcName: "Items/Amethyst.png", name: "Amethyst" },
@@ -710,13 +711,13 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Closed2.png", name: "DungeonDoor_Closed" },
     { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
     { srcName: "Doors/DungeonDoor_Emerald2.png", name: "DungeonDoor_Emerald" },
-    { srcName: "Doors/DungeonDoor_Gold.png", name: "DungeonDoor_Gold" },
-    { srcName: "Doors/DungeonDoor_Green.png", name: "DungeonDoor_Green" },
+    { srcName: "Doors/DungeonDoor_Gold2.png", name: "DungeonDoor_Gold" },
+    { srcName: "Doors/DungeonDoor_Green2.png", name: "DungeonDoor_Green" },
     { srcName: "Doors/DungeonDoor_Open3.png", name: "DungeonDoor_Open" },
-    { srcName: "Doors/DungeonDoor_Pearl.png", name: "DungeonDoor_Pearl" },
-    { srcName: "Doors/DungeonDoor_Purple.png", name: "DungeonDoor_Purple" },
-    { srcName: "Doors/DungeonDoor_Red.png", name: "DungeonDoor_Red" },
-    { srcName: "Doors/DungeonDoor_Silver.png", name: "DungeonDoor_Silver" },
+    { srcName: "Doors/DungeonDoor_Pearl2.png", name: "DungeonDoor_Pearl" },
+    { srcName: "Doors/DungeonDoor_Purple2.png", name: "DungeonDoor_Purple" },
+    { srcName: "Doors/DungeonDoor_Red2.png", name: "DungeonDoor_Red" },
+    { srcName: "Doors/DungeonDoor_Silver2.png", name: "DungeonDoor_Silver" },
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
 
     //ObjDecals
@@ -730,7 +731,9 @@ LoadSprites = [
     { srcName: "ObjDecals/DefenseShrine256.png", name: "DefenseShrine256" },
     { srcName: "ObjDecals/Drain2_96.png", name: "Drain2_96" },
     { srcName: "ObjDecals/Drain64.png", name: "Drain64" },
-    { srcName: "ObjDecals/DungeonDoor_Blocked.png", name: "DungeonDoor_Blocked" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked2.png", name: "DungeonDoor_Blocked2" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked3.png", name: "DungeonDoor_Blocked3" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked4.png", name: "DungeonDoor_Blocked4" },
     { srcName: "ObjDecals/DungeonWall.jpg", name: "DungeonWall" },
     { srcName: "ObjDecals/FlatPond.png", name: "FlatPond" },
     { srcName: "ObjDecals/FlatPond2.png", name: "FlatPond2" },

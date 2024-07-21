@@ -246,6 +246,10 @@ input[type="button"] {
     padding: 6px;
 }
 
+.red_button {
+    background-color: red !important;
+}
+
 button {
     background-color: #d9d9b3;
     padding: 6px;

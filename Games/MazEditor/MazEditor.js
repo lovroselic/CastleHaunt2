@@ -31,9 +31,13 @@ const MAP = {
 const $MAP = {
   map: {},
   properties: null,
+  lists: null,
   combined: [],
   init() {
     for (const prop of this.properties) {
+      this.map[prop] = [];
+    }
+    for (const prop of this.lists) {
       this.map[prop] = [];
     }
   },
@@ -54,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.12.01",
+  VERSION: "0.12.02",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -113,6 +117,7 @@ const HERO = {};
 const GAME = {
   start() {
     $MAP.properties = MAP_TOOLS.properties;
+    $MAP.lists = MAP_TOOLS.lists;
     $("#bottom")[0].scrollIntoView();
     ENGINE.topCanvas = ENGINE.getCanvasName("ROOM");
     $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, GAME.mouseClick);
@@ -1104,6 +1109,18 @@ const GAME = {
     $("#randwall").click(GAME.randomTexture.bind(null, TextureList, "#walltexture", "#wallcanvas"));
     $("#randfloor").click(GAME.randomTexture.bind(null, TextureList, "#floortexture", "#floorcanvas"));
     $("#randceil").click(GAME.randomTexture.bind(null, TextureList, "#ceiltexture", "#ceilcanvas"));
+
+    $("#clear_list").click(GAME.clearMonsterList);
+    $("#add_monster_list").click(GAME.addToMonsterList);
+  },
+  clearMonsterList() {
+    $MAP.map.monsterList = [];
+    $("#monster_list").val("");
+  },
+  addToMonsterList() {
+    const monster = $("#monster_type")[0].value;
+    $MAP.map.monsterList.push(monster);
+    $("#monster_list").val($MAP.map.monsterList.join(","));
   },
   randomTexture(TextureList, id, canvas) {
     const texture = TextureList.chooseRandom();
@@ -1142,13 +1159,17 @@ const GAME = {
     let Export = { width: $MAP.width, height: $MAP.height, map: rle };
     let RoomID = $("#roomid")[0].value;
     let RoomName = $("#roomname")[0].value;
-
+    let MaxSpawned = $("#max_spawned")[0].value;
+    let KillCountdown = $("#kill_countdown")[0].value;
+    let SpawnDelay = $("#spawn_delay")[0].value;
     let SG = parseInt($("#checkpoint")[0].value, 10);
-    console.log("SG", SG);
 
     let roomExport = `${RoomID} : {
 name: "${RoomName}",
 sg: ${SG},
+maxSpawned: ${MaxSpawned},
+killCountdown: ${KillCountdown},
+spawnDelay: ${SpawnDelay},
 data: '${JSON.stringify(Export)}',
 wall: "${$("#walltexture")[0].value}",
 floor: "${$("#floortexture")[0].value}",
@@ -1156,6 +1177,11 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
     for (let desc of $MAP.properties) {
       if ($MAP.map[desc].length > 0) {
         roomExport += `${desc}: '${JSON.stringify($MAP.map[desc])}',\n`;
+      }
+    }
+    for (let list of $MAP.lists) {
+      if ($MAP.map[list].length > 0) {
+        roomExport += `${list}: '${JSON.stringify($MAP.map[list])}',\n`;
       }
     }
     roomExport += `}`;
@@ -1173,6 +1199,13 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
     const SG = ImportText.extractGroup(/sg:\s(\d{1})/);
     $('#checkpoint').val(SG).trigger('change');
 
+    const MaxSpawned = ImportText.extractGroup(/maxSpawned:\s(\d*)/);
+    $("#max_spawned").val(MaxSpawned);
+    const KillCountdown = ImportText.extractGroup(/killCountdown:\s(\d*)/);
+    $("#kill_countdown").val(KillCountdown);
+    const SpawnDelay = ImportText.extractGroup(/spawnDelay:\s(\d*)/);
+    $("#spawn_delay").val(SpawnDelay);
+
     const Textures = ["wall", "floor", "ceil"];
     for (const prop of Textures) {
       const pattern = new RegExp(`${prop}:\\s"(.*)"`);
@@ -1183,11 +1216,19 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
     $MAP.map = FREE_MAP.import(Import, MAP_TOOLS.INI.GA_BYTE_SIZE);
     $MAP.init();
 
-    for (const prop of $MAP.properties) {
+    /* for (const prop of $MAP.properties) {
+      const pattern = new RegExp(`${prop}:\\s'(.*)'`);
+      let value = ImportText.extractGroup(pattern);
+      $MAP.map[prop] = JSON.parse(value) || [];
+    } */
+
+    for (const prop of [...$MAP.properties, ...$MAP.lists]) {
       const pattern = new RegExp(`${prop}:\\s'(.*)'`);
       let value = ImportText.extractGroup(pattern);
       $MAP.map[prop] = JSON.parse(value) || [];
     }
+
+    $("#monster_list").val($MAP.map.monsterList.join(","));
 
     console.log("map", $MAP.map);
     $MAP.width = Import.width;

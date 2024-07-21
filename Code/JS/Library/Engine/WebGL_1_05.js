@@ -3267,6 +3267,7 @@ class $3D_Entity {
         this.storageLog();
         exp += this.xp;
         this.remove();
+        this.IAM.setReindex();
         this.dropInventory();
         EXPLOSION3D.add(new (eval(this.deathType))(this.moveState.pos.translate(DIR_UP, this.midHeight)));
         this.IAM.hero.incExp(exp, expType);
@@ -3282,10 +3283,19 @@ class $3D_Entity {
         this.applyDamage(damage, exp);
     }
     hitByMissile(missile) {
-        const damage = Math.max(missile.calcDamage(this.magic), 1);
-        let exp = Math.min(this.health, damage);
-        this.applyDamage(damage, exp);
-        missile.explode(MISSILE3D);
+        if (missile.friendly) {
+            const damage = Math.max(missile.calcDamage(this.magic), 1);
+            let exp = Math.min(this.health, damage);
+            this.applyDamage(damage, exp);
+            missile.explode(MISSILE3D);
+            this.dropOrb(missile);
+        }
+    }
+    dropOrb(missile) {
+        const position = Vector3.to_FP_Grid(missile.pos);
+        const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
+        orb.createTexture();
+        ITEM3D.add(orb);
     }
     shoot() {
         const dir = Vector3.from_2D_dir(this.moveState.lookDir);

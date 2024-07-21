@@ -79,6 +79,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/SpiderGreen.jpg", name: "SpiderGreen" },
 
     //decal-gates
+    { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
+
     //title
     { srcName: "Title/CastleHaunt2TitlePrincess768.jpg", name: "Title" },
 ];
@@ -147,7 +149,7 @@ LoadObjects = [
 ];
 
 LoadModels = [
-    'ThePrincess.gltf'
+    'ThePrincess.gltf', 'MissGalaxy.gltf',
 ];
 
 LoadSprites = [
@@ -168,13 +170,13 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Blue2.png", name: "DungeonDoor_Blue" },
     { srcName: "Doors/DungeonDoor_Closed2.png", name: "DungeonDoor_Closed" },
     { srcName: "Doors/DungeonDoor_Emerald2.png", name: "DungeonDoor_Emerald" },
-    { srcName: "Doors/DungeonDoor_Gold.png", name: "DungeonDoor_Gold" },
-    { srcName: "Doors/DungeonDoor_Green.png", name: "DungeonDoor_Green" },
+    { srcName: "Doors/DungeonDoor_Gold2.png", name: "DungeonDoor_Gold" },
+    { srcName: "Doors/DungeonDoor_Green2.png", name: "DungeonDoor_Green" },
     { srcName: "Doors/DungeonDoor_Open3.png", name: "DungeonDoor_Open" },
-    { srcName: "Doors/DungeonDoor_Pearl.png", name: "DungeonDoor_Pearl" },
-    { srcName: "Doors/DungeonDoor_Purple.png", name: "DungeonDoor_Purple" },
-    { srcName: "Doors/DungeonDoor_Red.png", name: "DungeonDoor_Red" },
-    { srcName: "Doors/DungeonDoor_Silver.png", name: "DungeonDoor_Silver" },
+    { srcName: "Doors/DungeonDoor_Pearl2.png", name: "DungeonDoor_Pearl" },
+    { srcName: "Doors/DungeonDoor_Purple2.png", name: "DungeonDoor_Purple" },
+    { srcName: "Doors/DungeonDoor_Red2.png", name: "DungeonDoor_Red" },
+    { srcName: "Doors/DungeonDoor_Silver2.png", name: "DungeonDoor_Silver" },
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
     { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
 
@@ -339,7 +341,9 @@ LoadSprites = [
     { srcName: "ObjDecals/DancingSkeletons2.png", name: "DancingSkeletons2" },
     { srcName: "ObjDecals/Drain2_96.png", name: "Drain2_96" },
     { srcName: "ObjDecals/Drain64.png", name: "Drain64" },
-    { srcName: "ObjDecals/DungeonDoor_Blocked.png", name: "DungeonDoor_Blocked" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked2.png", name: "DungeonDoor_Blocked2" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked3.png", name: "DungeonDoor_Blocked3" },
+    { srcName: "ObjDecals/DungeonDoor_Blocked4.png", name: "DungeonDoor_Blocked4" },
     { srcName: "ObjDecals/FlatPond.png", name: "FlatPond" },
     { srcName: "ObjDecals/FlatPond2.png", name: "FlatPond2" },
     { srcName: "ObjDecals/FlatPond3.png", name: "FlatPond3" },
