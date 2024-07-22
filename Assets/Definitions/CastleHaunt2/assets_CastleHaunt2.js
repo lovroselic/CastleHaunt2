@@ -21,8 +21,10 @@ LoadTextures = [
 
     { srcName: "Wall/Forest.jpg", name: "Forest" },
 
-    //explorions
+    //explosions
     { srcName: "Wall/GreenMetal.jpg", name: "GreenMetal" },
+    { srcName: "ObjectTextures/ScrapedMetal.jpg", name: "ScrapedMetal" },
+    { srcName: "ObjectTextures/Explosion3.jpg", name: "Explosion" },
 
     /** decals that are textures */
 
@@ -40,7 +42,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/Coins.jpg", name: "Coins" },
     { srcName: "ObjectTextures/Crate.jpg", name: "Crate" },
     { srcName: "ObjectTextures/EmeraldTexture.jpg", name: "EmeraldTexture" },
-    { srcName: "ObjectTextures/Explosion3.jpg", name: "Explosion" },
+
     //{ srcName: "ObjectTextures/Explosion.jpg", name: "Explosion" },
     { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
     //{ srcName: "ObjectTextures/FireballTexture.jpg", name: "FireballTexture" },
@@ -67,7 +69,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/RedGoldBat.jpg", name: "RedGoldBat" },
     { srcName: "ObjectTextures/RedLiquid.jpg", name: "RedLiquid" },
     { srcName: "ObjectTextures/RedMetal.jpg", name: "RedMetal" },
-    { srcName: "ObjectTextures/ScrapedMetal.jpg", name: "ScrapedMetal" },
+   
     { srcName: "ObjectTextures/ScrollTexture.jpg", name: "ScrollTexture" },
     { srcName: "ObjectTextures/Silver.jpg", name: "Silver" },
     { srcName: "ObjectTextures/Skull_texture.jpg", name: "Skull_texture" },

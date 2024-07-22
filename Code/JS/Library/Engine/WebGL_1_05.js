@@ -2911,6 +2911,20 @@ class SmokeExplosion extends ParticleEmmiter {
     }
 }
 
+class SpawnCloud extends ParticleEmmiter {
+    constructor(position, duration = 1.5 * WebGL.INI.EXPLOSION_DURATION_MS, texture = TEXTURE.ScrapedMetal, number = 1.5 * WebGL.INI.EXPLOSION_N_PARTICLES) {
+        super(position, texture);
+        this.number = number;
+        this.duration = duration;
+        this.build(number);
+        this.lightColor = colorStringToVector("#666666");
+        this.scale = 0.3;
+        this.gravity = new Float32Array([0, -0.0025, 0]);
+        this.velocity = 0.01;
+        this.rounded = 1;
+    }
+}
+
 class WoodExplosion extends ParticleEmmiter {
     constructor(position, duration = WebGL.INI.EXPLOSION_DURATION_MS, texture = TEXTURE.Wood1, number = WebGL.INI.EXPLOSION_N_PARTICLES) {
         super(position, texture);

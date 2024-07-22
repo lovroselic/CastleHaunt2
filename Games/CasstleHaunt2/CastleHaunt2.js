@@ -60,7 +60,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.04",
+    VERSION: "0.05.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -418,7 +418,8 @@ const GAME = {
         GAME.lives = 5;
         //GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases
-        GAME.level = 3;                 //lair
+        //GAME.level = 3;                 //lair
+        GAME.level = 4;                 //spawn test
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -1055,6 +1056,8 @@ const GAME = {
         const monster = new $3D_Entity(grid, type, lair.direction);
         ENTITY3D.add(monster);
         console.info("..spawned", monster);
+        //spawning fog
+        EXPLOSION3D.add(new SpawnCloud(Vector3.from_Grid(grid, 0.5)));
     }
 };
 

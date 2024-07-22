@@ -62,14 +62,19 @@ const MAP = {
     }
     ,
     4: {
-        name: "down",
+        name: "Spawn test",
         sg: 0,
-        data: '{"width":"11","height":"11","map":"BB8AA42BB34AA6BB13ABB4ABB10$BA"}',
+        maxSpawned: 1,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"11","height":"11","map":"BB5AA12BAA3BAA2BB3AA3BAA3BAA9BB8ABB2ABABB21ABB3AA2BAA4BB13ABB4ABB10$BA"}',
         wall: "DarkBricks111",
         floor: "RedBrickFloor1",
         ceil: "VaultedCeiling1",
         start: '[104,1]',
         lights: '[[16,7,"Lamp53","standard"]]',
         gates: '[[115,1,"4.1","2.3","Up"]]',
+        lairs: '[[49,7,"Lair01"]]',
+        monsterList: '["MissGalaxy"]',
     }
 };
