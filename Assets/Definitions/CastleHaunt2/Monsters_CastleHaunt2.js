@@ -243,26 +243,6 @@ const DOOR_TYPE = {
 };
 
 const COMMON_ITEM_TYPE = {
-    /*     Scroll: {
-            name: "Scroll",
-            category: "scroll",
-            element: "SCROLL",
-            scale: 1.5 / 2 ** 4,
-            glueToFloor: true,
-            texture: "ScrollTexture",
-            material: MATERIAL.paper,
-        }, */
-    /*  Fireball: {
-         name: "Fireball",
-         category: 'missile',
-         element: "BALL",
-         scale: 1 / 2 ** 4,
-         texture: "FireballTexture",
-         moveSpeed: 8.0,
-         lightColor: "#FF7700",
-         material: MATERIAL.fire,
-         construct: Missile,
-     }, */
     Bounceball: {
         name: "Bounceball",
         category: 'missile',
@@ -273,6 +253,7 @@ const COMMON_ITEM_TYPE = {
         lightColor: "#006600",
         material: MATERIAL.greenFluence,
         construct: BouncingMissile,
+        collectible: false,
     },
     Orb: {
         name: "Orb",
@@ -296,35 +277,55 @@ const MONSTER_TYPE = {
         rotateToNorth: Math.PI,
         midHeight: 0.5,
         deathType: "BloodExplosion",
-        //inventory: GOLD_ITEM_TYPE.Coins,
 
-        orbs: 3,
+        mana: 3,
         health: 10,
         attack: 5,
-        power: 5,
+        magic: 1,
+        defense: 0,
+
+        caster: true,
+        shootDistance: 5,
+        stalkDistance: 7,
+        directMagicDamage: true,
+
+        attackSound: "HumanAttack1",
+        hurtSound: "Ow",
+        behaviourArguments: [7, ["wanderer"], 5, ["shoot"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.standardShine,
+
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
+
+    Goblin: {
+        name: "Goblin",
+        model: "Goblin",
+        scale: 1.01 / 2 ** 1,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+
+        mana: 3,
+        health: 10,
+        attack: 5,
+        magic: 5,
 
         defense: 0,
         magic: 0,
 
-        /**
-         * orbs
-         * health
-         * attack
-         * power
-         */
-
-        /*      attack: 12,
-             defense: 5,
-             magic: 3,
-             health: 15,
-             xp: 20,
-             gold: 15, */
-
-        attackSound: "HumanAttack1",
-        hurtSound: "Ow",
-        behaviourArguments: [7, ["wanderer"], 5, ["advancer"]],
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [10, ["wanderer"], 7, ["shoot"]],
         moveSpeed: 1.0,
-        material: MATERIAL.standardShine,
+
+        caster: true,
+        shootDistance: 7,
+        stalkDistance: 8,
+        material: MATERIAL.standard,
+        missile: Missile,
+        missileType: COMMON_ITEM_TYPE.Fireball,
     },
 
 
@@ -785,32 +786,7 @@ const MONSTER_TYPE = {
         moveSpeed: 1.1,
         material: MATERIAL.silver,
     },
-    Goblin: {
-        name: "Goblin",
-        model: "Goblin",
-        scale: 1.01 / 2 ** 1,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 30,
-        defense: 20,
-        magic: 25,
-        health: 50,
-        xp: 100,
-        gold: 100,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt",
-        behaviourArguments: [10, ["wanderer"], 7, ["shoot"]],
-        moveSpeed: 1.0,
-        mana: 3,
-        caster: true,
-        shootDistance: 7,
-        stalkDistance: 8,
-        material: MATERIAL.standard,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
-    },
+
     Dragon: {
         name: "Dragon",
         model: "Dragon",

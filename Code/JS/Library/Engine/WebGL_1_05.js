@@ -2190,9 +2190,10 @@ class Missile extends Drawable_object {
         this.mTranslationMatrix = mTranslationMatrix;
     }
     calcPower(magic) {
-        return 2 * magic + RND(-2, 2);
+        return Math.max(1, 2 * magic + RND(-2, 2));
     }
-    calcDamage(magic) {
+    calcDamage(magic, directMagicDamage = false) {
+        if (directMagicDamage) return this.power;
         let part1 = (magic / 2) | 0;
         let part2 = magic - part1;
         let damage = this.power - part1 - RND(0, part2);
@@ -2566,8 +2567,6 @@ class Trap extends WallFeature3D {
         MISSILE3D.add(missile);
     }
 }
-
-
 
 class BoundingBox {
     constructor(max, min, scale = null) {
@@ -3072,9 +3071,7 @@ class $3D_Entity {
 
         this.canAttack = true;
         this.canShoot = false;
-        if (this.magic > 0) {
-            this.mana = this.mana * Missile.calcMana(this.magic);
-        }
+        if (this.magic > 0) this.mana = this.mana * this.missile.calcMana(this.magic);
         this.petrified = false;
         this.behaviour = new Behaviour(...this.behaviourArguments);
         this.guardPosition = null;
@@ -3298,7 +3295,7 @@ class $3D_Entity {
     }
     hitByMissile(missile) {
         if (missile.friendly) {
-            const damage = Math.max(missile.calcDamage(this.magic), 1);
+            const damage = Math.max(missile.calcDamage(this.magic, this.directMagicDamage), 1);
             let exp = Math.min(this.health, damage);
             this.applyDamage(damage, exp);
             missile.explode(MISSILE3D);
@@ -3315,7 +3312,8 @@ class $3D_Entity {
         const dir = Vector3.from_2D_dir(this.moveState.lookDir);
         this.canShoot = false;
         this.caster = false;
-        this.mana -= this.missile.calcMana(this.magic);
+        const manaCost = this.missile.calcMana(this.magic);
+        this.mana -= manaCost;
         let position = this.moveState.pos.translate(dir, this.r);
         position.set_y(0.5);
         const missile = new this.missile(position, dir, this.missileType, this.magic);

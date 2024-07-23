@@ -151,7 +151,7 @@ LoadObjects = [
 ];
 
 LoadModels = [
-    'ThePrincess.gltf', 'MissGalaxy.gltf',
+    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf'
 ];
 
 LoadSprites = [

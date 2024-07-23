@@ -60,7 +60,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.05",
+    VERSION: "0.05.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -209,11 +209,12 @@ const HERO = {
         this.health = this.maxHealth;
         this.orbs = 0;
         this.bounceCount = INI.BOUNCE_COUNT;
-        this.power = 5;
+        //this.power = 5;
+        this.magic = 5;
         this.attack = 5;
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
-        this.magic = 0;     //magic is 0 for all
+
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -269,24 +270,23 @@ const HERO = {
             TITLE.orbs();
         }
         const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
-        const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.power, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
+        const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         console.log("missile", missile);
         MISSILE3D.add(missile);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
     },
     hitByMissile(missile) {
-        console.log("HERO hit by missile", missile, "friendly", missile.friendly);
+        if (DEBUG.VERBOSE) console.log("HERO hit by missile", missile, "friendly", missile.friendly);
         if (missile.friendly) {
             this.catchOrb();
             missile.remove(MISSILE3D);
         } else {
-            /** TO CONT */
-
+            const damage = Math.max(missile.calcDamage(HERO.magic, true), 1) - HERO.luck;
+            //console.log("HERO damage", damage);
+            HERO.applyDamage(damage);
             missile.explode(MISSILE3D);
         }
-
-
     },
     inventory: {
         clear() {
@@ -1046,16 +1046,16 @@ const GAME = {
     canSpawn() {
         if (!LAIR.getSize()) return false;
         if (ENTITY3D.getSize() >= MAP[GAME.level].maxSpawned) return false;
-        console.error("CAN SPAWN");
+        //console.error("CAN SPAWN");
         return true;
     },
     spawn(lair) {
-        console.warn("spawning from", lair);
+        //console.warn("spawning from", lair);
         const type = MONSTER_TYPE[MAP[GAME.level].map.monsterList.chooseRandom()];
         const grid = Grid.toCenter(lair.grid.add(lair.direction));
         const monster = new $3D_Entity(grid, type, lair.direction);
         ENTITY3D.add(monster);
-        console.info("..spawned", monster);
+        //console.info("..spawned", monster);
         //spawning fog
         EXPLOSION3D.add(new SpawnCloud(Vector3.from_Grid(grid, 0.5)));
     }
@@ -1282,7 +1282,7 @@ const TITLE = {
         CTX.shadowOffsetY = 0;
         CTX.shadowBlur = 0;
 
-        CTX.fillText(`${HERO.power.toString().padStart(2, "0")}`, x + dx, TITLE.stack.skills);
+        CTX.fillText(`${HERO.magic.toString().padStart(2, "0")}`, x + dx, TITLE.stack.skills);
         CTX.fillText(`${HERO.attack.toString().padStart(2, "0")}`, 3 * x - dx, TITLE.stack.skills);
     },
     time() {
