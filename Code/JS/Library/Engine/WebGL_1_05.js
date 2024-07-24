@@ -2258,8 +2258,7 @@ class BouncingMissile extends Missile {
             this.drop();
             this.explode(IAM)
         } else {
-            console.error("Explode");
-            this.explode(IAM)
+            this.explode(IAM);
         };
 
     }

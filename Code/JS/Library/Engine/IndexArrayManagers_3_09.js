@@ -54,8 +54,11 @@ class IAM {
         for (const obj of this.POOL) {
             if (!obj) continue;
             let grid = null;
+
             if (obj.moveState) {
                 grid = Grid.toClass(obj.moveState.pos);
+            } else if (obj.pos) {
+                grid = Vector3.toGrid(obj.pos);
             } else grid = obj.grid;
 
             if (!IA.has(grid, obj.id)) {
@@ -835,7 +838,7 @@ class Decal3D extends IAM {
 class Missile3D extends IAM {
     constructor(enemyIA, entity_IAM) {
         super();
-        this.IA = null;
+        this.IA = "missileIA";
         this.enemyIA = enemyIA;
         this.entity_IAM = entity_IAM;
         this.reIndexRequired = true;
@@ -847,9 +850,14 @@ class Missile3D extends IAM {
     }
     manage(lapsedTime) {
         this.reIndex();
+        this.map[this.IA] = new IndexArray(this.map.width, this.map.height, 4, 4);
+        this.poolToIA(this.map[this.IA]);
+
         for (let obj of this.POOL) {
             if (obj) {
                 obj.move(lapsedTime, this.map.GA);
+
+                //check wall hit
                 const pos = Vector3.to_FP_Grid(obj.pos);
                 let [wallHit, point] = this.map.GA.entityInWallPoint(pos, Vector3.to_FP_Vector(obj.dir), obj.r);
                 if (wallHit) {
@@ -859,7 +867,7 @@ class Missile3D extends IAM {
 
                 //check entity collision
                 let IA = this.map[this.enemyIA];
-                let grid = Grid.toClass(pos);
+                const grid = Grid.toClass(pos);
                 if (!IA.empty(grid)) {
                     const possibleEnemies = IA.unroll(grid);
                     for (let P of possibleEnemies) {
@@ -878,6 +886,25 @@ class Missile3D extends IAM {
                 if (playerHit) {
                     this.hero.hitByMissile(obj);
                     continue;
+                }
+
+                //check missile to missile collision
+                const mIA = this.map[this.IA];
+                const possibleMissiles = mIA.unroll(grid);
+                possibleMissiles.remove(obj.id);
+                if (possibleMissiles.length > 0) {
+                    for (const id of possibleMissiles) {
+                        const missile = this.show(id);
+                        if (!missile) continue;
+                        if (obj.friendly === missile.friendly) continue;
+                        const hit = GRID.circleCollision2D(Vector3.to_FP_Grid(missile.pos), Vector3.to_FP_Grid(obj.pos), missile.r + obj.r);
+                        if (hit) {
+                            for (const M of [obj, missile]) {
+                                if (M.friendly) M.drop();
+                                M.explode(this);
+                            }
+                        }
+                    }
                 }
             }
         }

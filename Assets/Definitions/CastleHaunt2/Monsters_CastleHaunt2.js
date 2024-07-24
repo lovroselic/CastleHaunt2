@@ -283,18 +283,16 @@ const MONSTER_TYPE = {
         attack: 5,
         magic: 1,
         defense: 0,
+        directMagicDamage: true,
 
         caster: true,
         shootDistance: 5,
         stalkDistance: 7,
-        directMagicDamage: true,
-
         attackSound: "HumanAttack1",
         hurtSound: "Ow",
         behaviourArguments: [7, ["wanderer"], 5, ["shoot"]],
         moveSpeed: 1.0,
         material: MATERIAL.standardShine,
-
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
@@ -310,10 +308,9 @@ const MONSTER_TYPE = {
         mana: 3,
         health: 10,
         attack: 5,
-        magic: 5,
-
+        magic: 1,
         defense: 0,
-        magic: 0,
+        directMagicDamage: true,
 
         attackSound: "MonsterAttack1",
         hurtSound: "MonsterHurt",
@@ -324,8 +321,8 @@ const MONSTER_TYPE = {
         shootDistance: 7,
         stalkDistance: 8,
         material: MATERIAL.standard,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
     },
 
 
