@@ -65,7 +65,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.00",
+    VERSION: "0.06.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -203,7 +203,6 @@ class ActionItem {
 const HERO = {
     construct() {
         this.player = null;
-        this.dead = false;
         this.height = 0.6;
         this.canShoot = true;
         this.hasCapacity = false;
@@ -211,15 +210,18 @@ const HERO = {
         this.inventoryLimit = INI.INVENTORY_HARD_LIMIT;
         this.canComplain = true;
         this.maxHealth = INI.MAX_HERO_HEALTH;
-        this.health = this.maxHealth;
         this.orbs = 0;
         this.bounceCount = INI.BOUNCE_COUNT;
-        //this.power = 5;
         this.magic = 5;
         this.attack = 5;
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
-
+        this.invisible = false;
+        this.revive();
+    },
+    revive() {
+        this.dead = false;
+        this.health = this.maxHealth;
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -401,15 +403,23 @@ const HERO = {
         AUDIO.PrincessScream.play();
         GAME.lives--;
         TITLE.lives();
-        if (GAME.lives <= 0) GAME.finalDeath();
+        HERO.player.pos.set_y(0.1);
+        GAME.setFirstPerson();
+        if (GAME.lives <= 0) return HERO.finalDeath();
 
-
-
-        //DEBUG
-        ENGINE.GAME.ANIMATION.stop();
+        ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
+        ENGINE.GAME.ANIMATION.resetTimer();
+        ENGINE.GAME.ANIMATION.next(GAME.lifeLostRun);
     },
     finalDeath() {
-        throw "FINAL death not implemented";
+        console.error("HERO FINAL death");
+        for (const L of LIGHTS3D.POOL) {
+            L.lightColor = Array(0, 0, 0);
+        }
+        ENGINE.TEXT.centeredText("Rest In Peace", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
+        ENGINE.TEXT.centeredText("(ENTER)", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2 + ENGINE.TEXT.RD.fs * 1.2);
+        ENGINE.GAME.ANIMATION.resetTimer();
+        ENGINE.GAME.ANIMATION.next(GAME.gameOverRun);
     }
 };
 
@@ -430,7 +440,7 @@ const GAME = {
         GAME.paused = true;
         $("#p1").prop("disabled", false);
 
-        let GameRD = new RenderData("Pentagram", 75, "#f6602d", "text", "#F22", 2, 2, 2);
+        let GameRD = new RenderData("Pentagram", 60, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
         ENGINE.watchVisibility(GAME.lostFocus);
         ENGINE.GAME.start(16);
@@ -438,7 +448,8 @@ const GAME = {
         AI.immobileWander = true;
 
         GAME.completed = false;
-        GAME.lives = 5;
+        //GAME.lives = 3;
+        GAME.lives = 1;
         //GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases, gold
         //GAME.level = 3;                 //lair
@@ -486,6 +497,7 @@ const GAME = {
     },
     levelStart() {
         console.log("starting level", GAME.level);
+        WebGL.playerList.clear();                       //requred for restart after resurrection
         GAME.initLevel(GAME.level);
         GAME.setFirstPerson();                        //my preference
         //GAME.setThirdPerson();                        //
@@ -1080,14 +1092,67 @@ const GAME = {
         return true;
     },
     spawn(lair) {
-        //console.warn("spawning from", lair);
         const type = MONSTER_TYPE[MAP[GAME.level].map.monsterList.chooseRandom()];
         const grid = Grid.toCenter(lair.grid.add(lair.direction));
         const monster = new $3D_Entity(grid, type, lair.direction);
         ENTITY3D.add(monster);
-        console.info("..spawned", MAP[GAME.level].map.spawnDelay);
-        //spawning fog
         EXPLOSION3D.add(new SpawnCloud(Vector3.from_Grid(grid, 0.5)));
+    },
+    lifeLostRun(lapsedTime) {
+        if (ENGINE.GAME.stopAnimation) return;
+        if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) {
+            ENGINE.GAME.ANIMATION.waitThen(GAME.resurect);
+        }
+        const date = Date.now();
+        EXPLOSION3D.manage(date);
+        ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
+        GAME.lifeLostFrameDraw(lapsedTime);
+    },
+    lifeLostFrameDraw(lapsedTime) {
+        if (DEBUG._2D_display) {
+            GAME.drawPlayer();
+        }
+        WebGL.renderScene();
+
+        if (DEBUG.FPS) {
+            GAME.FPS(lapsedTime);
+        }
+        if (DEBUG._2D_display) {
+            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            MISSILE3D.draw();
+            ENTITY3D.drawVector2D();
+        }
+    },
+    resurect() {
+        console.info("RESURECT");
+        ENGINE.clearLayer("text");
+        HERO.revive();
+        GAME.levelStart();
+    },
+    gameOverRun(lapsedTime) {
+        if (ENGINE.GAME.stopAnimation) return;
+        if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) {
+            ENGINE.GAME.ANIMATION.waitThen(TITLE.startTitle);
+        }
+        const date = Date.now();
+        EXPLOSION3D.manage(date);
+        ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
+        GAME.gameOverFrameDraw(lapsedTime);
+    },
+    gameOverFrameDraw(lapsedTime) {
+        if (DEBUG._2D_display) {
+            GAME.drawPlayer();
+        }
+        WebGL.renderScene();
+
+        if (DEBUG.FPS) {
+            GAME.FPS(lapsedTime);
+        }
+        if (DEBUG._2D_display) {
+            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            MISSILE3D.draw();
+            ENTITY3D.drawVector2D();
+        }
     }
 };
 
@@ -1125,7 +1190,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -1321,7 +1386,7 @@ const TITLE = {
     time() {
         const fs = 14;
         let y = (SPRITE.LineTop.height + fs * 1.2) | 0;
-        y--;
+        //y--;
         let cX = ((ENGINE.sideWIDTH) / 2) | 0;
 
         const CTX = LAYER.time;
