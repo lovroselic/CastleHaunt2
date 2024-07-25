@@ -65,7 +65,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.09",
+    VERSION: "0.06.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -391,9 +391,26 @@ const HERO = {
         }
     },
     die() {
-        console.error("HERO DEATH");
-        //throw "DIE";
+        if (HERO.dead) return;
+        console.warn("hero dies");
+        HERO.dead = true;
+        HERO.canShoot = false;
     },
+    death() {
+        console.error("HERO DEATH");
+        AUDIO.PrincessScream.play();
+        GAME.lives--;
+        TITLE.lives();
+        if (GAME.lives <= 0) GAME.finalDeath();
+
+
+
+        //DEBUG
+        ENGINE.GAME.ANIMATION.stop();
+    },
+    finalDeath() {
+        throw "FINAL death not implemented";
+    }
 };
 
 const GAME = {
@@ -449,10 +466,10 @@ const GAME = {
 
         HERO.health = 1;
 
-   /*      HERO.hasCapacity = true;
-        HERO.capacity = 5;
-        HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
-        HERO.orbs = 5; */
+        /*      HERO.hasCapacity = true;
+             HERO.capacity = 5;
+             HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
+             HERO.orbs = 5; */
 
         /** END DEBUG */
 
@@ -707,8 +724,9 @@ const GAME = {
 
         GAME.frameDraw(lapsedTime);
         HERO.concludeAction();
-        if (HERO.dead) GAME.checkIfProcessesComplete();
-        if (GAME.completed) GAME.won();
+        if (HERO.dead) IAM.checkIfProcessesComplete([EXPLOSION3D], HERO.death);
+        //if (HERO.dead) GAME.checkIfProcessesComplete();
+        //if (GAME.completed) GAME.won();
     },
     frameDraw(lapsedTime) {
         if (DEBUG._2D_display) {
