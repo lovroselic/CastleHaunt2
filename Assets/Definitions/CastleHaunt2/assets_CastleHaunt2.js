@@ -29,8 +29,15 @@ LoadTextures = [
     /** decals that are textures */
 
     /** object textures */
+    { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
+    { srcName: "ObjectTextures/FireballTexture2.jpg", name: "FireballTexture" },
+
     { srcName: "ObjectTextures/Bag_baseColor.jpg", name: "Bag_BaseColor" },
     { srcName: "ObjectTextures/Apple_BaseColor.jpg", name: "Apple_BaseColor" },
+    { srcName: "ObjectTextures/Gold.jpg", name: "Gold" },
+    { srcName: "ObjectTextures/Coins.jpg", name: "Coins" },
+    { srcName: "ObjectTextures/Silver.jpg", name: "Silver" },
+    { srcName: "ObjectTextures/Red.jpg", name: "Red" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -39,16 +46,9 @@ LoadTextures = [
     { srcName: "ObjectTextures/BloodTexture.jpg", name: "BloodTexture" },
     { srcName: "ObjectTextures/BlueLiquid.jpg", name: "BlueLiquid" },
     { srcName: "ObjectTextures/BlueMetal.jpg", name: "BlueMetal" },
-    { srcName: "ObjectTextures/Coins.jpg", name: "Coins" },
     { srcName: "ObjectTextures/Crate.jpg", name: "Crate" },
     { srcName: "ObjectTextures/EmeraldTexture.jpg", name: "EmeraldTexture" },
-
-    //{ srcName: "ObjectTextures/Explosion.jpg", name: "Explosion" },
-    { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
-    //{ srcName: "ObjectTextures/FireballTexture.jpg", name: "FireballTexture" },
-    { srcName: "ObjectTextures/FireballTexture2.jpg", name: "FireballTexture" },
     { srcName: "ObjectTextures/GhostFaceGreen.jpg", name: "GhostFaceGreen" },
-    { srcName: "ObjectTextures/Gold.jpg", name: "Gold" },
     { srcName: "ObjectTextures/GreenBasilisk.jpg", name: "GreenBasilisk" },
     { srcName: "ObjectTextures/GreenRex.jpg", name: "GreenRex" },
     { srcName: "ObjectTextures/GreenWolf.jpg", name: "GreenWolf" },
@@ -63,15 +63,15 @@ LoadTextures = [
     { srcName: "ObjectTextures/PearlTexture.jpg", name: "PearlTexture" },
     { srcName: "ObjectTextures/PurpleMetal.jpg", name: "PurpleMetal" },
     { srcName: "ObjectTextures/RatTexture.jpg", name: "RatTexture" },
-    { srcName: "ObjectTextures/Red.jpg", name: "Red" },
+  
     { srcName: "ObjectTextures/Red2.jpg", name: "Red2" },
     { srcName: "ObjectTextures/RedDragon.jpg", name: "RedDragon" },
     { srcName: "ObjectTextures/RedGoldBat.jpg", name: "RedGoldBat" },
     { srcName: "ObjectTextures/RedLiquid.jpg", name: "RedLiquid" },
     { srcName: "ObjectTextures/RedMetal.jpg", name: "RedMetal" },
-   
+
     { srcName: "ObjectTextures/ScrollTexture.jpg", name: "ScrollTexture" },
-    { srcName: "ObjectTextures/Silver.jpg", name: "Silver" },
+
     { srcName: "ObjectTextures/Skull_texture.jpg", name: "Skull_texture" },
     { srcName: "ObjectTextures/Sting.jpg", name: "Sting" },
     { srcName: "ObjectTextures/Sword.jpg", name: "Sword" },
@@ -120,6 +120,8 @@ LoadAudio = [
     { srcName: "Sheep.mp3", name: "Sheep" },
     { srcName: "Banshee.mp3", name: "Banshee" },
 
+    { srcName: "CatchFireball.mp3", name: "CatchFireball" },
+
     //monstersounds
     { srcName: "MonsterDeath.mp3", name: "MonsterDeath" },
     { srcName: "MonsterAttack1.mp3", name: "MonsterAttack1" },
@@ -143,10 +145,10 @@ LoadShaders = [
 ];
 
 LoadObjects = [
-    "bag.obj", "apple.obj",
+    "bag.obj", "apple.obj", "gem.obj", "coins.obj",
     /** not yet used */
     "key.obj", "flask.obj", "scroll.obj", "ball.obj", "sword.obj", "heart.obj", "shield.obj", "pentagram.obj", "chest.obj",
-    "treasure_chest.obj", "coins.obj", "sting.obj", "pear.obj", "gem.obj", "blockwall.obj", "wardrobe.obj",
+    "treasure_chest.obj", "sting.obj", "pear.obj", "blockwall.obj", "wardrobe.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj"
 ];
 
@@ -186,6 +188,11 @@ LoadSprites = [
     // items
     { srcName: "Items/Apple.png", name: "Apple" },
 
+    { srcName: "Items/GoldBar.png", name: "GoldBar" },
+    { srcName: "Items/GoldCoin.png", name: "GoldCoin" },
+    { srcName: "Items/GreenGem.png", name: "GreenGem" },
+    { srcName: "Items/RedGem.png", name: "RedGem" },
+
     // unused items
     { srcName: "Items/Acorn.png", name: "Acorn" },
     { srcName: "Items/Amethyst.png", name: "Amethyst" },
@@ -212,11 +219,10 @@ LoadSprites = [
     { srcName: "Items/Fly.png", name: "Fly" },
     { srcName: "Items/Frog.png", name: "Frog" },
     { srcName: "Items/Gloves.png", name: "Gloves" },
-    { srcName: "Items/GoldBar.png", name: "GoldBar" },
-    { srcName: "Items/GoldCoin.png", name: "GoldCoin" },
+
     { srcName: "Items/GoldSteel.png", name: "GoldSteel" },
     { srcName: "Items/GoldenBook.png", name: "GoldenBook" },
-    { srcName: "Items/GreenGem.png", name: "GreenGem" },
+
     { srcName: "Items/GreenHeels.png", name: "GreenHeels" },
     { srcName: "Items/HairBrush.png", name: "HairBrush" },
     { srcName: "Items/Handcuffs.png", name: "Handcuffs" },
@@ -245,7 +251,7 @@ LoadSprites = [
     { srcName: "Items/PurpleTear.png", name: "PurpleTear" },
     { srcName: "Items/Quill.png", name: "Quill" },
     { srcName: "Items/Rat.png", name: "Rat" },
-    { srcName: "Items/RedGem.png", name: "RedGem" },
+
     { srcName: "Items/RedLiquid.png", name: "RedLiquid" },
     { srcName: "Items/RedRose.png", name: "RedRose" },
     { srcName: "Items/Revolver.png", name: "Revolver" },

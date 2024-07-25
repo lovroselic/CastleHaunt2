@@ -279,9 +279,12 @@
                                     <textarea id="monster_list" style="width:100%; height: 96px"></textarea>
                                 </div>
                                 <div class=" my-3">
-                                Max spawned: &nbsp;<input name="monsterdef" id="max_spawned" type="text" size="2" maxlength="2" value=""><br/>
-                                Kill countdown: &nbsp;<input name="monsterdef" id="kill_countdown" type="text" size="2" maxlength="2" value=""><br/>
-                                Spawn delay [ms]: &nbsp;<input name="monsterdef" id="spawn_delay" type="text" size="4" maxlength="4" value=""><br/>
+                                    Max spawned: &nbsp;<input name="monsterdef" id="max_spawned" type="text" size="2"
+                                        maxlength="2" value=""><br />
+                                    Kill countdown: &nbsp;<input name="monsterdef" id="kill_countdown" type="text"
+                                        size="2" maxlength="2" value=""><br />
+                                    Spawn delay [ms]: &nbsp;<input name="monsterdef" id="spawn_delay" type="text"
+                                        size="4" maxlength="4" value=""><br />
                                 </div>
                             </div>
                         </fieldset>
@@ -508,21 +511,21 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            4 : {
-                                name: "Spawn test",
+                            2 : {
+                                name: "Second one with longer name",
                                 sg: 0,
-                                maxSpawned: 1,
-                                killCountdown: 3,
-                                spawnDelay: 5000,
-                                data: '{"width":"11","height":"11","map":"BB5AA12BAA3BAA2BB3AA3BAA3BAA9BB8ABB2ABABB21ABB3AA2BAA4BB13ABB4ABB10$BA"}',
+                                maxSpawned: -1,
+                                killCountdown: -1,
+                                spawnDelay: -1,
+                                data: '{"width":"11","height":"11","map":"BB4ABB3AA2BAA35BAA7BB11ABB4ABB8ABB7ABAA3BB5ABABB18$BB2A"}',
                                 wall: "DarkBricks111",
                                 floor: "RedBrickFloor1",
                                 ceil: "VaultedCeiling1",
-                                start: '[104,1]',
-                                lights: '[[16,7,"Lamp53","standard"]]',
-                                gates: '[[115,1,"4.1","2.3","Up"]]',
-                                lairs: '[[49,7,"Lair01"]]',
-                                monsterList: '["MissGalaxy"]',
+                                start: '[75,3]',
+                                lights: '[[56,5,"Lamp50","standard"],[104,1,"WallLamp34","standard"]]',
+                                gates: '[[76,3,"2.1","1.1","Open"],[4,7,"2.2","3.1","Up"],[6,7,"2.3","4.1","Down"],[33,5,"2.4","5.1","Closed"],[77,5,"2.5","6.1","Blue"],[113,1,"2.6","7.1","Emerald"]]',
+                                keys: '[[78,4],[102,5]]',
+                                gold: '[[36,"GoldBar"],[58,"SilverBar"],[80,"GoldCube"],[49,"Coins"],[71,"RedGem"],[62,"GreenGem"]]',
                                 }
                         </textarea>
                     </fieldset>

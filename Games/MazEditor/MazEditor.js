@@ -1159,9 +1159,9 @@ const GAME = {
     let Export = { width: $MAP.width, height: $MAP.height, map: rle };
     let RoomID = $("#roomid")[0].value;
     let RoomName = $("#roomname")[0].value;
-    let MaxSpawned = $("#max_spawned")[0].value;
-    let KillCountdown = $("#kill_countdown")[0].value;
-    let SpawnDelay = $("#spawn_delay")[0].value;
+    let MaxSpawned = $("#max_spawned")[0].value || -1;
+    let KillCountdown = $("#kill_countdown")[0].value || -1;
+    let SpawnDelay = $("#spawn_delay")[0].value || -1;
     let SG = parseInt($("#checkpoint")[0].value, 10);
 
     let roomExport = `${RoomID} : {
@@ -1215,12 +1215,6 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
     GAME.updateTextures();
     $MAP.map = FREE_MAP.import(Import, MAP_TOOLS.INI.GA_BYTE_SIZE);
     $MAP.init();
-
-    /* for (const prop of $MAP.properties) {
-      const pattern = new RegExp(`${prop}:\\s'(.*)'`);
-      let value = ImportText.extractGroup(pattern);
-      $MAP.map[prop] = JSON.parse(value) || [];
-    } */
 
     for (const prop of [...$MAP.properties, ...$MAP.lists]) {
       const pattern = new RegExp(`${prop}:\\s'(.*)'`);

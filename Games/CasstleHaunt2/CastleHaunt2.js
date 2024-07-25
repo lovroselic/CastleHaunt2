@@ -8,7 +8,12 @@
 /*
       
 TODO:
-    * capture fireball sound
+    * skills
+    * gold
+    * lair cooldown
+    * save game
+        * droppped orbs
+        * graves ??
 
 known bugs: 
     * i don't do bugs
@@ -60,7 +65,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.07",
+    VERSION: "0.05.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -118,7 +123,7 @@ const PRG = {
 
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
-        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives"], null);
+        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives", "gold"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs", "skills"], "fside");
@@ -260,15 +265,16 @@ const HERO = {
     },
     shoot() {
         if (!HERO.canShoot) return;
-        HERO.canShoot = false;
-        console.warn("hero shooting", HERO.orbs);
+
         HERO.player.matrixUpdate();
         if (HERO.orbs <= 0) {
             AUDIO.MagicFail.play();
-        } else {
-            HERO.orbs--;
-            TITLE.orbs();
+            return;
         }
+        HERO.orbs--;
+        TITLE.orbs();
+        HERO.canShoot = false;
+        console.warn("hero shooting", HERO.orbs);
         const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         console.log("missile", missile);
@@ -307,6 +313,7 @@ const HERO = {
         this.speak(text.chooseRandom());
         this.orbs++;
         TITLE.orbs();
+        AUDIO.CatchFireball.play();
     },
     catchOrb() {
         const text = [
@@ -417,9 +424,9 @@ const GAME = {
         GAME.completed = false;
         GAME.lives = 5;
         //GAME.level = 1;                 //start
-        //GAME.level = 2;                 //staircases
+        GAME.level = 2;                 //staircases, gold
         //GAME.level = 3;                 //lair
-        GAME.level = 4;                 //spawn test
+        //GAME.level = 4;                 //spawn test
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -1076,6 +1083,8 @@ const TITLE = {
         SY: 540, //540
         OY: 440,
         HEALTH_TEXT: 720,
+        goldX: 950,
+        goldY: 40,
     },
     startTitle() {
         console.log("TITLE started");
@@ -1196,6 +1205,7 @@ const TITLE = {
         TITLE.scrolls();
         TITLE.orbs();
         TITLE.skills();
+        TITLE.gold();
     },
     compass() {
         let x = ((ENGINE.titleWIDTH - ENGINE.sideWIDTH) + ENGINE.sideWIDTH / 2) | 0;
@@ -1420,6 +1430,30 @@ const TITLE = {
     },
     music() {
         AUDIO.Title.play();
+    },
+    gold() {
+        ENGINE.clearLayer("gold");
+        const CTX = LAYER.gold;
+        CTX.textAlign = "left"
+        CTX.fillStyle = "#BF9B30";
+        let fs = 26;
+        let y = TITLE.stack.goldY + fs / 2;
+
+        CTX.font = `${fs}px Pentagram`;
+        const DX = Math.ceil(CTX.measureText(`GOLD: `).width);
+        fs = 30;
+        CTX.font = `${fs}px CPU`;
+        const DX2 = Math.ceil(CTX.measureText(GAME.gold.toString().padStart(6, "0")).width);
+        const x = (ENGINE.gameWIDTH + INI.SCREEN_BORDER) - DX - DX2;
+        TITLE.stack.goldX = x;
+
+        fs = 26;
+        CTX.font = `${fs}px Pentagram`;
+        CTX.fillText(`GOLD: `, TITLE.stack.goldX, y);
+
+        fs = 30;
+        CTX.font = `${fs}px CPU`;
+        CTX.fillText(GAME.gold.toString().padStart(6, "0"), TITLE.stack.goldX + DX, y);
     },
 };
 
