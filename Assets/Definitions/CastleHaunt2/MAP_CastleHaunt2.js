@@ -82,7 +82,7 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    5: {
+    5 : {
         name: "Killing floor",
         sg: 0,
         maxSpawned: 2,
@@ -96,7 +96,9 @@ const MAP = {
         decals: '[[65,5,"Frogger110","picture"],[177,5,"LeisureSuitLarry60","picture"],[122,5,"JSW112","picture"]]',
         lights: '[[18,7,"Lamp46","standard"],[27,7,"Lamp46","standard"],[232,1,"WallLamp19","standard"],[113,5,"Lamp45","standard"],[94,3,"Lamp40","standard"]]',
         gates: '[[127,3,"5.1","2.4","Open"]]',
+        skills: '[[186,"Magic"],[187,"Magic"],[201,"Attack"],[204,"Attack"]]',
+        movables: '[[107,"Life"],[123,"Life"],[139,"Life"]]',
         lairs: '[[120,3,"Lair08"]]',
         monsterList: '["MissGalaxy"]',
-    }
+        }
 };

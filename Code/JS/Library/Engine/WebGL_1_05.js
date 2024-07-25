@@ -3072,7 +3072,7 @@ class $3D_Entity {
         this.canShoot = false;
         if (this.magic > 0) this.mana = this.mana * this.missile.calcMana(this.magic);
         this.petrified = false;
-        this.behaviour = new Behaviour(...this.behaviourArguments);
+        if (!this.static) this.behaviour = new Behaviour(...this.behaviourArguments);
         this.guardPosition = null;
         this.actionModes = [];
     }
@@ -3366,6 +3366,7 @@ class $Movable_Interactive_entity extends $3D_Entity {
         this.interactive = true;
     }
     manage(lapsedTime, date) {
+        if (this.static) return;
         if (this.moveState.moving) {
             if (this.IAM.hero.dead) {
                 lapsedTime = IndexArrayManagers.DEAD_LAPSED_TIME;

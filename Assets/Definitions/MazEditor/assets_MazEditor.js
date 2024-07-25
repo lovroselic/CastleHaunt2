@@ -552,6 +552,9 @@ LoadSprites = [
     //from UI
     { srcName: "UI/Bag2.png", name: "Bag" },
     { srcName: "UI/FireballIcon48.png", name: "FireBallIcon" },
+    { srcName: "UI/PrincessLivesIcon.png", name: "Lives" },
+    { srcName: "UI/SkillFireball96.png", name: "SkillFireball" },
+    { srcName: "UI/SkillKick96.png", name: "SkillKick" },
 
     // items
     { srcName: "Items/Acorn.png", name: "Acorn" },

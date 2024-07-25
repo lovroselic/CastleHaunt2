@@ -38,6 +38,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/Coins.jpg", name: "Coins" },
     { srcName: "ObjectTextures/Silver.jpg", name: "Silver" },
     { srcName: "ObjectTextures/Red.jpg", name: "Red" },
+    { srcName: "ObjectTextures/Red2.jpg", name: "Red2" },
+    { srcName: "ObjectTextures/Sting.jpg", name: "Sting" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -63,17 +65,12 @@ LoadTextures = [
     { srcName: "ObjectTextures/PearlTexture.jpg", name: "PearlTexture" },
     { srcName: "ObjectTextures/PurpleMetal.jpg", name: "PurpleMetal" },
     { srcName: "ObjectTextures/RatTexture.jpg", name: "RatTexture" },
-  
-    { srcName: "ObjectTextures/Red2.jpg", name: "Red2" },
     { srcName: "ObjectTextures/RedDragon.jpg", name: "RedDragon" },
     { srcName: "ObjectTextures/RedGoldBat.jpg", name: "RedGoldBat" },
     { srcName: "ObjectTextures/RedLiquid.jpg", name: "RedLiquid" },
     { srcName: "ObjectTextures/RedMetal.jpg", name: "RedMetal" },
-
     { srcName: "ObjectTextures/ScrollTexture.jpg", name: "ScrollTexture" },
-
     { srcName: "ObjectTextures/Skull_texture.jpg", name: "Skull_texture" },
-    { srcName: "ObjectTextures/Sting.jpg", name: "Sting" },
     { srcName: "ObjectTextures/Sword.jpg", name: "Sword" },
     { srcName: "ObjectTextures/TreasureChest.JPG", name: "TreasureChest" },
     { srcName: "ObjectTextures/Wardrobe.jpg", name: "Wardrobe" },
@@ -146,9 +143,9 @@ LoadShaders = [
 ];
 
 LoadObjects = [
-    "bag.obj", "apple.obj", "gem.obj", "coins.obj",
+    "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj","pentagram.obj",
     /** not yet used */
-    "key.obj", "flask.obj", "scroll.obj", "ball.obj", "sword.obj", "heart.obj", "shield.obj", "pentagram.obj", "chest.obj",
+    "key.obj", "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj",  "chest.obj",
     "treasure_chest.obj", "sting.obj", "pear.obj", "blockwall.obj", "wardrobe.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj"
 ];

@@ -110,28 +110,6 @@ const GOLD_ITEM_TYPE = {
 };
 
 const SKILL_ITEM_TYPE = {
-    Sword: {
-        name: "Sword",
-        category: "skill",
-        which: "attack",
-        element: "SWORD",
-        scale: 1 / 2 ** 4,
-        glueToFloor: true,
-        texture: "Sword",
-        inventorySprite: "SwordSkill",
-        material: MATERIAL.silver,
-    },
-    Shield: {
-        name: "Shield",
-        category: "skill",
-        which: "defense",
-        element: "SHIELD",
-        scale: 1 / 2 ** 5,
-        glueToFloor: true,
-        texture: "ScrapedMetal",
-        inventorySprite: "ShieldSkill",
-        material: MATERIAL.silver,
-    },
     Magic: {
         name: "Magic",
         category: "skill",
@@ -140,40 +118,18 @@ const SKILL_ITEM_TYPE = {
         scale: 1 / 2 ** 1,
         glueToFloor: true,
         texture: "Red2",
-        inventorySprite: "MagicSkill",
+        inventorySprite: "SkillFireball",
         material: MATERIAL.redShine,
     },
-    Heart: {
-        name: "Heart",
-        category: "status",
-        which: "health",
-        element: "HEART",
-        scale: 1 / 2 ** 5,
-        glueToFloor: true,
-        texture: "Red",
-        inventorySprite: "Health",
-        material: MATERIAL.redShine,
-    },
-    Mana: {
-        name: "ManaSkill",
-        category: "status",
-        which: "mana",
-        element: "BALL",
-        scale: 1 / 2 ** 4,
-        glueToFloor: true,
-        texture: "Magic",
-        inventorySprite: "Mana",
-        material: MATERIAL.standard,
-    },
-    Sting: {
-        name: "Sting",
+    Attack: {
+        name: "Attack",
         category: "skill",
         which: "attack",
         element: "STING",
         scale: 1 / 2 ** 1,
         glueToFloor: true,
         texture: "Sting",
-        inventorySprite: "SwordSkill",
+        inventorySprite: "SkillKick",
         material: MATERIAL.silver,
     },
 };
@@ -1376,6 +1332,20 @@ const INTERACTION_OBJECT = {
 };
 
 const MOVABLE_INTERACTION_OBJECT = {
+    Life: {
+        name: "Life",
+        model: "Princess",
+        scale: 1 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        material: MATERIAL.standard,
+        static: true,
+        category: "life",
+        inventorySprite: "Lives",
+        text: "A backup life. We all need this, right?",
+    },
+
+    /** */
+
     LittleChicken: {
         name: "LittleChicken",
         category: "interaction_item",

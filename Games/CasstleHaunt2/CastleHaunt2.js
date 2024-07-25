@@ -65,7 +65,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.01",
+    VERSION: "0.06.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -420,7 +420,12 @@ const HERO = {
         ENGINE.TEXT.centeredText("(ENTER)", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2 + ENGINE.TEXT.RD.fs * 1.2);
         ENGINE.GAME.ANIMATION.resetTimer();
         ENGINE.GAME.ANIMATION.next(GAME.gameOverRun);
-    }
+    },
+    raiseStat(which, level = 1) {
+        this[which] += level;
+        //this[`reference_${which}`] += level;
+        TITLE.skills();
+    },
 };
 
 const GAME = {
@@ -475,7 +480,7 @@ const GAME = {
         }
         TITLE.keys(); */
 
-        HERO.health = 1;
+        //HERO.health = 1;
 
         /*      HERO.hasCapacity = true;
              HERO.capacity = 5;
@@ -555,7 +560,6 @@ const GAME = {
         AI.initialize(HERO.player, "3D");
         this.setWorld(level);
         ENTITY3D.resetTime();
-        //LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
     },
     setWorld(level, decalsAreSet = false) {
         console.time("setWorld");
@@ -857,7 +861,13 @@ const GAME = {
                 HERO.raiseStat(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();
-                TITLE.keys();
+                //TITLE.skills();
+                break;
+            case "life":
+                console.info("LIFE", interaction);
+                display(interaction.inventorySprite);
+                GAME.lives++;
+                TITLE.lives();
                 break;
             case 'status':
                 console.log("STATUS", interaction);
