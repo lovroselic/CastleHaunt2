@@ -65,7 +65,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.05.08",
+    VERSION: "0.05.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -264,13 +264,12 @@ const HERO = {
         }
     },
     shoot() {
+        if (HERO.dead) return;
         if (!HERO.canShoot) return;
 
         HERO.player.matrixUpdate();
-        if (HERO.orbs <= 0) {
-            AUDIO.MagicFail.play();
-            return;
-        }
+        if (HERO.orbs <= 0) return AUDIO.MagicFail.play();
+
         HERO.orbs--;
         TITLE.orbs();
         HERO.canShoot = false;
@@ -342,14 +341,14 @@ const HERO = {
             "Another orb.",
             "I have a fiery weapon now. Beware of the Princess.",
             "Orb secured. Watch out, enemies!",
-            "Feeling orb-tastic!",
+            "Feeling orbtastic!",
             "Princess powers up!",
             "Another orb for my collection!",
             "My orb bag is getting heavy!",
             "More ammo for the royal arsenal!",
-            "Orb-ing my way to victory!",
+            "Orbing my way to victory!",
             "This orb will do nicely.",
-            "Locked and orb-loaded!",
+            "Locked and orbloaded!",
             "Time to bring the heat with this orb!",
         ];
         return this.getOrb(text);
@@ -388,7 +387,7 @@ const HERO = {
         HERO.health = Math.max(HERO.health - damage, 0);
         TITLE.health();
         if (HERO.health <= 0) {
-            HERO.die();
+            if (!DEBUG.INVINCIBLE) HERO.die();
         }
     },
     die() {
@@ -424,9 +423,10 @@ const GAME = {
         GAME.completed = false;
         GAME.lives = 5;
         //GAME.level = 1;                 //start
-        GAME.level = 2;                 //staircases, gold
+        //GAME.level = 2;                 //staircases, gold
         //GAME.level = 3;                 //lair
         //GAME.level = 4;                 //spawn test
+        GAME.level = 5;                 //killcount test
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -447,10 +447,12 @@ const GAME = {
         }
         TITLE.keys(); */
 
-        HERO.hasCapacity = true;
+        HERO.health = 1;
+
+   /*      HERO.hasCapacity = true;
         HERO.capacity = 5;
         HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
-        HERO.orbs = 5;
+        HERO.orbs = 5; */
 
         /** END DEBUG */
 
@@ -541,7 +543,7 @@ const GAME = {
         } else {
             WebGL.init('webgl', MAP[level].world, textureData, HERO.topCamera, decalsAreSet);           //thirdperson
         }
-        LAIR.set_timeout(MAP[level].spawnDelay);
+        LAIR.set_timeout(MAP[level].map.spawnDelay);
         console.timeEnd("setWorld");
     },
     buildWorld(level) {
@@ -700,6 +702,8 @@ const GAME = {
 
         const interaction = WebGL.MOUSE.click(HERO);
         if (interaction) GAME.processInteraction(interaction);
+
+        MAP.manage(GAME.level);
 
         GAME.frameDraw(lapsedTime);
         HERO.concludeAction();
@@ -907,7 +911,8 @@ const GAME = {
             console.log("\nDEBUG:");
             console.log("#######################################################");
             ENTITY3D.display();
-            console.log("MAP", MAP[GAME.level].map);
+            console.log("map", MAP[GAME.level].map);
+            console.log("MAP", MAP[GAME.level]);
             console.info("Inventory:");
             DEBUG.displayInv();
             console.log("#######################################################");
@@ -1052,7 +1057,7 @@ const GAME = {
     },
     canSpawn() {
         if (!LAIR.getSize()) return false;
-        if (ENTITY3D.getSize() >= MAP[GAME.level].maxSpawned) return false;
+        if (ENTITY3D.getSize() >= MAP[GAME.level].map.maxSpawned) return false;
         //console.error("CAN SPAWN");
         return true;
     },
@@ -1062,7 +1067,7 @@ const GAME = {
         const grid = Grid.toCenter(lair.grid.add(lair.direction));
         const monster = new $3D_Entity(grid, type, lair.direction);
         ENTITY3D.add(monster);
-        //console.info("..spawned", monster);
+        console.info("..spawned", MAP[GAME.level].map.spawnDelay);
         //spawning fog
         EXPLOSION3D.add(new SpawnCloud(Vector3.from_Grid(grid, 0.5)));
     }

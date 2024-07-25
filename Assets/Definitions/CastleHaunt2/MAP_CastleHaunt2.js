@@ -30,7 +30,7 @@ const MAP = {
         objects: '[[24,"Apple"],[27,"Apple"],[82,"Bag"],[83,"Bag"],[84,"Bag"],[80,"Orb"],[69,"Orb"],[58,"Orb"]]',
     }
     ,
-    2 : {
+    2: {
         name: "Second one with longer name",
         sg: 0,
         maxSpawned: -1,
@@ -45,7 +45,7 @@ const MAP = {
         gates: '[[76,3,"2.1","1.1","Open"],[4,7,"2.2","3.1","Up"],[6,7,"2.3","4.1","Down"],[33,5,"2.4","5.1","Closed"],[77,5,"2.5","6.1","Blue"],[113,1,"2.6","7.1","Emerald"]]',
         keys: '[[78,4],[102,5]]',
         gold: '[[36,"GoldBar"],[58,"SilverBar"],[80,"GoldCube"],[49,"Coins"],[71,"RedGem"],[62,"GreenGem"]]',
-        }
+    }
     ,
     3: {
         name: "Lair study",
@@ -79,6 +79,24 @@ const MAP = {
         lights: '[[16,7,"Lamp53","standard"]]',
         gates: '[[115,1,"4.1","2.3","Up"]]',
         lairs: '[[49,7,"Lair01"]]',
+        monsterList: '["MissGalaxy"]',
+    }
+    ,
+    5: {
+        name: "Killing floor",
+        sg: 0,
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"16","height":"16","map":"BB8AA35BAA7BB2ABAA6BAA4BAA6BB2ABB2AA52BABB30AA2BB17ABB3ABB2ABAA11BB17ABB26$BB10A"}',
+        wall: "DarkBricks111",
+        floor: "RedBrickFloor1",
+        ceil: "VaultedCeiling1",
+        start: '[126,3]',
+        decals: '[[65,5,"Frogger110","picture"],[177,5,"LeisureSuitLarry60","picture"],[122,5,"JSW112","picture"]]',
+        lights: '[[18,7,"Lamp46","standard"],[27,7,"Lamp46","standard"],[232,1,"WallLamp19","standard"],[113,5,"Lamp45","standard"],[94,3,"Lamp40","standard"]]',
+        gates: '[[127,3,"5.1","2.4","Open"]]',
+        lairs: '[[120,3,"Lair08"]]',
         monsterList: '["MissGalaxy"]',
     }
 };

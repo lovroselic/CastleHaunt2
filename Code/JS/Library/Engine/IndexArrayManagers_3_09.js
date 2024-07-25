@@ -385,7 +385,7 @@ class Spawner extends Floor_Object {
     }
 
     /**
-     * IA is tatic and never changes!
+     * IA is static and never changes!
      */
     setIA() {
         let map = this.map;
@@ -420,8 +420,8 @@ class Spawner extends Floor_Object {
     spawn() {
         if (this.assertionFunc()) {
             const nest = this.selectNest();
-            console.log("nest", nest);
             if (nest) this.spawnFunc(nest);
+            
         }
         this.cooldown();
     }

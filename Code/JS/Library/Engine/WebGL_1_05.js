@@ -3283,6 +3283,7 @@ class $3D_Entity {
         this.IAM.hero.incExp(exp, expType);
         AUDIO.MonsterDeath.volume = RAY.volume(this.distance);
         AUDIO.MonsterDeath.play();
+        this.IAM.map.killCount++;
     }
     applyDamage(damage, exp) {
         this.health -= damage;

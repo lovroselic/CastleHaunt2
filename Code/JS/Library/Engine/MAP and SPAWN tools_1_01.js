@@ -14,10 +14,23 @@ const MAP_TOOLS = {
     lists: ['monsterList'],
     INI: {
         FOG: true,
-        GA_BYTE_SIZE: 2
+        GA_BYTE_SIZE: 2,
+        SPAWN_DELAY_INC_FACTOR: 1.5,
+    },
+    manageMAP(level) {
+        /** check of lair cooldown */
+        if (MAP[level].map.killCount >= MAP[level].map.killCountdown) {
+            MAP[level].map.killCountdown = Math.max(1, --MAP[level].map.killCountdown);
+            MAP[level].map.maxSpawned = Math.max(1, --MAP[level].map.maxSpawned);
+            if (MAP[level].map.killCountdown === 1) MAP[level].map.killCountdown = Infinity;
+            MAP[level].map.spawnDelay = Math.round(MAP[level].map.spawnDelay * MAP_TOOLS.INI.SPAWN_DELAY_INC_FACTOR);
+            MAP[level].map.killCount = 0;
+            LAIR.set_timeout(MAP[level].map.spawnDelay);
+        }
     },
     initialize(pMapObject) {
         this.MAP = pMapObject;
+        this.MAP.manage = this.manageMAP;
     },
     setByteSize(byte) {
         if (![1, 2, 4].includes(byte)) {
@@ -62,9 +75,15 @@ const MAP_TOOLS = {
         if (!this.MAP[level].name) {
             this.MAP[level].name = `Room - ${level}`;
         }
+        /** initialize global map proterties */
         const SG = this.MAP[level].sg || null;
         this.MAP[level].map.sg = SG;
         this.MAP[level].map.storage = new IAM_Storage();
+        this.MAP[level].map.killCount = 0;
+        this.MAP[level].map.maxSpawned = this.MAP[level].maxSpawned || -1;
+        this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
+        this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
+        /**  */
         if (ENGINE.verbose) console.info("Unpacked MAP level", level, "map", this.MAP[level].map);
     },
 
