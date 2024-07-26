@@ -97,6 +97,7 @@ const MAP = {
         lights: '[[18,7,"Lamp46","standard"],[27,7,"Lamp46","standard"],[232,1,"WallLamp19","standard"],[113,5,"Lamp45","standard"],[94,3,"Lamp40","standard"]]',
         gates: '[[127,3,"5.1","2.4","Open"]]',
         skills: '[[186,"Magic"],[187,"Magic"],[201,"Attack"],[204,"Attack"]]',
+        containers: '[[138,"TreasureChest","INTERACTION_ITEM.Fly",5]]',
         movables: '[[107,"Life"],[123,"Life"],[139,"Life"]]',
         lairs: '[[120,3,"Lair08"]]',
         monsterList: '["MissGalaxy"]',

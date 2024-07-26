@@ -8,12 +8,8 @@
 /*
       
 TODO:
-    * skills
-    * gold
-    * lair cooldown
-    * save game
-        * droppped orbs
-        * graves ??
+
+    * death place
 
 known bugs: 
     * i don't do bugs
@@ -65,7 +61,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.02",
+    VERSION: "0.06.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -211,6 +207,7 @@ const HERO = {
         this.canComplain = true;
         this.maxHealth = INI.MAX_HERO_HEALTH;
         this.orbs = 0;
+        this.orbsLost = 0;
         this.bounceCount = INI.BOUNCE_COUNT;
         this.magic = 5;
         this.attack = 5;
@@ -280,17 +277,17 @@ const HERO = {
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         console.log("missile", missile);
         MISSILE3D.add(missile);
+        this.orbsLost++;
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
     },
     hitByMissile(missile) {
         if (DEBUG.VERBOSE) console.log("HERO hit by missile", missile, "friendly", missile.friendly);
         if (missile.friendly) {
-            this.catchOrb();
+            this.catchOrb(missile);
             missile.remove(MISSILE3D);
         } else {
             const damage = Math.max(missile.calcDamage(HERO.magic, true), 1) - HERO.luck;
-            //console.log("HERO damage", damage);
             HERO.applyDamage(damage);
             missile.explode(MISSILE3D);
         }
@@ -309,14 +306,15 @@ const HERO = {
             return this.key.length + this.item.length;
         }
     },
-    getOrb(text) {
-        if (this.orbs === this.capacity) return this.refusePickingOrb();
+    getOrb(text, missile = null) {
+        if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
         TITLE.orbs();
         AUDIO.CatchFireball.play();
+        if (this.orbsLost > 0) this.orbsLost--;
     },
-    catchOrb() {
+    catchOrb(missile) {
         const text = [
             "Good catch.",
             "Come to mamma.",
@@ -335,7 +333,7 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        return this.getOrb(text);
+        return this.getOrb(text, missile);
     },
     pickOrb() {
         const text = [
@@ -355,7 +353,7 @@ const HERO = {
         ];
         return this.getOrb(text);
     },
-    refusePickingOrb() {
+    refusePickingOrb(missile) {
         SPEECH.silence();
         const text = [
             "You need more bags to carry more orbs, isn't this logical?",
@@ -376,7 +374,9 @@ const HERO = {
         ];
 
         this.speak(text.chooseRandom());
-        this.dropOrb();
+        if (missile) {
+            missile.drop();
+        } else this.dropOrb();
     },
     dropOrb() {
         const position = Vector3.to_FP_Grid(HERO.player.pos);
@@ -384,7 +384,6 @@ const HERO = {
         orb.createTexture();
         ITEM3D.add(orb);
     },
-    incExp() { },
     applyDamage(damage) {
         HERO.health = Math.max(HERO.health - damage, 0);
         TITLE.health();
@@ -423,7 +422,6 @@ const HERO = {
     },
     raiseStat(which, level = 1) {
         this[which] += level;
-        //this[`reference_${which}`] += level;
         TITLE.skills();
     },
 };
@@ -453,13 +451,13 @@ const GAME = {
         AI.immobileWander = true;
 
         GAME.completed = false;
-        //GAME.lives = 3;
-        GAME.lives = 1;
-        //GAME.level = 1;                 //start
+        GAME.lives = 3;
+        //GAME.lives = 1;
+        GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases, gold
         //GAME.level = 3;                 //lair
         //GAME.level = 4;                 //spawn test
-        GAME.level = 5;                 //killcount test
+        //GAME.level = 5;                 //killcount test
         GAME.gold = 0;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -953,6 +951,8 @@ const GAME = {
             ENTITY3D.display();
             console.log("map", MAP[GAME.level].map);
             console.log("MAP", MAP[GAME.level]);
+            console.log("HERO", HERO);
+            console.log("HERO.orbsLost", HERO.orbsLost);
             console.info("Inventory:");
             DEBUG.displayInv();
             console.log("#######################################################");

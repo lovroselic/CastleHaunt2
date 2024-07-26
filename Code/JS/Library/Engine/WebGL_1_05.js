@@ -2263,7 +2263,7 @@ class BouncingMissile extends Missile {
 
     }
     drop() {
-        console.log("dropping", this);
+        console.log("dropping bouncing missile", this);
         const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
         dropped.createTexture();
         ITEM3D.add(dropped);
