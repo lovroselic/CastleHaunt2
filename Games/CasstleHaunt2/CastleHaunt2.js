@@ -9,7 +9,7 @@
       
 TODO:
 
-    * death place
+    * 
 
 known bugs: 
     * i don't do bugs
@@ -61,7 +61,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.03",
+    VERSION: "0.06.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -172,14 +172,13 @@ class Status {
         this.spriteClass = spriteClass;
     }
 }
-
 class ActionItem {
     constructor(type, spriteClass) {
         this.type = type;
         this.spriteClass = spriteClass;
         this.sprite = SPRITE[this.spriteClass];
         this.class = "ActionItem";
-        //this.saveDefinition = ['class', 'type'];
+        this.saveDefinition = ['class', 'type', "spriteClass"];
     }
     action() {
         console.warn("action item action", this);
@@ -202,19 +201,28 @@ const HERO = {
         this.height = 0.6;
         this.canShoot = true;
         this.hasCapacity = false;
+        this.capacity = 0;
+        this.maxCapacity = 0;
         this.inventory.clear();
         this.inventoryLimit = INI.INVENTORY_HARD_LIMIT;
         this.canComplain = true;
         this.maxHealth = INI.MAX_HERO_HEALTH;
         this.orbs = 0;
         this.orbsLost = 0;
-        this.bounceCount = INI.BOUNCE_COUNT;
+        //this.bounceCount = INI.BOUNCE_COUNT;
         this.magic = 5;
         this.attack = 5;
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
+        this.mana = 0;      //unusd, compatibility
         this.invisible = false;
         this.revive();
+
+        const propsToSave = ["health", "maxHealth", "attack", "magic", "orbs", "maxCapacity", "capacity", "hasCapacity"];
+        this.attributesForSaveGame = [];
+        for (const P of propsToSave) {
+            this.attributesForSaveGame.push(`HERO.${P}`);
+        }
     },
     revive() {
         this.dead = false;
@@ -406,6 +414,13 @@ const HERO = {
         GAME.setFirstPerson();
         if (GAME.lives <= 0) return HERO.finalDeath();
 
+
+        const grid = Vector3.toGrid(HERO.player.pos);
+        const face = DirectionToFace(NOWAY);
+        const decal = SPRITE.DeathPlace;
+        const deathPlace = new StaticDecal(grid, face, decal, "crest", "DeathPlace", true);
+        GAME.deathPlaceDecals.push(deathPlace);
+
         ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
         ENGINE.GAME.ANIMATION.resetTimer();
         ENGINE.GAME.ANIMATION.next(GAME.lifeLostRun);
@@ -427,6 +442,9 @@ const HERO = {
 };
 
 const GAME = {
+    gold: 0,                                // WebGl relies on this as default gold source 
+    loadWayPoint: null,                     // save game pointer, keep
+    canBeSaved: true,
     start() {
         console.log("GAME started");
         if (AUDIO.Title) {
@@ -452,7 +470,7 @@ const GAME = {
 
         GAME.completed = false;
         GAME.lives = 3;
-        //GAME.lives = 1;
+        GAME.lives = 1;
         GAME.level = 1;                 //start
         //GAME.level = 2;                 //staircases, gold
         //GAME.level = 3;                 //lair
@@ -488,16 +506,27 @@ const GAME = {
         /** END DEBUG */
 
         //SAVE GAME
+        SAVE_GAME.pointers = [...HERO.attributesForSaveGame,
+            'GAME.level', 'GAME.gold',
+            "HERO.inventory.item", "HERO.inventory.key",
+            "GAME.loadWayPoint",
+        ];
+        SAVE_GAME.lists = ["HERO.inventory.scroll"];
+        SAVE_GAME.timers = ["Main"];
         //end SAVE
 
         //load from checkpoint
+        if (GAME.fromCheckpoint) {
+            console.log(`%c ... Loading part 1...`, GAME.CSS);
+            GAME.load();
+        }
         //end load
 
 
-        //ENGINE.GAME.ANIMATION.stop(); //debug
         LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
         GAME.levelStart();
     },
+    deathPlaceDecals: [],
     levelStart() {
         console.log("starting level", GAME.level);
         WebGL.playerList.clear();                       //requred for restart after resurrection
@@ -545,8 +574,8 @@ const GAME = {
         let start_dir, start_grid;
 
         if (GAME.fromCheckpoint) {
-            /* start_dir = MAP[level].map[GAME.loadWayPoint].vector;
-            start_grid = Grid.toClass(MAP[level].map[GAME.loadWayPoint].grid).add(start_dir); */
+            start_dir = MAP[level].map[GAME.loadWayPoint].vector;
+            start_grid = Grid.toClass(MAP[level].map[GAME.loadWayPoint].grid).add(start_dir);
             GAME.fromCheckpoint = false;
         } else {
             start_dir = MAP[level].map.startPosition.vector;
@@ -581,12 +610,19 @@ const GAME = {
         console.info("building world, room/dungeon/level:", level);
         WebGL.init_required_IAM(MAP[level].map, HERO);
         SPAWN_TOOLS.spawn(level);
+
+        /* adding death places*/
+        for (const dp of GAME.deathPlaceDecals) {
+            DECAL3D.add(dp);
+        }
+        GAME.deathPlaceDecals.clear();
+
         if (GAME.fromCheckpoint) {
             console.log(`%c ... loading part 3: affecting MAP and SPAWN from checkpoint ...`, GAME.CSS);
-            /* SAVE_MAP_IAM.load_map(MAP);
+            SAVE_MAP_IAM.load_map(MAP);
             WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, true);
             MAP_TOOLS.applyStorageActions(level);
-            WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, false); */
+            WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, false);
         }
         MAP[level].world = WORLD.build(MAP[level].map);
     },
@@ -1040,7 +1076,7 @@ const GAME = {
             GAME.setWorld(level, true);
         }
 
-        //MAP_TOOLS.applyStorageActions(level);             //to be developed
+        MAP_TOOLS.applyStorageActions(level);             //to be developed
         GAME.forceOpenDoor(destination.waypoint);
         HERO.player.setMap(MAP[level].map);
 
@@ -1055,7 +1091,7 @@ const GAME = {
 
 
         /** SAVE GAME each time */
-        //GAME.save(destination);                           //to be developed
+        GAME.save(destination);                           //to be developed
 
         //observe
         if (MAP_TEXT[GAME.level]) {
@@ -1094,6 +1130,19 @@ const GAME = {
         SAVE_MAP_IAM.save_GA(MAP);
         TURN.display("GAME SAVED", "#FFF");
         console.timeEnd("save");
+    },
+    load() {
+        console.time("load");
+        HERO.inventory.scroll.clear();
+        HERO.inventory.item.clear();
+        SAVE_GAME.load();
+
+        SAVE_MAP_IAM.load_GA();
+        console.timeEnd("load");
+    },
+    checkpoint() {
+        GAME.fromCheckpoint = true;
+        GAME.start();
     },
     canSpawn() {
         if (!LAIR.getSize()) return false;

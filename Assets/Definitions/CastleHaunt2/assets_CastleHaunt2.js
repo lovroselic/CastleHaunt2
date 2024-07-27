@@ -339,6 +339,8 @@ LoadSprites = [
     { srcName: "Keys/SilverKey.png", name: "SilverKey" },
 
     //ObjDecals - all
+    { srcName: "ObjDecals/DeathPlace.png", name: "DeathPlace" },
+
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/Crack20.png", name: "Crack20" },
     { srcName: "ObjDecals/Crack21.png", name: "Crack21" },

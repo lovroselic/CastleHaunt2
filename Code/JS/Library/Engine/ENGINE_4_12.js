@@ -3631,7 +3631,8 @@ class Inventory {
     list.forEach((item) => {
       let className = item[1];
       let obj = eval(className);
-      obj = new obj(item[2]); //all arguments 2 ->
+      let args = item.slice(2,); 
+      obj = new obj(...args); //all arguments 2 ->
       let count = item[0];
       do {
         this.add(obj);
