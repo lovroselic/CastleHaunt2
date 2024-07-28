@@ -61,7 +61,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.04",
+    VERSION: "0.06.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -119,7 +119,7 @@ const PRG = {
 
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
-        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives", "gold"], null);
+        ENGINE.addBOX("TITLE", ENGINE.titleWIDTH, ENGINE.titleHEIGHT, ["title", "compassRose", "compassNeedle", "lives", "gold", "save"], null);
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs", "skills"], "fside");
@@ -314,13 +314,13 @@ const HERO = {
             return this.key.length + this.item.length;
         }
     },
-    getOrb(text, missile = null) {
+    getOrb(text, missile = null, dropped = false) {
         if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
         TITLE.orbs();
         AUDIO.CatchFireball.play();
-        if (this.orbsLost > 0) this.orbsLost--;
+        if (this.orbsLost > 0 && dropped) this.orbsLost--;
     },
     catchOrb(missile) {
         const text = [
@@ -341,25 +341,25 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        return this.getOrb(text, missile);
+        return this.getOrb(text, missile, true);
     },
-    pickOrb() {
+    pickOrb(dropped) {
         const text = [
             "I am getting armed to the teeth.",
             "Another orb.",
             "I have a fiery weapon now. Beware of the Princess.",
             "Orb secured. Watch out, enemies!",
-            "Feeling orbtastic!",
+            "Feeling orbtastic.",
             "Princess powers up!",
-            "Another orb for my collection!",
+            "Another orb for my collection.",
             "My orb bag is getting heavy!",
-            "More ammo for the royal arsenal!",
-            "Orbing my way to victory!",
+            "More ammo for the royal arsenal.",
+            "Orbing my way to victory.",
             "This orb will do nicely.",
-            "Locked and orbloaded!",
-            "Time to bring the heat with this orb!",
+            "Locked and orbloaded.",
+            "Time to bring the heat with this orb.",
         ];
-        return this.getOrb(text);
+        return this.getOrb(text, null, dropped);
     },
     refusePickingOrb(missile) {
         SPEECH.silence();
@@ -928,7 +928,8 @@ const GAME = {
                 TITLE.keys()
                 break;
             case "munition":
-                HERO.pickOrb();
+                //console.info("munition inteatction, dropped", interaction.dropped);
+                HERO.pickOrb(interaction.dropped);
                 display(interaction.inventorySprite);
                 break;
             case "concludeGame":
@@ -1108,6 +1109,10 @@ const GAME = {
             GRID.paintCoord("coord", MAP[level].map);
         }
     },
+    saveRestriction() {
+        if (HERO.orbsLost > 0 || !GAME.canBeSaved) return true;
+        return false;
+    },
     save(destination) {
         const flag = SG_DICT[MAP[GAME.level].sg];
 
@@ -1121,7 +1126,11 @@ const GAME = {
         }
 
         MAP[GAME.level].sg = 0;
-        if (!GAME.canBeSaved) return;
+        //if (!GAME.canBeSaved) return;
+        if (GAME.saveRestriction()) {
+            TITLE.saved(false);
+            return;
+        }
 
         console.time("save");
         GAME.loadWayPoint = destination.waypoint;
@@ -1129,6 +1138,7 @@ const GAME = {
         SAVE_MAP_IAM.save_map(MAP);
         SAVE_MAP_IAM.save_GA(MAP);
         TURN.display("GAME SAVED", "#FFF");
+        TITLE.saved(true);
         console.timeEnd("save");
     },
     load() {
@@ -1601,6 +1611,19 @@ const TITLE = {
         fs = 30;
         CTX.font = `${fs}px CPU`;
         CTX.fillText(GAME.gold.toString().padStart(6, "0"), TITLE.stack.goldX + DX, y);
+    },
+    saved(ok) {
+        ENGINE.clearLayer("save");
+        const y = (ENGINE.titleHEIGHT - 64) / 2;
+        const x = INI.SCREEN_BORDER;
+        let sprite = null;
+        if (ok) {
+            sprite = "SavedOK";
+        } else {
+            sprite = "SavedFail";
+        }
+
+        ENGINE.draw("save", x, y, SPRITE[sprite]);
     },
 };
 

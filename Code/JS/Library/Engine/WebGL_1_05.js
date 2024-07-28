@@ -2126,6 +2126,7 @@ class FloorItem3D extends Drawable_object {
             pos: this.translate,
             instanceIdentification: this.instanceIdentification,
             name: this.name,
+            dropped: this.dropped,
         };
     }
     storageLog() {
@@ -2266,6 +2267,7 @@ class BouncingMissile extends Missile {
         console.log("dropping bouncing missile", this);
         const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
         dropped.createTexture();
+        dropped.dropped = true;
         ITEM3D.add(dropped);
     }
     explode(IAM) {

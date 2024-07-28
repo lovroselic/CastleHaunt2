@@ -3614,6 +3614,15 @@ class Inventory {
     }
     console.info("display by type:", list);
   }
+
+  /**
+   * Converts the list of items to a JSON string.
+   * 
+   * Each item in the list is represented as an array, where the first element is the count of the item, 
+   * and subsequent elements are values of the item's properties specified by its saveDefinition.
+   * 
+   * @returns {string} A JSON string representation of the list.
+   */
   stringify() {
     let list = [];
     this.list.forEach((item) => {
@@ -3626,12 +3635,22 @@ class Inventory {
     let str = JSON.stringify(list);
     return str;
   }
+
+  /**
+   * Converts a JSON string back into objects and adds them to the list.
+   * 
+   * The JSON string is expected to represent an array of arrays, where each sub-array contains a count,
+   * a class name, and the arguments to be passed to the class constructor.
+   * 
+   * @param {string} str - The JSON string representation of the list of items.
+   * @throws {Error} Throws an error if the JSON string cannot be parsed or if the class instantiation fails.
+   */
   objectify(str) {
     const list = JSON.parse(str);
     list.forEach((item) => {
       let className = item[1];
       let obj = eval(className);
-      let args = item.slice(2,); 
+      let args = item.slice(2,);
       obj = new obj(...args); //all arguments 2 ->
       let count = item[0];
       do {
