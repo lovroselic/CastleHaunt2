@@ -61,7 +61,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.06.05",
+    VERSION: "0.07.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -439,6 +439,7 @@ const HERO = {
         this[which] += level;
         TITLE.skills();
     },
+    incExp() { }  //keep, TURN dependency
 };
 
 const GAME = {
@@ -476,7 +477,7 @@ const GAME = {
         //GAME.level = 3;                 //lair
         //GAME.level = 4;                 //spawn test
         //GAME.level = 5;                 //killcount test
-        GAME.gold = 0;
+        GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
         GAME.STORE = new Store(storeList);

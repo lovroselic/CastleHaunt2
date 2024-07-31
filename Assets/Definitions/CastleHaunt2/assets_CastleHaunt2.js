@@ -13,11 +13,9 @@ LoadFonts = [
 
 LoadTextures = [
     /**wall, floor, ceil */
-    { srcName: "Wall/DarkBrick113.jpg", name: "DarkBrick113" },
-    { srcName: "Wall/DarkBricks111.jpg", name: "DarkBricks111" },
-    { srcName: "Wall/MarbleFloor104.jpg", name: "MarbleFloor104" },
-    { srcName: "Wall/VaultedCeiling1.jpg", name: "VaultedCeiling1" },
-    { srcName: "Wall/RedBrickFloor1.jpg", name: "RedBrickFloor1" },
+    {srcName: "Wall/GoldishWall1.jpg", name:"GoldishWall1"},
+    {srcName: "Wall/GoldMarbleFloor.jpg", name:"GoldMarbleFloor"},
+    {srcName: "Wall/WebbedFloor9.jpg", name:"WebbedFloor9"},
 
     { srcName: "Wall/Forest.jpg", name: "Forest" },
 
@@ -151,10 +149,13 @@ LoadObjects = [
 ];
 
 LoadModels = [
-    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf'
+    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf',
 ];
 
 LoadSprites = [
+    // frescoes - entities
+    { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
+    
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
     { srcName: "Lairs/Lair02.jpg", name: "Lair02" },

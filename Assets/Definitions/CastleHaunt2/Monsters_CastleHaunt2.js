@@ -31,7 +31,15 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
-
+    PrincessBed: {
+        name: "PrincessBed",
+        sprite: "PrincessBed",
+        category: 'crest',
+        voice: "Princess",
+        text: "Yes, this is my bed, but I do not have time to sleep now.",
+        interactionCategory: "oracle",
+        price: 0,
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -226,6 +234,52 @@ const COMMON_ITEM_TYPE = {
 };
 
 const MONSTER_TYPE = {
+    Bat: {
+        name: "Bat",
+        model: "Bat",
+        scale: 1.2 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.0,
+        fly: 0.5,
+        deathType: "SmokeExplosion",
+        inventory: null,
+        mana: 0,
+        health: 2,
+        attack: 1,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "BatAttack",
+        hurtSound: "BatAttack",
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        moveSpeed: 1.0,
+        material: MATERIAL.standard,
+    },
+    RedGoldBat: {
+        name: "RedGoldBat",
+        texture: "RedGoldBat",
+        model: "Bat",
+        scale: 1.2 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.0,
+        fly: 0.5,
+        deathType: "SmokeExplosion",
+        inventory: null,
+        mana: 0,
+        health: 4,
+        attack: 2,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "BatAttack",
+        hurtSound: "BatAttack",
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        moveSpeed: 1.0,
+        material: MATERIAL.redShine,
+    },
+
+
+    /** */
     MissGalaxy: {
         name: "MissGalaxy",
         model: "MissGalaxy",
@@ -284,49 +338,8 @@ const MONSTER_TYPE = {
 
 
     /** backup */
-    Bat: {
-        name: "Bat",
-        model: "Bat",
-        scale: 1.2 / 2 ** 3,
-        rotateToNorth: Math.PI,
-        midHeight: 0.0,
-        fly: 0.5,
-        deathType: "SmokeExplosion",
-        inventory: null,
-        attack: 1,
-        defense: 0,
-        magic: 0,
-        health: 1,
-        xp: 1,
-        gold: 0,
-        attackSound: "BatAttack",
-        hurtSound: "BatAttack",
-        behaviourArguments: [Infinity, ["wanderer"], -1],
-        moveSpeed: 1.0,
-        material: MATERIAL.standard,
-    },
-    RedGoldBat: {
-        name: "RedGoldBat",
-        texture: "RedGoldBat",
-        model: "Bat",
-        scale: 1.2 / 2 ** 3,
-        rotateToNorth: Math.PI,
-        midHeight: 0.0,
-        fly: 0.5,
-        deathType: "SmokeExplosion",
-        inventory: null,
-        attack: 2,
-        defense: 1,
-        magic: 0,
-        health: 2,
-        xp: 3,
-        gold: 0,
-        attackSound: "BatAttack",
-        hurtSound: "BatAttack",
-        behaviourArguments: [Infinity, ["wanderer"], -1],
-        moveSpeed: 1.0,
-        material: MATERIAL.redShine,
-    },
+
+
     MissGalaxyGreen: {
         name: "MissGalaxyGreen",
         texture: "MissGalaxyGreen",
