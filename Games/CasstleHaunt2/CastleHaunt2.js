@@ -15,6 +15,9 @@ known bugs:
     * i don't do bugs
 retests:
     * 
+log:
+    * Hauntessa Spookish, the great haunteress from the Hauntosphere
+    * you have been invaded, castle is occupied, ...
 
 
  */
@@ -61,7 +64,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.00",
+    VERSION: "0.07.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -472,11 +475,11 @@ const GAME = {
         GAME.completed = false;
         GAME.lives = 3;
         GAME.lives = 1;
-        GAME.level = 1;                 //start
-        //GAME.level = 2;                 //staircases, gold
-        //GAME.level = 3;                 //lair
-        //GAME.level = 4;                 //spawn test
-        //GAME.level = 5;                 //killcount test
+        //GAME.level = 1;                 //start
+        GAME.level = 2;
+        //GAME.level = 3;              
+        //GAME.level = 4;              
+        //GAME.level = 5;              
         GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
@@ -544,7 +547,7 @@ const GAME = {
         GAME.drawFirstFrame(GAME.level);
         LAIR.start();
         GAME.resume();
-        HERO.speak("Tralala hopsasa!");
+        HERO.speak("I feel something is wrong in my castle. Shall we investigate? My heels are on. Let's go.");
     },
     setCamera() {
         HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);

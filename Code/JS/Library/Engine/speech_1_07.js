@@ -1,6 +1,6 @@
 //////////////////speech.js/////////////////////////
 //                                                //
-//       SPEECH version 1.04  by LS               //
+//       SPEECH               by LS               //
 //                                                //
 ////////////////////////////////////////////////////
 /*  
@@ -11,7 +11,7 @@ TODO:
 ////////////////////////////////////////////////////
 
 const SPEECH = {
-  VERSION: "1.06",
+  VERSION: "1.07",
   CSS: "color: #0A0",
   VERBOSE: true,
   browserSupport: true,
@@ -207,6 +207,10 @@ const VOICE = {
   'GhostFace': {
     voice: 1,
     setting: new VoiceSetting(2.0, 0.0, 1.0)
+  },
+  'Apparitia': {
+    voice: 1,
+    setting: new VoiceSetting(1.75, 1.65, 1.0)
   },
 };
 console.log(`%cSPEECH ${SPEECH.VERSION} loaded.`, SPEECH.CSS);

@@ -2343,7 +2343,10 @@ class Shrine extends WallFeature3D {
             };
         }
 
-        if (this.deductGold(this.price || 1)) {
+        let value = this.price;
+        if (value === undefined) value = 1;
+
+        if (this.deductGold(value)) {
             this.storageLog();
             this.deactivate();
 
@@ -2377,7 +2380,10 @@ class Oracle extends WallFeature3D {
         this.block();
         setTimeout(this.reset.bind(this), WebGL.INI.INTERACTION_TIMEOUT);
 
-        if (this.deductGold(this.price || 1)) {
+        let value = this.price;
+        if (value === undefined) value = 1;
+
+        if (this.deductGold(value)) {
             this.speak(this.text);
             return {
                 category: this.interactionCategory,

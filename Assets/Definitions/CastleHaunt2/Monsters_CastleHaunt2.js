@@ -40,6 +40,15 @@ const ORACLE_TYPE = {
         interactionCategory: "oracle",
         price: 0,
     },
+    ApparitiaResistance: {
+        name: "ApparitiaResistance",
+        sprite: "ApparitiaResistance",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We have claimed your castle in the name of her haungtingness, Hauntessa Spookish, the great haunteress from the Hauntosphere.",
+        interactionCategory: "oracle",
+        //price: 1,
+    },
 };
 
 const GOLD_ITEM_TYPE = {

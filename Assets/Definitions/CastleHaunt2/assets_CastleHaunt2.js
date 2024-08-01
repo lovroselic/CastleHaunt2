@@ -13,9 +13,12 @@ LoadFonts = [
 
 LoadTextures = [
     /**wall, floor, ceil */
-    {srcName: "Wall/GoldishWall1.jpg", name:"GoldishWall1"},
-    {srcName: "Wall/GoldMarbleFloor.jpg", name:"GoldMarbleFloor"},
-    {srcName: "Wall/WebbedFloor9.jpg", name:"WebbedFloor9"},
+    { srcName: "Wall/GoldishWall1.jpg", name: "GoldishWall1" },
+    { srcName: "Wall/GoldMarbleFloor.jpg", name: "GoldMarbleFloor" },
+    { srcName: "Wall/WebbedFloor9.jpg", name: "WebbedFloor9" },
+    { srcName: "Wall/SpiderWeb22.jpg", name: "SpiderWeb22" },
+    { srcName: "Wall/DarkMarble1.jpg", name: "DarkMarble1" },
+    { srcName: "Wall/Wood5.jpg", name: "Wood5" },
 
     { srcName: "Wall/Forest.jpg", name: "Forest" },
 
@@ -141,9 +144,9 @@ LoadShaders = [
 ];
 
 LoadObjects = [
-    "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj","pentagram.obj",
+    "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj", "pentagram.obj",
     /** not yet used */
-    "key.obj", "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj",  "chest.obj",
+    "key.obj", "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
     "treasure_chest.obj", "sting.obj", "pear.obj", "blockwall.obj", "wardrobe.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj"
 ];
@@ -155,7 +158,8 @@ LoadModels = [
 LoadSprites = [
     // frescoes - entities
     { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
-    
+    { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
+
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
     { srcName: "Lairs/Lair02.jpg", name: "Lair02" },
