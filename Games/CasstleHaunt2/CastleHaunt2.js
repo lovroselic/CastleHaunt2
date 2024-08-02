@@ -48,6 +48,9 @@ const DEBUG = {
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
+    checkPoint(){
+
+    }
 };
 
 const INI = {
@@ -64,7 +67,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.01",
+    VERSION: "0.07.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -473,10 +476,10 @@ const GAME = {
         AI.immobileWander = true;
 
         GAME.completed = false;
-        GAME.lives = 3;
+        //GAME.lives = 3;
         GAME.lives = 1;
-        //GAME.level = 1;                 //start
-        GAME.level = 2;
+        GAME.level = 1;                 //start
+        //GAME.level = 2;
         //GAME.level = 3;              
         //GAME.level = 4;              
         //GAME.level = 5;              
@@ -492,6 +495,8 @@ const GAME = {
         GAME.time = new Timer("Main");
 
         /** DEBUG */
+
+        DEBUG.checkPoint();
 
         /* let invItem = "Apple";
         for (let i = 0; i < 19; i++) {

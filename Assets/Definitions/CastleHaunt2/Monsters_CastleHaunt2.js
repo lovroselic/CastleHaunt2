@@ -49,6 +49,22 @@ const ORACLE_TYPE = {
         interactionCategory: "oracle",
         //price: 1,
     },
+    ApparitiaWelcome: {
+        name: "ApparitiaWelcome",
+        sprite: "ApparitiaWelcome",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Welcome to your doom, Princess. We will haunt you down and revenge the death of GhostFace, the mother of Hauntessa Spookish.",
+        interactionCategory: "oracle",
+    },
+    Pinka: {
+        name: "Pinka",
+        sprite: "Pinka",
+        category: 'crest',
+        voice: "Female",
+        text: "Psst, Princess. You are our only hope. Don't get caught. Go quickly to the armory and equip yourself.",
+        interactionCategory: "oracle",
+    }
 };
 
 const GOLD_ITEM_TYPE = {

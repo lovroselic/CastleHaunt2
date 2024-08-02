@@ -36,21 +36,39 @@ const MAP = {
         oracles: '[[5,7,"PrincessBed"]]',
     }
     ,
-    2 : {
+    2: {
         name: "The Throne Room",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"21","map":"BB4AA6BAA33ÁÁ2AA3BAA5ÁABB2ABB2AA12BB3AA2BAA3BB2AA3ÁAA10BAA4ÁAA4ÁAÁBAA2BB2AA3BAA2BAA7BAA10BB3AA8BAA53BABAA12BB6ÁBB5ABABB15AA2BB6ABB4ABB6ABB5AA2BB4AA3BB2ÁABABB6AA4BABB3ABB3ABB3ABB2ABB2ABB20ABB16A$ÁBB2AÁÁ4BÁAÁÁ5BÁÁ9BÁBÁÁ4AA4ÁÁ5BÁÁ9BÁÁ4AÁÁ6AÁÁ11AÁÁ2B"}',
+        data: '{"width":"21","height":"21","map":"BB4AA2BAA37ÁÁ2AA3BAA5ÁABB2ABB2AA12BB3AA2BAA3BB2AA3ÁAA10BAA4ÁAA4ÁABAA2BB2AA3BAA2BAA7BAA9BB3AA2ÁAA38ÁAA6BAA8BAA5BAA14BB6ÁBB5ABABB15ABB2ABB4ABB4ABB3ABB2ABB5AA2BB4AA3BB2ÁAA2BB2ABB3AA4BABB5ABB3ABB3ABB20ABB16A$ÁÁ2BB5AÁÁ4BÁAÁÁ5BB2ÁAÁÁ8BÁBÁÁ4AA4ÁÁ5BÁÁ9BÁÁ4AÁÁ6AÁÁ11AÁÁ2B"}',
         wall: "SpiderWeb22",
         floor: "DarkMarble1",
         ceil: "Wood5",
         start: '[31,7]',
+        decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"]]',
         lights: '[[114,7,"Lamp42","standardDimmed"],[116,7,"Lamp42","standardDimmed"],[176,3,"Lamp41","standardDimmed"],[180,5,"Lamp41","standardDimmed"],[238,7,"Lamp46","standardDimmed"],[244,7,"Lamp46","standardDimmed"],[2,7,"Lamp52","fire"],[18,7,"Lamp52","fire"],[422,1,"Lamp52","fire"],[438,1,"Lamp52","fire"]]',
-        gates: '[[10,7,"2.1","1.1","Open"]]',
+        gates: '[[10,7,"2.1","1.1","Open"],[147,5,"2.2","3.1","Red"]]',
+        keys: '[[60,2]]',
         monsters: '[[130,"Bat"],[142,"Bat"],[339,"RedGoldBat"],[353,"RedGoldBat"]]',
-        oracles: '[[146,3,"ApparitiaResistance"]]',
-        }
+        containers: '[[22,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[40,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[192,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[185,"Chest","GOLD_ITEM_TYPE.SilverBar",null]]',
+        oracles: '[[146,3,"ApparitiaResistance"],[14,7,"ApparitiaWelcome"],[84,5,"Pinka"]]',
+        interactors: '[[409,1,"TheThrone"]]',
+    }
+    ,
+    3: {
+        name: "Escape Corridor",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"9","map":"BB2ABABB3AA39BABB18ABB2ABB4ABABB15ABABB20A$"}',
+        wall: "DarkMossy124",
+        floor: "MossFloor103",
+        ceil: "WebbedFloor5",
+        start: '[63,3]',
+        gates: '[[64,3,"3.1","2.2","Open"]]',
+    }
 
 };

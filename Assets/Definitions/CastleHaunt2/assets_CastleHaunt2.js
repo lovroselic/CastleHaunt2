@@ -19,6 +19,9 @@ LoadTextures = [
     { srcName: "Wall/SpiderWeb22.jpg", name: "SpiderWeb22" },
     { srcName: "Wall/DarkMarble1.jpg", name: "DarkMarble1" },
     { srcName: "Wall/Wood5.jpg", name: "Wood5" },
+    { srcName: "Wall/DarkMossy124.jpg", name: "DarkMossy124" },
+    { srcName: "Wall/MossFloor103.jpg", name: "MossFloor103" },
+    { srcName: "Wall/WebbedFloor5.jpg", name: "WebbedFloor5" },
 
     { srcName: "Wall/Forest.jpg", name: "Forest" },
 
@@ -159,6 +162,13 @@ LoadSprites = [
     // frescoes - entities
     { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
+    { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
+    { srcName: "EntityPictures/Apparitia3.jpg", name: "Apparitia3" },
+    { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" },
+    { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
+    { srcName: "EntityPictures/PrincessOnThrone.jpg", name: "PrincessOnThrone" },
+    { srcName: "EntityPictures/TheThrone.jpg", name: "TheThrone" },
+
 
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
@@ -347,7 +357,19 @@ LoadSprites = [
     { srcName: "Keys/SilverKey.png", name: "SilverKey" },
 
     //ObjDecals - all
+    { srcName: "ObjDecals/CrownDecal.png", name: "CrownDecal" },
     { srcName: "ObjDecals/DeathPlace.png", name: "DeathPlace" },
+
+    { srcName: "ObjDecals/KnightStatue101.png", name: "KnightStatue101" },
+    { srcName: "ObjDecals/KnightStatue102.png", name: "KnightStatue102" },
+    { srcName: "ObjDecals/KnightStatue103.png", name: "KnightStatue103" },
+    { srcName: "ObjDecals/KnightStatue104.png", name: "KnightStatue104" },
+    { srcName: "ObjDecals/KnightStatue105.png", name: "KnightStatue105" },
+    { srcName: "ObjDecals/KnightStatue106.png", name: "KnightStatue106" },
+    { srcName: "ObjDecals/KnightStatue107.png", name: "KnightStatue107" },
+    { srcName: "ObjDecals/KnightStatue108.png", name: "KnightStatue108" },
+    { srcName: "ObjDecals/KnightStatue109.png", name: "KnightStatue109" },
+    { srcName: "ObjDecals/KnightStatue110.png", name: "KnightStatue110" },
 
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/Crack20.png", name: "Crack20" },

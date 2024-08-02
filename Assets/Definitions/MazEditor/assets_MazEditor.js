@@ -775,6 +775,20 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
 
     //ObjDecals
+    { srcName: "ObjDecals/CrownDecal.png", name: "CrownDecal" },
+    { srcName: "ObjDecals/DeathPlace.png", name: "DeathPlace" },
+
+    { srcName: "ObjDecals/KnightStatue101.png", name: "KnightStatue101" },
+    { srcName: "ObjDecals/KnightStatue102.png", name: "KnightStatue102" },
+    { srcName: "ObjDecals/KnightStatue103.png", name: "KnightStatue103" },
+    { srcName: "ObjDecals/KnightStatue104.png", name: "KnightStatue104" },
+    { srcName: "ObjDecals/KnightStatue105.png", name: "KnightStatue105" },
+    { srcName: "ObjDecals/KnightStatue106.png", name: "KnightStatue106" },
+    { srcName: "ObjDecals/KnightStatue107.png", name: "KnightStatue107" },
+    { srcName: "ObjDecals/KnightStatue108.png", name: "KnightStatue108" },
+    { srcName: "ObjDecals/KnightStatue109.png", name: "KnightStatue109" },
+    { srcName: "ObjDecals/KnightStatue110.png", name: "KnightStatue110" },
+
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/AttackShrine256.png", name: "AttackShrine256" },
     { srcName: "ObjDecals/Crack20.png", name: "Crack20" },

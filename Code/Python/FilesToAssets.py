@@ -18,9 +18,11 @@ from glob import glob
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Sprites/Lairs'
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/RotatedSheetSequences'
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Textures/Wall'
-Directory = 'C:/Users/lovro/Downloads/#textures2'
+# Directory = 'C:/Users/lovro/Downloads/#textures2'
+Directory = 'C:/Users/lovro/Downloads/KnightStatues'
 # Prefix = 'Items/'
-Prefix = 'Wall/'
+# Prefix = 'Wall/'
+Prefix = "ObjDecals/"
 # Prefix = 'Lairs/'
 # Prefix = ''
 files = []
