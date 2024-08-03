@@ -16,6 +16,7 @@ const MAP_TOOLS = {
         FOG: true,
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
+        LEGACY_WIDTH: 256,
     },
     manageMAP(level) {
         /** check of lair cooldown */
@@ -132,7 +133,7 @@ const SPAWN_TOOLS = {
             let decal = SPRITE[picture];
             let expand = false;
             if (type === "texture") decal = TEXTURE[picture];
-            if (decal.width > 256) type = "texture";                                // all decals with width above legacy 256 will be expanded
+            if (decal.width > MAP_TOOLS.INI.LEGACY_WIDTH) type = "texture";                                // all decals with width above legacy 256 will be expanded
             DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }
     },
@@ -143,7 +144,13 @@ const SPAWN_TOOLS = {
             const picture = L[2];
             const type = L[3];
             const sprite = SPRITE[picture];
-            LIGHTS3D.add(new LightDecal(grid, face, sprite, "light", picture, LIGHT_COLORS[type]));
+            let expand = false;
+            let category = "light";
+            if (sprite.width > MAP_TOOLS.INI.LEGACY_WIDTH) {
+                expand = true;
+                category = "crest";
+            };                                // all decals with width above legacy 256 will be expanded
+            LIGHTS3D.add(new LightDecal(grid, face, sprite, category, picture, LIGHT_COLORS[type], expand));
         }
     },
     externalGates(map, GA) {

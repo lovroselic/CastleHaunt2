@@ -905,7 +905,7 @@ const WORLD = {
         return Math.max(resolution, WebGL.INI.MIN_RESOLUTION);
     },
     addPic(Y, decal, type) {
-        const expandables = ["crest", "portal", "lair"];
+        const expandables = ["crest", "portal", "lair", "light"];
         let resolution = WebGL.INI.DEFAULT_RESOLUTION;
         if (decal.resolution) {
             resolution = decal.resolution;
@@ -1622,11 +1622,12 @@ class StaticDecal extends Decal {
 }
 
 class LightDecal extends Decal {
-    constructor(grid, face, texture, category, name, lightColor) {
+    constructor(grid, face, texture, category, name, lightColor, expand) {
         super(grid, face, texture, category, name);
         this.lightColor = lightColor;
         this.type = "LightDecal";
         this.interactive = false;
+        this.expand = expand;
         this.setPosition(grid, face);
     }
     setPosition(grid, face) {

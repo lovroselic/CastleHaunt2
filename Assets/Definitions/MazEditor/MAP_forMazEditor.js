@@ -67,13 +67,18 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "PrayingSkeleton10", "SittingSkeleton2", "Skeleton21", "Skull10", "Skull11", "WOWc1", "WOWc2", "Reaper", "AticAtacCrest1", "DungeonWall", "DungeonDoor_Blocked2", "DungeonDoor_Blocked3", "DungeonDoor_Blocked4",
     "Skeleton20", "Skeleton121", "Skeleton23", "Skull20", "Skull21", "CrownDecal",
     "KnightStatue101", "KnightStatue102", "KnightStatue103", "KnightStatue104", "KnightStatue105", "KnightStatue106", "KnightStatue107", "KnightStatue108", "KnightStatue109", "KnightStatue110",
-    "ShieldDecal01", "ShieldDecal02", "ShieldDecal03", "ShieldDecal04", "ShieldDecal05", "ShieldDecal06", "ShieldDecal07", "ShieldDecal08"];
+    "ShieldDecal01", "ShieldDecal02", "ShieldDecal03", "ShieldDecal04", "ShieldDecal05", "ShieldDecal06", "ShieldDecal07", "ShieldDecal08",
+    "BearRug02", "BearRug03", "BearRug04", "LeopardRug02", "LeopardRug03", "LeopardRug04", "LeopardRug05", "LeopardRug06", "PersianRug02", "PersianRug03", "PersianRug04", "PersianRug05", "PersianRug06",
+    "TigerRug02", "TigerRug03", "TigerRug04",];
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"];
 const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4", "WallLamp10", "WallLamp11", "WallLamp12", "WallLamp13", "WallLamp14", "WallLamp15",
     "WallLamp16", "WallLamp17", "WallLamp18", "WallLamp19", "WallLamp20", "WallLamp9",
     "WallLamp31", "WallLamp32", "WallLamp33", "WallLamp34", "WallLamp35",
     "Lamp40", "Lamp41", "Lamp42", "Lamp43", "Lamp44", "Lamp45", "Lamp46", "Lamp47", "Lamp48", "Lamp49", "Lamp50", "Lamp51", "Lamp52", "Lamp53",
+    "Fireplace01", "Fireplace02", "Fireplace03", "Fireplace04", "Fireplace05", "Fireplace06", "Fireplace07", "Fireplace08", "Fireplace09", "Fireplace10", "Fireplace11", "Fireplace12", "Fireplace13",
+    "Fireplace14", "Fireplace15",
+    "Lights102", "Lights103", "Lights104", "Lights105", "Lights106", "Lights107", "Lights108", "Lights109", "Lights110", "Lights111", "Lights112", "Lights113", "Lights114", "Lights115",
 ];
 const TRIGGER_DECALS = ["RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 

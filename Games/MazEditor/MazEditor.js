@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.12.03",
+  VERSION: "0.12.04",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -922,34 +922,32 @@ const GAME = {
     $("#ceiltexture").change(GAME.repaintTextures);
     $("#texture_decal").change(GAME.repaintTextures);
 
+    /** pictures */
     for (const pic of DECAL_PAINTINGS) {
       $("#picture_decal").append(`<option value="${pic}">${pic}</option>`);
     }
-    //ENGINE.drawToId("picturecanvas", 0, 0, SPRITE[$("#picture_decal")[0].value]);
-
     $("#picture_decal").change(function () {
       ENGINE.drawToId("picturecanvas", 0, 0, SPRITE[$("#picture_decal")[0].value]);
     });
-
     $("#picture_decal").trigger("change");
 
+    /** crests */
     for (const crest of [...DECAL_CRESTS, ...BOTTOM_CRESTS, ...TOP_CRESTS].sort()) {
       $("#crest_decal").append(`<option value="${crest}">${crest}</option>`);
     }
-
     $("#crest_decal").change(function () {
       ENGINE.drawToId("crestcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#crest_decal")[0].value], INI.CANVAS_RESOLUTION));
     });
-
     $("#crest_decal").trigger("change");
+
+    /** lights */
     for (const light of LIGHT_DECALS) {
       $("#light_decal").append(`<option value="${light}">${light}</option>`);
     }
-    ENGINE.drawToId("lightcanvas", 0, 0, SPRITE[$("#light_decal")[0].value]);
-
     $("#light_decal").change(function () {
-      ENGINE.drawToId("lightcanvas", 0, 0, SPRITE[$("#light_decal")[0].value]);
+      ENGINE.drawToId("lightcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#light_decal")[0].value], INI.CANVAS_RESOLUTION));
     });
+    $("#light_decal").trigger("change");
 
     for (const light in LIGHT_COLORS) {
       $("#lighttype").append(`<option value="${light}">${light}</option>`);
