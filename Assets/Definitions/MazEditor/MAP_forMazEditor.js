@@ -66,7 +66,8 @@ const DECAL_PAINTINGS = [
 const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "Crack3", "Skeleton11", "Skeleton12", "Crack20", "Crack21", "DancingSkeletons2",
     "PrayingSkeleton10", "SittingSkeleton2", "Skeleton21", "Skull10", "Skull11", "WOWc1", "WOWc2", "Reaper", "AticAtacCrest1", "DungeonWall", "DungeonDoor_Blocked2", "DungeonDoor_Blocked3", "DungeonDoor_Blocked4",
     "Skeleton20", "Skeleton121", "Skeleton23", "Skull20", "Skull21", "CrownDecal",
-    "KnightStatue101", "KnightStatue102", "KnightStatue103", "KnightStatue104", "KnightStatue105", "KnightStatue106", "KnightStatue107", "KnightStatue108", "KnightStatue109", "KnightStatue110"];
+    "KnightStatue101", "KnightStatue102", "KnightStatue103", "KnightStatue104", "KnightStatue105", "KnightStatue106", "KnightStatue107", "KnightStatue108", "KnightStatue109", "KnightStatue110",
+    "ShieldDecal01", "ShieldDecal02", "ShieldDecal03", "ShieldDecal04", "ShieldDecal05", "ShieldDecal06", "ShieldDecal07", "ShieldDecal08"];
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"];
 const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4", "WallLamp10", "WallLamp11", "WallLamp12", "WallLamp13", "WallLamp14", "WallLamp15",

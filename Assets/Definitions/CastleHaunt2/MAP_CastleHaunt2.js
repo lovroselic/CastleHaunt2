@@ -27,7 +27,7 @@ const MAP = {
         floor: "GoldMarbleFloor",
         ceil: "WebbedFloor9",
         start: '[49,1]',
-        decals: '[[25,7,"SirFred4","picture"],[29,7,"DungeonMaster201","picture"],[91,1,"AticAtac110","picture"],[95,1,"Ishar71","picture"],[33,5,"BrianBloodaxe70","picture"],[77,5,"ManicMiner11","picture"],[54,3,"BC11","picture"],[87,3,"RobinToTheRescue1","picture"]]',
+        decals: '[[25,7,"SirFred4","picture"],[29,7,"DungeonMaster201","picture"],[91,1,"AticAtac110","picture"],[95,1,"Ishar71","picture"],[33,5,"BrianBloodaxe70","picture"],[77,5,"ManicMiner11","picture"],[54,3,"BC11","picture"],[87,3,"RobinToTheRescue1","picture"],[103,1,"CrownDecal","crest"],[105,1,"CrownDecal","crest"]]',
         lights: '[[71,1,"Lamp53","standardDimmed"],[71,7,"WallLamp16","standard"],[55,5,"Lamp41","standardDimmed"],[65,3,"WallLamp12","dim"]]',
         gates: '[[115,1,"1.1","2.1","Closed"]]',
         monsters: '[[82,"Bat"]]',

@@ -371,6 +371,15 @@ LoadSprites = [
     { srcName: "ObjDecals/KnightStatue109.png", name: "KnightStatue109" },
     { srcName: "ObjDecals/KnightStatue110.png", name: "KnightStatue110" },
 
+    { srcName: "ObjDecals/ShieldDecal01.png", name: "ShieldDecal01" },
+    { srcName: "ObjDecals/ShieldDecal02.png", name: "ShieldDecal02" },
+    { srcName: "ObjDecals/ShieldDecal03.png", name: "ShieldDecal03" },
+    { srcName: "ObjDecals/ShieldDecal04.png", name: "ShieldDecal04" },
+    { srcName: "ObjDecals/ShieldDecal05.png", name: "ShieldDecal05" },
+    { srcName: "ObjDecals/ShieldDecal06.png", name: "ShieldDecal06" },
+    { srcName: "ObjDecals/ShieldDecal07.png", name: "ShieldDecal07" },
+    { srcName: "ObjDecals/ShieldDecal08.png", name: "ShieldDecal08" },
+
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/Crack20.png", name: "Crack20" },
     { srcName: "ObjDecals/Crack21.png", name: "Crack21" },

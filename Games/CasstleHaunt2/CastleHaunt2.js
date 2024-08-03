@@ -67,7 +67,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.02",
+    VERSION: "0.07.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -289,7 +289,7 @@ const HERO = {
         console.warn("hero shooting", HERO.orbs);
         const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
-        console.log("missile", missile);
+        //console.log("missile", missile);
         MISSILE3D.add(missile);
         this.orbsLost++;
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
