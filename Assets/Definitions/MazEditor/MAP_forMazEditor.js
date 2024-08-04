@@ -69,7 +69,9 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "KnightStatue101", "KnightStatue102", "KnightStatue103", "KnightStatue104", "KnightStatue105", "KnightStatue106", "KnightStatue107", "KnightStatue108", "KnightStatue109", "KnightStatue110",
     "ShieldDecal01", "ShieldDecal02", "ShieldDecal03", "ShieldDecal04", "ShieldDecal05", "ShieldDecal06", "ShieldDecal07", "ShieldDecal08",
     "BearRug02", "BearRug03", "BearRug04", "LeopardRug02", "LeopardRug03", "LeopardRug04", "LeopardRug05", "LeopardRug06", "PersianRug02", "PersianRug03", "PersianRug04", "PersianRug05", "PersianRug06",
-    "TigerRug02", "TigerRug03", "TigerRug04",];
+    "TigerRug02", "TigerRug03", "TigerRug04",
+    "BookShelf02", "BookShelf03", "BookShelf04", "BookShelf05", "BookShelf06", "BookShelf07", "BookShelf08", "BookShelf09", "BookShelf10", "BookShelf11", "BookShelf12", "BookShelf13", "BookShelf14", "BookShelf15", "BookShelf16",
+    "BookShelf17", "BookShelf18", "BookShelf19", "BookShelf20", "BookShelf21", "BookShelf22", "BookShelf23", "BookShelf24", "BookShelf25", "BookShelf26", "BookShelf27"];
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"];
 const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4", "WallLamp10", "WallLamp11", "WallLamp12", "WallLamp13", "WallLamp14", "WallLamp15",
