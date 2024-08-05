@@ -30,8 +30,8 @@ const DEBUG = {
     _2D_display: true,
     INVINCIBLE: false,
     FREE_MAGIC: false,
-    LOAD: false,
-    STUDY: false,
+    //LOAD: false,
+    //STUDY: false,
     keys: true,
     displayInv() {
         HERO.inventory.scroll.display();
@@ -48,7 +48,45 @@ const DEBUG = {
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
-    checkPoint(){
+    checkPoint() {
+        console.info("DEBUG::Loading from checkpoint");
+        GAME.level = 2;
+        GAME.gold = 201;
+        GAME.lives = 1;
+
+        HERO.hasCapacity = false;
+        HERO.capacity = 0;
+        HERO.maxCapacity = 0;
+
+        HERO.orbs = 0;
+        HERO.orbsLost = 0;
+        HERO.magic = 5;
+        HERO.attack = 5;
+
+        HERO.maxHealth = 32;
+        HERO.health = 32;
+
+
+        let scrolls = [];
+        for (let scr of scrolls) {
+            let scroll = new Scroll(scr);
+            HERO.inventory.scroll.add(scroll);
+        }
+        TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
+        TITLE.scrolls();
+
+        let invItems = ["Apple"];
+        for (let itm of invItems) {
+            const item = new NamedInventoryItem(itm, itm);
+            HERO.inventory.item.push(item);
+        }
+
+        let keys = [];
+        for (let key of keys) {
+            const K = new Key(key, `${key}Key`);
+            HERO.inventory.key.push(K);
+        }
+        TITLE.keys();
 
     }
 };
@@ -67,7 +105,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.07",
+    VERSION: "0.07.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -215,7 +253,6 @@ const HERO = {
         this.maxHealth = INI.MAX_HERO_HEALTH;
         this.orbs = 0;
         this.orbsLost = 0;
-        //this.bounceCount = INI.BOUNCE_COUNT;
         this.magic = 5;
         this.attack = 5;
         this.defense = 0;   //defense is 0 for all
