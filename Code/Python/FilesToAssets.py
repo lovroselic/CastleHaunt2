@@ -20,11 +20,13 @@ from glob import glob
 # Directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics/Textures/Wall'
 # Directory = 'C:/Users/lovro/Downloads/#textures2'
 # Directory = 'C:/Users/lovro/Downloads/Shield'
-Directory = 'C:/Users/lovro/Downloads/bookShelves'
+Directory = 'C:/Users/lovro/Downloads/Pics2'
 # Prefix = 'Items/'
 # Prefix = 'Wall/'
 # Prefix = "Lights/"
-Prefix = "ObjDecals/"
+Prefix = "PicDecals/"
+# Prefix = "ObjDecals/"
+
 # Prefix = 'Lairs/'
 
 # Prefix = ''

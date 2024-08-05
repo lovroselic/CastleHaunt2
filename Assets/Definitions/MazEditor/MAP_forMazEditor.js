@@ -59,7 +59,13 @@ const DECAL_PAINTINGS = [
     "Witcher102", "Witcher103", "Witcher110", "Witcher111", "Witcher112", "Witcher113", "Witcher130", "Witcher47", "WizardOfWor89", "Wolf10", "Wolfenstein31", "Wolfenstein50", "Wolfenstein70", "Yennefer", "Yennefer21",
     "Yeppelin70", "ZX Spectrum", "ZX81-89", "Zak50", "Zak51", "ZakMcKraken89", "Zaxxon3", "Zaxxon70", "Zaxxon89", "Zeppelin4", "Zeppelin50", "Zeppelin88", "Zeppelin89", "ZimSalaBim2", "ZimSalaBim200", "ZimSalaBim201",
     "BetrayedAlliance", "Commando100", "Elite100", "F4", "GhostFace1", "GhostFace2", "GhostFace3", "GhostFace4", "Movie", "SpyHunter200", "LeisureSuitLarry300",
-    "BookShelf16", "BookShelf17", "BookShelf18", "BookShelf19", "BookShelf20", "BookShelf21", "BookShelf22", "BookShelf23", "BookShelf24", "BookShelf25", "BookShelf26", "BookShelf27",
+    "BookShelf16", "BookShelf17", "BookShelf18", "BookShelf19", "BookShelf20", "BookShelf21", "BookShelf22", "BookShelf23", "BookShelf24", "BookShelf25", "BookShelf26",
+    "BookShelf27",
+    "AI_Pic_102", "AI_Pic_103", "AI_Pic_104", "AI_Pic_105", "AI_Pic_106", "AI_Pic_107", "AI_Pic_108", "AI_Pic_109", "AI_Pic_110", "AI_Pic_111", "AI_Pic_112",
+    "AI_Pic_113", "AI_Pic_114", "AI_Pic_115", "AI_Pic_116", "AI_Pic_117", "AI_Pic_118", "AI_Pic_119", "AI_Pic_120", "AI_Pic_121", "AI_Pic_122", "AI_Pic_123",
+    "AI_Pic_124", "AI_Pic_125", "AI_Pic_126", "AI_Pic_127", "AI_Pic_128", "AI_Pic_129", "AI_Pic_130", "AI_Pic_131", "AI_Pic_132", "AI_Pic_133", "AI_Pic_134",
+    "AI_Pic_135", "AI_Pic_136", "AI_Pic_137", "AI_Pic_138", "AI_Pic_139", "AI_Pic_140", "AI_Pic_141", "AI_Pic_142", "AI_Pic_143", "AI_Pic_144", "AI_Pic_145",
+    "AI_Pic_146", "AI_Pic_147", "AI_Pic_148", "AI_Pic_149"
 ].sort();
 
 /** Crests */
