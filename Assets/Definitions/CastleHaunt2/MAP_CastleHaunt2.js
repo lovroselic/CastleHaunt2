@@ -17,7 +17,7 @@ const MAP_TEXT = {
 
 /** Map definitions */
 const MAP = {
-    1 : {
+    1: {
         name: "Bedroom",
         sg: 0,
         maxSpawned: -1,
@@ -35,7 +35,7 @@ const MAP = {
         containers: '[[12,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[20,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         objects: '[[101,"Apple"]]',
         oracles: '[[5,7,"PrincessBed"]]',
-        }
+    }
     ,
     2: {
         name: "The Throne Room",
@@ -48,7 +48,7 @@ const MAP = {
         floor: "DarkMarble1",
         ceil: "Wood5",
         start: '[31,7]',
-        decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"]]',
+        decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"],[90,4,"PuddleDecal03","crest"],[89,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal09","crest"],[76,4,"Grate1_128","crest"],[77,4,"Grate1_128","crest"],[75,4,"Grate1_128","crest"],[149,4,"PuddleDecal08","crest"],[129,4,"PuddleDecal10","crest"]]',
         lights: '[[114,7,"Lamp42","standardDimmed"],[116,7,"Lamp42","standardDimmed"],[176,3,"Lamp41","standardDimmed"],[180,5,"Lamp41","standardDimmed"],[238,7,"Lamp46","standardDimmed"],[244,7,"Lamp46","standardDimmed"],[2,7,"Lamp52","fire"],[18,7,"Lamp52","fire"],[422,1,"Lamp52","fire"],[438,1,"Lamp52","fire"]]',
         gates: '[[10,7,"2.1","1.1","Open"],[147,5,"2.2","3.1","Red"]]',
         keys: '[[60,2]]',
@@ -64,12 +64,30 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"13","height":"9","map":"BB2ABABB3AA39BABB18ABB2ABB4ABABB15ABABB20A$"}',
+        data: '{"width":"13","height":"9","map":"BB5AA8BAA10BAA17BAA4BABB7ABB11ABB3ABABB3ABABB15AA2BB15ABB3$"}',
         wall: "DarkMossy124",
         floor: "MossFloor103",
         ceil: "WebbedFloor5",
         start: '[63,3]',
-        gates: '[[64,3,"3.1","2.2","Open"]]',
+        decals: '[[55,4,"PuddleDecal03","crest"],[57,4,"PuddleDecal08","crest"],[18,7,"ShieldDecal01","crest"],[20,7,"ShieldDecal02","crest"],[59,5,"AI_Pic_145","picture"],[59,3,"TheHobbit70","picture"],[59,1,"AI_Pic_129","picture"],[59,7,"AticAtac201","picture"],[76,3,"KnightStatue109","crest"],[50,3,"KnightStatue103","crest"],[32,4,"Drain2_96","crest"],[16,7,"LeisureSuitLarry61","picture"],[95,1,"LadyTut102","picture"],[66,5,"WallSkelly101","crest"],[40,5,"Skeleton20","crest"]]',
+        lights: '[[22,7,"Lamp41","standard"],[94,1,"Lights106","standardRedish"],[113,1,"Fireplace09","fire"]]',
+        gates: '[[64,3,"3.1","2.2","Open"],[6,7,"3.2","4.1","Closed"],[52,5,"3.3","5.1","Green"]]',
+        containers: '[[36,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7]]',
+        oracles: '[[110,1,"Azura"]]',
     }
+    ,
+    4 : {
+        name: "Armory",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB12AA110BB42AA10BB15ABB24ABB10$"}',
+        wall: "RedAndGreyBricks1",
+        floor: "WebbedFloor1",
+        ceil: "DarkMossy7",
+        start: '[202,1]',
+        gates: '[[217,1,"4.1","3.2","Open"]]',
+        }
 
 };

@@ -62,7 +62,15 @@ const ORACLE_TYPE = {
         sprite: "Pinka",
         category: 'crest',
         voice: "Female",
-        text: "Psst, Princess. You are our only hope. Don't get caught. Go quickly to the armory and equip yourself.",
+        text: "Hey, Princess. You are our only hope. Don't get caught. Go quickly to the armory and equip yourself.",
+        interactionCategory: "oracle",
+    },
+    Azura: {
+        name: "Azura",
+        sprite: "Azura",
+        category: 'crest',
+        voice: "Female2",
+        text: "Princess, teriblle thing happened. Hauntessa Spookish invaded your castle and stole your crown. You better find some allies and take it back. Or else.",
         interactionCategory: "oracle",
     }
 };

@@ -1134,7 +1134,7 @@ const GAME = {
   randomLight() {
     const pic = LIGHT_DECALS.chooseRandom();
     $("#light_decal").val(pic).change();
-    ENGINE.drawToId("lightcanvas", 0, 0, SPRITE[$("#light_decal")[0].value]);
+    ENGINE.drawToId("lightcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#light_decal")[0].value], INI.CANVAS_RESOLUTION));
   },
   randomPic() {
     const pic = DECAL_PAINTINGS.chooseRandom();

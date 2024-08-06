@@ -859,6 +859,26 @@ LoadSprites = [
     { srcName: "ObjDecals/BookShelf14.png", name: "BookShelf14" },
     { srcName: "ObjDecals/BookShelf15.png", name: "BookShelf15" },
 
+    { srcName: "ObjDecals/PuddleDecal01.png", name: "PuddleDecal01" },
+    { srcName: "ObjDecals/PuddleDecal02.png", name: "PuddleDecal02" },
+    { srcName: "ObjDecals/PuddleDecal03.png", name: "PuddleDecal03" },
+    { srcName: "ObjDecals/PuddleDecal04.png", name: "PuddleDecal04" },
+    { srcName: "ObjDecals/PuddleDecal05.png", name: "PuddleDecal05" },
+    { srcName: "ObjDecals/PuddleDecal06.png", name: "PuddleDecal06" },
+    { srcName: "ObjDecals/PuddleDecal07.png", name: "PuddleDecal07" },
+    { srcName: "ObjDecals/PuddleDecal08.png", name: "PuddleDecal08" },
+    { srcName: "ObjDecals/PuddleDecal09.png", name: "PuddleDecal09" },
+    { srcName: "ObjDecals/PuddleDecal10.png", name: "PuddleDecal10" },
+    { srcName: "ObjDecals/PuddleDecal11.png", name: "PuddleDecal11" },
+    { srcName: "ObjDecals/PuddleDecal12.png", name: "PuddleDecal12" },
+    { srcName: "ObjDecals/PuddleDecal13.png", name: "PuddleDecal13" },
+    { srcName: "ObjDecals/PuddleDecal14.png", name: "PuddleDecal14" },
+
+    { srcName: "ObjDecals/WallSkelly101.png", name: "WallSkelly101" },
+    { srcName: "ObjDecals/WallSkelly102.png", name: "WallSkelly102" },
+    { srcName: "ObjDecals/WallSkelly103.png", name: "WallSkelly103" },
+    { srcName: "ObjDecals/WallSkelly104.png", name: "WallSkelly104" },
+
 
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/AttackShrine256.png", name: "AttackShrine256" },

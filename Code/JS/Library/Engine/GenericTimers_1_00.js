@@ -17,7 +17,7 @@ const GenericTimers = {
         INFO_TIMER_ID: "info",
         INFO_TIMER: 3,
         SUB_TIMER_ID: "subtitle",
-        SUB_TIMER: 5,
+        SUB_TIMER: 10,
     },
 
     clearInfo() {
