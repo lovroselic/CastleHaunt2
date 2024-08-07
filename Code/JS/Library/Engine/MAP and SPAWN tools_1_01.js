@@ -130,9 +130,11 @@ const SPAWN_TOOLS = {
             const face = DirectionToFace(Vector.fromInt(D[1]));
             const picture = D[2];
             let type = D[3];
-            let decal = SPRITE[picture];
+            let decal;
             let expand = false;
-            if (type === "texture") decal = TEXTURE[picture];
+            if (type === "texture") {
+                decal = TEXTURE[picture];
+            } else decal = SPRITE[picture];
             if (decal.width > MAP_TOOLS.INI.LEGACY_WIDTH) type = "texture";                                // all decals with width above legacy 256 will be expanded
             DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }

@@ -875,6 +875,15 @@ const WORLD = {
                 rightX = 1.0 - leftX;
                 topY = 1.0 - WebGL.INI.PIC_TOP;
                 bottomY = 1.0 - ((WebGL.INI.PIC_WIDTH / R) + WebGL.INI.PIC_TOP);
+                
+                let relHeight = topY - bottomY;
+                if (relHeight > 2 * WebGL.INI.PIC_TOP) {
+                    let adjustment = (1.0 - relHeight) / 2;
+                    topY = 1.0 - adjustment;
+                    bottomY = adjustment;
+                }
+
+                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeight) / 2 < 0)) console.error("Picture too high", bottomY, "H", H);
                 break;
             case "light":
                 leftX = ((1 - WebGL.INI.LIGHT_WIDTH) / 2.0);
@@ -917,7 +926,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        //console.info("addpic", decal, resolution);
+        //console.info("addpic", decal, decal.category, decal.name, resolution);
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();

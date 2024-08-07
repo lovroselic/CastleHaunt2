@@ -65,7 +65,12 @@ const DECAL_PAINTINGS = [
     "AI_Pic_113", "AI_Pic_114", "AI_Pic_115", "AI_Pic_116", "AI_Pic_117", "AI_Pic_118", "AI_Pic_119", "AI_Pic_120", "AI_Pic_121", "AI_Pic_122", "AI_Pic_123",
     "AI_Pic_124", "AI_Pic_125", "AI_Pic_126", "AI_Pic_127", "AI_Pic_128", "AI_Pic_129", "AI_Pic_130", "AI_Pic_131", "AI_Pic_132", "AI_Pic_133", "AI_Pic_134",
     "AI_Pic_135", "AI_Pic_136", "AI_Pic_137", "AI_Pic_138", "AI_Pic_139", "AI_Pic_140", "AI_Pic_141", "AI_Pic_142", "AI_Pic_143", "AI_Pic_144", "AI_Pic_145",
-    "AI_Pic_146", "AI_Pic_147", "AI_Pic_148", "AI_Pic_149"
+    "AI_Pic_146", "AI_Pic_147", "AI_Pic_148", "AI_Pic_149", "AI_pic201", "AI_pic202", "AI_pic203", "AI_pic204", "AI_pic205", "AI_pic206", "AI_pic207", "AI_pic208",
+    "AI_pic209", "AI_pic210", "AI_pic211", "AI_pic212", "AI_pic213", "AI_pic214", "AI_pic215", "AI_pic216", "AI_pic217", "AI_pic218", "AI_pic219", "AI_pic220", "AI_pic221",
+    "AI_pic222", "AI_pic223", "AI_pic224", "AI_pic225", "AI_pic226", "AI_pic227", "AI_pic228", "AI_pic229", "AI_pic230", "AI_pic231", "AI_pic232", "AI_pic233", "AI_pic234",
+    "AI_pic235", "AI_pic236", "AI_pic237", "AI_pic238", "AI_pic239", "AI_pic240", "AI_pic241", "AI_pic242", "AI_pic243", "AI_pic244", "AI_pic245", "AI_pic246", "AI_pic247",
+    "AI_pic248", "AI_pic249", "AI_pic250", "AI_pic251", "AI_pic252", "AI_pic253", "AI_pic254", "AI_pic255", "AI_pic256", "AI_pic257", "AI_pic258", "AI_pic259", "AI_pic260",
+    "AI_pic261", "AI_pic262", "AI_pic263"
 ].sort();
 
 /** Crests */

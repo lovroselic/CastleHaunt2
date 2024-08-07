@@ -12,7 +12,8 @@ console.log("%cMAP for CCC loaded.", "color: #888");
 const MAP_TEXT = {
     1: "This is my bedroom.",
     2: "What happened in my throne room?",
-    3: "I need to prepare myself before I continue."
+    3: "I need to prepare myself before I continue.",
+    4: "I should find some weapons. I don't want to ruin my heels."
 };
 
 /** Map definitions */
@@ -82,12 +83,21 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB12AA110BB42AA10BB15ABB24ABB10$"}',
+        data: '{"width":"15","height":"15","map":"BB2AA2BAA10BABAA2BB11AA2BABABB4AA7BAA4BAEABAA2BB2AA23BAA21BAA4BAA8BB4ABB5ABAA3BB2ABAA3BB2AA2EABB6ABAA2EBAA2BB3AA2BB3ABB2AA2BB3ABABB3EBB2ABB19AB$ABB2ABB6AA2BB3"}',
         wall: "RedAndGreyBricks1",
         floor: "WebbedFloor1",
         ceil: "DarkMossy7",
         start: '[202,1]',
+        decals: '[[64,7,"AI_pic258","picture"],[85,7,"AI_pic250","picture"],[137,7,"Tutankham104","picture"],[24,7,"LastNinja111","picture"],[4,7,"HalfLife11","picture"],[147,7,"AI_pic245","picture"],[13,7,"Galaga70","picture"],[22,4,"PersianRug04","crest"],[36,4,"PersianRug04","crest"],[37,4,"PersianRug04","crest"],[38,4,"PersianRug04","crest"],[31,4,"Grass16","texture"],[62,1,"AmberStar201","picture"],[223,1,"AI_pic246","picture"],[87,1,"KingsQuest52","picture"],[138,1,"AA100","picture"],[112,5,"ArticShipwreck7","picture"],[82,5,"Prince4","picture"],[106,5,"Tombraider141","picture"],[165,5,"JungleHunt89","picture"],[140,5,"AI_Pic_143","picture"],[174,5,"DragonSkulle110","picture"],[201,1,"ShieldDecal02","crest"],[203,1,"ShieldDecal06","crest"],[157,4,"PuddleDecal02","crest"],[159,3,"FalconPatrol72","picture"],[179,3,"ManicMiner63","picture"],[170,3,"Pitfall27","picture"],[35,3,"WizardOfWor89","picture"],[118,3,"DonkeyKong200","picture"],[55,3,"BookShelf18","picture"],[112,3,"AI_pic259","picture"],[82,3,"TheHobbit88","picture"]]',
+        lights: '[[112,7,"Lights114","standard"],[212,1,"Lights113","standard"],[222,1,"Lamp50","dimRed"],[82,1,"Lamp42","standardDimmed"],[104,3,"Fireplace04","fire"],[90,5,"Fireplace12","fire"],[2,7,"Lights104","standardDimmed"],[11,7,"WallLamp14","standardDimmed"]]',
         gates: '[[217,1,"4.1","3.2","Open"]]',
+        monsters: '[[95,"Bat"],[100,"Bat"],[33,"RedGoldBat"],[191,"RedGoldBat"],[208,"Spider"]]',
+        gold: '[[49,"GoldCube"],[97,"GoldCube"],[109,"GoldCube"],[116,"GoldCube"],[57,"GoldCube"],[168,"GoldCube"],[143,"GoldCube"],[178,"GoldCube"]]',
+        containers: '[[206,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[71,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",1],[132,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",1],[122,"Barrel","GOLD_ITEM_TYPE.GoldCube",1],[199,"Barrel","GOLD_ITEM_TYPE.GoldCube",1],[17,"Crate","GOLD_ITEM_TYPE.GoldCube",7]]',
+        doors: '[139,145,63,40]',
+        entities: '[[30,5,"ApplePicker"]]',
+        objects: '[[182,"Orb"],[42,"Bag"],[177,"Apple"]]',
+        oracles: '[[7,7,"DarkEva"]]',
         }
 
 };

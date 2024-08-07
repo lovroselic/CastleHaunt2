@@ -72,6 +72,14 @@ const ORACLE_TYPE = {
         voice: "Female2",
         text: "Princess, teriblle thing happened. Hauntessa Spookish invaded your castle and stole your crown. You better find some allies and take it back. Or else.",
         interactionCategory: "oracle",
+    },
+    DarkEva: {
+        name: "DarkEva",
+        sprite: "DarkEva",
+        category: 'crest',
+        voice: "Female2",
+        text: "The more you upgrade your bag, more ghost repelling orbs you can carry. And don't lose the orbs! Your survival depends on it.",
+        interactionCategory: "oracle",
     }
 };
 
@@ -310,6 +318,26 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.redShine,
     },
+    Spider: {
+        name: "Spider",
+        model: "Spider",
+        scale: 1.4 / 2 ** 6,
+        rotateToNorth: Math.PI,
+        midHeight: 0.35,
+        deathType: "BloodExplosion",
+        inventory: null,
+        mana: 0,
+        health: 10,
+        attack: 4,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [5, ["wanderer"], 3, ["follower"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.standard,
+    },
 
 
     /** */
@@ -394,26 +422,7 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.greenShine,
     },
-    Spider: {
-        name: "Spider",
-        model: "Spider",
-        scale: 1.4 / 2 ** 6,
-        rotateToNorth: Math.PI,
-        midHeight: 0.35,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 7,
-        defense: 3,
-        magic: 0,
-        health: 8,
-        xp: 10,
-        gold: 15,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt",
-        behaviourArguments: [5, ["wanderer"], 3, ["follower"]],
-        moveSpeed: 1.0,
-        material: MATERIAL.standard,
-    },
+
     MissGreen: {
         name: "MissGreen",
         texture: "GhostFaceGreen",
@@ -1589,6 +1598,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "PurpleKey",
         color: "Purple"
     },
+    GreenKey: {
+        name: "GreenKey",
+        category: "key",
+        inventorySprite: "GreenKey",
+        color: "Green"
+    },
     Quill: {
         name: "Quill",
         category: "interaction_item",
@@ -1938,6 +1953,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    ApplePicker: {
+        name: "ApplePicker",
+        sprite: "ApplePicker",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Apple", "Apple"],
+        gives: "GreenKey",
+        text: {
+            intro: "I was counting my apples, but I am two short. Help, or you will go nowhere.",
+            progress: "I want one more.",
+            conclusion: "My count is now complete. Good luck in your fights."
+        }
+    },
 
 };
 const INTERACTION_SHRINE = {

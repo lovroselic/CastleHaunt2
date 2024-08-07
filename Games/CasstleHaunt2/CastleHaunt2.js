@@ -50,15 +50,15 @@ const DEBUG = {
     },
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint");
-        GAME.level = 4;
-        GAME.gold = 448;
+        GAME.level = 3;
+        GAME.gold = 827;
         GAME.lives = 1;
 
-        HERO.hasCapacity = false;
-        HERO.capacity = 0;
-        HERO.maxCapacity = 0;
+        HERO.hasCapacity = true;
+        HERO.capacity = 1;
+        HERO.maxCapacity = 5;
 
-        HERO.orbs = 0;
+        HERO.orbs = 1;
         HERO.orbsLost = 0;
         HERO.magic = 5;
         HERO.attack = 5;
@@ -105,7 +105,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.09",
+    VERSION: "0.07.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -323,12 +323,11 @@ const HERO = {
         HERO.orbs--;
         TITLE.orbs();
         HERO.canShoot = false;
-        console.warn("hero shooting", HERO.orbs);
         const position = HERO.player.pos.translate(HERO.player.dir, HERO.player.r);
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
-        //console.log("missile", missile);
         MISSILE3D.add(missile);
         this.orbsLost++;
+        console.warn("shooting", this.orbsLost);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
     },
@@ -363,7 +362,10 @@ const HERO = {
         this.orbs++;
         TITLE.orbs();
         AUDIO.CatchFireball.play();
-        if (this.orbsLost > 0 && dropped) this.orbsLost--;
+        if (this.orbsLost > 0 && dropped) {
+            this.orbsLost--;
+            console.log("getting orb", this.orbsLost);
+        }
     },
     catchOrb(missile) {
         const text = [
@@ -391,7 +393,7 @@ const HERO = {
             "I am getting armed to the teeth.",
             "Another orb.",
             "I have a fiery weapon now. Beware of the Princess.",
-            "Orb secured. Watch out, enemies!",
+            "Orb secured. Watch out enemies!",
             "Feeling orbtastic.",
             "Princess powers up!",
             "Another orb for my collection.",
@@ -805,11 +807,11 @@ const GAME = {
         if (ENGINE.GAME.stopAnimation) return;
         const date = Date.now();
         HERO.player.animateAction();
-        //VANISHING3D.manage(lapsedTime);
+        VANISHING3D.manage(lapsedTime);
         MISSILE3D.manage(lapsedTime);
         EXPLOSION3D.manage(date);
         ENTITY3D.manage(lapsedTime, date, [HERO.invisible, HERO.dead]);
-        //DYNAMIC_ITEM3D.manage(lapsedTime, date);
+        DYNAMIC_ITEM3D.manage(lapsedTime, date);
         GAME.respond(lapsedTime);
         ENGINE.TIMERS.update();
 
@@ -817,11 +819,9 @@ const GAME = {
         if (interaction) GAME.processInteraction(interaction);
 
         MAP.manage(GAME.level);
-
         GAME.frameDraw(lapsedTime);
         HERO.concludeAction();
         if (HERO.dead) IAM.checkIfProcessesComplete([EXPLOSION3D], HERO.death);
-        //if (HERO.dead) GAME.checkIfProcessesComplete();
         //if (GAME.completed) GAME.won();
     },
     frameDraw(lapsedTime) {
