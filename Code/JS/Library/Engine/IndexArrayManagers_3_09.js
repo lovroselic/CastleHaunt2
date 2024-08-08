@@ -421,7 +421,7 @@ class Spawner extends Floor_Object {
         if (this.assertionFunc()) {
             const nest = this.selectNest();
             if (nest) this.spawnFunc(nest);
-            
+
         }
         this.cooldown();
     }
@@ -446,6 +446,9 @@ class Spawner extends Floor_Object {
             }
         }
         return selected;
+    }
+    stop() {
+        this.timer.unregister();
     }
 }
 

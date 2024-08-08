@@ -80,7 +80,47 @@ const ORACLE_TYPE = {
         voice: "Female2",
         text: "The more you upgrade your bag, more ghost repelling orbs you can carry. And don't lose the orbs! Your survival depends on it.",
         interactionCategory: "oracle",
-    }
+    },
+    WhiteRubberella: {
+        name: "WhiteRubberella",
+        sprite: "WhiteRubberella",
+        category: 'crest',
+        voice: "Female2",
+        text: "Did you realized that it is a good practice to catch your own orbs? And not lose them? A secret of staying alive.",
+        interactionCategory: "oracle",
+    },
+    BlueHairResting: {
+        name: "BlueHairResting",
+        sprite: "BlueHairResting",
+        category: 'crest',
+        voice: "Female",
+        text: "Ready?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaDie: {
+        name: "ApparitiaDie",
+        sprite: "ApparitiaDie",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Now you die, bitch!",
+        interactionCategory: "oracle",
+    },
+    RedRubberella: {
+        name: "RedRubberella",
+        sprite: "RedRubberella",
+        category: 'crest',
+        voice: "Female2",
+        text: "You can shoot down princess repelling green orbs with your ghost repelling fire orbs. Got it?",
+        interactionCategory: "oracle",
+    },
+    CuteBlackRuberrella: {
+        name: "CuteBlackRuberrella",
+        sprite: "CuteBlackRuberrella",
+        category: 'crest',
+        voice: "Female2",
+        text: "All orbs bounce. More power longer bouncing. Longer bouncing less damage. ",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -338,9 +378,6 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.standard,
     },
-
-
-    /** */
     MissGalaxy: {
         name: "MissGalaxy",
         model: "MissGalaxy",
@@ -348,14 +385,14 @@ const MONSTER_TYPE = {
         rotateToNorth: Math.PI,
         midHeight: 0.5,
         deathType: "BloodExplosion",
-
-        mana: 3,
+        //
+        mana: 5,
         health: 10,
-        attack: 5,
+        attack: 8,
         magic: 1,
         defense: 0,
         directMagicDamage: true,
-
+        //
         caster: true,
         shootDistance: 5,
         stalkDistance: 7,
@@ -367,6 +404,10 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+
+
+    /** */
+
 
     Goblin: {
         name: "Goblin",

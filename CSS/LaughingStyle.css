@@ -291,6 +291,10 @@ li {
 
 }
 
+ul.smallList li {
+    font-size: 0.7rem !important;
+}
+
 /*  navigation specifics */
 
 .nav_back {

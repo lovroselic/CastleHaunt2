@@ -77,7 +77,7 @@ const MAP = {
         oracles: '[[110,1,"Azura"]]',
     }
     ,
-    4 : {
+    4: {
         name: "Armory",
         sg: 0,
         maxSpawned: -1,
@@ -98,6 +98,26 @@ const MAP = {
         entities: '[[30,5,"ApplePicker"]]',
         objects: '[[182,"Orb"],[42,"Bag"],[177,"Apple"]]',
         oracles: '[[7,7,"DarkEva"]]',
+    }
+    ,
+    5 : {
+        name: "Babtism Of Fire",
+        sg: 0,
+        maxSpawned: 3,
+        killCountdown: 5,
+        spawnDelay: 4000,
+        data: '{"width":"16","height":"16","map":"BB3ABABAA5BAA10BAA2BB4AA6BB2AA53BAA2BB2AA6BB3AA21BAA3BAA4BAA2BABABABB6ABB4AA2BAA2BB19ABB6ABB4AEBB2ABB4ABB4ABB2AA3BAA4BB3ABABB2ABABB25A$ABB2"}',
+        wall: "DarkMossy232",
+        floor: "DarkMarble51",
+        ceil: "ComplexDarkCeiling1",
+        start: '[46,3]',
+        lights: '[[13,7,"Lamp47","standard"],[84,5,"WallLamp10","standard"],[170,3,"Lamp40","standard"],[106,1,"Lights113","standardDimmed"],[148,7,"Lamp48","standardDimmed"]]',
+        gates: '[[47,3,"5.1","3.3","Open"],[7,7,"5.2","6.1","Blue"],[128,5,"5.3","7.1","Silver"],[252,1,"5.4","8.1","Red"]]',
+        keys: '[[206,4]]',
+        doors: '[61]',
+        objects: '[[135,"Orb"]]',
+        oracles: '[[64,5,"WhiteRubberella"],[43,5,"BlueHairResting"],[192,5,"ApparitiaDie"],[247,1,"RedRubberella"],[207,3,"CuteBlackRuberrella"]]',
+        lairs: '[[3,7,"Lair07"],[143,3,"Lair02"],[244,1,"Lair03"]]',
+        monsterList: '["MissGalaxy"]',
         }
-
 };

@@ -717,7 +717,7 @@ LoadSprites = [
     { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
-    { srcName: "EntityPictures/Apparitia3.jpg", name: "Apparitia3" },
+    { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
     { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" },
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -725,6 +725,14 @@ LoadSprites = [
     { srcName: "EntityPictures/TheThrone.jpg", name: "TheThrone" },
     { srcName: "EntityPictures/DarkEva.jpg", name: "DarkEva" },
     { srcName: "EntityPictures/ApplePicker.jpg", name: "ApplePicker" },
+    { srcName: "EntityPictures/WhiteRubberella.jpg", name: "WhiteRubberella" },
+    { srcName: "EntityPictures/BlueHairResting.jpg", name: "BlueHairResting" },
+    { srcName: "EntityPictures/RedRubberella.jpg", name: "RedRubberella" },
+    { srcName: "EntityPictures/CuteBlackRuberrella.jpg", name: "CuteBlackRuberrella" },
+
+
+
+    { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
 
 
     //lairs

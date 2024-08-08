@@ -30,8 +30,6 @@ const DEBUG = {
     _2D_display: true,
     INVINCIBLE: false,
     FREE_MAGIC: false,
-    //LOAD: false,
-    //STUDY: false,
     keys: true,
     displayInv() {
         HERO.inventory.scroll.display();
@@ -50,7 +48,7 @@ const DEBUG = {
     },
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint");
-        GAME.level = 3;
+        GAME.level = 5;
         GAME.gold = 827;
         GAME.lives = 1;
 
@@ -75,7 +73,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Apple"];
+        let invItems = [];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
@@ -105,7 +103,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.10",
+    VERSION: "0.07.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -175,8 +173,8 @@ const PRG = {
 
         /** dev settings */
         if (DEBUG.VERBOSE) {
-            WebGL.VERBOSE = true;
-            AI.VERBOSE = true;
+            //WebGL.VERBOSE = true;
+            //AI.VERBOSE = true;
             ENGINE.verbose = true;
         }
     },
@@ -327,7 +325,9 @@ const HERO = {
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         MISSILE3D.add(missile);
         this.orbsLost++;
-        console.warn("shooting", this.orbsLost);
+        console.debug("inc orbsLost", this.orbsLost);
+        this.orbsLost = Math.min(this.orbsLost, this.capacity);
+        console.debug("shooting, orbsLost", this.orbsLost);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
     },
@@ -356,15 +356,15 @@ const HERO = {
             return this.key.length + this.item.length;
         }
     },
-    getOrb(text, missile = null, dropped = false) {
+    getOrb(text, missile = null) {
         if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
         TITLE.orbs();
         AUDIO.CatchFireball.play();
-        if (this.orbsLost > 0 && dropped) {
+        if (this.orbsLost > 0) {
             this.orbsLost--;
-            console.log("getting orb", this.orbsLost);
+            console.debug("getting orb", this.orbsLost);
         }
     },
     catchOrb(missile) {
@@ -386,9 +386,10 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        return this.getOrb(text, missile, true);
+        //console.debug("catcing orb", true);
+        return this.getOrb(text, missile);
     },
-    pickOrb(dropped) {
+    pickOrb() {
         const text = [
             "I am getting armed to the teeth.",
             "Another orb.",
@@ -404,7 +405,8 @@ const HERO = {
             "Locked and orbloaded.",
             "Time to bring the heat with this orb.",
         ];
-        return this.getOrb(text, null, dropped);
+        //console.debug("picking orb", dropped);
+        return this.getOrb(text, null);
     },
     refusePickingOrb(missile) {
         SPEECH.silence();
@@ -524,7 +526,7 @@ const GAME = {
         //GAME.level = 5;              
         GAME.gold = 1;
 
-        const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D"];
+        const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D", "LAIR"];
         GAME.STORE = new Store(storeList);
 
         HERO.construct();
@@ -534,23 +536,7 @@ const GAME = {
         GAME.time = new Timer("Main");
 
         /** DEBUG */
-
         DEBUG.checkPoint();
-
-        /* let invItem = "Apple";
-        for (let i = 0; i < 19; i++) {
-            const item = new NamedInventoryItem(invItem, invItem);
-            HERO.inventory.item.push(item);
-        }
-        TITLE.keys(); */
-
-        //HERO.health = 1;
-
-        /*      HERO.hasCapacity = true;
-             HERO.capacity = 5;
-             HERO.maxCapacity = INI.ORB_MAX_CAPACITY;
-             HERO.orbs = 5; */
-
         /** END DEBUG */
 
         //SAVE GAME
@@ -1107,6 +1093,8 @@ const GAME = {
             MISSILE3D.remove(missile.id);
         }
 
+        //LAIR.stop();
+
         GAME.STORE.storeIAM(MAP[GAME.level].map);
         GAME.level = destination.level;
 
@@ -1172,7 +1160,6 @@ const GAME = {
         }
 
         MAP[GAME.level].sg = 0;
-        //if (!GAME.canBeSaved) return;
         if (GAME.saveRestriction()) {
             TITLE.saved(false);
             return;
@@ -1305,7 +1292,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
