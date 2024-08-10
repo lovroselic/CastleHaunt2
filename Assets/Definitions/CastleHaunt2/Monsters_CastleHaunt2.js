@@ -118,7 +118,15 @@ const ORACLE_TYPE = {
         sprite: "CuteBlackRuberrella",
         category: 'crest',
         voice: "Female2",
-        text: "All orbs bounce. More power longer bouncing. Longer bouncing less damage. ",
+        text: "All orbs bounce. More power longer bouncing. Longer bouncing less damage.",
+        interactionCategory: "oracle",
+    },
+    HealthAdvisor: {
+        name: "HealthAdvisor",
+        sprite: "HealthAdvisor",
+        category: 'crest',
+        voice: "Female2",
+        text: "If you don't want to get trasparent, you should eat some cake. That will make you more full, fool.",
         interactionCategory: "oracle",
     },
 };
@@ -1205,6 +1213,19 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Bag",
         text: "Cool. More storage. I can carry more repelling fireorbs now."
     },
+    Cake: {
+        name: "Cake",
+        category: "action_item",
+        which: "health",
+        element: "CAKE",
+        scale: 1 / 2 ** 2,
+        glueToFloor: true,
+        texture: "Cake_BaseColor",
+        material: MATERIAL.standard,
+        inventorySprite: "Cake",
+        text: "Cake? Very healthy."
+    },
+
     Apple: {
         name: "Apple",
         category: "interaction_item",

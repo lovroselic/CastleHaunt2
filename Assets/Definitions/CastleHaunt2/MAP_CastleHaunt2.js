@@ -100,7 +100,7 @@ const MAP = {
         oracles: '[[7,7,"DarkEva"]]',
     }
     ,
-    5 : {
+    5: {
         name: "Babtism Of Fire",
         sg: 0,
         maxSpawned: 3,
@@ -111,13 +111,33 @@ const MAP = {
         floor: "DarkMarble51",
         ceil: "ComplexDarkCeiling1",
         start: '[46,3]',
+        decals: '[[84,7,"WhoDaresWins88","picture"],[106,7,"TombRaider96","picture"],[170,7,"AmberStar200","picture"],[21,7,"ImpossibleMsission113","picture"],[42,7,"CastleOFTerror11","picture"],[60,7,"BeachHead100","picture"],[148,1,"AticAtac200","picture"],[213,1,"BookShelf20","picture"],[170,1,"BookShelf19","picture"],[84,1,"AI_pic235","picture"],[233,1,"LaraCroft1","picture"],[125,1,"AI_Pic_123","picture"],[33,5,"BookShelf27","picture"],[161,5,"CrawlMaster113","picture"],[97,5,"Commando100","picture"],[148,5,"BlueMax20","picture"],[106,5,"AI_Pic_132","picture"],[170,5,"AI_Pic_126","picture"],[157,3,"Barbarian130","picture"],[174,3,"JSW112","picture"],[28,5,"Skeleton21","crest"],[130,4,"PuddleDecal10","crest"],[115,4,"PuddleDecal10","crest"],[117,4,"PuddleDecal10","crest"],[103,4,"PuddleDecal08","crest"],[227,1,"DancingSkeletons2","crest"],[44,4,"LeopardRug02","crest"]]',
         lights: '[[13,7,"Lamp47","standard"],[84,5,"WallLamp10","standard"],[170,3,"Lamp40","standard"],[106,1,"Lights113","standardDimmed"],[148,7,"Lamp48","standardDimmed"]]',
         gates: '[[47,3,"5.1","3.3","Open"],[7,7,"5.2","6.1","Blue"],[128,5,"5.3","7.1","Silver"],[252,1,"5.4","8.1","Red"]]',
         keys: '[[206,4]]',
+        gold: '[[51,"GoldCube"],[167,"GoldCube"],[92,"GoldCube"],[141,"GoldCube"],[179,"GoldCube"],[86,"Coins"],[120,"Coins"],[201,"Coins"]]',
+        containers: '[[41,"Chest","GOLD_ITEM_TYPE.GoldCube",7],[186,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[214,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[194,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",1],[203,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[181,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[53,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[123,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[93,"Crate","GOLD_ITEM_TYPE.SilverBar",3]]',
         doors: '[61]',
         objects: '[[135,"Orb"]]',
         oracles: '[[64,5,"WhiteRubberella"],[43,5,"BlueHairResting"],[192,5,"ApparitiaDie"],[247,1,"RedRubberella"],[207,3,"CuteBlackRuberrella"]]',
         lairs: '[[3,7,"Lair07"],[143,3,"Lair02"],[244,1,"Lair03"]]',
         monsterList: '["MissGalaxy"]',
+    }
+    ,
+    6 : {
+        name: "First Aid",
+        sg: 0,
+        maxSpawned: 3,
+        killCountdown: 5,
+        spawnDelay: 4000,
+        data: '{"width":"11","height":"11","map":"BB7AA12BB2AA29BABB9ABB16ABB2ABB3AA2BAA2BB11ABABB16A$"}',
+        wall: "Wood1",
+        floor: "FloorPebbles1",
+        ceil: "DarkGreyRock",
+        start: '[104,1]',
+        lights: '[[60,1,"Lamp46","standardDimmed"],[60,7,"Lamp44","standardDimmed"],[60,3,"WallLamp19","standardDimmed"],[60,5,"Lights111","standardDimmed"]]',
+        gates: '[[115,1,"6.1","5.2","Open"],[65,3,"6.2","9.1","Closed"]]',
+        objects: '[[58,"Cake"]]',
+        oracles: '[[55,5,"HealthAdvisor"]]',
         }
 };

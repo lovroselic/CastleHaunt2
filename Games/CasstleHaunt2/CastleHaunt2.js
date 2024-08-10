@@ -48,7 +48,8 @@ const DEBUG = {
     },
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint");
-        GAME.level = 5;
+        //GAME.level = 5;
+        GAME.level = 6;
         GAME.gold = 827;
         GAME.lives = 1;
 
@@ -62,7 +63,8 @@ const DEBUG = {
         HERO.attack = 5;
 
         HERO.maxHealth = 32;
-        HERO.health = 32;
+        //HERO.health = 32;
+        HERO.health = 12;
 
 
         let scrolls = [];
@@ -100,10 +102,13 @@ const INI = {
     SPAWN_DELAY: 9999,
     MONSTER_ATTACK_TIMEOUT: 2000,
     MONSTER_SHOOT_TIMEOUT: 4000,
+    HEALTH: {
+        Cake: 40,
+    }
 };
 
 const PRG = {
-    VERSION: "0.07.11",
+    VERSION: "0.07.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -229,6 +234,9 @@ class ActionItem {
                 HERO.bagStart();
                 TITLE.sidebackground_static();
                 TITLE.orbs();
+                break;
+            case "health":
+                HERO.incHealth(this.spriteClass);
                 break;
             default:
                 console.error("ERROR ActionItem action", this);
@@ -486,12 +494,18 @@ const HERO = {
         this[which] += level;
         TITLE.skills();
     },
-    incExp() { }  //keep, TURN dependency
+    incExp() { },  //keep, TURN dependency
+    incHealth(sprite) {
+        let incValue = INI.HEALTH[sprite];
+        HERO.health += incValue;
+        HERO.health = Math.min(HERO.health, HERO.maxHealth);
+        TITLE.health();
+    }
 };
 
 const GAME = {
-    gold: 0,                                // WebGl relies on this as default gold source 
-    loadWayPoint: null,                     // save game pointer, keep
+    gold: 0,                                // WebGl relies on this as default gold source, keep! 
+    loadWayPoint: null,                     // save game pointer, keep!
     canBeSaved: true,
     start() {
         console.log("GAME started");

@@ -589,7 +589,6 @@ LoadTextures = [
     /** object textures */
     { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
     { srcName: "ObjectTextures/FireballTexture2.jpg", name: "FireballTexture" },
-
     { srcName: "ObjectTextures/Bag_baseColor.jpg", name: "Bag_BaseColor" },
     { srcName: "ObjectTextures/Apple_BaseColor.jpg", name: "Apple_BaseColor" },
     { srcName: "ObjectTextures/Gold.jpg", name: "Gold" },
@@ -598,6 +597,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/Red.jpg", name: "Red" },
     { srcName: "ObjectTextures/Red2.jpg", name: "Red2" },
     { srcName: "ObjectTextures/Sting.jpg", name: "Sting" },
+    { srcName: "ObjectTextures/cake_basecolor.jpg", name: "Cake_BaseColor" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -701,7 +701,7 @@ LoadShaders = [
 ];
 
 LoadObjects = [
-    "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj", "pentagram.obj",
+    "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj", "pentagram.obj", "cake.obj",
     /** not yet used */
     "key.obj", "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
     "treasure_chest.obj", "sting.obj", "pear.obj", "blockwall.obj", "wardrobe.obj",
@@ -729,6 +729,7 @@ LoadSprites = [
     { srcName: "EntityPictures/BlueHairResting.jpg", name: "BlueHairResting" },
     { srcName: "EntityPictures/RedRubberella.jpg", name: "RedRubberella" },
     { srcName: "EntityPictures/CuteBlackRuberrella.jpg", name: "CuteBlackRuberrella" },
+    { srcName: "EntityPictures/HealthAdvisor.jpg", name: "HealthAdvisor" },
 
 
 
@@ -765,7 +766,6 @@ LoadSprites = [
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },
-
     { srcName: "Items/GoldBar.png", name: "GoldBar" },
     { srcName: "Items/GoldCoin.png", name: "GoldCoin" },
     { srcName: "Items/GreenGem.png", name: "GreenGem" },
@@ -869,6 +869,7 @@ LoadSprites = [
     { srcName: "UI/SkillFireball96.png", name: "SkillFireball" },
     { srcName: "UI/SkillKick96.png", name: "SkillKick" },
     { srcName: "UI/Heart64.png", name: "Heart" },
+    { srcName: "UI/Cake48.png", name: "Cake" },
 
     { srcName: "UI/Floppy64.png", name: "SavedOK" },
     { srcName: "UI/Beware64.png", name: "SavedFail" },

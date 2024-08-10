@@ -890,6 +890,17 @@ const WORLD = {
                 rightX = 1.0 - leftX;
                 topY = 1.0 - WebGL.INI.LIGHT_TOP;
                 bottomY = 1.0 - ((WebGL.INI.LIGHT_WIDTH / R) + WebGL.INI.LIGHT_TOP);
+                let relHeightLight = topY - bottomY;
+                console.info(leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight, relHeightLight > 1);
+
+                if (relHeightLight > 2 * WebGL.INI.LIGHT_TOP) {
+                    let adjustment = (1.0 - relHeightLight) / 2;
+                    topY = 1.0 - adjustment;
+                    bottomY = adjustment;
+                    console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
+                }
+
+                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeight) / 2 < 0)) console.error("Picture too high", bottomY, "H", H);
                 break;
             case "crest":
             case "portal":
@@ -926,7 +937,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        //console.info("addpic", decal, decal.category, decal.name, resolution);
+        console.info("addpic", decal, decal.category, decal.name, resolution);
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();
