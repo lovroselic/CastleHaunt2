@@ -730,6 +730,8 @@ LoadSprites = [
     { srcName: "EntityPictures/RedRubberella.jpg", name: "RedRubberella" },
     { srcName: "EntityPictures/CuteBlackRuberrella.jpg", name: "CuteBlackRuberrella" },
     { srcName: "EntityPictures/HealthAdvisor.jpg", name: "HealthAdvisor" },
+    { srcName: "EntityPictures/WhereDoYouWantToStart.jpg", name: "WhereDoYouWantToStart" },
+    { srcName: "EntityPictures/WallSitter.jpg", name: "WallSitter" },
 
 
 

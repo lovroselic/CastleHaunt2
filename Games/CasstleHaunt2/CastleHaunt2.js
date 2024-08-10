@@ -63,8 +63,8 @@ const DEBUG = {
         HERO.attack = 5;
 
         HERO.maxHealth = 32;
-        //HERO.health = 32;
-        HERO.health = 12;
+        HERO.health = 32;
+        //HERO.health = 12;
 
 
         let scrolls = [];
@@ -108,7 +108,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.12",
+    VERSION: "0.07.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

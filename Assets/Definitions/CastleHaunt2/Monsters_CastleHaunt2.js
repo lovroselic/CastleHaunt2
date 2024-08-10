@@ -129,6 +129,22 @@ const ORACLE_TYPE = {
         text: "If you don't want to get trasparent, you should eat some cake. That will make you more full, fool.",
         interactionCategory: "oracle",
     },
+    WhereDoYouWantToStart: {
+        name: "WhereDoYouWantToStart",
+        sprite: "WhereDoYouWantToStart",
+        category: 'crest',
+        voice: "Female2",
+        text: "Don't stand in front of lair portal. Enemy monster can emerge any moment.",
+        interactionCategory: "oracle",
+    },
+    WallSitter: {
+        name: "WallSitter",
+        sprite: "WallSitter",
+        category: 'crest',
+        voice: "Female2",
+        text: "Sometime upgrading health later will save your life. Don't rush.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
