@@ -875,7 +875,7 @@ const WORLD = {
                 rightX = 1.0 - leftX;
                 topY = 1.0 - WebGL.INI.PIC_TOP;
                 bottomY = 1.0 - ((WebGL.INI.PIC_WIDTH / R) + WebGL.INI.PIC_TOP);
-                
+
                 let relHeight = topY - bottomY;
                 if (relHeight > 2 * WebGL.INI.PIC_TOP) {
                     let adjustment = (1.0 - relHeight) / 2;
@@ -893,14 +893,16 @@ const WORLD = {
                 let relHeightLight = topY - bottomY;
                 console.info(leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight, relHeightLight > 1);
 
-                if (relHeightLight > 2 * WebGL.INI.LIGHT_TOP) {
+                if (relHeightLight > 1) {
+
+                } else if (relHeightLight > 2 * WebGL.INI.LIGHT_TOP) {
                     let adjustment = (1.0 - relHeightLight) / 2;
                     topY = 1.0 - adjustment;
                     bottomY = adjustment;
                     console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
                 }
 
-                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeight) / 2 < 0)) console.error("Picture too high", bottomY, "H", H);
+                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeightLight) / 2 < 0)) console.error("Light too high", bottomY, "H", H);
                 break;
             case "crest":
             case "portal":

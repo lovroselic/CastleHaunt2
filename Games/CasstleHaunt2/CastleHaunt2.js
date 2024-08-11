@@ -108,7 +108,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.14",
+    VERSION: "0.07.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -178,7 +178,7 @@ const PRG = {
 
         /** dev settings */
         if (DEBUG.VERBOSE) {
-            //WebGL.VERBOSE = true;
+            WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
             ENGINE.verbose = true;
         }

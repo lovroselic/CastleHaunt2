@@ -126,7 +126,7 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    6: {
+    6 : {
         name: "First Aid",
         sg: 0,
         maxSpawned: -1,
@@ -137,7 +137,7 @@ const MAP = {
         floor: "FloorPebbles1",
         ceil: "DarkGreyRock",
         start: '[104,1]',
-        decals: '[[19,7,"ImpossibleMsission110","picture"],[102,1,"Underwurlde100","picture"],[22,5,"AI_pic242","picture"],[78,5,"Pitfall60","picture"],[87,3,"BookShelf07","crest"],[42,3,"Galaxians10","picture"]]',
+        decals: '[[19,7,"ImpossibleMsission110","picture"],[102,1,"Underwurlde100","picture"],[22,5,"AI_pic242","picture"],[78,5,"Pitfall60","picture"],[87,3,"BookShelf07","crest"],[42,3,"Galaxians10","picture"],[106,1,"Pitfall73","picture"]]',
         lights: '[[60,1,"Lamp46","standardDimmed"],[60,7,"Lamp44","standardDimmed"],[60,3,"WallLamp19","standardDimmed"],[60,5,"Lights111","standardDimmed"]]',
         gates: '[[115,1,"6.1","5.2","Open"],[65,3,"6.2","9.1","Closed"],[5,7,"6.3","10.1","Closed"]]',
         monsters: '[[24,"Spider"],[29,"Spider"]]',
@@ -145,5 +145,5 @@ const MAP = {
         containers: '[[34,"Chest","GOLD_ITEM_TYPE.GoldBar",5]]',
         objects: '[[58,"Cake"]]',
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
-    }
+        }
 };
