@@ -49,6 +49,7 @@ const WebGL = {
         ITEM_UP: 0.01,
         LIGHT_WIDTH: 0.4,
         LIGHT_TOP: 0.1,
+        LIGHT_SCALE_FACTOR: 0.5,
         DEFAULT_RESOLUTION: 256,
         MIN_RESOLUTION: 128,
         INTERACT_DISTANCE: 1.3,
@@ -891,18 +892,16 @@ const WORLD = {
                 topY = 1.0 - WebGL.INI.LIGHT_TOP;
                 bottomY = 1.0 - ((WebGL.INI.LIGHT_WIDTH / R) + WebGL.INI.LIGHT_TOP);
                 let relHeightLight = topY - bottomY;
-                console.info(leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight, relHeightLight > 1);
 
                 if (relHeightLight > 1) {
-
+                    resolution /= WebGL.INI.LIGHT_SCALE_FACTOR;
+                    return this.getBoundaries("texture", W, H, resolution);
                 } else if (relHeightLight > 2 * WebGL.INI.LIGHT_TOP) {
                     let adjustment = (1.0 - relHeightLight) / 2;
                     topY = 1.0 - adjustment;
                     bottomY = adjustment;
                     console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
                 }
-
-                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeightLight) / 2 < 0)) console.error("Light too high", bottomY, "H", H);
                 break;
             case "crest":
             case "portal":

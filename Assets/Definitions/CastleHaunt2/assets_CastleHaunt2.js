@@ -678,6 +678,8 @@ LoadAudio = [
     { srcName: "CatchFireball.mp3", name: "CatchFireball" },
     { srcName: "PrincessScream.mp3", name: "PrincessScream" },
 
+    { srcName: "Eating.mp3", name: "Eating" },
+
     //monstersounds
     { srcName: "MonsterDeath.mp3", name: "MonsterDeath" },
     { srcName: "MonsterAttack1.mp3", name: "MonsterAttack1" },

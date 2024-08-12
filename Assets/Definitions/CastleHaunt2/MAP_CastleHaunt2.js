@@ -14,8 +14,12 @@ const MAP_TEXT = {
     2: "What happened in my throne room?",
     3: "I need to prepare myself before I continue.",
     4: "I should find some weapons. I don't want to ruin my heels.",
-    5: "",
-    6: "",
+    5: "Damn! Monster are crawling from these lair portals. Maybe it's better not to fight them all.",
+    6: "I need to learn how to heal myself.",
+    7: "",
+    8: "",
+    9: "Prayer helps only to those who has enough gold. I hope that is me.",
+    10: "",
 };
 
 /** Map definitions */
@@ -126,24 +130,44 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    6 : {
+    6: {
         name: "First Aid",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"11","height":"11","map":"BB4AA2BB2ABAA12BABAA22BB2AA6BABB9ABB14AA2BB3ABAA3BB4AA2BB7ABB4ABB10A$"}',
+        data: '{"width":"11","height":"11","map":"BB4AA2BB2ABAA12BABAA22BB3AA7BB10ABB15AA3BB3ABAA3BB4AA3BB5ABB13A$"}',
         wall: "Wood1",
         floor: "FloorPebbles1",
         ceil: "DarkGreyRock",
         start: '[104,1]',
-        decals: '[[19,7,"ImpossibleMsission110","picture"],[102,1,"Underwurlde100","picture"],[22,5,"AI_pic242","picture"],[78,5,"Pitfall60","picture"],[87,3,"BookShelf07","crest"],[42,3,"Galaxians10","picture"],[106,1,"Pitfall73","picture"]]',
+        decals: '[[19,7,"ImpossibleMsission110","picture"],[102,1,"Underwurlde100","picture"],[22,5,"AI_pic242","picture"],[78,5,"Pitfall60","picture"],[87,3,"BookShelf07","crest"],[42,3,"Galaxians10","picture"],[106,1,"Pitfall73","picture"],[112,1,"WallSkelly101","crest"],[15,7,"TheHobbit89","picture"],[17,7,"AI_Pic_103","picture"]]',
         lights: '[[60,1,"Lamp46","standardDimmed"],[60,7,"Lamp44","standardDimmed"],[60,3,"WallLamp19","standardDimmed"],[60,5,"Lights111","standardDimmed"]]',
         gates: '[[115,1,"6.1","5.2","Open"],[65,3,"6.2","9.1","Closed"],[5,7,"6.3","10.1","Closed"]]',
         monsters: '[[24,"Spider"],[29,"Spider"]]',
         gold: '[[36,"SilverBar"],[40,"SilverBar"],[82,"SilverBar"]]',
-        containers: '[[34,"Chest","GOLD_ITEM_TYPE.GoldBar",5]]',
+        containers: '[[34,"Chest","GOLD_ITEM_TYPE.GoldBar",5],[25,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[29,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[101,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",1]]',
         objects: '[[58,"Cake"]]',
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
-        }
+    }
+    ,
+    7: {}
+    ,
+    8: {}
+    ,
+    9: {
+        name: "Prayer Is Expensive",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"11","map":"BB3AA9BAA7BB4AA2BABB6AA7BAA3BAA29BB4AA3BB5ABB4AA3BB11ABB14ABAA11BB3ABABB22ABB2$"}',
+        wall: "ColorfullWall1",
+        floor: "IrregularTiles1",
+        ceil: "Sand12",
+        start: '[76,5]',
+        gates: '[[75,5,"9.1","6.2","Closed"]]',
+    }
+    ,
+    10: {}
 };

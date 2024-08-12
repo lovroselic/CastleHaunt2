@@ -49,8 +49,8 @@ const DEBUG = {
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint");
         //GAME.level = 5;
-        GAME.level = 6;
-        GAME.gold = 827;
+        GAME.level = 9;
+        GAME.gold = 1342;
         GAME.lives = 1;
 
         HERO.hasCapacity = true;
@@ -67,10 +67,12 @@ const DEBUG = {
         //HERO.health = 12;
 
 
-        let scrolls = [];
-        for (let scr of scrolls) {
-            let scroll = new Scroll(scr);
-            HERO.inventory.scroll.add(scroll);
+        let actItems = [
+            INTERACTION_OBJECT.Cake,
+        ];
+        for (let obj of actItems) {
+            let item = new ActionItem(obj.which, obj.inventorySprite);
+            HERO.inventory.scroll.add(item);
         }
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
@@ -108,7 +110,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.15",
+    VERSION: "0.07.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -355,9 +357,6 @@ const HERO = {
             this.key = [];
             this.item = [];
             this.status = [];
-            //this.potion = {};
-            //this.potion.red = 0;
-            // this.potion.blue = 0;
             this.scroll = new Inventory();
         },
         totalSize() {
@@ -499,6 +498,7 @@ const HERO = {
         let incValue = INI.HEALTH[sprite];
         HERO.health += incValue;
         HERO.health = Math.min(HERO.health, HERO.maxHealth);
+        AUDIO.Eating.play();
         TITLE.health();
     }
 };
