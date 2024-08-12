@@ -28,7 +28,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: false,
+    INVINCIBLE: true,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -49,8 +49,8 @@ const DEBUG = {
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint");
         //GAME.level = 5;
-        GAME.level = 9;
-        GAME.gold = 1342;
+        GAME.level = 11;
+        GAME.gold = 1342;   //gold collected in 6,
         GAME.lives = 1;
 
         HERO.hasCapacity = true;
@@ -106,11 +106,13 @@ const INI = {
     MONSTER_SHOOT_TIMEOUT: 4000,
     HEALTH: {
         Cake: 40,
-    }
+    },
+    HEALTH_INC: 8,
+   
 };
 
 const PRG = {
-    VERSION: "0.07.16",
+    VERSION: "0.07.17",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -224,6 +226,7 @@ class Status {
 class ActionItem {
     constructor(type, spriteClass) {
         this.type = type;
+        this.id = this.type;
         this.spriteClass = spriteClass;
         this.sprite = SPRITE[this.spriteClass];
         this.class = "ActionItem";
@@ -500,7 +503,18 @@ const HERO = {
         HERO.health = Math.min(HERO.health, HERO.maxHealth);
         AUDIO.Eating.play();
         TITLE.health();
-    }
+    },
+    restore() {
+        this.health = this.maxHealth;
+        TITLE.health();
+    },
+    incStatus(type, level = 1) {
+        let Type = type.capitalize();
+        let max = `max${Type}`;
+        this[max] += INI[`${type.toUpperCase()}_INC`] * level;
+        this[type] = this[max];
+        TITLE.health();
+    },
 };
 
 const GAME = {
@@ -901,6 +915,7 @@ const GAME = {
                 AUDIO.Potion.play();
                 break;
             case 'action_item':
+                console.warn("action_item", interaction.which, interaction.inventorySprite);
                 let aItem = new ActionItem(interaction.which, interaction.inventorySprite);
                 HERO.inventory.scroll.add(aItem);
                 TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
@@ -927,7 +942,7 @@ const GAME = {
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();
                 HERO.restore();
-                TITLE.status();
+                TITLE.skills();
                 break;
             case 'scrollshop':
                 return this.processInteraction({
@@ -950,11 +965,10 @@ const GAME = {
                 TITLE.lives();
                 break;
             case 'status':
-                console.log("STATUS", interaction);
+                //console.log("STATUS", interaction);
                 HERO.incStatus(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.PowerUp.play();
-                TITLE.keys();
                 break;
             case 'chest':
                 AUDIO.OpenChest.play();
@@ -1306,7 +1320,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },

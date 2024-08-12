@@ -734,6 +734,7 @@ LoadSprites = [
     { srcName: "EntityPictures/HealthAdvisor.jpg", name: "HealthAdvisor" },
     { srcName: "EntityPictures/WhereDoYouWantToStart.jpg", name: "WhereDoYouWantToStart" },
     { srcName: "EntityPictures/WallSitter.jpg", name: "WallSitter" },
+    { srcName: "EntityPictures/Rodelle1.jpg", name: "Rodelle1" },
 
 
 
@@ -767,6 +768,8 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
     { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
 
+    //shrines
+    { srcName: "Shrines/KickShrine.jpg", name: "KickShrine" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },
@@ -874,9 +877,11 @@ LoadSprites = [
     { srcName: "UI/SkillKick96.png", name: "SkillKick" },
     { srcName: "UI/Heart64.png", name: "Heart" },
     { srcName: "UI/Cake48.png", name: "Cake" },
-
     { srcName: "UI/Floppy64.png", name: "SavedOK" },
     { srcName: "UI/Beware64.png", name: "SavedFail" },
+
+    //skills
+    { srcName: "Skills/Heart48.png", name: "HeartSkill" },
 
     //lights
     { srcName: "Lights/Lamp4.png", name: "Lamp4" },

@@ -900,7 +900,7 @@ const WORLD = {
                     let adjustment = (1.0 - relHeightLight) / 2;
                     topY = 1.0 - adjustment;
                     bottomY = adjustment;
-                    console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
+                    //console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
                 }
                 break;
             case "crest":
@@ -938,7 +938,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        console.info("addpic", decal, decal.category, decal.name, resolution);
+        //console.info("addpic", decal, decal.category, decal.name, resolution);
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();

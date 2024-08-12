@@ -27,7 +27,16 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"];
 
 const SHRINE_TYPE = {
-
+    KickShrine: {
+        name: "KickShrine",
+        sprite: "KickShrine",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 1000,
+        level: 1,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -145,6 +154,14 @@ const ORACLE_TYPE = {
         text: "Sometime upgrading health later will save your life. Don't rush.",
         interactionCategory: "oracle",
     },
+    Rodelle1: {
+        name: "Rodelle1",
+        sprite: "Rodelle1",
+        category: 'crest',
+        voice: "Female2",
+        text: "Shrines will heal you and raise your skills. For a price. Once. You will not find enough gold for all the shrines.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -244,6 +261,17 @@ const SKILL_ITEM_TYPE = {
         texture: "Sting",
         inventorySprite: "SkillKick",
         material: MATERIAL.silver,
+    },
+    Heart: {
+        name: "Heart",
+        category: "status",
+        which: "health",
+        element: "HEART",
+        scale: 1 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Red",
+        inventorySprite: "HeartSkill",
+        material: MATERIAL.redShine,
     },
 };
 
