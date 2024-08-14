@@ -19,7 +19,8 @@ const MAP_TEXT = {
     7: "",
     8: "",
     9: "Prayer helps only to those who has enough gold. I hope that is me.",
-    10: "",
+    10: "I wonder which skill would help me better now, at the beginning of my adventure?",
+    11: ""
 };
 
 /** Map definitions */
@@ -179,23 +180,50 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    10: {}
+    10: {
+        name: "Pray for the FirePower",
+        sg: 0,
+        maxSpawned: 2,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"13","height":"13","map":"BB3AA2BB2AA20BAA4BB3ABB2AA4BAA5BAA3BB3ABAA6BABB2AA6BAA2BB2AA2BB2ABB9AA4BB2AA2BAA3BB8AA3BABB3ABB3ABB3ABB2AA4BB4AA2BB2ABB5ABB17$BA"}',
+        wall: "DarkMossy9",
+        floor: "DarkMarble54",
+        ceil: "RedMarbleFloor1",
+        start: '[146,1]',
+        decals: '[[151,4,"TigerRug03","crest"],[137,4,"TigerRug03","crest"],[138,4,"TigerRug03","crest"],[139,4,"TigerRug03","crest"],[9,7,"BookShelf12","crest"],[30,7,"Jumpman70","picture"],[34,7,"KnightLore31","picture"],[95,7,"Barbarian112","picture"],[99,7,"AI_pic263","picture"],[14,7,"Tutanham11","picture"],[23,7,"HalfLife88","picture"],[83,7,"Underwurlde111","picture"],[87,7,"Skull10","crest"],[81,7,"Skull21","crest"],[85,7,"BC11","picture"],[131,1,"AI_Pic_107","picture"],[128,1,"AI_Pic_108","picture"],[148,1,"AI_pic239","picture"],[52,5,"TempleOfApshai89","picture"],[104,5,"Pirates200","picture"],[90,3,"Pitfall88","picture"],[68,3,"Witcher110","picture"],[74,5,"BookShelf16","picture"],[68,1,"Skull1","crest"],[70,1,"Skull1","crest"],[72,1,"Skull1","crest"],[74,1,"Skull1","crest"],[47,4,"PuddleDecal06","crest"],[106,4,"PuddleDecal05","crest"]]',
+        lights: '[[2,7,"Fireplace05","fire"],[136,1,"Lamp46","standard"],[63,3,"Lamp40","standard"]]',
+        gates: '[[159,1,"10.1","6.3","Closed"],[51,3,"10.2","11.2","Down"]]',
+        gold: '[[121,"Coins"],[122,"Coins"],[123,"Coins"],[110,"Coins"],[97,"Coins"],[84,"Coins"],[71,"Coins"],[58,"Coins"]]',
+        containers: '[[29,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[134,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[33,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[96,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[98,"Crate","GOLD_ITEM_TYPE.GoldCube",7],[36,"Barrel","INTERACTION_ITEM.Fly",7]]',
+        shrines: '[[6,7,"FireballShrine1"]]',
+        oracles: '[[164,1,"Rodelle2"]]',
+        lairs: '[[82,1,"Lair04"],[86,1,"Lair10"]]',
+        monsterList: '["MissGalaxy"]',
+    }
     ,
     11 : {
         name: "Labyrinth of the Soul",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB2ABAA2BAA2BB2ABAA2BB2AA9BAEAA2BAA5BB2ABB3AA3BB3AA5BB3ABB2AA7BAA13BAA7BEABABABB2AA2BB2AA2BB4AA2BB3AA8BB2ABB3ABB3AA4BAA3BB4AA2BB4ABB5ABAA2BB4ABB3ABB5AA4BB3ABABB2AA2BB2ABABABB2AA2BB4ABABAA5BAA2BB4AA3BABB2ABB3AA4BABABB4ABB8ABB2ABB5ABB2ABB5ABB16AB$AA2"}',
+        maxSpawned: 3,
+        killCountdown: 5,
+        spawnDelay: 4000,
+        data: '{"width":"17","height":"17","map":"BB2ABB2AA6BB3AA3BAA7BAA3BAA3EAA3BB4AA3BB3ABAA4BB3ABB2AA3BABB2AA3BAA19BEABAA2BB3ABB3AA3BAA3BB5AA7BB2AA2BABB5AA4BAA3BB4ABABB2ABB4ABAA2BB4ABB3ABB2ABB2ABAA3BAA2BB7ABB3ABABB3AA2BB4ABAA9BB2AA2BAA5BAA2BB4AA3BABB13ABB8AA2BB2ABB5ABB16AB$AA2"}',
         wall: "DarkMossy7",
         floor: "WebbedFloor4",
         ceil: "DarkMossy232",
         start: '[239,5]',
-        lights: '[[3,7,"Lights115","standard"],[207,7,"Lights112","standard"],[116,7,"WallLamp10","standard"],[184,1,"WallLamp31","standard"],[152,3,"Lights102","dim"]]',
-        gates: '[[238,5,"11.1","9.2","Up"],[34,5,"11.2","12.1","Up"]]',
+        decals: '[[126,4,"PersianRug03","crest"],[143,4,"PersianRug03","crest"],[160,4,"PersianRug03","crest"],[142,4,"PersianRug03","crest"],[176,7,"AI_pic232","picture"],[13,7,"AI_Pic_138","picture"],[6,7,"AI_Pic_139","picture"],[81,7,"AI_Pic_147","picture"],[216,7,"GhostFace1","picture"],[105,7,"SpaceQuest103","picture"],[72,1,"WizardOfWor89","picture"],[95,1,"AI_Pic_120","picture"],[81,1,"AI_Pic_136","picture"],[219,1,"PharaohCurse130","picture"],[281,1,"AI_pic206","picture"],[287,1,"MonkeyIsland140","picture"],[274,1,"HalfLife12","picture"],[279,1,"BookShelf06","crest"],[260,3,"CrawlMaster112","picture"],[22,3,"RadarRatRace20","picture"],[92,3,"Pyjamarama11","picture"],[169,3,"MonkeyIsland112","picture"],[33,3,"AticAtac131","picture"],[248,3,"AI_pic201","picture"],[41,3,"AI_pic203","picture"],[48,3,"TombRaider97","picture"],[184,3,"Pitfall27","picture"],[222,5,"AntAttack200","picture"],[18,5,"BlueMax20","picture"],[41,5,"AI_pic216","picture"],[119,5,"Bagitman90","picture"],[73,5,"AI_pic212","picture"],[109,5,"MonkeyIsland100","picture"],[177,5,"Maze","picture"],[155,5,"AI_Pic_133","picture"],[190,5,"Fred111","picture"],[251,3,"Elite201","picture"],[232,3,"WallSkelly104","crest"],[124,1,"BookShelf03","crest"],[175,3,"TheHobbit88","picture"],[26,3,"AI_Pic_128","picture"],[118,3,"TombRaider98","picture"]]',
+        lights: '[[3,7,"Lights115","standard"],[207,7,"Lights112","standard"],[116,7,"WallLamp10","standard"],[184,1,"WallLamp31","standard"],[152,3,"Lights102","dim"],[140,7,"Lights104","standardDimmed"],[60,7,"Lights104","standardDimmed"],[197,1,"Lamp52","standardDimmed"],[237,3,"Lamp43","standardDimmed"],[69,7,"WallLamp11","standardDimmed"],[67,3,"WallLamp16","standardDimmed"],[11,7,"Fireplace15","fire"]]',
+        gates: '[[238,5,"11.1","9.2","Up"],[34,5,"11.2","10.2","Up"]]',
+        keys: '[[49,2]]',
         skills: '[[145,"Heart"]]',
+        containers: '[[189,"Wardrobe","INTERACTION_ITEM.Fly",3]]',
         doors: '[39,243]',
+        objects: '[[113,"Mushroom"]]',
+        oracles: '[[141,5,"CorridorBlocker"]]',
         movables: '[[150,"Life"]]',
+        lairs: '[[215,1,"Lair09"],[96,7,"Lair08"]]',
+        monsterList: '["MissGalaxy"]',
         }
 };

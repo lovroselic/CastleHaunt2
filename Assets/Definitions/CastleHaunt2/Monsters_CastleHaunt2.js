@@ -37,6 +37,16 @@ const SHRINE_TYPE = {
         price: 1000,
         level: 1,
     },
+    FireballShrine1: {
+        name: "FireballShrine1",
+        sprite: "FireballShrine1",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 1000,
+        level: 1,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -160,6 +170,22 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Female2",
         text: "Shrines will heal you and raise your skills. For a price. Once. You will not find enough gold for all the shrines.",
+        interactionCategory: "oracle",
+    },
+    Rodelle2: {
+        name: "Rodelle2",
+        sprite: "Rodelle2",
+        category: 'crest',
+        voice: "Female2",
+        text: "When you are cornered and orbless, only hard kicks with your heels will save you. Don't forget that.",
+        interactionCategory: "oracle",
+    },
+    CorridorBlocker: {
+        name: "CorridorBlocker",
+        sprite: "CorridorBlocker",
+        category: 'crest',
+        voice: "Female",
+        text: "It is time you start paying attention and collect items other castle dwellers need. It's the only way they will help you.",
         interactionCategory: "oracle",
     },
 };

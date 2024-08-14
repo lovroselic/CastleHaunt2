@@ -735,6 +735,8 @@ LoadSprites = [
     { srcName: "EntityPictures/WhereDoYouWantToStart.jpg", name: "WhereDoYouWantToStart" },
     { srcName: "EntityPictures/WallSitter.jpg", name: "WallSitter" },
     { srcName: "EntityPictures/Rodelle1.jpg", name: "Rodelle1" },
+    { srcName: "EntityPictures/Rodelle2.jpg", name: "Rodelle2" },
+    { srcName: "EntityPictures/CorridorBlocker.jpg", name: "CorridorBlocker" },
 
 
 
@@ -770,6 +772,8 @@ LoadSprites = [
 
     //shrines
     { srcName: "Shrines/KickShrine.jpg", name: "KickShrine" },
+    { srcName: "Shrines/FireballShrine1.jpg", name: "FireballShrine1" },
+    { srcName: "Shrines/FireballShrine2.jpg", name: "FireballShrine2" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },

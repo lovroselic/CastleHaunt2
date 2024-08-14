@@ -42,11 +42,16 @@ const DEBUG = {
     kill() {
         console.log("KILL all");
         ENTITY3D.POOL.clear();
+        LAIR.stop();
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
+        /**
+         * spideress: FLy 3x (10 in barrel, 11 in cabinet)
+         * XXX: Mushroom 3x (11, )
+         */
         console.info("DEBUG::Loading from checkpoint");
         //GAME.level = 5;
         GAME.level = 11;
@@ -112,7 +117,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.07.17",
+    VERSION: "0.07.18",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -493,6 +498,7 @@ const HERO = {
         ENGINE.GAME.ANIMATION.next(GAME.gameOverRun);
     },
     raiseStat(which, level = 1) {
+        console.info("raising stat", which, level);
         this[which] += level;
         TITLE.skills();
     },
@@ -965,7 +971,7 @@ const GAME = {
                 TITLE.lives();
                 break;
             case 'status':
-                //console.log("STATUS", interaction);
+                console.log("STATUS", interaction);
                 HERO.incStatus(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.PowerUp.play();
