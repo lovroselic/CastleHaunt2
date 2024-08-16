@@ -51,29 +51,30 @@ const DEBUG = {
         /**
          * spideress: FLy 3x (10 in barrel, 11 in cabinet)
          * XXX: Mushroom 3x (11, )
+         * XXX: Skull Xx (11, )
          */
-        console.info("DEBUG::Loading from checkpoint");
-        //GAME.level = 5;
-        GAME.level = 11;
-        GAME.gold = 1342;   //gold collected in 6,
-        GAME.lives = 1;
+        console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
+        GAME.level = 8;
+        //GAME.level = 11;    //11
+        GAME.gold = 1225;   //gold collected in 6,
+        GAME.lives = 2;
 
         HERO.hasCapacity = true;
-        HERO.capacity = 1;
+        HERO.capacity = 2;
         HERO.maxCapacity = 5;
 
-        HERO.orbs = 1;
+        HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 5;
-        HERO.attack = 5;
+        HERO.magic = 6;
+        HERO.attack = 6;
 
-        HERO.maxHealth = 32;
-        HERO.health = 32;
+        HERO.maxHealth = 40;
+        HERO.health = 37;
         //HERO.health = 12;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -82,13 +83,13 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = [];
+        let invItems = ["Fly", "Fly", "Mushroom", "Skull"];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Red"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -113,11 +114,11 @@ const INI = {
         Cake: 40,
     },
     HEALTH_INC: 8,
-   
+
 };
 
 const PRG = {
-    VERSION: "0.07.18",
+    VERSION: "0.08.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

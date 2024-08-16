@@ -807,7 +807,6 @@ LoadSprites = [
     //ObjDecals
     { srcName: "ObjDecals/CrownDecal.png", name: "CrownDecal" },
     { srcName: "ObjDecals/DeathPlace.png", name: "DeathPlace" },
-
     { srcName: "ObjDecals/KnightStatue101.png", name: "KnightStatue101" },
     { srcName: "ObjDecals/KnightStatue102.png", name: "KnightStatue102" },
     { srcName: "ObjDecals/KnightStatue103.png", name: "KnightStatue103" },
@@ -818,7 +817,6 @@ LoadSprites = [
     { srcName: "ObjDecals/KnightStatue108.png", name: "KnightStatue108" },
     { srcName: "ObjDecals/KnightStatue109.png", name: "KnightStatue109" },
     { srcName: "ObjDecals/KnightStatue110.png", name: "KnightStatue110" },
-
     { srcName: "ObjDecals/ShieldDecal01.png", name: "ShieldDecal01" },
     { srcName: "ObjDecals/ShieldDecal02.png", name: "ShieldDecal02" },
     { srcName: "ObjDecals/ShieldDecal03.png", name: "ShieldDecal03" },
@@ -827,7 +825,6 @@ LoadSprites = [
     { srcName: "ObjDecals/ShieldDecal06.png", name: "ShieldDecal06" },
     { srcName: "ObjDecals/ShieldDecal07.png", name: "ShieldDecal07" },
     { srcName: "ObjDecals/ShieldDecal08.png", name: "ShieldDecal08" },
-
     { srcName: "ObjDecals/BearRug02.jpg", name: "BearRug02" },
     { srcName: "ObjDecals/BearRug03.jpg", name: "BearRug03" },
     { srcName: "ObjDecals/BearRug04.jpg", name: "BearRug04" },
@@ -844,7 +841,6 @@ LoadSprites = [
     { srcName: "ObjDecals/TigerRug02.jpg", name: "TigerRug02" },
     { srcName: "ObjDecals/TigerRug03.jpg", name: "TigerRug03" },
     { srcName: "ObjDecals/TigerRug04.jpg", name: "TigerRug04" },
-
     { srcName: "ObjDecals/BookShelf02.png", name: "BookShelf02" },
     { srcName: "ObjDecals/BookShelf03.png", name: "BookShelf03" },
     { srcName: "ObjDecals/BookShelf04.png", name: "BookShelf04" },
@@ -859,7 +855,6 @@ LoadSprites = [
     { srcName: "ObjDecals/BookShelf13.png", name: "BookShelf13" },
     { srcName: "ObjDecals/BookShelf14.png", name: "BookShelf14" },
     { srcName: "ObjDecals/BookShelf15.png", name: "BookShelf15" },
-
     { srcName: "ObjDecals/PuddleDecal01.png", name: "PuddleDecal01" },
     { srcName: "ObjDecals/PuddleDecal02.png", name: "PuddleDecal02" },
     { srcName: "ObjDecals/PuddleDecal03.png", name: "PuddleDecal03" },
@@ -874,11 +869,39 @@ LoadSprites = [
     { srcName: "ObjDecals/PuddleDecal12.png", name: "PuddleDecal12" },
     { srcName: "ObjDecals/PuddleDecal13.png", name: "PuddleDecal13" },
     { srcName: "ObjDecals/PuddleDecal14.png", name: "PuddleDecal14" },
-
     { srcName: "ObjDecals/WallSkelly101.png", name: "WallSkelly101" },
     { srcName: "ObjDecals/WallSkelly102.png", name: "WallSkelly102" },
     { srcName: "ObjDecals/WallSkelly103.png", name: "WallSkelly103" },
     { srcName: "ObjDecals/WallSkelly104.png", name: "WallSkelly104" },
+    { srcName: "ObjDecals/SatanRam1.png", name: "SatanRam1" },
+    { srcName: "ObjDecals/SatanRam10.png", name: "SatanRam10" },
+    { srcName: "ObjDecals/SatanRam2.png", name: "SatanRam2" },
+    { srcName: "ObjDecals/SatanRam3.png", name: "SatanRam3" },
+    { srcName: "ObjDecals/SatanRam4.png", name: "SatanRam4" },
+    { srcName: "ObjDecals/SatanRam5.png", name: "SatanRam5" },
+    { srcName: "ObjDecals/SatanRam6.png", name: "SatanRam6" },
+    { srcName: "ObjDecals/SatanRam7.png", name: "SatanRam7" },
+    { srcName: "ObjDecals/SatanRam8.png", name: "SatanRam8" },
+    { srcName: "ObjDecals/SatanRam9.png", name: "SatanRam9" },
+
+    { srcName: "ObjDecals/DemonSkull1.png", name: "DemonSkull1" },
+    { srcName: "ObjDecals/DemonSkull2.png", name: "DemonSkull2" },
+    { srcName: "ObjDecals/DemonSkull3.png", name: "DemonSkull3" },
+    { srcName: "ObjDecals/FloorGrille101.png", name: "FloorGrille101" },
+    { srcName: "ObjDecals/FloorGrille102.png", name: "FloorGrille102" },
+    { srcName: "ObjDecals/FloorGrille103.png", name: "FloorGrille103" },
+    { srcName: "ObjDecals/FloorGrille104.png", name: "FloorGrille104" },
+    { srcName: "ObjDecals/FloorGrille105.png", name: "FloorGrille105" },
+    { srcName: "ObjDecals/FloorGrille106.png", name: "FloorGrille106" },
+    { srcName: "ObjDecals/FloorGrille107.png", name: "FloorGrille107" },
+    { srcName: "ObjDecals/FloorGrille108.png", name: "FloorGrille108" },
+    { srcName: "ObjDecals/FloorGrille109.png", name: "FloorGrille109" },
+    { srcName: "ObjDecals/FloorGrille110.png", name: "FloorGrille110" },
+    { srcName: "ObjDecals/FloorGrille111.png", name: "FloorGrille111" },
+    { srcName: "ObjDecals/FloorGrille112.png", name: "FloorGrille112" },
+    { srcName: "ObjDecals/FloorGrille113.png", name: "FloorGrille113" },
+    { srcName: "ObjDecals/Ivy11.png", name: "Ivy11" },
+    { srcName: "ObjDecals/Ivy12.png", name: "Ivy12" },
 
 
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },

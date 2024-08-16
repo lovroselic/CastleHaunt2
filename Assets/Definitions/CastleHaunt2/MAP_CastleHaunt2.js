@@ -17,10 +17,10 @@ const MAP_TEXT = {
     5: "Damn! Monster are crawling from these lair portals. Maybe it's better not to fight them all.",
     6: "I need to learn how to heal myself.",
     7: "",
-    8: "",
+    8: "Just some spiders. I can breathe easier.",
     9: "Prayer helps only to those who has enough gold. I hope that is me.",
     10: "I wonder which skill would help me better now, at the beginning of my adventure?",
-    11: ""
+    11: "I should leave no stone unturned."
 };
 
 /** Map definitions */
@@ -154,7 +154,19 @@ const MAP = {
     ,
     7: {}
     ,
-    8: {}
+    8: {
+        name: "Sanctuary",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB12AA109BABB41AA10BB14ABB26$BB9A"}',
+        wall: "3d wall",
+        floor: "RockFloor",
+        ceil: "Pavement",
+        start: '[22,7]',
+        gates: '[[7,7,"8.1","5.4","Open"]]',
+    }
     ,
     9: {
         name: "Prayer Is Expensive",
@@ -191,7 +203,7 @@ const MAP = {
         floor: "DarkMarble54",
         ceil: "RedMarbleFloor1",
         start: '[146,1]',
-        decals: '[[151,4,"TigerRug03","crest"],[137,4,"TigerRug03","crest"],[138,4,"TigerRug03","crest"],[139,4,"TigerRug03","crest"],[9,7,"BookShelf12","crest"],[30,7,"Jumpman70","picture"],[34,7,"KnightLore31","picture"],[95,7,"Barbarian112","picture"],[99,7,"AI_pic263","picture"],[14,7,"Tutanham11","picture"],[23,7,"HalfLife88","picture"],[83,7,"Underwurlde111","picture"],[87,7,"Skull10","crest"],[81,7,"Skull21","crest"],[85,7,"BC11","picture"],[131,1,"AI_Pic_107","picture"],[128,1,"AI_Pic_108","picture"],[148,1,"AI_pic239","picture"],[52,5,"TempleOfApshai89","picture"],[104,5,"Pirates200","picture"],[90,3,"Pitfall88","picture"],[68,3,"Witcher110","picture"],[74,5,"BookShelf16","picture"],[68,1,"Skull1","crest"],[70,1,"Skull1","crest"],[72,1,"Skull1","crest"],[74,1,"Skull1","crest"],[47,4,"PuddleDecal06","crest"],[106,4,"PuddleDecal05","crest"]]',
+        decals: '[[151,4,"TigerRug03","crest"],[137,4,"TigerRug03","crest"],[138,4,"TigerRug03","crest"],[139,4,"TigerRug03","crest"],[9,7,"BookShelf12","crest"],[30,7,"Jumpman70","picture"],[34,7,"KnightLore31","picture"],[95,7,"Barbarian112","picture"],[99,7,"AI_pic263","picture"],[14,7,"Tutanham11","picture"],[23,7,"HalfLife88","picture"],[83,7,"Underwurlde111","picture"],[87,7,"Skull10","crest"],[81,7,"Skull21","crest"],[85,7,"BC11","picture"],[131,1,"AI_Pic_107","picture"],[128,1,"AI_Pic_108","picture"],[148,1,"AI_pic239","picture"],[52,5,"TempleOfApshai89","picture"],[104,5,"Pirates200","picture"],[90,3,"Pitfall88","picture"],[47,4,"PuddleDecal06","crest"],[106,4,"PuddleDecal05","crest"],[68,1,"SatanRam1","crest"],[70,1,"SatanRam10","crest"],[72,1,"SatanRam2","crest"],[74,1,"SatanRam3","crest"],[68,3,"AI_Pic_123","picture"],[74,5,"AI_pic234","picture"]]',
         lights: '[[2,7,"Fireplace05","fire"],[136,1,"Lamp46","standard"],[63,3,"Lamp40","standard"]]',
         gates: '[[159,1,"10.1","6.3","Closed"],[51,3,"10.2","11.2","Down"]]',
         gold: '[[121,"Coins"],[122,"Coins"],[123,"Coins"],[110,"Coins"],[97,"Coins"],[84,"Coins"],[71,"Coins"],[58,"Coins"]]',
@@ -202,7 +214,7 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    11 : {
+    11: {
         name: "Labyrinth of the Soul",
         sg: 0,
         maxSpawned: 3,
@@ -213,17 +225,17 @@ const MAP = {
         floor: "WebbedFloor4",
         ceil: "DarkMossy232",
         start: '[239,5]',
-        decals: '[[126,4,"PersianRug03","crest"],[143,4,"PersianRug03","crest"],[160,4,"PersianRug03","crest"],[142,4,"PersianRug03","crest"],[176,7,"AI_pic232","picture"],[13,7,"AI_Pic_138","picture"],[6,7,"AI_Pic_139","picture"],[81,7,"AI_Pic_147","picture"],[216,7,"GhostFace1","picture"],[105,7,"SpaceQuest103","picture"],[72,1,"WizardOfWor89","picture"],[95,1,"AI_Pic_120","picture"],[81,1,"AI_Pic_136","picture"],[219,1,"PharaohCurse130","picture"],[281,1,"AI_pic206","picture"],[287,1,"MonkeyIsland140","picture"],[274,1,"HalfLife12","picture"],[279,1,"BookShelf06","crest"],[260,3,"CrawlMaster112","picture"],[22,3,"RadarRatRace20","picture"],[92,3,"Pyjamarama11","picture"],[169,3,"MonkeyIsland112","picture"],[33,3,"AticAtac131","picture"],[248,3,"AI_pic201","picture"],[41,3,"AI_pic203","picture"],[48,3,"TombRaider97","picture"],[184,3,"Pitfall27","picture"],[222,5,"AntAttack200","picture"],[18,5,"BlueMax20","picture"],[41,5,"AI_pic216","picture"],[119,5,"Bagitman90","picture"],[73,5,"AI_pic212","picture"],[109,5,"MonkeyIsland100","picture"],[177,5,"Maze","picture"],[155,5,"AI_Pic_133","picture"],[190,5,"Fred111","picture"],[251,3,"Elite201","picture"],[232,3,"WallSkelly104","crest"],[124,1,"BookShelf03","crest"],[175,3,"TheHobbit88","picture"],[26,3,"AI_Pic_128","picture"],[118,3,"TombRaider98","picture"]]',
+        decals: '[[126,4,"PersianRug03","crest"],[143,4,"PersianRug03","crest"],[160,4,"PersianRug03","crest"],[142,4,"PersianRug03","crest"],[176,7,"AI_pic232","picture"],[13,7,"AI_Pic_138","picture"],[6,7,"AI_Pic_139","picture"],[81,7,"AI_Pic_147","picture"],[216,7,"GhostFace1","picture"],[105,7,"SpaceQuest103","picture"],[72,1,"WizardOfWor89","picture"],[95,1,"AI_Pic_120","picture"],[81,1,"AI_Pic_136","picture"],[219,1,"PharaohCurse130","picture"],[281,1,"AI_pic206","picture"],[287,1,"MonkeyIsland140","picture"],[274,1,"HalfLife12","picture"],[279,1,"BookShelf06","crest"],[260,3,"CrawlMaster112","picture"],[22,3,"RadarRatRace20","picture"],[92,3,"Pyjamarama11","picture"],[169,3,"MonkeyIsland112","picture"],[33,3,"AticAtac131","picture"],[248,3,"AI_pic201","picture"],[41,3,"AI_pic203","picture"],[48,3,"TombRaider97","picture"],[184,3,"Pitfall27","picture"],[222,5,"AntAttack200","picture"],[18,5,"BlueMax20","picture"],[41,5,"AI_pic216","picture"],[119,5,"Bagitman90","picture"],[73,5,"AI_pic212","picture"],[109,5,"MonkeyIsland100","picture"],[177,5,"Maze","picture"],[155,5,"AI_Pic_133","picture"],[190,5,"Fred111","picture"],[251,3,"Elite201","picture"],[232,3,"WallSkelly104","crest"],[124,1,"BookShelf03","crest"],[175,3,"TheHobbit88","picture"],[26,3,"AI_Pic_128","picture"],[118,3,"TombRaider98","picture"],[27,7,"SatanRam9","crest"],[57,7,"SatanRam2","crest"],[284,1,"JetPac70","picture"],[199,5,"LeisureSuitLarry91","picture"],[228,7,"Ivy12","crest"],[263,1,"DemonSkull2","crest"],[147,4,"FloorGrille104","crest"],[164,4,"FloorGrille111","crest"],[205,1,"AztecChallenge110","picture"],[190,3,"AI_pic247","picture"]]',
         lights: '[[3,7,"Lights115","standard"],[207,7,"Lights112","standard"],[116,7,"WallLamp10","standard"],[184,1,"WallLamp31","standard"],[152,3,"Lights102","dim"],[140,7,"Lights104","standardDimmed"],[60,7,"Lights104","standardDimmed"],[197,1,"Lamp52","standardDimmed"],[237,3,"Lamp43","standardDimmed"],[69,7,"WallLamp11","standardDimmed"],[67,3,"WallLamp16","standardDimmed"],[11,7,"Fireplace15","fire"]]',
         gates: '[[238,5,"11.1","9.2","Up"],[34,5,"11.2","10.2","Up"]]',
         keys: '[[49,2]]',
         skills: '[[145,"Heart"]]',
         containers: '[[189,"Wardrobe","INTERACTION_ITEM.Fly",3]]',
         doors: '[39,243]',
-        objects: '[[113,"Mushroom"]]',
+        objects: '[[113,"Mushroom"],[201,"Skull"]]',
         oracles: '[[141,5,"CorridorBlocker"]]',
         movables: '[[150,"Life"]]',
         lairs: '[[215,1,"Lair09"],[96,7,"Lair08"]]',
         monsterList: '["MissGalaxy"]',
-        }
+    }
 };
