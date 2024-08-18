@@ -70,7 +70,11 @@ const DECAL_PAINTINGS = [
     "AI_pic222", "AI_pic223", "AI_pic224", "AI_pic225", "AI_pic226", "AI_pic227", "AI_pic228", "AI_pic229", "AI_pic230", "AI_pic231", "AI_pic232", "AI_pic233", "AI_pic234",
     "AI_pic235", "AI_pic236", "AI_pic237", "AI_pic238", "AI_pic239", "AI_pic240", "AI_pic241", "AI_pic242", "AI_pic243", "AI_pic244", "AI_pic245", "AI_pic246", "AI_pic247",
     "AI_pic248", "AI_pic249", "AI_pic250", "AI_pic251", "AI_pic252", "AI_pic253", "AI_pic254", "AI_pic255", "AI_pic256", "AI_pic257", "AI_pic258", "AI_pic259", "AI_pic260",
-    "AI_pic261", "AI_pic262", "AI_pic263"
+    "AI_pic261", "AI_pic262", "AI_pic263",
+    "AI_PIC_301", "AI_PIC_302", "AI_PIC_303", "AI_PIC_304", "AI_PIC_305", "AI_PIC_306", "AI_PIC_307", "AI_PIC_308", "AI_PIC_309", "AI_PIC_310", "AI_PIC_311", "AI_PIC_312", "AI_PIC_313", "AI_PIC_314", "AI_PIC_315",
+    "AI_PIC_316", "AI_PIC_317", "AticAtacAI", "AztecChallenge_AI", "BCAI2", "BC_AI1", "Civilization", "DM_AI_2", "DM_AI_3", "FF_AI_1", "FF_AI_3", "Fred_AI_2", "Fred_AI_3", "Galaxians_AI_1", "Iceman400", "Invaders_AI_1",
+    "LSL400", "LSL401", "Pacman400", "PitfallII_AI_1", "PrincessAI_01", "PrincessAI_02", "PrincessAI_03", "PrincessAI_04", "PrincessAI_05", "PrincessAI_06", "PrincessAI_07", "PrincessAI_08", "PrincessAI_09", "PrincessAI_10",
+    "PrincessAI_11", "PrincessAI_12", "PrincessAI_13", "PrincessAI_14", "PrincessAI_15", "PrincessAI_16", "Unknown400"
 ].sort();
 
 /** Crests */

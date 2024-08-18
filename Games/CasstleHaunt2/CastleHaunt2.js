@@ -52,7 +52,7 @@ const DEBUG = {
          * spideress: FLy 3x (10 in barrel, 11 in cabinet, 8 in chest)
          * XXX: Mushroom 3x (11, )
          * XXX: Skull Xx (11, )
-         * XXX: SpiderDefense (5, 8)
+         * SpiderDefense 3x(5, 8, 12)
          */
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 8;
@@ -119,7 +119,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.01",
+    VERSION: "0.08.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
