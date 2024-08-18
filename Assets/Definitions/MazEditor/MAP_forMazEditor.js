@@ -54,7 +54,7 @@ const DECAL_PAINTINGS = [
     "TombRaider102", "TombRaider103", "TombRaider104", "TombRaider105", "TombRaider106", "TombRaider107", "TombRaider108", "TombRaider109", "TombRaider110", "TombRaider111", "TombRaider112", "TombRaider113", "TombRaider130",
     "TombRaider95", "TombRaider96", "TombRaider97", "TombRaider98", "TombRaider99", "Tombraider140", "Tombraider141", "Tornado1", "Tornado88", "Trashman2", "Triss", "TurboEsprit200", "Tutamkham50", "Tutanham11",
     "Tutanham12", "Tutankham102", "Tutankham104", "Tutankham105", "Tutankhamun88", "UW10", "UW27", "Ultima11", "Ultima50", "Ultima70", "Ultima89", "Underwurlde100", "Underwurlde110", "Underwurlde111", "Underwurlde130",
-    "Underwurlde131", "Underwurlde140", "Underwurlde141", "Unknown3", "Unknown30", "Uridium2", "VIC20-2", "Valhalla2", "Valhalla88", "Vixen3", "Vixen50", "Vixen51", "Vixen70", "Vixen79", "Vixen89", "WOW10", "WOW104",
+    "Underwurlde131", "Underwurlde140", "Underwurlde141", "Unknown3", "Unknown30", "Uridium2", "VIC20", "Valhalla2", "Valhalla88", "Vixen3", "Vixen50", "Vixen51", "Vixen70", "Vixen79", "Vixen89", "WOW10", "WOW104",
     "Wadca", "Wally88", "Wally99", "WhoDaresWins1", "WhoDaresWins10", "WhoDaresWins50", "WhoDaresWins70", "WhoDaresWins71", "WhoDaresWins88", "WinterGames10", "WinterGames11", "WinterGames79", "Witcher100", "Witcher101",
     "Witcher102", "Witcher103", "Witcher110", "Witcher111", "Witcher112", "Witcher113", "Witcher130", "Witcher47", "WizardOfWor89", "Wolf10", "Wolfenstein31", "Wolfenstein50", "Wolfenstein70", "Yennefer", "Yennefer21",
     "Yeppelin70", "ZX Spectrum", "ZX81-89", "Zak50", "Zak51", "ZakMcKraken89", "Zaxxon3", "Zaxxon70", "Zaxxon89", "Zeppelin4", "Zeppelin50", "Zeppelin88", "Zeppelin89", "ZimSalaBim2", "ZimSalaBim200", "ZimSalaBim201",

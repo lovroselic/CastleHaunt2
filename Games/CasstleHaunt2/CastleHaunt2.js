@@ -49,13 +49,14 @@ const DEBUG = {
     },
     checkPoint() {
         /**
-         * spideress: FLy 3x (10 in barrel, 11 in cabinet)
+         * spideress: FLy 3x (10 in barrel, 11 in cabinet, 8 in chest)
          * XXX: Mushroom 3x (11, )
          * XXX: Skull Xx (11, )
+         * XXX: SpiderDefense (5, 8)
          */
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 8;
-        //GAME.level = 11;    //11
+        //GAME.level = 8;
+        GAME.level = 12;    //
         GAME.gold = 1225;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -83,7 +84,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Fly", "Fly", "Mushroom", "Skull"];
+        let invItems = ["Fly", "Fly", "Mushroom", "Skull", "Spider"];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
@@ -118,7 +119,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.00",
+    VERSION: "0.08.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -860,7 +861,7 @@ const GAME = {
             ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
-            //DYNAMIC_ITEM3D.drawVector2D();
+            DYNAMIC_ITEM3D.drawVector2D();
         }
     },
     processInteraction(interaction) {
@@ -963,6 +964,7 @@ const GAME = {
                 HERO.raiseStat(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();
+                TITLE.keys();
                 //TITLE.skills();
                 break;
             case "life":

@@ -188,6 +188,22 @@ const ORACLE_TYPE = {
         text: "It is time you start paying attention and collect items other castle dwellers need. It's the only way they will help you.",
         interactionCategory: "oracle",
     },
+    BlackWidow: {
+        name: "BlackWidow",
+        sprite: "BlackWidow",
+        category: 'crest',
+        voice: "Female",
+        text: "Remember me? I was in the Curse of the Castle Creep.",
+        interactionCategory: "oracle",
+    },
+    SpideressOracle: {
+        name: "SpideressOracle",
+        sprite: "SpideressOracle",
+        category: 'crest',
+        voice: "Female2",
+        text: "Check the floors for the little critters which are running around.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1718,6 +1734,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "GoldKey",
         color: "Gold"
     },
+    SilverKey: {
+        name: "SilverKey",
+        category: "key",
+        inventorySprite: "SilverKey",
+        color: "Silver"
+    },
     EmeraldKey: {
         name: "EmeraldKey",
         category: "key",
@@ -1818,7 +1840,7 @@ const INTERACTION_ITEM = {
         which: "mana",
         level: 5,
     },
-    DefenseSkill: {
+    /* DefenseSkill: {
         name: "DefenseSkill",
         category: "skill",
         inventorySprite: "ShieldSkill",
@@ -1838,7 +1860,7 @@ const INTERACTION_ITEM = {
         inventorySprite: "SwordSkill",
         which: "attack",
         level: 3,
-    },
+    }, */
     Whip: {
         name: "Whip",
         category: "interaction_item",
@@ -2082,6 +2104,14 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "RedGem",
     },
+    //
+    Attack: {
+        name: "Attack",
+        category: "skill",
+        inventorySprite: "SkillKick",
+        which: "attack",
+        level: 1,
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2098,10 +2128,34 @@ const INTERACTION_ENTITY = {
             conclusion: "My count is now complete. Good luck in your fights."
         }
     },
-
+    Spideress: {
+        name: "Spideress",
+        sprite: "Spideress",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Fly", "Fly", "Fly"],
+        gives: "SilverKey",
+        text: {
+            intro: "I am so very hungry.",
+            progress: "Fly tasted marvelous, but I am still hungry.",
+            conclusion: "My appetite is sated. You con continue your fight."
+        }
+    },
 };
 const INTERACTION_SHRINE = {
-
+    SpiderDefense: {
+        name: "SpiderDefense",
+        sprite: "Spideress5",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Spider", "Spider", "Spider"],
+        gives: "Attack",
+        text: {
+            intro: "Find my babies and I will teach you some defense skills.",
+            progress: "Excellent, but I have more babies.",
+            conclusion: "I have sharpened your heels. You are even more dangerous now.",
+        }
+    },
 };
 const INTERACTOR = {
     TheThrone: {

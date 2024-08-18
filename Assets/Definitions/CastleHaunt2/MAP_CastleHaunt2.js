@@ -20,7 +20,8 @@ const MAP_TEXT = {
     8: "Just some spiders. I can breathe easier.",
     9: "Prayer helps only to those who has enough gold. I hope that is me.",
     10: "I wonder which skill would help me better now, at the beginning of my adventure?",
-    11: "I should leave no stone unturned."
+    11: "I should leave no stone unturned.",
+    12: "",
 };
 
 /** Map definitions */
@@ -127,6 +128,7 @@ const MAP = {
         doors: '[61]',
         objects: '[[135,"Orb"]]',
         oracles: '[[64,5,"WhiteRubberella"],[43,5,"BlueHairResting"],[192,5,"ApparitiaDie"],[247,1,"RedRubberella"],[207,3,"CuteBlackRuberrella"]]',
+        movables: '[[83,"Spider"]]',
         lairs: '[[3,7,"Lair07"],[143,3,"Lair02"],[244,1,"Lair03"]]',
         monsterList: '["MissGalaxy"]',
     }
@@ -155,17 +157,26 @@ const MAP = {
     7: {}
     ,
     8: {
-        name: "Sanctuary",
+        name: "Silky Sanctuary",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB12AA109BABB41AA10BB14ABB26$BB9A"}',
-        wall: "3d wall",
-        floor: "RockFloor",
-        ceil: "Pavement",
+        data: '{"width":"15","height":"15","map":"BB6AA10BAA23BAA15BB2AA4BAA4BAA10BB2AA2BB2AA13BABABB2AA3BAA4BB2ABB2AA2BABB15AA2BB2AA3BABB3ABB10AA4BABAA2BAA3BABB8ABAA4BAA2BABB4AA2BABB23AB$"}',
+        wall: "MossyRocks42",
+        floor: "WebbedFloor5",
+        ceil: "WebbedFloor2",
         start: '[22,7]',
-        gates: '[[7,7,"8.1","5.4","Open"]]',
+        decals: '[[18,4,"PersianRug02","crest"],[26,4,"PersianRug03","crest"],[97,1,"ReturnToCastleWolfenstein13","picture"],[170,1,"MontyMole110","picture"],[174,1,"LaraCroft21","picture"],[184,1,"AI_pic247","picture"],[190,1,"Ishar71","picture"],[186,1,"Paratroopers2","picture"],[188,1,"AI_pic206","picture"],[92,1,"SatanRam2","crest"],[102,1,"SatanRam2","crest"],[20,7,"AI_Pic_141","picture"],[24,7,"AI_pic230","picture"],[31,7,"FireAnt60","picture"],[43,7,"HalfLife13","picture"],[109,7,"AI_Pic_104","picture"],[115,7,"AI_Pic_110","picture"],[75,5,"LSL_Eve2","picture"],[94,5,"HeroQuest50","picture"],[97,5,"MonkeyIsland111","picture"],[117,5,"F4","picture"],[150,5,"AI_Pic_132","picture"],[174,5,"AI_pic230","picture"],[74,3,"BrideOfFrankenstein","picture"],[170,3,"ImpossibleMsission110","picture"],[107,3,"JSW10","picture"],[164,3,"AI_pic226","picture"],[97,3,"SVS111","picture"],[52,4,"PuddleDecal07","crest"],[67,4,"FloorGrille113","crest"],[172,4,"FloorGrille112","crest"],[123,5,"ShieldDecal08","crest"],[131,3,"BookShelf19","picture"],[100,3,"MrRobot70","picture"]]',
+        lights: '[[122,7,"Lamp40","standard"],[132,7,"WallLamp9","standard"],[97,7,"Lights115","standard"],[3,7,"Fireplace15","fire"],[11,7,"Fireplace09","fire"]]',
+        gates: '[[7,7,"8.1","5.4","Open"],[217,1,"8.2","12.1","Down"]]',
+        monsters: '[[153,"Spider"],[157,"Spider"],[161,"Spider"],[56,"Spider"],[47,"Spider"],[112,"Spider"],[95,"RedGoldBat"],[99,"Bat"]]',
+        gold: '[[48,"GoldBar"],[55,"SilverBar"],[127,"SilverBar"],[162,"GoldCube"],[168,"GoldCube"],[158,"GoldCube"]]',
+        containers: '[[181,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[193,"TreasureChest","INTERACTION_ITEM.Fly",1]]',
+        entities: '[[222,1,"Spideress"]]',
+        oracles: '[[108,1,"BlackWidow"],[212,1,"SpideressOracle"]]',
+        movables: '[[152,"Spider"]]',
+        trainers: '[[116,1,"SpiderDefense"]]',
     }
     ,
     9: {
@@ -238,4 +249,19 @@ const MAP = {
         lairs: '[[215,1,"Lair09"],[96,7,"Lair08"]]',
         monsterList: '["MissGalaxy"]',
     }
+    ,
+    12 : {
+        name: "XXX",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB3AA6BB2AA6BB2AA16BAA4BAA2BB9AA3BB3AA2BB4ABB6ABB7ABB4AA4BABB3AA2BAA3BB2ABB3ABB2AA4BB2AA4BB24ABB2ABB14AA4BB2AA4BAA2BB4AA2BB10ABB7ABABB24A$"}',
+        wall: "MossyWall110",
+        floor: "MossyTiles",
+        ceil: "MossyFloor110",
+        start: '[22,7]',
+        lights: '[[31,5,"Lights107","standardDimmed"],[181,5,"Lamp41","standardDimmed"],[43,3,"Lights102","standardDimmed"],[193,3,"Lamp47","standardDimmed"]]',
+        gates: '[[7,7,"12.1","8.2","Up"]]',
+        }
 };

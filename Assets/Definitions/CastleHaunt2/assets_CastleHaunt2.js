@@ -720,7 +720,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
     { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
-    { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" },
+    { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" }, //unused
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
     { srcName: "EntityPictures/PrincessOnThrone.jpg", name: "PrincessOnThrone" },
@@ -737,11 +737,24 @@ LoadSprites = [
     { srcName: "EntityPictures/Rodelle1.jpg", name: "Rodelle1" },
     { srcName: "EntityPictures/Rodelle2.jpg", name: "Rodelle2" },
     { srcName: "EntityPictures/CorridorBlocker.jpg", name: "CorridorBlocker" },
+    { srcName: "EntityPictures/BlackWidow.jpg", name: "BlackWidow" },
+    { srcName: "EntityPictures/Spideress5.jpg", name: "Spideress5" },
+    { srcName: "EntityPictures/Spideress3.jpg", name: "Spideress" },
+    { srcName: "EntityPictures/Spideress4.jpg", name: "SpideressOracle" },
+
 
 
 
     { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
 
+    //action movables
+    { srcName: "ActionMovables/Spider.png", name: "BabyGreenSpider" },
+    { srcName: "ActionMovables/BabyDragon.png", name: "BabyDragon" },
+    { srcName: "ActionMovables/Cat.png", name: "Cat" },
+    { srcName: "ActionMovables/LittleChicken.png", name: "LittleChicken" },
+    { srcName: "ActionMovables/Sheep.png", name: "Sheep" },
+    { srcName: "ActionMovables/Spider.png", name: "Spider" },
+    { srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
 
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
