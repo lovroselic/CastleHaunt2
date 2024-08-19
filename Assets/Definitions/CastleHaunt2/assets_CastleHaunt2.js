@@ -756,6 +756,12 @@ LoadSprites = [
     { srcName: "ActionMovables/Spider.png", name: "Spider" },
     { srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
 
+     //triggers
+     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
+     { srcName: "Triggers/PurpleTriggerButton.png", name: "PurpleTriggerButton" },
+     { srcName: "Triggers/RockTriggerButton.png", name: "RockTriggerButton" },
+     { srcName: "Triggers/SmoothWallButton.png", name: "SmoothWallButton" },
+
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
     { srcName: "Lairs/Lair02.jpg", name: "Lair02" },

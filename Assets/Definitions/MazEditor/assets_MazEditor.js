@@ -704,6 +704,7 @@ LoadSprites = [
     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
     { srcName: "Triggers/PurpleTriggerButton.png", name: "PurpleTriggerButton" },
     { srcName: "Triggers/RockTriggerButton.png", name: "RockTriggerButton" },
+    { srcName: "Triggers/SmoothWallButton.png", name: "SmoothWallButton" },
 
     //scrolls
     { srcName: "Scrolls/SCR_BoostArmor.png", name: "SCR_BoostArmor" },

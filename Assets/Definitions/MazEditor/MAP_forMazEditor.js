@@ -103,7 +103,7 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Fireplace14", "Fireplace15",
     "Lights102", "Lights103", "Lights104", "Lights105", "Lights106", "Lights107", "Lights108", "Lights109", "Lights110", "Lights111", "Lights112", "Lights113", "Lights114", "Lights115",
 ];
-const TRIGGER_DECALS = ["RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
+const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
