@@ -53,11 +53,12 @@ const DEBUG = {
          * XXX: Mushroom 3x (11, )
          * XXX: Skull Xx (11, )
          * SpiderDefense 3x(5, 8, 12)
+         * XXX (coin)
          */
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //GAME.level = 8;
-        GAME.level = 12;    //
-        GAME.gold = 1225;   //gold collected in 6,
+        GAME.level = 7;
+        //GAME.level = 13;    //
+        GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -66,16 +67,16 @@ const DEBUG = {
 
         HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 6;
-        HERO.attack = 6;
+        HERO.magic = 7;
+        HERO.attack = 8;
 
         HERO.maxHealth = 40;
-        HERO.health = 37;
+        HERO.health = 31;
         //HERO.health = 12;
 
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,,
+            INTERACTION_OBJECT.Cake,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -84,13 +85,13 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Fly", "Fly", "Mushroom", "Skull", "Spider"];
+        let invItems = ["Fly", "Fly", "Mushroom", "Skull", "GoldCoin"];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Red"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -119,7 +120,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.03",
+    VERSION: "0.08.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

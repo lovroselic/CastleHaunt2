@@ -204,6 +204,22 @@ const ORACLE_TYPE = {
         text: "Check the floors for the little critters which are running around.",
         interactionCategory: "oracle",
     },
+    PinkCoat: {
+        name: "PinkCoat",
+        sprite: "PinkCoat",
+        category: 'crest',
+        voice: "Female2",
+        text: "Check the walls for hidden triggers or you can miss secret dungeons.",
+        interactionCategory: "oracle",
+    },
+    AuburnDomme: {
+        name: "AuburnDomme",
+        sprite: "AuburnDomme",
+        category: 'crest',
+        voice: "Female2",
+        text: "Exploration pays. It is a foundation for your survival.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

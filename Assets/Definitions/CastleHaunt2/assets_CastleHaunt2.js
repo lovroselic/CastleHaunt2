@@ -717,10 +717,13 @@ LoadModels = [
 LoadSprites = [
     // frescoes - entities
     { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
+
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
     { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
     { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" }, //unused
+
+    
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
     { srcName: "EntityPictures/PrincessOnThrone.jpg", name: "PrincessOnThrone" },
@@ -741,6 +744,9 @@ LoadSprites = [
     { srcName: "EntityPictures/Spideress5.jpg", name: "Spideress5" },
     { srcName: "EntityPictures/Spideress3.jpg", name: "Spideress" },
     { srcName: "EntityPictures/Spideress4.jpg", name: "SpideressOracle" },
+    { srcName: "EntityPictures/PinkCoat.jpg", name: "PinkCoat" },
+    { srcName: "EntityPictures/AuburnDomme.jpg", name: "AuburnDomme" },
+    
 
 
 

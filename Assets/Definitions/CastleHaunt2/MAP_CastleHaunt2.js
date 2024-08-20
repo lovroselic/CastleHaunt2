@@ -21,7 +21,8 @@ const MAP_TEXT = {
     9: "Prayer helps only to those who has enough gold. I hope that is me.",
     10: "I wonder which skill would help me better now, at the beginning of my adventure?",
     11: "I should leave no stone unturned.",
-    12: "",
+    12: "Cute tiny maze. Let me survive it.",
+    13: "I found a secret room? Excellent."
 };
 
 /** Map definitions */
@@ -154,7 +155,19 @@ const MAP = {
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
     }
     ,
-    7: {}
+    7 : {
+        name: "Following the Blood Trail",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB2ABB8AA72BB26ABB4AA4BAA3BB46A$"}',
+        wall: "3d wall",
+        floor: "RockFloor",
+        ceil: "Pavement",
+        start: '[89,3]',
+        gates: '[[90,3,"7.1","5.3","Open"]]',
+        }
     ,
     8: {
         name: "Silky Sanctuary",
@@ -250,28 +263,48 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    12 : {
+    12: {
         name: "Little Maze",
         sg: 0,
         maxSpawned: 3,
         killCountdown: 3,
         spawnDelay: 5000,
-        data: '{"width":"15","height":"15","map":"BB3AA6BB2AA6BB2AA10BAA6BAA5BAA2BB7AA4BB3AA2BB4ABB6ABB7ABB4AA5BABB3AA3BB3ABB3ABB2AA4BB2AA4BB24ABB2ABB14AA4BB2AA4BAA2BB4AA2BB10ABB7ABABB24A$"}',
+        data: '{"width":"15","height":"15","map":"BB3AA6BB2AA7BB2AA10BAA6BAA4BB2AA2BB6ABAA4BB3ABB4AA2BB6ABB6ABB4AA5BAA2BB3AA3BB3ABB3ABABAA3BB2AA3BB24ABB2ABB9ABB4AA4BB2AA4BABB4AA2BB10ABB7ABABB24A$"}',
         wall: "MossyWall110",
         floor: "MossyTiles",
         ceil: "MossyFloor110",
         start: '[22,7]',
-        decals: '[[19,7,"PrincessAI_01","picture"],[81,7,"PrincessAI_02","picture"],[142,7,"AI_pic207","picture"],[24,7,"Ishar98","picture"],[55,7,"BookShelf19","picture"],[83,7,"Underwurlde100","picture"],[175,1,"BC_AI1","picture"],[169,1,"AticAtac113","picture"],[141,1,"MonkeyIsland143","picture"],[143,1,"AI_pic262","picture"],[52,1,"AticAtac205","picture"],[207,1,"AztecChallenge100","picture"],[197,1,"RickDangerous50","picture"],[17,7,"KL102","picture"],[27,7,"PharaohCurse110","picture"],[51,7,"SVS1001","picture"],[76,5,"ForbiddenForest110","picture"],[136,5,"GhostFace2","picture"],[73,3,"Galaxians10","picture"],[148,3,"LSL100","picture"],[101,3,"Sorcery31","picture"],[123,5,"PrincessAI_09","picture"],[63,5,"AI_pic252","picture"],[200,1,"RedWarrior1","picture"],[204,1,"AI_PIC_314","picture"],[116,5,"Pacman200","picture"],[108,3,"CrawlMaster111","picture"],[110,5,"DungeonMaster206","picture"],[114,3,"AI_pic255","picture"]]',
+        decals: '[[19,7,"PrincessAI_01","picture"],[81,7,"PrincessAI_02","picture"],[142,7,"AI_pic207","picture"],[24,7,"Ishar98","picture"],[55,7,"BookShelf19","picture"],[83,7,"Underwurlde100","picture"],[175,1,"BC_AI1","picture"],[169,1,"AticAtac113","picture"],[141,1,"MonkeyIsland143","picture"],[143,1,"AI_pic262","picture"],[52,1,"AticAtac205","picture"],[207,1,"AztecChallenge100","picture"],[197,1,"RickDangerous50","picture"],[17,7,"KL102","picture"],[27,7,"PharaohCurse110","picture"],[51,7,"SVS1001","picture"],[76,5,"ForbiddenForest110","picture"],[136,5,"GhostFace2","picture"],[73,3,"Galaxians10","picture"],[148,3,"LSL100","picture"],[101,3,"Sorcery31","picture"],[123,5,"PrincessAI_09","picture"],[63,5,"AI_pic252","picture"],[200,1,"RedWarrior1","picture"],[204,1,"AI_PIC_314","picture"],[116,5,"Pacman200","picture"],[108,3,"CrawlMaster111","picture"],[110,5,"DungeonMaster206","picture"],[114,3,"AI_pic255","picture"],[83,1,"AI_pic218","picture"]]',
         lights: '[[31,5,"Lights107","standardDimmed"],[181,5,"Lamp41","standardDimmed"],[43,3,"Lights102","standardDimmed"],[193,3,"Lamp47","standardDimmed"]]',
         gates: '[[7,7,"12.1","8.2","Up"],[60,5,"12.3","13.1","Down"]]',
         monsters: '[[32,"Spider"],[182,"Spider"],[42,"Spider"],[192,"Spider"]]',
         gold: '[[34,"GoldCube"],[57,"GoldCube"],[162,"GoldCube"],[186,"GoldCube"],[107,"GoldCube"],[67,"GoldCube"],[130,"GoldCube"],[155,"GoldCube"],[111,"GoldCube"]]',
         triggers: '[[82,7,"SmoothWallButton",1,61]]',
         objects: '[[112,"Cake"]]',
+        oracles: '[[164,3,"PinkCoat"]]',
         movables: '[[187,"Spider"]]',
         lairs: '[[105,5,"Lair04"],[217,1,"Lair05"],[119,3,"Lair08"]]',
         monsterList: '["MissGalaxy"]',
+    }
+    ,
+    13 : {
+        name: "Secret Room",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB2ABB2ABAA2BB2AA25BB2AA5BB3AA2BAA2BAA6BB2AA6BAA5BB2AA7BAA6BB2ABAA3BB4ABB2AA3BABABB11ABABABB2AA2BB2ABABB2ABAA2BAA3BB2AA2BB20$A"}',
+        wall: "BrownidhMossy102",
+        floor: "Wood9",
+        ceil: "Sand12",
+        start: '[89,3]',
+        decals: '[[29,7,"Scramble23","picture"],[33,7,"AztecChallenge_AI","picture"],[10,7,"KnightLore31","picture"],[85,7,"Prince50","picture"],[81,7,"GIJoe70","picture"],[101,7,"Sp61","picture"],[119,1,"CastleHaunt","picture"],[157,1,"DungeonMaster100","picture"],[137,1,"AticAtac200","picture"],[165,1,"HalfLife91","picture"],[1,7,"Barbarian13","picture"],[75,3,"AI_pic223","picture"],[101,3,"FalconPatrol72","picture"],[85,3,"Iceman400","picture"],[85,5,"DM_AI_3","picture"],[81,5,"AI_pic240","picture"],[52,5,"AI_Pic_125","picture"],[91,5,"KQ100","picture"],[75,1,"AI_pic213","picture"],[51,3,"BookShelf10","crest"],[129,3,"DemonSkull3","crest"],[83,4,"FloorGrille110","crest"],[44,4,"FloorGrille102","crest"],[17,7,"Ivy12","crest"],[147,1,"ManicMiner51","picture"],[81,3,"AmberStar203","picture"],[25,3,"DungeonDoor_Blocked2","crest"],[134,4,"PersianRug06","crest"],[135,4,"PersianRug06","crest"],[136,4,"PersianRug06","crest"],[148,4,"PersianRug06","crest"],[146,3,"CBM_VIC20","picture"]]',
+        lights: '[[161,1,"Fireplace04","fire"],[81,1,"Lights102","standard"],[85,1,"Lights115","standard"]]',
+        gates: '[[90,3,"13.1","12.3","Up"]]',
+        monsters: '[[79,"Spider"],[131,"Spider"],[22,"Spider"],[128,"Spider"]]',
+        skills: '[[36,"Magic"],[140,"Attack"]]',
+        containers: '[[14,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[34,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[134,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[98,"Barrel","GOLD_ITEM_TYPE.SilverBar",7]]',
+        objects: '[[145,"GoldCoin"]]',
+        oracles: '[[5,7,"AuburnDomme"]]',
         }
-        ,
-        13: {}
 };
