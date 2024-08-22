@@ -56,8 +56,8 @@ const DEBUG = {
          * XXX (coin)
          */
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 7;
-        //GAME.level = 13;    //
+        //GAME.level = 7;
+        GAME.level = 14;    //
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -120,7 +120,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.04",
+    VERSION: "0.08.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

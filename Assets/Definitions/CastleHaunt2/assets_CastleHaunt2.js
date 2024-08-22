@@ -722,8 +722,15 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
     { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
     { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" }, //unused
+    { srcName: "EntityPictures/Apparitia5.jpg", name: "Apparitia5" }, //unused
+    { srcName: "EntityPictures/Apparitia6.jpg", name: "Apparitia6" }, //unused
+    { srcName: "EntityPictures/Apparitia7.jpg", name: "Apparitia7" }, //unused
+    { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" }, 
+    { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
+    { srcName: "EntityPictures/Apparitia10.jpg", name: "Apparitia10" }, //unused
 
-    
+
+
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
     { srcName: "EntityPictures/PrincessOnThrone.jpg", name: "PrincessOnThrone" },
@@ -746,7 +753,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Spideress4.jpg", name: "SpideressOracle" },
     { srcName: "EntityPictures/PinkCoat.jpg", name: "PinkCoat" },
     { srcName: "EntityPictures/AuburnDomme.jpg", name: "AuburnDomme" },
-    
+
 
 
 
@@ -762,11 +769,11 @@ LoadSprites = [
     { srcName: "ActionMovables/Spider.png", name: "Spider" },
     { srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
 
-     //triggers
-     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
-     { srcName: "Triggers/PurpleTriggerButton.png", name: "PurpleTriggerButton" },
-     { srcName: "Triggers/RockTriggerButton.png", name: "RockTriggerButton" },
-     { srcName: "Triggers/SmoothWallButton.png", name: "SmoothWallButton" },
+    //triggers
+    { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
+    { srcName: "Triggers/PurpleTriggerButton.png", name: "PurpleTriggerButton" },
+    { srcName: "Triggers/RockTriggerButton.png", name: "RockTriggerButton" },
+    { srcName: "Triggers/SmoothWallButton.png", name: "SmoothWallButton" },
 
     //lairs
     { srcName: "Lairs/Lair01.jpg", name: "Lair01" },
@@ -797,8 +804,10 @@ LoadSprites = [
 
     //shrines
     { srcName: "Shrines/KickShrine.jpg", name: "KickShrine" },
+    { srcName: "Shrines/KungfuPrincess.jpg", name: "KungfuShrine" },
     { srcName: "Shrines/FireballShrine1.jpg", name: "FireballShrine1" },
     { srcName: "Shrines/FireballShrine2.jpg", name: "FireballShrine2" },
+    { srcName: "Shrines/HeartSkill1.jpg", name: "HeartSkill1" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },

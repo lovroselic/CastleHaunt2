@@ -16,13 +16,14 @@ const MAP_TEXT = {
     4: "I should find some weapons. I don't want to ruin my heels.",
     5: "Damn! Monster are crawling from these lair portals. Maybe it's better not to fight them all.",
     6: "I need to learn how to heal myself.",
-    7: "",
+    7: "I can follow the trail of Hauntessa's carnage. But should I?",
     8: "Just some spiders. I can breathe easier.",
     9: "Prayer helps only to those who has enough gold. I hope that is me.",
     10: "I wonder which skill would help me better now, at the beginning of my adventure?",
     11: "I should leave no stone unturned.",
     12: "Cute tiny maze. Let me survive it.",
-    13: "I found a secret room? Excellent."
+    13: "I found a secret room? Excellent.",
+    14: "A temple dedicated to me. Cool. But no discount?",
 };
 
 /** Map definitions */
@@ -155,19 +156,22 @@ const MAP = {
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
     }
     ,
-    7 : {
+    7: {
         name: "Following the Blood Trail",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB2ABB8AA72BB26ABB4AA4BAA3BB46A$"}',
-        wall: "3d wall",
-        floor: "RockFloor",
-        ceil: "Pavement",
+        data: '{"width":"13","height":"13","map":"BB3AA3BB2AA13BB3ABAA4BB2AA3BAA3BAA16BB2AA2BAA7BB3ABB4AA2BB4AA6BAA3BAA4BB6AA3BB2AA2BB2AA2BB2AA10BB2ABB6ABB3AA6BAA2BB20A$"}',
+        wall: "SkullWall8",
+        floor: "IrregularTiles1",
+        ceil: "SpiderWeb10",
         start: '[89,3]',
-        gates: '[[90,3,"7.1","5.3","Open"]]',
-        }
+        decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"]]',
+        lights: '[[111,7,"WallLamp17","dim"],[57,1,"Lamp41","dim"],[84,3,"WallLamp","yellowgreen"],[48,7,"Lamp51","dimRed"],[142,3,"Lamp45","lightRed"]]',
+        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"]]',
+        oracles: '[[52,5,"ApparitiaPale"]]',
+    }
     ,
     8: {
         name: "Silky Sanctuary",
@@ -287,7 +291,7 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    13 : {
+    13: {
         name: "Secret Room",
         sg: 0,
         maxSpawned: -1,
@@ -306,5 +310,22 @@ const MAP = {
         containers: '[[14,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[34,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[134,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[98,"Barrel","GOLD_ITEM_TYPE.SilverBar",7]]',
         objects: '[[145,"GoldCoin"]]',
         oracles: '[[5,7,"AuburnDomme"]]',
+    }
+    ,
+    14 : {
+        name: "Temple of the Princess",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB4AA4BAA2BB2AA11BAA15BABAA15BAA12BB2AA8BB11ABB8ABB7ABABAA2BAA2BB8ABB4ABB2ABB10ABB9ABB9ABB3$"}',
+        wall: "DarkMossy22",
+        floor: "RedMarbleFloor7",
+        ceil: "ScarletStoneFloor1",
+        start: '[149,1]',
+        lights: '[[97,1,"WallLamp33","standardDimmed"],[97,3,"Lamp42","standardDimmed"],[97,5,"WallLamp15","standardDimmed"],[159,1,"Fireplace04","fire"],[165,1,"Fireplace06","fire"]]',
+        gates: '[[162,1,"14.1","7.2","Open"]]',
+        shrines: '[[77,3,"FireballShrine2"],[65,5,"KungfuShrine"]]',
+        trainers: '[[6,7,"Hearty"]]',
         }
 };

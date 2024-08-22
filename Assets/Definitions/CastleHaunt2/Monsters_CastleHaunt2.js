@@ -47,6 +47,26 @@ const SHRINE_TYPE = {
         price: 1000,
         level: 1,
     },
+    FireballShrine2: {
+        name: "FireballShrine2",
+        sprite: "FireballShrine2",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 1000,
+        level: 1,
+    },
+    KungfuShrine: {
+        name: "KungfuShrine",
+        sprite: "KungfuShrine",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 1000,
+        level: 1,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -66,7 +86,6 @@ const ORACLE_TYPE = {
         voice: "Apparitia",
         text: "We have claimed your castle in the name of her haungtingness, Hauntessa Spookish, the great haunteress from the Hauntosphere.",
         interactionCategory: "oracle",
-        //price: 1,
     },
     ApparitiaWelcome: {
         name: "ApparitiaWelcome",
@@ -218,6 +237,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Female2",
         text: "Exploration pays. It is a foundation for your survival.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaPale: {
+        name: "ApparitiaPale",
+        sprite: "ApparitiaPale",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Not only we will take your castle, but we will also set new beauty standards. Pale, white and transparent is a new black.",
         interactionCategory: "oracle",
     },
 };
@@ -2128,6 +2155,13 @@ const INTERACTION_ITEM = {
         which: "attack",
         level: 1,
     },
+    HeartSkill: {
+        name: "HeartSkill",
+        category: "status",
+        inventorySprite: "HeartSkill",
+        which: "health",
+        level: 1,
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2170,6 +2204,19 @@ const INTERACTION_SHRINE = {
             intro: "Find my babies and I will teach you some defense skills.",
             progress: "Excellent, but I have more babies.",
             conclusion: "I have sharpened your heels. You are even more dangerous now.",
+        }
+    },
+    Hearty: {
+        name: "HeartSkill1",
+        sprite: "HeartSkill1",
+        category: 'crest',
+        voice: "Princess",
+        wants: ["GoldCoin"],
+        gives: "HeartSkill",
+        text: {
+            intro: "For a special gold coin I can get my health improved here.",
+            progress: null,
+            conclusion: "Excellent. I am feeling so much better now.",
         }
     },
 };
