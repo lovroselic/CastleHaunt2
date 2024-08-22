@@ -323,8 +323,11 @@ const MAP = {
         floor: "RedMarbleFloor7",
         ceil: "ScarletStoneFloor1",
         start: '[149,1]',
+        decals: '[[30,7,"AI_Pic_118","picture"],[34,7,"Prince4","picture"],[41,7,"Tutankhamun88","picture"],[49,7,"AI_Pic_103","picture"],[92,7,"MassEffect1","picture"],[102,7,"FireAnt2","picture"],[97,7,"Hero103","picture"],[148,1,"AI_pic212","picture"],[150,1,"AI_PIC_306","picture"],[141,1,"CrawlMaster131","picture"],[145,1,"OlympicSkier6","picture"],[92,5,"LeisureSuitLarry89","picture"],[117,5,"Witcher100","picture"],[116,3,"Athanor200","picture"],[102,3,"BeyondForbiddenForest111","picture"],[146,4,"PersianRug02","crest"],[152,4,"PersianRug03","crest"],[71,4,"FloorGrille104","crest"]]',
         lights: '[[97,1,"WallLamp33","standardDimmed"],[97,3,"Lamp42","standardDimmed"],[97,5,"WallLamp15","standardDimmed"],[159,1,"Fireplace04","fire"],[165,1,"Fireplace06","fire"]]',
         gates: '[[162,1,"14.1","7.2","Open"]]',
+        gold: '[[68,"Coins"],[74,"Coins"],[124,"Coins"],[48,"Coins"],[132,"Coins"]]',
+        containers: '[[134,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[128,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[31,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",7],[105,"Crate","GOLD_ITEM_TYPE.GoldCube",5],[33,"Closet","GOLD_ITEM_TYPE.GoldBar",7],[42,"BookShelf","INTERACTION_ITEM.Book",5]]',
         shrines: '[[77,3,"FireballShrine2"],[65,5,"KungfuShrine"]]',
         trainers: '[[6,7,"Hearty"]]',
         }

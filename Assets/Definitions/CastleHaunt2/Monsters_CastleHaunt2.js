@@ -411,6 +411,26 @@ const CONTAINER_ITEM_TYPE = {
         material: MATERIAL.standard,
         rotateToNorth: 0,
     },
+    Closet: {
+        name: "Closet",
+        category: "chest",
+        element: "CLOSET",
+        scale: 1.75 / 2 ** 1,
+        glueToFloor: true,
+        texture: "Closet",
+        material: MATERIAL.standard,
+        rotateToNorth: Math.PI,
+    },
+    BookShelf: {
+        name: "BookShelf",
+        category: "chest",
+        element: "BOOKSHELF",
+        scale: 1.4 / 2 ** 5,
+        glueToFloor: true,
+        texture: "BookShelf",
+        material: MATERIAL.standard,
+        rotateToNorth: 0,
+    }
 };
 
 const DOOR_TYPE = {

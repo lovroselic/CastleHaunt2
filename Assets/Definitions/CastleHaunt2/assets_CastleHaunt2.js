@@ -598,6 +598,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/Red2.jpg", name: "Red2" },
     { srcName: "ObjectTextures/Sting.jpg", name: "Sting" },
     { srcName: "ObjectTextures/cake_basecolor.jpg", name: "Cake_BaseColor" },
+    { srcName: "ObjectTextures/closet_BaseColor.jpg", name: "Closet" },
+    { srcName: "ObjectTextures/BookShelf_baseColor.jpg", name: "BookShelf" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -704,10 +706,11 @@ LoadShaders = [
 
 LoadObjects = [
     "bag.obj", "apple.obj", "gem.obj", "coins.obj", "sword.obj", "pentagram.obj", "cake.obj",
-    /** not yet used */
-    "key.obj", "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
-    "treasure_chest.obj", "sting.obj", "pear.obj", "blockwall.obj", "wardrobe.obj",
-    "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj"
+    "closet.obj", "key.obj", "treasure_chest.obj", "sting.obj", "wardrobe.obj",
+    "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
+    "pear.obj", "blockwall.obj",
+    "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
+    "bookshelf.obj"
 ];
 
 LoadModels = [
@@ -725,7 +728,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia5.jpg", name: "Apparitia5" }, //unused
     { srcName: "EntityPictures/Apparitia6.jpg", name: "Apparitia6" }, //unused
     { srcName: "EntityPictures/Apparitia7.jpg", name: "Apparitia7" }, //unused
-    { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" }, 
+    { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
     { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
     { srcName: "EntityPictures/Apparitia10.jpg", name: "Apparitia10" }, //unused
 
