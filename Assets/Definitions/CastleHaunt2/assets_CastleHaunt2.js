@@ -578,6 +578,22 @@ LoadTextures = [
     { srcName: "Wall/WebbedFloor4.jpg", name: "WebbedFloor4" },
     { srcName: "Wall/WebbedFloor5.jpg", name: "WebbedFloor5" },
     { srcName: "Wall/WebbedFloor9.jpg", name: "WebbedFloor9" },
+    { srcName: "Wall/HauntedForest01.jpg", name: "HauntedForest01" },
+    { srcName: "Wall/HauntedForest02.jpg", name: "HauntedForest02" },
+    { srcName: "Wall/HauntedForest03.jpg", name: "HauntedForest03" },
+    { srcName: "Wall/HauntedForest04.jpg", name: "HauntedForest04" },
+    { srcName: "Wall/HauntedForest05.jpg", name: "HauntedForest05" },
+    { srcName: "Wall/HauntedForest06.jpg", name: "HauntedForest06" },
+    { srcName: "Wall/HauntedForest07.jpg", name: "HauntedForest07" },
+    { srcName: "Wall/HauntedForest08.jpg", name: "HauntedForest08" },
+    { srcName: "Wall/HauntedForest09.jpg", name: "HauntedForest09" },
+    { srcName: "Wall/HauntedForest10.jpg", name: "HauntedForest10" },
+    { srcName: "Wall/HauntedForest11.jpg", name: "HauntedForest11" },
+    { srcName: "Wall/HauntedForest12.jpg", name: "HauntedForest12" },
+    { srcName: "Wall/HauntedForest13.jpg", name: "HauntedForest13" },
+    { srcName: "Wall/HauntedForest14.jpg", name: "HauntedForest14" },
+    { srcName: "Wall/HauntedForest15.jpg", name: "HauntedForest15" },
+    { srcName: "Wall/HauntedForest16.jpg", name: "HauntedForest16" },
     /** decals that are textures */
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 
@@ -600,6 +616,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/cake_basecolor.jpg", name: "Cake_BaseColor" },
     { srcName: "ObjectTextures/closet_BaseColor.jpg", name: "Closet" },
     { srcName: "ObjectTextures/BookShelf_baseColor.jpg", name: "BookShelf" },
+    { srcName: "ObjectTextures/PirateChest_baseColor.jpg", name: "PirateChest" },
+    { srcName: "ObjectTextures/Closet4_baseColor.jpg", name: "Closet4" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -710,7 +728,7 @@ LoadObjects = [
     "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
     "pear.obj", "blockwall.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
-    "bookshelf.obj"
+    "bookshelf.obj", "pirate_chest.obj", "closet4.obj"
 ];
 
 LoadModels = [
@@ -756,7 +774,11 @@ LoadSprites = [
     { srcName: "EntityPictures/Spideress4.jpg", name: "SpideressOracle" },
     { srcName: "EntityPictures/PinkCoat.jpg", name: "PinkCoat" },
     { srcName: "EntityPictures/AuburnDomme.jpg", name: "AuburnDomme" },
+    { srcName: "EntityPictures/Librarian4.jpg", name: "Librarian" },
 
+    { srcName: "EntityPictures/Ninja3.jpg", name: "Ninja" },
+    { srcName: "EntityPictures/Sorceress5.jpg", name: "Sorceress" },
+    { srcName: "EntityPictures/FarSeer.jpg", name: "FarSeer" },
 
 
 
@@ -890,7 +912,7 @@ LoadSprites = [
     { srcName: "Items/Shell.png", name: "Shell" },
     { srcName: "Items/Shield.png", name: "Shield" },
     { srcName: "Items/SilverBar.png", name: "SilverBar" },
-    { srcName: "Items/Skull.png", name: "Skull" },
+    { srcName: "Items/Skull2.png", name: "Skull" },
     { srcName: "Items/Sponge.png", name: "Sponge" },
     { srcName: "Items/SunScreen.png", name: "SunScreen" },
     { srcName: "Items/Sword.png", name: "Sword" },

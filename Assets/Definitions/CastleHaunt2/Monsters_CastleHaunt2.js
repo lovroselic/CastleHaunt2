@@ -430,6 +430,26 @@ const CONTAINER_ITEM_TYPE = {
         texture: "BookShelf",
         material: MATERIAL.standard,
         rotateToNorth: 0,
+    },
+    PirateChest: {
+        name: "PirateChest",
+        category: "chest",
+        element: "PIRATE_CHEST",
+        scale: 1.0 / 2 ** 3,
+        glueToFloor: true,
+        texture: "PirateChest",
+        material: MATERIAL.standard,
+        rotateToNorth: Math.PI,
+    },
+    PlainCloset: {
+        name: "PlainCloset",
+        category: "chest",
+        element: "CLOSET4",
+        scale: 1.2 / 2 ** 2,
+        glueToFloor: true,
+        texture: "Closet4",
+        material: MATERIAL.standard,
+        rotateToNorth: 0,
     }
 };
 
@@ -2182,6 +2202,12 @@ const INTERACTION_ITEM = {
         which: "health",
         level: 1,
     },
+    Skull: {
+        name: "Skull",
+        category: "interaction_item",
+        inventorySprite: "Skull",
+        text: "Creeepy?"
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2211,7 +2237,49 @@ const INTERACTION_ENTITY = {
             conclusion: "My appetite is sated. You con continue your fight."
         }
     },
+    Librarian: {
+        name: "Librarian",
+        sprite: "Librarian",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Book", "GoldenBook"],
+        gives: "Heels",
+        text: {
+            intro: "In the quiet aisles, amidst whispered tales, I seek two tomes where knowledge prevails.",
+            progress: "One book in hand, yet another still await, Hurry, lest curiosity abate.",
+            conclusion: "Both volumes now mine, for knowledge I yearn, For your diligence, these red heels, a pairless return."
+        }
+    },
+    Sorceress: {
+        name: "Sorceress",
+        sprite: "Sorceress",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Mushroom", "Mushroom", "Mushroom"],
+        gives: "Poison",
+        text: {
+            intro: "From darkened woods and shadowed grove, bring me mushrooms, for my deadly stove.",
+            progress: "A mushroom found, but more to go, my cauldron waits for the final throw.",
+            conclusion: "All mushrooms brewed, the poison is keen, take this vial, silent and green."
+        }
+    },
+    Ninja: {
+        name: "Ninja",
+        sprite: "Ninja",
+        category: 'crest',
+        voice: "Female2",
+        wants: [],
+        gives: "Mushroom",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+    
+
 };
+
 const INTERACTION_SHRINE = {
     SpiderDefense: {
         name: "SpiderDefense",
@@ -2240,6 +2308,7 @@ const INTERACTION_SHRINE = {
         }
     },
 };
+
 const INTERACTOR = {
     TheThrone: {
         name: "TheThrone",

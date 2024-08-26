@@ -49,14 +49,16 @@ const DEBUG = {
     },
     checkPoint() {
         /**
-         * XXX: Mushroom 3x (11, )
+         * Sorceress: Mushroom 3x (11, )
          * XXX: Skull Xx (11, )
-         * XXX: Book-14, 
+         * Librarian: Book-14, GoldenBook-xxx
+         * YYYY : Red heels (from librarian)
+         * Ninja: Dagger 2x ()
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 7;
-        //GAME.level = 14;    //
+        //GAME.level = 7;
+        GAME.level = 16;    //
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -84,7 +86,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Fly", "Fly", "Mushroom", "Skull", "GoldCoin"];
+        let invItems = ["Mushroom", "Skull", "GoldCoin"];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
@@ -119,7 +121,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.06",
+    VERSION: "0.08.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
