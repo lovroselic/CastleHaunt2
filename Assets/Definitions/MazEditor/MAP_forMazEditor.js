@@ -107,8 +107,9 @@ const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerB
 
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
-for (let i = 1; i <= 11; i++) {
+const MAX_LAIR_COUNT = 34;
+for (let i = 1; i <= MAX_LAIR_COUNT; i++) {
     LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
 }
-
+console.info("LAIR_DECALS", LAIR_DECALS);
 console.log("%cMAP for MazEditor loaded.", "color: #888");

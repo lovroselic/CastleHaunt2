@@ -247,6 +247,22 @@ const ORACLE_TYPE = {
         text: "Not only we will take your castle, but we will also set new beauty standards. Pale, white and transparent is a new black.",
         interactionCategory: "oracle",
     },
+    ApparitiaHaunt: {
+        name: "ApparitiaHaunt",
+        sprite: "ApparitiaHaunt",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I will hunt you. I will hount you. I will spook you. Everywhere.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaHaunt2: {
+        name: "ApparitiaHaunt2",
+        sprite: "ApparitiaHaunt2",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Feeling haunted yet? Are you spooked?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -450,6 +466,16 @@ const CONTAINER_ITEM_TYPE = {
         texture: "Closet4",
         material: MATERIAL.standard,
         rotateToNorth: 0,
+    },
+    IronChest: {
+        name: "IronChest",
+        category: "chest",
+        element: "IRON_CHEST",
+        scale: 1.2 / 2 ** 2,
+        glueToFloor: true,
+        texture: "IronChest",
+        material: MATERIAL.silver,
+        rotateToNorth: Math.PI,
     }
 };
 
@@ -555,6 +581,26 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.standard,
     },
+    Wolf: {
+        name: "Wolf",
+        model: "Wolf",
+        scale: 1.7 / 2 ** 2,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        inventory: null,
+        mana: 0,
+        health: 20,
+        attack: 8,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt3",
+        behaviourArguments: [10, ["wanderer"], 5, ["advancer"]],
+        moveSpeed: 1.1,
+        material: MATERIAL.standard,
+    },
     MissGalaxy: {
         name: "MissGalaxy",
         model: "MissGalaxy",
@@ -581,11 +627,6 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
-
-
-    /** */
-
-
     Goblin: {
         name: "Goblin",
         model: "Goblin",
@@ -593,26 +634,30 @@ const MONSTER_TYPE = {
         rotateToNorth: Math.PI,
         midHeight: 0.5,
         deathType: "BloodExplosion",
-
-        mana: 3,
-        health: 10,
-        attack: 5,
-        magic: 1,
+        //
+        mana: 7,
+        health: 20,
+        attack: 16,
+        magic: 2,
         defense: 0,
         directMagicDamage: true,
-
+        //
+        caster: true,
+        shootDistance: 7,
+        stalkDistance: 8,
         attackSound: "MonsterAttack1",
         hurtSound: "MonsterHurt",
         behaviourArguments: [10, ["wanderer"], 7, ["shoot"]],
         moveSpeed: 1.0,
-
-        caster: true,
-        shootDistance: 7,
-        stalkDistance: 8,
         material: MATERIAL.standard,
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+
+    /** */
+
+
+
 
 
 
@@ -783,26 +828,7 @@ const MONSTER_TYPE = {
         missile: Missile,
         missileType: COMMON_ITEM_TYPE.Fireball,
     },
-    Wolf: {
-        name: "Wolf",
-        model: "Wolf",
-        scale: 1.7 / 2 ** 2,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 22,
-        defense: 16,
-        magic: 12,
-        health: 30,
-        xp: 50,
-        gold: 50,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt3",
-        behaviourArguments: [10, ["wanderer"], 5, ["advancer"]],
-        moveSpeed: 1.1,
-        material: MATERIAL.standard,
-    },
+
     Astro: {
         name: "Astro",
         model: "Astro",
@@ -1394,6 +1420,17 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Cake",
         text: "Cake? Very healthy."
     },
+    Dagger: {
+        name: "Dagger",
+        category: "interaction_item",
+        element: "DAGGER",
+        scale: 1.25 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Dagger_Base_Color",
+        material: MATERIAL.silver,
+        inventorySprite: "Dagger",
+        text: "It looks very sharp."
+    },
 
     Apple: {
         name: "Apple",
@@ -1706,17 +1743,17 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "Sheep",
         text: "Poor lamb. Are you hurt?",
     },
-    WolfLeader: {
-        name: "WolfLeader",
+    WolfPuppy: {
+        name: "WolfPuppy",
         category: "interaction_item",
         model: "Wolf",
-        scale: 1.0 / 2 ** 3,
+        scale: 1.2 / 2 ** 3,
         rotateToNorth: Math.PI,
         moveSpeed: 1.1,
         material: MATERIAL.standard,
         behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "WolfLeader",
-        text: "Got you, evil bastard.",
+        inventorySprite: "Wolf",
+        text: "Such a cute puppy.",
     },
 };
 
@@ -2208,6 +2245,18 @@ const INTERACTION_ITEM = {
         inventorySprite: "Skull",
         text: "Creeepy?"
     },
+    Dagger: {
+        name: "Dagger",
+        category: "interaction_item",
+        inventorySprite: "Dagger",
+        text: "Sharp?"
+    },
+    Binoculars: {
+        name: "Binoculars",
+        category: "interaction_item",
+        inventorySprite: "Binoculars",
+        text: "This makes distant object looks close."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2255,7 +2304,7 @@ const INTERACTION_ENTITY = {
         sprite: "Sorceress",
         category: 'crest',
         voice: "Female2",
-        wants: ["Mushroom", "Mushroom", "Mushroom"],
+        wants: ["Mushroom", "Mushroom", "Mushroom", "Mushroom", "Mushroom"],
         gives: "Poison",
         text: {
             intro: "From darkened woods and shadowed grove, bring me mushrooms, for my deadly stove.",
@@ -2276,7 +2325,33 @@ const INTERACTION_ENTITY = {
             conclusion: ""
         }
     },
-    
+    Fairy: {
+        name: "Fairy",
+        sprite: "Fairy",
+        category: 'crest',
+        voice: "Female2",
+        wants: [],
+        gives: "Mushroom",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+    GreyWarrior: {
+        name: "GreyWarrior",
+        sprite: "GreyWarrior",
+        category: 'crest',
+        voice: "Female",
+        wants: [],
+        gives: "",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+
 
 };
 

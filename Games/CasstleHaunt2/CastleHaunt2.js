@@ -49,16 +49,22 @@ const DEBUG = {
     },
     checkPoint() {
         /**
-         * Sorceress: Mushroom 3x (11, )
+         * Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
          * XXX: Skull Xx (11, )
-         * Librarian: Book-14, GoldenBook-xxx
-         * YYYY : Red heels (from librarian)
-         * Ninja: Dagger 2x ()
+         * Librarian: Book-14, GoldenBook-xxx -> gives red heels
+         * YYYY : Red heels (from librarian, from RRH)
+         * Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
+         * FarSeer: Binoculars
+         * fairy: (hand mirror, flower crown) -> gives mushroom
+         * GreyWarrior: (sword, shield)-> dagger
+         * RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
+         * 
+         * missing place keys: blue; green,
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 16;    //
+        GAME.level = 18;    //
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -121,7 +127,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.07",
+    VERSION: "0.08.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

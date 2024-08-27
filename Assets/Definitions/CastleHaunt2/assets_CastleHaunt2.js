@@ -594,6 +594,16 @@ LoadTextures = [
     { srcName: "Wall/HauntedForest14.jpg", name: "HauntedForest14" },
     { srcName: "Wall/HauntedForest15.jpg", name: "HauntedForest15" },
     { srcName: "Wall/HauntedForest16.jpg", name: "HauntedForest16" },
+    { srcName: "Wall/DarkSky01.jpg", name: "DarkSky01" },
+    { srcName: "Wall/DarkSky02.jpg", name: "DarkSky02" },
+    { srcName: "Wall/DarkSky03.jpg", name: "DarkSky03" },
+    { srcName: "Wall/DarkSky04.jpg", name: "DarkSky04" },
+    { srcName: "Wall/DarkSky05.jpg", name: "DarkSky05" },
+    { srcName: "Wall/DarkSky06.jpg", name: "DarkSky06" },
+    { srcName: "Wall/DarkSky07.jpg", name: "DarkSky07" },
+    { srcName: "Wall/ForestFloor01.jpg", name: "ForestFloor01" },
+    { srcName: "Wall/ForestFloor02.jpg", name: "ForestFloor02" },
+    { srcName: "Wall/ForestFloor03.jpg", name: "ForestFloor03" },
     /** decals that are textures */
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 
@@ -618,6 +628,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/BookShelf_baseColor.jpg", name: "BookShelf" },
     { srcName: "ObjectTextures/PirateChest_baseColor.jpg", name: "PirateChest" },
     { srcName: "ObjectTextures/Closet4_baseColor.jpg", name: "Closet4" },
+    { srcName: "ObjectTextures/Dagger_Base_Color.jpg", name: "Dagger_Base_Color" },
+    { srcName: "ObjectTextures/IronChest_base.jpg", name: "IronChest" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -728,11 +740,11 @@ LoadObjects = [
     "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
     "pear.obj", "blockwall.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
-    "bookshelf.obj", "pirate_chest.obj", "closet4.obj"
+    "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj"
 ];
 
 LoadModels = [
-    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf',
+    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf",
 ];
 
 LoadSprites = [
@@ -742,13 +754,13 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
     { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
-    { srcName: "EntityPictures/Apparitia4.jpg", name: "Apparitia4" }, //unused
+    { srcName: "EntityPictures/Apparitia4.jpg", name: "ApparitiaHaunt2" },
     { srcName: "EntityPictures/Apparitia5.jpg", name: "Apparitia5" }, //unused
     { srcName: "EntityPictures/Apparitia6.jpg", name: "Apparitia6" }, //unused
     { srcName: "EntityPictures/Apparitia7.jpg", name: "Apparitia7" }, //unused
     { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
     { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
-    { srcName: "EntityPictures/Apparitia10.jpg", name: "Apparitia10" }, //unused
+    { srcName: "EntityPictures/Apparitia10.jpg", name: "ApparitiaHaunt" },
 
 
 
@@ -775,10 +787,12 @@ LoadSprites = [
     { srcName: "EntityPictures/PinkCoat.jpg", name: "PinkCoat" },
     { srcName: "EntityPictures/AuburnDomme.jpg", name: "AuburnDomme" },
     { srcName: "EntityPictures/Librarian4.jpg", name: "Librarian" },
-
     { srcName: "EntityPictures/Ninja3.jpg", name: "Ninja" },
     { srcName: "EntityPictures/Sorceress5.jpg", name: "Sorceress" },
     { srcName: "EntityPictures/FarSeer.jpg", name: "FarSeer" },
+    { srcName: "EntityPictures/Fairy5.jpg", name: "Fairy" },
+    { srcName: "EntityPictures/GreyWarrior.jpg", name: "GreyWarrior" },
+
 
 
 
@@ -792,7 +806,8 @@ LoadSprites = [
     { srcName: "ActionMovables/LittleChicken.png", name: "LittleChicken" },
     { srcName: "ActionMovables/Sheep.png", name: "Sheep" },
     { srcName: "ActionMovables/Spider.png", name: "Spider" },
-    { srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
+    //{ srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
+    { srcName: "ActionMovables/Wolf.png", name: "Wolf" },
 
     //triggers
     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
@@ -812,6 +827,29 @@ LoadSprites = [
     { srcName: "Lairs/Lair09.jpg", name: "Lair09" },
     { srcName: "Lairs/Lair10.jpg", name: "Lair10" },
     { srcName: "Lairs/Lair11.jpg", name: "Lair11" },
+    { srcName: "Lairs/Lair12.jpg", name: "Lair12" },
+    { srcName: "Lairs/Lair13.jpg", name: "Lair13" },
+    { srcName: "Lairs/Lair14.jpg", name: "Lair14" },
+    { srcName: "Lairs/Lair15.jpg", name: "Lair15" },
+    { srcName: "Lairs/Lair16.jpg", name: "Lair16" },
+    { srcName: "Lairs/Lair17.jpg", name: "Lair17" },
+    { srcName: "Lairs/Lair18.jpg", name: "Lair18" },
+    { srcName: "Lairs/Lair19.jpg", name: "Lair19" },
+    { srcName: "Lairs/Lair20.jpg", name: "Lair20" },
+    { srcName: "Lairs/Lair21.jpg", name: "Lair21" },
+    { srcName: "Lairs/Lair22.jpg", name: "Lair22" },
+    { srcName: "Lairs/Lair23.jpg", name: "Lair23" },
+    { srcName: "Lairs/Lair24.jpg", name: "Lair24" },
+    { srcName: "Lairs/Lair25.jpg", name: "Lair25" },
+    { srcName: "Lairs/Lair26.jpg", name: "Lair26" },
+    { srcName: "Lairs/Lair27.jpg", name: "Lair27" },
+    { srcName: "Lairs/Lair28.jpg", name: "Lair28" },
+    { srcName: "Lairs/Lair29.jpg", name: "Lair29" },
+    { srcName: "Lairs/Lair30.jpg", name: "Lair30" },
+    { srcName: "Lairs/Lair31.jpg", name: "Lair31" },
+    { srcName: "Lairs/Lair32.jpg", name: "Lair32" },
+    { srcName: "Lairs/Lair33.jpg", name: "Lair33" },
+    { srcName: "Lairs/Lair34.jpg", name: "Lair34" },
 
     //doors
     { srcName: "Doors/DungeonDoor_Blue2.png", name: "DungeonDoor_Blue" },
@@ -921,6 +959,9 @@ LoadSprites = [
     { srcName: "Items/Wasp.png", name: "Wasp" },
     { srcName: "Items/Whip.png", name: "Whip" },
     { srcName: "Items/WoolenCap.png", name: "WoolenCap" },
+
+    { srcName: "Items/Dagger2.png", name: "Dagger" },
+    { srcName: "Items/Binoculars.png", name: "Binoculars" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

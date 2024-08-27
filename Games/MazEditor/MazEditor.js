@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.12.04",
+  VERSION: "0.12.05",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -1094,7 +1094,7 @@ const GAME = {
     });
     $("#trap_type").trigger("change");
 
-    for (const lair in LAIR_TYPE) {
+    for (const lair of LAIR_DECALS) {
       $("#lair_type").append(`<option value="${lair}">${lair}</option>`);
     }
 
