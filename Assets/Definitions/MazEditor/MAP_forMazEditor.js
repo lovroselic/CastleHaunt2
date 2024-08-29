@@ -74,7 +74,19 @@ const DECAL_PAINTINGS = [
     "AI_PIC_301", "AI_PIC_302", "AI_PIC_303", "AI_PIC_304", "AI_PIC_305", "AI_PIC_306", "AI_PIC_307", "AI_PIC_308", "AI_PIC_309", "AI_PIC_310", "AI_PIC_311", "AI_PIC_312", "AI_PIC_313", "AI_PIC_314", "AI_PIC_315",
     "AI_PIC_316", "AI_PIC_317", "AticAtacAI", "AztecChallenge_AI", "BCAI2", "BC_AI1", "Civilization", "DM_AI_2", "DM_AI_3", "FF_AI_1", "FF_AI_3", "Fred_AI_2", "Fred_AI_3", "Galaxians_AI_1", "Iceman400", "Invaders_AI_1",
     "LSL400", "LSL401", "Pacman400", "PitfallII_AI_1", "PrincessAI_01", "PrincessAI_02", "PrincessAI_03", "PrincessAI_04", "PrincessAI_05", "PrincessAI_06", "PrincessAI_07", "PrincessAI_08", "PrincessAI_09", "PrincessAI_10",
-    "PrincessAI_11", "PrincessAI_12", "PrincessAI_13", "PrincessAI_14", "PrincessAI_15", "PrincessAI_16", "Unknown400"
+    "PrincessAI_11", "PrincessAI_12", "PrincessAI_13", "PrincessAI_14", "PrincessAI_15", "PrincessAI_16", "Unknown400",
+    "AI_PIC_435", "AI_PIC_436", "AI_PIC_437", "AI_PIC_438", "AI_PIC_439", "AI_PIC_440", "AI_PIC_441", "AI_PIC_442", "AI_PIC_443", "AI_PIC_444", "AI_PIC_445", "AI_PIC_446", "AI_PIC_447", "AI_PIC_448", "AI_PIC_449", "AI_PIC_450",
+    "AI_PIC_451", "AI_PIC_452", "AI_PIC_453", "AI_PIC_454", "AI_PIC_455", "AI_PIC_456", "AI_PIC_457", "AI_PIC_458", "AI_PIC_459", "AI_PIC_460", "AI_PIC_461", "Dominatrix01", "Dominatrix02", "Dominatrix03", "Dominatrix04", "Dominatrix05",
+    "Dominatrix06", "Dominatrix07", "Dominatrix08", "Dominatrix09", "Dominatrix10", "Dominatrix100", "Dominatrix101", "Dominatrix102", "Dominatrix11", "GirlSwims02", "GirlSwims03", "GirlSwims04", "GirlSwims05", "GirlSwims06", "GirlSwims07",
+    "GirlSwims08", "GirlSwims09", "GirlSwims10", "GirlSwims11", "GirlSwims12", "GirlSwims13", "GirlSwims14", "GirlSwims15", "GirlSwims16", "GirlSwims17", "GirlSwims18", "GirlSwims19", "GirlSwims20", "GirlSwims21", "GirlSwims22",
+    "GreenBerret501", "ManiacMansion501", "Princess1", "Princess10", "Princess11", "Princess12", "Princess13", "Princess14", "Princess15", "Princess16", "Princess17", "Princess2", "Princess3", "Princess4", "Princess5",
+    "Princess6", "Princess7", "Princess8", "Princess9", "Unknown501", "Unknown502", "Unknown503", "UnknownHelicopterGame501",
+    "CastleLady08", "CastleLady09", "CastleLady10", "CastleLady11", "CastleLady12", "CastleLady13", "CastleLady14", "CastleLady15", "CastleLady16", "CastleLady17", "CastleLady18", "CastleLady19", "CastleLady20", "CastleLady21", "CastleLady22",
+    "CastleLady23", "CastleLady24", "CastleLady25", "CastleLady26", "CastleLady27", "CastleLady28", "CastleLady29", "CastleLady30", "CastleLady31", "CastleLady32", "CastleLady33", "CastleLady34", "CastleLady35", "CastleLady36", "CastleLady37",
+    "CastleLady38", "CastleLady39", "CastleLady40", "CastleLady41", "CastleLady42", "CastleLady43", "CastleLady44", "CastleLady45", "CastleLady46", "CastleLady47", "CastleLady48", "CastleLady49", "CastleLady50", "CastleLady51", "CastleLady52",
+    "CastleLady53", "CastleLady54", "CastleLady55", "CastleLady56", "CastleLady57", "CastleLady58", "CastleLady59", "CastleLady60", "CastleLady61", "CastleLady62", "CastleLady63", "CastleLady64", "CastleLady65", "CastleLady66", "CastleLady67",
+    "CastleLady68", "CastleLady69", "CastleLady70", "CastleLady71", "CastleLady72", "CastleLady73", "CastleLady74", "CastleLady75", "CastleLady76", "CastleLady77", "CastleLady78", "CastleLady79", "CastleLady80", "Nature01", "Nature02",
+    "Nature03", "Nature04", "Nature05", "Nature06", "Nature07"
 ].sort();
 
 /** Crests */
@@ -90,7 +102,8 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "PuddleDecal01", "PuddleDecal02", "PuddleDecal03", "PuddleDecal04", "PuddleDecal05", "PuddleDecal06", "PuddleDecal07", "PuddleDecal08", "PuddleDecal09", "PuddleDecal10", "PuddleDecal11", "PuddleDecal12", "PuddleDecal13", "PuddleDecal14",
     "WallSkelly101", "WallSkelly102", "WallSkelly103", "WallSkelly104",
     "SatanRam1", "SatanRam10", "SatanRam2", "SatanRam3", "SatanRam4", "SatanRam5", "SatanRam6", "SatanRam7", "SatanRam8", "SatanRam9",
-    "DemonSkull1", "DemonSkull2", "DemonSkull3", "FloorGrille101", "FloorGrille102", "FloorGrille103", "FloorGrille104", "FloorGrille105", "FloorGrille106", "FloorGrille107", "FloorGrille108", "FloorGrille109", "FloorGrille110", "FloorGrille111", "FloorGrille112", "FloorGrille113",
+    "DemonSkull1", "DemonSkull2", "DemonSkull3", "FloorGrille101", "FloorGrille102", "FloorGrille103", "FloorGrille104", "FloorGrille105", "FloorGrille106", "FloorGrille107", "FloorGrille108", "FloorGrille109", "FloorGrille110", "FloorGrille111",
+    "FloorGrille112", "FloorGrille113",
     "Ivy11", "Ivy12"
 ];
 const BOTTOM_CRESTS = ["Grate1_128"];

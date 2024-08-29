@@ -27,6 +27,9 @@ const MAP_TEXT = {
     15: "I wonder if there is a book about me? It should be. I am badass.",
     16: "",
     17: "A proper underground forest. Is it haunted? Oh yes.",
+    18: "Not all Apparitias are hostile. Maybe I can turn some. It's all about fashion.",
+    19: "",
+    20: "",
 };
 
 /** Map definitions */
@@ -159,23 +162,23 @@ const MAP = {
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
     }
     ,
-    7: {
+    7 : {
         name: "Following the Blood Trail",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB3AA3BB2AA13BB3ABAA4BB2AA3BAA3BAA16BB2AA2BAA7BB3ABB4AA2BB4AA6BAA3BAA4BB6AA3BB2AA2BB2AA2BB2AA10BB2ABB6ABB3AA6BAA2BB20A$"}',
+        data: '{"width":"13","height":"13","map":"BB3ABB2AA13BB3ABAA4BB2AA3BAA4BAA15BB2AA3BAA6BB3ABB4AA2BB4AA9BAA3BABB6AA3BB2AA2BB2AA2BB2AA10BB9ABB4AA6BAA2BABB19A$"}',
         wall: "SkullWall8",
         floor: "IrregularTiles1",
         ceil: "SpiderWeb10",
         start: '[89,3]',
-        decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"]]',
-        lights: '[[111,7,"WallLamp17","dim"],[57,1,"Lamp41","dim"],[84,3,"WallLamp","yellowgreen"],[48,7,"Lamp51","dimRed"],[142,3,"Lamp45","lightRed"],[152,5,"WallTorch","dimRed"]]',
-        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"]]',
+        decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"],[59,5,"CastleLady08","picture"]]',
+        lights: '[[111,7,"WallLamp17","dim"],[57,1,"Lamp41","dim"],[84,3,"WallLamp","yellowgreen"],[48,7,"Lamp51","dimRed"],[142,3,"Lamp45","lightRed"],[152,5,"WallTorch","dimRed"],[2,7,"Lights114","standardDimmed"],[158,1,"Lights114","standardDimmed"]]',
+        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"]]',
         containers: '[[154,"PirateChest","INTERACTION_ITEM.Skull",1]]',
         oracles: '[[52,5,"ApparitiaPale"]]',
-    }
+        }
     ,
     8: {
         name: "Silky Sanctuary",
@@ -347,10 +350,10 @@ const MAP = {
         floor: "OrnateFloor100",
         ceil: "Wood8",
         start: '[20,7]',
-        decals: '[[5,7,"BookShelf02","crest"],[6,7,"BookShelf03","crest"],[13,7,"BookShelf04","crest"],[14,7,"BookShelf05","crest"],[7,7,"BookShelf07","crest"],[127,1,"BookShelf09","crest"],[126,1,"BookShelf08","crest"],[126,7,"BookShelf15","crest"],[128,7,"BookShelf14","crest"],[25,7,"BookShelf16","picture"],[29,7,"BookShelf19","picture"],[26,7,"BookShelf18","picture"],[28,7,"BookShelf25","picture"],[86,5,"BookShelf27","picture"],[69,5,"BookShelf26","picture"],[52,5,"BookShelf25","picture"],[100,3,"BookShelf24","picture"],[83,3,"BookShelf23","picture"],[66,3,"BookShelf22","picture"],[260,1,"LeisureSuitLarry72","picture"],[269,1,"DungeonMaster204","picture"],[265,1,"ForbiddenForest90","picture"],[257,1,"LastNinja111","picture"],[188,5,"Karateka200","picture"],[137,5,"Athanor200","picture"],[129,5,"Cauldron10","picture"],[142,3,"Ishar11","picture"],[202,3,"ScubaDive60","picture"],[151,3,"SpaceQuest103","picture"]]',
+        decals: '[[5,7,"BookShelf02","crest"],[6,7,"BookShelf03","crest"],[13,7,"BookShelf04","crest"],[14,7,"BookShelf05","crest"],[7,7,"BookShelf07","crest"],[127,1,"BookShelf09","crest"],[126,1,"BookShelf08","crest"],[126,7,"BookShelf15","crest"],[128,7,"BookShelf14","crest"],[25,7,"BookShelf16","picture"],[29,7,"BookShelf19","picture"],[26,7,"BookShelf18","picture"],[28,7,"BookShelf25","picture"],[86,5,"BookShelf27","picture"],[69,5,"BookShelf26","picture"],[52,5,"BookShelf25","picture"],[100,3,"BookShelf24","picture"],[83,3,"BookShelf23","picture"],[66,3,"BookShelf22","picture"],[260,1,"LeisureSuitLarry72","picture"],[269,1,"DungeonMaster204","picture"],[265,1,"ForbiddenForest90","picture"],[257,1,"LastNinja111","picture"],[188,5,"Karateka200","picture"],[137,5,"Athanor200","picture"],[129,5,"Cauldron10","picture"],[142,3,"Ishar11","picture"],[202,3,"ScubaDive60","picture"],[151,3,"SpaceQuest103","picture"],[106,3,"Dominatrix05","picture"],[114,5,"Zeppelin88","picture"],[144,7,"Dominatrix02","picture"]]',
         lights: '[[106,1,"WallLamp14","standard"],[114,1,"WallLamp9","standard"],[106,7,"Lamp43","standard"],[114,7,"Lights109","standard"],[284,1,"Fireplace10","fire"],[170,5,"Fireplace10","fire"]]',
         gates: '[[3,7,"15.1","7.3","Open"],[276,1,"15.2","16.1","Down"]]',
-        containers: '[[36,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",7]]',
+        containers: '[[36,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",7],[161,"IronChest","INTERACTION_ITEM.WhiteHandbag",7]]',
         entities: '[[10,7,"Librarian"]]',
         lairs: '[[280,1,"Lair01"],[237,3,"Lair07"],[221,5,"Lair09"]]',
         monsterList: '["MissGalaxy"]',
@@ -376,7 +379,7 @@ const MAP = {
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
     }
     ,
-    17 : {
+    17: {
         name: "Underground Forest",
         sg: 0,
         maxSpawned: 4,
@@ -396,9 +399,9 @@ const MAP = {
         movables: '[[229,"WolfPuppy"],[225,"WolfPuppy"],[233,"WolfPuppy"]]',
         lairs: '[[152,3,"Lair23"],[136,5,"Lair21"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
-        }
+    }
     ,
-    18 : {
+    18: {
         name: "Fashion District",
         sg: 0,
         maxSpawned: 4,
@@ -417,5 +420,28 @@ const MAP = {
         objects: '[[240,"Skull"]]',
         lairs: '[[161,7,"Lair24"],[127,1,"Lair33"],[143,3,"Lair09"],[145,5,"Lair24"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
+    }
+    ,
+    19 : {
+        name: "The Gauntlet",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"19","height":"19","map":"BB4AA2BB2ABB2AA4BB2AA3BB2AA115BAA4BAA30BB4AA6BB2AA5BB26AA2BB4AA4BB5AA5BB3AA3BB3ÁÁ2ABB4ABB30AB$ÁÁ2AA2BB12ÁÁ56BB4"}',
+        wall: "GoldWithVines2",
+        floor: "SpiderWeb22",
+        ceil: "SmallBlackBricks46",
+        start: '[188,3]',
+        decals: '[[185,4,"PuddleDecal03","crest"],[183,4,"PuddleDecal03","crest"],[173,4,"PuddleDecal03","crest"],[175,4,"PuddleDecal08","crest"],[180,4,"PuddleDecal08","crest"],[177,4,"PuddleDecal10","crest"]]',
+        lights: '[[153,5,"WallLamp18","standard"],[191,5,"WallLamp32","standard"],[14,7,"Lights113","standard"],[356,1,"WallLamp9","standard"],[25,7,"Lights115","standard"],[329,1,"Lamp47","standard"],[3,7,"Fireplace01","fire"],[345,1,"Fireplace02","fire"]]',
+        gates: '[[189,3,"19.1","7.4","Open"],[171,5,"19.4","20.1","Closed"],[75,3,"19.2","7.5","Closed"],[303,3,"19.3","7.6","Closed"]]',
+        keys: '[[60,3],[288,4]]',
+        containers: '[[32,"PlainCloset","INTERACTION_ITEM.Leotard",7]]',
+        objects: '[[52,"Dagger"]]',
+        lairs: '[[7,7,"Lair21"],[10,7,"Lair25"],[349,1,"Lair26"],[352,1,"Lair02"]]',
+        monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
         }
+    ,
+    20: {}
 };

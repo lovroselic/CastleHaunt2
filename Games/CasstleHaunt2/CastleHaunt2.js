@@ -69,25 +69,24 @@ const DEBUG = {
             * Apparitia Traitor  
 
          * missing place keys: 
-            * blue; green,
+            * 
             * 
          * missing sources for: 
+            * flower crown
             * sword, 
             * shield,, 
-            * whitehandbag, 
             * mirror 2x, 
-            * dagger 2x, 
-            * binoculars, (
+            * dagger, 
+            * binoculars, from wolfie
             * pearl white heels
             * "LeoPumps", 
             * "LeoPumps", 
             * "LeoHat", 
-            * "Leotard"
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 15;    //18
+        GAME.level = 7;    //18
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -116,8 +115,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = ["Mushroom", "Skull", "GoldCoin",
-            "Book", "GoldenBook",
-            "Mushroom", "Mushroom", "Mushroom", "Mushroom", "Mushroom"
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -153,7 +151,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.09",
+    VERSION: "0.08.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
