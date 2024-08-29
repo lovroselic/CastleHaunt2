@@ -49,22 +49,45 @@ const DEBUG = {
     },
     checkPoint() {
         /**
-         * Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
-         * XXX: Skull Xx (11, )
-         * Librarian: Book-14, GoldenBook-xxx -> gives red heels
-         * YYYY : Red heels (from librarian, from RRH)
-         * Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
-         * FarSeer: Binoculars
-         * fairy: (hand mirror, flower crown) -> gives mushroom
-         * GreyWarrior: (sword, shield)-> dagger
-         * RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
-         * 
-         * missing place keys: blue; green,
+                * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
+         * XXX: Skull 5x (11, 7)
+                * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
+                *   CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
+                * CHECKED Licky: (handbag, hand mirror) -> helmet
+                * CHECKED Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
+                * CHECKED fairy: (hand mirror, flower crown) -> gives mushroom
+                * CHECKED GreyWarrior: (sword, shield, helmet)-> dagger
+                * CEHCKED RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
+         * Wolfie wants poison and pie to kill red riding hood, will give binoculars.
+         * FarSeer: Binoculars -> key to continue
+         
+            * CHECKED Purscilla LeoStuf -> goldCoin
+            * CHECKED Apparitia Traitor (pearl white heels, leather white bag) - > Coin
+        *
+        * COINS:
+            * purscilla   
+            * Apparitia Traitor  
+
+         * missing place keys: 
+            * blue; green,
+            * 
+         * missing sources for: 
+            * sword, 
+            * shield,, 
+            * whitehandbag, 
+            * mirror 2x, 
+            * dagger 2x, 
+            * binoculars, (
+            * pearl white heels
+            * "LeoPumps", 
+            * "LeoPumps", 
+            * "LeoHat", 
+            * "Leotard"
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 18;    //
+        GAME.level = 15;    //18
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -92,7 +115,10 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Mushroom", "Skull", "GoldCoin"];
+        let invItems = ["Mushroom", "Skull", "GoldCoin",
+            "Book", "GoldenBook",
+            "Mushroom", "Mushroom", "Mushroom", "Mushroom", "Mushroom"
+        ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
@@ -127,7 +153,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.08",
+    VERSION: "0.08.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

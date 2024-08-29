@@ -671,7 +671,7 @@ LoadTextures = [
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
 
     //title
-    { srcName: "Title/CastleHaunt2TitlePrincess768.jpg", name: "Title" },
+    { srcName: "Title/CastleHauntTitle2_768.jpg", name: "Title" },
 ];
 
 LoadAudio = [
@@ -766,8 +766,8 @@ LoadSprites = [
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
-    { srcName: "EntityPictures/PrincessOnThrone.jpg", name: "PrincessOnThrone" },
-    { srcName: "EntityPictures/TheThrone.jpg", name: "TheThrone" },
+    { srcName: "EntityPictures/PrincessOnThrone2.jpg", name: "PrincessOnThrone" },
+    { srcName: "EntityPictures/TheThrone2.jpg", name: "TheThrone" },
     { srcName: "EntityPictures/DarkEva.jpg", name: "DarkEva" },
     { srcName: "EntityPictures/ApplePicker.jpg", name: "ApplePicker" },
     { srcName: "EntityPictures/WhiteRubberella.jpg", name: "WhiteRubberella" },
@@ -792,6 +792,12 @@ LoadSprites = [
     { srcName: "EntityPictures/FarSeer.jpg", name: "FarSeer" },
     { srcName: "EntityPictures/Fairy5.jpg", name: "Fairy" },
     { srcName: "EntityPictures/GreyWarrior.jpg", name: "GreyWarrior" },
+    { srcName: "EntityPictures/StilettoTwin.jpg", name: "StilettoTwin" },
+    { srcName: "EntityPictures/Licky.jpg", name: "Licky" },
+    { srcName: "EntityPictures/RedRidingHood2.jpg", name: "RedRidingHood" },
+
+    { srcName: "EntityPictures/Leopardess.jpg", name: "Leopardess" },
+    { srcName: "EntityPictures/ApparitiaTraitor.jpg", name: "ApparitiaTraitor" },
 
 
 
@@ -807,7 +813,7 @@ LoadSprites = [
     { srcName: "ActionMovables/Sheep.png", name: "Sheep" },
     { srcName: "ActionMovables/Spider.png", name: "Spider" },
     //{ srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
-    { srcName: "ActionMovables/Wolf.png", name: "Wolf" },
+    { srcName: "ActionMovables/Wolf.png", name: "WolfPuppy" },
 
     //triggers
     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },
@@ -921,11 +927,15 @@ LoadSprites = [
     { srcName: "Items/LP.png", name: "LP" },
     { srcName: "Items/LeoHat.png", name: "LeoHat" },
     { srcName: "Items/LeoPumps.png", name: "LeoPumps" },
-    { srcName: "Items/Leotard.png", name: "Leotard" },
+    { srcName: "Items/Leotard2.png", name: "Leotard" },
+
+    { srcName: "Items/WhiteHeels.png", name: "WhiteHeels" },
+    { srcName: "Items/WhiteHandbag.png", name: "WhiteHandbag" },
+
     { srcName: "Items/Lizard.png", name: "Lizard" },
     { srcName: "Items/MagicWand.png", name: "MagicWand" },
     { srcName: "Items/Milk.png", name: "Milk" },
-    { srcName: "Items/Mirror.png", name: "Mirror" },
+    { srcName: "Items/HandMirror3.png", name: "Mirror" },
     { srcName: "Items/Moonstone.png", name: "Moonstone" },
     { srcName: "Items/Mushroom.png", name: "Mushroom" },
     { srcName: "Items/Pear.png", name: "Pear" },
@@ -962,6 +972,8 @@ LoadSprites = [
 
     { srcName: "Items/Dagger2.png", name: "Dagger" },
     { srcName: "Items/Binoculars.png", name: "Binoculars" },
+    { srcName: "Items/FlowerCrown.png", name: "FlowerCrown" },
+    { srcName: "Items/RedHandbag.png", name: "RedHandbag" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

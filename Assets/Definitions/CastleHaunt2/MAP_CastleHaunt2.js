@@ -376,7 +376,7 @@ const MAP = {
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
     }
     ,
-    17: {
+    17 : {
         name: "Underground Forest",
         sg: 0,
         maxSpawned: 4,
@@ -390,13 +390,13 @@ const MAP = {
         lights: '[[55,7,"Lights112","dim"],[64,7,"Lights112","dim"],[127,7,"Lights112","dim"],[193,7,"Lights112","dim"],[199,7,"Lights112","dim"],[253,3,"Lights112","dim"],[185,3,"Lights112","dim"],[117,3,"Lights112","dim"],[239,5,"Lights112","dim"],[171,5,"Lights112","dim"],[103,5,"Lights112","dim"],[35,5,"Lights112","dim"]]',
         gates: '[[13,7,"17.1","16.2","Open"]]',
         monsters: '[[106,"Wolf"],[111,"Wolf"],[115,"Wolf"]]',
-        entities: '[[280,1,"Fairy"],[204,5,"GreyWarrior"]]',
+        entities: '[[280,1,"Fairy"],[204,5,"GreyWarrior"],[101,3,"RedRidingHood"]]',
         objects: '[[156,"Mushroom"],[129,"Mushroom"]]',
         oracles: '[[6,7,"ApparitiaHaunt"],[284,1,"ApparitiaHaunt2"]]',
         movables: '[[229,"WolfPuppy"],[225,"WolfPuppy"],[233,"WolfPuppy"]]',
         lairs: '[[152,3,"Lair23"],[136,5,"Lair21"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
-    }
+        }
     ,
     18 : {
         name: "Fashion District",
@@ -404,14 +404,17 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB6AA7BB3AA58BB2AA11BB2AA7BAA3BB5AA2BAA35BB4AA14BAA5BB2AA2BB14ABB3ABB3AA2BB4ABB2ABB13ABB5AA4BAA3BB5ABB8ABB3ABB5AA8BB25AB$"}',
+        data: '{"width":"17","height":"17","map":"BB4AA3BB2AA36BB2AA2BB3AA9BB2ABB2AA3BAA3BABB8AA5BAA7BAA14BAA3BAA21BB2AA10BAA7BAA8BABB9AA2BB6ABB3ABB2ABABAA3BB4ABB6ABB2ABB2ABB5AA2BB4AA2BAA3BB2ABB3AA3BABB4ABB6AA6BB25AB$"}',
         wall: "IvyWall4",
         floor: "MC_floor20",
         ceil: "PebbleWall2",
         start: '[19,7]',
-        decals: '[[151,4,"LeopardRug02","crest"],[133,4,"LeopardRug02","crest"],[150,4,"LeopardRug02","crest"],[167,4,"LeopardRug02","crest"],[137,4,"LeopardRug06","crest"],[121,4,"LeopardRug06","crest"],[138,4,"LeopardRug06","crest"],[155,4,"LeopardRug06","crest"]]',
-        lights: '[[220,3,"Fireplace06","fire"],[101,3,"Fireplace10","fire"],[204,5,"Fireplace07","fire"],[85,5,"Fireplace11","fire"],[22,7,"Lamp46","standardDimmed"],[28,7,"Lamp46","standardDimmed"],[261,1,"Lamp41","standardDimmed"],[265,1,"Lamp41","standardDimmed"]]',
+        decals: '[[151,4,"LeopardRug02","crest"],[133,4,"LeopardRug02","crest"],[150,4,"LeopardRug02","crest"],[167,4,"LeopardRug02","crest"],[137,4,"LeopardRug06","crest"],[121,4,"LeopardRug06","crest"],[138,4,"LeopardRug06","crest"],[155,4,"LeopardRug06","crest"],[14,7,"BookShelf05","crest"],[263,4,"LeopardRug03","crest"],[246,4,"LeopardRug03","crest"],[245,4,"LeopardRug03","crest"],[247,4,"LeopardRug03","crest"]]',
+        lights: '[[220,3,"Fireplace06","fire"],[101,3,"Fireplace10","fire"],[204,5,"Fireplace07","fire"],[85,5,"Fireplace11","fire"],[40,7,"WallLamp35","standardDimmed"],[44,7,"WallLamp35","standardDimmed"],[226,1,"WallLamp19","standardDimmed"],[232,1,"WallLamp19","standardDimmed"],[275,1,"Lights110","fire"],[285,1,"Lights110","fire"]]',
         gates: '[[2,7,"18.1","16.3","Open"]]',
+        containers: '[[32,"IronChest","INTERACTION_ITEM.GoldenBook",7]]',
+        entities: '[[152,3,"Licky"],[136,5,"StilettoTwin"],[280,1,"Purrscilla"],[8,7,"ApparitiaTraitor"]]',
+        objects: '[[240,"Skull"]]',
         lairs: '[[161,7,"Lair24"],[127,1,"Lair33"],[143,3,"Lair09"],[145,5,"Lair24"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
         }

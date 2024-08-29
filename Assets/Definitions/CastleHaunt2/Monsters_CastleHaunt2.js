@@ -1752,7 +1752,7 @@ const MOVABLE_INTERACTION_OBJECT = {
         moveSpeed: 1.1,
         material: MATERIAL.standard,
         behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "Wolf",
+        inventorySprite: "WolfPuppy",
         text: "Such a cute puppy.",
     },
 };
@@ -2144,6 +2144,11 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "WolfLeader",
     },
+    WolfPuppy: {
+        name: "WolfPuppy",
+        category: "interaction_item",
+        inventorySprite: "WolfPuppy",
+    },
     RocketTop: {
         name: "RocketTop",
         category: "interaction_item",
@@ -2257,6 +2262,33 @@ const INTERACTION_ITEM = {
         inventorySprite: "Binoculars",
         text: "This makes distant object looks close."
     },
+
+    FlowerCrown: {
+        name: "FlowerCrown",
+        category: "interaction_item",
+        inventorySprite: "FlowerCrown",
+        text: "Someone is going to be so pretty. I am already."
+    },
+    RedHandbag: {
+        name: "RedHandbag",
+        category: "interaction_item",
+        inventorySprite: "RedHandbag",
+        text: "Latest fashion."
+    },
+
+    WhiteHeels: {
+        name: "WhiteHeels",
+        category: "interaction_item",
+        inventorySprite: "WhiteHeels",
+        text: "Black is the new black."
+    },
+
+    WhiteHandbag: {
+        name: "WhiteHandbag",
+        category: "interaction_item",
+        inventorySprite: "WhiteHandbag",
+        text: "Would suit someone pale."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2317,25 +2349,25 @@ const INTERACTION_ENTITY = {
         sprite: "Ninja",
         category: 'crest',
         voice: "Female2",
-        wants: [],
+        wants: ["Dagger", "Dagger", "Dagger"],
         gives: "Mushroom",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "In the shadows, daggers gleam, A stealthy girl's best dream.",
+            progress: "One blade secured, but more to find, Bring them to me, and we'll be aligned.",
+            conclusion: "Daggers in hand, my stealth is complete, Take this mushroom, for a poison so sweet."
         }
-    },
+    },    
     Fairy: {
         name: "Fairy",
         sprite: "Fairy",
         category: 'crest',
         voice: "Female2",
-        wants: [],
+        wants: ["FlowerCrown", "Mirror"],
         gives: "Mushroom",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "In the glimmer of dawn's first light, I seek adornments to enhance my sight.",
+            progress: "A crown of flowers, a mirror bright, continue your quest through the enchanted night.",
+            conclusion: "Adorned and seen, in beauty true, for you, a mushroom, dark as dew."
         }
     },
     GreyWarrior: {
@@ -2343,16 +2375,79 @@ const INTERACTION_ENTITY = {
         sprite: "GreyWarrior",
         category: 'crest',
         voice: "Female",
-        wants: [],
-        gives: "",
+        wants: ["Helmet", "Sword", "Shield"],
+        gives: "Dagger",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "Clad in shadow, seeking might, I need arms for the fight. Bring true knight's gear, to stand bold without fear.",
+            progress: "My arsenal grows, yet remains incomplete, More gear to gather before I'm elite.",
+            conclusion: "Equipped and ready, a knight stands tall, Take this dagger, it's too small for my call."
+        }
+    },    
+    Licky: {
+        name: "Licky",
+        sprite: "Licky",
+        category: 'crest',
+        voice: "Female",
+        wants: ["RedHandbag", "Mirror"],
+        gives: "Helmet",
+        text: {
+            intro: "To mirror my beauty, a red handbag I seek, Add a looking glass, for the chic and unique.",
+            progress: "One splendid item now shines in my clutch, Find the other, for I long for such.",
+            conclusion: "Red handbag and mirror, my allure now reflects, Take this helmet, for metal's what I reject."
+        }
+    },    
+    StilettoTwin: {
+        name: "StilettoTwin",
+        sprite: "StilettoTwin",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Heels", "Heels"],
+        gives: "RedHandbag",
+        text: {
+            intro: "Enchanting in red, I seek to enhance, A pair of red heels, to improve my stance.",
+            progress: "One heel closer to complete allure, Bring the other, make my charm pure.",
+            conclusion: "With both heels in hand, my style is set, For your help, a red handbag, the best you can get."
+        }
+    },    
+    RedRidingHood: {
+        name: "RedRidingHood",
+        sprite: "RedRidingHood",
+        category: 'crest',
+        voice: "FemHighQuick",
+        wants: ["WolfPuppy", "WolfPuppy", "WolfPuppy"],
+        gives: "Heels",
+        text: {
+            intro: "Through woods dark and deep, I search for pups lost, Bring them back to me, whatever the cost.",
+            progress: "One little wolf found, but more still roam, In the forest's shadows, far from home.",
+            conclusion: "All my pups safe, my heart feels whole, For your trouble, one red stiletto, complete your sole."
         }
     },
-
-
+    Purrscilla: {
+        name: "Purrscilla",
+        sprite: "Leopardess",
+        category: 'crest',
+        voice: "Female",
+        wants: ["LeoPumps", "LeoPumps", "LeoHat", "Leotard"],
+        gives: "GoldCoin",
+        text: {
+            intro: "Purrscilla purrs for stylish grace, spotted fashion, my ideal embrace.",
+            progress: "Fashion's call, one piece is here, more to strut, bring them near.",
+            conclusion: "All in leopard, style complete, here's your gold, for a feat so neat."
+        }
+    },
+    ApparitiaTraitor: {
+        name: "ApparitiaTraitor",
+        sprite: "ApparitiaTraitor",
+        category: 'crest',
+        voice: "Apparitia",
+        wants: ["WhiteHandbag", "WhiteHeels"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I am in awe of your fashion. I will cross to your side if you help me with the outfit.",
+            progress: "One chic piece found, yet my look remains incomplete, find the other, make my ensemble sweet.",
+            conclusion: "Outfitted now in flawless style, for your aid, a gold coin, and henceforth, I'm your ally."
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {
