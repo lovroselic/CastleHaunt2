@@ -2136,6 +2136,8 @@ LoadSprites = [
     { srcName: "PicDecals/Nature05.jpg", name: "Nature05" },
     { srcName: "PicDecals/Nature06.jpg", name: "Nature06" },
     { srcName: "PicDecals/Nature07.jpg", name: "Nature07" },
+
+    { srcName: "PicDecals/LatexGirl1.jpg", name: "LatexGirl1" },
 ];
 
 LoadShaders = [

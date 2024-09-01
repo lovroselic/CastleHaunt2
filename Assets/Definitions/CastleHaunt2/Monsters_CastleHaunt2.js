@@ -263,6 +263,14 @@ const ORACLE_TYPE = {
         text: "Feeling haunted yet? Are you spooked?",
         interactionCategory: "oracle",
     },
+    PinkLadyOnWhiteRug: {
+        name: "PinkLadyOnWhiteRug",
+        sprite: "PinkLadyOnWhiteRug",
+        category: 'crest',
+        voice: "Female2",
+        text: "Remember the lesson about checking things carefully?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2356,7 +2364,7 @@ const INTERACTION_ENTITY = {
             progress: "One blade secured, but more to find, Bring them to me, and we'll be aligned.",
             conclusion: "Daggers in hand, my stealth is complete, Take this mushroom, for a poison so sweet."
         }
-    },    
+    },
     Fairy: {
         name: "Fairy",
         sprite: "Fairy",
@@ -2382,7 +2390,7 @@ const INTERACTION_ENTITY = {
             progress: "My arsenal grows, yet remains incomplete, More gear to gather before I'm elite.",
             conclusion: "Equipped and ready, a knight stands tall, Take this dagger, it's too small for my call."
         }
-    },    
+    },
     Licky: {
         name: "Licky",
         sprite: "Licky",
@@ -2395,7 +2403,7 @@ const INTERACTION_ENTITY = {
             progress: "One splendid item now shines in my clutch, Find the other, for I long for such.",
             conclusion: "Red handbag and mirror, my allure now reflects, Take this helmet, for metal's what I reject."
         }
-    },    
+    },
     StilettoTwin: {
         name: "StilettoTwin",
         sprite: "StilettoTwin",
@@ -2408,7 +2416,7 @@ const INTERACTION_ENTITY = {
             progress: "One heel closer to complete allure, Bring the other, make my charm pure.",
             conclusion: "With both heels in hand, my style is set, For your help, a red handbag, the best you can get."
         }
-    },    
+    },
     RedRidingHood: {
         name: "RedRidingHood",
         sprite: "RedRidingHood",
@@ -2448,6 +2456,32 @@ const INTERACTION_ENTITY = {
             conclusion: "Outfitted now in flawless style, for your aid, a gold coin, and henceforth, I'm your ally."
         }
     },
+    FarSeer: {
+        name: "FarSeer",
+        sprite: "FarSeer",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Binoculars"],
+        gives: "EmeraldKey",
+        text: {
+            intro: "I cannot really see far now, but I know this. Without my help, you will not go far.",
+            progress: null,
+            conclusion: "With my sight restored, I see your path clear. Take this Emerald Key; without it, your quest ends here."
+        }
+    },
+    Weaver: {
+        name: "Weaver",
+        sprite: "Weaver",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["BlueRose", "PurpleRose", "RedRose"],
+        gives: "FlowerCrown",
+        text: {
+            intro: "With petals bright and colors fair, I weave crowns beyond compare.",
+            progress: "A rose in hand, but more still stray, Gather them all, for a crown to display.",
+            conclusion: "With all three roses, the crown is spun, Wear this Flower Crown, your beauty's won."
+        }
+    },    
 };
 
 const INTERACTION_SHRINE = {

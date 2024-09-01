@@ -30,6 +30,9 @@ const MAP_TEXT = {
     18: "Not all Apparitias are hostile. Maybe I can turn some. It's all about fashion.",
     19: "",
     20: "",
+    21: "",
+    22: "",
+    23: "",
 };
 
 /** Map definitions */
@@ -175,7 +178,7 @@ const MAP = {
         start: '[89,3]',
         decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"],[59,5,"CastleLady08","picture"]]',
         lights: '[[111,7,"WallLamp17","dim"],[57,1,"Lamp41","dim"],[84,3,"WallLamp","yellowgreen"],[48,7,"Lamp51","dimRed"],[142,3,"Lamp45","lightRed"],[152,5,"WallTorch","dimRed"],[2,7,"Lights114","standardDimmed"],[158,1,"Lights114","standardDimmed"]]',
-        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"]]',
+        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"],[4,7,"7.7","21.1","Up"],[164,1,"7.8","24.1","Closed"]]',
         containers: '[[154,"PirateChest","INTERACTION_ITEM.Skull",1]]',
         oracles: '[[52,5,"ApparitiaPale"]]',
         }
@@ -422,7 +425,7 @@ const MAP = {
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
     }
     ,
-    19 : {
+    19: {
         name: "The Gauntlet",
         sg: 0,
         maxSpawned: 4,
@@ -441,7 +444,78 @@ const MAP = {
         objects: '[[52,"Dagger"]]',
         lairs: '[[7,7,"Lair21"],[10,7,"Lair25"],[349,1,"Lair26"],[352,1,"Lair02"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
-        }
+    }
     ,
     20: {}
+    ,
+    21: {
+        name: "Top Landing",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB2ABB2AA7BAA3BB2AA8BB2AA2BB2AA4BB2AA3BB2ABB2AA27BAA10BAA2BAA14BAA8BB2ABB5ABB2AA2BB20ABB2AA2BB8AA2BB13AA2BABAA3BAA5BB9ABB4ABB7ABB15$A"}',
+        wall: "DarkMossy23",
+        floor: "BrownWall40",
+        ceil: "Broken1",
+        start: '[202,1]',
+        decals: '[[159,7,"LatexGirl1","picture"]]',
+        lights: '[[19,7,"Lamp47","standardRedish"],[178,3,"Lights105","standardRedish"],[198,1,"Lamp49","standard"],[103,3,"Lights107","standard"]]',
+        gates: '[[217,1,"21.1","7.7","Down"],[44,3,"21.2","22.1","Up"],[150,5,"21.3","23.1","Closed"]]',
+        triggers: '[[91,5,"SmoothWallButton",1,96]]',
+        objects: '[[102,"Shield"]]',
+        oracles: '[[221,1,"PinkLadyOnWhiteRug"]]',
+    }
+    ,
+    22: {
+        name: "The Balcony",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB3AA3BABB4AA35BB5AA19BAA12BABB11AA4BB4ABB5ABB4ABB3ABABB3AA3BB16ABABB20A$"}',
+        wall: "BlackBricks45",
+        floor: "DarkMarble50",
+        ceil: "OrnateFloor104",
+        start: '[131,5]',
+        decals: '[[149,4,"PersianRug02","crest"],[136,4,"PersianRug02","crest"],[135,4,"PersianRug02","crest"],[137,4,"PersianRug02","crest"]]',
+        lights: '[[82,1,"Lights109","standard"],[86,1,"Lights109","standard"],[162,1,"Fireplace01","fire"]]',
+        gates: '[[130,5,"22.1","21.2","Down"]]',
+        containers: '[[140,"PirateChest","INTERACTION_ITEM.LeoPumps",1],[79,"Closet","INTERACTION_ITEM.Mirror",5]]',
+        entities: '[[6,7,"FarSeer"]]',
+        objects: '[[136,"Dagger"]]',
+    }
+    ,
+    23 : {
+        name: "The Weaver",
+        sg: 0,
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 4000,
+        data: '{"width":"13","height":"13","map":"BB2AA3BB2AA2BABB2AA3BAA3BB2AA18BAA3BAA26BB10AA2BB11ABB7ABB7ABAA2BB5AA2BB3ABB39ABB4$"}',
+        wall: "GreyWall101",
+        floor: "Grass17",
+        ceil: "DarkSky01",
+        start: '[141,3]',
+        decals: '[[66,5,"HauntedForest01","texture"],[54,5,"HauntedForest01","texture"],[42,5,"HauntedForest01","texture"],[92,5,"HauntedForest01","texture"],[106,5,"HauntedForest01","texture"],[120,5,"HauntedForest01","texture"],[66,7,"HauntedForest01","texture"],[54,7,"HauntedForest01","texture"],[42,7,"HauntedForest01","texture"],[30,7,"HauntedForest01","texture"],[92,1,"HauntedForest01","texture"],[106,1,"HauntedForest01","texture"],[120,1,"HauntedForest01","texture"],[134,1,"HauntedForest01","texture"]]',
+        lights: '[[72,3,"WallLamp31","standard"],[98,3,"WallLamp31","standard"]]',
+        gates: '[[142,3,"23.1","21.3","Closed"]]',
+        entities: '[[78,5,"Weaver"]]',
+        lairs: '[[90,3,"Lair21"]]',
+        monsterList: '["MissGalaxy"]',
+        }
+    ,
+    24: {
+        name: "Wolf Den",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB14AA155BABB47AA12BB17ABB30$BB10A"}',
+        wall: "SkullWall8",
+        floor: "IrregularTiles1",
+        ceil: "SpiderWeb10",
+        start: '[25,7]',
+        gates: '[[8,7,"24.1","7.8","Closed"]]',
+    }
 };

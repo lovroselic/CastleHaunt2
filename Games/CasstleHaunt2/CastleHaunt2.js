@@ -59,7 +59,8 @@ const DEBUG = {
                 * CHECKED GreyWarrior: (sword, shield, helmet)-> dagger
                 * CEHCKED RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
          * Wolfie wants poison and pie to kill red riding hood, will give binoculars.
-         * FarSeer: Binoculars -> key to continue
+         * Weaver wants roses
+            * CHECKED FarSeer: Binoculars -> key to continue
          
             * CHECKED Purscilla LeoStuf -> goldCoin
             * CHECKED Apparitia Traitor (pearl white heels, leather white bag) - > Coin
@@ -73,20 +74,21 @@ const DEBUG = {
             * 
          * missing sources for: 
             * flower crown
+            *  "BlueRose", 
+            * "PurpleRose", 
+            * "RedRose",
             * sword, 
-            * shield,, 
-            * mirror 2x, 
-            * dagger, 
+            * mirror, 
             * binoculars, from wolfie
             * pearl white heels
             * "LeoPumps", 
-            * "LeoPumps", 
             * "LeoHat", 
+            * PIE:
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 7;    //18
+        GAME.level = 23;    //24
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -115,14 +117,15 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = ["Mushroom", "Skull", "GoldCoin",
-
+            "BlueRose", "PurpleRose", "RedRose",
+            "Binoculars",
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Emerald"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -151,7 +154,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.10",
+    VERSION: "0.08.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

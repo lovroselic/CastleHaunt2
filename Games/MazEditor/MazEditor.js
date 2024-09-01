@@ -927,7 +927,8 @@ const GAME = {
       $("#picture_decal").append(`<option value="${pic}">${pic}</option>`);
     }
     $("#picture_decal").change(function () {
-      ENGINE.drawToId("picturecanvas", 0, 0, SPRITE[$("#picture_decal")[0].value]);
+      //ENGINE.drawToId("picturecanvas", 0, 0, SPRITE[$("#picture_decal")[0].value]);
+      ENGINE.drawToId("picturecanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#picture_decal")[0].value], INI.CANVAS_RESOLUTION));
     });
     $("#picture_decal").trigger("change");
 
@@ -1139,7 +1140,7 @@ const GAME = {
   randomPic() {
     const pic = DECAL_PAINTINGS.chooseRandom();
     $("#picture_decal").val(pic).change();
-    ENGINE.drawToId("picturecanvas", 0, 0, SPRITE[$("#picture_decal")[0].value]);
+    ENGINE.drawToId("picturecanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#picture_decal")[0].value], INI.CANVAS_RESOLUTION));
   },
   randomCrest() {
     const pic = [...DECAL_CRESTS, ...BOTTOM_CRESTS, ...TOP_CRESTS].chooseRandom();

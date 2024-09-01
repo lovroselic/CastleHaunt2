@@ -762,8 +762,6 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
     { srcName: "EntityPictures/Apparitia10.jpg", name: "ApparitiaHaunt" },
 
-
-
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
     { srcName: "EntityPictures/PrincessOnThrone2.jpg", name: "PrincessOnThrone" },
@@ -795,9 +793,10 @@ LoadSprites = [
     { srcName: "EntityPictures/StilettoTwin.jpg", name: "StilettoTwin" },
     { srcName: "EntityPictures/Licky.jpg", name: "Licky" },
     { srcName: "EntityPictures/RedRidingHood2.jpg", name: "RedRidingHood" },
-
     { srcName: "EntityPictures/Leopardess.jpg", name: "Leopardess" },
     { srcName: "EntityPictures/ApparitiaTraitor.jpg", name: "ApparitiaTraitor" },
+    { srcName: "EntityPictures/PinkLadyOnWhiteRug.jpg", name: "PinkLadyOnWhiteRug" },
+    { srcName: "EntityPictures/Weaver.jpg", name: "Weaver" },
 
 
 
@@ -972,7 +971,7 @@ LoadSprites = [
 
     { srcName: "Items/Dagger2.png", name: "Dagger" },
     { srcName: "Items/Binoculars.png", name: "Binoculars" },
-    { srcName: "Items/FlowerCrown.png", name: "FlowerCrown" },
+    { srcName: "Items/FlowerCrown2.png", name: "FlowerCrown" },
     { srcName: "Items/RedHandbag.png", name: "RedHandbag" },
 
     //UI
@@ -2356,6 +2355,8 @@ LoadSprites = [
     { srcName: "PicDecals/Nature05.jpg", name: "Nature05" },
     { srcName: "PicDecals/Nature06.jpg", name: "Nature06" },
     { srcName: "PicDecals/Nature07.jpg", name: "Nature07" },
+
+    { srcName: "PicDecals/LatexGirl1.jpg", name: "LatexGirl1" },
 ];
 
 console.log("%cAssets for CastleHaunt ready.", "color: orange");

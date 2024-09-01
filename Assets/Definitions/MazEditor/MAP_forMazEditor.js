@@ -86,7 +86,8 @@ const DECAL_PAINTINGS = [
     "CastleLady38", "CastleLady39", "CastleLady40", "CastleLady41", "CastleLady42", "CastleLady43", "CastleLady44", "CastleLady45", "CastleLady46", "CastleLady47", "CastleLady48", "CastleLady49", "CastleLady50", "CastleLady51", "CastleLady52",
     "CastleLady53", "CastleLady54", "CastleLady55", "CastleLady56", "CastleLady57", "CastleLady58", "CastleLady59", "CastleLady60", "CastleLady61", "CastleLady62", "CastleLady63", "CastleLady64", "CastleLady65", "CastleLady66", "CastleLady67",
     "CastleLady68", "CastleLady69", "CastleLady70", "CastleLady71", "CastleLady72", "CastleLady73", "CastleLady74", "CastleLady75", "CastleLady76", "CastleLady77", "CastleLady78", "CastleLady79", "CastleLady80", "Nature01", "Nature02",
-    "Nature03", "Nature04", "Nature05", "Nature06", "Nature07"
+    "Nature03", "Nature04", "Nature05", "Nature06", "Nature07",
+    "LatexGirl1"
 ].sort();
 
 /** Crests */
