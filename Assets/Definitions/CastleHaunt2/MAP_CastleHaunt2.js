@@ -33,6 +33,10 @@ const MAP_TEXT = {
     21: "",
     22: "",
     23: "",
+    24: "",
+    25: "",
+    26: "",
+    27: "",
 };
 
 /** Map definitions */
@@ -165,7 +169,7 @@ const MAP = {
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
     }
     ,
-    7 : {
+    7: {
         name: "Following the Blood Trail",
         sg: 0,
         maxSpawned: -1,
@@ -181,7 +185,7 @@ const MAP = {
         gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"],[4,7,"7.7","21.1","Up"],[164,1,"7.8","24.1","Closed"]]',
         containers: '[[154,"PirateChest","INTERACTION_ITEM.Skull",1]]',
         oracles: '[[52,5,"ApparitiaPale"]]',
-        }
+    }
     ,
     8: {
         name: "Silky Sanctuary",
@@ -486,7 +490,7 @@ const MAP = {
         objects: '[[136,"Dagger"]]',
     }
     ,
-    23 : {
+    23: {
         name: "The Weaver",
         sg: 0,
         maxSpawned: 3,
@@ -503,7 +507,7 @@ const MAP = {
         entities: '[[78,5,"Weaver"]]',
         lairs: '[[90,3,"Lair21"]]',
         monsterList: '["MissGalaxy"]',
-        }
+    }
     ,
     24: {
         name: "Wolf Den",
@@ -511,11 +515,36 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB14AA155BABB47AA12BB17ABB30$BB10A"}',
-        wall: "SkullWall8",
-        floor: "IrregularTiles1",
-        ceil: "SpiderWeb10",
+        data: '{"width":"17","height":"17","map":"BB8AA42BABAA7BB2AA6BAA12BABAA4BB2AA8BAA4BAA2BAA11BABAA7BAA15BABB10ABB24ABB10ABB13ABB2ABABB2AA2BB4AA8BAA4BB4ABB19ABABB28A$"}',
+        wall: "MossyWall111",
+        floor: "MossyFloor110",
+        ceil: "GreyWall11",
         start: '[25,7]',
-        gates: '[[8,7,"24.1","7.8","Closed"]]',
+        decals: '[[125,1,"HauntedForest05","texture"],[143,1,"HauntedForest05","texture"],[145,1,"HauntedForest05","texture"],[129,1,"HauntedForest05","texture"],[113,1,"HauntedForest05","texture"],[113,3,"HauntedForest05","texture"],[129,3,"HauntedForest05","texture"],[145,3,"HauntedForest05","texture"],[107,5,"HauntedForest05","texture"],[125,5,"HauntedForest05","texture"],[143,5,"HauntedForest05","texture"],[106,1,"HauntedForest05","texture"],[107,1,"HauntedForest05","texture"],[114,1,"HauntedForest05","texture"],[144,4,"ForestFloor02","texture"],[127,4,"ForestFloor02","texture"],[126,4,"ForestFloor02","texture"],[128,4,"ForestFloor02","texture"]]',
+        lights: '[[23,7,"WallLamp18","standard"],[27,7,"WallLamp18","standard"],[195,7,"WallLamp33","dimRed"]]',
+        gates: '[[8,7,"24.1","7.8","Closed"],[280,1,"24.2","25.1","Down"]]',
+        entities: '[[161,1,"Wolfie"]]',
     }
+    ,
+    25: {
+        name: "The Kitchen",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 4000,
+        data: '{"width":"17","height":"17","map":"BB4ABB2ABB2ABAA53BAA5BAA2BB2AA10BAA3BB4AA13BAA2BAA4BAA16BB4AA3BB2AA8BAA9BB9ABB3ABB6AA2BAA2BB3ABB17ABB2ABABB2AA3BB2ABB2ABB9ABAA3BB2ABB2AA2BB2AA2BABB3AA2BB32$BB2A"}',
+        wall: "SmallBlackBricks46",
+        floor: "Wood11",
+        ceil: "DarkGreyRock",
+        start: '[25,7]',
+        lights: '[[52,5,"Lamp42","standard"],[236,3,"Lights115","standard"],[5,7,"Fireplace14","fire"],[280,1,"Fireplace13","fire"],[11,7,"WallLamp35","dim"],[277,1,"WallLamp35","dim"],[172,7,"Fireplace14","dimRed"],[274,1,"Fireplace04","dimRed"],[116,1,"Fireplace15","dimRed"]]',
+        gates: '[[8,7,"25.1","24.2","Up"],[203,3,"25.2","26.1","Down"],[85,5,"25.3","27.1","Down"]]',
+        entities: '[[221,5,"Bakeress"],[67,3,"Cookie"]]',
+        lairs: '[[127,1,"Lair33"],[161,7,"Lair11"],[143,3,"Lair24"],[145,5,"Lair25"]]',
+        monsterList: '["MissGalaxy"]',
+    }
+    ,
+    26: {}
+    ,
+    27: {}
 };

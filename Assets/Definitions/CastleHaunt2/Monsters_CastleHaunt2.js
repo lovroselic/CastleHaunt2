@@ -2270,7 +2270,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "Binoculars",
         text: "This makes distant object looks close."
     },
-
     FlowerCrown: {
         name: "FlowerCrown",
         category: "interaction_item",
@@ -2296,6 +2295,13 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "WhiteHandbag",
         text: "Would suit someone pale."
+    },
+
+    ConcentratedPoison: {
+        name: "ConcentratedPoison",
+        category: "interaction_item",
+        inventorySprite: "ConcentratedPoison",
+        text: "Don't drink this. It's deadlier than poison."
     },
 };
 
@@ -2481,7 +2487,72 @@ const INTERACTION_ENTITY = {
             progress: "A rose in hand, but more still stray, Gather them all, for a crown to display.",
             conclusion: "With all three roses, the crown is spun, Wear this Flower Crown, your beauty's won."
         }
-    },    
+    },
+    Wolfie: {
+        name: "Wolfie",
+        sprite: "Wolfie",
+        category: 'crest',
+        voice: "Female",
+        wants: [],
+        gives: "",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+    PoisonWitch: {
+        name: "PoisonWitch",
+        sprite: "PoisonWitch",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Poison", "Poison", "Poison"],
+        gives: "ConcentratedPoison",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+    Cookie: {
+        name: "Cookie",
+        sprite: "Cookie",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Apple", "Dough"],
+        gives: "Pie",
+        text: {
+            intro: "In the kitchen, where magic's spun, Ingredients needed, one by one.",
+            progress: "A mix in progress, but not yet complete, Seek and gather, for a treat so sweet.",
+            conclusion: "Ingredients blended, under my chef's guise, For you, a pie, a delicious surprise."
+        }
+    },
+    Bakeress: {
+        name: "Bakeress",
+        sprite: "Bakeress",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Egg", "Milk"],
+        gives: "Dough",
+        text: {
+            intro: "Flour and passion, for bread to rise, Egg and milk, for dough's disguise.",
+            progress: "Stirring, waiting, something lacks, Continue your quest, no time to relax.",
+            conclusion: "Egg and milk, now mixed within, Your reward, dough ready to spin."
+        }
+    },
+    SkullCollector: {
+        name: "SkullCollector",
+        sprite: "SkullCollector",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Skull", "Skull", "Skull", "Skull", "Skull"],
+        gives: "GoldCoin",
+        text: {
+            intro: "In shadows lurk, a collector's plea, skulls she seeks, from you and me.",
+            progress: "Her collection grows, yet still she waits, for more to come, through darkened gates.",
+            conclusion: "With skulls in tow, her smile gleams, a gold coin yours, in moonlight beams.",
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {

@@ -52,16 +52,18 @@ const DEBUG = {
                 * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
          * XXX: Skull 5x (11, 7)
                 * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
-                *   CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
+                * CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
                 * CHECKED Licky: (handbag, hand mirror) -> helmet
                 * CHECKED Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
                 * CHECKED fairy: (hand mirror, flower crown) -> gives mushroom
                 * CHECKED GreyWarrior: (sword, shield, helmet)-> dagger
                 * CEHCKED RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
-         * Wolfie wants poison and pie to kill red riding hood, will give binoculars.
-         * Weaver wants roses
+         * Wolfie wants master poison and pie to kill red riding hood, will give binoculars.
+            * CHECKED cook want egg, ..., milk, gives pie
+            * CHECKED Bakeress
+         * Witch2 wantt 3x poison , gives ConcentratedPoison
+            * CHECKED Weaver wants roses - > gives flower crown
             * CHECKED FarSeer: Binoculars -> key to continue
-         
             * CHECKED Purscilla LeoStuf -> goldCoin
             * CHECKED Apparitia Traitor (pearl white heels, leather white bag) - > Coin
         *
@@ -73,7 +75,7 @@ const DEBUG = {
             * 
             * 
          * missing sources for: 
-            * flower crown
+            * ConcentratedPoison 
             *  "BlueRose", 
             * "PurpleRose", 
             * "RedRose",
@@ -83,12 +85,18 @@ const DEBUG = {
             * pearl white heels
             * "LeoPumps", 
             * "LeoHat", 
-            * PIE:
+            * "Apple", 
+            * "Dough" 
+            * "Egg", 
+            * "Milk"
+            * ConcentratedPoison
+                * Poison
+                * Poison
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 23;    //24
+        GAME.level = 25;    //24
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -117,8 +125,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = ["Mushroom", "Skull", "GoldCoin",
-            "BlueRose", "PurpleRose", "RedRose",
-            "Binoculars",
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -154,7 +161,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.11",
+    VERSION: "0.08.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

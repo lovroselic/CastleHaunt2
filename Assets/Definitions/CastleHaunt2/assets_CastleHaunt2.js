@@ -797,9 +797,11 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaTraitor.jpg", name: "ApparitiaTraitor" },
     { srcName: "EntityPictures/PinkLadyOnWhiteRug.jpg", name: "PinkLadyOnWhiteRug" },
     { srcName: "EntityPictures/Weaver.jpg", name: "Weaver" },
-
-
-
+    { srcName: "EntityPictures/Wolfie2.jpg", name: "Wolfie" },
+    { srcName: "EntityPictures/PoisonWitch.jpg", name: "PoisonWitch" },
+    { srcName: "EntityPictures/Bakeress.jpg", name: "Bakeress" },
+    { srcName: "EntityPictures/Cookie2.jpg", name: "Cookie" },
+    { srcName: "EntityPictures/SkullCollector2.jpg", name: "SkullCollector" },
 
 
     { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
@@ -973,6 +975,7 @@ LoadSprites = [
     { srcName: "Items/Binoculars.png", name: "Binoculars" },
     { srcName: "Items/FlowerCrown2.png", name: "FlowerCrown" },
     { srcName: "Items/RedHandbag.png", name: "RedHandbag" },
+    { srcName: "Items/ConcentratedPoison.png", name: "ConcentratedPoison" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
