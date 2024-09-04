@@ -50,7 +50,7 @@ const DEBUG = {
     checkPoint() {
         /**
                 * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
-         * XXX: Skull 5x (11, 7)
+                * CHECKED SkullCollector: Skull 5x (11, 7, 27)
                 * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
                 * CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
                 * CHECKED Licky: (handbag, hand mirror) -> helmet
@@ -61,7 +61,7 @@ const DEBUG = {
          * Wolfie wants master poison and pie to kill red riding hood, will give binoculars.
             * CHECKED cook want egg, ..., milk, gives pie
             * CHECKED Bakeress
-         * Witch2 wantt 3x poison , gives ConcentratedPoison
+            * CHECKED Witch2 wantt 3x poison , gives ConcentratedPoison
             * CHECKED Weaver wants roses - > gives flower crown
             * CHECKED FarSeer: Binoculars -> key to continue
             * CHECKED Purscilla LeoStuf -> goldCoin
@@ -69,13 +69,14 @@ const DEBUG = {
         *
         * COINS:
             * purscilla   
-            * Apparitia Traitor  
+            * Apparitia Traitor 
+            * SkullCollector 
 
-         * missing place keys: 
+         * missing placed keys: 
             * 
             * 
          * missing sources for: 
-            * ConcentratedPoison 
+            * "Skull", "Skull",
             *  "BlueRose", 
             * "PurpleRose", 
             * "RedRose",
@@ -89,14 +90,13 @@ const DEBUG = {
             * "Dough" 
             * "Egg", 
             * "Milk"
-            * ConcentratedPoison
                 * Poison
                 * Poison
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 25;    //24
+        GAME.level = 24;    //24
         GAME.gold = 1997;   //gold collected in 6,
         GAME.lives = 2;
 
@@ -125,7 +125,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = ["Mushroom", "Skull", "GoldCoin",
-
+            "Pie", "ConcentratedPoison"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -161,7 +161,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.08.12",
+    VERSION: "0.09.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -544,7 +544,37 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    26: {}
+    26: {
+        name: "Mistress Poisoner",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 4000,
+        data: '{"width":"13","height":"13","map":"BB3AA2BABB2AA17BAA3BAA10BB3AA6BABB2AA4BAA3BABB2AA15BAA4BB9ABAA3BB3AA2BB6ABB10ABB2AA3BABB2AA4BB4ABB2ABB13ABB8ABB2$"}',
+        wall: "RedBricks42",
+        floor: "PebbleWall3",
+        ceil: "WebbedFloor4",
+        start: '[40,5]',
+        lights: '[[56,7,"Lights111","dimRed"],[71,7,"Lights111","dimRed"],[60,7,"Lights111","dimRed"]]',
+        gates: '[[39,5,"26.1","25.2","Up"]]',
+        entities: '[[149,1,"PoisonWitch"]]',
+    }
     ,
-    27: {}
+    27 : {
+        name: "Skull Collector",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"21","height":"21","map":"BB3ABABAA6BB3ABB3ABAA2BAA2BB2ABB3AA8BABABABB2AA2BABABB2ABABAA3BABAA2BABABABAA7BAA5BB2AA4BB3AA13BABABAA3BAA2BAA5BABB2AA4BAA3BB3AA2BB4ABABB2ABABB2AA2BB5AA6BB2ABABABABABB2ABABABABB5AA2BB6ABB2AA2BB2ABB2AA7BB2ABAA2BB2AA2BAA4BB2AA2BB2ABB2ABB4AA2BB2ABB2ABB3AA2BABABB4ABB4ABB5AA4BB4ABB2AA2BB2AA2BAA5BB4AA7BB2ABAA3BB3AA3BAA2BB4ABB11AA4BABAA2BB5ABB2AA2BAA2BB2AA2BB2AA2BB4ABB5ABB2ABABB4AA2BABB22ABB14A$"}',
+        wall: "DarkWAll43234",
+        floor: "OrnateFloor108",
+        ceil: "CrumblyWall2",
+        start: '[61,3]',
+        lights: '[[56,7,"WallLamp16","standard"],[180,1,"Lights115","standardDimmed"],[182,1,"Lights108","standardDimmed"],[122,1,"Lights102","standardDimmed"]]',
+        gates: '[[62,3,"27.1","25.3","Up"]]',
+        triggers: '[[55,4,"SmoothWallButton",1,93],[166,1,"SmoothWallButton",1,202]]',
+        entities: '[[12,7,"SkullCollector"]]',
+        objects: '[[30,"Skull"]]',
+        }
 };

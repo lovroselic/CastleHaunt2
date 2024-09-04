@@ -2493,12 +2493,12 @@ const INTERACTION_ENTITY = {
         sprite: "Wolfie",
         category: 'crest',
         voice: "Female",
-        wants: [],
-        gives: "",
+        wants: ["Pie", "ConcentratedPoison"],
+        gives: "Binoculars",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "I've got a target in mind, and I need your help. Bring me pie and concentrated poison, and you'll see far beyond your wildest dreams.",
+            progress: "One part of the plan is in place, but there's still more to do. Bring the rest, and the view will be yours.",
+            conclusion: "With pie and poison, my plan is set. Here's your binoculars, now you'll truly see far."
         }
     },
     PoisonWitch: {
@@ -2509,9 +2509,9 @@ const INTERACTION_ENTITY = {
         wants: ["Poison", "Poison", "Poison"],
         gives: "ConcentratedPoison",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "Bring me your poisons, weak and mild, I'll brew them stronger, deadly and wild.",
+            progress: "A dose is here, but more is due, Gather them all, for power to imbue.",
+            conclusion: "With poisons combined, distilled with flair, Take this Concentrated Poison, handle with care."
         }
     },
     Cookie: {
