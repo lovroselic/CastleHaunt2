@@ -67,7 +67,7 @@ for file in result_files:
 
 ASSETS = pd.DataFrame(data, columns=['path', 'filename', 'dir', 'name', 'type', "objectName"])
 ASSETS["Loaded"] = False
-ASSETS["Used"] = False
+ASSETS["Used"] = 0
 
 # =============================================================================
 # # Raw is not loaded
@@ -88,5 +88,15 @@ for index, row in ASSETS.iterrows():
         ASSETS.at[index, 'Loaded'] = True
 
 # =============================================================================
-# # Used
+# # Used - MAP
 # =============================================================================
+
+map_regex = re.compile(r'const\sMAP\s=\s{([\w\W]*)};')
+decal_regex = re.compile(r'decals:\s*\'(.*)\'')
+MAP = re.search(map_regex, map_data).group(1).strip()
+MAP = re.split(r'\n\s*\,', MAP)
+
+for room in MAP:
+    for t in ["wall", "floor", "ceil"]:
+        texture = re.search(re.compile(r'{}:\s\"(.*)\"'.format(t)), room).group(1)
+        print(texture)

@@ -360,8 +360,9 @@ const MAP = {
         decals: '[[5,7,"BookShelf02","crest"],[6,7,"BookShelf03","crest"],[13,7,"BookShelf04","crest"],[14,7,"BookShelf05","crest"],[7,7,"BookShelf07","crest"],[127,1,"BookShelf09","crest"],[126,1,"BookShelf08","crest"],[126,7,"BookShelf15","crest"],[128,7,"BookShelf14","crest"],[25,7,"BookShelf16","picture"],[29,7,"BookShelf19","picture"],[26,7,"BookShelf18","picture"],[28,7,"BookShelf25","picture"],[86,5,"BookShelf27","picture"],[69,5,"BookShelf26","picture"],[52,5,"BookShelf25","picture"],[100,3,"BookShelf24","picture"],[83,3,"BookShelf23","picture"],[66,3,"BookShelf22","picture"],[260,1,"LeisureSuitLarry72","picture"],[269,1,"DungeonMaster204","picture"],[265,1,"ForbiddenForest90","picture"],[257,1,"LastNinja111","picture"],[188,5,"Karateka200","picture"],[137,5,"Athanor200","picture"],[129,5,"Cauldron10","picture"],[142,3,"Ishar11","picture"],[202,3,"ScubaDive60","picture"],[151,3,"SpaceQuest103","picture"],[106,3,"Dominatrix05","picture"],[114,5,"Zeppelin88","picture"],[144,7,"Dominatrix02","picture"]]',
         lights: '[[106,1,"WallLamp14","standard"],[114,1,"WallLamp9","standard"],[106,7,"Lamp43","standard"],[114,7,"Lights109","standard"],[284,1,"Fireplace10","fire"],[170,5,"Fireplace10","fire"]]',
         gates: '[[3,7,"15.1","7.3","Open"],[276,1,"15.2","16.1","Down"]]',
-        containers: '[[36,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",7],[161,"IronChest","INTERACTION_ITEM.WhiteHandbag",7]]',
+        containers: '[[36,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",7],[161,"IronChest","INTERACTION_ITEM.WhiteHandbag",7],[30,"TreasureChest","INTERACTION_ITEM.LeoHat",7]]',
         entities: '[[10,7,"Librarian"]]',
+        objects: '[[171,"Poison"]]',
         lairs: '[[280,1,"Lair01"],[237,3,"Lair07"],[221,5,"Lair09"]]',
         monsterList: '["MissGalaxy"]',
     }
@@ -380,8 +381,9 @@ const MAP = {
         decals: '[[220,3,"HauntedForest07","texture"],[237,3,"HauntedForest07","texture"],[254,3,"HauntedForest07","texture"],[216,5,"HauntedForest07","texture"],[233,5,"HauntedForest07","texture"],[250,5,"HauntedForest07","texture"],[268,5,"HauntedForest07","texture"],[270,3,"HauntedForest07","texture"],[268,1,"HauntedForest07","texture"],[270,1,"HauntedForest07","texture"],[256,1,"HauntedForest16","texture"],[258,1,"HauntedForest16","texture"],[258,3,"HauntedForest16","texture"],[242,3,"HauntedForest16","texture"],[225,3,"HauntedForest16","texture"],[208,3,"HauntedForest16","texture"],[204,5,"HauntedForest16","texture"],[221,5,"HauntedForest16","texture"],[238,5,"HauntedForest16","texture"],[256,5,"HauntedForest16","texture"],[257,4,"Grass13","texture"],[269,4,"Grass13","texture"]]',
         lights: '[[144,1,"Lights112","standard"],[114,1,"Lamp41","standard"],[175,1,"Lamp51","standard"],[172,7,"Lamp46","standardDimmed"],[184,7,"Lamp46","standardDimmed"],[178,7,"Lamp46","standardDimmed"]]',
         gates: '[[8,7,"16.1","15.2","Up"],[277,1,"16.2","17.1","Blue"],[283,1,"16.3","18.1","Green"]]',
-        containers: '[[22,"IronChest","GOLD_ITEM_TYPE.GoldBar",7]]',
+        containers: '[[22,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[18,"IronChest","INTERACTION_ITEM.BlueRose",7]]',
         entities: '[[286,1,"Sorceress"],[274,1,"Ninja"]]',
+        objects: '[[110,"Skull"]]',
         lairs: '[[280,1,"Lair08"],[64,5,"Lair06"],[54,7,"Lair05"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
     }
@@ -422,7 +424,7 @@ const MAP = {
         decals: '[[151,4,"LeopardRug02","crest"],[133,4,"LeopardRug02","crest"],[150,4,"LeopardRug02","crest"],[167,4,"LeopardRug02","crest"],[137,4,"LeopardRug06","crest"],[121,4,"LeopardRug06","crest"],[138,4,"LeopardRug06","crest"],[155,4,"LeopardRug06","crest"],[14,7,"BookShelf05","crest"],[263,4,"LeopardRug03","crest"],[246,4,"LeopardRug03","crest"],[245,4,"LeopardRug03","crest"],[247,4,"LeopardRug03","crest"]]',
         lights: '[[220,3,"Fireplace06","fire"],[101,3,"Fireplace10","fire"],[204,5,"Fireplace07","fire"],[85,5,"Fireplace11","fire"],[40,7,"WallLamp35","standardDimmed"],[44,7,"WallLamp35","standardDimmed"],[226,1,"WallLamp19","standardDimmed"],[232,1,"WallLamp19","standardDimmed"],[275,1,"Lights110","fire"],[285,1,"Lights110","fire"]]',
         gates: '[[2,7,"18.1","16.3","Open"]]',
-        containers: '[[32,"IronChest","INTERACTION_ITEM.GoldenBook",7]]',
+        containers: '[[32,"IronChest","INTERACTION_ITEM.GoldenBook",7],[253,"TreasureChest","INTERACTION_ITEM.PurpleRose",3]]',
         entities: '[[152,3,"Licky"],[136,5,"StilettoTwin"],[280,1,"Purrscilla"],[8,7,"ApparitiaTraitor"]]',
         objects: '[[240,"Skull"]]',
         lairs: '[[161,7,"Lair24"],[127,1,"Lair33"],[143,3,"Lair09"],[145,5,"Lair24"]]',
@@ -450,7 +452,19 @@ const MAP = {
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
     }
     ,
-    20: {}
+    20: {
+        name: "Emerald placeholder",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"11","map":"BB7AA30BB2AA30BAA7BB3ABB9AA2BB20ABB2ABB5AA2BAA2BB8AA2BABABB24A$"}',
+        wall: "3d wall",
+        floor: "RockFloor",
+        ceil: "Pavement",
+        start: '[88,3]',
+        gates: '[[89,3,"20.1","19.4","Closed"]]',
+    }
     ,
     21: {
         name: "Top Landing",
@@ -466,6 +480,7 @@ const MAP = {
         decals: '[[159,7,"LatexGirl1","picture"]]',
         lights: '[[19,7,"Lamp47","standardRedish"],[178,3,"Lights105","standardRedish"],[198,1,"Lamp49","standard"],[103,3,"Lights107","standard"]]',
         gates: '[[217,1,"21.1","7.7","Down"],[44,3,"21.2","22.1","Up"],[150,5,"21.3","23.1","Closed"]]',
+        containers: '[[18,"BookShelf","INTERACTION_ITEM.Egg",7],[17,"BookShelf","GOLD_ITEM_TYPE.SilverBar",7]]',
         triggers: '[[91,5,"SmoothWallButton",1,96]]',
         objects: '[[102,"Shield"]]',
         oracles: '[[221,1,"PinkLadyOnWhiteRug"]]',
@@ -504,6 +519,7 @@ const MAP = {
         decals: '[[66,5,"HauntedForest01","texture"],[54,5,"HauntedForest01","texture"],[42,5,"HauntedForest01","texture"],[92,5,"HauntedForest01","texture"],[106,5,"HauntedForest01","texture"],[120,5,"HauntedForest01","texture"],[66,7,"HauntedForest01","texture"],[54,7,"HauntedForest01","texture"],[42,7,"HauntedForest01","texture"],[30,7,"HauntedForest01","texture"],[92,1,"HauntedForest01","texture"],[106,1,"HauntedForest01","texture"],[120,1,"HauntedForest01","texture"],[134,1,"HauntedForest01","texture"]]',
         lights: '[[72,3,"WallLamp31","standard"],[98,3,"WallLamp31","standard"]]',
         gates: '[[142,3,"23.1","21.3","Closed"]]',
+        containers: '[[33,"Closet","INTERACTION_ITEM.Mirror",7]]',
         entities: '[[78,5,"Weaver"]]',
         lairs: '[[90,3,"Lair21"]]',
         monsterList: '["MissGalaxy"]',
@@ -512,10 +528,10 @@ const MAP = {
     24: {
         name: "Wolf Den",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB8AA42BABAA7BB2AA6BAA12BABAA4BB2AA8BAA4BAA2BAA11BABAA7BAA15BABB10ABB24ABB10ABB13ABB2ABABB2AA2BB4AA8BAA4BB4ABB19ABABB28A$"}',
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 4500,
+        data: '{"width":"17","height":"17","map":"BB2AA2BB6AA42BB2AA8BAA2BAA4BAA12BABAA6BB2AA6BAA4BAA4BAA9BABAA9BAA13BABB10ABB24ABB10ABB4ABB3ABB4ABB2ABABB2AA2BB4AA6BAA4BB4ABB19ABABB28A$"}',
         wall: "MossyWall111",
         floor: "MossyFloor110",
         ceil: "GreyWall11",
@@ -523,7 +539,11 @@ const MAP = {
         decals: '[[125,1,"HauntedForest05","texture"],[143,1,"HauntedForest05","texture"],[145,1,"HauntedForest05","texture"],[129,1,"HauntedForest05","texture"],[113,1,"HauntedForest05","texture"],[113,3,"HauntedForest05","texture"],[129,3,"HauntedForest05","texture"],[145,3,"HauntedForest05","texture"],[107,5,"HauntedForest05","texture"],[125,5,"HauntedForest05","texture"],[143,5,"HauntedForest05","texture"],[106,1,"HauntedForest05","texture"],[107,1,"HauntedForest05","texture"],[114,1,"HauntedForest05","texture"],[144,4,"ForestFloor02","texture"],[127,4,"ForestFloor02","texture"],[126,4,"ForestFloor02","texture"],[128,4,"ForestFloor02","texture"]]',
         lights: '[[23,7,"WallLamp18","standard"],[27,7,"WallLamp18","standard"],[195,7,"WallLamp33","dimRed"]]',
         gates: '[[8,7,"24.1","7.8","Closed"],[280,1,"24.2","25.1","Down"]]',
+        containers: '[[45,"PirateChest","INTERACTION_ITEM.WhiteHeels",7]]',
         entities: '[[161,1,"Wolfie"]]',
+        objects: '[[194,"Poison"],[180,"Milk"]]',
+        lairs: '[[220,3,"Lair34"],[204,5,"Lair06"]]',
+        monsterList: '["MissGalaxy"]',
     }
     ,
     25: {
@@ -539,7 +559,9 @@ const MAP = {
         start: '[25,7]',
         lights: '[[52,5,"Lamp42","standard"],[236,3,"Lights115","standard"],[5,7,"Fireplace14","fire"],[280,1,"Fireplace13","fire"],[11,7,"WallLamp35","dim"],[277,1,"WallLamp35","dim"],[172,7,"Fireplace14","dimRed"],[274,1,"Fireplace04","dimRed"],[116,1,"Fireplace15","dimRed"]]',
         gates: '[[8,7,"25.1","24.2","Up"],[203,3,"25.2","26.1","Down"],[85,5,"25.3","27.1","Down"]]',
+        containers: '[[29,"PlainCloset","INTERACTION_ITEM.RedRose",7]]',
         entities: '[[221,5,"Bakeress"],[67,3,"Cookie"]]',
+        objects: '[[22,"Sword"]]',
         lairs: '[[127,1,"Lair33"],[161,7,"Lair11"],[143,3,"Lair24"],[145,5,"Lair25"]]',
         monsterList: '["MissGalaxy"]',
     }
@@ -555,12 +577,14 @@ const MAP = {
         floor: "PebbleWall3",
         ceil: "WebbedFloor4",
         start: '[40,5]',
-        lights: '[[56,7,"Lights111","dimRed"],[71,7,"Lights111","dimRed"],[60,7,"Lights111","dimRed"]]',
+        lights: '[[56,7,"Lights111","dimRed"],[71,7,"Lights111","dimRed"],[60,7,"Lights111","dimRed"],[157,1,"WallLamp32","dim"]]',
         gates: '[[39,5,"26.1","25.2","Up"]]',
+        containers: '[[22,"Barrel","INTERACTION_ITEM.LeoPumps",7]]',
         entities: '[[149,1,"PoisonWitch"]]',
+        objects: '[[144,"Apple"],[154,"Skull"]]',
     }
     ,
-    27 : {
+    27: {
         name: "Skull Collector",
         sg: 0,
         maxSpawned: -1,
@@ -576,5 +600,5 @@ const MAP = {
         triggers: '[[55,4,"SmoothWallButton",1,93],[166,1,"SmoothWallButton",1,202]]',
         entities: '[[12,7,"SkullCollector"]]',
         objects: '[[30,"Skull"]]',
-        }
+    }
 };

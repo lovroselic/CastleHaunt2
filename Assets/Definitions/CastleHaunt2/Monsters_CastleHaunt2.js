@@ -1660,6 +1660,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.redShine,
         text: "Disgusting. Give it to someone else."
     },
+    Milk: {
+        name: "Milk",
+        category: "interaction_item",
+        element: "FLASK",
+        scale: 1.1 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Marble",
+        inventorySprite: "Milk",
+        material: MATERIAL.standard,
+        text: "Milk. Sour. Ugh."
+    },
 };
 
 const MOVABLE_INTERACTION_OBJECT = {
