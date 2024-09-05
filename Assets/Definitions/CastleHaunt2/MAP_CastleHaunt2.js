@@ -37,6 +37,8 @@ const MAP_TEXT = {
     25: "",
     26: "",
     27: "",
+    28: "Watch your step on the stairs.",
+    29: "",
 };
 
 /** Map definitions */
@@ -172,19 +174,21 @@ const MAP = {
     7: {
         name: "Following the Blood Trail",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 5000,
         data: '{"width":"13","height":"13","map":"BB3ABB2AA13BB3ABAA4BB2AA3BAA4BAA15BB2AA3BAA6BB3ABB4AA2BB4AA9BAA3BABB6AA3BB2AA2BB2AA2BB2AA10BB9ABB4AA6BAA2BABB19A$"}',
         wall: "SkullWall8",
         floor: "IrregularTiles1",
         ceil: "SpiderWeb10",
         start: '[89,3]',
-        decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"],[59,5,"CastleLady08","picture"]]',
+        decals: '[[81,4,"PuddleDecal03","crest"],[70,4,"PuddleDecal03","crest"],[86,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal08","crest"],[72,4,"PuddleDecal08","crest"],[59,5,"CastleLady08","picture"],[84,5,"Imhotep60","picture"],[111,5,"SVS1001","picture"],[27,5,"Ultima50","picture"],[131,5,"Paperboy50","picture"],[80,4,"PuddleDecal10","crest"],[66,5,"ShieldDecal06","crest"],[92,5,"ShieldDecal06","crest"]]',
         lights: '[[111,7,"WallLamp17","dim"],[57,1,"Lamp41","dim"],[84,3,"WallLamp","yellowgreen"],[48,7,"Lamp51","dimRed"],[142,3,"Lamp45","lightRed"],[152,5,"WallTorch","dimRed"],[2,7,"Lights114","standardDimmed"],[158,1,"Lights114","standardDimmed"]]',
-        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"],[4,7,"7.7","21.1","Up"],[164,1,"7.8","24.1","Closed"]]',
-        containers: '[[154,"PirateChest","INTERACTION_ITEM.Skull",1]]',
+        gates: '[[90,3,"7.1","5.3","Open"],[8,7,"7.2","14.1","Closed"],[160,1,"7.3","15.1","Closed"],[78,5,"7.4","19.1","Closed"],[13,5,"7.5","19.2","Closed"],[143,5,"7.6","19.3","Closed"],[4,7,"7.7","21.1","Up"],[164,1,"7.8","24.1","Closed"],[104,5,"7.9","28.1","Down"]]',
+        containers: '[[154,"PirateChest","INTERACTION_ITEM.Skull",1],[123,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[24,"Barrel","GOLD_ITEM_TYPE.SilverBar",4]]',
         oracles: '[[52,5,"ApparitiaPale"]]',
+        lairs: '[[6,7,"Lair04"],[162,1,"Lair34"]]',
+        monsterList: '["MissGalaxy"]',
     }
     ,
     8: {
@@ -601,4 +605,36 @@ const MAP = {
         entities: '[[12,7,"SkullCollector"]]',
         objects: '[[30,"Skull"]]',
     }
+    ,
+    28 : {
+        name: "Stairs Down",
+        sg: 0,
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"13","height":"9","map":"BB3ABB2AA11BAA2BAA5BAA22BB19ABB10ABABB5ABB6ABB7ABB9ABB4$"}',
+        wall: "SmallBricks5",
+        floor: "RedMarbleFloor4",
+        ceil: "MossyWall112",
+        start: '[37,3]',
+        decals: '[[28,5,"GirlSwims13","picture"],[80,5,"MoonBuggy","picture"],[18,5,"Montezumas revenge2","picture"],[96,5,"AI_pic249","picture"],[49,3,"AI_Pic_143","picture"],[75,3,"PrincessAI_08","picture"],[17,7,"SVS111","picture"],[8,7,"GirlSwims10","picture"],[59,7,"LastNinja111","picture"],[58,1,"Tombraider141","picture"],[112,1,"Zaxxon89","picture"],[57,3,"AI_PIC_306","picture"]]',
+        lights: '[[52,5,"Lamp50","standardRedish"],[6,7,"Lamp52","standard"],[110,1,"Lamp52","standard"]]',
+        gates: '[[38,3,"28.1","7.9","Up"],[90,3,"28.2","29.1","Down"]]',
+        monsters: '[[34,"Bat"],[85,"Wolf"]]',
+        containers: '[[41,"Chest","GOLD_ITEM_TYPE.SilverBar",7],[20,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[101,"Barrel","GOLD_ITEM_TYPE.SilverBar",1]]',
+        }
+    ,
+    29 : {
+        name: "The Lower Temple",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"19","height":"19","map":"BB11AA70BB2AA2BAA6BAA18BB2AA14BB2AA2BAA2BAA6BAA11BB2AA5BAA57BB13AA4BB3AA5BB31ABAA2BAA11BB70A$"}',
+        wall: "DarkBricks101",
+        floor: "Floor20",
+        ceil: "DarkBricks108",
+        start: '[172,5]',
+        gates: '[[171,5,"29.1","28.2","Up"]]',
+        }
 };

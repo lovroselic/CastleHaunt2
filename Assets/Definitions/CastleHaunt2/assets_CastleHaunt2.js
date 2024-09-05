@@ -664,7 +664,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/Sword.jpg", name: "Sword" },
     { srcName: "ObjectTextures/TreasureChest.JPG", name: "TreasureChest" },
     { srcName: "ObjectTextures/Wardrobe.jpg", name: "Wardrobe" },
-    { srcName: "ObjectTextures/Wood1.jpg", name: "Wood1" },
+    { srcName: "ObjectTextures/Wood1.jpg", name: "WoodTexture" },
     { srcName: "ObjectTextures/SpiderGreen.jpg", name: "SpiderGreen" },
 
     //decal-gates
@@ -779,7 +779,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Rodelle2.jpg", name: "Rodelle2" },
     { srcName: "EntityPictures/CorridorBlocker.jpg", name: "CorridorBlocker" },
     { srcName: "EntityPictures/BlackWidow.jpg", name: "BlackWidow" },
-    { srcName: "EntityPictures/Spideress5.jpg", name: "Spideress5" },
+    { srcName: "EntityPictures/Spideress5.jpg", name: "SpiderDefense" },
     { srcName: "EntityPictures/Spideress3.jpg", name: "Spideress" },
     { srcName: "EntityPictures/Spideress4.jpg", name: "SpideressOracle" },
     { srcName: "EntityPictures/PinkCoat.jpg", name: "PinkCoat" },
@@ -793,7 +793,7 @@ LoadSprites = [
     { srcName: "EntityPictures/StilettoTwin.jpg", name: "StilettoTwin" },
     { srcName: "EntityPictures/Licky.jpg", name: "Licky" },
     { srcName: "EntityPictures/RedRidingHood2.jpg", name: "RedRidingHood" },
-    { srcName: "EntityPictures/Leopardess.jpg", name: "Leopardess" },
+    { srcName: "EntityPictures/Leopardess.jpg", name: "Purrscilla" },
     { srcName: "EntityPictures/ApparitiaTraitor.jpg", name: "ApparitiaTraitor" },
     { srcName: "EntityPictures/PinkLadyOnWhiteRug.jpg", name: "PinkLadyOnWhiteRug" },
     { srcName: "EntityPictures/Weaver.jpg", name: "Weaver" },
@@ -807,13 +807,12 @@ LoadSprites = [
     { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
 
     //action movables
-    { srcName: "ActionMovables/Spider.png", name: "BabyGreenSpider" },
+    { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
     { srcName: "ActionMovables/BabyDragon.png", name: "BabyDragon" },
     { srcName: "ActionMovables/Cat.png", name: "Cat" },
     { srcName: "ActionMovables/LittleChicken.png", name: "LittleChicken" },
     { srcName: "ActionMovables/Sheep.png", name: "Sheep" },
-    { srcName: "ActionMovables/Spider.png", name: "Spider" },
-    //{ srcName: "ActionMovables/WolfLeader.png", name: "WolfLeader" },
+    { srcName: "ActionMovables/SilverSpider.png", name: "Spider" },
     { srcName: "ActionMovables/Wolf.png", name: "WolfPuppy" },
 
     //triggers
@@ -877,7 +876,7 @@ LoadSprites = [
     { srcName: "Shrines/KungfuPrincess.jpg", name: "KungfuShrine" },
     { srcName: "Shrines/FireballShrine1.jpg", name: "FireballShrine1" },
     { srcName: "Shrines/FireballShrine2.jpg", name: "FireballShrine2" },
-    { srcName: "Shrines/HeartSkill1.jpg", name: "HeartSkill1" },
+    { srcName: "Shrines/HeartSkill1.jpg", name: "Hearty" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },
@@ -2360,6 +2359,25 @@ LoadSprites = [
     { srcName: "PicDecals/Nature07.jpg", name: "Nature07" },
 
     { srcName: "PicDecals/LatexGirl1.jpg", name: "LatexGirl1" },
+
+    { srcName: "PicDecals/CastleLady100.jpg", name: "CastleLady100" },
+    { srcName: "PicDecals/CastleLady101.jpg", name: "CastleLady101" },
+    { srcName: "PicDecals/CastleLady102.jpg", name: "CastleLady102" },
+    { srcName: "PicDecals/CastleLady103.jpg", name: "CastleLady103" },
+    { srcName: "PicDecals/CastleLady104.jpg", name: "CastleLady104" },
+    { srcName: "PicDecals/CastleLady105.jpg", name: "CastleLady105" },
+    { srcName: "PicDecals/CastleLady106.jpg", name: "CastleLady106" },
+    { srcName: "PicDecals/CastleLady107.jpg", name: "CastleLady107" },
+    { srcName: "PicDecals/CastleLady108.jpg", name: "CastleLady108" },
+    { srcName: "PicDecals/CastleLady109.jpg", name: "CastleLady109" },
+    { srcName: "PicDecals/CastleLady110.jpg", name: "CastleLady110" },
+    { srcName: "PicDecals/CastleLady111.jpg", name: "CastleLady111" },
+    { srcName: "PicDecals/CastleLady112.jpg", name: "CastleLady112" },
+    { srcName: "PicDecals/CastleLady113.jpg", name: "CastleLady113" },
+    { srcName: "PicDecals/CastleLady114.jpg", name: "CastleLady114" },
+    { srcName: "PicDecals/CastleLady115.jpg", name: "CastleLady115" },
+    { srcName: "PicDecals/CastleLady116.jpg", name: "CastleLady116" },
+    { srcName: "PicDecals/CastleLady117.jpg", name: "CastleLady117" },
 ];
 
 console.log("%cAssets for CastleHaunt ready.", "color: orange");

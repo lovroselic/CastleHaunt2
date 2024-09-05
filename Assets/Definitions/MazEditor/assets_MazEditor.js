@@ -2138,6 +2138,25 @@ LoadSprites = [
     { srcName: "PicDecals/Nature07.jpg", name: "Nature07" },
 
     { srcName: "PicDecals/LatexGirl1.jpg", name: "LatexGirl1" },
+
+    { srcName: "PicDecals/CastleLady100.jpg", name: "CastleLady100" },
+    { srcName: "PicDecals/CastleLady101.jpg", name: "CastleLady101" },
+    { srcName: "PicDecals/CastleLady102.jpg", name: "CastleLady102" },
+    { srcName: "PicDecals/CastleLady103.jpg", name: "CastleLady103" },
+    { srcName: "PicDecals/CastleLady104.jpg", name: "CastleLady104" },
+    { srcName: "PicDecals/CastleLady105.jpg", name: "CastleLady105" },
+    { srcName: "PicDecals/CastleLady106.jpg", name: "CastleLady106" },
+    { srcName: "PicDecals/CastleLady107.jpg", name: "CastleLady107" },
+    { srcName: "PicDecals/CastleLady108.jpg", name: "CastleLady108" },
+    { srcName: "PicDecals/CastleLady109.jpg", name: "CastleLady109" },
+    { srcName: "PicDecals/CastleLady110.jpg", name: "CastleLady110" },
+    { srcName: "PicDecals/CastleLady111.jpg", name: "CastleLady111" },
+    { srcName: "PicDecals/CastleLady112.jpg", name: "CastleLady112" },
+    { srcName: "PicDecals/CastleLady113.jpg", name: "CastleLady113" },
+    { srcName: "PicDecals/CastleLady114.jpg", name: "CastleLady114" },
+    { srcName: "PicDecals/CastleLady115.jpg", name: "CastleLady115" },
+    { srcName: "PicDecals/CastleLady116.jpg", name: "CastleLady116" },
+    { srcName: "PicDecals/CastleLady117.jpg", name: "CastleLady117" },
 ];
 
 LoadShaders = [

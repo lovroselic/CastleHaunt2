@@ -391,7 +391,7 @@ const CONTAINER_ITEM_TYPE = {
         element: "CHEST",
         scale: 1 / 2 ** 3,
         glueToFloor: true,
-        texture: "Wood1",
+        texture: "WoodTexture",
         material: MATERIAL.standard,
         rotateToNorth: Math.PI / 2,
     },
@@ -1722,7 +1722,7 @@ const MOVABLE_INTERACTION_OBJECT = {
         moveSpeed: 1.5,
         material: MATERIAL.standard,
         behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "Spider",
+        inventorySprite: "BabyGreenSpider",
         text: "Eight hairy legs? Creepy spider."
     },
     Cat: {
@@ -2449,7 +2449,7 @@ const INTERACTION_ENTITY = {
     },
     Purrscilla: {
         name: "Purrscilla",
-        sprite: "Leopardess",
+        sprite: "Purrscilla",
         category: 'crest',
         voice: "Female",
         wants: ["LeoPumps", "LeoPumps", "LeoHat", "Leotard"],
@@ -2569,7 +2569,7 @@ const INTERACTION_ENTITY = {
 const INTERACTION_SHRINE = {
     SpiderDefense: {
         name: "SpiderDefense",
-        sprite: "Spideress5",
+        sprite: "SpiderDefense",
         category: 'crest',
         voice: "Female2",
         wants: ["Spider", "Spider", "Spider"],
@@ -2581,8 +2581,8 @@ const INTERACTION_SHRINE = {
         }
     },
     Hearty: {
-        name: "HeartSkill1",
-        sprite: "HeartSkill1",
+        name: "Hearty",
+        sprite: "Hearty",
         category: 'crest',
         voice: "Princess",
         wants: ["GoldCoin"],
