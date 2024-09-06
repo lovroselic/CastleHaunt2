@@ -147,7 +147,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.09.02",
+    VERSION: "0.09.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -974,6 +974,10 @@ const GAME = {
                 AUDIO.Scroll.play();
                 break;
             case 'shrine':
+                if (interaction.which === 'health') {
+                    interaction.category = 'status';
+                    return GAME.processInteraction(interaction);
+                }
                 HERO.raiseStat(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();

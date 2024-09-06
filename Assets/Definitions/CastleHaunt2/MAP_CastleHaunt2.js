@@ -630,11 +630,15 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"19","height":"19","map":"BB11AA70BB2AA2BAA6BAA18BB2AA14BB2AA2BAA2BAA6BAA11BB2AA5BAA57BB13AA4BB3AA5BB31ABAA2BAA11BB70A$"}',
+        data: '{"width":"19","height":"19","map":"BB3AA3BABB5AA8BB2AA58BB2AA5BAA2BAA19BB4AA4BABAA13BAA4BAA16BB2AA3BABB2AA12BAA28BB2AA11BB4AA2BB4AA15BB9AA2BB2AA2BB2AA4BAA3BB6ABABB7ABB11ABAA10BABB3AA3BAA4BB2AA4BB31A$"}',
         wall: "DarkBricks101",
         floor: "Floor20",
         ceil: "DarkBricks108",
         start: '[172,5]',
+        decals: '[[104,7,"Valhalla2","picture"],[120,7,"GirlSwims22","picture"],[126,7,"Pitfall100","picture"],[184,7,"EyeOfTheBeholder90","picture"],[176,7,"Miner3","picture"],[256,1,"SP63","picture"],[184,1,"AticAtac112","picture"],[234,1,"BeachHead100","picture"],[176,1,"HalfLife70","picture"],[240,1,"CastleLady66","picture"],[126,3,"JetPac50","picture"],[104,3,"AI_Pic_141","picture"],[184,3,"JSW112","picture"],[256,3,"AI_pic256","picture"],[240,3,"CastleLady54","picture"],[120,5,"LodeRunner11","picture"],[104,5,"SVS110","picture"],[176,5,"CastleLady38","picture"],[256,5,"Bagitman90","picture"],[234,5,"PrincessAI_10","picture"]]',
+        lights: '[[104,1,"Lights108","darkgray"],[256,7,"Lights108","darkgray"],[176,3,"Lights108","darkgray"],[184,5,"Lights108","darkgray"],[180,1,"Lights109","darkgray"],[180,3,"Lights109","darkgray"],[180,7,"Lights109","darkgray"],[180,5,"Lights109","darkgray"],[120,1,"Lights111","darkgray"],[126,1,"Lights111","darkgray"],[234,7,"Lights111","darkgray"],[240,7,"Lights111","darkgray"],[120,3,"Lights111","darkgray"],[234,3,"Lights111","darkgray"],[126,5,"Lights111","darkgray"],[240,5,"Lights111","darkgray"],[306,1,"Lamp48","darkgray"],[320,1,"Lamp48","darkgray"],[40,7,"Lamp48","darkgray"],[54,7,"Lamp48","darkgray"],[40,5,"WallLamp19","darkgray"],[306,5,"WallLamp19","darkgray"],[320,3,"WallLamp19","darkgray"],[54,3,"WallLamp19","darkgray"]]',
         gates: '[[171,5,"29.1","28.2","Up"]]',
+        shrines: '[[132,3,"FireballShrine3"],[246,3,"PrincessSword"],[189,3,"Princess2Heart"]]',
+        trainers: '[[9,7,"Doctress"],[351,1,"Gunny"],[12,7,"Teacher"]]',
         }
 };

@@ -802,9 +802,9 @@ LoadSprites = [
     { srcName: "EntityPictures/Bakeress.jpg", name: "Bakeress" },
     { srcName: "EntityPictures/Cookie2.jpg", name: "Cookie" },
     { srcName: "EntityPictures/SkullCollector2.jpg", name: "SkullCollector" },
-
-
+    { srcName: "EntityPictures/Doctress2.jpg", name: "Doctress" },
     { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
+    { srcName: "EntityPictures/Teacher.jpg", name: "Teacher" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -876,7 +876,10 @@ LoadSprites = [
     { srcName: "Shrines/KungfuPrincess.jpg", name: "KungfuShrine" },
     { srcName: "Shrines/FireballShrine1.jpg", name: "FireballShrine1" },
     { srcName: "Shrines/FireballShrine2.jpg", name: "FireballShrine2" },
+    { srcName: "Shrines/FireballShrine3.jpg", name: "FireballShrine3" },
     { srcName: "Shrines/HeartSkill1.jpg", name: "Hearty" },
+    { srcName: "Shrines/PrincessSword.jpg", name: "PrincessSword" },
+    { srcName: "Shrines/Princess2Heart.jpg", name: "Princess2Heart" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },

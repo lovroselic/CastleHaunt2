@@ -67,6 +67,36 @@ const SHRINE_TYPE = {
         price: 1000,
         level: 1,
     },
+    FireballShrine3: {
+        name: "FireballShrine3",
+        sprite: "FireballShrine3",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 1500,
+        level: 1,
+    },
+    PrincessSword: {
+        name: "PrincessSword",
+        sprite: "PrincessSword",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 1500,
+        level: 1,
+    },
+    Princess2Heart: {
+        name: "Princess2Heart",
+        sprite: "Princess2Heart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 1500,
+        level: 2,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -1965,41 +1995,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "LeoPumps",
         text: "Looks like something Purrscilla would wear."
     },
-    HealthSkill: {
-        name: "HealthSkill",
-        category: "status",
-        inventorySprite: "Health",
-        which: "health",
-        level: 5,
-    },
-    ManaSkill: {
-        name: "ManaSkill",
-        category: "status",
-        inventorySprite: "Mana",
-        which: "mana",
-        level: 5,
-    },
-    /* DefenseSkill: {
-        name: "DefenseSkill",
-        category: "skill",
-        inventorySprite: "ShieldSkill",
-        which: "defense",
-        level: 3,
-    },
-    MagicSkill: {
-        name: "MagicSkill",
-        category: "skill",
-        inventorySprite: "MagicSkill",
-        which: "magic",
-        level: 3,
-    },
-    AttackSkill: {
-        name: "AttackSkill",
-        category: "skill",
-        inventorySprite: "SwordSkill",
-        which: "attack",
-        level: 3,
-    }, */
     Whip: {
         name: "Whip",
         category: "interaction_item",
@@ -2256,6 +2251,13 @@ const INTERACTION_ITEM = {
         which: "attack",
         level: 1,
     },
+    Magic: {
+        name: "Magic",
+        category: "skill",
+        inventorySprite: "SkillFireball",
+        which: "magic",
+        level: 1,
+    },
     HeartSkill: {
         name: "HeartSkill",
         category: "status",
@@ -2263,6 +2265,7 @@ const INTERACTION_ITEM = {
         which: "health",
         level: 1,
     },
+    //
     Skull: {
         name: "Skull",
         category: "interaction_item",
@@ -2293,21 +2296,18 @@ const INTERACTION_ITEM = {
         inventorySprite: "RedHandbag",
         text: "Latest fashion."
     },
-
     WhiteHeels: {
         name: "WhiteHeels",
         category: "interaction_item",
         inventorySprite: "WhiteHeels",
         text: "Black is the new black."
     },
-
     WhiteHandbag: {
         name: "WhiteHandbag",
         category: "interaction_item",
         inventorySprite: "WhiteHandbag",
         text: "Would suit someone pale."
     },
-
     ConcentratedPoison: {
         name: "ConcentratedPoison",
         category: "interaction_item",
@@ -2593,6 +2593,46 @@ const INTERACTION_SHRINE = {
             conclusion: "Excellent. I am feeling so much better now.",
         }
     },
+    Doctress: {
+        name: "Doctress",
+        sprite: "Doctress",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "HeartSkill",
+        text: {
+            intro: "In white coat's care, a cure I wield, your health to boost, if gold's unsealed.",
+            progress: null,
+            conclusion: "Gold received, now feel my art, increased health, a fresh new start."
+        }
+    },
+    Gunny: {
+        name: "Gunny",
+        sprite: "Gunny",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "Got the guts but not the bite? Hand over a gold coin, and I'll show you how to attack with fury.",
+            progress: null,
+            conclusion: "With that coin, you've earned some power. Go forth and strike with ferocity!"
+        }
+    },
+    Teacher: {
+        name: "Teacher",
+        sprite: "Teacher",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "Do you want to learn how to control fire? I can teach you.",
+            progress: null,
+            conclusion: "Burn them girl. Burn them."
+        }
+    },
+
 };
 
 const INTERACTOR = {
