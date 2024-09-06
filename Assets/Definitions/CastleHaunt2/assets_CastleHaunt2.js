@@ -755,8 +755,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia2.jpg", name: "ApparitiaWelcome" },
     { srcName: "EntityPictures/Apparitia3.jpg", name: "ApparitiaDie" },
     { srcName: "EntityPictures/Apparitia4.jpg", name: "ApparitiaHaunt2" },
-    { srcName: "EntityPictures/Apparitia5.jpg", name: "Apparitia5" }, //unused
-    { srcName: "EntityPictures/Apparitia6.jpg", name: "Apparitia6" }, //unused
+    { srcName: "EntityPictures/Apparitia5.jpg", name: "ApparitiaPrice" }, 
+    { srcName: "EntityPictures/Apparitia6.jpg", name: "ApparitiaHopsasa" }, 
     { srcName: "EntityPictures/Apparitia7.jpg", name: "Apparitia7" }, //unused
     { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
     { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
@@ -805,6 +805,9 @@ LoadSprites = [
     { srcName: "EntityPictures/Doctress2.jpg", name: "Doctress" },
     { srcName: "EntityPictures/Gunny.jpg", name: "Gunny" },
     { srcName: "EntityPictures/Teacher.jpg", name: "Teacher" },
+    { srcName: "EntityPictures/FireballTrainer.jpg", name: "FireballTrainer" },
+    { srcName: "EntityPictures/AmazingOne.jpg", name: "AmazingOne" },
+    { srcName: "EntityPictures/YoungLeopardess.jpg", name: "YoungLeopardess" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

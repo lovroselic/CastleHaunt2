@@ -301,6 +301,30 @@ const ORACLE_TYPE = {
         text: "Remember the lesson about checking things carefully?",
         interactionCategory: "oracle",
     },
+    ApparitiaPrice: {
+        name: "ApparitiaPrice",
+        sprite: "ApparitiaPrice",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I made them raise the price for you, just for you. Ahahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaHopsasa: {
+        name: "ApparitiaHopsasa",
+        sprite: "ApparitiaHopsasa",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Tralala hopsasa.",
+        interactionCategory: "oracle",
+    },
+    AmazingOne: {
+        name: "AmazingOne",
+        sprite: "AmazingOne",
+        category: 'crest',
+        voice: "Female2",
+        text: "I am the Amazing One. I do nothing.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2632,7 +2656,32 @@ const INTERACTION_SHRINE = {
             conclusion: "Burn them girl. Burn them."
         }
     },
-
+    FireballTrainer: {
+        name: "FireballTrainer",
+        sprite: "FireballTrainer",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "Want to hurl fire with finesse? Give me a gold coin, and I'll turn you into a Fireball master.",
+            progress: null,
+            conclusion: "That coin just bought you some real heat. Your Fireballs are now hotter than ever!"
+        }
+    },
+    YoungLeopardess: {
+        name: "YoungLeopardess",
+        sprite: "YoungLeopardess",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "Speed and strength are the key. Hand over a gold coin, and I'll sharpen your fighting instincts.",
+            progress: null,
+            conclusion: "With that coin, you've earned the ferocity of a leopard. Now go, and strike with precision and power!"
+        }
+    },
 };
 
 const INTERACTOR = {
