@@ -28,12 +28,13 @@ const LIGHT_COLORS = {
     lightgray: new Float32Array([0.75, 0.75, 0.75]),
     emerald: new Float32Array([0.3137, 0.7843, 0.470588]),
     white: new Float32Array([1.0, 1.0, 1.0]),
+    candle: new Float32Array([1.0,0.823529, 0.1098]),
 };
 
 /** Materials */
 
 const MATERIAL = {
-    VERSION: "1.01",
+    VERSION: "1.02",
     wall: new Material(LIGHT_COLORS.gray, LIGHT_COLORS.lightgray, LIGHT_COLORS.darkgray, 0.8),
     marble: new Material(LIGHT_COLORS.gray, LIGHT_COLORS.lightgray, LIGHT_COLORS.darkgray, 0.85),
     standard: new Material(LIGHT_COLORS.standard, LIGHT_COLORS.standard, LIGHT_COLORS.standard, 0.125),

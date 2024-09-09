@@ -106,7 +106,9 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "SatanRam1", "SatanRam10", "SatanRam2", "SatanRam3", "SatanRam4", "SatanRam5", "SatanRam6", "SatanRam7", "SatanRam8", "SatanRam9",
     "DemonSkull1", "DemonSkull2", "DemonSkull3", "FloorGrille101", "FloorGrille102", "FloorGrille103", "FloorGrille104", "FloorGrille105", "FloorGrille106", "FloorGrille107", "FloorGrille108", "FloorGrille109", "FloorGrille110", "FloorGrille111",
     "FloorGrille112", "FloorGrille113",
-    "Ivy11", "Ivy12"
+    "Ivy11", "Ivy12",
+    "AA_CREST_AI", "CrawlingSkelly1", "CrawlingSkelly2", "DancingSkelies1", "DancingSkelies2", "DancingSkelies3", "LaughingSkeleton1", "LaughingSkeleton2", "LaughingSkeleton3", "LaughingSkeleton4", "LaughingSkeleton5", "LaughingSkeleton6", "SittingSkelly1",
+    "SittingSkelly11", "SittingSkelly12", "SittingSkelly13", "SittingSkelly14", "SittingSkelly2", "SittingSkelly21", "SittingSkelly23"
 ];
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"];
@@ -117,6 +119,8 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Fireplace01", "Fireplace02", "Fireplace03", "Fireplace04", "Fireplace05", "Fireplace06", "Fireplace07", "Fireplace08", "Fireplace09", "Fireplace10", "Fireplace11", "Fireplace12", "Fireplace13",
     "Fireplace14", "Fireplace15",
     "Lights102", "Lights103", "Lights104", "Lights105", "Lights106", "Lights107", "Lights108", "Lights109", "Lights110", "Lights111", "Lights112", "Lights113", "Lights114", "Lights115",
+    "Candelabra01", "Candelabra02", "Candelabra03", "Candelabra04", "Candelabra05", "Candelabra06", "Candelabra07", "Candelabra08", "Candelabra09", "Candelabra10", "Candelabra11", "Candelabra12",
+    "Candelabra14", "Candelabra15", "Candelabra16", "Candelabra17", "Candelabra18"
 ];
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
