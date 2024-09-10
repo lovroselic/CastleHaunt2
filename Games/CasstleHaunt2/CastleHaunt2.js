@@ -49,6 +49,10 @@ const DEBUG = {
     },
     checkPoint() {
         /** main area 2:
+         * 7 completed
+         * 14 completed
+         * 15 completed
+         * 19 sides completed
             * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
             * CHECKED SkullCollector: Skull 5x (11, 7, 27)
             * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
@@ -83,8 +87,8 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 7;    //7
-        GAME.gold = 1997;   //gold collected in 6,
+        GAME.level = 18;    //14
+        GAME.gold = 2946;   //gold collected in 6,
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -94,10 +98,10 @@ const DEBUG = {
         HERO.orbs = 2;
         HERO.orbsLost = 0;
         HERO.magic = 7;
-        HERO.attack = 8;
+        HERO.attack = 9;
 
-        HERO.maxHealth = 40;
-        HERO.health = 31;
+        HERO.maxHealth = 48;
+        HERO.health = 48;
         //HERO.health = 12;
 
 
@@ -111,7 +115,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Mushroom", "Skull", "GoldCoin",
+        let invItems = ["Mushroom", "Skull", "GoldCoin", "Skull", "Book", "Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "Skull", "BlueRose", "Mushroom", "Mushroom", "Heels"
 
         ];
         for (let itm of invItems) {
@@ -119,7 +123,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Green", "Blue"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -147,7 +151,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.09.05",
+    VERSION: "0.09.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
