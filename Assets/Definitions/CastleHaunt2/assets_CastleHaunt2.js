@@ -757,7 +757,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia4.jpg", name: "ApparitiaHaunt2" },
     { srcName: "EntityPictures/Apparitia5.jpg", name: "ApparitiaPrice" },
     { srcName: "EntityPictures/Apparitia6.jpg", name: "ApparitiaHopsasa" },
-    { srcName: "EntityPictures/Apparitia7.jpg", name: "Apparitia7" }, //unused
+    { srcName: "EntityPictures/Apparitia7.jpg", name: "ApparitiaSkull" },
     { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
     { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
     { srcName: "EntityPictures/Apparitia10.jpg", name: "ApparitiaHaunt" },
@@ -808,6 +808,7 @@ LoadSprites = [
     { srcName: "EntityPictures/FireballTrainer.jpg", name: "FireballTrainer" },
     { srcName: "EntityPictures/AmazingOne.jpg", name: "AmazingOne" },
     { srcName: "EntityPictures/YoungLeopardess.jpg", name: "YoungLeopardess" },
+    { srcName: "EntityPictures/Archie.jpg", name: "Archie" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -2400,9 +2401,7 @@ LoadSprites = [
     { srcName: "PicDecals/Nature05.jpg", name: "Nature05" },
     { srcName: "PicDecals/Nature06.jpg", name: "Nature06" },
     { srcName: "PicDecals/Nature07.jpg", name: "Nature07" },
-
     { srcName: "PicDecals/LatexGirl1.jpg", name: "LatexGirl1" },
-
     { srcName: "PicDecals/CastleLady100.jpg", name: "CastleLady100" },
     { srcName: "PicDecals/CastleLady101.jpg", name: "CastleLady101" },
     { srcName: "PicDecals/CastleLady102.jpg", name: "CastleLady102" },
@@ -2421,6 +2420,31 @@ LoadSprites = [
     { srcName: "PicDecals/CastleLady115.jpg", name: "CastleLady115" },
     { srcName: "PicDecals/CastleLady116.jpg", name: "CastleLady116" },
     { srcName: "PicDecals/CastleLady117.jpg", name: "CastleLady117" },
+
+    { srcName: "PicDecals/LargePicLadies01.jpg", name: "LargePicLadies01" },
+    { srcName: "PicDecals/LargePicLadies02.jpg", name: "LargePicLadies02" },
+    { srcName: "PicDecals/LargePicLadies03.jpg", name: "LargePicLadies03" },
+    { srcName: "PicDecals/LargePicLadies04.jpg", name: "LargePicLadies04" },
+    { srcName: "PicDecals/LargePicLadies05.jpg", name: "LargePicLadies05" },
+    { srcName: "PicDecals/LargePicLadies06.jpg", name: "LargePicLadies06" },
+    { srcName: "PicDecals/LargePicLadies07.jpg", name: "LargePicLadies07" },
+    { srcName: "PicDecals/LargePicLadies08.jpg", name: "LargePicLadies08" },
+    { srcName: "PicDecals/LargePicLadies09.jpg", name: "LargePicLadies09" },
+    { srcName: "PicDecals/LargePicLadies10.jpg", name: "LargePicLadies10" },
+    { srcName: "PicDecals/LargePicLadies11.jpg", name: "LargePicLadies11" },
+    { srcName: "PicDecals/LargePicLadies12.jpg", name: "LargePicLadies12" },
+    { srcName: "PicDecals/LargePicLadies13.jpg", name: "LargePicLadies13" },
+    { srcName: "PicDecals/LargePicLadies14.jpg", name: "LargePicLadies14" },
+    { srcName: "PicDecals/LargePicLadies15.jpg", name: "LargePicLadies15" },
+    { srcName: "PicDecals/LargePicLadies16.jpg", name: "LargePicLadies16" },
+    { srcName: "PicDecals/LargePicLadies17.jpg", name: "LargePicLadies17" },
+    { srcName: "PicDecals/LargePicLadies18.jpg", name: "LargePicLadies18" },
+    { srcName: "PicDecals/LargePicLadies19.jpg", name: "LargePicLadies19" },
+    { srcName: "PicDecals/LargePicLadies20.jpg", name: "LargePicLadies20" },
+    { srcName: "PicDecals/LargePicLadies21.jpg", name: "LargePicLadies21" },
+    { srcName: "PicDecals/LargePicLadies22.jpg", name: "LargePicLadies22" },
+    { srcName: "PicDecals/LargePicLadies23.jpg", name: "LargePicLadies23" },
+    { srcName: "PicDecals/LargePicLadies24.jpg", name: "LargePicLadies24" },
 ];
 
 console.log("%cAssets for CastleHaunt ready.", "color: orange");

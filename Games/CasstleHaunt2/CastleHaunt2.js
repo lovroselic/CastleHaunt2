@@ -55,7 +55,7 @@ const DEBUG = {
          * 19 sides completed
             * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
             * CHECKED SkullCollector: Skull 5x (11, 7, 27)
-            * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
+                * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
             * CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
             * CHECKED Licky: (handbag, hand mirror) -> helmet
             * CHECKED Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
@@ -87,8 +87,8 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 18;    //14
-        GAME.gold = 2946;   //gold collected in 6,
+        GAME.level = 27;    //14
+        GAME.gold = 3513;   //gold collected in 6,
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -101,12 +101,12 @@ const DEBUG = {
         HERO.attack = 9;
 
         HERO.maxHealth = 48;
-        HERO.health = 48;
+        HERO.health = 45;
         //HERO.health = 12;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -115,7 +115,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Mushroom", "Skull", "GoldCoin", "Skull", "Book", "Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "Skull", "BlueRose", "Mushroom", "Mushroom", "Heels"
+        let invItems = ["Mushroom", "Skull", "GoldCoin", "Skull", "Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "Skull", "BlueRose", "Mushroom", "Mushroom", "Skull", "RedHandbag",
 
         ];
         for (let itm of invItems) {
@@ -151,7 +151,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.09.06",
+    VERSION: "0.09.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

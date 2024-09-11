@@ -325,6 +325,22 @@ const ORACLE_TYPE = {
         text: "I am the Amazing One. I do nothing.",
         interactionCategory: "oracle",
     },
+    Archie: {
+        name: "Archie",
+        sprite: "Archie",
+        category: 'crest',
+        voice: "Female",
+        text: "Explorers are rewarded.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaSkull: {
+        name: "ApparitiaSkull",
+        sprite: "ApparitiaSkull",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Searching for skulls? You will not have mine.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

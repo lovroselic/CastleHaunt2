@@ -171,7 +171,7 @@ const MAP = {
         oracles: '[[55,5,"HealthAdvisor"],[2,7,"WhereDoYouWantToStart"],[118,1,"WallSitter"]]',
     }
     ,
-    7 : {
+    7: {
         name: "Following the Blood Trail",
         sg: 0,
         maxSpawned: 3,
@@ -190,7 +190,7 @@ const MAP = {
         oracles: '[[52,5,"ApparitiaPale"]]',
         lairs: '[[6,7,"Lair04"],[162,1,"Lair34"]]',
         monsterList: '["MissGalaxy"]',
-        }
+    }
     ,
     8: {
         name: "Silky Sanctuary",
@@ -331,7 +331,7 @@ const MAP = {
         oracles: '[[5,7,"AuburnDomme"]]',
     }
     ,
-    14 : {
+    14: {
         name: "Temple of the Princess",
         sg: 0,
         maxSpawned: -1,
@@ -350,9 +350,9 @@ const MAP = {
         containers: '[[134,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[128,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[31,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",7],[105,"Crate","GOLD_ITEM_TYPE.GoldCube",5],[33,"Closet","GOLD_ITEM_TYPE.GoldBar",7],[42,"BookShelf","INTERACTION_ITEM.Book",5]]',
         shrines: '[[77,3,"FireballShrine2"],[65,5,"KungfuShrine"]]',
         trainers: '[[6,7,"Hearty"]]',
-        }
+    }
     ,
-    15 : {
+    15: {
         name: "Library",
         sg: 0,
         maxSpawned: 3,
@@ -372,9 +372,9 @@ const MAP = {
         objects: '[[171,"Poison"]]',
         lairs: '[[280,1,"Lair01"],[237,3,"Lair07"],[221,5,"Lair09"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
-        }
+    }
     ,
-    16 : {
+    16: {
         name: "Witches Brew",
         sg: 0,
         maxSpawned: 3,
@@ -394,9 +394,9 @@ const MAP = {
         objects: '[[110,"Skull"]]',
         lairs: '[[280,1,"Lair08"],[64,5,"Lair06"],[54,7,"Lair05"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
-        }
+    }
     ,
-    17 : {
+    17: {
         name: "Underground Forest",
         sg: 0,
         maxSpawned: 3,
@@ -418,9 +418,9 @@ const MAP = {
         movables: '[[229,"WolfPuppy"],[225,"WolfPuppy"],[233,"WolfPuppy"]]',
         lairs: '[[152,3,"Lair23"],[136,5,"Lair21"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin","MissGalaxy"]',
-        }
+    }
     ,
-    18: {
+    18 : {
         name: "Fashion District",
         sg: 0,
         maxSpawned: 4,
@@ -431,17 +431,18 @@ const MAP = {
         floor: "MC_floor20",
         ceil: "PebbleWall2",
         start: '[19,7]',
-        decals: '[[151,4,"LeopardRug02","crest"],[133,4,"LeopardRug02","crest"],[150,4,"LeopardRug02","crest"],[167,4,"LeopardRug02","crest"],[137,4,"LeopardRug06","crest"],[121,4,"LeopardRug06","crest"],[138,4,"LeopardRug06","crest"],[155,4,"LeopardRug06","crest"],[14,7,"BookShelf05","crest"],[263,4,"LeopardRug03","crest"],[246,4,"LeopardRug03","crest"],[245,4,"LeopardRug03","crest"],[247,4,"LeopardRug03","crest"]]',
+        decals: '[[151,4,"LeopardRug02","crest"],[133,4,"LeopardRug02","crest"],[150,4,"LeopardRug02","crest"],[167,4,"LeopardRug02","crest"],[137,4,"LeopardRug06","crest"],[121,4,"LeopardRug06","crest"],[138,4,"LeopardRug06","crest"],[155,4,"LeopardRug06","crest"],[14,7,"BookShelf05","crest"],[263,4,"LeopardRug03","crest"],[246,4,"LeopardRug03","crest"],[245,4,"LeopardRug03","crest"],[247,4,"LeopardRug03","crest"],[21,7,"GhostFace2","picture"],[30,7,"AztecChallenge111","picture"],[172,7,"LeisureSuitLarry61","picture"],[184,7,"AticAtac130","picture"],[273,1,"LastNinja130","picture"],[248,1,"AI_pic247","picture"],[287,1,"GirlSwims05","picture"],[116,1,"AI_Pic_122","picture"],[69,1,"GirlSwims10","picture"],[69,5,"Valhalla2","picture"],[172,5,"ReturnToCastleWolfenstein13","picture"],[104,5,"FalconPatrol70","picture"],[222,5,"AI_PIC_310","picture"],[83,3,"DungeonMaster92","picture"],[116,3,"AI_pic216","picture"],[236,3,"AI_pic251","picture"],[24,7,"SittingSkelly23","crest"],[163,7,"WallSkelly103","crest"],[276,1,"CrawlingSkelly1","crest"],[125,1,"LaughingSkeleton1","crest"],[90,4,"FloorGrille103","crest"],[191,4,"FloorGrille106","crest"],[80,4,"PuddleDecal04","crest"],[234,4,"Drain2_96","crest"],[109,1,"SittingSkelly14","crest"],[111,1,"Skull20","crest"],[177,7,"SatanRam5","crest"],[179,7,"DemonSkull3","crest"],[159,3,"DemonSkull2","crest"],[125,3,"CrawlingSkelly2","crest"],[129,5,"SatanRam1","crest"],[163,5,"DancingSkelies3","crest"],[34,5,"CastleHaunt","picture"],[27,5,"AI_pic238","picture"],[50,3,"Pitfall90","picture"],[243,3,"AI_PIC_306","picture"],[249,5,"CastleLady100","picture"],[184,3,"LadyTut60","picture"]]',
         lights: '[[220,3,"Fireplace06","fire"],[101,3,"Fireplace10","fire"],[204,5,"Fireplace07","fire"],[85,5,"Fireplace11","fire"],[40,7,"WallLamp35","standardDimmed"],[44,7,"WallLamp35","standardDimmed"],[226,1,"WallLamp19","standardDimmed"],[232,1,"WallLamp19","standardDimmed"],[275,1,"Lights110","fire"],[285,1,"Lights110","fire"]]',
         gates: '[[2,7,"18.1","16.3","Open"]]',
-        containers: '[[32,"IronChest","INTERACTION_ITEM.GoldenBook",7],[253,"TreasureChest","INTERACTION_ITEM.PurpleRose",3]]',
+        gold: '[[53,"GoldCube"],[93,"GoldCube"],[132,"GoldCube"],[212,"GoldCube"],[252,"GoldCube"],[206,"GoldCube"],[140,"SilverBar"],[64,"SilverBar"],[147,"GoldBar"],[74,"GoldBar"]]',
+        containers: '[[32,"IronChest","INTERACTION_ITEM.GoldenBook",7],[253,"TreasureChest","INTERACTION_ITEM.PurpleRose",3],[86,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[239,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[66,"Crate","GOLD_ITEM_TYPE.GoldCube",3],[201,"Crate","GOLD_ITEM_TYPE.GoldCube",3],[267,"BookShelf","GOLD_ITEM_TYPE.GoldBar",1],[29,"IronChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[152,3,"Licky"],[136,5,"StilettoTwin"],[280,1,"Purrscilla"],[8,7,"ApparitiaTraitor"]]',
-        objects: '[[240,"Skull"]]',
+        objects: '[[240,"Skull"],[89,"Orb"],[199,"Orb"]]',
         lairs: '[[161,7,"Lair24"],[127,1,"Lair33"],[143,3,"Lair09"],[145,5,"Lair24"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
-    }
+        }
     ,
-    19 : {
+    19: {
         name: "The Gauntlet",
         sg: 0,
         maxSpawned: 4,
@@ -461,7 +462,7 @@ const MAP = {
         objects: '[[52,"Dagger"]]',
         lairs: '[[7,7,"Lair21"],[10,7,"Lair25"],[349,1,"Lair26"],[352,1,"Lair02"]]',
         monsterList: '["MissGalaxy","MissGalaxy","MissGalaxy","Goblin"]',
-        }
+    }
     ,
     20: {
         name: "Emerald placeholder",
@@ -536,7 +537,7 @@ const MAP = {
         monsterList: '["MissGalaxy"]',
     }
     ,
-    24 : {
+    24: {
         name: "Wolf Den",
         sg: 0,
         maxSpawned: 4,
@@ -555,7 +556,7 @@ const MAP = {
         objects: '[[194,"Poison"],[180,"Milk"]]',
         lairs: '[[220,3,"Lair34"],[204,5,"Lair06"]]',
         monsterList: '["MissGalaxy"]',
-        }
+    }
     ,
     25: {
         name: "The Kitchen",
@@ -595,25 +596,34 @@ const MAP = {
         objects: '[[144,"Apple"],[154,"Skull"]]',
     }
     ,
-    27: {
+    27 : {
         name: "Skull Collector",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"21","height":"21","map":"BB3ABABAA6BB3ABB3ABAA2BAA2BB2ABB3AA8BABABABB2AA2BABABB2ABABAA3BABAA2BABABABAA7BAA5BB2AA4BB3AA13BABABAA3BAA2BAA5BABB2AA4BAA3BB3AA2BB4ABABB2ABABB2AA2BB5AA6BB2ABABABABABB2ABABABABB5AA2BB6ABB2AA2BB2ABB2AA7BB2ABAA2BB2AA2BAA4BB2AA2BB2ABB2ABB4AA2BB2ABB2ABB3AA2BABABB4ABB4ABB5AA4BB4ABB2AA2BB2AA2BAA5BB4AA7BB2ABAA3BB3AA3BAA2BB4ABB11AA4BABAA2BB5ABB2AA2BAA2BB2AA2BB2AA2BB4ABB5ABB2ABABB4AA2BABB22ABB14A$"}',
+        maxSpawned: 7,
+        killCountdown: 5,
+        spawnDelay: 4000,
+        data: '{"width":"21","height":"21","map":"BB3ABABAA2BAA4BB3AA2BB2ABABABAA3BB2ABB2AA8BB3AA2BABAA3BABABB2ABB2AA2BABAA2BABAA3BABAA7BAA5BB2AA4BB2AA11BAA2BAA5BB2ABAA6BABB2AA4BAA3BB3AA2BB3ABABB3ABAA2BB4AA4BB2AA2BABABB2ABB3ABAA2BB2AA2BB2ABB3ABB6ABB2AA2BB2AA2BB2AA7BB2ABAA2BAA2BAA4BB2AA2BB2ABABB4AA2BB2ABB2ABB2AA2BB3ABB2ABB3ABB7AA3BB5ABB2AA2BB2ABB2AA4BB4AA5BB3ABAA2BB2ABAA4BB4ABB12ABAA5BABAA2BB3AA2BB3ABAA2BABB6ABB4ABB5ABB2ABABB2AA2BABB2ABABABB22ABB14A$"}',
         wall: "DarkWAll43234",
         floor: "OrnateFloor108",
         ceil: "CrumblyWall2",
         start: '[61,3]',
-        lights: '[[56,7,"WallLamp16","standard"],[180,1,"Lights115","standardDimmed"],[182,1,"Lights108","standardDimmed"],[122,1,"Lights102","standardDimmed"]]',
+        decals: '[[17,7,"Platoon50","picture"],[36,7,"Princess17","picture"],[52,7,"SuperDogfight3","picture"],[8,7,"KokotoniWilf60","picture"],[5,7,"FalconPatrol9","picture"],[107,7,"SirFred60","picture"],[70,7,"Sentinel50","picture"],[113,7,"AI_pic226","picture"],[157,7,"Fred101","picture"],[151,7,"AI_PIC_317","picture"],[164,7,"AI_Pic_114","picture"],[123,7,"TempleOfApshai89","picture"],[323,7,"LargePicLadies10","picture"],[326,7,"AI_PIC_437","picture"],[191,7,"BookShelf20","picture"],[201,7,"FF101","picture"],[292,7,"BackToFuture201","picture"],[197,1,"HeroQuest50","picture"],[241,1,"PrincessAI_16","picture"],[321,1,"SP69","picture"],[248,1,"Tombraider140","picture"],[108,1,"Barbarian3","picture"],[158,1,"WhoDaresWins88","picture"],[431,1,"Zaxxon89","picture"],[162,1,"AztecChallenge_AI","picture"],[102,1,"Fred113","picture"],[292,1,"PharaohCurse112","picture"],[437,1,"LodeRunner10","picture"],[433,1,"CrystalCastles90","picture"],[281,1,"CastleLady20","picture"],[42,5,"HalfLife91","picture"],[217,5,"TombRaider102","picture"],[379,5,"CastleLady50","picture"],[263,5,"AI_Pic_140","picture"],[339,5,"CrawlMaster2","picture"],[350,5,"TombRaider104","picture"],[310,5,"AI_pic218","picture"],[122,3,"MrRobot60","picture"],[40,3,"CastleLady41","picture"],[200,3,"AI_PIC_441","picture"],[263,3,"Iceman70","picture"],[46,3,"Ultima50","picture"],[31,3,"GirlSwims06","picture"],[230,3,"Pitfall72","picture"],[356,3,"AntAttack200","picture"],[394,3,"JetSetWilly60","picture"],[387,3,"CongoBongo2","picture"],[268,3,"PharaohCurse140","picture"],[350,3,"AI_PIC_301","picture"],[234,3,"AI_PIC_303","picture"],[383,3,"Hero82","picture"],[278,3,"Princess15","picture"],[114,5,"Skull20","crest"],[72,5,"DemonSkull1","crest"],[203,7,"SittingSkelly21","crest"],[411,3,"AA_CREST_AI","crest"],[426,1,"Unknown400","picture"],[103,7,"Skyrim9","picture"],[374,7,"ImpossibleMsission112","picture"],[235,7,"SammyLightfoot2","picture"],[129,5,"CastleLady54","picture"],[183,5,"CastleLady43","picture"],[305,5,"CastleLady38","picture"],[231,5,"Kangaroo50","picture"],[175,3,"PrincessAI_08","picture"],[71,1,"Princess15","picture"]]',
+        lights: '[[56,7,"WallLamp16","standard"],[180,1,"Lights115","standardDimmed"],[182,1,"Lights108","standardDimmed"],[122,1,"Lights102","standardDimmed"],[154,1,"Candelabra01","candle"],[325,1,"Candelabra02","candle"],[295,1,"Candelabra03","candle"],[428,1,"Candelabra04","candle"],[439,1,"Candelabra05","candle"],[330,1,"Candelabra06","candle"]]',
         gates: '[[62,3,"27.1","25.3","Up"]]',
-        triggers: '[[55,4,"SmoothWallButton",1,93],[166,1,"SmoothWallButton",1,202]]',
+        monsters: '[[137,"Wolf"],[176,"Wolf"],[300,"MissGalaxy"],[193,"Goblin"]]',
+        gold: '[[97,"GoldCube"],[155,"GoldCube"],[258,"GoldCube"],[170,"GoldCube"],[88,"GoldCube"],[28,"GoldCube"],[340,"GoldCube"],[404,"GoldCube"],[353,"GoldCube"],[224,"GoldCube"],[185,"SilverBar"],[270,"SilverBar"],[370,"SilverBar"],[317,"SilverBar"],[232,"SilverBar"],[44,"SilverBar"],[139,"GoldBar"],[239,"GoldBar"],[215,"GoldBar"],[266,"GoldBar"],[400,"GoldBar"]]',
+        skills: '[[124,"Magic"],[306,"Attack"],[395,"Heart"]]',
+        containers: '[[53,"PirateChest","GOLD_ITEM_TYPE.SilverBar",7],[55,"IronChest","GOLD_ITEM_TYPE.SilverBar",7],[24,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[184,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[256,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[412,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[346,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[130,"Crate","GOLD_ITEM_TYPE.SilverBar",1]]',
+        triggers: '[[55,4,"SmoothWallButton",1,93],[166,1,"SmoothWallButton",1,202],[152,1,"SmoothWallButton",1,68]]',
         entities: '[[12,7,"SkullCollector"]]',
         objects: '[[30,"Skull"]]',
-    }
+        traps: '[[54,4,"SmoothWallButton",1,"Wolf",39],[53,4,"SmoothWallButton",1,"Wolf",81]]',
+        oracles: '[[399,5,"Archie"],[168,5,"ApparitiaSkull"]]',
+        lairs: '[[1,7,"Lair02"],[435,1,"Lair02"],[315,5,"Lair20"],[188,3,"Lair29"]]',
+        monsterList: '["Goblin"]',
+        }
     ,
-    28 : {
+    28: {
         name: "Stairs Down",
         sg: 0,
         maxSpawned: 3,
@@ -630,9 +640,9 @@ const MAP = {
         monsters: '[[34,"Bat"],[85,"Wolf"]]',
         gold: '[[46,"GoldCube"],[55,"GoldCube"],[98,"GoldCube"]]',
         containers: '[[41,"Chest","GOLD_ITEM_TYPE.SilverBar",7],[20,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[101,"Barrel","GOLD_ITEM_TYPE.SilverBar",1]]',
-        }
+    }
     ,
-    29 : {
+    29: {
         name: "The Lower Temple",
         sg: 0,
         maxSpawned: -1,
@@ -653,5 +663,5 @@ const MAP = {
         objects: '[[324,"GoldCoin"]]',
         oracles: '[[114,5,"ApparitiaPrice"],[228,5,"ApparitiaHopsasa"],[6,7,"AmazingOne"]]',
         trainers: '[[9,7,"Doctress"],[351,1,"Gunny"],[12,7,"Teacher"],[348,1,"FireballTrainer"],[354,1,"YoungLeopardess"]]',
-        }
+    }
 };
