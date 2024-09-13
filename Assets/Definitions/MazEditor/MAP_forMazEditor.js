@@ -90,7 +90,8 @@ const DECAL_PAINTINGS = [
     "LatexGirl1", "CastleLady100", "CastleLady101", "CastleLady102", "CastleLady103", "CastleLady104", "CastleLady105", "CastleLady106", "CastleLady107", "CastleLady108", "CastleLady109", "CastleLady110", "CastleLady111", "CastleLady112",
     "CastleLady113", "CastleLady114", "CastleLady115", "CastleLady116", "CastleLady117",
     "LargePicLadies01", "LargePicLadies02", "LargePicLadies03", "LargePicLadies04", "LargePicLadies05", "LargePicLadies06", "LargePicLadies07", "LargePicLadies08", "LargePicLadies09", "LargePicLadies10", "LargePicLadies11", "LargePicLadies12",
-    "LargePicLadies13", "LargePicLadies14", "LargePicLadies15", "LargePicLadies16", "LargePicLadies17", "LargePicLadies18", "LargePicLadies19", "LargePicLadies20", "LargePicLadies21", "LargePicLadies22", "LargePicLadies23", "LargePicLadies24"
+    "LargePicLadies13", "LargePicLadies14", "LargePicLadies15", "LargePicLadies16", "LargePicLadies17", "LargePicLadies18", "LargePicLadies19", "LargePicLadies20", "LargePicLadies21", "LargePicLadies22", "LargePicLadies23", "LargePicLadies24",
+    "MoonPatrol500", "BetrayedAlliance"
 ].sort();
 
 /** Crests */

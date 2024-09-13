@@ -809,6 +809,10 @@ LoadSprites = [
     { srcName: "EntityPictures/AmazingOne.jpg", name: "AmazingOne" },
     { srcName: "EntityPictures/YoungLeopardess.jpg", name: "YoungLeopardess" },
     { srcName: "EntityPictures/Archie.jpg", name: "Archie" },
+    { srcName: "EntityPictures/BlueLiar.jpg", name: "BlueLiar" },
+    { srcName: "EntityPictures/CouchDomme.jpg", name: "CouchDomme" },
+    { srcName: "EntityPictures/Lacy.jpg", name: "Lacy" },
+
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -2445,6 +2449,9 @@ LoadSprites = [
     { srcName: "PicDecals/LargePicLadies22.jpg", name: "LargePicLadies22" },
     { srcName: "PicDecals/LargePicLadies23.jpg", name: "LargePicLadies23" },
     { srcName: "PicDecals/LargePicLadies24.jpg", name: "LargePicLadies24" },
+
+    { srcName: "PicDecals/MoonPatrol500.jpg", name: "MoonPatrol500" },
+    { srcName: "PicDecals/BetrayedAlliance.jpg", name: "BetrayedAlliance" },
 ];
 
 console.log("%cAssets for CastleHaunt ready.", "color: orange");

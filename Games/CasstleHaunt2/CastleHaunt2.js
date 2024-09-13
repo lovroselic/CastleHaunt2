@@ -82,13 +82,14 @@ const DEBUG = {
          * missing sources for: 
             * 
 
-  
+        * lower temple usage:
+            teacher, firetrain, doctress
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 27;    //14
-        GAME.gold = 3513;   //gold collected in 6,
+        GAME.level = 25;    //7
+        GAME.gold = 5590;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -97,11 +98,11 @@ const DEBUG = {
 
         HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 7;
-        HERO.attack = 9;
+        HERO.magic = 10;
+        HERO.attack = 10;
 
-        HERO.maxHealth = 48;
-        HERO.health = 45;
+        HERO.maxHealth = 64;
+        HERO.health = 37;
         //HERO.health = 12;
 
 
@@ -115,7 +116,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Mushroom", "Skull", "GoldCoin", "Skull", "Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "Skull", "BlueRose", "Mushroom", "Mushroom", "Skull", "RedHandbag",
+        let invItems = ["Mushroom","Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "BlueRose", "Mushroom", "Mushroom", "RedHandbag", "WhiteHeels", "Milk", "Poison" 
 
         ];
         for (let itm of invItems) {
@@ -151,7 +152,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.09.07",
+    VERSION: "0.09.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

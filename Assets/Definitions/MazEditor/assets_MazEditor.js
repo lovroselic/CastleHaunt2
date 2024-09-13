@@ -2220,6 +2220,8 @@ LoadSprites = [
     { srcName: "PicDecals/LargePicLadies22.jpg", name: "LargePicLadies22" },
     { srcName: "PicDecals/LargePicLadies23.jpg", name: "LargePicLadies23" },
     { srcName: "PicDecals/LargePicLadies24.jpg", name: "LargePicLadies24" },
+    { srcName: "PicDecals/MoonPatrol500.jpg", name: "MoonPatrol500" },
+    { srcName: "PicDecals/BetrayedAlliance.jpg", name: "BetrayedAlliance" },
 ];
 
 LoadShaders = [

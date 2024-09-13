@@ -341,6 +341,30 @@ const ORACLE_TYPE = {
         text: "Searching for skulls? You will not have mine.",
         interactionCategory: "oracle",
     },
+    BlueLiar: {
+        name: "BlueLiar",
+        sprite: "BlueLiar",
+        category: 'crest',
+        voice: "Female2",
+        text: "I Think Wolfie wants to kill Red Riding Hood for revenge. But since I did not play The Curse of the Castle Creep I don't know why.",
+        interactionCategory: "oracle",
+    },
+    CouchDomme: {
+        name: "CouchDomme",
+        sprite: "CouchDomme",
+        category: 'crest',
+        voice: "Female",
+        text: "Did you know Red Riding Hood wanted to poison Wolfie in the Curse of the Castle Creep?",
+        interactionCategory: "oracle",
+    },
+    Lacy: {
+        name: "Lacy",
+        sprite: "Lacy",
+        category: 'crest',
+        voice: "Female",
+        text: "Killing a weak monster just improves the chance of spawning a more powerful one.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
