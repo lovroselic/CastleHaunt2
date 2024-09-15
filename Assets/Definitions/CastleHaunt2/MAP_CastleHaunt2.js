@@ -25,20 +25,20 @@ const MAP_TEXT = {
     13: "I found a secret room? Excellent.",
     14: "A temple dedicated to me. Cool. But no discount?",
     15: "I wonder if there is a book about me? It should be. I am badass.",
-    16: "",
+    16: "I kind of like adventures. You?",
     17: "A proper underground forest. Is it haunted? Oh yes.",
     18: "Not all Apparitias are hostile. Maybe I can turn some. It's all about fashion.",
-    19: "",
+    19: "Blood trail goes to the west.",
     20: "",
-    21: "",
-    22: "",
+    21: "Eyes sharp?",
+    22: "I can see the sea.",
     23: "Weaver weaves as Weaver wills.",
-    24: "",
-    25: "",
-    26: "",
-    27: "",
+    24: "Who is afraid of the big bad wolf?",
+    25: "Smells nice. Maybe I can get something to eat.",
+    26: "The dungeon of the castle's most famous poisoner.",
+    27: "Seems like a small room. Or maybe my eyes deceive me.",
     28: "Watch your step on the stairs.",
-    29: "",
+    29: "You better make me rich so I can afford all this training.",
 };
 
 /** Map definitions */
@@ -523,7 +523,7 @@ const MAP = {
         monsterList: '["Goblin"]',
         }
     ,
-    23: {
+    23 : {
         name: "The Weaver",
         sg: 0,
         maxSpawned: 3,
@@ -534,14 +534,15 @@ const MAP = {
         floor: "Grass17",
         ceil: "DarkSky01",
         start: '[141,3]',
-        decals: '[[66,5,"HauntedForest01","texture"],[54,5,"HauntedForest01","texture"],[42,5,"HauntedForest01","texture"],[92,5,"HauntedForest01","texture"],[106,5,"HauntedForest01","texture"],[120,5,"HauntedForest01","texture"],[66,7,"HauntedForest01","texture"],[54,7,"HauntedForest01","texture"],[42,7,"HauntedForest01","texture"],[30,7,"HauntedForest01","texture"],[92,1,"HauntedForest01","texture"],[106,1,"HauntedForest01","texture"],[120,1,"HauntedForest01","texture"],[134,1,"HauntedForest01","texture"]]',
+        decals: '[[66,5,"HauntedForest01","texture"],[54,5,"HauntedForest01","texture"],[42,5,"HauntedForest01","texture"],[92,5,"HauntedForest01","texture"],[106,5,"HauntedForest01","texture"],[120,5,"HauntedForest01","texture"],[66,7,"HauntedForest01","texture"],[54,7,"HauntedForest01","texture"],[42,7,"HauntedForest01","texture"],[30,7,"HauntedForest01","texture"],[92,1,"HauntedForest01","texture"],[106,1,"HauntedForest01","texture"],[120,1,"HauntedForest01","texture"],[134,1,"HauntedForest01","texture"],[19,7,"GIJoe71","picture"],[22,7,"GatewayToApshai140","picture"],[149,1,"AI_pic217","picture"],[98,1,"Arnie201","picture"],[152,1,"UnknownHelicopterGame501","picture"],[72,1,"Arena200","picture"],[98,7,"AI_pic220","picture"],[72,7,"Nebulus90","picture"],[50,3,"MonkeyIsland143","picture"],[115,3,"GhostFace4","picture"],[72,5,"LargePicLadies23","picture"],[98,5,"CrawlMaster115","picture"]]',
         lights: '[[72,3,"WallLamp31","standard"],[98,3,"WallLamp31","standard"]]',
         gates: '[[142,3,"23.1","21.3","Closed"]]',
-        containers: '[[33,"Closet","INTERACTION_ITEM.Mirror",7]]',
+        gold: '[[69,"Coins"],[124,"Coins"],[61,"Coins"],[45,"Coins"],[126,"Coins"]]',
+        containers: '[[33,"Closet","INTERACTION_ITEM.Mirror",7],[36,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[85,"Crate","GOLD_ITEM_TYPE.SilverBar",1]]',
         entities: '[[78,5,"Weaver"]]',
         lairs: '[[90,3,"Lair21"]]',
         monsterList: '["MissGalaxy"]',
-    }
+        }
     ,
     24: {
         name: "Wolf Den",

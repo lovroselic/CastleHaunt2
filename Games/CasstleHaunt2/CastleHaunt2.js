@@ -48,33 +48,12 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area 2:
-         * 7 completed
-         * 14 completed
-         * 15 completed
-         * 19 sides completed
-            * CHECKED Sorceress: Mushroom 5x (11, 17, 17, fairy, ninja) -> Poison
-            * CHECKED SkullCollector: Skull 5x (11, 7, 27)
-                * CHECKEDLibrarian: Book-14, GoldenBook-18 -> gives red heels
-            * CHECKED: StilettoTwin : Red heels (from librarian, from RRH)
-            * CHECKED Licky: (handbag, hand mirror) -> helmet
-            * CHECKED Ninja: Dagger 3x (GreyWarrior, ) -> gives mushroom
-            * CHECKED fairy: (hand mirror, flower crown) -> gives mushroom
-            * CHECKED GreyWarrior: (sword, shield, helmet)-> dagger
-            * CEHCKED RedRidingHood: wolfPuppy 3x (17,17,17) -> gives red heels
-            * CHECKED Wolfie wants master poison and pie to kill red riding hood, will give binoculars.
-            * CHECKED cook want egg, ..., milk, gives pie
-            * CHECKED Bakeress
-            * CHECKED Witch2 wantt 3x poison , gives ConcentratedPoison
-            * CHECKED Weaver wants roses - > gives flower crown
-            * CHECKED FarSeer: Binoculars -> key to continue
-            * CHECKED Purscilla LeoStuf -> goldCoin
-            * CHECKED Apparitia Traitor (pearl white heels, leather white bag) - > Coin
+        /** main area 3:
+
+
         *
         * COINS:
-            * purscilla   
-            * Apparitia Traitor 
-            * SkullCollector 
+        
 
          * missing placed keys: 
             * 
@@ -82,14 +61,14 @@ const DEBUG = {
          * missing sources for: 
             * 
 
-        * lower temple usage:
-            teacher, firetrain, doctress, princess health
+        * temple usage:
+
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //GAME.level = 7;
-        GAME.level = 23;    //21
-        GAME.gold = 5546;
+        //GAME.level = 20;
+        GAME.level = 20;    //20
+        GAME.gold = 2546;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -98,15 +77,15 @@ const DEBUG = {
 
         HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 10;
-        HERO.attack = 10;
+        HERO.magic = 12;
+        HERO.attack = 12;
 
         HERO.maxHealth = 80;
         HERO.health = 54;
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Steak,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -115,9 +94,7 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Dagger", "BlueRose", "Milk", "RedRose", "Apple", "Egg", "Shield",
-            "Dagger", "Helmet", "GoldCoin", "GoldCoin",
-            "Mushroom", "Mushroom", "Mushroom", "Poison", "Poison",
+        let invItems = [
 
         ];
         for (let itm of invItems) {
@@ -125,7 +102,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Emerald"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -155,7 +132,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.09.09",
+    VERSION: "0.10.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -231,7 +208,9 @@ const PRG = {
         }
     },
     start() {
-        console.log(PRG.NAME + " started.");
+        console.log("%c**************************************************************************************************************************************", PRG.CSS);
+        console.log(`${PRG.NAME} ${PRG.VERSION} STARTED!`);
+        console.log("%c**************************************************************************************************************************************", PRG.CSS);
         $(ENGINE.topCanvas).off("mousemove", ENGINE.mouseOver);
         $(ENGINE.topCanvas).off("click", ENGINE.mouseClick);
         $(ENGINE.topCanvas).css("cursor", "");
