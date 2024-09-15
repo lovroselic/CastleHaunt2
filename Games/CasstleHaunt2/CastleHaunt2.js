@@ -83,13 +83,13 @@ const DEBUG = {
             * 
 
         * lower temple usage:
-            teacher, firetrain, doctress
+            teacher, firetrain, doctress, princess health
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 7;
-        GAME.level = 25;    //7
-        GAME.gold = 5590;
+        GAME.level = 23;    //21
+        GAME.gold = 5546;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -101,13 +101,12 @@ const DEBUG = {
         HERO.magic = 10;
         HERO.attack = 10;
 
-        HERO.maxHealth = 64;
-        HERO.health = 37;
-        //HERO.health = 12;
-
+        HERO.maxHealth = 80;
+        HERO.health = 54;
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Steak,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -116,7 +115,9 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = ["Mushroom","Leotard", "Dagger", "Poison", "WhiteHandbag", "LeoHat", "BlueRose", "Mushroom", "Mushroom", "RedHandbag", "WhiteHeels", "Milk", "Poison" 
+        let invItems = ["Dagger", "BlueRose", "Milk", "RedRose", "Apple", "Egg", "Shield",
+            "Dagger", "Helmet", "GoldCoin", "GoldCoin",
+            "Mushroom", "Mushroom", "Mushroom", "Poison", "Poison",
 
         ];
         for (let itm of invItems) {
@@ -124,7 +125,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Green", "Blue"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -146,13 +147,15 @@ const INI = {
     MONSTER_SHOOT_TIMEOUT: 4000,
     HEALTH: {
         Cake: 40,
+        Steak: 80,
+        BeerHealth: 120,
     },
     HEALTH_INC: 8,
 
 };
 
 const PRG = {
-    VERSION: "0.09.08",
+    VERSION: "0.09.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -266,7 +269,7 @@ class Status {
 class ActionItem {
     constructor(type, spriteClass) {
         this.type = type;
-        this.id = this.type;
+        this.id = `${type}-${spriteClass}`;
         this.spriteClass = spriteClass;
         this.sprite = SPRITE[this.spriteClass];
         this.class = "ActionItem";
@@ -410,11 +413,11 @@ const HERO = {
         if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
+        console.debug("getting orb:", missile);
         TITLE.orbs();
         AUDIO.CatchFireball.play();
         if (this.orbsLost > 0) {
             this.orbsLost--;
-            console.debug("getting orb", this.orbsLost);
         }
     },
     catchOrb(missile) {
@@ -436,7 +439,7 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        //console.debug("catcing orb", true);
+        console.debug("catching orb", missile);
         return this.getOrb(text, missile);
     },
     pickOrb() {
@@ -479,6 +482,7 @@ const HERO = {
         ];
 
         this.speak(text.chooseRandom());
+        console.warn("refusing orb:", missile)
         if (missile) {
             missile.drop();
         } else this.dropOrb();
@@ -958,6 +962,7 @@ const GAME = {
             case 'action_item':
                 console.warn("action_item", interaction.which, interaction.inventorySprite);
                 let aItem = new ActionItem(interaction.which, interaction.inventorySprite);
+                console.log("aItem", aItem);
                 HERO.inventory.scroll.add(aItem);
                 TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
                 TITLE.scrolls();

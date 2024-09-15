@@ -630,6 +630,10 @@ LoadTextures = [
     { srcName: "ObjectTextures/Closet4_baseColor.jpg", name: "Closet4" },
     { srcName: "ObjectTextures/Dagger_Base_Color.jpg", name: "Dagger_Base_Color" },
     { srcName: "ObjectTextures/IronChest_base.jpg", name: "IronChest" },
+    { srcName: "ObjectTextures/Banana_Texture.jpg", name: "Banana_Texture" },
+    { srcName: "ObjectTextures/SteakTexture.jpg", name: "Steak_Texture" },
+    { srcName: "ObjectTextures/Green_Apple_Basecolor.jpg", name: "Green_Apple_Basecolor" },
+    { srcName: "ObjectTextures/CanTexture.jpg", name: "CanTexture" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -740,7 +744,8 @@ LoadObjects = [
     "flask.obj", "scroll.obj", "ball.obj", "heart.obj", "shield.obj", "chest.obj",
     "pear.obj", "blockwall.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
-    "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj"
+    "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj",
+    "banana.obj", "steak.obj", "green apple.obj", "can.obj"
 ];
 
 LoadModels = [
@@ -759,7 +764,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia6.jpg", name: "ApparitiaHopsasa" },
     { srcName: "EntityPictures/Apparitia7.jpg", name: "ApparitiaSkull" },
     { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
-    { srcName: "EntityPictures/Apparitia9.jpg", name: "Apparitia9" }, //unused
+    { srcName: "EntityPictures/Apparitia9.jpg", name: "ApparitiaDead" }, 
     { srcName: "EntityPictures/Apparitia10.jpg", name: "ApparitiaHaunt" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
@@ -986,6 +991,10 @@ LoadSprites = [
     { srcName: "Items/FlowerCrown2.png", name: "FlowerCrown" },
     { srcName: "Items/RedHandbag.png", name: "RedHandbag" },
     { srcName: "Items/ConcentratedPoison.png", name: "ConcentratedPoison" },
+    { srcName: "Items/Banana2.png", name: "Banana" },
+    { srcName: "Items/Steak.png", name: "Steak" },
+    { srcName: "Items/GreenApple.png", name: "GreenApple" },
+    { srcName: "Items/BeerIcon.png", name: "BeerHealth" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

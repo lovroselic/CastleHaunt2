@@ -739,9 +739,12 @@ LoadSprites = [
     { srcName: "Items/Wasp.png", name: "Wasp" },
     { srcName: "Items/Whip.png", name: "Whip" },
     { srcName: "Items/WoolenCap.png", name: "WoolenCap" },
-
     { srcName: "Items/Dagger2.png", name: "Dagger" },
     { srcName: "Items/Binoculars.png", name: "Binoculars" },
+    { srcName: "Items/Banana2.png", name: "Banana" },
+    { srcName: "Items/Steak.png", name: "Steak" },
+    { srcName: "Items/GreenApple.png", name: "GreenApple" },
+    { srcName: "Items/BeerIcon.png", name: "BeerHealth" },
 
     //action movables
     { srcName: "ActionMovables/Spider.png", name: "BabyGreenSpider" },

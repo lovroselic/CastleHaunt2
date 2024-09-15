@@ -365,6 +365,14 @@ const ORACLE_TYPE = {
         text: "Killing a weak monster just improves the chance of spawning a more powerful one.",
         interactionCategory: "oracle",
     },
+    ApparitiaDead: {
+        name: "ApparitiaDead",
+        sprite: "ApparitiaDead",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Why are you not dead yet?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1522,6 +1530,30 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Cake",
         text: "Cake? Very healthy."
     },
+    Steak: {
+        name: "Steak",
+        category: "action_item",
+        which: "health",
+        element: "STEAK",
+        scale: 1.8 / 2 ** 3,
+        glueToFloor: true,
+        texture: "Steak_Texture",
+        material: MATERIAL.standard,
+        inventorySprite: "Steak",
+        text: "Steak? A yummy vegetarian meat."
+    },
+    BeerHealth: {
+        name: "BeerHealth",
+        category: "action_item",
+        which: "health",
+        element: "CAN",
+        scale: 1.0 / 2 ** 3,
+        glueToFloor: true,
+        texture: "CanTexture",
+        material: MATERIAL.standard,
+        inventorySprite: "BeerHealth",
+        text: "Beer always helps me."
+    },
     Dagger: {
         name: "Dagger",
         category: "interaction_item",
@@ -1533,7 +1565,6 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Dagger",
         text: "It looks very sharp."
     },
-
     Apple: {
         name: "Apple",
         category: "interaction_item",
@@ -1764,6 +1795,28 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Milk",
         material: MATERIAL.standard,
         text: "Milk. Sour. Ugh."
+    },
+    Banana: {
+        name: "Banana",
+        category: "interaction_item",
+        element: "BANANA",
+        scale: 1.6 / 2 ** 4,
+        glueToFloor: true,
+        texture: "Banana_Texture",
+        inventorySprite: "Banana",
+        material: MATERIAL.standard,
+        text: "Banana placeholder"
+    },
+    GreenApple: {
+        name: "GreenApple",
+        category: "interaction_item",
+        element: "GREEN_APPLE",
+        scale: 1.6 / 2 ** 4,
+        glueToFloor: true,
+        texture: "Green_Apple_Basecolor",
+        inventorySprite: "GreenApple",
+        material: MATERIAL.standard,
+        text: "GreenApple placeholder."
     },
 };
 
