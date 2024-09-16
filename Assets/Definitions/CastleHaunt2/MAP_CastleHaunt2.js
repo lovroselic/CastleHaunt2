@@ -29,7 +29,7 @@ const MAP_TEXT = {
     17: "A proper underground forest. Is it haunted? Oh yes.",
     18: "Not all Apparitias are hostile. Maybe I can turn some. It's all about fashion.",
     19: "Blood trail goes to the west.",
-    20: "",
+    20: "Are you sure we need to be here? Only if you have the key.",
     21: "Eyes sharp?",
     22: "I can see the sea.",
     23: "Weaver weaves as Weaver wills.",
@@ -465,17 +465,24 @@ const MAP = {
     }
     ,
     20: {
-        name: "Emerald placeholder",
+        name: "Emerald passage",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"11","map":"BB7AA30BB2AA30BAA7BB3ABB9AA2BB20ABB2ABB5AA2BAA2BB8AA2BABABB24A$"}',
-        wall: "3d wall",
-        floor: "RockFloor",
-        ceil: "Pavement",
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 3000,
+        data: '{"width":"15","height":"11","map":"BB7AA30BB2AA30BABB2AA6BB2ABB9AA2BB14ABABB5ABB2ABB4AA2BAA2BB7ABABABB24A$"}',
+        wall: "MossyWall112",
+        floor: "RedMArbleFloor5",
+        ceil: "TinyBricks",
         start: '[88,3]',
-        gates: '[[89,3,"20.1","19.4","Closed"]]',
+        decals: '[[61,5,"ShieldDecal03","crest"],[91,5,"ShieldDecal02","crest"],[17,7,"BC11","picture"],[27,7,"PharaohCurse130","picture"],[21,7,"SatanRam9","crest"],[23,7,"LaughingSkeleton6","crest"],[137,1,"PrincessAI_10","picture"],[147,1,"Friday70","picture"],[142,1,"LargePicLadies04","picture"],[81,1,"TombRaider111","picture"],[83,1,"LargePicLadies21","picture"],[81,7,"1942_201","picture"],[83,7,"HeavyOnTheMagick60","picture"],[58,3,"CastleLady49","picture"],[118,3,"CastleLady45","picture"]]',
+        lights: '[[81,3,"Candelabra16","standard"],[83,5,"Candelabra10","standard"]]',
+        gates: '[[89,3,"20.1","19.4","Closed"],[75,5,"20.2","30.1","Emerald"]]',
+        gold: '[[108,"GoldBar"],[52,"GoldBar"],[112,"GoldBar"],[48,"GoldBar"],[56,"GoldBar"],[117,"GoldBar"]]',
+        objects: '[[82,"Cake"],[32,"Orb"],[132,"Orb"]]',
+        oracles: '[[7,7,"ApparitiaCute"]]',
+        lairs: '[[4,7,"Lair06"],[10,7,"Lair19"],[154,1,"Lair28"],[160,1,"Lair17"]]',
+        monsterList: '["MissGalaxyGreen","Goblin","Goblin"]',
     }
     ,
     21: {
@@ -501,7 +508,7 @@ const MAP = {
         monsterList: '["Goblin"]',
     }
     ,
-    22 : {
+    22: {
         name: "The Balcony",
         sg: 0,
         maxSpawned: 3,
@@ -521,9 +528,9 @@ const MAP = {
         objects: '[[136,"Dagger"]]',
         lairs: '[[2,7,"Lair17"],[10,7,"Lair16"]]',
         monsterList: '["Goblin"]',
-        }
+    }
     ,
-    23 : {
+    23: {
         name: "The Weaver",
         sg: 0,
         maxSpawned: 3,
@@ -542,7 +549,7 @@ const MAP = {
         entities: '[[78,5,"Weaver"]]',
         lairs: '[[90,3,"Lair21"]]',
         monsterList: '["MissGalaxy"]',
-        }
+    }
     ,
     24: {
         name: "Wolf Den",
@@ -680,5 +687,25 @@ const MAP = {
         objects: '[[324,"GoldCoin"]]',
         oracles: '[[114,5,"ApparitiaPrice"],[228,5,"ApparitiaHopsasa"],[6,7,"AmazingOne"]]',
         trainers: '[[9,7,"Doctress"],[351,1,"Gunny"],[12,7,"Teacher"],[348,1,"FireballTrainer"],[354,1,"YoungLeopardess"]]',
+    }
+    ,
+    30: {
+        name: "Can I Breathe, Please",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB4AA4BAA2BB5AA27BB2AA13BAA3BAA43BB2AA23BAA2BAA7BAA5BAA8BB2AA10BB2AA9BAA2BB12AA2BB2AA2BB9ABB12ABB6AA2BB2ABB6ABB2AA3BB2AA8BB4ABABB24A$"}',
+        wall: "GoldishWall1",
+        floor: "OrnateFloor107",
+        ceil: "DarkMossy9",
+        start: '[151,3]',
+        decals: '[[149,4,"PuddleDecal03","crest"],[139,4,"PuddleDecal03","crest"],[144,4,"PuddleDecal03","crest"],[141,4,"PuddleDecal08","crest"],[147,4,"PuddleDecal08","crest"],[125,5,"Princess10","picture"],[159,5,"AI_Pic_108","picture"],[103,5,"RickDangerous51","picture"],[52,5,"Witcher101","picture"],[188,5,"Infiltrator71","picture"],[222,5,"AI_pic232","picture"],[117,3,"Nature05","picture"],[83,3,"HungryHorace12","picture"],[185,3,"BCAI2","picture"],[236,3,"CastleLady80","picture"],[96,7,"CastleLady32","picture"],[198,1,"CastleLady66","picture"],[125,1,"Pacman201","picture"],[159,7,"Princess9","picture"],[96,3,"Bagitman90","picture"],[198,3,"Princess8","picture"],[96,5,"Princess2","picture"],[198,5,"Galaxians_AI_1","picture"]]',
+        lights: '[[125,3,"Candelabra07","standard"],[159,3,"Candelabra06","standard"],[96,1,"Candelabra14","standard"],[198,7,"Candelabra09","standard"]]',
+        gates: '[[152,3,"30.1","20.2","Closed"],[136,5,"30.2","31.1","Closed"]]',
+        skills: '[[32,"Heart"]]',
+        shrines: '[[8,7,"PrinccessForestHealth"]]',
+        objects: '[[18,"Cake"],[270,"Steak"],[256,"BeerHealth"]]',
+        oracles: '[[282,1,"ApparitiaTease"],[278,1,"RedDress"]]',
     }
 };

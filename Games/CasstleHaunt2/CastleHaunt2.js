@@ -67,8 +67,8 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //GAME.level = 20;
-        GAME.level = 20;    //20
-        GAME.gold = 2546;
+        GAME.level = 30;    //20
+        GAME.gold = 3016;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -81,7 +81,7 @@ const DEBUG = {
         HERO.attack = 12;
 
         HERO.maxHealth = 80;
-        HERO.health = 54;
+        HERO.health = 2;
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
@@ -102,7 +102,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Emerald"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -132,7 +132,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.00",
+    VERSION: "0.10.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

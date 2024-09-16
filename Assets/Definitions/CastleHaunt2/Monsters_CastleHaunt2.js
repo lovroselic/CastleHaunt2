@@ -97,6 +97,16 @@ const SHRINE_TYPE = {
         price: 1500,
         level: 2,
     },
+    PrinccessForestHealth: {
+        name: "PrinccessForestHealth",
+        sprite: "PrinccessForestHealth",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 2000,
+        level: 1,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -371,6 +381,30 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "Why are you not dead yet?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaCute: {
+        name: "ApparitiaCute",
+        sprite: "ApparitiaCute",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We are coming for you, Princess. You can't hide.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaTease: {
+        name: "ApparitiaTease",
+        sprite: "ApparitiaTease",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I hope you are broke already.",
+        interactionCategory: "oracle",
+    },
+    RedDress: {
+        name: "RedDress",
+        sprite: "RedDress",
+        category: 'crest',
+        voice: "Female",
+        text: "I hope you have saved some gold for situations like this?",
         interactionCategory: "oracle",
     },
 };
@@ -737,6 +771,33 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    MissGalaxyGreen: {
+        name: "MissGalaxyGreen",
+        texture: "MissGalaxyGreen",
+        model: "MissGalaxy",
+        scale: 0.8 / 2 ** 2,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        //
+        mana: 6,
+        health: 15,
+        attack: 12,
+        magic: 2,
+        defense: 0,
+        directMagicDamage: true,
+        //
+        caster: true,
+        shootDistance: 6,
+        stalkDistance: 8,
+        attackSound: "HumanAttack1",
+        hurtSound: "Ow",
+        behaviourArguments: [8, ["wanderer"], 6, ["shoot"]],
+        moveSpeed: 1.1,
+        material: MATERIAL.standardShine,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
     Goblin: {
         name: "Goblin",
         model: "Goblin",
@@ -772,29 +833,6 @@ const MONSTER_TYPE = {
 
 
     /** backup */
-
-
-    MissGalaxyGreen: {
-        name: "MissGalaxyGreen",
-        texture: "MissGalaxyGreen",
-        model: "MissGalaxy",
-        scale: 0.8 / 2 ** 2,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 5,
-        defense: 3,
-        magic: 2,
-        health: 8,
-        xp: 6,
-        gold: 10,
-        attackSound: "HumanAttack1",
-        hurtSound: "Ow",
-        behaviourArguments: [5, ["wanderer"], 3, ["advancer"]],
-        moveSpeed: 1.0,
-        material: MATERIAL.greenShine,
-    },
 
     MissGreen: {
         name: "MissGreen",

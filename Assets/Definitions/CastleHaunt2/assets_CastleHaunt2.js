@@ -766,6 +766,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Apparitia8.jpg", name: "ApparitiaPale" },
     { srcName: "EntityPictures/Apparitia9.jpg", name: "ApparitiaDead" }, 
     { srcName: "EntityPictures/Apparitia10.jpg", name: "ApparitiaHaunt" },
+    { srcName: "EntityPictures/ApparitiaCute.jpg", name: "ApparitiaCute" },
+    { srcName: "EntityPictures/ApparitiaTease.jpg", name: "ApparitiaTease" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -817,7 +819,7 @@ LoadSprites = [
     { srcName: "EntityPictures/BlueLiar.jpg", name: "BlueLiar" },
     { srcName: "EntityPictures/CouchDomme.jpg", name: "CouchDomme" },
     { srcName: "EntityPictures/Lacy.jpg", name: "Lacy" },
-
+    { srcName: "EntityPictures/RedDress.jpg", name: "RedDress" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -893,6 +895,7 @@ LoadSprites = [
     { srcName: "Shrines/HeartSkill1.jpg", name: "Hearty" },
     { srcName: "Shrines/PrincessSword.jpg", name: "PrincessSword" },
     { srcName: "Shrines/Princess2Heart.jpg", name: "Princess2Heart" },
+    { srcName: "Shrines/PrinccessForestHealth.jpg", name: "PrinccessForestHealth" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },
