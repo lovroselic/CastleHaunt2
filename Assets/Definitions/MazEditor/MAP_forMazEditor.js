@@ -91,7 +91,12 @@ const DECAL_PAINTINGS = [
     "CastleLady113", "CastleLady114", "CastleLady115", "CastleLady116", "CastleLady117",
     "LargePicLadies01", "LargePicLadies02", "LargePicLadies03", "LargePicLadies04", "LargePicLadies05", "LargePicLadies06", "LargePicLadies07", "LargePicLadies08", "LargePicLadies09", "LargePicLadies10", "LargePicLadies11", "LargePicLadies12",
     "LargePicLadies13", "LargePicLadies14", "LargePicLadies15", "LargePicLadies16", "LargePicLadies17", "LargePicLadies18", "LargePicLadies19", "LargePicLadies20", "LargePicLadies21", "LargePicLadies22", "LargePicLadies23", "LargePicLadies24",
-    "MoonPatrol500", "BetrayedAlliance"
+    "MoonPatrol500", "BetrayedAlliance",
+    "BeachHead500", "CastleBabes01", "CastleBabes02", "CastleBabes03", "CastleBabes04", "CastleBabes05", "CastleBabes06", "CastleBabes07", "CastleBabes08", "CastleBabes09", "CastleBabes10", "CastleBabes11", "CastleBabes12", "CastleBabes13",
+    "CastleBabes14", "CastleBabes15", "CastleBabes16", "CastleBabes17", "CastleBabes18", "CastleBabes19", "CastleBabes20", "CastleBabes21", "CastleBabes22", "CastleBabes23", "CastleBabes24", "CastleBabes25", "CastleBabes26", "CastleBabes27",
+    "CastleBabes28", "CastleBabes29", "CastleBabes30", "CastleBabes31", "CastleBabes32", "CastleBabes33", "CastleBabes34", "CastleBabes35", "CastleBabes36", "CastleBabes37", "CastleBabes38", "CastleBabes39", "CastleBabes40", "CastleBabes41",
+    "CastleBabes42", "CastleBabes43", "CastleBabes44", "CastleBabes45", "CastleBabes46", "CastleBabes47", "CastleBabes48", "CastleBabes49", "CastleBabes50", "CastleBabes51", "CastleBabes52", "DommeInGrass1", "ForbiddenForest501",
+    "ForbiddenForest502", "Leggy1", "Leggy2", "PrincessOnThrone", "RedBum1", "Scramble501", "SpyVsSpy501", "SummerGames501", "WizardOfWor500"
 ].sort();
 
 /** Crests */

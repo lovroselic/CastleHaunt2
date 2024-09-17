@@ -29,6 +29,7 @@ const LIGHT_COLORS = {
     emerald: new Float32Array([0.3137, 0.7843, 0.470588]),
     white: new Float32Array([1.0, 1.0, 1.0]),
     candle: new Float32Array([1.0, 0.823529, 0.1098]),
+    dimCandle: new Float32Array([0.8, 0.7, 0.10]),
     weakCandle: new Float32Array([0.5, 0.41, 0.05]),
 };
 
