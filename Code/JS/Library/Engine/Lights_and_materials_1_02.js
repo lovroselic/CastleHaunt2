@@ -16,6 +16,8 @@ const LIGHT_COLORS = {
     red: new Float32Array([0.95, 0.70, 0.70]),
     lightRed: new Float32Array([0.5, 0.1, 0.1]),
     yellowgreen: new Float32Array([0.90, 0.90, 0.50]),
+    darkYellow: new Float32Array([0.80, 0.80, 0.0]),
+    veryDarkYellow: new Float32Array([0.50, 0.50, 0.0]),
     white: new Float32Array([1.0, 1.0, 1.0]),
     blue: new Float32Array([0.0, 0.0, 1.0]),
     fullRed: new Float32Array([1.0, 0.0, 0.0]),

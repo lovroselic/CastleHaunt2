@@ -423,6 +423,22 @@ const ORACLE_TYPE = {
         text: "You will never find it. It's hidden so well. You will be stuck here.",
         interactionCategory: "oracle",
     },
+    SaveGameOracle: {
+        name: "SaveGameOracle",
+        sprite: "SaveGameOracle",
+        category: 'crest',
+        voice: "Female2",
+        text: "There must be some kind of way forward. Think. Search. Explore.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaBlock: {
+        name: "ApparitiaBlock",
+        sprite: "ApparitiaBlock",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I've sealed off the passage. Ahahahaha! What will you do now?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -675,6 +691,15 @@ const COMMON_ITEM_TYPE = {
         construct: BouncingMissile,
         collectible: true,
     },
+    Scroll: {
+        name: "Scroll",
+        category: "scroll",
+        element: "SCROLL",
+        scale: 1.5 / 2 ** 4,
+        glueToFloor: true,
+        texture: "ScrollTexture",
+        material: MATERIAL.paper,
+    },
 };
 
 const MONSTER_TYPE = {
@@ -739,6 +764,27 @@ const MONSTER_TYPE = {
         hurtSound: "MonsterHurt",
         behaviourArguments: [5, ["wanderer"], 3, ["follower"]],
         moveSpeed: 1.0,
+        material: MATERIAL.standard,
+    },
+    SpiderGreen: {
+        name: "SpiderGreen",
+        texture: "SpiderGreen",
+        model: "Spider",
+        scale: 1.4 / 2 ** 6,
+        rotateToNorth: Math.PI,
+        midHeight: 0.35,
+        deathType: "BloodExplosion",
+        inventory: null,
+        mana: 0,
+        health: 20,
+        attack: 12,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [7, ["wanderer"], 3, ["follower"]],
+        moveSpeed: 1.1,
         material: MATERIAL.standard,
     },
     Wolf: {
@@ -934,27 +980,7 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
-    SpiderGreen: {
-        name: "SpiderGreen",
-        texture: "SpiderGreen",
-        model: "Spider",
-        scale: 1.4 / 2 ** 6,
-        rotateToNorth: Math.PI,
-        midHeight: 0.35,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 10,
-        defense: 5,
-        magic: 3,
-        health: 12,
-        xp: 15,
-        gold: 20,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt",
-        behaviourArguments: [7, ["wanderer"], 3, ["follower"]],
-        moveSpeed: 1.1,
-        material: MATERIAL.standard,
-    },
+    
 
     MissWhite: {
         name: "MissWhite",

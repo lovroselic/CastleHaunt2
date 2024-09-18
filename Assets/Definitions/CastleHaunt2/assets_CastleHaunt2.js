@@ -769,6 +769,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaCute.jpg", name: "ApparitiaCute" },
     { srcName: "EntityPictures/ApparitiaTease.jpg", name: "ApparitiaTease" },
     { srcName: "EntityPictures/ApparitiaKey.jpg", name: "ApparitiaKey" },
+    { srcName: "EntityPictures/ApparitiaBlock.jpg", name: "ApparitiaBlock" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -822,6 +823,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Lacy.jpg", name: "Lacy" },
     { srcName: "EntityPictures/RedDress.jpg", name: "RedDress" },
     { srcName: "EntityPictures/GreenScene.jpg", name: "GreenScene" },
+    { srcName: "EntityPictures/SaveGameOracle.jpg", name: "SaveGameOracle" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -898,6 +900,12 @@ LoadSprites = [
     { srcName: "Shrines/PrincessSword.jpg", name: "PrincessSword" },
     { srcName: "Shrines/Princess2Heart.jpg", name: "Princess2Heart" },
     { srcName: "Shrines/PrinccessForestHealth.jpg", name: "PrinccessForestHealth" },
+
+    //scrolls
+    { srcName: "Scrolls/SCR_Cripple.png", name: "SCR_Cripple" },
+    { srcName: "Scrolls/SCR_Explode.png", name: "SCR_Explode" },
+    { srcName: "Scrolls/SCR_HalfLife.png", name: "SCR_HalfLife" },
+    { srcName: "Scrolls/SCR_Radar.png", name: "SCR_Radar" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },

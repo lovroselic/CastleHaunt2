@@ -712,7 +712,7 @@ const MAP = {
         oracles: '[[282,1,"ApparitiaTease"],[278,1,"RedDress"]]',
     }
     ,
-    31 : {
+    31: {
         name: "Life and Death",
         sg: 1,
         maxSpawned: 6,
@@ -734,19 +734,55 @@ const MAP = {
         oracles: '[[10,7,"GreenScene"],[430,1,"ApparitiaKey"]]',
         lairs: '[[84,5,"Lair24"],[104,3,"Lair30"],[336,5,"Lair01"],[356,3,"Lair25"]]',
         monsterList: '["MissGalaxyGold"]',
-        }
+    }
     ,
-    32 : {
-        name: "Way Forward",
+    32: {
+        name: "The Way Forward?",
         sg: 2,
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 3500,
-        data: '{"width":"15","height":"15","map":"BB2ABB10AA110BB31ABB5AA5BAA4BB54A$"}',
-        wall: "DarkMossy232",
-        floor: "DarkMossy2",
-        ceil: "MossyWall110",
+        data: '{"width":"15","height":"15","map":"BQÁBB5AÁBB5ABB6AA2BAA12BB2AA44BB2AA18BABAA3BB21ABABB3AA8BB12AA3BB3ABB7AA6BB8ABB9ABB15ABB8$QAÁÁ2AA2"}',
+        wall: "DarkMossyWall101",
+        floor: "OrnateFloor1",
+        ceil: "DarkBrick113",
         start: '[118,3]',
-        gates: '[[119,3,"32.1","31.2","Closed"]]',
-        }
+        decals: '[[107,4,"PuddleDecal10","crest"],[109,4,"PuddleDecal10","crest"],[111,4,"PuddleDecal10","crest"],[113,4,"PuddleDecal10","crest"],[116,4,"PuddleDecal10","crest"],[114,4,"PuddleDecal08","crest"],[110,4,"PuddleDecal08","crest"],[23,7,"Ishar71","picture"],[27,7,"FalconPatrol7","picture"],[103,3,"CastleLady55","picture"],[133,3,"AI_pic201","picture"],[97,5,"LaughingSkeleton2","crest"],[127,5,"LaughingSkeleton5","crest"],[204,1,"ShieldDecal05","crest"],[206,1,"ShieldDecal04","crest"],[91,5,"SatanRam2","crest"],[121,5,"SatanRam10","crest"],[31,5,"JSW111","picture"],[181,5,"CastleBabes38","picture"],[222,1,"Princess17","picture"],[218,1,"CastleBabes41","picture"],[51,1,"KQ101","picture"],[171,7,"CastleBabes05","picture"]]',
+        lights: '[[73,3,"Candelabra12","standard"],[163,3,"Candelabra02","standard"],[52,5,"Lamp47","dim"],[172,5,"WallLamp33","dim"],[60,5,"Fireplace13","fire"],[150,5,"Fireplace11","fire"]]',
+        gates: '[[119,3,"32.1","31.2","Closed"],[220,1,"32.2","33.1","Closed"]]',
+        monsters: '[[70,"Wolf"],[190,"Wolf"]]',
+        oracles: '[[10,7,"SaveGameOracle"],[194,3,"ApparitiaBlock"]]',
+    }
+    ,
+    33: {
+        name: "The Corridor",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"7","height":"16","map":"BB5AA6BB2AA2BB3AA16BB2AA2BB21AA2BB11AA2BB2ABABB8ABB6AA2BB3AA2BB2AA2BB6A$"}',
+        wall: "SpiderWeb15",
+        floor: "SmallBlackBricks48",
+        ceil: "RedAndGreyBricks1",
+        start: '[10,7]',
+        decals: '[[36,1,"OperationWolf50","picture"],[40,1,"Pitfall60","picture"],[102,1,"KingsQuest51","picture"],[100,1,"LadyTut60","picture"],[51,1,"AI_pic263","picture"],[53,1,"JetSetWilly88","picture"],[15,7,"CastleLady31","picture"],[19,7,"MonkeyIsland100","picture"],[71,7,"TombRaider99","picture"],[75,7,"Montezuma200","picture"],[92,1,"CastleHaunt200","picture"],[96,1,"Yeppelin70","picture"],[60,3,"JungleHunt50","picture"],[58,5,"LeisureSuitLarry71","picture"]]',
+        lights: '[[65,7,"Lamp40","veryDarkYellow"],[67,7,"Lamp40","veryDarkYellow"],[9,7,"WallLamp35","veryDarkYellow"],[11,7,"WallLamp35","veryDarkYellow"]]',
+        gates: '[[3,7,"33.1","32.2","Closed"],[108,1,"33.2","34.1","Closed"]]',
+        monsters: '[[85,"SpiderGreen"],[89,"SpiderGreen"],[73,"SpiderGreen"],[45,"SpiderGreen"],[22,"Bat"]]',
+        containers: '[[22,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[26,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[93,"Crate","GOLD_ITEM_TYPE.GoldCube",1]]',
+    }
+    ,
+    34: {
+        name: "The Great Hall",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"23","height":"23","map":"BB20AA341BABB65AA18BB26ABB42$BB13A"}',
+        wall: "3d wall",
+        floor: "RockFloor",
+        ceil: "Pavement",
+        start: '[34,7]',
+        gates: '[[11,7,"34.1","33.2","Closed"]]',
+    }
 };

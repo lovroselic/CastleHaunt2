@@ -66,9 +66,8 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //GAME.level = 20;
-        GAME.level = 32;    //20
-        GAME.gold = 2096;
+        GAME.level = 34;    //
+        GAME.gold = 2271;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -80,8 +79,8 @@ const DEBUG = {
         HERO.magic = 12;
         HERO.attack = 12;
 
-        HERO.maxHealth = 79;
-        HERO.health = 96;
+        HERO.maxHealth = 96;
+        HERO.health = 79;
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
@@ -104,7 +103,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Gold"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -134,7 +133,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.02",
+    VERSION: "0.10.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -271,6 +270,83 @@ class ActionItem {
                 console.error("ERROR ActionItem action", this);
                 break;
         }
+    }
+}
+
+class Scroll {
+    constructor(type) {
+        this.type = type;
+        this.id = this.type;
+        this.inventorySprite = `SCR_${type}`;
+        this.sprite = SPRITE[this.inventorySprite];
+        this.class = "Scroll";
+        this.saveDefinition = ['class', 'type'];
+    }
+    action() {
+        console.warn("scroll action", this);
+        let T;
+        switch (this.type) {
+            case "Cripple":
+                for (let enemy of ENTITY3D.POOL) {
+                    if (enemy === null) continue;
+                    if (enemy.final_boss) continue;
+                    if (enemy.distance === null) continue;
+                    if (enemy.distance <= INI.SCROLL_RANGE) {
+                        enemy.moveSpeed = INI.CRIPPLE_SPEED;
+                        console.warn("crippled", enemy);
+                    }
+                }
+                break;
+
+            case "Radar":
+                HERO.setRadar();
+                const radarTimerId = "radarTimer";
+
+                if (ENGINE.TIMERS.exists(radarTimerId)) {
+                    T = ENGINE.TIMERS.access(radarTimerId);
+                    T.extend(INI.RADAR_TIME);
+                } else {
+                    T = new CountDown(radarTimerId, INI.RADAR_TIME, HERO.killRadar);
+                    let status = new Status("Radar", "Radar");
+                    HERO.inventory.status.push(status);
+                    TITLE.keys();
+                }
+                break;
+            case "HalfLife":
+                for (let enemy of ENTITY3D.POOL) {
+                    if (enemy === null) continue;
+                    if (enemy.distance === null) continue;
+                    if (enemy.distance <= INI.SCROLL_RANGE) {
+                        enemy.health = Math.max(1, Math.floor(enemy.health / 2));
+                    }
+                }
+                break;
+            case "Explode":
+                EXPLOSION3D.add(new StaticParticleBomb(HERO.player.pos));
+                AUDIO.Fuse.volume = RAY.volume(0);
+                AUDIO.Fuse.loop = true;
+                AUDIO.Fuse.play();
+                const escapeTexts = [
+                    "I better run away.",
+                    "This thing is going to explode.",
+                    "I should move.",
+                    "Run, you fool.",
+                    "This is about to get loud.",
+                    "Boom incoming!",
+                    "Goodbye, cruel bomb!",
+                    "Hope my shoes can keep up!",
+                    "Cue the dramatic exit.",
+                    "Running seems like a good idea right now.",
+                    "Standing close to bomb seems a bad idea."
+                ];
+                
+                HERO.speak(escapeTexts.chooseRandom());
+                break;
+            default:
+                console.error("ERROR scroll action", this);
+                break;
+        }
+        AUDIO.UseScroll.play();
     }
 }
 
@@ -958,7 +1034,7 @@ const GAME = {
                 }
 
                 let scroll = new Scroll(type);
-                scroll.display();
+                display(scroll.inventorySprite);
                 HERO.inventory.scroll.add(scroll);
                 TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
                 TITLE.scrolls();
