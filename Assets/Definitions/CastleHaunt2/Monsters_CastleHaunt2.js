@@ -107,6 +107,17 @@ const SHRINE_TYPE = {
         price: 2000,
         level: 1,
     },
+    ScrollSell_Explode: {
+        name: "ScrollSell_Explode",
+        sprite: "ScrollSell_Explode",
+        which: "Explode",
+        category: 'crest',
+        interactionCategory: 'scrollshop',
+        introduce: true,
+        price: 2500,
+        voice: "Female",
+        text: "Explode scroll - 2500 gold"
+    },
 };
 
 const ORACLE_TYPE = {
@@ -437,6 +448,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "I've sealed off the passage. Ahahahaha! What will you do now?",
+        interactionCategory: "oracle",
+    },
+    JapananeseMistress: {
+        name: "JapananeseMistress",
+        sprite: "JapananeseMistress",
+        category: 'crest',
+        voice: "Female",
+        text: "One is sufficient, if you position it properly, you know? ",
         interactionCategory: "oracle",
     },
 };

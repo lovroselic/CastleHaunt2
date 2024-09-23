@@ -824,6 +824,8 @@ LoadSprites = [
     { srcName: "EntityPictures/RedDress.jpg", name: "RedDress" },
     { srcName: "EntityPictures/GreenScene.jpg", name: "GreenScene" },
     { srcName: "EntityPictures/SaveGameOracle.jpg", name: "SaveGameOracle" },
+    { srcName: "EntityPictures/ScrollSell_DestroyArmor.jpg", name: "ScrollSell_Explode" },
+    { srcName: "EntityPictures/JapananeseMistress.jpg", name: "JapananeseMistress" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

@@ -66,7 +66,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 34;    //
+        GAME.level = 36;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -133,7 +133,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.04",
+    VERSION: "0.10.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -295,21 +295,6 @@ class Scroll {
                         enemy.moveSpeed = INI.CRIPPLE_SPEED;
                         console.warn("crippled", enemy);
                     }
-                }
-                break;
-
-            case "Radar":
-                HERO.setRadar();
-                const radarTimerId = "radarTimer";
-
-                if (ENGINE.TIMERS.exists(radarTimerId)) {
-                    T = ENGINE.TIMERS.access(radarTimerId);
-                    T.extend(INI.RADAR_TIME);
-                } else {
-                    T = new CountDown(radarTimerId, INI.RADAR_TIME, HERO.killRadar);
-                    let status = new Status("Radar", "Radar");
-                    HERO.inventory.status.push(status);
-                    TITLE.keys();
                 }
                 break;
             case "HalfLife":
