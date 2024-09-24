@@ -604,6 +604,10 @@ LoadTextures = [
     { srcName: "Wall/ForestFloor01.jpg", name: "ForestFloor01" },
     { srcName: "Wall/ForestFloor02.jpg", name: "ForestFloor02" },
     { srcName: "Wall/ForestFloor03.jpg", name: "ForestFloor03" },
+
+    { srcName: "Wall/Water30.jpg", name: "Water30" },
+    { srcName: "Wall/Water31.jpg", name: "Water31" },
+    { srcName: "Wall/Water32.jpg", name: "Water32" },
     /** decals that are textures */
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 
@@ -826,6 +830,7 @@ LoadSprites = [
     { srcName: "EntityPictures/SaveGameOracle.jpg", name: "SaveGameOracle" },
     { srcName: "EntityPictures/ScrollSell_DestroyArmor.jpg", name: "ScrollSell_Explode" },
     { srcName: "EntityPictures/JapananeseMistress.jpg", name: "JapananeseMistress" },
+    { srcName: "EntityPictures/Bomber.jpg", name: "Bomber" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -902,6 +907,9 @@ LoadSprites = [
     { srcName: "Shrines/PrincessSword.jpg", name: "PrincessSword" },
     { srcName: "Shrines/Princess2Heart.jpg", name: "Princess2Heart" },
     { srcName: "Shrines/PrinccessForestHealth.jpg", name: "PrinccessForestHealth" },
+    { srcName: "Shrines/PrincessHealthMountain.jpg", name: "PrincessHealthMountain" },
+    { srcName: "Shrines/PrincessHammer.jpg", name: "PrincessHammer" },
+    { srcName: "Shrines/PrincessBomb.jpg", name: "PrincessBomb" },
 
     //scrolls
     { srcName: "Scrolls/SCR_Cripple.png", name: "SCR_Cripple" },
@@ -1010,6 +1018,7 @@ LoadSprites = [
     { srcName: "Items/Steak.png", name: "Steak" },
     { srcName: "Items/GreenApple.png", name: "GreenApple" },
     { srcName: "Items/BeerIcon.png", name: "BeerHealth" },
+    { srcName: "Items/Boots.png", name: "Boots" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

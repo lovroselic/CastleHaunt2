@@ -807,7 +807,7 @@ const MAP = {
         oracles: '[[282,1,"JapananeseMistress"]]',
     }
     ,
-    36 : {
+    36: {
         name: "Staircase West",
         sg: 0,
         maxSpawned: -1,
@@ -819,6 +819,67 @@ const MAP = {
         ceil: "MC_Wall6",
         start: '[118,3]',
         lights: '[[110,5,"WallLamp12","standardDimmed"],[83,3,"Candelabra17","standardDimmed"],[143,3,"Lamp46","standardDimmed"]]',
-        gates: '[[119,3,"36.1","34.3","Closed"]]',
-        }
+        gates: '[[119,3,"36.1","34.3","Closed"],[75,5,"36.2","37.1","Down"]]',
+        oracles: '[[7,7,"Bomber"]]',
+    }
+    ,
+    37: {
+        name: "Oh, Another Temple",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB3AA2BB8AA60BB3AA2BB2AA7BAA80BABB15AA2BB17ABB9ABB3ABABB3AA5BAA4BB23ABABB28A$"}',
+        wall: "MossyWall110",
+        floor: "ScarletStoneFloor1",
+        ceil: "DarkRock",
+        start: '[117,3]',
+        lights: '[[151,3,"WallLamp19","standard"],[143,3,"Candelabra05","standard"],[127,1,"Lamp48","standard"],[161,7,"Lights110","standard"]]',
+        gates: '[[118,3,"37.1","36.2","Up"],[186,3,"37.2","38.1","Down"]]',
+        shrines: '[[136,5,"PrincessHealthMountain"],[8,7,"PrincessHammer"],[280,1,"PrincessBomb"]]',
+    }
+    ,
+    38: {
+        name: "Undersea",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB2ABABB9AA77BB2AA24BB2AA5BB2AA42BB12AA2BB2AA2BB15ABB5ABB7AA2BAA8BB62A$"}',
+        wall: "MossyWall105",
+        floor: "Water12",
+        ceil: "Sand9",
+        start: '[137,5]',
+        lights: '[[90,1,"WallLamp20","standard"],[96,5,"Candelabra03","standard"],[198,7,"Lamp46","standard"],[192,3,"Lamp47","standard"]]',
+        gates: '[[136,5,"38.1","37.2","Up"],[152,3,"38.2","39.1","Closed"]]',
+    }
+    ,
+    39: {
+        name: "Underswamp",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB7AA30BB2AA15BB4AA20BB4AA4BABB3AA4BB4AA37BB2AA13BB8AA5BB4ABB3ABAA2BB27ABB2ABB3AA4BB2AA10BB62A$"}',
+        wall: "MossyWall112",
+        floor: "Water30",
+        ceil: "Sand4",
+        start: '[137,5]',
+        lights: '[[144,1,"Candelabra14","weakCandle"],[144,7,"Lamp49","weakCandle"],[144,3,"Lamp43","weakCandle"],[144,5,"WallLamp32","weakCandle"]]',
+        gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"]]',
+    }
+    ,
+    40: {
+        name: "XXX",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB13AA2BAA156BB29AA2BB13AA10BB62A$"}',
+        wall: "DARKBricks107",
+        floor: "DarkRock",
+        ceil: "SpiderWeb12",
+        start: '[222,5]',
+        gates: '[[221,5,"40.1","39.2","Down"]]',
+    }
 };

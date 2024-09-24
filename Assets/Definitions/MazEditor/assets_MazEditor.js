@@ -599,6 +599,9 @@ LoadTextures = [
     { srcName: "Wall/ForestFloor01.jpg", name: "ForestFloor01" },
     { srcName: "Wall/ForestFloor02.jpg", name: "ForestFloor02" },
     { srcName: "Wall/ForestFloor03.jpg", name: "ForestFloor03" },
+    { srcName: "Wall/Water30.jpg", name: "Water30" },
+    { srcName: "Wall/Water31.jpg", name: "Water31" },
+    { srcName: "Wall/Water32.jpg", name: "Water32" },
     /** decals that are textures */
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 ];

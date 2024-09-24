@@ -49,6 +49,10 @@ const DEBUG = {
     },
     checkPoint() {
         /** main area 3:
+         * 
+         * Purple key: from KEysa by giving "GoldSteel", "PurpleTear"
+         * GoldSteel: from %%%% by giving "Gold", "Iron"
+         * PurpleTear
 
 
         *
@@ -66,7 +70,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 36;    //34
+        GAME.level = 40;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -133,7 +137,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.05",
+    VERSION: "0.10.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

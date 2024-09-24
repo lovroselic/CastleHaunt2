@@ -118,6 +118,36 @@ const SHRINE_TYPE = {
         voice: "Female",
         text: "Explode scroll - 2500 gold"
     },
+    PrincessHealthMountain: {
+        name: "PrincessHealthMountain",
+        sprite: "PrincessHealthMountain",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 3000,
+        level: 1,
+    },
+    PrincessHammer: {
+        name: "PrincessHammer",
+        sprite: "PrincessHammer",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 3000,
+        level: 2,
+    },
+    PrincessBomb: {
+        name: "PrincessBomb",
+        sprite: "PrincessBomb",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 3000,
+        level: 2,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -456,6 +486,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Female",
         text: "One is sufficient, if you position it properly, you know? ",
+        interactionCategory: "oracle",
+    },
+    Bomber: {
+        name: "Bomber",
+        sprite: "Bomber",
+        category: 'crest',
+        voice: "Female",
+        text: "If the wall is in my way, I just blow it up. How about you?",
         interactionCategory: "oracle",
     },
 };
@@ -2566,6 +2604,12 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "ConcentratedPoison",
         text: "Don't drink this. It's deadlier than poison."
+    },
+    Boots: {
+        name: "Boots",
+        category: "interaction_item",
+        inventorySprite: "Boots",
+        text: "Boots."
     },
 };
 
