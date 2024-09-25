@@ -50,9 +50,17 @@ const DEBUG = {
     checkPoint() {
         /** main area 3:
          * 
-         * Purple key: from KEysa by giving "GoldSteel", "PurpleTear"
-         * GoldSteel: from %%%% by giving "Gold", "Iron"
-         * PurpleTear
+         * Purple key: from Keysa by giving "GoldSteel", "PurpleTear"
+         * GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"
+         * PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl"
+         * "GoldBar", 
+         * "IronBar", 
+         * "SilverBar", 
+         * "UraniumBar"
+         * Diamond", 
+         * "Amethyst", 
+         * "Moonstone", 
+         * "Pearl"
 
 
         *
@@ -70,7 +78,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 40;    //34
+        GAME.level = 34;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -137,7 +145,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.06",
+    VERSION: "0.10.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

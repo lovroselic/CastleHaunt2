@@ -1037,7 +1037,7 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
-    
+
 
     MissWhite: {
         name: "MissWhite",
@@ -2859,6 +2859,32 @@ const INTERACTION_ENTITY = {
             intro: "In shadows lurk, a collector's plea, skulls she seeks, from you and me.",
             progress: "Her collection grows, yet still she waits, for more to come, through darkened gates.",
             conclusion: "With skulls in tow, her smile gleams, a gold coin yours, in moonlight beams.",
+        }
+    },
+    AlloyaPinkass: {
+        name: "AlloyaPinkass",
+        sprite: "AlloyaPinkass",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldBar", "IronBar", "SilverBar", "UraniumBar"],
+        gives: "GoldSteel",
+        text: {
+            intro: "In fire and forge, my art does bloom, For GoldSteel creation, metals I consume.",
+            progress: "Bar by bar, the alloy takes shape, Continue your quest, let no metal escape.",
+            conclusion: "Gold, iron, silver, uranium, now blend, GoldSteel is forged, your journey's end."
+        }
+    },
+    Keysa: {
+        name: "Keysa",
+        sprite: "Keysa",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldSteel", "PurpleTear"],
+        gives: "PurpleKey",
+        text: {
+            intro: "In my workshop, magic and metal blend, For a unique key, two treasures I'll mend.",
+            progress: "One piece is here, bring another to be clear.",
+            conclusion: "GoldSteel and PurpleTear, now finely entwined, Behold, the PurpleKey, uniquely designed."
         }
     },
 };
