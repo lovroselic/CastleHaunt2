@@ -54,7 +54,7 @@ const MAP_TEXT = {
     42: "",
     43: "",
     44: "",
-    45: "",
+    45: "So cold and windy.",
 };
 
 /** Map definitions */
@@ -911,34 +911,39 @@ const MAP = {
         gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"]]',
     }
     ,
-    42: {
-        name: "YYYY",
+    42 : {
+        name: "Seamstress",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB9AA24BB2AA6BAA101BAA12BB2AA25BB24AA3BB13ABB3AA9BB78A$"}',
+        data: '{"width":"21","height":"15","map":"BB8AA21BAA5BAA38BAA10BAA20BAA15BAA9BABAA14BB2AA19BAA9BABB12ABAA2BB14AA2BABB16ABB2ABB2AA7BAA2BB7ABB37ABB12ABB8$"}',
         wall: "SmallBlackBricks44",
         floor: "MarbleFloor104",
         ceil: "MC_Wall9",
         start: '[151,3]',
+        lights: '[[64,5,"Candelabra07","standardDimmed"],[232,5,"Candelabra07","standardDimmed"],[153,5,"Lamp45","weakCandle"],[16,7,"Fireplace13","fire"],[310,1,"Fireplace07","fire"],[124,3,"Candelabra17","standardDimmed"],[208,3,"WallLamp18","standardDimmed"]]',
         gates: '[[152,3,"42.1","36.3","Down"],[167,3,"42.","43.1","Closed"]]',
-    }
+        entities: '[[12,7,"Seamstress"]]',
+        }
     ,
-    43: {
+    43 : {
         name: "Meadow",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB2ABABB7AA54BAA39BAA3BAA31BB2AA18BAA22BABB10ABABAA2BB15ABB5ABB6ABAA7BB23ABB38$BB12A"}',
+        data: '{"width":"21","height":"15","map":"BB2ABABB7AA54BAA39BAA3BAA31BB2AA18BAA22BABB11ABABAA2BB17ABB5ABB7ABAA7BB31ABABB36A$"}',
         wall: "MistyMeadow4",
         floor: "GrassMeadow101",
         ceil: "Overcast2",
         start: '[148,5]',
         lights: '[[110,1,"Lights112","standardDimmed"],[121,1,"Lights112","standardDimmed"],[197,7,"Lights112","standardDimmed"],[201,7,"Lights112","standardDimmed"]]',
         gates: '[[147,5,"43.1","42.2","Closed"],[167,3,"43.2","44.1","Closed"],[10,7,"43.3","45.1","Up"]]',
-    }
+        monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
+        entities: '[[304,1,"Shepardess"]]',
+        movables: '[[115,"BabySheep"]]',
+        }
     ,
     44: {
         name: "QWEWQ",
@@ -954,18 +959,23 @@ const MAP = {
         gates: '[[147,5,"44.1","43.2","Closed"],[160,5,"44.2","41.3","Down"]]',
     }
     ,
-    45: {
+    45 : {
         name: "Alps",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB12AA110BB42AA10BB15ABB24ABB10$"}',
+        data: '{"width":"15","height":"15","map":"BB2ABB6ABB2AA9BAA7BAA89BABB44ABB2AA6BABB4AA2BB15ABABB24A$"}',
         wall: "Hills2",
         floor: "Grass12",
         ceil: "Overcast1",
         start: '[202,1]',
+        decals: '[[91,7,"Hills5","texture"],[92,7,"Hills5","texture"],[121,1,"Hills5","texture"],[122,1,"Hills5","texture"],[92,5,"Hills5","texture"],[122,5,"Hills5","texture"],[102,7,"Hills1","texture"],[103,7,"Hills1","texture"],[132,1,"Hills1","texture"],[133,1,"Hills1","texture"],[102,3,"Hills1","texture"],[132,3,"Hills1","texture"]]',
         lights: '[[18,7,"Candelabra08","standard"],[26,7,"Candelabra08","standard"],[199,1,"Candelabra10","standardDimmed"],[205,1,"Candelabra10","standardDimmed"]]',
         gates: '[[217,1,"45.1","43.3","Down"]]',
-    }
+        monsters: '[[67,"AngrySheep"],[107,"AngrySheep"],[117,"AngrySheep"]]',
+        entities: '[[7,7,"Climber"],[119,3,"MissHill"]]',
+        movables: '[[52,"BabySheep"]]',
+        trainers: '[[105,5,"Alpinist"]]',
+        }
 };

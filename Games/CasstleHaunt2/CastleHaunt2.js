@@ -51,20 +51,41 @@ const DEBUG = {
         /** main area 3:
          * 
          * Purple key: from Keysa by giving "GoldSteel", "PurpleTear"
+         * "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"
+         * 
          * GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"
          * PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl"
+         * 
+         * ??????? MissHill by giving:"HikingBoot", "HikingBoot", "BackPack"
+         * ??????? 
+         * 
          * "GoldBar", 
          * "IronBar", 
          * "SilverBar", 
          * "UraniumBar"
-         * Diamond", 
+         * Diamond": Jeweliette by giving "GreenGem", "BlueGem"
          * "Amethyst", 
          * "Moonstone", 
          * "Pearl"
+         * "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"
+         * "Gloves", 
+         * "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"
+         * "HikingBoot"
+         * "HikingBoot" 
+         * "BackPack"
+         * "GreenGem", 
+         * "BlueGem"
+         * "Scissors"
+         * "RedColor"
+         * "BabySheep" 5x: 43, 45,
+         * "BabySheep" 1x: 
 
 
         *
         * COINS:
+            * Alpinist
+            * 
+        * coin sources   
         
 
          * missing placed keys: 
@@ -78,7 +99,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 34;    //34
+        GAME.level = 42;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -108,7 +129,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            "HikingBoot", "HikingBoot", "BackPack",
+            "BabySheep", "Scissors", "RedColor"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -145,7 +167,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.07",
+    VERSION: "0.10.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -336,7 +358,7 @@ class Scroll {
                     "Running seems like a good idea right now.",
                     "Standing close to bomb seems a bad idea."
                 ];
-                
+
                 HERO.speak(escapeTexts.chooseRandom());
                 break;
             default:

@@ -1000,6 +1000,25 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    AngrySheep: {
+        name: "AngrySheep",
+        model: "Sheep",
+        scale: 1.5 / 2 ** 9,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 5,
+        attack: 50,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "Sheep",
+        hurtSound: "PainSqueek",
+        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.standard,
+    },
 
     /** */
 
@@ -1465,26 +1484,7 @@ const MONSTER_TYPE = {
         moveSpeed: 1.1,
         material: MATERIAL.gold,
     },
-    AngrySheep: {
-        name: "AngrySheep",
-        model: "Sheep",
-        scale: 1.5 / 2 ** 9,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 100,
-        defense: 0,
-        magic: 0,
-        health: 60,
-        xp: 30,
-        gold: 1,
-        attackSound: "Sheep",
-        hurtSound: "PainSqueek",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 1.0,
-        material: MATERIAL.standard,
-    },
+    
     GreenRex: {
         name: "GreenRex",
         texture: "GreenRex",
@@ -2006,6 +2006,30 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "Lives",
         text: "A backup life. We all need this, right?",
     },
+    BabySheep: {
+        name: "BabySheep",
+        category: "interaction_item",
+        model: "Sheep",
+        scale: 1.1 / 2 ** 10,
+        rotateToNorth: Math.PI,
+        moveSpeed: 1.25,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "BabySheep",
+        text: "Poor lamb. Are you hurt?",
+    },
+    WolfPuppy: {
+        name: "WolfPuppy",
+        category: "interaction_item",
+        model: "Wolf",
+        scale: 1.2 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        moveSpeed: 1.1,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "WolfPuppy",
+        text: "Such a cute puppy.",
+    },
 
     /** */
 
@@ -2071,30 +2095,7 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "BabyDragon",
         text: "Come to mamma."
     },
-    BabySheep: {
-        name: "BabySheep",
-        category: "interaction_item",
-        model: "Sheep",
-        scale: 1.1 / 2 ** 10,
-        rotateToNorth: Math.PI,
-        moveSpeed: 1.25,
-        material: MATERIAL.standard,
-        behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "Sheep",
-        text: "Poor lamb. Are you hurt?",
-    },
-    WolfPuppy: {
-        name: "WolfPuppy",
-        category: "interaction_item",
-        model: "Wolf",
-        scale: 1.2 / 2 ** 3,
-        rotateToNorth: Math.PI,
-        moveSpeed: 1.1,
-        material: MATERIAL.standard,
-        behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "WolfPuppy",
-        text: "Such a cute puppy.",
-    },
+
 };
 
 const INTERACTION_ITEM = {
@@ -2217,6 +2218,12 @@ const INTERACTION_ITEM = {
         category: "key",
         inventorySprite: "GreenKey",
         color: "Green"
+    },
+    RedKey: {
+        name: "RedKey",
+        category: "key",
+        inventorySprite: "RedKey",
+        color: "Red"
     },
     Quill: {
         name: "Quill",
@@ -2609,7 +2616,32 @@ const INTERACTION_ITEM = {
         name: "Boots",
         category: "interaction_item",
         inventorySprite: "Boots",
-        text: "Boots."
+        text: "This boots were made for walking. And that is what they'll do."
+    },
+    Scissors: {
+        name: "Scissors",
+        category: "interaction_item",
+        inventorySprite: "Scissors",
+        text: "Cut cut cut cut. C. U. T."
+    },
+
+    BlueColor: {
+        name: "BlueColor",
+        category: "interaction_item",
+        inventorySprite: "BlueColor",
+        text: "I can paint something blue."
+    },
+    RedColor: {
+        name: "RedColor",
+        category: "interaction_item",
+        inventorySprite: "RedColor",
+        text: "I can paint something red."
+    },
+    GreenColor: {
+        name: "GreenColor",
+        category: "interaction_item",
+        inventorySprite: "GreenColor",
+        text: "I can paint something green."
     },
 };
 
@@ -2887,6 +2919,85 @@ const INTERACTION_ENTITY = {
             conclusion: "GoldSteel and PurpleTear, now finely entwined, Behold, the PurpleKey, uniquely designed."
         }
     },
+    Gemma: {
+        name: "Gemma",
+        sprite: "Gemma",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Diamond", "Amethyst", "Moonstone", "Pearl"],
+        gives: "PurpleTear",
+        text: {
+            intro: "Beneath the earth, where secrets gleam, I seek jewels to fulfill a dream.",
+            progress: "A gem a stone, in hand you bring, Yet more are needed, for the tear to sing.",
+            conclusion: "Diamond, amethyst, moonstone, pearl, all unite, Behold, the PurpleTear, in its mystical light."
+        }
+    },
+    Climber: {
+        name: "Climber",
+        sprite: "Climber",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Shawl", "Gloves", "WoolenCap"],
+        gives: "RedKey",
+        text: {
+            intro: "Where were you so long, Princess? Don't you know how cold I am?",
+            progress: "Cloth and warmth, piece by piece, Continue on, till all's in fleece.",
+            conclusion: "At last, warmth surrounds, chill's defeat, For your help, take this Red Key, a prize complete."
+        }
+    },
+    MissHill: {
+        name: "MissHill",
+        sprite: "MissHill",
+        category: 'crest',
+        voice: "Female",
+        wants: ["HikingBoot", "HikingBoot", "BackPack"],
+        gives: "",
+        text: {
+            intro: "",
+            progress: "",
+            conclusion: ""
+        }
+    },
+    Jeweliette: {
+        name: "Jeweliette",
+        sprite: "Jeweliette",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GreenGem", "BlueGem"],
+        gives: "Diamond",
+        text: {
+            intro: "Amidst the sparkle, I yearn for hue, Green and blue, a trade for you.",
+            progress: "A gem of color, a start so bright, Yet more I seek, to my delight.",
+            conclusion: "Green and blue, now mine to hold, For you, a diamond, clear and bold."
+        }
+    },
+    Shepardess: {
+        name: "Shepardess",
+        sprite: "Shepardess",
+        category: 'crest',
+        voice: "Female",
+        wants: ["BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"],
+        gives: "WoolenCap",
+        text: {
+            intro: "Lost in meadows, my sheep, my care, Find them please, this task I dare.",
+            progress: "Some have returned, but others still stray, Under sun and rain, they wander away.",
+            conclusion: "All my sheep, safe and sound at last, A woolen cap for you, as promised in the past."
+        }
+    },
+    Seamstress: {
+        name: "Seamstress",
+        sprite: "Seamstress",
+        category: 'crest',
+        voice: "Female",
+        wants: ["BabySheep", "Scissors", "RedColor"],
+        gives: "Shawl",
+        text: {
+            intro: "A sheep to prune, scissors to snip, and red to dye-bring them all, and a fine shawl is nigh.",
+            progress: "You've found one, but not the rest, Keep searching, so I can weave my best.",
+            conclusion: "With sheep, scissors, and red all in hand, your new shawl is ready, just as planned."
+        }
+    },
+    
 };
 
 const INTERACTION_SHRINE = {
@@ -2981,6 +3092,20 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you've earned the ferocity of a leopard. Now go, and strike with precision and power!"
         }
     },
+    Alpinist: {
+        name: "Alpinist",
+        sprite: "Alpinist",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "Climbing mountains isn't just about endurance. It iss about strength and precision. For a gold coin, I'll teach you to fight like you're scaling the highest peaks.",
+            progress: null,
+            conclusion: "With that coin, you've gained the strength and agility of a climber. Now scale your battles with ease!"
+        }
+    },
+
 };
 
 const INTERACTOR = {
