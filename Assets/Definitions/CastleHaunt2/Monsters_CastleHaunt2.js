@@ -1484,7 +1484,7 @@ const MONSTER_TYPE = {
         moveSpeed: 1.1,
         material: MATERIAL.gold,
     },
-    
+
     GreenRex: {
         name: "GreenRex",
         texture: "GreenRex",
@@ -2643,6 +2643,19 @@ const INTERACTION_ITEM = {
         inventorySprite: "GreenColor",
         text: "I can paint something green."
     },
+
+    Hammer: {
+        name: "Hammer",
+        category: "interaction_item",
+        inventorySprite: "Hammer",
+        text: "Hammer."
+    },
+    Anvil: {
+        name: "Anvil",
+        category: "interaction_item",
+        inventorySprite: "Anvil",
+        text: "Anvil."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -2951,11 +2964,11 @@ const INTERACTION_ENTITY = {
         category: 'crest',
         voice: "Female",
         wants: ["HikingBoot", "HikingBoot", "BackPack"],
-        gives: "",
+        gives: "UraniumBar",
         text: {
-            intro: "",
-            progress: "",
-            conclusion: ""
+            intro: "Stranded up here without boots or pack, but with a little help, I'll be back on track. Bring me some gear, and I'll share a rare treat.",
+            progress: "One step closer, but I'm still stuck - find the rest, and I'll have some luck.",
+            conclusion: "Boots laced and backpack ready, here's your uranium bar - now my journey's steady."
         }
     },
     Jeweliette: {
@@ -2966,7 +2979,7 @@ const INTERACTION_ENTITY = {
         wants: ["GreenGem", "BlueGem"],
         gives: "Diamond",
         text: {
-            intro: "Amidst the sparkle, I yearn for hue, Green and blue, a trade for you.",
+            intro: "Amidst the sparkle, I yearn for hue, Green and Blue, a trade for you.",
             progress: "A gem of color, a start so bright, Yet more I seek, to my delight.",
             conclusion: "Green and blue, now mine to hold, For you, a diamond, clear and bold."
         }
@@ -2997,7 +3010,7 @@ const INTERACTION_ENTITY = {
             conclusion: "With sheep, scissors, and red all in hand, your new shawl is ready, just as planned."
         }
     },
-    
+
 };
 
 const INTERACTION_SHRINE = {

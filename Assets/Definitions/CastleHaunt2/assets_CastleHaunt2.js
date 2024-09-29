@@ -1048,7 +1048,6 @@ LoadSprites = [
     { srcName: "Items/Wasp.png", name: "Wasp" },
     { srcName: "Items/Whip.png", name: "Whip" },
     { srcName: "Items/WoolenCap.png", name: "WoolenCap" },
-
     { srcName: "Items/Dagger2.png", name: "Dagger" },
     { srcName: "Items/Binoculars.png", name: "Binoculars" },
     { srcName: "Items/FlowerCrown2.png", name: "FlowerCrown" },
@@ -1060,10 +1059,11 @@ LoadSprites = [
     { srcName: "Items/BeerIcon.png", name: "BeerHealth" },
     { srcName: "Items/Boots.png", name: "Boots" },
     { srcName: "Items/Scissors.png", name: "Scissors" },
-
     { srcName: "Items/BlueColor.png", name: "BlueColor" },
     { srcName: "Items/RedColor.png", name: "RedColor" },
     { srcName: "Items/GreenColor.png", name: "GreenColor" },
+    { srcName: "Items/Hammer.png", name: "Hammer" },
+    { srcName: "Items/Anvil.png", name: "Anvil" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

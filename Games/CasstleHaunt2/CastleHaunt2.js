@@ -50,26 +50,26 @@ const DEBUG = {
     checkPoint() {
         /** main area 3:
          * 
-         * Purple key: from Keysa by giving "GoldSteel", "PurpleTear"
-         * "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"
+         ---- * Purple key: from Keysa by giving "GoldSteel", "PurpleTear"; DONE;
+         ----* "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"; DONE
          * 
-         * GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"
-         * PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl"
+         ----* GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"; DONE
+        ----  * PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl" DONE
          * 
-         * ??????? MissHill by giving:"HikingBoot", "HikingBoot", "BackPack"
-         * ??????? 
+         ----* "UraniumBar" MissHill by giving:"HikingBoot", "HikingBoot", "BackPack": DONE
+         *  
          * 
          * "GoldBar", 
-         * "IronBar", 
+         * "IronBar": BlackSmithsress: "Anvil", "Hammer" 
          * "SilverBar", 
-         * "UraniumBar"
-         * Diamond": Jeweliette by giving "GreenGem", "BlueGem"
+         * 
+         ----* Diamond": Jeweliette by giving "GreenGem", "BlueGem"; DONE
          * "Amethyst", 
          * "Moonstone", 
          * "Pearl"
-         * "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"
+         ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
          * "Gloves", 
-         * "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"
+         ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
          * "HikingBoot"
          * "HikingBoot" 
          * "BackPack"
@@ -77,8 +77,10 @@ const DEBUG = {
          * "BlueGem"
          * "Scissors"
          * "RedColor"
-         * "BabySheep" 5x: 43, 45,
-         * "BabySheep" 1x: 
+         * "Anvil", 
+         * "Hammer" 
+         * "BabySheep" 5x: 43, 45, 34
+         ----* "BabySheep" 1x: 42; DONE
 
 
         *
@@ -99,7 +101,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 42;    //34
+        GAME.level = 40;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -129,8 +131,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "HikingBoot", "HikingBoot", "BackPack",
-            "BabySheep", "Scissors", "RedColor"
+            "GreenGem", "BlueGem"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -167,7 +168,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.08",
+    VERSION: "0.10.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
