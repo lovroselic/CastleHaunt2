@@ -496,6 +496,14 @@ const ORACLE_TYPE = {
         text: "If the wall is in my way, I just blow it up. How about you?",
         interactionCategory: "oracle",
     },
+    Kneel: {
+        name: "Kneel",
+        sprite: "Kneel",
+        category: 'crest',
+        voice: "Female",
+        text: "You can please only one, so choose wisely.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2219,6 +2227,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "GreenKey",
         color: "Green"
     },
+    BlueKey: {
+        name: "BlueKey",
+        category: "key",
+        inventorySprite: "BlueKey",
+        color: "Blue"
+    },
     RedKey: {
         name: "RedKey",
         category: "key",
@@ -3010,6 +3024,47 @@ const INTERACTION_ENTITY = {
             conclusion: "With sheep, scissors, and red all in hand, your new shawl is ready, just as planned."
         }
     },
+    Blacksmistress: {
+        name: "Blacksmistress",
+        sprite: "Blacksmistress",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Anvil", "Hammer"],
+        gives: "IronBar",
+        text: {
+            intro: "With an anvil and hammer, I can forge you an iron bar. Bring me the tools, and I'll get to work.",
+            progress: "One tool is in place, but I still need the other to craft something great.",
+            conclusion: "Anvil and hammer in hand, your iron bar is ready - crafted just as planned."
+        }
+    },
+    RestingBabe1: {
+        name: "RestingBabe1",
+        sprite: "RestingBabe1",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Boots"],
+        gives: "BlueKey",
+        text: {
+            intro: "My feet are freezing, Princess. If you bring me a pair of boots, I'll reward you with this Blue Key.",
+            progress: null,
+            conclusion: "Ahh, warm feet at last! Here's the Blue Key, and good luck to whoever didn't get those boots!"
+        }
+    },
+    RestingBabe2: {
+        name: "RestingBabe2",
+        sprite: "RestingBabe2",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Boots"],
+        gives: "GreenKey",
+        text: {
+            intro: "I can't go anywhere without boots, Princess. If you help me out, I'll give you the Green Key.",
+            progress: null,
+            conclusion: "Now I'm ready to go! Here's the Green Key, hope the other babe is still chilling barefoot!"
+        }
+    },
+
+
 
 };
 
@@ -3118,6 +3173,61 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you've gained the strength and agility of a climber. Now scale your battles with ease!"
         }
     },
+    Barbarian: {
+        name: "Barbarian",
+        sprite: "Barbarian",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "You want to hit harder? I can show you how. Hand over a gold coin, and I'll turn your fists into weapons.",
+            progress: null,
+            conclusion: "With that coin, you've earned some real power. Now go smash anything that stands in your way!"
+        }
+    },
+    NymphWarrior: {
+        name: "NymphWarrior",
+        sprite: "NymphWarrior",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "Strength and grace flow through me. For a gold coin, I can teach you to fight with both.",
+            progress: null,
+            conclusion: "With that coin, you've earned the skills of a warrior. Now go and let your strength blossom in battle!"
+        }
+    },
+    Horny: {
+        name: "Horny",
+        sprite: "Horny",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "I know fire, and I know magic. For a gold coin, I'll show you how to wield both with a little devilish flair.",
+            progress: null,
+            conclusion: "That coin just unlocked some serious power. Go ahead, play with fire if you dare."
+        }
+    },
+    Horny2: {
+        name: "Horny2",
+        sprite: "Horny2",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "Looking for some fiery magic? For a gold coin, I'll teach you the secrets of flames and spells.",
+            progress: null,
+            conclusion: "With that coin, you've gained the power of fire. Now go burn bright - or burn them down!"
+        }
+    },
+    
+    
+
 
 };
 

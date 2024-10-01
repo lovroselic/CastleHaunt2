@@ -798,7 +798,7 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
-        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"]]',
+        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"]]',
         movables: '[[356,"BabySheep"]]',
         lairs: '[[241,1,"Lair34"],[287,7,"Lair32"],[263,3,"Lair25"],[265,5,"Lair04"]]',
         monsterList: '["MissGalaxyGold","Goblin"]',
@@ -884,20 +884,21 @@ const MAP = {
         gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"]]',
     }
     ,
-    40 : {
+    40: {
         name: "Jeweliette",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB4ABB9ABAA156BB33ABB9ABB3AA2BAA8BB18ABB28ABB11$"}',
+        data: '{"width":"17","height":"17","map":"BB4ABB7ABB2AA72BAA4BAA78BB15ABB18ABB3ABB9AA2BAA8BB18ABB28ABB11$"}',
         wall: "DARKBricks107",
         floor: "DarkRock",
         ceil: "SpiderWeb12",
         start: '[222,5]',
+        lights: '[[178,7,"WallLamp33","standardDimmed"]]',
         gates: '[[221,5,"40.1","39.2","Down"],[67,3,"40.2","41.1","Up"]]',
         entities: '[[280,1,"Jeweliette"]]',
-        }
+    }
     ,
     41: {
         name: "Staircase East",
@@ -905,12 +906,12 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BB2AA110BB26AA2BB4ABB4AA4BAA3BB54A$"}',
+        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BB2AA110BB29AA2BB4ABB5AA4BAA3BB15ABB24ABB10$"}',
         wall: "RedishRockyWall1",
         floor: "MarbleFloor105",
         ceil: "MarbleTiles4",
         start: '[151,5]',
-        gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"]]',
+        gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"]]',
     }
     ,
     42: {
@@ -999,7 +1000,7 @@ const MAP = {
         entities: '[[338,1,"Keysa"]]',
     }
     ,
-    47 : {
+    47: {
         name: "Smithy",
         sg: 0,
         maxSpawned: 6,
@@ -1013,9 +1014,9 @@ const MAP = {
         lights: '[[78,7,"Candelabra17","standardDimmed"]]',
         gates: '[[136,5,"47.1","34.6","Closed"]]',
         entities: '[[214,1,"AlloyaPinkass"]]',
-        }
+    }
     ,
-    48 : {
+    48: {
         name: "Gem Mine",
         sg: 0,
         maxSpawned: -1,
@@ -1029,5 +1030,71 @@ const MAP = {
         lights: '[[148,7,"Candelabra18","standardDimmed"]]',
         gates: '[[56,3,"48.1","34.7","Closed"]]',
         entities: '[[281,1,"Gemma"]]',
+    }
+    ,
+    49: {
+        name: "Blacksmistress",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB11AA50BAA2BAA55BABB13ABB32AA10BB19ABABB24A$"}',
+        wall: "RedishRocks11",
+        floor: "RedMArbleFloor5",
+        ceil: "MarbleTiles1",
+        start: '[22,7]',
+        lights: '[[127,7,"Candelabra07","standardDimmed"]]',
+        gates: '[[7,7,"49.1","41.4","Open"]]',
+        entities: '[[217,1,"Blacksmistress"]]',
+    }
+    ,
+    50: {
+        name: "Barefoot Twins",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB3AA2BB8AA31BAA31BB2AA4BABAA6BAA78BABB12ABB2AA2BB26ABABB2AA2BB3AA5BAA3BB23ABABB28A$"}',
+        wall: "BlackWall42",
+        floor: "MarbleFloor101",
+        ceil: "DarkBrick113",
+        start: '[137,5]',
+        decals: '[[185,3,"AA_CREST_AI","crest"],[219,3,"AA_CREST_AI","crest"],[83,3,"KnightStatue104","crest"],[117,3,"KnightStatue102","crest"]]',
+        lights: '[[110,1,"Lights102","standard"],[178,7,"WallLamp12","standard"],[142,5,"Lamp41","standard"]]',
+        gates: '[[136,5,"50.1","34.8","Closed"],[101,3,"50.2","51.1","Green"],[203,3,"50.3","52.1","Blue"]]',
+        entities: '[[8,7,"RestingBabe1"],[280,1,"RestingBabe2"]]',
+        oracles: '[[152,3,"Kneel"]]',
+    }
+    ,
+    51: {
+        name: "Warriors Guild",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB9AA24BAA13BAA33BABB11ABB23ABB3AA3BAA4BB15ABABB20A$"}',
+        wall: "BlackWall43",
+        floor: "MarbleFloor102",
+        ceil: "DarkBricks110",
+        start: '[79,5]',
+        lights: '[[84,1,"Candelabra04","standardDimmed"],[84,7,"WallLamp9","standardDimmed"],[84,5,"Candelabra15","standardDimmed"]]',
+        gates: '[[78,5,"51.1","50.2","Open"]]',
+        trainers: '[[6,7,"Barbarian"],[162,1,"NymphWarrior"]]',
+    }
+    ,
+    52 : {
+        name: "Horny Girls",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB7ABAA14BB2AA36BB2AA17BABB11AA2BB15ABB12AA7BB7ABB13ABB12ABB4$"}',
+        wall: "BlackWall44",
+        floor: "MarbleFloor103",
+        ceil: "DarkBricks111",
+        start: '[79,5]',
+        lights: '[[73,1,"Lamp49","dim"],[99,7,"Candelabra11","dim"]]',
+        gates: '[[78,5,"52.1","50.3","Open"]]',
+        trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
         }
 };
