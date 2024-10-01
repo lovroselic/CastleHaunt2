@@ -504,6 +504,14 @@ const ORACLE_TYPE = {
         text: "You can please only one, so choose wisely.",
         interactionCategory: "oracle",
     },
+    Bathy: {
+        name: "Bathy",
+        sprite: "Bathy",
+        category: 'crest',
+        voice: "Female",
+        text: "I am resting, saving my strength for the Curse of the Castle Creep 2. Do you think it will be made?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2670,6 +2678,18 @@ const INTERACTION_ITEM = {
         inventorySprite: "Anvil",
         text: "Anvil."
     },
+    Fins: {
+        name: "Fins",
+        category: "interaction_item",
+        inventorySprite: "Fins",
+        text: "Fins."
+    },
+    ScubaMask: {
+        name: "ScubaMask",
+        category: "interaction_item",
+        inventorySprite: "ScubaMask",
+        text: "ScubaMask."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -3063,9 +3083,58 @@ const INTERACTION_ENTITY = {
             conclusion: "Now I'm ready to go! Here's the Green Key, hope the other babe is still chilling barefoot!"
         }
     },
-
-
-
+    Hedgehog: {
+        name: "Hedgehog",
+        sprite: "Hedgehog",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Apple", "Pear", "Banana", "GreenApple"],
+        gives: "BackPack",
+        text: {
+            intro: "I'm craving some fruit to nibble on, but my little paws can't carry them all. Help me gather the tasty treasures, and I'll give you a backpack in return.",
+            progress: "You've found one piece of fruit, but there’s still more to gather for my feast!",
+            conclusion: "All this delicious fruit, just for me! You've earned your reward - here's the backpack I promised."
+        }
+    },
+    Goldie: {
+        name: "Goldie",
+        sprite: "Goldie",
+        category: "crest",
+        voice: "Female2",
+        wants: ["GoldBar", "GoldBar", "GoldBar"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I love the shine of gold! Bring me three gold bars, and I'll give you a shiny coin in return. Fair trade, right?",
+            progress: "That's one gold bar, but I need more for my collection!",
+            conclusion: "Three gold bars! My collection is shining brighter than ever. Here's your gold coin - such a deal, right?"
+        }
+    },
+    Scooby: {
+        name: "Scooby",
+        sprite: "Scooby",
+        category: "crest",
+        voice: "Female2",
+        wants: ["ScubaMask", "Fins"],
+        gives: "Pearl",
+        text: {
+            intro: "I can dive deep for that lost pearl, but I need the right gear. Bring me a scuba mask and fins, and I'll fetch it for you.",
+            progress: "I've got some gear, but I still need the rest before I dive.",
+            conclusion: "All set! I'll dive and retrieve your pearl. Here you go — straight from the depths!"
+        }
+    },
+    Finette: {
+        name: "Finette",
+        sprite: "Finette",
+        category: 'crest',
+        voice: "Female",
+        wants: ["FishBone", "FishBone"],
+        gives: "Fins",
+        text: {
+            intro: "From ocean's depths, a plea for respect, Ancestors' remains, I wish to collect.",
+            progress: "One relic returned to the sea's embrace, Seek another, to complete the grace.",
+            conclusion: "Ancestors honored, their rest now serene, For you, a spare set of fins — a small, fitting tribute from the sea."
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {
@@ -3225,10 +3294,6 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you've gained the power of fire. Now go burn bright - or burn them down!"
         }
     },
-    
-    
-
-
 };
 
 const INTERACTOR = {

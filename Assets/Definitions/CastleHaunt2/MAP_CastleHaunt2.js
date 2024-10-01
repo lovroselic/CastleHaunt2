@@ -860,13 +860,15 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB2ABABB9AA77BB2AA24BB2AA5BB2AA42BB12AA2BB2AA2BB15ABB5ABB7AA2BAA8BB62A$"}',
+        data: '{"width":"17","height":"17","map":"BB2ABB4AA2BB5ABAA77BB2AA24BB2AA6BAA2BAA39BB13AA2BB2AA2BB17ABABB4AA2BB6AA4BAA4BB18ABB28ABB11$"}',
         wall: "MossyWall105",
         floor: "Water12",
         ceil: "Sand9",
         start: '[137,5]',
         lights: '[[90,1,"WallLamp20","standard"],[96,5,"Candelabra03","standard"],[198,7,"Lamp46","standard"],[192,3,"Lamp47","standard"]]',
         gates: '[[136,5,"38.1","37.2","Up"],[152,3,"38.2","39.1","Closed"]]',
+        entities: '[[280,1,"Scooby"],[220,3,"Finette"]]',
+        oracles: '[[68,5,"Bathy"]]',
     }
     ,
     39: {
@@ -906,12 +908,14 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BB2AA110BB29AA2BB4ABB5AA4BAA3BB15ABB24ABB10$"}',
+        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BB2AA102BAA7BABB33AA2BB4ABB4ABB2AA4BAA3BB11ABB7ABB21$BA"}',
         wall: "RedishRockyWall1",
         floor: "MarbleFloor105",
         ceil: "MarbleTiles4",
         start: '[151,5]',
+        lights: '[[9,7,"Fireplace09","fire"]]',
         gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"]]',
+        entities: '[[5,7,"Goldie"]]',
     }
     ,
     42: {
@@ -951,17 +955,19 @@ const MAP = {
     }
     ,
     44: {
-        name: "QWEWQ",
+        name: "Hedge of the Hog",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB9AA40BB3AA73BAA4BB2AA51BB27AA3BB9ABB4AA9BB78A$"}',
-        wall: "DungeonWall128",
-        floor: "Grass20",
-        ceil: "RedBricks1",
+        data: '{"width":"21","height":"15","map":"BB7AA30BAA6BB2AA15BB2AA37BAA5BB2AA6BAA5BAA54BB29AA3BB9ABB8AA11BB78A$"}',
+        wall: "MarbleWall1",
+        floor: "MarbleTiles2",
+        ceil: "Wood5",
         start: '[148,5]',
+        lights: '[[85,5,"Lights108","standard"],[211,5,"Lights108","standard"],[124,3,"WallLamp18","standardDimmed"],[208,3,"WallLamp18","standardDimmed"]]',
         gates: '[[147,5,"44.1","43.2","Closed"],[160,5,"44.2","41.3","Down"]]',
+        entities: '[[159,3,"Hedgehog"]]',
     }
     ,
     45: {
@@ -1082,7 +1088,7 @@ const MAP = {
         trainers: '[[6,7,"Barbarian"],[162,1,"NymphWarrior"]]',
     }
     ,
-    52 : {
+    52: {
         name: "Horny Girls",
         sg: 0,
         maxSpawned: -1,
@@ -1096,5 +1102,5 @@ const MAP = {
         lights: '[[73,1,"Lamp49","dim"],[99,7,"Candelabra11","dim"]]',
         gates: '[[78,5,"52.1","50.3","Open"]]',
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
-        }
+    }
 };

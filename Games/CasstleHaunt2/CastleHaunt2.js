@@ -60,36 +60,47 @@ const DEBUG = {
          *  
          * 
          * "GoldBar", 
+         * "GoldBar", 
+         * "GoldBar", 
+         * "GoldBar",
          ----* "IronBar": BlackSmithsress: "Anvil", "Hammer" ; DONE
          * "SilverBar", 
          * 
          ----* Diamond": Jeweliette by giving "GreenGem", "BlueGem"; DONE
          * "Amethyst", 
          * "Moonstone", 
-         * "Pearl"
+         * "Pearl": Scobby by giving "ScubaMask", "Fins"
          ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
          * "Gloves", 
          ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
          * "HikingBoot"
          * "HikingBoot" 
-         * "BackPack"
+         ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
          * "GreenGem", 
          * "BlueGem"
          * "Scissors"
          * "RedColor"
          * "Anvil", 
          * "Hammer" 
+         * "Apple", 
+         * "Pear", 
+         * "Banana", 
+         * "GreenApple"
+         * "ScubaMask", 
+         * "FishBone", 
+         * "FishBone"
+         ---* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
          * "BabySheep" 5x: 43, 45, 34
          ----* "BabySheep" 1x: 42; DONE
-         * coins (3x):
-
+         * coins sources (3x):
+            ----"GoldCoin" by GOldie bz giving  "GoldBar", "GoldBar", "GoldBar",; DONE
 
         *
-        * COINS:
+        * COINS used (3x):
             * Alpinist
-            * Barbarian
-            * 
-        * coin sources   
+            * Barbarian (2x)
+            * Horny (2x) EXCLUSIVE
+     
         
 
          * missing placed keys: 
@@ -103,7 +114,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 44;    //34
+        GAME.level = 38;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -133,8 +144,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Boots",
-            "GoldCoin", "GoldCoin",
+            "FishBone", "FishBone"
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -171,7 +182,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.10",
+    VERSION: "0.10.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
