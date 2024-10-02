@@ -50,36 +50,33 @@ const DEBUG = {
     checkPoint() {
         /** main area 3:
          * 
-         ---- * Purple key: from Keysa by giving "GoldSteel", "PurpleTear"; DONE;
-         ----* "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"; DONE
-         * 
-         ----* GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"; DONE
-        ----  * PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl" DONE
-         * 
-         ----* "UraniumBar" MissHill by giving:"HikingBoot", "HikingBoot", "BackPack": DONE
-         *  
+        ----* Purple key: from Keysa by giving "GoldSteel", "PurpleTear"; DONE;
+        ----* "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"; DONE
+        ----* GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"; DONE
+        ----* PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl" DONE
+        ----* "UraniumBar" MissHill by giving:"HikingBoot", "HikingBoot", "BackPack": DONE
+        ----* "IronBar": BlackSmithsress: "Anvil", "Hammer" ; DONE
+        ----* Diamond": Jeweliette by giving "GreenGem", "BlueGem"; DONE
+        ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
+        ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
+        ----* "HikingBoot": BootMaker by giving "LeatherHide", "LeatherHide"; DONE
+        ----* "HikingBoot" :BootMaker2 by giving "LeatherHide", "LeatherHide"; DONE
+        ----* "LeatherHide": CowGirl1 by giving: "HayBale", "HayBale" ; DONE
+        ----* "Pearl": Scobby by giving "ScubaMask", "Fins"; DONE;
+        ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
+        ----* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
          * 
          * "GoldBar", 
          * "GoldBar", 
          * "GoldBar", 
          * "GoldBar",
-         ----* "IronBar": BlackSmithsress: "Anvil", "Hammer" ; DONE
          * "SilverBar", 
-         * 
-         ----* Diamond": Jeweliette by giving "GreenGem", "BlueGem"; DONE
          * "Amethyst", 
          * "Moonstone", 
-         * "Pearl": Scobby by giving "ScubaMask", "Fins"
-         ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
          * "Gloves", 
-         ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
-         ----* "HikingBoot": BootMaker by giving "LeatherHide", "LeatherHide"; DONE
-         ----* "HikingBoot" :BootMaker2 by giving "LeatherHide", "LeatherHide"; DONE
-         * "LeatherHide", 
          * "LeatherHide"
          * "LeatherHide", 
          * "LeatherHide"
-         ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
          * "GreenGem", 
          * "BlueGem"
          * "Scissors"
@@ -93,11 +90,10 @@ const DEBUG = {
          * "ScubaMask", 
          * "FishBone", 
          * "FishBone"
-         ---* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
          * "BabySheep" 5x: 43, 45, 34
          ----* "BabySheep" 1x: 42; DONE
          * coins sources (3x):
-            ----"GoldCoin" by GOldie bz giving  "GoldBar", "GoldBar", "GoldBar",; DONE
+            ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
 
         *
         * COINS used (3x):
@@ -118,7 +114,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 53;    //34
+        GAME.level = 43;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -148,7 +144,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "LeatherHide", "LeatherHide", "LeatherHide", "LeatherHide",
+            "HayBale", "HayBale",
 
         ];
         for (let itm of invItems) {
@@ -186,7 +182,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.12",
+    VERSION: "0.10.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

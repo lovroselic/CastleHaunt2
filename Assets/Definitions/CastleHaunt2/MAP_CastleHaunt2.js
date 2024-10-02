@@ -936,13 +936,13 @@ const MAP = {
         movables: '[[164,"BabySheep"]]',
     }
     ,
-    43: {
+    43 : {
         name: "Meadow",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB2ABABB7AA54BAA39BAA3BAA31BB2AA18BAA22BABB11ABABAA2BB17ABB5ABB7ABAA7BB31ABABB36A$"}',
+        data: '{"width":"21","height":"15","map":"BB2ABABB7AA54BAA39BAA3BAA31BB2AA18BAA14BAA8BABB11ABABAA2BB19ABB5ABB5ABB2ABAA7BB15ABB13ABB36A$"}',
         wall: "MistyMeadow4",
         floor: "GrassMeadow101",
         ceil: "Overcast2",
@@ -950,9 +950,9 @@ const MAP = {
         lights: '[[110,1,"Lights112","standardDimmed"],[121,1,"Lights112","standardDimmed"],[197,7,"Lights112","standardDimmed"],[201,7,"Lights112","standardDimmed"]]',
         gates: '[[147,5,"43.1","42.2","Closed"],[167,3,"43.2","44.1","Closed"],[10,7,"43.3","45.1","Up"]]',
         monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
-        entities: '[[304,1,"Shepardess"]]',
+        entities: '[[304,1,"Shepardess"],[14,7,"CowGirl1"]]',
         movables: '[[115,"BabySheep"]]',
-    }
+        }
     ,
     44: {
         name: "Hedge of the Hog",

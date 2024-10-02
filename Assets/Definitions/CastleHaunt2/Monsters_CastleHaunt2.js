@@ -3159,7 +3159,7 @@ const INTERACTION_ENTITY = {
             progress: "One hide down, but I still need another from that 'fearsome' cow before I can finish your masterpiece.",
             conclusion: "Two hides? Wow, you survived the cows! Here's your one hiking boot. Maybe you'll find the other... someday."
         }
-    },    
+    },
     BootMaker2: {
         name: "BootMaker2",
         sprite: "BootMaker2",
@@ -3173,7 +3173,20 @@ const INTERACTION_ENTITY = {
             conclusion: "You did it! You conquered the cow menace. Here's your one boot. Good luck finding its twin out there!"
         }
     },
-    
+    CowGirl1: {
+        name: "CowGirl1",
+        sprite: "CowGirl1",
+        category: 'crest',
+        voice: "Princess",
+        wants: ["HayBale", "HayBale"],
+        gives: "LeatherHide",
+        text: {
+            intro: "Poor mute thing, are you hungry? Cow?",
+            progress: "You like the hay?",
+            conclusion: "Now that I fed you, you gave me your skin. As you should, since I am your Princess. You belong to me."
+        }
+    },
+
 };
 
 const INTERACTION_SHRINE = {
