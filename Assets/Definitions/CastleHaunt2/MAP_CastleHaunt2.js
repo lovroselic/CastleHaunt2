@@ -798,7 +798,7 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
-        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"]]',
+        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"]]',
         movables: '[[356,"BabySheep"]]',
         lairs: '[[241,1,"Lair34"],[287,7,"Lair32"],[263,3,"Lair25"],[265,5,"Lair04"]]',
         monsterList: '["MissGalaxyGold","Goblin"]',
@@ -1073,7 +1073,7 @@ const MAP = {
     }
     ,
     51: {
-        name: "Warriors Guild",
+        name: "Dangerous Girls",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
@@ -1103,4 +1103,21 @@ const MAP = {
         gates: '[[78,5,"52.1","50.3","Open"]]',
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
     }
+    ,
+    53 : {
+        name: "Shue Shop",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"19","height":"19","map":"BB7AA11BABAA48BB2AA9BB3EAA6BB2AA3BB2AA18BB4AA16BAEAA35BB2AA11BB2AA3BB10ABB3AA3BAA4BB33AA2BB5ABABB2AA5BB3AA2BB4ABABB20ABB12AA2BB18EBB13ABB4$ABB10AA2B"}',
+        wall: "RedBricks1",
+        floor: "Wood10",
+        ceil: "Wood1",
+        start: '[332,1]',
+        lights: '[[347,1,"Fireplace09","fire"],[355,1,"Fireplace06","fire"],[9,7,"Fireplace05","fire"],[83,3,"WallLamp31","dim"],[87,5,"Candelabra05","dim"],[156,7,"Lights106","dim"],[166,7,"Lights115","dim"]]',
+        gates: '[[351,1,"53.1","34.9","Closed"]]',
+        doors: '[64,68,142]',
+        entities: '[[94,3,"BootMaker2"],[76,5,"BootMaker"]]',
+        }
 };

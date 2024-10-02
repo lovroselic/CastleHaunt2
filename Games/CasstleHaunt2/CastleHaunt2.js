@@ -73,8 +73,12 @@ const DEBUG = {
          ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
          * "Gloves", 
          ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
-         * "HikingBoot"
-         * "HikingBoot" 
+         ----* "HikingBoot": BootMaker by giving "LeatherHide", "LeatherHide"; DONE
+         ----* "HikingBoot" :BootMaker2 by giving "LeatherHide", "LeatherHide"; DONE
+         * "LeatherHide", 
+         * "LeatherHide"
+         * "LeatherHide", 
+         * "LeatherHide"
          ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
          * "GreenGem", 
          * "BlueGem"
@@ -114,7 +118,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 38;    //34
+        GAME.level = 53;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -144,7 +148,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "FishBone", "FishBone"
+            "LeatherHide", "LeatherHide", "LeatherHide", "LeatherHide",
 
         ];
         for (let itm of invItems) {
@@ -182,7 +186,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.11",
+    VERSION: "0.10.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

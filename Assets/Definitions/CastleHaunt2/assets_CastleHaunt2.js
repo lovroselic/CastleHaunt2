@@ -884,7 +884,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Scooby.jpg", name: "Scooby" },
     { srcName: "EntityPictures/Bathy.jpg", name: "Bathy" },
     { srcName: "EntityPictures/Finette3.jpg", name: "Finette" },
-
+    { srcName: "EntityPictures/BootMaker.jpg", name: "BootMaker" },
+    { srcName: "EntityPictures/BootMaker2.jpg", name: "BootMaker2" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1078,9 +1079,10 @@ LoadSprites = [
     { srcName: "Items/GreenColor.png", name: "GreenColor" },
     { srcName: "Items/Hammer.png", name: "Hammer" },
     { srcName: "Items/Anvil.png", name: "Anvil" },
-
+    { srcName: "Items/LeatherHide.png", name: "LeatherHide" },
     { srcName: "Items/ScubaMask.png", name: "ScubaMask" },
     { srcName: "Items/Fins.png", name: "Fins" },
+    { srcName: "Items/HayBale.png", name: "HayBale" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

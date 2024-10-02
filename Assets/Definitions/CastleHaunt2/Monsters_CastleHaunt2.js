@@ -2690,6 +2690,18 @@ const INTERACTION_ITEM = {
         inventorySprite: "ScubaMask",
         text: "ScubaMask."
     },
+    LeatherHide: {
+        name: "LeatherHide",
+        category: "interaction_item",
+        inventorySprite: "LeatherHide",
+        text: "Skin of some dangerous animal. Cow perhaps?"
+    },
+    HayBale: {
+        name: "HayBale",
+        category: "interaction_item",
+        inventorySprite: "HayBale",
+        text: "Hey, it's a hay."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -3135,6 +3147,33 @@ const INTERACTION_ENTITY = {
             conclusion: "Ancestors honored, their rest now serene, For you, a spare set of fins — a small, fitting tribute from the sea."
         }
     },
+    BootMaker: {
+        name: "BootMaker",
+        sprite: "BootMaker",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["LeatherHide", "LeatherHide"],
+        gives: "HikingBoot",
+        text: {
+            intro: "So, you want a hiking boot? Well, I could whip one up, but I'll need two pieces of hide — from a 'dangerous' beast. Yep, a cow.",
+            progress: "One hide down, but I still need another from that 'fearsome' cow before I can finish your masterpiece.",
+            conclusion: "Two hides? Wow, you survived the cows! Here's your one hiking boot. Maybe you'll find the other... someday."
+        }
+    },    
+    BootMaker2: {
+        name: "BootMaker2",
+        sprite: "BootMaker2",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["LeatherHide", "LeatherHide"],
+        gives: "HikingBoot",
+        text: {
+            intro: "Oh, you're after a hiking boot, huh? No problem, just bring me two hides from the most 'ferocious' beast around... the cow. Scary stuff, I know.",
+            progress: "Halfway there! Just one more piece of cowhide, and I'll craft you the finest single boot you've ever seen.",
+            conclusion: "You did it! You conquered the cow menace. Here's your one boot. Good luck finding its twin out there!"
+        }
+    },
+    
 };
 
 const INTERACTION_SHRINE = {
