@@ -2702,6 +2702,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "HayBale",
         text: "Hey, it's a hay."
     },
+    GoldOre: {
+        name: "GoldOre",
+        category: "interaction_item",
+        inventorySprite: "GoldOre",
+        text: "I should smelt this gold ore into a bar."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -3186,6 +3192,20 @@ const INTERACTION_ENTITY = {
             conclusion: "Now that I fed you, you gave me your skin. As you should, since I am your Princess. You belong to me."
         }
     },
+    GoldSmelter: {
+        name: "GoldSmelter",
+        sprite: "GoldSmelter",
+        category: 'crest',
+        voice: "Princess",
+        wants: ["GoldOre", "GoldOre", "GoldOre"],
+        gives: "GoldBar",
+        text: {
+            intro: "You want a shiny gold bar? Well, I need three chunks of gold ore. Don't worry, it only takes a 'little' heat to smelt them.",
+            progress: "You're on the right track, but I still need more gold to get the furnace going.",
+            conclusion: "Three ores! Time to fire up the furnace. Here's your freshly smelted gold bar. Don't spend it all in one place!"
+        }
+    },
+    
 
 };
 

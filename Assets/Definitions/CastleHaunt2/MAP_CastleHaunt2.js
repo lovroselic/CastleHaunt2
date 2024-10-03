@@ -798,7 +798,9 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
-        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"]]',
+        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"]]',
+        containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7]]',
+        objects: '[[216,"GreenApple"]]',
         movables: '[[356,"BabySheep"]]',
         lairs: '[[241,1,"Lair34"],[287,7,"Lair32"],[263,3,"Lair25"],[265,5,"Lair04"]]',
         monsterList: '["MissGalaxyGold","Goblin"]',
@@ -936,7 +938,7 @@ const MAP = {
         movables: '[[164,"BabySheep"]]',
     }
     ,
-    43 : {
+    43: {
         name: "Meadow",
         sg: 0,
         maxSpawned: -1,
@@ -952,7 +954,7 @@ const MAP = {
         monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
         entities: '[[304,1,"Shepardess"],[14,7,"CowGirl1"]]',
         movables: '[[115,"BabySheep"]]',
-        }
+    }
     ,
     44: {
         name: "Hedge of the Hog",
@@ -1104,7 +1106,7 @@ const MAP = {
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
     }
     ,
-    53 : {
+    53: {
         name: "Shue Shop",
         sg: 0,
         maxSpawned: -1,
@@ -1119,5 +1121,24 @@ const MAP = {
         gates: '[[351,1,"53.1","34.9","Closed"]]',
         doors: '[64,68,142]',
         entities: '[[94,3,"BootMaker2"],[76,5,"BootMaker"]]',
+    }
+    ,
+    54 : {
+        name: "Gold Mine",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"23","height":"23","map":"BB2AA4BAA3BAA2BABABAA11BABAA2BAA2BABB5AA2BAA11BABAA2BABAA6BABAA2BABB2AA5BABAA5BB3AA4BABB2AA5BB3AA7BB2AA7BB2AA16BAA3BB3ABAA2BB2AA3BAA6BB3ABB2ABAA4BB4ABABB5ABAA2BAA2BB2AA3BB2ABB6ABB2ABABB6ABB4ABB8AA2BB3ABABAA3BB2ABB4ABAA3BAA3BAA7BB3ABB3AA2BABB4AA4BABB3ABB5ABB3ABB8AA2BABAA2BABB2ABB4ABAA3BB4AA2BB2AA2BB3AA2BB3AA6BABB4ABB2ABABB4ABB2ABB6ABB10AA3BAA3BB2AA2BB3AA2BB3AA2BABABABB5AA4BAA2BB11AA2BB2ABABB8AA3BABB5ABB3ABAA2BB3ABABAA2BB5ABB28A$"}',
+        wall: "GoldBlackWallwithPillar",
+        floor: "GoldMarbleFloor",
+        ceil: "GoldWithVines2",
+        start: '[34,7]',
+        lights: '[[33,7,"Candelabra11","dim"]]',
+        gates: '[[11,7,"54.1","43.10","Up"]]',
+        gold: '[[24,"GoldBar"],[139,"GoldBar"],[389,"GoldBar"],[326,"GoldBar"],[145,"SilverBar"],[351,"SilverBar"]]',
+        containers: '[[441,"IronChest","INTERACTION_ITEM.GoldOre",1],[435,"IronChest","INTERACTION_ITEM.GoldOre",7],[175,"IronChest","INTERACTION_ITEM.GoldOre",5],[31,"IronChest","GOLD_ITEM_TYPE.SilverBar",3],[37,"IronChest","GOLD_ITEM_TYPE.SilverBar",5],[90,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[193,"PirateChest","GOLD_ITEM_TYPE.SilverBar",7],[286,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7]]',
+        entities: '[[195,1,"GoldSmelter"]]',
+        objects: '[[496,"GoldBar"]]',
         }
 };

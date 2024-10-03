@@ -65,15 +65,19 @@ const DEBUG = {
         ----* "Pearl": Scobby by giving "ScubaMask", "Fins"; DONE;
         ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
         ----* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
+        ---- * "GoldBar", GoldSmelter: by giving : "GoldOre", "GoldOre", "GoldOre"; DONE
          * 
-         * "GoldBar", 
-         * "GoldBar", 
+        
+        ---- * "GoldBar", 54, DONE
          * "GoldBar", 
          * "GoldBar",
+        ---- * "GoldOre", 54; DONE
+        ---- * "GoldOre", 54; DONE
+        ---- * GoldOre" 54; DONE
          * "SilverBar", 
          * "Amethyst", 
          * "Moonstone", 
-         * "Gloves", 
+        ----* "Gloves", 34 DONE;
          * "LeatherHide"
          * "LeatherHide", 
          * "LeatherHide"
@@ -86,13 +90,13 @@ const DEBUG = {
          * "Apple", 
          * "Pear", 
          * "Banana", 
-         * "GreenApple"
+        ---- * "GreenApple": 34; DONE
          * "ScubaMask", 
          * "FishBone", 
          * "FishBone"
          * "BabySheep" 5x: 43, 45, 34
-         ----* "BabySheep" 1x: 42; DONE
-         * coins sources (3x):
+        ----* "BabySheep" 1x: 42; DONE
+         * coins sources (3x, missing 2x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
 
         *
@@ -114,7 +118,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 43;    //34
+        GAME.level = 36;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -144,7 +148,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "HayBale", "HayBale",
+            "GoldOre", "GoldOre", "GoldOre"
 
         ];
         for (let itm of invItems) {
@@ -182,7 +186,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.13",
+    VERSION: "0.10.14",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -887,6 +887,7 @@ LoadSprites = [
     { srcName: "EntityPictures/BootMaker.jpg", name: "BootMaker" },
     { srcName: "EntityPictures/BootMaker2.jpg", name: "BootMaker2" },
     { srcName: "EntityPictures/CowGirl1.jpg", name: "CowGirl1" },
+    { srcName: "EntityPictures/GoldSmelter.jpg", name: "GoldSmelter" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1084,6 +1085,7 @@ LoadSprites = [
     { srcName: "Items/ScubaMask.png", name: "ScubaMask" },
     { srcName: "Items/Fins.png", name: "Fins" },
     { srcName: "Items/HayBale.png", name: "HayBale" },
+    { srcName: "Items/GoldOre.png", name: "GoldOre" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
