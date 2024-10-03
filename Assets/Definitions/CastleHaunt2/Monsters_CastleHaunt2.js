@@ -3205,8 +3205,33 @@ const INTERACTION_ENTITY = {
             conclusion: "Three ores! Time to fire up the furnace. Here's your freshly smelted gold bar. Don't spend it all in one place!"
         }
     },
+    Swampy: {
+        name: "Swampy",
+        sprite: "Swampy",
+        category: 'crest',
+        voice: "Princess",
+        wants: ["Frog", "Frog", "Frog"],
+        gives: "Hammer",
+        text: {
+            intro: "I just know one of these frogs is a prince in disguise! Help me catch three, and I'll give you a hammer I, hmm, 'borrowed' from Blacksmithstress.",
+            progress: "Hmm, still not sure if this frog is royalty. Keep searching, I need more!",
+            conclusion: "Three frogs! Still no prince, but here's that hammer I promised. Maybe you'll have better luck with your quest!"
+        }
+    },
+    Fishelle: {
+        name: "Fishelle",
+        sprite: "Fishelle",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Fish", "Fish", "Fish"],
+        gives: "Amethyst",
+        text: {
+            intro: "My little ones are out there somewhere in the deep. Help me find them, and I'll reward you with a precious amethyst from the ocean floor.",
+            progress: "One fish closer, but I still need the rest of my dear offspring.",
+            conclusion: "All my little ones are safe! As promised, here's the amethyst from the depths of the ocean. It's as shiny as they are precious to me!"
+        }
+    },
     
-
 };
 
 const INTERACTION_SHRINE = {

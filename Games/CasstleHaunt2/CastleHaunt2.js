@@ -66,36 +66,50 @@ const DEBUG = {
         ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
         ----* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
         ---- * "GoldBar", GoldSmelter: by giving : "GoldOre", "GoldOre", "GoldOre"; DONE
+        ---- * "Hammer" : Swampy by giving "Frog", "Frog", "Frog"; DONE
+        ---- * "Amethyst", Fishelly by giving "Fish", "Fish", "Fish"
          * 
-        
+        ----* HayBale", 43 DONE
+        ---- * "HayBale" 45 DONE
         ---- * "GoldBar", 54, DONE
-         * "GoldBar", 
-         * "GoldBar",
+        ---- * "GoldBar", 48 DONE
+        ---- * "GoldBar", 47 DONE
         ---- * "GoldOre", 54; DONE
         ---- * "GoldOre", 54; DONE
         ---- * GoldOre" 54; DONE
-         * "SilverBar", 
-         * "Amethyst", 
-         * "Moonstone", 
+        ---- * "SilverBar", 40 DONE
+        ---- * "LeatherHide" 47 DONE
+        ---- * "LeatherHide", 44 DONE
+        ---- * "LeatherHide" 41 DONE
         ----* "Gloves", 34 DONE;
-         * "LeatherHide"
-         * "LeatherHide", 
-         * "LeatherHide"
-         * "GreenGem", 
-         * "BlueGem"
+        ---- * "FishBone", 36, DONE
+        ---- * "FishBone" 44 DONE
+        ---- * "BabySheep" 5x: 43, 45, 34, 44, 46 DONE
+        ----* "BabySheep" 1x: 42; DONE
+        ----* "Fish", 41 DONE
+        ---- * "Fish", 46 DONE
+        ----* "Fish" 50 DONE
+        ----* Boots 50 DONE
+        ---- * "Frog", 46 DONE
+        ---- * "Frog", 50 DONE
+        ---- * "Frog" 42 DONE
+        ---- * "ScubaMask", 42 DONE
+         
+        * "Moonstone", 
+        * "GreenGem", 
+        ---- * "BlueGem" 48 DONE
+
          * "Scissors"
          * "RedColor"
          * "Anvil", 
-         * "Hammer" 
-         * "Apple", 
+       
+        ----- * "Apple", 43 DONE
          * "Pear", 
          * "Banana", 
         ---- * "GreenApple": 34; DONE
-         * "ScubaMask", 
-         * "FishBone", 
-         * "FishBone"
-         * "BabySheep" 5x: 43, 45, 34
-        ----* "BabySheep" 1x: 42; DONE
+
+        
+  
          * coins sources (3x, missing 2x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
 
@@ -118,7 +132,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 36;    //34
+        GAME.level = 55;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -148,7 +162,6 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldOre", "GoldOre", "GoldOre"
 
         ];
         for (let itm of invItems) {
@@ -186,7 +199,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.14",
+    VERSION: "0.10.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

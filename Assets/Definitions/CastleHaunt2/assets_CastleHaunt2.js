@@ -884,10 +884,12 @@ LoadSprites = [
     { srcName: "EntityPictures/Scooby.jpg", name: "Scooby" },
     { srcName: "EntityPictures/Bathy.jpg", name: "Bathy" },
     { srcName: "EntityPictures/Finette3.jpg", name: "Finette" },
+    { srcName: "EntityPictures/Finette4.jpg", name: "Fishelle" },
     { srcName: "EntityPictures/BootMaker.jpg", name: "BootMaker" },
     { srcName: "EntityPictures/BootMaker2.jpg", name: "BootMaker2" },
     { srcName: "EntityPictures/CowGirl1.jpg", name: "CowGirl1" },
     { srcName: "EntityPictures/GoldSmelter.jpg", name: "GoldSmelter" },
+    { srcName: "EntityPictures/Swampy.jpg", name: "Swampy" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

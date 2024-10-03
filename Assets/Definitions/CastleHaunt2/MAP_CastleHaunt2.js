@@ -798,7 +798,7 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
-        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"]]',
+        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"],[19,7,"34.11","55.1","Up"]]',
         containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7]]',
         objects: '[[216,"GreenApple"]]',
         movables: '[[356,"BabySheep"]]',
@@ -835,8 +835,9 @@ const MAP = {
         floor: "MarbleFloor1",
         ceil: "MC_Wall6",
         start: '[118,3]',
-        lights: '[[110,5,"WallLamp12","standardDimmed"],[83,3,"Candelabra17","standardDimmed"],[143,3,"Lamp46","standardDimmed"]]',
+        lights: '[[110,5,"WallLamp12","standardDimmed"],[83,3,"Candelabra17","standardDimmed"],[143,3,"Lamp46","standardDimmed"],[220,1,"Fireplace05","fire"]]',
         gates: '[[119,3,"36.1","34.3","Closed"],[75,5,"36.2","37.1","Down"],[135,5,"36.3","42.1","Up"]]',
+        containers: '[[19,"Barrel","INTERACTION_ITEM.FishBone",7]]',
         oracles: '[[7,7,"Bomber"]]',
     }
     ,
@@ -879,13 +880,14 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB7AA30BB2AA15BB4AA20BB4AA4BABB3AA4BB4AA37BB2AA13BB8AA5BB4ABB3ABAA2BB27ABB2ABB3AA4BB2AA10BB62A$"}',
+        data: '{"width":"17","height":"17","map":"BB7AA30BB2AA15BB4AA20BB4AA4BABB3AA4BB4AA37BB2AA12BABB9AA5BB4ABB3ABAA2BB31ABB2ABB3AA4BB4AA10BB23ABABB28A$"}',
         wall: "MossyWall112",
         floor: "Water30",
         ceil: "Sand4",
         start: '[137,5]',
         lights: '[[144,1,"Candelabra14","weakCandle"],[144,7,"Lamp49","weakCandle"],[144,3,"Lamp43","weakCandle"],[144,5,"WallLamp32","weakCandle"]]',
         gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"]]',
+        entities: '[[8,7,"Swampy"],[280,1,"Fishelle"]]',
     }
     ,
     40: {
@@ -894,14 +896,16 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB4ABB7ABB2AA72BAA4BAA78BB15ABB18ABB3ABB9AA2BAA8BB18ABB28ABB11$"}',
+        data: '{"width":"17","height":"17","map":"BB3ABB3AA2BB4ABB2AA66BB2AA6BB2AA79BABB15AA2BB19ABAA2BB8ABB3AA2BAA6BB23ABABB28A$"}',
         wall: "DARKBricks107",
         floor: "DarkRock",
         ceil: "SpiderWeb12",
         start: '[222,5]',
-        lights: '[[178,7,"WallLamp33","standardDimmed"]]',
+        lights: '[[178,7,"WallLamp33","standardDimmed"],[110,1,"Candelabra15","dim"]]',
         gates: '[[221,5,"40.1","39.2","Down"],[67,3,"40.2","41.1","Up"]]',
+        gold: '[[93,"SilverBar"]]',
         entities: '[[280,1,"Jeweliette"]]',
+        objects: '[[76,"SilverBar"]]',
     }
     ,
     41: {
@@ -917,6 +921,7 @@ const MAP = {
         start: '[151,5]',
         lights: '[[9,7,"Fireplace09","fire"]]',
         gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"]]',
+        containers: '[[182,"Wardrobe","INTERACTION_ITEM.LeatherHide",1],[37,"Barrel","INTERACTION_ITEM.Fish",7]]',
         entities: '[[5,7,"Goldie"]]',
     }
     ,
@@ -926,7 +931,7 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB8AA21BAA5BAA38BAA10BAA20BAA15BAA9BABAA14BB2AA19BAA9BABB12ABAA2BB14AA2BABB16ABB2ABB2AA7BAA2BB7ABB37ABB12ABB8$"}',
+        data: '{"width":"21","height":"15","map":"BB7AA18BAA5BAA33BAA9BAA8BAA11BAA13BAA2BAA9BABAA11BAA4BB2AA21BABAA10BABB11ABB3AA2BB15AA2BB2ABB5ABB11ABB3ABB2ABB2AA6BAA2BABB6ABABB12ABB29ABB8$"}',
         wall: "SmallBlackBricks44",
         floor: "MarbleFloor104",
         ceil: "MC_Wall9",
@@ -934,6 +939,7 @@ const MAP = {
         lights: '[[64,5,"Candelabra07","standardDimmed"],[232,5,"Candelabra07","standardDimmed"],[153,5,"Lamp45","weakCandle"],[16,7,"Fireplace13","fire"],[310,1,"Fireplace07","fire"],[124,3,"Candelabra17","standardDimmed"],[208,3,"WallLamp18","standardDimmed"]]',
         gates: '[[152,3,"42.1","36.3","Down"],[167,3,"42.","43.1","Closed"]]',
         monsters: '[[133,"AngrySheep"],[175,"AngrySheep"],[100,"AngrySheep"],[247,"AngrySheep"]]',
+        containers: '[[283,"TreasureChest","INTERACTION_ITEM.Frog",3],[57,"Wardrobe","INTERACTION_ITEM.ScubaMask",7]]',
         entities: '[[12,7,"Seamstress"]]',
         movables: '[[164,"BabySheep"]]',
     }
@@ -952,7 +958,9 @@ const MAP = {
         lights: '[[110,1,"Lights112","standardDimmed"],[121,1,"Lights112","standardDimmed"],[197,7,"Lights112","standardDimmed"],[201,7,"Lights112","standardDimmed"]]',
         gates: '[[147,5,"43.1","42.2","Closed"],[167,3,"43.2","44.1","Closed"],[10,7,"43.3","45.1","Up"]]',
         monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
+        containers: '[[270,"Crate","INTERACTION_ITEM.HayBale",1]]',
         entities: '[[304,1,"Shepardess"],[14,7,"CowGirl1"]]',
+        objects: '[[214,"Apple"]]',
         movables: '[[115,"BabySheep"]]',
     }
     ,
@@ -962,14 +970,16 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB7AA30BAA6BB2AA15BB2AA37BAA5BB2AA6BAA5BAA54BB29AA3BB9ABB8AA11BB78A$"}',
+        data: '{"width":"21","height":"15","map":"BB7AA30BAA6BB2AA15BB2AA37BAA5BB2AA6BAA5BAA53BABB36AA3BB13ABB12AA11BB5ABB2ABB30ABABB20A$"}',
         wall: "MarbleWall1",
         floor: "MarbleTiles2",
         ceil: "Wood5",
         start: '[148,5]',
         lights: '[[85,5,"Lights108","standard"],[211,5,"Lights108","standard"],[124,3,"WallLamp18","standardDimmed"],[208,3,"WallLamp18","standardDimmed"]]',
         gates: '[[147,5,"44.1","43.2","Closed"],[160,5,"44.2","41.3","Down"]]',
+        containers: '[[24,"TreasureChest","INTERACTION_ITEM.LeatherHide",7],[290,"Barrel","INTERACTION_ITEM.FishBone",1]]',
         entities: '[[159,3,"Hedgehog"]]',
+        movables: '[[156,"BabySheep"]]',
     }
     ,
     45: {
@@ -987,6 +997,7 @@ const MAP = {
         lights: '[[18,7,"Candelabra08","standard"],[26,7,"Candelabra08","standard"],[199,1,"Candelabra10","standardDimmed"],[205,1,"Candelabra10","standardDimmed"]]',
         gates: '[[217,1,"45.1","43.3","Down"]]',
         monsters: '[[67,"AngrySheep"],[107,"AngrySheep"],[117,"AngrySheep"]]',
+        containers: '[[182,"Barrel","INTERACTION_ITEM.HayBale",1]]',
         entities: '[[7,7,"Climber"],[119,3,"MissHill"]]',
         movables: '[[52,"BabySheep"]]',
         trainers: '[[105,5,"Alpinist"]]',
@@ -1005,7 +1016,10 @@ const MAP = {
         start: '[187,3]',
         lights: '[[170,7,"Lamp40","standardDimmed"]]',
         gates: '[[188,3,"46.1","34.5","Closed"]]',
+        containers: '[[26,"TreasureChest","INTERACTION_ITEM.Frog",5],[145,"PlainCloset","INTERACTION_ITEM.Fish",1]]',
+        triggers: '[[168,5,"SmoothWallButton",1,199],[126,5,"SmoothWallButton",1,201],[84,5,"SmoothWallButton",1,184]]',
         entities: '[[338,1,"Keysa"]]',
+        movables: '[[179,"BabySheep"]]',
     }
     ,
     47: {
@@ -1021,7 +1035,10 @@ const MAP = {
         start: '[137,5]',
         lights: '[[78,7,"Candelabra17","standardDimmed"]]',
         gates: '[[136,5,"47.1","34.6","Closed"]]',
+        gold: '[[151,"GoldBar"]]',
+        containers: '[[264,"Barrel","INTERACTION_ITEM.LeatherHide",5]]',
         entities: '[[214,1,"AlloyaPinkass"]]',
+        objects: '[[117,"GoldBar"]]',
     }
     ,
     48: {
@@ -1030,14 +1047,17 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"19","height":"19","map":"BB3AA6BAA7BB2ABB2ABAA3BAA2BAA4BAA2BAA7BABAA5BAA8BB2ABB4AA2BB2AA4BAA3BAA5BAA14BAA2BAA2BB6ABB2ABB3ABB3ABB7AA2BABB3ABB2AA2BB4AA5BB2ABABABB2ABB2ABB4AA2BB2AA4BB2ABABABAA4BB3AA3BAA2BAA3BABB7AA2BABB3ABABABABB3ABABABB2ABB2AA2BABB5ABB5ABB8ABABABB3ABB3AA3BB2ABAA2BABABB3ABB2ABABABB3AA2BAA2BB3ABB7ABABB4ABB4AA4BB24A$"}',
+        data: '{"width":"19","height":"19","map":"BB3AA6BAA7BB2ABB2ABAA3BAA2BAA4BAA10BB2AA3BAA9BABB5AA2BB2AA6BAA4BAA15BB4AA2BB7ABB2ABB3ABB3ABB7AA2BB4ABAA2BB5AA5BABABABABB2ABB2ABB4AA2BB2AA4BABAA2BAA2BAA2BB2AA2BAA2BAA2BABAA2BABB7AA2BABB3ABABABABB3ABABABB2ABB2ABB7ABABB4ABB8ABABABB3ABB3AA3BB3ABAA2BABABB3ABB2ABABABB3AA3BAA2BB3ABB7ABABB4ABB4AA4BB24A$"}',
         wall: "BigGreyBricks1",
         floor: "OrnateFloor107",
         ceil: "3d wall2",
         start: '[55,3]',
         lights: '[[148,7,"Candelabra18","standardDimmed"]]',
         gates: '[[56,3,"48.1","34.7","Closed"]]',
+        gold: '[[326,"RedGem"]]',
+        triggers: '[[147,1,"SmoothWallButton",1,90]]',
         entities: '[[281,1,"Gemma"]]',
+        objects: '[[324,"BlueGem"],[334,"GoldBar"]]',
     }
     ,
     49: {
@@ -1062,7 +1082,7 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB3AA2BB8AA31BAA31BB2AA4BABAA6BAA78BABB12ABB2AA2BB26ABABB2AA2BB3AA5BAA3BB23ABABB28A$"}',
+        data: '{"width":"17","height":"17","map":"BB4AA2BB6ABAA31BAA31BB2AA5BABAA5BAA63BAA17BB14ABB2AA2BB32AA2BAA3BB4AA2BAA6BB7ABB3ABB7ABB18$BB6A"}',
         wall: "BlackWall42",
         floor: "MarbleFloor101",
         ceil: "DarkBrick113",
@@ -1070,6 +1090,7 @@ const MAP = {
         decals: '[[185,3,"AA_CREST_AI","crest"],[219,3,"AA_CREST_AI","crest"],[83,3,"KnightStatue104","crest"],[117,3,"KnightStatue102","crest"]]',
         lights: '[[110,1,"Lights102","standard"],[178,7,"WallLamp12","standard"],[142,5,"Lamp41","standard"]]',
         gates: '[[136,5,"50.1","34.8","Closed"],[101,3,"50.2","51.1","Green"],[203,3,"50.3","52.1","Blue"]]',
+        containers: '[[127,"Barrel","INTERACTION_ITEM.Fish",7],[256,"Closet","INTERACTION_ITEM.Boots",5],[18,"Barrel","INTERACTION_ITEM.Frog",7]]',
         entities: '[[8,7,"RestingBabe1"],[280,1,"RestingBabe2"]]',
         oracles: '[[152,3,"Kneel"]]',
     }
@@ -1123,7 +1144,7 @@ const MAP = {
         entities: '[[94,3,"BootMaker2"],[76,5,"BootMaker"]]',
     }
     ,
-    54 : {
+    54: {
         name: "Gold Mine",
         sg: 0,
         maxSpawned: 6,
@@ -1140,5 +1161,22 @@ const MAP = {
         containers: '[[441,"IronChest","INTERACTION_ITEM.GoldOre",1],[435,"IronChest","INTERACTION_ITEM.GoldOre",7],[175,"IronChest","INTERACTION_ITEM.GoldOre",5],[31,"IronChest","GOLD_ITEM_TYPE.SilverBar",3],[37,"IronChest","GOLD_ITEM_TYPE.SilverBar",5],[90,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[193,"PirateChest","GOLD_ITEM_TYPE.SilverBar",7],[286,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[195,1,"GoldSmelter"]]',
         objects: '[[496,"GoldBar"]]',
+    }
+    ,
+    55 : {
+        name: "Attic",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"23","height":"23","map":"BB2ABB4ABB3AA5BAA7BABAA15BB2AA2BABB2AA6BAA2BB3AA14BABB2AA5BB2AA6BEAA5BABB2AA5BB2AA5BABAA3BB2AA2EABAA7BAA5BB2AA4BB2AA12BAA7BB4ABB5ABABB13ABB3AA2BB5ABB3ABAA4BABB2ABB2ABB3ABABABAA2BABB6AA5BB3AA4BB4AA6BB10ABAA4BABB2AA4BB7ABB2AA2BAA3BAA2BB2AA3BB3AA7BABB2ABABAA5BABAA4BB2AA5BB3AA4BB4ABB3AA2BB2ABAA3BB2AA2BABB2ABABAA2BB2ABB2AA3BB2AA3BB3AA3BB8ABABAA3BABB2EAA2BB3AA4BB3ABABB10ABAA4BB8ABB2ABABB3ABB3ABB4ABEBB29AB$AA2BB4AA2BB2"}',
+        wall: "BrightGlowyWall2",
+        floor: "DarkFloor5",
+        ceil: "StrangeWall1",
+        start: '[485,1]',
+        lights: '[[324,7,"WallLamp19","standard"],[236,7,"Candelabra06","standard"],[97,7,"Candelabra06","standard"],[484,1,"Candelabra08","dim"]]',
+        gates: '[[508,1,"55.1","34.11","Down"]]',
+        doors: '[393,441,375,430]',
+        triggers: '[[3,7,"SmoothWallButton",1,148],[379,7,"SmoothWallButton",1,447],[242,3,"SmoothWallButton",1,263],[357,3,"SmoothWallButton",1,355]]',
         }
 };
