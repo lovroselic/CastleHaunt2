@@ -890,6 +890,8 @@ LoadSprites = [
     { srcName: "EntityPictures/CowGirl1.jpg", name: "CowGirl1" },
     { srcName: "EntityPictures/GoldSmelter.jpg", name: "GoldSmelter" },
     { srcName: "EntityPictures/Swampy.jpg", name: "Swampy" },
+    { srcName: "EntityPictures/MoonElf1.jpg", name: "MoonElf" },
+    { srcName: "EntityPictures/DyeMaker.jpg", name: "DyeMaker" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1088,6 +1090,8 @@ LoadSprites = [
     { srcName: "Items/Fins.png", name: "Fins" },
     { srcName: "Items/HayBale.png", name: "HayBale" },
     { srcName: "Items/GoldOre.png", name: "GoldOre" },
+    { srcName: "Items/Moon.png", name: "Moon" },
+    { srcName: "Items/EmptyBottle.png", name: "EmptyBottle" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

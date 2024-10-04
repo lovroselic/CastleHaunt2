@@ -67,7 +67,8 @@ const DEBUG = {
         ----* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
         ---- * "GoldBar", GoldSmelter: by giving : "GoldOre", "GoldOre", "GoldOre"; DONE
         ---- * "Hammer" : Swampy by giving "Frog", "Frog", "Frog"; DONE
-        ---- * "Amethyst", Fishelly by giving "Fish", "Fish", "Fish"
+        ---- * "Amethyst", Fishelly by giving "Fish", "Fish", "Fish"; DONE
+        ---- * "Moonstone", MoonElf by giving: "Moon", "Moon"; DONE
          * 
         ----* HayBale", 43 DONE
         ---- * "HayBale" 45 DONE
@@ -94,19 +95,21 @@ const DEBUG = {
         ---- * "Frog", 50 DONE
         ---- * "Frog" 42 DONE
         ---- * "ScubaMask", 42 DONE
-         
-        * "Moonstone", 
-        * "GreenGem", 
+        ---- * "GreenGem", 55 DONE
         ---- * "BlueGem" 48 DONE
-
-         * "Scissors"
-         * "RedColor"
-         * "Anvil", 
-       
         ----- * "Apple", 43 DONE
-         * "Pear", 
-         * "Banana", 
+        ---- * "Pear", 55 DONE
+        ---- * "Banana", 55 DONE
         ---- * "GreenApple": 34; DONE
+        ---- * "Anvil", 55 DONE
+         
+        * "Moon", 
+        * "Moon"
+        * "Scissors"
+        * "RedColor"
+       
+       
+        
 
         
   
@@ -132,7 +135,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 55;    //34
+        GAME.level = 56;    //34
         GAME.gold = 2271;
         GAME.lives = 2;
 
@@ -162,7 +165,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            "Moon", "Moon",
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -199,7 +202,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.15",
+    VERSION: "0.10.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

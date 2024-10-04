@@ -1995,7 +1995,7 @@ const INTERACTION_OBJECT = {
         texture: "Banana_Texture",
         inventorySprite: "Banana",
         material: MATERIAL.standard,
-        text: "Banana placeholder"
+        text: "Banana. "
     },
     GreenApple: {
         name: "GreenApple",
@@ -2665,30 +2665,29 @@ const INTERACTION_ITEM = {
         inventorySprite: "GreenColor",
         text: "I can paint something green."
     },
-
     Hammer: {
         name: "Hammer",
         category: "interaction_item",
         inventorySprite: "Hammer",
-        text: "Hammer."
+        text: "Hammer. I could hammer someone."
     },
     Anvil: {
         name: "Anvil",
         category: "interaction_item",
         inventorySprite: "Anvil",
-        text: "Anvil."
+        text: "Anvil. Blacksmistress might want it."
     },
     Fins: {
         name: "Fins",
         category: "interaction_item",
         inventorySprite: "Fins",
-        text: "Fins."
+        text: "Fins. For scuba diving."
     },
     ScubaMask: {
         name: "ScubaMask",
         category: "interaction_item",
         inventorySprite: "ScubaMask",
-        text: "ScubaMask."
+        text: "Mask. For scuba diving."
     },
     LeatherHide: {
         name: "LeatherHide",
@@ -2707,6 +2706,18 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "GoldOre",
         text: "I should smelt this gold ore into a bar."
+    },
+    Moon: {
+        name: "Moon",
+        category: "interaction_item",
+        inventorySprite: "Moon",
+        text: "Moon? Really? What's next."
+    },
+    EmptyBottle: {
+        name: "EmptyBottle",
+        category: "interaction_item",
+        inventorySprite: "EmptyBottle",
+        text: "Empty bottle? I should put something in."
     },
 };
 
@@ -3196,7 +3207,7 @@ const INTERACTION_ENTITY = {
         name: "GoldSmelter",
         sprite: "GoldSmelter",
         category: 'crest',
-        voice: "Princess",
+        voice: "Female2",
         wants: ["GoldOre", "GoldOre", "GoldOre"],
         gives: "GoldBar",
         text: {
@@ -3209,7 +3220,7 @@ const INTERACTION_ENTITY = {
         name: "Swampy",
         sprite: "Swampy",
         category: 'crest',
-        voice: "Princess",
+        voice: "Female",
         wants: ["Frog", "Frog", "Frog"],
         gives: "Hammer",
         text: {
@@ -3229,6 +3240,32 @@ const INTERACTION_ENTITY = {
             intro: "My little ones are out there somewhere in the deep. Help me find them, and I'll reward you with a precious amethyst from the ocean floor.",
             progress: "One fish closer, but I still need the rest of my dear offspring.",
             conclusion: "All my little ones are safe! As promised, here's the amethyst from the depths of the ocean. It's as shiny as they are precious to me!"
+        }
+    },
+    MoonElf: {
+        name: "MoonElf",
+        sprite: "MoonElf",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Moon", "Moon"],
+        gives: "Moonstone",
+        text: {
+            intro: "I collect moons — two are already mine, but I need two more to complete my collection. Bring them to me, and I'll gift you a MoonStone.",
+            progress: "One moon shines in my hand, but the collection is still incomplete.",
+            conclusion: "With two more moons, my collection is now whole. As promised, here's your MoonStone, glowing with celestial energy."
+        }
+    },
+    DyeMaker: {
+        name: "DyeMaker",
+        sprite: "DyeMaker",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["EmptyBottle"],
+        gives: "RedColor",
+        text: {
+            intro: "I’ve got the perfect red dye ready, but I need something to pour it into. Bring me an empty bottle, and I'll fill it with vibrant color.",
+            progress: null,
+            conclusion: "Ah, the perfect vessel! Here's your red dye, all bottled up and ready to use."
         }
     },
     

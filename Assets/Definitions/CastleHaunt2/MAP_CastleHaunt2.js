@@ -798,7 +798,7 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
-        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"],[19,7,"34.11","55.1","Up"]]',
+        gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"],[19,7,"34.11","55.1","Up"],[509,1,"34.12","56.1","Down"]]',
         containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7]]',
         objects: '[[216,"GreenApple"]]',
         movables: '[[356,"BabySheep"]]',
@@ -1163,7 +1163,7 @@ const MAP = {
         objects: '[[496,"GoldBar"]]',
     }
     ,
-    55 : {
+    55: {
         name: "Attic",
         sg: 0,
         maxSpawned: 6,
@@ -1174,9 +1174,27 @@ const MAP = {
         floor: "DarkFloor5",
         ceil: "StrangeWall1",
         start: '[485,1]',
-        lights: '[[324,7,"WallLamp19","standard"],[236,7,"Candelabra06","standard"],[97,7,"Candelabra06","standard"],[484,1,"Candelabra08","dim"]]',
+        lights: '[[324,7,"WallLamp19","standard"],[236,7,"Candelabra06","standard"],[97,7,"Candelabra06","standard"],[484,1,"Candelabra08","dim"],[381,7,"Candelabra16","dim"],[424,3,"Candelabra02","dim"],[470,3,"Candelabra02","dim"]]',
         gates: '[[508,1,"55.1","34.11","Down"]]',
+        gold: '[[85,"GreenGem"]]',
+        containers: '[[435,"Crate","INTERACTION_ITEM.Anvil",7]]',
         doors: '[393,441,375,430]',
         triggers: '[[3,7,"SmoothWallButton",1,148],[379,7,"SmoothWallButton",1,447],[242,3,"SmoothWallButton",1,263],[357,3,"SmoothWallButton",1,355]]',
+        entities: '[[519,1,"MoonElf"]]',
+        objects: '[[133,"GreenGem"],[231,"Pear"],[192,"Banana"]]',
+    }
+    ,
+    56 : {
+        name: "Cellar",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"17","height":"17","map":"BB14AA155BABB47AA12BB17ABB30$BB10A"}',
+        wall: "DarkBricks101",
+        floor: "GreyRocks42",
+        ceil: "PebbleWall2",
+        start: '[25,7]',
+        gates: '[[8,7,"56.1","34.12","Up"]]',
         }
 };
