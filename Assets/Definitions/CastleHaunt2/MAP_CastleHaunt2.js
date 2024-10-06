@@ -43,9 +43,9 @@ const MAP_TEXT = {
     31: "I sense the battle comming up.",
     32: "",
     33: "",
-    34: "",
+    34: "It seems this will be my base camp for a while.",
     35: "",
-    36: "",
+    36: "Which way first?",
     37: "",
     38: "",
     39: "",
@@ -786,7 +786,7 @@ const MAP = {
         containers: '[[22,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[26,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[93,"Crate","GOLD_ITEM_TYPE.GoldCube",1]]',
     }
     ,
-    34: {
+    34 : {
         name: "The Great Hall",
         sg: 0,
         maxSpawned: 6,
@@ -797,14 +797,17 @@ const MAP = {
         floor: "MossyFloor212",
         ceil: "GoldWithVines2",
         start: '[34,7]',
+        decals: '[[32,7,"AticAtac200","picture"],[36,7,"HeadOverHeels3","picture"],[40,7,"Hero72","picture"],[28,7,"EyeOfTheBeholder112","picture"],[98,7,"Popeye2","picture"],[108,7,"RickDangerous51","picture"],[202,7,"AI_pic224","picture"],[222,7,"Barbarian110","picture"],[214,7,"TombRaider96","picture"],[188,7,"Pitfall91","picture"],[258,7,"ForgottenForest1","picture"],[270,7,"Skyrim3","picture"],[354,7,"GhostFace1","picture"],[358,7,"Sentinel50","picture"],[420,7,"Imhotep2","picture"],[430,7,"CastleLady107","picture"],[98,1,"AI_PIC_317","picture"],[108,1,"LeisureSuitLarry300","picture"],[170,1,"ActecChallenge2","picture"],[174,1,"SeaWolf60","picture"],[258,1,"CastleLady117","picture"],[270,1,"PrincessAI_06","picture"],[326,1,"CastleLady60","picture"],[306,1,"AI_PIC_305","picture"],[314,1,"WhoDaresWins88","picture"],[340,1,"AI_pic214","picture"],[420,1,"CastleLady60","picture"],[430,1,"CastleLady68","picture"],[488,1,"Oblivion140","picture"],[492,1,"Maze","picture"],[496,1,"PrincessAI_07","picture"],[500,1,"PrincessAI_04","picture"],[513,1,"ForbiddenForest502","picture"],[521,1,"Movie","picture"],[116,5,"SatanRam5","crest"],[208,5,"Scramble23","picture"],[300,5,"MassEffect2","picture"],[161,5,"AticAtac117","picture"],[345,5,"CastleLady23","picture"],[392,5,"Wolfenstein50","picture"],[100,5,"MonkeyIsland110","picture"],[142,5,"AlleyKat","picture"],[126,5,"BrianBloodaxe20","picture"],[395,5,"GirlSwims13","picture"],[170,5,"GatewayToApshai11","picture"],[354,5,"Dominatrix102","picture"],[386,5,"PrincessAI_11","picture"],[156,5,"AI_pic219","picture"],[422,5,"SatanRam5","crest"],[367,3,"CrawlingSkelly2","crest"],[183,3,"BookShelf06","crest"],[106,3,"LastNinja130","picture"],[136,3,"Ishar11","picture"],[228,3,"Nature05","picture"],[320,3,"Zeppelin4","picture"],[412,3,"Dominatrix100","picture"],[174,3,"RadarRatRace20","picture"],[156,3,"AztecChallenge100","picture"],[358,3,"AI_Pic_142","picture"],[126,3,"TombRaider112","picture"],[402,3,"EyeOfTheBeholder110","picture"],[428,3,"GirlSwims22","picture"],[409,3,"AI_PIC_448","picture"],[402,5,"Underwurlde130","picture"],[214,3,"TheHobbit70","picture"],[306,3,"AMC3","picture"],[222,5,"TheHobbit16","picture"],[314,5,"SirFred4","picture"]]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
         gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"],[19,7,"34.11","55.1","Up"],[509,1,"34.12","56.1","Down"]]',
-        containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7]]',
-        objects: '[[216,"GreenApple"]]',
+        gold: '[[260,"GoldCube"],[404,"GoldCube"],[295,"GoldCube"],[152,"GoldCube"],[117,"GoldCube"],[470,"SilverBar"],[457,"SilverBar"],[310,"SilverBar"],[85,"SilverBar"],[79,"GoldBar"],[325,"GoldBar"],[269,"GoldBar"]]',
+        containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7],[162,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",5],[223,"Closet","GOLD_ITEM_TYPE.SilverBar",5],[442,"BookShelf","GOLD_ITEM_TYPE.SilverBar",7]]',
+        objects: '[[216,"GreenApple"],[144,"Orb"],[154,"Orb"],[374,"Orb"],[384,"Orb"]]',
+        oracles: '[[7,7,"ApparitiaDoom"],[15,7,"Maid"]]',
         movables: '[[356,"BabySheep"]]',
         lairs: '[[241,1,"Lair34"],[287,7,"Lair32"],[263,3,"Lair25"],[265,5,"Lair04"]]',
         monsterList: '["MissGalaxyGold","Goblin"]',
-    }
+        }
     ,
     35: {
         name: "Demolition Group",
@@ -824,24 +827,29 @@ const MAP = {
         oracles: '[[282,1,"JapananeseMistress"]]',
     }
     ,
-    36: {
+    36 : {
         name: "Staircase West",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 6000,
         data: '{"width":"15","height":"15","map":"BB9AA16BAA8BB2AA38BABAA3BAA30BB4AA10BABB10ABB2AA2BB21AA4BABB7AA2BB4AA2BAA5BB7ABABB24A$"}',
         wall: "RedishVinesWall1",
         floor: "MarbleFloor1",
         ceil: "MC_Wall6",
         start: '[118,3]',
+        decals: '[[83,5,"SpaceQuest103","picture"],[143,5,"AI_PIC_436","picture"],[4,7,"Jumpman70","picture"],[10,7,"Galaxians10","picture"],[110,7,"LeisureSuitLarry75","picture"],[83,7,"KokotoniWilf70","picture"],[143,7,"DonkeyKong99","picture"],[214,1,"EyeOfTheBeholder70","picture"],[110,1,"GhostFace4","picture"],[83,1,"CastleBabes13","picture"],[143,1,"DM106","picture"],[197,1,"Hero82","picture"],[207,1,"AI_Pic_141","picture"],[17,7,"Leggy2","picture"],[27,7,"Underwurlde130","picture"],[110,3,"Pitfall23","picture"],[73,3,"AI_Pic_134","picture"],[163,3,"CastleLady113","picture"],[106,5,"Pitfall2-100","picture"],[46,5,"AI_PIC_312","picture"],[166,5,"CastleLady46","picture"],[115,4,"FloorGrille109","crest"],[112,4,"FloorGrille107","crest"],[103,3,"ShieldDecal03","crest"],[133,3,"ShieldDecal03","crest"]]',
         lights: '[[110,5,"WallLamp12","standardDimmed"],[83,3,"Candelabra17","standardDimmed"],[143,3,"Lamp46","standardDimmed"],[220,1,"Fireplace05","fire"]]',
         gates: '[[119,3,"36.1","34.3","Closed"],[75,5,"36.2","37.1","Down"],[135,5,"36.3","42.1","Up"]]',
-        containers: '[[19,"Barrel","INTERACTION_ITEM.FishBone",7]]',
+        gold: '[[63,"GoldCube"],[153,"GoldCube"],[176,"GoldCube"],[55,"GoldCube"],[65,"Coins"],[113,"Coins"],[156,"Coins"],[146,"Coins"],[52,"Coins"]]',
+        containers: '[[19,"Barrel","INTERACTION_ITEM.FishBone",7],[199,"IronChest","INTERACTION_ITEM.Moon",1],[25,"Chest","GOLD_ITEM_TYPE.GoldBar",7],[205,"PirateChest","GOLD_ITEM_TYPE.SilverBar",1],[111,"Barrel","GOLD_ITEM_TYPE.SilverBar",5]]',
+        objects: '[[82,"GoldCoin"]]',
         oracles: '[[7,7,"Bomber"]]',
-    }
+        lairs: '[[217,1,"Lair11"]]',
+        monsterList: '["Goblin"]',
+        }
     ,
-    37: {
+    37 : {
         name: "Oh - Another Temple",
         sg: 0,
         maxSpawned: -1,
@@ -854,8 +862,9 @@ const MAP = {
         start: '[117,3]',
         lights: '[[151,3,"WallLamp19","standard"],[143,3,"Candelabra05","standard"],[127,1,"Lamp48","standard"],[161,7,"Lights110","standard"]]',
         gates: '[[118,3,"37.1","36.2","Up"],[186,3,"37.2","38.1","Down"]]',
+        containers: '[[160,"Crate","INTERACTION_ITEM.EmptyBottle",7]]',
         shrines: '[[136,5,"PrincessHealthMountain"],[8,7,"PrincessHammer"],[280,1,"PrincessBomb"]]',
-    }
+        }
     ,
     38: {
         name: "Undersea",
@@ -1003,7 +1012,7 @@ const MAP = {
         trainers: '[[105,5,"Alpinist"]]',
     }
     ,
-    46: {
+    46 : {
         name: "KeyMistress",
         sg: 0,
         maxSpawned: 6,
@@ -1016,11 +1025,12 @@ const MAP = {
         start: '[187,3]',
         lights: '[[170,7,"Lamp40","standardDimmed"]]',
         gates: '[[188,3,"46.1","34.5","Closed"]]',
+        keys: '[[191,1]]',
         containers: '[[26,"TreasureChest","INTERACTION_ITEM.Frog",5],[145,"PlainCloset","INTERACTION_ITEM.Fish",1]]',
         triggers: '[[168,5,"SmoothWallButton",1,199],[126,5,"SmoothWallButton",1,201],[84,5,"SmoothWallButton",1,184]]',
         entities: '[[338,1,"Keysa"]]',
         movables: '[[179,"BabySheep"]]',
-    }
+        }
     ,
     47: {
         name: "Smithy",
@@ -1190,11 +1200,14 @@ const MAP = {
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB14AA155BABB47AA12BB17ABB30$BB10A"}',
+        data: '{"width":"17","height":"17","map":"BB2ABB7AA9BAA43BAA2BAA10BAA22BABABAA10BAA5BAA8BB2ABABABAA6BAA9BB11ABABB39ABB6ABAA2BABAA2BB3AA2BB3AA10BABB5ABABB37A$"}',
         wall: "DarkBricks101",
         floor: "GreyRocks42",
         ceil: "PebbleWall2",
         start: '[25,7]',
+        lights: '[[110,7,"Lamp41","candle"],[71,7,"Lamp52","dimRed"],[81,7,"Lamp52","dimRed"],[141,7,"Candelabra09","standardDimmed"],[147,7,"Candelabra09","standardDimmed"],[191,7,"Lamp45","dim"],[199,7,"Lamp45","dim"]]',
         gates: '[[8,7,"56.1","34.12","Up"]]',
+        containers: '[[32,"TreasureChest","INTERACTION_ITEM.Moon",7],[256,"BookShelf","INTERACTION_ITEM.Scissors",5]]',
+        entities: '[[280,1,"DyeMaker"]]',
         }
 };

@@ -512,6 +512,22 @@ const ORACLE_TYPE = {
         text: "I am resting, saving my strength for the Curse of the Castle Creep 2. Do you think it will be made?",
         interactionCategory: "oracle",
     },
+    Maid: {
+        name: "Maid",
+        sprite: "Maid",
+        category: 'crest',
+        voice: "Female",
+        text: "Keep the castle clean at all times. By orders of the Princes... Oh, it's you.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaDoom: {
+        name: "ApparitiaDoom",
+        sprite: "ApparitiaDoom",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "You are doomed. You will never solved this.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2006,7 +2022,7 @@ const INTERACTION_OBJECT = {
         texture: "Green_Apple_Basecolor",
         inventorySprite: "GreenApple",
         material: MATERIAL.standard,
-        text: "GreenApple placeholder."
+        text: "Oh, it's an apple. A green one."
     },
 };
 
@@ -2437,6 +2453,7 @@ const INTERACTION_ITEM = {
         name: "Gloves",
         category: "interaction_item",
         inventorySprite: "Gloves",
+        text: "I am not cold yet."
     },
     Dough: {
         name: "Dough",
@@ -2644,9 +2661,8 @@ const INTERACTION_ITEM = {
         name: "Scissors",
         category: "interaction_item",
         inventorySprite: "Scissors",
-        text: "Cut cut cut cut. C. U. T."
+        text: "Cut cut cut cut."
     },
-
     BlueColor: {
         name: "BlueColor",
         category: "interaction_item",

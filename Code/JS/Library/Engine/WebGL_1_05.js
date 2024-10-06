@@ -208,9 +208,10 @@ const WebGL = {
         glMatrix.mat4.perspective(projectionMatrix, this.camera.fov, this.aspect, this.zNear, this.zFar);
         this.projectionMatrix = projectionMatrix;
     },
-    createTexture(T, S = null) {
+    createTexture(T, S = null, flip = false) {
         if (T instanceof WebGLTexture) return T;
         const gl = this.CTX;
+        if (flip) gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
         const texture = gl.createTexture();
         gl.bindTexture(gl.TEXTURE_2D, texture);
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, T);
@@ -228,6 +229,7 @@ const WebGL = {
             }
         }
 
+        if (flip) gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
         return texture;
 
         function isPowerOf2(value) {
@@ -1690,7 +1692,7 @@ class ExternalGate extends Portal {
         this.color = "Open";
 
         if (this.texture instanceof WebGLTexture) {
-            this.texture = WebGL.createTexture(SPRITE.DungeonDoor_Open);
+            this.texture = WebGL.createTexture(SPRITE.DungeonDoor_Open, null, true);
         } else {
             this.texture = SPRITE.DungeonDoor_Open;
         }
