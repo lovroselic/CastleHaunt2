@@ -528,6 +528,14 @@ const ORACLE_TYPE = {
         text: "You are doomed. You will never solved this.",
         interactionCategory: "oracle",
     },
+    ApparitiaWet: {
+        name: "ApparitiaWet",
+        sprite: "ApparitiaWet",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Drown bitch! Hauntessa Spookish demands it.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1051,6 +1059,30 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.standard,
     },
+    GhostMinion: {
+        name: "GhostMinion",
+        model: "GhostFace",
+        scale: 1.82 / 2 ** 2,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 10,
+        health: 30,
+        attack: 25,
+        magic: 4,
+        defense: 0,
+        shootDistance: 12,
+        stalkDistance: 5,
+        directMagicDamage: true,
+        caster: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [15, ["wanderer"], 12, ["shoot"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.standard,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
 
     /** */
 
@@ -1137,32 +1169,7 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.standard,
     },
-    GhostMinion: {
-        name: "GhostMinion",
-        model: "GhostFace",
-        scale: 1.82 / 2 ** 2,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 20,
-        defense: 10,
-        magic: 15,
-        health: 30,
-        xp: 50,
-        gold: 50,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt",
-        behaviourArguments: [15, ["wanderer"], 12, ["shoot"]],
-        moveSpeed: 1.0,
-        mana: 3,
-        caster: true,
-        shootDistance: 12,
-        stalkDistance: 5,
-        material: MATERIAL.standard,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
-    },
+
 
     Astro: {
         name: "Astro",
@@ -3284,7 +3291,7 @@ const INTERACTION_ENTITY = {
             conclusion: "Ah, the perfect vessel! Here's your red dye, all bottled up and ready to use."
         }
     },
-    
+
 };
 
 const INTERACTION_SHRINE = {
@@ -3444,6 +3451,20 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you've gained the power of fire. Now go burn bright - or burn them down!"
         }
     },
+    Reaper: {
+        name: "TheReaper",
+        sprite: "TheReaper",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "For a mere gold coin, I'll teach you the ancient blood art of beheading. Trust me, it's worth every drop.",
+            progress: null,
+            conclusion: "With that coin, you now hold the power of the reaper. Your attacks will strike with deadly precision."
+        }
+    },
+    
 };
 
 const INTERACTOR = {

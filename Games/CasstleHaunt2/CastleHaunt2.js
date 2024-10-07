@@ -127,13 +127,14 @@ const DEBUG = {
             * 
 
         * temple usage:
+            * heart
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 37;    //34->36->37
-        GAME.gold = 3426;
-        GAME.lives = 2;
+        GAME.level = 57;    //34->36->37->38 --> 58 --> 38
+        GAME.gold = 684;
+        GAME.lives = 3;
 
         HERO.hasCapacity = true;
         HERO.capacity = 2;
@@ -141,15 +142,15 @@ const DEBUG = {
 
         HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 12;
-        HERO.attack = 12;
+        HERO.magic = 13;
+        HERO.attack = 13;
 
-        HERO.maxHealth = 96;
-        HERO.health = 82;
+        HERO.maxHealth = 104;
+        HERO.health = 104;
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -162,7 +163,8 @@ const DEBUG = {
 
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
-            "GoldCoin", "FishBone", "Moon" 
+            "GoldCoin", "FishBone", "Moon",
+            "EmptyBottle" 
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -195,11 +197,10 @@ const INI = {
         BeerHealth: 120,
     },
     HEALTH_INC: 8,
-
 };
 
 const PRG = {
-    VERSION: "0.10.18",
+    VERSION: "0.10.19",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1715,7 +1716,7 @@ const TITLE = {
             CTX.putImageData(imageData, cX - SPRITE.Avatar.width / 2, cY - SPRITE.Avatar.height / 2);
         }
 
-        const fs = 48;
+        const fs = 46;
         CTX.font = `300 ${fs}px CPU`
         CTX.fillStyle = "#DDD";
         CTX.textAlign = "center";
@@ -1727,7 +1728,6 @@ const TITLE = {
     },
     lives() {
         ENGINE.clearLayer("lives");
-        //const CTX = LAYER.lives;
         const cX = INI.SCREEN_BORDER / 2;
         const y = ENGINE.titleHEIGHT / 2;
         const spread = ENGINE.spreadAroundCenter(GAME.lives, cX, 32);

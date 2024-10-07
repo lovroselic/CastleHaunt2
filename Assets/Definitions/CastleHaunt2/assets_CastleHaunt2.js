@@ -784,7 +784,7 @@ LoadObjects = [
 ];
 
 LoadModels = [
-    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf"
+    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf"
 ];
 
 LoadSprites = [
@@ -806,6 +806,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaKey.jpg", name: "ApparitiaKey" },
     { srcName: "EntityPictures/ApparitiaBlock.jpg", name: "ApparitiaBlock" },
     { srcName: "EntityPictures/ApparitiaDoom.jpg", name: "ApparitiaDoom" },
+    { srcName: "EntityPictures/ApparitiaWet.jpg", name: "ApparitiaWet" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -894,6 +895,7 @@ LoadSprites = [
     { srcName: "EntityPictures/MoonElf1.jpg", name: "MoonElf" },
     { srcName: "EntityPictures/DyeMaker.jpg", name: "DyeMaker" },
     { srcName: "EntityPictures/Maid.jpg", name: "Maid" },
+    { srcName: "EntityPictures/Reaper2.jpg", name: "TheReaper" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
