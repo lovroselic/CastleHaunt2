@@ -113,10 +113,11 @@ const DEBUG = {
             ---- 36 floor
 
         *
-        * COINS used (3x):
+        * COINS used (4x):
             * Alpinist
             * Barbarian (2x)
             * Horny (2x) EXCLUSIVE
+            * Reaper
      
         
 
@@ -132,8 +133,8 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 57;    //34->36->37->38 --> 58 --> 38
-        GAME.gold = 684;
+        GAME.level = 58;    //34->36->37->38 --> 57 --> 38 --> 58
+        GAME.gold = 1177;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -143,10 +144,10 @@ const DEBUG = {
         HERO.orbs = 2;
         HERO.orbsLost = 0;
         HERO.magic = 13;
-        HERO.attack = 13;
+        HERO.attack = 14;
 
         HERO.maxHealth = 104;
-        HERO.health = 104;
+        HERO.health = 86;
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
@@ -163,8 +164,8 @@ const DEBUG = {
 
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
-            "GoldCoin", "FishBone", "Moon",
-            "EmptyBottle" 
+            "FishBone", "Moon",
+            "EmptyBottle"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -200,7 +201,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.19",
+    VERSION: "0.10.20",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

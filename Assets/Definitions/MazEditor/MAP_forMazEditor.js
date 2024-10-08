@@ -96,7 +96,9 @@ const DECAL_PAINTINGS = [
     "CastleBabes14", "CastleBabes15", "CastleBabes16", "CastleBabes17", "CastleBabes18", "CastleBabes19", "CastleBabes20", "CastleBabes21", "CastleBabes22", "CastleBabes23", "CastleBabes24", "CastleBabes25", "CastleBabes26", "CastleBabes27",
     "CastleBabes28", "CastleBabes29", "CastleBabes30", "CastleBabes31", "CastleBabes32", "CastleBabes33", "CastleBabes34", "CastleBabes35", "CastleBabes36", "CastleBabes37", "CastleBabes38", "CastleBabes39", "CastleBabes40", "CastleBabes41",
     "CastleBabes42", "CastleBabes43", "CastleBabes44", "CastleBabes45", "CastleBabes46", "CastleBabes47", "CastleBabes48", "CastleBabes49", "CastleBabes50", "CastleBabes51", "CastleBabes52", "DommeInGrass1", "ForbiddenForest501",
-    "ForbiddenForest502", "Leggy1", "Leggy2", "PrincessOnThrone", "RedBum1", "Scramble501", "SpyVsSpy501", "SummerGames501", "WizardOfWor500"
+    "ForbiddenForest502", "Leggy1", "Leggy2", "PrincessOnThrone", "RedBum1", "Scramble501", "SpyVsSpy501", "SummerGames501", "WizardOfWor500",
+    "Babes401", "Babes402", "Babes403", "Babes404", "Babes405", "Babes406", "Babes407", "Domme401", "Princess201", "Princess401", "Princess402", "Princess403", "Princess404", "Princess405", "Princess406", "Princess407", "Princess408", "Princess409",
+    "Princess410", "Princess411", "Princess412", "Princess413", "Princess414", "Princess415", "Princess416", "Princess417", "Princess418"
 ].sort();
 
 /** Crests */
