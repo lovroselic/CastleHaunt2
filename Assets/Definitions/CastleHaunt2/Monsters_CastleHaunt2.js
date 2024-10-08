@@ -536,6 +536,14 @@ const ORACLE_TYPE = {
         text: "Drown bitch! Hauntessa Spookish demands it.",
         interactionCategory: "oracle",
     },
+    SquirrelAfraid: {
+        name: "SquirrelAfraid",
+        sprite: "SquirrelAfraid",
+        category: 'crest',
+        voice: "Female",
+        text: "The forrest is dark and full of terrors.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -3291,7 +3299,19 @@ const INTERACTION_ENTITY = {
             conclusion: "Ah, the perfect vessel! Here's your red dye, all bottled up and ready to use."
         }
     },
-
+    SquirrelHungry: {
+        name: "SquirrelHungry",
+        sprite: "SquirrelHungry",
+        category: "crest",
+        voice: "Female2",
+        wants: ["Acorn", "Acorn", "Acorn"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I'm starving! If you bring me three acorns, I'll reward you with a shiny gold coin. Fair trade for a full belly, right?",
+            progress: "I'm getting closer to a feast, but I still need more acorns to fill me up!",
+            conclusion: "Ahh, delicious! Now that I'm full, here's your gold coin, just like I promised."
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {
@@ -3464,7 +3484,7 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you now hold the power of the reaper. Your attacks will strike with deadly precision."
         }
     },
-    
+
 };
 
 const INTERACTOR = {

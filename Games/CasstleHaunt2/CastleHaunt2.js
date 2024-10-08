@@ -108,9 +108,10 @@ const DEBUG = {
         ---- * "Moon", 36 DONE
         ---- * "EmptyBottle" 37 DONE
   
-         * coins sources (3x, missing 2x):
+         * coins sources (4x, missing 1x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
+            ---- "GoldCoin" vy Squirell by giving Acorn 3x
 
         *
         * COINS used (4x):
@@ -133,8 +134,8 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 58;    //34->36->37->38 --> 57 --> 38 --> 58
-        GAME.gold = 1177;
+        GAME.level = 38;    //34->36->37->38 --> 57 --> 38 --> 58 -->
+        GAME.gold = 1981;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -147,11 +148,11 @@ const DEBUG = {
         HERO.attack = 14;
 
         HERO.maxHealth = 104;
-        HERO.health = 86;
+        HERO.health = 104;
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -165,7 +166,7 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle"
+            "EmptyBottle", "GoldCoin"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -201,7 +202,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.20",
+    VERSION: "0.10.21",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
