@@ -544,6 +544,30 @@ const ORACLE_TYPE = {
         text: "The forrest is dark and full of terrors.",
         interactionCategory: "oracle",
     },
+    Dirndl: {
+        name: "Dirndl",
+        sprite: "Dirndl",
+        category: 'crest',
+        voice: "Female2",
+        text: "Gesundheit. Na zdravje. Cheers. Prost. Slantje.",
+        interactionCategory: "oracle",
+    },
+    Brownie: {
+        name: "Brownie",
+        sprite: "Brownie",
+        category: 'crest',
+        voice: "Female",
+        text: "Did you notice how with the more power, your fire orbs are harder to catch? And find? Be careful.",
+        interactionCategory: "oracle",
+    },
+    Kim: {
+        name: "Kim",
+        sprite: "Kim",
+        category: 'crest',
+        voice: "Female",
+        text: "You see? Without exploration you can go thirsty.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -3312,6 +3336,48 @@ const INTERACTION_ENTITY = {
             conclusion: "Ahh, delicious! Now that I'm full, here's your gold coin, just like I promised."
         }
     },
+    Surfer: {
+        name: "Surfer",
+        sprite: "Surfer",
+        category: "crest",
+        voice: "Female2",
+        wants: ["SunScreen", "Towel"],
+        gives: "Shell",
+        text: {
+            intro: "Just finished catching some waves, but now I need to dry off and protect my skin. Bring me a towel and some sunscreen, and I'll give you this beautiful shell I found.",
+            progress: "I've got one thing, but I still need more before I can chill properly!",
+            conclusion: "All set! Thanks for the help. Here's the shell I promised, straight from the ocean's shore."
+        }
+    },
+    Venus: {
+        name: "Venus",
+        sprite: "Venus",
+        category: "crest",
+        voice: "Female",
+        wants: ["SunScreen", "Towel"],
+        gives: "Shell",
+        text: {
+            intro: "Emerging from the sea is lovely, but I could use some sunscreen and a towel to complete the look. Help me out, and I'll give you this stunning shell I found.",
+            progress: "One thing's done, but I still need more before I'm ready to bask in the sun!",
+            conclusion: "Perfect! Now I'm feeling fabulous. Here's the shell I promised, a gift from the ocean's depths."
+        }
+    },
+    Tourist: {
+        name: "Tourist",
+        sprite: "Tourist",
+        category: "crest",
+        voice: "Female",
+        wants: ["Shell", "Shell"],
+        gives: "GoldKey",
+        text: {
+            intro: "I need two perfect shells to complete my - um, beach outfit. Help me out, and I'll give you this Gold Key. No space for it in this tight bikini, anyway!",
+            progress: "One shell down, but I still need another to finish the look!",
+            conclusion: "Thanks! Now my bra is  complete. Here's the Gold Key—trust me, I wasn't hiding it anywhere in this bikini."
+        }
+    },
+    
+    
+    
 };
 
 const INTERACTION_SHRINE = {

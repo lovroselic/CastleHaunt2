@@ -888,6 +888,7 @@ LoadSprites = [
     { srcName: "EntityPictures/RestingBabe1.jpg", name: "RestingBabe1" },
     { srcName: "EntityPictures/RestingBabe2.jpg", name: "RestingBabe2" },
     { srcName: "EntityPictures/Kneel.jpg", name: "Kneel" },
+    { srcName: "EntityPictures/Brownie.jpg", name: "Brownie" },
     { srcName: "EntityPictures/Barbarian.jpg", name: "Barbarian" },
     { srcName: "EntityPictures/NymphWarrior.jpg", name: "NymphWarrior" },
     { srcName: "EntityPictures/Horny.jpg", name: "Horny" },
@@ -907,9 +908,14 @@ LoadSprites = [
     { srcName: "EntityPictures/DyeMaker.jpg", name: "DyeMaker" },
     { srcName: "EntityPictures/Maid.jpg", name: "Maid" },
     { srcName: "EntityPictures/Reaper2.jpg", name: "TheReaper" },
-
     { srcName: "EntityPictures/Squirrel4.jpg", name: "SquirrelAfraid" },
     { srcName: "EntityPictures/Squirrel5.jpg", name: "SquirrelHungry" },
+    { srcName: "EntityPictures/Surfer.jpg", name: "Surfer" },
+    { srcName: "EntityPictures/Venus.jpg", name: "Venus" },
+    { srcName: "EntityPictures/Tourist1.jpg", name: "Tourist" },
+    { srcName: "EntityPictures/Dirndl.jpg", name: "Dirndl" },
+    { srcName: "EntityPictures/Kim.jpg", name: "Kim" },
+
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

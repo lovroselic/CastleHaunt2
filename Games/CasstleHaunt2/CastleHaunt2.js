@@ -70,6 +70,8 @@ const DEBUG = {
         ---- * "Amethyst", Fishelly by giving "Fish", "Fish", "Fish"; DONE
         ---- * "Moonstone", MoonElf by giving: "Moon", "Moon"; DONE
         ---- * "RedColor" :: DyeMaker by giving "EmptyBottle"; DONE
+        ---- * Shell: Surfer by giving SunScreen, Towel
+        ---- * Shell: Venus by giving SunScreen, Towel
          * 
         ----* HayBale", 43 DONE
         ---- * "HayBale" 45 DONE
@@ -107,6 +109,15 @@ const DEBUG = {
         ---- * "Scissors" 56 DONE
         ---- * "Moon", 36 DONE
         ---- * "EmptyBottle" 37 DONE
+
+
+        : $$$$ by giving "Shell", "Shell"
+        
+
+        SunScreen, 
+        Towel
+        SunScreen, 
+        Towel
   
          * coins sources (4x, missing 1x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
@@ -134,8 +145,8 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 38;    //34->36->37->38 --> 57 --> 38 --> 58 -->
-        GAME.gold = 1981;
+        GAME.level = 39;    //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39
+        GAME.gold = 2703;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -148,13 +159,15 @@ const DEBUG = {
         HERO.attack = 14;
 
         HERO.maxHealth = 104;
-        HERO.health = 104;
+        HERO.health = 39;
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -166,7 +179,9 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle", "GoldCoin"
+            "EmptyBottle", "GoldCoin", "Shell",
+
+            "Shell", "Shell"//debug
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -202,7 +217,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.21",
+    VERSION: "0.10.22",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
