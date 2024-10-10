@@ -72,6 +72,7 @@ const DEBUG = {
         ---- * "RedColor" :: DyeMaker by giving "EmptyBottle"; DONE
         ---- * Shell: Surfer by giving SunScreen, Towel
         ---- * Shell: Venus by giving SunScreen, Towel
+        ---- * GoldKEy: Tourist by giving "Shell", "Shell"
          * 
         ----* HayBale", 43 DONE
         ---- * "HayBale" 45 DONE
@@ -109,16 +110,11 @@ const DEBUG = {
         ---- * "Scissors" 56 DONE
         ---- * "Moon", 36 DONE
         ---- * "EmptyBottle" 37 DONE
+        ---- * SunScreen, 38 DONE;
+        ---- * Towel 38 DONE;
+        ---- * SunScreen, 39 DONE
+        ---- * Towel 39 DONE
 
-
-        : $$$$ by giving "Shell", "Shell"
-        
-
-        SunScreen, 
-        Towel
-        SunScreen, 
-        Towel
-  
          * coins sources (4x, missing 1x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
@@ -132,7 +128,8 @@ const DEBUG = {
             * Reaper
      
         
-
+        * key not yet used:
+            GOldKEy
          * missing placed keys: 
             * 
             * 
@@ -145,8 +142,8 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 39;    //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39
-        GAME.gold = 2703;
+        GAME.level = 60;    //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39
+        GAME.gold = 3223;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -155,17 +152,17 @@ const DEBUG = {
 
         HERO.orbs = 2;
         HERO.orbsLost = 0;
-        HERO.magic = 13;
+        HERO.magic = 14;
         HERO.attack = 14;
 
         HERO.maxHealth = 104;
-        HERO.health = 39;
+        HERO.health = 104;
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
         ];
@@ -179,9 +176,9 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle", "GoldCoin", "Shell",
+            "EmptyBottle",  "Shell",
 
-            "Shell", "Shell"//debug
+           //debug
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -217,7 +214,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.22",
+    VERSION: "0.10.23",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -3375,9 +3375,9 @@ const INTERACTION_ENTITY = {
             conclusion: "Thanks! Now my bra is  complete. Here's the Gold Key—trust me, I wasn't hiding it anywhere in this bikini."
         }
     },
-    
-    
-    
+
+
+
 };
 
 const INTERACTION_SHRINE = {
@@ -3550,6 +3550,20 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you now hold the power of the reaper. Your attacks will strike with deadly precision."
         }
     },
+    BustyDemoness: {
+        name: "BustyDemoness",
+        sprite: "BustyDemoness",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "Feeling magical today! For just a gold coin, I'll share some of my powerful secrets with you.",
+            progress: null,
+            conclusion: "That coin was well spent, darling. Now you're a little more magical, thanks to me!"
+        }
+    },
+
 
 };
 

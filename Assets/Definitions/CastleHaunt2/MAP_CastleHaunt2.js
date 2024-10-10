@@ -55,6 +55,20 @@ const MAP_TEXT = {
     43: "",
     44: "",
     45: "So cold and windy.",
+    46: "",
+    47: "",
+    48: "",
+    49: "",
+    50: "",
+    51: "",
+    52: "",
+    53: "",
+    54: "",
+    55: "",
+    56: "",
+    57: "",
+    58: "",
+    59: "A secret garden full of beer. How cool."
 };
 
 /** Map definitions */
@@ -900,13 +914,14 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB7AA30BB2AA15BB4AA20BB4AA4BABB3AA4BB4AA37BB2AA2BAA10BABB9AA5BB4ABB3ABAA2BB33ABB2ABB3AA4BB2ABB2AA10BB23AA2BB21ABB4$"}',
+        data: '{"width":"17","height":"17","map":"BB4ABAA4BAA9BAA11BAA4BAA11BB4AA15BABAA2BB2AA2BB4AA8BB2AA7BB2AA10BAA3BAA11BB2AA10BAA2BAA4BB2AA5BAA3BAA2BAA2BB9AA5BB8AA5BB17ABB10ABB6ABABAA2BB2AA6BB2AA2BB2AA4BB3AA5BB5AA2BB24A$"}',
         wall: "MossyWall112",
         floor: "Water30",
         ceil: "Sand4",
         start: '[137,5]',
         lights: '[[144,1,"Candelabra14","weakCandle"],[144,7,"Lamp49","weakCandle"],[144,3,"Lamp43","weakCandle"],[144,5,"WallLamp32","weakCandle"]]',
-        gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"],[276,1,"39.3","59.1","Down"]]',
+        gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"],[276,1,"39.3","59.1","Down"],[287,1,"39.4","60.1","Down"]]',
+        containers: '[[257,"TreasureChest","INTERACTION_ITEM.SunScreen",3],[30,"Wardrobe","INTERACTION_ITEM.Towel",5]]',
         triggers: '[[96,5,"SmoothWallButton",1,259]]',
         entities: '[[8,7,"Swampy"],[280,1,"Fishelle"],[284,1,"Tourist"]]',
         objects: '[[108,"Cake"],[180,"Cake"],[112,"Cake"],[176,"Cake"]]',
@@ -1270,7 +1285,7 @@ const MAP = {
         monsterList: '["GhostMinion"]',
     }
     ,
-    59 : {
+    59: {
         name: "Secret Beer Garden",
         sg: 0,
         maxSpawned: -1,
@@ -1287,5 +1302,26 @@ const MAP = {
         containers: '[[24,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[30,"Chest","GOLD_ITEM_TYPE.GoldBar",7],[90,"IronChest","GOLD_ITEM_TYPE.GoldBar",1],[96,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
         objects: '[[93,"BeerHealth"],[92,"BeerHealth"],[94,"BeerHealth"]]',
         oracles: '[[115,1,"Dirndl"],[65,3,"Brownie"],[55,5,"Kim"]]',
+    }
+    ,
+    60 : {
+        name: "Busty Demoness",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB2ABAA3BAA5BB4AA24BB11AA5BB11ABB6ABB2AA6BB2AA4BB9ABAA3BAA2BAA3BB2ABAA5BAA3BB4ABB4ABABB7ABB9ABB5ABB8A$"}',
+        wall: "MarbleFloor102",
+        floor: "SmallBricks7",
+        ceil: "DarkMossyWall101",
+        start: '[14,7]',
+        decals: '[[109,1,"BookShelf25","picture"],[111,1,"BookShelf19","picture"],[6,7,"AI_Pic_133","picture"],[9,7,"CastleBabes30","picture"],[48,7,"TombRaider106","picture"],[44,7,"PharaohCurse112","picture"],[109,7,"Princess2","picture"],[112,7,"Vixen50","picture"],[133,7,"LastNinja140","picture"],[138,7,"JupiterLander99","picture"],[161,1,"Nebulus2","picture"],[165,1,"CastleLady21","picture"],[133,1,"CastleBabes44","picture"],[139,1,"Barbarian112","picture"],[110,1,"Princess411","picture"],[31,1,"DM90","picture"],[36,1,"Dominatrix04","picture"],[119,5,"CastleBabes19","picture"],[39,5,"Tutanham11","picture"],[117,5,"DungeonMaster201","picture"],[54,5,"CastleOfTerror91","picture"],[82,5,"CastleBabes04","picture"],[114,5,"Hero50","picture"],[62,5,"AI_Pic_106","picture"],[80,3,"Wolfenstein31","picture"],[106,3,"CrystalCastles90","picture"],[129,3,"Pitstop3","picture"],[51,3,"CastleBabes01","picture"],[56,3,"CrawlMaster2","picture"],[82,3,"SasbreWulf60","picture"],[88,3,"WizardOfWor89","picture"]]',
+        lights: '[[157,1,"Lamp48","standard"],[155,3,"Lamp48","standard"],[11,7,"Lamp48","standard"],[15,5,"Lamp48","standard"],[65,5,"Lamp51","weakCandle"]]',
+        gates: '[[1,7,"60.1","39.4","Up"]]',
+        monsters: '[[145,"Goblin"],[154,"Goblin"],[50,"Goblin"],[19,"Goblin"],[94,"GhostMinion"],[72,"GhostMinion"]]',
+        gold: '[[66,"GoldCube"],[131,"GoldCube"],[148,"GoldCube"],[153,"GoldCube"],[102,"GoldCube"],[37,"GoldCube"],[21,"GoldCube"],[29,"GoldCube"],[107,"GoldCube"],[123,"GoldCube"],[100,"GoldCube"],[85,"SilverBar"]]',
+        containers: '[[97,"BookShelf","GOLD_ITEM_TYPE.GoldBar",1],[57,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[61,"IronChest","GOLD_ITEM_TYPE.GoldBar",7]]',
+        triggers: '[[4,7,"SmoothWallButton",1,67],[45,7,"SmoothWallButton",1,69]]',
+        trainers: '[[33,7,"BustyDemoness"]]',
         }
 };
