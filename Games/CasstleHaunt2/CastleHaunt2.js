@@ -115,17 +115,19 @@ const DEBUG = {
         ---- * SunScreen, 39 DONE
         ---- * Towel 39 DONE
 
-         * coins sources (4x, missing 1x):
+         * coins sources (5x, missing 1x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
             ---- "GoldCoin" vy Squirell by giving Acorn 3x
+            ---- 40 floor
 
         *
-        * COINS used (4x):
+        * COINS used (5x):
             * Alpinist
             * Barbarian (2x)
             * Horny (2x) EXCLUSIVE
             * Reaper
+            * BustyDemoness
      
         
         * key not yet used:
@@ -142,28 +144,31 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 60;    //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39
-        GAME.gold = 3223;
+        GAME.level = 40;    
+        //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
+        GAME.gold = 3918;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
-        HERO.capacity = 2;
+        HERO.capacity = 3;
         HERO.maxCapacity = 5;
 
-        HERO.orbs = 2;
+        HERO.orbs = 3;
         HERO.orbsLost = 0;
         HERO.magic = 14;
         HERO.attack = 14;
 
-        HERO.maxHealth = 104;
-        HERO.health = 104;
+        HERO.maxHealth = 112;
+        HERO.health = 112;
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
@@ -176,7 +181,7 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle",  "Shell",
+            "EmptyBottle",  
 
            //debug
         ];
@@ -185,7 +190,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Gold"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -214,7 +219,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.23",
+    VERSION: "0.10.24",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

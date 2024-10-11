@@ -568,6 +568,14 @@ const ORACLE_TYPE = {
         text: "You see? Without exploration you can go thirsty.",
         interactionCategory: "oracle",
     },
+    RedheadSittingDomme: {
+        name: "RedheadSittingDomme",
+        sprite: "RedheadSittingDomme",
+        category: 'crest',
+        voice: "Female",
+        text: "You should be very grateful for this upgrade. Don't lose the orbs!",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

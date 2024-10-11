@@ -911,20 +911,24 @@ const MAP = {
     39: {
         name: "Underswamp",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 5000,
         data: '{"width":"17","height":"17","map":"BB4ABAA4BAA9BAA11BAA4BAA11BB4AA15BABAA2BB2AA2BB4AA8BB2AA7BB2AA10BAA3BAA11BB2AA10BAA2BAA4BB2AA5BAA3BAA2BAA2BB9AA5BB8AA5BB17ABB10ABB6ABABAA2BB2AA6BB2AA2BB2AA4BB3AA5BB5AA2BB24A$"}',
         wall: "MossyWall112",
         floor: "Water30",
         ceil: "Sand4",
         start: '[137,5]',
+        decals: '[[2,7,"Dominatrix11","picture"],[21,7,"CastleLady70","picture"],[46,7,"CastleLady111","picture"],[14,7,"BC11","picture"],[27,7,"Princess15","picture"],[194,7,"MonkeyIsland142","picture"],[196,7,"AI_pic231","picture"],[236,7,"Daggerfall4","picture"],[205,7,"DM105","picture"],[92,1,"Underwurlde140","picture"],[94,1,"CastleLady61","picture"],[260,1,"Princess6","picture"],[269,1,"LeisureSuitLarry72","picture"],[251,1,"AI_PIC_317","picture"],[265,1,"SatanRam10","crest"],[194,1,"BackToNature1","picture"],[196,1,"RickDangerous60","picture"],[92,7,"TombRaider99","picture"],[94,7,"CastleBabes42","picture"],[124,3,"Sorcery31","picture"],[158,3,"CastleLady108","picture"],[130,3,"EveryoneIsAWally70","picture"],[164,3,"Galaxians10","picture"],[258,3,"LSL100","picture"],[66,3,"AI_Pic_140","picture"],[134,3,"DungeonMaster203","picture"],[168,3,"GirlSwims03","picture"],[124,5,"AI_pic258","picture"],[158,5,"CongoBongo2","picture"],[130,5,"LSL_Eve2","picture"],[164,5,"Princess14","picture"],[120,5,"AI_Pic_145","picture"],[154,5,"CastleBabes10","picture"],[34,5,"HungryHorace12","picture"],[221,5,"PrincessAI_11","picture"],[29,5,"GirlSwims02","picture"],[242,4,"FloorGrille108","crest"],[225,4,"FloorGrille108","crest"]]',
         lights: '[[144,1,"Candelabra14","weakCandle"],[144,7,"Lamp49","weakCandle"],[144,3,"Lamp43","weakCandle"],[144,5,"WallLamp32","weakCandle"]]',
         gates: '[[136,5,"39.1","38.2","Closed"],[152,3,"39.2","40.1","Up"],[276,1,"39.3","59.1","Down"],[287,1,"39.4","60.1","Down"]]',
-        containers: '[[257,"TreasureChest","INTERACTION_ITEM.SunScreen",3],[30,"Wardrobe","INTERACTION_ITEM.Towel",5]]',
+        gold: '[[139,"SilverBar"],[71,"SilverBar"],[60,"SilverBar"],[81,"SilverBar"],[167,"SilverBar"],[250,"SilverBar"],[229,"SilverBar"],[126,"GoldCube"],[160,"GoldCube"],[162,"GoldCube"],[128,"GoldCube"],[253,"GoldCube"],[202,"GoldCube"]]',
+        containers: '[[257,"TreasureChest","INTERACTION_ITEM.SunScreen",3],[30,"Wardrobe","INTERACTION_ITEM.Towel",5],[18,"Barrel","GOLD_ITEM_TYPE.GoldBar",4]]',
         triggers: '[[96,5,"SmoothWallButton",1,259]]',
         entities: '[[8,7,"Swampy"],[280,1,"Fishelle"],[284,1,"Tourist"]]',
         objects: '[[108,"Cake"],[180,"Cake"],[112,"Cake"],[176,"Cake"]]',
+        lairs: '[[203,3,"Lair22"],[101,3,"Lair25"],[85,5,"Lair09"],[187,5,"Lair20"]]',
+        monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","Goblin","GhostMinion"]',
     }
     ,
     40: {
@@ -938,11 +942,11 @@ const MAP = {
         floor: "DarkRock",
         ceil: "SpiderWeb12",
         start: '[222,5]',
-        lights: '[[178,7,"WallLamp33","standardDimmed"],[110,1,"Candelabra15","dim"]]',
-        gates: '[[221,5,"40.1","39.2","Down"],[67,3,"40.2","41.1","Up"]]',
+        lights: '[[178,7,"WallLamp33","standardDimmed"],[110,1,"Candelabra15","dim"],[110,3,"WallLamp31","dim"],[31,7,"Candelabra17","dim"]]',
+        gates: '[[221,5,"40.1","39.2","Down"],[67,3,"40.2","41.1","Up"],[85,5,"40.3","61.1","Gold"]]',
         gold: '[[93,"SilverBar"]]',
         entities: '[[280,1,"Jeweliette"]]',
-        objects: '[[76,"SilverBar"]]',
+        objects: '[[76,"SilverBar"],[144,"GoldCoin"]]',
     }
     ,
     41: {
@@ -1304,7 +1308,7 @@ const MAP = {
         oracles: '[[115,1,"Dirndl"],[65,3,"Brownie"],[55,5,"Kim"]]',
     }
     ,
-    60 : {
+    60: {
         name: "Busty Demoness",
         sg: 0,
         maxSpawned: -1,
@@ -1323,5 +1327,28 @@ const MAP = {
         containers: '[[97,"BookShelf","GOLD_ITEM_TYPE.GoldBar",1],[57,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[61,"IronChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         triggers: '[[4,7,"SmoothWallButton",1,67],[45,7,"SmoothWallButton",1,69]]',
         trainers: '[[33,7,"BustyDemoness"]]',
+    }
+    ,
+    61 : {
+        name: "Bag It Man",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"11","height":"11","map":"BB7AA10BAA4BAA15BABAA9BB2AA10BB7ABB2ABB10ABB4ABB4ABB3AA5BEBB14A$AB"}',
+        wall: "DarkBricks112",
+        floor: "MArbleTiles5",
+        ceil: "SpiderWeb10",
+        start: '[108,3]',
+        decals: '[[5,7,"Bagitman11","picture"],[4,7,"Bagitman90","picture"],[111,1,"CastleLady117","picture"],[113,1,"DM106","picture"],[104,1,"CastleLady68","picture"],[78,5,"Trashman2","picture"],[22,5,"LeisureSuitLarry90","picture"],[105,5,"AI_Pic_136","picture"],[19,3,"CastleBabes37","picture"],[31,3,"SatanRam7","crest"],[53,3,"SatanRam5","crest"],[75,3,"SatanRam10","crest"],[34,5,"SittingSkelly14","crest"],[61,4,"Drain2_96","crest"],[1,7,"JetSetWilly89","picture"],[88,5,"Princess408","picture"]]',
+        lights: '[[64,3,"Candelabra17","standard"],[86,3,"Candelabra01","standardDimmed"],[42,3,"Candelabra01","standardDimmed"]]',
+        gates: '[[109,3,"61.1","40.3","Open"]]',
+        monsters: '[[23,"GhostMinion"]]',
+        gold: '[[36,"GoldCube"],[91,"GoldCube"],[84,"GoldCube"],[28,"GoldCube"]]',
+        skills: '[[103,"Heart"]]',
+        containers: '[[12,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[100,"IronChest","GOLD_ITEM_TYPE.GoldBar",1]]',
+        doors: '[95]',
+        objects: '[[59,"Orb"],[60,"Bag"]]',
+        oracles: '[[55,5,"RedheadSittingDomme"]]',
         }
 };
