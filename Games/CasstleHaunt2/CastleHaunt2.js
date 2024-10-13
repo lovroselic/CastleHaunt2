@@ -115,19 +115,20 @@ const DEBUG = {
         ---- * SunScreen, 39 DONE
         ---- * Towel 39 DONE
 
-         * coins sources (5x, missing 1x):
+         * coins sources (6x, missing 2x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
             ---- "GoldCoin" vy Squirell by giving Acorn 3x
             ---- 40 floor
 
         *
-        * COINS used (5x):
+        * COINS used (6x):
             * Alpinist
             * Barbarian (2x)
             * Horny (2x) EXCLUSIVE
             * Reaper
             * BustyDemoness
+            * RedHeadKnightessa
      
         
         * key not yet used:
@@ -219,7 +220,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.24",
+    VERSION: "0.10.25",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

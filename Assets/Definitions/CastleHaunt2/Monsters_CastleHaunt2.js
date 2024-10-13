@@ -576,6 +576,14 @@ const ORACLE_TYPE = {
         text: "You should be very grateful for this upgrade. Don't lose the orbs!",
         interactionCategory: "oracle",
     },
+    ApparitiaFun: {
+        name: "ApparitiaFun",
+        sprite: "ApparitiaFun",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Are you having fun yet? We certainly do. Hehehehehe.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -3571,6 +3579,20 @@ const INTERACTION_SHRINE = {
             conclusion: "That coin was well spent, darling. Now you're a little more magical, thanks to me!"
         }
     },
+    RedHeadKnightessa: {
+        name: "RedHeadKnightessa",
+        sprite: "RedHeadKnightessa",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "I’m a master of the sword, and for a gold coin, I'll teach you how to wield it with violent precision.",
+            progress: null,
+            conclusion: "That coin's bought you some serious sword skills. Now go forth and let your enemies fear your blade!"
+        }
+    },
+    
 
 
 };
