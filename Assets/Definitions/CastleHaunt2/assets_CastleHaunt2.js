@@ -1000,6 +1000,8 @@ LoadSprites = [
     { srcName: "Shrines/PrincessHealthMountain.jpg", name: "PrincessHealthMountain" },
     { srcName: "Shrines/PrincessHammer.jpg", name: "PrincessHammer" },
     { srcName: "Shrines/PrincessBomb.jpg", name: "PrincessBomb" },
+    { srcName: "Shrines/PrincessMace.jpg", name: "PrincessMace" },
+    { srcName: "Shrines/PrincessPineHeart.jpg", name: "PrincessPineHeart" },
 
     //scrolls
     { srcName: "Scrolls/SCR_Cripple.png", name: "SCR_Cripple" },

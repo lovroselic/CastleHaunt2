@@ -1365,13 +1365,14 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"19","height":"19","map":"BB6AA45BB17AA5BB3AA3BB2AA22BAA25BAA35BABAA10BAA9BAA2BB2ABB2AA3BB10AA16BB4AEBB13AA3BB3ABB14ABB9AA5BAA2BB6EE2AA2BAA2BB32A$EE3ABB3ABB4ABB19"}',
+        data: '{"width":"19","height":"19","map":"BB2ABABB3AA45BB16AA2BAA3BB3AA3BB2AA22BAA25BAA35BABAA10BAA9BAA2BB2ABB2AA3BB10AA16BB4AEBB13AA3BB3ABB7ABB2ABB3ABB8ABAA2BAA2BB6EE2AA2BAA2BB32A$EE3ABB3ABB4ABB19"}',
         wall: "BlackWall45",
         floor: "MC_floor20",
         ceil: "SmallBrick2",
         start: '[324,5]',
         lights: '[[345,1,"Candelabra10","weakCandle"]]',
         gates: '[[323,5,"62.1","41.5","Closed"]]',
+        shrines: '[[3,7,"PrincessMace"],[9,7,"PrincessPineHeart"]]',
         doors: '[288,117,123,129,237,243]',
         }
 };

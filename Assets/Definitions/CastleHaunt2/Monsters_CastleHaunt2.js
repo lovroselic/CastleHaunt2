@@ -148,6 +148,26 @@ const SHRINE_TYPE = {
         price: 3000,
         level: 2,
     },
+    PrincessMace: {
+        name: "PrincessMace",
+        sprite: "PrincessMace",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 3000,
+        level: 2,
+    },
+    PrincessPineHeart: {
+        name: "PrincessPineHeart",
+        sprite: "PrincessPineHeart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 3000,
+        level: 1,
+    },
 };
 
 const ORACLE_TYPE = {
