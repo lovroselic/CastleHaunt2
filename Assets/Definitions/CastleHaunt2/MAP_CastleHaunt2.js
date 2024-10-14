@@ -931,7 +931,7 @@ const MAP = {
         monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","Goblin","GhostMinion"]',
     }
     ,
-    40 : {
+    40: {
         name: "Jeweliette",
         sg: 0,
         maxSpawned: 4,
@@ -942,18 +942,18 @@ const MAP = {
         floor: "DarkRock",
         ceil: "SpiderWeb12",
         start: '[222,5]',
-        decals: '[[152,3,"BookShelf09","crest"],[20,7,"AI_Pic_121","picture"],[30,7,"CastleLady104","picture"],[110,7,"AI_Pic_131","picture"],[277,1,"AmberMoon200","picture"],[258,1,"Wolfenstein70","picture"],[268,1,"CastleLady78","picture"],[178,1,"Dominatrix03","picture"],[110,5,"CastleBabes24","picture"],[178,5,"DM_AI_2","picture"],[52,5,"CastleBabes07","picture"],[171,5,"Skyrim3","picture"],[178,3,"ManicMiner14","picture"],[236,3,"AI_PIC_303","picture"],[134,3,"MontyMole52","picture"],[5,7,"DungeonDoor_Blocked4","crest"]]',
+        decals: '[[152,3,"BookShelf09","crest"],[20,7,"AI_Pic_121","picture"],[30,7,"CastleLady104","picture"],[110,7,"AI_Pic_131","picture"],[277,1,"AmberMoon200","picture"],[258,1,"Wolfenstein70","picture"],[268,1,"CastleLady78","picture"],[178,1,"Dominatrix03","picture"],[110,5,"CastleBabes24","picture"],[178,5,"DM_AI_2","picture"],[52,5,"CastleBabes07","picture"],[171,5,"Skyrim3","picture"],[178,3,"ManicMiner14","picture"],[236,3,"AI_PIC_303","picture"],[134,3,"MontyMole52","picture"],[90,4,"PuddleDecal07","crest"],[209,4,"FloorGrille105","crest"],[216,4,"FloorGrille104","crest"],[97,4,"PuddleDecal07","crest"],[120,5,"Skull10","crest"],[205,5,"SittingSkelly12","crest"],[261,1,"CrawlingSkelly2","crest"]]',
         lights: '[[178,7,"WallLamp33","standardDimmed"],[110,1,"Candelabra15","dim"],[110,3,"WallLamp31","dim"],[31,7,"Candelabra17","dim"]]',
         gates: '[[221,5,"40.1","39.2","Down"],[67,3,"40.2","41.1","Up"],[85,5,"40.3","61.1","Gold"]]',
         gold: '[[93,"SilverBar"],[89,"GoldCube"],[60,"GoldCube"],[147,"GoldCube"],[164,"GoldCube"],[191,"GoldCube"],[230,"GoldCube"],[217,"SilverBar"],[79,"SilverBar"],[224,"SilverBar"],[122,"GoldBar"],[57,"GoldBar"],[215,"GoldBar"]]',
         containers: '[[177,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",3],[47,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[37,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",7],[251,"PlainCloset","GOLD_ITEM_TYPE.SilverBar",1],[133,"BookShelf","GOLD_ITEM_TYPE.SilverBar",3]]',
         entities: '[[280,1,"Jeweliette"]]',
         objects: '[[76,"SilverBar"],[144,"GoldCoin"]]',
-        oracles: '[[8,7,"ApparitiaFun"]]',
+        oracles: '[[8,7,"ApparitiaFun"],[5,7,"StepLibrarian"]]',
         trainers: '[[101,3,"RedHeadKnightessa"]]',
         lairs: '[[11,7,"Lair01"],[186,3,"Lair19"],[283,1,"Lair05"],[136,5,"Lair28"]]',
         monsterList: '["Goblin","GhostMinion","GhostMinion"]',
-        }
+    }
     ,
     41: {
         name: "Staircase East",
@@ -961,13 +961,14 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BB2AA102BAA7BABB33AA2BB4ABB4ABB2AA4BAA3BB11ABB7ABB21$BA"}',
+        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BAA10BAA77BAA15BB2AA7BAA2BB34AA2BB4ABB3ABB2ABAA4BAA3BB11ABB9ABB11ABB4$"}',
         wall: "RedishRockyWall1",
         floor: "MarbleFloor105",
         ceil: "MarbleTiles4",
         start: '[151,5]',
-        lights: '[[9,7,"Fireplace09","fire"]]',
-        gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"]]',
+        lights: '[[9,7,"Fireplace09","fire"],[221,1,"Candelabra15","weakCandle"]]',
+        gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"],[209,3,"41.5","62.1","Closed"]]',
+        gold: '[[20,"GoldBar"]]',
         containers: '[[182,"Wardrobe","INTERACTION_ITEM.LeatherHide",1],[37,"Barrel","INTERACTION_ITEM.Fish",7]]',
         entities: '[[5,7,"Goldie"]]',
     }
@@ -1335,7 +1336,7 @@ const MAP = {
         trainers: '[[33,7,"BustyDemoness"]]',
     }
     ,
-    61 : {
+    61: {
         name: "Bag It Man",
         sg: 0,
         maxSpawned: -1,
@@ -1356,5 +1357,21 @@ const MAP = {
         doors: '[95]',
         objects: '[[59,"Orb"],[60,"Bag"]]',
         oracles: '[[55,5,"RedheadSittingDomme"]]',
+    }
+    ,
+    62 : {
+        name: "Temple of Saint Heels",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"19","height":"19","map":"BB6AA45BB17AA5BB3AA3BB2AA22BAA25BAA35BABAA10BAA9BAA2BB2ABB2AA3BB10AA16BB4AEBB13AA3BB3ABB14ABB9AA5BAA2BB6EE2AA2BAA2BB32A$EE3ABB3ABB4ABB19"}',
+        wall: "BlackWall45",
+        floor: "MC_floor20",
+        ceil: "SmallBrick2",
+        start: '[324,5]',
+        lights: '[[345,1,"Candelabra10","weakCandle"]]',
+        gates: '[[323,5,"62.1","41.5","Closed"]]',
+        doors: '[288,117,123,129,237,243]',
         }
 };

@@ -139,15 +139,17 @@ const DEBUG = {
          * missing sources for: 
             * 
 
-        * temple usage:
+        * temple1 usage:
             * heart
+        * temple2 usage
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 40;    
+        GAME.level = 62;    
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
-        GAME.gold = 3918;
+        //41-->62
+        GAME.gold = 4727;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -157,20 +159,21 @@ const DEBUG = {
         HERO.orbs = 3;
         HERO.orbsLost = 0;
         HERO.magic = 14;
-        HERO.attack = 14;
+        HERO.attack = 15;
 
+        HERO.health = 69;
         HERO.maxHealth = 112;
-        HERO.health = 112;
+        
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -182,7 +185,7 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle",  
+            "EmptyBottle",  "SilverBar",
 
            //debug
         ];
@@ -220,7 +223,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.25",
+    VERSION: "0.10.26",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

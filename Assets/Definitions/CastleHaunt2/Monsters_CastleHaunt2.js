@@ -151,6 +151,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    StepLibrarian: {
+        name: "StepLibrarian",
+        sprite: "StepLibrarian",
+        category: 'crest',
+        voice: "Female",
+        text: "I'm just sitting here looking pretty.",
+        interactionCategory: "oracle",
+    },
     PrincessBed: {
         name: "PrincessBed",
         sprite: "PrincessBed",
