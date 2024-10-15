@@ -168,6 +168,16 @@ const SHRINE_TYPE = {
         price: 3000,
         level: 1,
     },
+    PrincessFlame: {
+        name: "PrincessFlame",
+        sprite: "PrincessFlame",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 3000,
+        level: 2,
+    },
 };
 
 const ORACLE_TYPE = {

@@ -16,7 +16,7 @@ from collections import defaultdict
 import pandas as pd
 
 
-_file = "C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
+_file = "C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
 with open(_file, encoding="utf8") as fh:
     data = fh.read()
 

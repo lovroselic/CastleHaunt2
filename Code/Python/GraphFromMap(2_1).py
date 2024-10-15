@@ -3,7 +3,7 @@
 Created on Thu Oct  5 07:59:53 2023
 
 @author: lovro
-v 0.2.1
+v 0.2.2
 
 https://networkx.org/documentation/stable/reference/introduction.html
 """
@@ -46,14 +46,17 @@ def getColor(col):
 
 
 def edgeColor(D, node, incoming):
+    # print("....edge color, ", D[node], node, incoming)
     default = "#000000"
     i = D[node]["outcoming"].index(incoming)
+    # print(",,,,,i",i, len(D[node]["out_color"]))
     color1 = D[node]["out_color"][i]
+    # print(",,,,,color1", color1, len(D[node]["in_color"]))
     color2 = D[node]["in_color"][i]
     return color1 or color2 or default
 
 
-_file = "C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
+_file = "C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
 with open(_file, encoding="utf8") as fh:
     data = fh.read()
 
@@ -81,6 +84,7 @@ for room in MAP:
     gates = [g.strip("[]") for g in gates]
     gates = [g.split(",")[2:] for g in gates]
     for g in gates:
+        # print("..gate", g)
         out = int(g[1].split(".")[0].strip('"'))
         node = int(g[0].split(".")[0].strip('"'))
         col = getColor(g[-1].strip('"'))

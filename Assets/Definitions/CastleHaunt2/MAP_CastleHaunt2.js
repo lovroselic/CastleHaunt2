@@ -1205,7 +1205,7 @@ const MAP = {
         ceil: "GoldWithVines2",
         start: '[34,7]',
         lights: '[[33,7,"Candelabra11","dim"]]',
-        gates: '[[11,7,"54.1","43.10","Up"]]',
+        gates: '[[11,7,"54.1","34.10","Up"]]',
         gold: '[[24,"GoldBar"],[139,"GoldBar"],[389,"GoldBar"],[326,"GoldBar"],[145,"SilverBar"],[351,"SilverBar"]]',
         containers: '[[441,"IronChest","INTERACTION_ITEM.GoldOre",1],[435,"IronChest","INTERACTION_ITEM.GoldOre",7],[175,"IronChest","INTERACTION_ITEM.GoldOre",5],[31,"IronChest","GOLD_ITEM_TYPE.SilverBar",3],[37,"IronChest","GOLD_ITEM_TYPE.SilverBar",5],[90,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",1],[193,"PirateChest","GOLD_ITEM_TYPE.SilverBar",7],[286,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[195,1,"GoldSmelter"]]',
@@ -1372,7 +1372,7 @@ const MAP = {
         start: '[324,5]',
         lights: '[[345,1,"Candelabra10","weakCandle"]]',
         gates: '[[323,5,"62.1","41.5","Closed"]]',
-        shrines: '[[3,7,"PrincessMace"],[9,7,"PrincessPineHeart"]]',
+        shrines: '[[3,7,"PrincessMace"],[9,7,"PrincessPineHeart"],[15,7,"PrincessFlame"]]',
         doors: '[288,117,123,129,237,243]',
         }
 };
