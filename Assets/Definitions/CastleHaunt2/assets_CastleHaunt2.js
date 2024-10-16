@@ -923,6 +923,7 @@ LoadSprites = [
     { srcName: "EntityPictures/StepLibrarian.jpg", name: "StepLibrarian" },
     { srcName: "EntityPictures/Rugrat.jpg", name: "Rugrat" },
     { srcName: "EntityPictures/Strongarmed.jpg", name: "Strongarmed" },
+    { srcName: "EntityPictures/Horny3.jpg", name: "HornySitting" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1215,7 +1216,6 @@ LoadSprites = [
     { srcName: "Lights/Lights113.png", name: "Lights113" },
     { srcName: "Lights/Lights114.png", name: "Lights114" },
     { srcName: "Lights/Lights115.png", name: "Lights115" },
-
     { srcName: "Lights/Candelabra01.png", name: "Candelabra01" },
     { srcName: "Lights/Candelabra02.png", name: "Candelabra02" },
     { srcName: "Lights/Candelabra03.png", name: "Candelabra03" },
@@ -1233,6 +1233,14 @@ LoadSprites = [
     { srcName: "Lights/Candelabra16.png", name: "Candelabra16" },
     { srcName: "Lights/Candelabra17.png", name: "Candelabra17" },
     { srcName: "Lights/Candelabra18.png", name: "Candelabra18" },
+
+    { srcName: "Lights/Fireplace101.jpg", name: "Fireplace101" },
+    { srcName: "Lights/Fireplace102.jpg", name: "Fireplace102" },
+    { srcName: "Lights/Fireplace103.jpg", name: "Fireplace103" },
+    { srcName: "Lights/Fireplace104.jpg", name: "Fireplace104" },
+    { srcName: "Lights/Fireplace105.jpg", name: "Fireplace105" },
+    { srcName: "Lights/Fireplace106.jpg", name: "Fireplace106" },
+    { srcName: "Lights/Fireplace107.jpg", name: "Fireplace107" },
 
     //keys
     { srcName: "Keys/BlueKey.png", name: "BlueKey" },

@@ -114,10 +114,11 @@ const DEBUG = {
         ---- * Towel 38 DONE;
         ---- * SunScreen, 39 DONE
         ---- * Towel 39 DONE
+        ---- * "DumbBell", 41 DONE
+        ---- * "Wine",  41 DONE
 
-        "Wine", 
+        
         "Wine",
-        "DumbBell",
         "DumbBell"
 
          * coins sources (6x, missing 0x):
@@ -231,7 +232,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.31",
+    VERSION: "0.10.32",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -181,6 +181,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    HornySitting: {
+        name: "HornySitting",
+        sprite: "HornySitting",
+        category: 'crest',
+        voice: "Female2",
+        text: "I hope by now, you realized that by changing view you can find hidden rooms?",
+        interactionCategory: "oracle",
+    },
     StepLibrarian: {
         name: "StepLibrarian",
         sprite: "StepLibrarian",

@@ -909,6 +909,13 @@ LoadSprites = [
     { srcName: "Lights/Candelabra16.png", name: "Candelabra16" },
     { srcName: "Lights/Candelabra17.png", name: "Candelabra17" },
     { srcName: "Lights/Candelabra18.png", name: "Candelabra18" },
+    { srcName: "Lights/Fireplace101.jpg", name: "Fireplace101" },
+    { srcName: "Lights/Fireplace102.jpg", name: "Fireplace102" },
+    { srcName: "Lights/Fireplace103.jpg", name: "Fireplace103" },
+    { srcName: "Lights/Fireplace104.jpg", name: "Fireplace104" },
+    { srcName: "Lights/Fireplace105.jpg", name: "Fireplace105" },
+    { srcName: "Lights/Fireplace106.jpg", name: "Fireplace106" },
+    { srcName: "Lights/Fireplace107.jpg", name: "Fireplace107" },
 
     //doors
     { srcName: "Doors/DungeonDoor_Blue2.png", name: "DungeonDoor_Blue" },

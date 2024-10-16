@@ -955,23 +955,28 @@ const MAP = {
         monsterList: '["Goblin","GhostMinion","GhostMinion"]',
     }
     ,
-    41: {
+    41 : {
         name: "Staircase East",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB6ABB4AA2BAA10BAA77BAA15BB2AA7BAA2BB34AA2BB4ABB3ABB2ABAA4BAA3BB11ABB9ABB11ABB4$"}',
+        maxSpawned: 4,
+        killCountdown: 3,
+        spawnDelay: 3500,
+        data: '{"width":"15","height":"15","map":"BB7AA3BB2AA10BAA11BAA17BAA4BAA31BAA11BAA4BAA10BAA4BABAA5BB2AA3BAA2BB10ABABB7ABB5AA2BB7AA2BB2AA2BB5AA4BAA2BB2AA4BB10ABB16A$"}',
         wall: "RedishRockyWall1",
         floor: "MarbleFloor105",
         ceil: "MarbleTiles4",
         start: '[151,5]',
-        lights: '[[9,7,"Fireplace09","fire"],[221,1,"Candelabra15","weakCandle"]]',
+        decals: '[[91,5,"DancingSkelies3","crest"],[121,5,"DancingSkelies2","crest"],[19,7,"Daggerfall4","picture"],[3,7,"CastleLady112","picture"],[22,7,"AI_pic206","picture"],[13,7,"AI_PIC_456","picture"],[112,7,"SwordOfFargoal201","picture"],[112,1,"CastleLady67","picture"],[201,1,"CastleBabes46","picture"],[197,1,"Princess3","picture"],[204,1,"TombRaider108","picture"],[192,1,"AI_Pic_103","picture"],[46,1,"AztecChallenge112","picture"],[47,5,"LastNinja130","picture"],[166,5,"Morrowind130","picture"],[112,5,"CastleLady15","picture"],[112,3,"Triss","picture"],[59,3,"AI_Pic_130","picture"],[192,3,"CastleLady117","picture"],[103,3,"LeisureSuitLarry89","picture"],[133,3,"Invaders_AI_1","picture"],[26,5,"Skullkeep","picture"],[41,7,"ManicMiner50","picture"]]',
+        lights: '[[9,7,"Fireplace09","fire"],[221,1,"Candelabra15","weakCandle"],[214,1,"Fireplace101","fire"]]',
         gates: '[[150,5,"41.1","40.2","Down"],[60,5,"41.2","34.4","Closed"],[119,3,"41.3","44.2","Up"],[217,1,"41.4","49.1","Silver"],[209,3,"41.5","62.1","Closed"]]',
-        gold: '[[20,"GoldBar"]]',
-        containers: '[[182,"Wardrobe","INTERACTION_ITEM.LeatherHide",1],[37,"Barrel","INTERACTION_ITEM.Fish",7]]',
+        gold: '[[20,"GoldBar"],[82,"GoldCube"],[95,"GoldCube"],[125,"GoldCube"],[158,"GoldCube"],[145,"GoldCube"],[101,"GoldCube"],[70,"GoldCube"],[50,"GoldCube"],[78,"GoldCube"],[137,"GoldCube"],[169,"GoldCube"],[188,"GoldCube"],[207,"GoldCube"]]',
+        containers: '[[182,"Wardrobe","INTERACTION_ITEM.LeatherHide",1],[37,"Barrel","INTERACTION_ITEM.Fish",7],[27,"Crate","INTERACTION_ITEM.DumbBell",5],[31,"Barrel","INTERACTION_ITEM.Wine",1]]',
         entities: '[[5,7,"Goldie"]]',
-    }
+        objects: '[[17,"Cake"],[28,"Steak"],[206,"BeerHealth"]]',
+        oracles: '[[179,3,"HornySitting"]]',
+        lairs: '[[105,5,"Lair16"],[89,3,"Lair30"],[149,3,"Lair16"]]',
+        monsterList: '["GhostMinion","AngrySheep","Goblin","MissGalaxyGold","MissGalaxy","Wolf"]',
+        }
     ,
     42: {
         name: "Seamstress",

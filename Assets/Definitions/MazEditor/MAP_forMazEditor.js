@@ -119,9 +119,9 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "Ivy11", "Ivy12",
     "AA_CREST_AI", "CrawlingSkelly1", "CrawlingSkelly2", "DancingSkelies1", "DancingSkelies2", "DancingSkelies3", "LaughingSkeleton1", "LaughingSkeleton2", "LaughingSkeleton3", "LaughingSkeleton4", "LaughingSkeleton5", "LaughingSkeleton6", "SittingSkelly1",
     "SittingSkelly11", "SittingSkelly12", "SittingSkelly13", "SittingSkelly14", "SittingSkelly2", "SittingSkelly21", "SittingSkelly23"
-];
+].sort();
 const BOTTOM_CRESTS = ["Grate1_128"];
-const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"];
+const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"].sort();
 const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4", "WallLamp10", "WallLamp11", "WallLamp12", "WallLamp13", "WallLamp14", "WallLamp15",
     "WallLamp16", "WallLamp17", "WallLamp18", "WallLamp19", "WallLamp20", "WallLamp9",
     "WallLamp31", "WallLamp32", "WallLamp33", "WallLamp34", "WallLamp35",
@@ -130,8 +130,9 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Fireplace14", "Fireplace15",
     "Lights102", "Lights103", "Lights104", "Lights105", "Lights106", "Lights107", "Lights108", "Lights109", "Lights110", "Lights111", "Lights112", "Lights113", "Lights114", "Lights115",
     "Candelabra01", "Candelabra02", "Candelabra03", "Candelabra04", "Candelabra05", "Candelabra06", "Candelabra07", "Candelabra08", "Candelabra09", "Candelabra10", "Candelabra11", "Candelabra12",
-    "Candelabra14", "Candelabra15", "Candelabra16", "Candelabra17", "Candelabra18"
-];
+    "Candelabra14", "Candelabra15", "Candelabra16", "Candelabra17", "Candelabra18",
+    "Fireplace101", "Fireplace102", "Fireplace103", "Fireplace104", "Fireplace105", "Fireplace106", "Fireplace107"
+].sort();;
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
 const LAIR_DECALS = [];
