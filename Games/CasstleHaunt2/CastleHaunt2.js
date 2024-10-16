@@ -115,11 +115,15 @@ const DEBUG = {
         ---- * SunScreen, 39 DONE
         ---- * Towel 39 DONE
 
+        "Wine", 
+        "Wine",
+
          * coins sources (6x, missing 2x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
             ---- "GoldCoin" vy Squirell by giving Acorn 3x
             ---- 40 floor
+            ---- Rugrate
 
         *
         * COINS used (6x):
@@ -132,7 +136,7 @@ const DEBUG = {
      
         
         * key not yet used:
-            GOldKEy
+            
          * missing placed keys: 
             * 
             * 
@@ -146,7 +150,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 62;    
+        GAME.level = 62;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62
         GAME.gold = 4727;
@@ -163,7 +167,7 @@ const DEBUG = {
 
         HERO.health = 69;
         HERO.maxHealth = 112;
-        
+
 
         let actItems = [
             //INTERACTION_OBJECT.Cake,
@@ -185,9 +189,9 @@ const DEBUG = {
         let invItems = [
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
-            "EmptyBottle",  "SilverBar",
+            "EmptyBottle", "SilverBar",
 
-           //debug
+            //debug
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -223,7 +227,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.28",
+    VERSION: "0.10.29",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -920,6 +920,7 @@ LoadSprites = [
     { srcName: "EntityPictures/RedheadSittingDomme.jpg", name: "RedheadSittingDomme" },
     { srcName: "EntityPictures/RedHeadKnightessa.jpg", name: "RedHeadKnightessa" },
     { srcName: "EntityPictures/StepLibrarian.jpg", name: "StepLibrarian" },
+    { srcName: "EntityPictures/Rugrat.jpg", name: "Rugrat" },
     //{ srcName: "EntityPictures/Strongarmed.jpg", name: "Strongarmed" },
 
     //action movables
@@ -1044,10 +1045,8 @@ LoadSprites = [
     { srcName: "Items/Fly.png", name: "Fly" },
     { srcName: "Items/Frog.png", name: "Frog" },
     { srcName: "Items/Gloves.png", name: "Gloves" },
-
     { srcName: "Items/GoldSteel.png", name: "GoldSteel" },
     { srcName: "Items/GoldenBook.png", name: "GoldenBook" },
-
     { srcName: "Items/GreenHeels.png", name: "GreenHeels" },
     { srcName: "Items/HairBrush.png", name: "HairBrush" },
     { srcName: "Items/Handcuffs.png", name: "Handcuffs" },
@@ -1061,10 +1060,8 @@ LoadSprites = [
     { srcName: "Items/LeoHat.png", name: "LeoHat" },
     { srcName: "Items/LeoPumps.png", name: "LeoPumps" },
     { srcName: "Items/Leotard2.png", name: "Leotard" },
-
     { srcName: "Items/WhiteHeels.png", name: "WhiteHeels" },
     { srcName: "Items/WhiteHandbag.png", name: "WhiteHandbag" },
-
     { srcName: "Items/Lizard.png", name: "Lizard" },
     { srcName: "Items/MagicWand.png", name: "MagicWand" },
     { srcName: "Items/Milk.png", name: "Milk" },
@@ -1080,7 +1077,6 @@ LoadSprites = [
     { srcName: "Items/PurpleTear.png", name: "PurpleTear" },
     { srcName: "Items/Quill.png", name: "Quill" },
     { srcName: "Items/Rat.png", name: "Rat" },
-
     { srcName: "Items/RedLiquid.png", name: "RedLiquid" },
     { srcName: "Items/RedRose.png", name: "RedRose" },
     { srcName: "Items/Revolver.png", name: "Revolver" },
@@ -1125,6 +1121,7 @@ LoadSprites = [
     { srcName: "Items/GoldOre.png", name: "GoldOre" },
     { srcName: "Items/Moon.png", name: "Moon" },
     { srcName: "Items/EmptyBottle.png", name: "EmptyBottle" },
+    { srcName: "Items/Wine.png", name: "Wine" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

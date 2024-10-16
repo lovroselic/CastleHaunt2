@@ -2828,6 +2828,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "EmptyBottle",
         text: "Empty bottle? I should put something in."
     },
+    Wine: {
+        name: "Wine",
+        category: "interaction_item",
+        inventorySprite: "Wine",
+        text: "Red wine. Fancy a sip?"
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -3429,9 +3435,19 @@ const INTERACTION_ENTITY = {
             conclusion: "Thanks! Now my bra is  complete. Here's the Gold Key—trust me, I wasn't hiding it anywhere in this bikini."
         }
     },
-
-
-
+    Rugrat: {
+        name: "Rugrat",
+        sprite: "Rugrat",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Wine", "Wine"],
+        gives: "GoldCoin",
+        text: {
+            intro: "Bring me more wine, honey.",
+            progress: "Yes. Like that. But more.",
+            conclusion: "Here you go love. Buy youreself something. Now leave me."
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {
