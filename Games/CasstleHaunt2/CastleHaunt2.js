@@ -131,8 +131,8 @@ const DEBUG = {
         *
         * COINS used (6x):
             * Alpinist
-            * Barbarian (2x)
-            * Horny (2x) EXCLUSIVE
+                * Barbarian (2x)
+                * Horny (2x) EXCLUSIVE
             * Reaper
             * BustyDemoness
             * RedHeadKnightessa
@@ -153,10 +153,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 62;
+        GAME.level = 41;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
-        //41-->62
-        GAME.gold = 4727;
+        //41-->62-->41
+        GAME.gold = 2026;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -168,8 +168,8 @@ const DEBUG = {
         HERO.magic = 14;
         HERO.attack = 15;
 
-        HERO.health = 69;
-        HERO.maxHealth = 112;
+        HERO.health = 128;
+        HERO.maxHealth = 128;
 
 
         let actItems = [
@@ -195,7 +195,7 @@ const DEBUG = {
             "EmptyBottle", "SilverBar",
 
             //debug
-     
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -231,7 +231,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.30",
+    VERSION: "0.10.31",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -720,7 +720,7 @@ const GAME = {
         $("#pause").prop("disabled", false);
         $("#pause").off();
         GAME.paused = true;
-        $("#p1").prop("disabled", false);
+        //$("#p1").prop("disabled", false);
 
         let GameRD = new RenderData("Pentagram", 60, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
@@ -779,8 +779,6 @@ const GAME = {
         WebGL.playerList.clear();                       //requred for restart after resurrection
         GAME.initLevel(GAME.level);
         GAME.setFirstPerson();                        //my preference
-        //GAME.setThirdPerson();                        //
-        // GAME.setTopDownView();                          //
         GAME.continueLevel(GAME.level);
     },
     continueLevel(level) {
@@ -795,6 +793,7 @@ const GAME = {
     setCamera() {
         HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
         HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
+        HERO.orto_overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 4, new Vector3(0, -1, 0), 0.4, 80);
 
         switch (WebGL.CONFIG.cameraType) {
             case "first_person":
@@ -806,6 +805,10 @@ const GAME = {
             case "top_down":
                 HERO.player.associateExternalCamera(HERO.overheadCamera);
                 WebGL.setCamera(HERO.overheadCamera);
+                break;
+            case "orto_top_down":
+                HERO.player.associateExternalCamera(HERO.orto_overheadCamera);
+                WebGL.setCamera(HERO.orto_overheadCamera);
                 break;
             default:
                 throw "WebGL.CONFIG.cameraType error";
@@ -888,6 +891,7 @@ const GAME = {
         $("#p1").on("click", GAME.setFirstPerson);
         $("#p3").on("click", GAME.setThirdPerson);
         $("#pt5").on("click", GAME.setTopDownView);
+        $("#pt7").on("click", GAME.setOrtoTopDownView);
         await GAME.initializeImageData();
         const totalPixels = SPRITE.Avatar.width * SPRITE.Avatar.height;
         IMAGE_DATA.INDICES.set(3, "Avatar", totalPixels, IMAGE_DATA.Avatar.data);
@@ -952,23 +956,28 @@ const GAME = {
         ENGINE.GAME.ANIMATION.next(GAME.run);
         GAME.paused = false;
     },
+    disableViewButton(which) {
+        const button_ids = ["#p1", "#p3", "#pt5", "#pt7"];
+        for (const btn of button_ids) {
+            if (btn !== which) {
+                $(btn).prop("disabled", false);
+            }
+        }
+        $(which).prop("disabled", true);
+    },
     setFirstPerson() {
+        GAME.disableViewButton("#p1");
         if (WebGL.CONFIG.cameraType === "first_person") return;
-        console.info("#### Setting FIRST person view ####");
-        $("#p1").prop("disabled", true);
-        $("#pt5").prop("disabled", false);
-        $("#p3").prop("disabled", false);
+        //console.info("#### Setting FIRST person view ####");
         WebGL.CONFIG.set("first_person", true);
         HERO.player.clearCamera();
         HERO.player.moveSpeed = 2.0;
         WebGL.setCamera(HERO.player);
     },
     setThirdPerson() {
+        GAME.disableViewButton("#p3");
         if (WebGL.CONFIG.cameraType === "third_person") return;
-        console.info("#### Setting THIRD person view ####");
-        $("#p1").prop("disabled", false);
-        $("#pt5").prop("disabled", false);
-        $("#p3").prop("disabled", true);
+        //console.info("#### Setting THIRD person view ####");
         WebGL.CONFIG.set("third_person", true);
         HERO.player.associateExternalCamera(HERO.topCamera);
         HERO.player.moveSpeed = 2.0;
@@ -978,15 +987,25 @@ const GAME = {
         HERO.player.matrixUpdate();
     },
     setTopDownView() {
+        GAME.disableViewButton("#pt5");
         if (WebGL.CONFIG.cameraType === "top_down") return;
-        console.info("*** Setting TOP DOWN view ***");
-        $("#p1").prop("disabled", false);
-        $("#pt5").prop("disabled", true);
-        $("#p3").prop("disabled", false);
+        //console.info("*** Setting TOP DOWN view ***");
         WebGL.CONFIG.set("top_down", true);
         HERO.player.associateExternalCamera(HERO.overheadCamera);
         HERO.player.moveSpeed = 2.0;
         WebGL.setCamera(HERO.overheadCamera);
+        //position  update
+        HERO.player.camera.update();
+        HERO.player.matrixUpdate();
+    },
+    setOrtoTopDownView() {
+        GAME.disableViewButton("#pt7");
+        if (WebGL.CONFIG.cameraType === "orto_top_down") return;
+        //console.info("*** Setting ORTO TOP DOWN view ***");
+        WebGL.CONFIG.set("orto_top_down", true);
+        HERO.player.associateExternalCamera(HERO.orto_overheadCamera);
+        HERO.player.moveSpeed = 2.0;
+        WebGL.setCamera(HERO.orto_overheadCamera);
         //position  update
         HERO.player.camera.update();
         HERO.player.matrixUpdate();
@@ -1217,6 +1236,10 @@ const GAME = {
         }
         if (map[ENGINE.KEY.map["5"]]) {
             GAME.setTopDownView();
+            return;
+        }
+        if (map[ENGINE.KEY.map["7"]]) {
+            GAME.setOrtoTopDownView();
             return;
         }
         if (map[ENGINE.KEY.map.F4]) {

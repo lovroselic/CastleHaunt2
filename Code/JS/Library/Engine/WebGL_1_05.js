@@ -80,6 +80,7 @@ const WebGL = {
                     break;
                 case "third_person":
                 case "top_down":
+                case "orto_top_down":
                     this.firstperson = false;
                     break;
                 default:
