@@ -622,6 +622,14 @@ const ORACLE_TYPE = {
         text: "Are you having fun yet? We certainly do. Hehehehehe.",
         interactionCategory: "oracle",
     },
+    ApparitiaGrin: {
+        name: "ApparitiaGrin",
+        sprite: "ApparitiaGrin",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We are building such nice traps for you, hahahaha.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2834,9 +2842,29 @@ const INTERACTION_ITEM = {
         inventorySprite: "Wine",
         text: "Red wine. Fancy a sip?"
     },
+    DumbBell: {
+        name: "DumbBell",
+        category: "interaction_item",
+        inventorySprite: "DumbBell",
+        text: "Heavy. I am building muscles as we speak."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    Strongarmed: {
+        name: "Strongarmed",
+        sprite: "Strongarmed",
+        category: 'crest',
+        voice: "Female",
+        wants: ["DumbBell", "DumbBell"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I need to keep training! Bring me two dumbbells, and I'll reward you.",
+            progress: "One dumbbell isn't enough! I need both to really feel the burn.",
+            conclusion: "Perfect! Now I can train harder. Here's your gold coin—earned through sweat and strength!"
+        }
+    },
+    
     ApplePicker: {
         name: "ApplePicker",
         sprite: "ApplePicker",
@@ -3673,7 +3701,10 @@ const CONTAINER_CONTENT_TYPES = { GOLD_ITEM_TYPE, SKILL_ITEM_TYPE, INTERACTION_I
 const CONTAINER_CONTENT_LIST = stringifyObjectList(CONTAINER_CONTENT_TYPES);
 const TRIGGER_ACTIONS = ["HOLE->toEmpty", "WALL->toEmpty", "EMPTY->toWall"];
 const TRAP_ACTIONS = {
-    Missile: ["Fireball", "Bounceball"],
+    Missile: [
+        //"Fireball", 
+        "Bounceball"
+    ],
     Spawn: listObjectKeys(MONSTER_TYPE)
 };
 const TRAP_ACTION_LIST = listObjectKeys(TRAP_ACTIONS);

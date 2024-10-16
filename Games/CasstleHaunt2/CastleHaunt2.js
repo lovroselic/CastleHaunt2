@@ -117,13 +117,16 @@ const DEBUG = {
 
         "Wine", 
         "Wine",
+        "DumbBell",
+        "DumbBell"
 
-         * coins sources (6x, missing 2x):
+         * coins sources (6x, missing 0x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
             ---- 36 floor
             ---- "GoldCoin" vy Squirell by giving Acorn 3x
             ---- 40 floor
             ---- Rugrate
+            ---- Strongarm
 
         *
         * COINS used (6x):
@@ -192,6 +195,7 @@ const DEBUG = {
             "EmptyBottle", "SilverBar",
 
             //debug
+     
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -227,7 +231,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.29",
+    VERSION: "0.10.30",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

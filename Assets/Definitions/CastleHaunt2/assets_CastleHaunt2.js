@@ -819,6 +819,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaDoom.jpg", name: "ApparitiaDoom" },
     { srcName: "EntityPictures/ApparitiaWet.jpg", name: "ApparitiaWet" },
     { srcName: "EntityPictures/ApparitiaFun.jpg", name: "ApparitiaFun" },
+    { srcName: "EntityPictures/ApparitiaGrin.jpg", name: "ApparitiaGrin" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -921,7 +922,7 @@ LoadSprites = [
     { srcName: "EntityPictures/RedHeadKnightessa.jpg", name: "RedHeadKnightessa" },
     { srcName: "EntityPictures/StepLibrarian.jpg", name: "StepLibrarian" },
     { srcName: "EntityPictures/Rugrat.jpg", name: "Rugrat" },
-    //{ srcName: "EntityPictures/Strongarmed.jpg", name: "Strongarmed" },
+    { srcName: "EntityPictures/Strongarmed.jpg", name: "Strongarmed" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1122,6 +1123,7 @@ LoadSprites = [
     { srcName: "Items/Moon.png", name: "Moon" },
     { srcName: "Items/EmptyBottle.png", name: "EmptyBottle" },
     { srcName: "Items/Wine.png", name: "Wine" },
+    { srcName: "Items/DumbBell.png", name: "DumbBell" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
