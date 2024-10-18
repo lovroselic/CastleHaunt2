@@ -98,7 +98,15 @@ const DECAL_PAINTINGS = [
     "CastleBabes42", "CastleBabes43", "CastleBabes44", "CastleBabes45", "CastleBabes46", "CastleBabes47", "CastleBabes48", "CastleBabes49", "CastleBabes50", "CastleBabes51", "CastleBabes52", "DommeInGrass1", "ForbiddenForest501",
     "ForbiddenForest502", "Leggy1", "Leggy2", "PrincessOnThrone", "RedBum1", "Scramble501", "SpyVsSpy501", "SummerGames501", "WizardOfWor500",
     "Babes401", "Babes402", "Babes403", "Babes404", "Babes405", "Babes406", "Babes407", "Domme401", "Princess201", "Princess401", "Princess402", "Princess403", "Princess404", "Princess405", "Princess406", "Princess407", "Princess408", "Princess409",
-    "Princess410", "Princess411", "Princess412", "Princess413", "Princess414", "Princess415", "Princess416", "Princess417", "Princess418"
+    "Princess410", "Princess411", "Princess412", "Princess413", "Princess414", "Princess415", "Princess416", "Princess417", "Princess418",
+    "Domme101", "Domme102", "Domme103", "Domme104", "Domme105", "Domme106", "Domme107", "Domme108", "Domme109", "Domme110", "Domme111", "Domme112", "Domme113", "Domme114", "Domme115", "Domme116", "Domme117", "Domme118", "Domme119",
+    "Domme120", "Domme121", "Domme122", "Domme123", "Domme124", "Domme125", "Domme126", "Domme127", "Domme128", "Domme129", "Domme130", "Domme131", "Domme132", "Domme133", "Domme134", "Domme135", "Domme136", "Domme201", "Domme202",
+    "Domme203", "Domme204", "Domme205", "Domme206", "Domme207", "Domme208", "Domme209", "Domme210", "Domme211", "Domme212", "Domme213", "Domme214", "Domme215", "Domme216", "Domme217", "Domme218", "Domme219", "Domme220", "Domme221",
+    "Domme222", "Domme223", "Domme224", "Domme225", "Domme226", "Domme227", "Domme228", "Domme229", "Domme230", "Domme231", "Domme232", "Domme233", "Domme234", "Domme235", "Domme236", "Domme237", "Domme238", "Domme239", "Domme240",
+    "Domme241", "Domme242", "Domme243", "GirlOnStairs", "GirlOnStairs101", "GirlOnStairs102", "GirlOnStairs103", "GirlOnStairs104", "GirlOnStairs105", "GirlOnStairs106", "GirlOnStairs107", "SabreWulfAI_101", "SabreWulfAI_102",
+    "SabreWulfAI_103", "ShinyBlackRuberella01", "ShinyBlackRuberella02", "ShinyBlackRuberella03", "ShinyBlackRuberella04", "ShinyBlackRuberella05", "ShinyBlackRuberella06", "ShinyBlackRuberella07", "ShinyBlackRuberella08",
+    "ShinyBlackRuberella09", "ShinyBlackRuberella10", "ShinyBlackRuberella101", "ShinyBlackRuberella102", "ShinyBlackRuberella103", "ShinyBlackRuberella104", "ShinyBlackRuberella105", "ShinyBlackRuberella11", "ShinyBlackRuberella12",
+    "ShinyBlackRuberella13", "ShinyBlackRuberella14", "ShinyBlackRuberella15", "ShinyBlackRuberella16", "ShinyBlackRuberella17", "ShinyBlackRuberella18"
 ].sort();
 
 /** Crests */

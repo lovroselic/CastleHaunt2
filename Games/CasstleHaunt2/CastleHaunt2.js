@@ -116,10 +116,8 @@ const DEBUG = {
         ---- * Towel 39 DONE
         ---- * "DumbBell", 41 DONE
         ---- * "Wine",  41 DONE
-
-        
-        "Wine",
-        "DumbBell"
+        ---- * "Wine", 44 DONE
+        ---- * "DumbBell" 44 DONE
 
          * coins sources (6x, missing 0x):
             ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
@@ -154,10 +152,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 44;
+        GAME.level = 62;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
-        //41-->62-->41-->44
-        GAME.gold = 2272;
+        //41-->62-->41-->44-->62
+        GAME.gold = 2647;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -169,7 +167,7 @@ const DEBUG = {
         HERO.magic = 14;
         HERO.attack = 15;
 
-        HERO.health = 105;
+        HERO.health = 32;
         HERO.maxHealth = 128;
 
 
@@ -194,7 +192,8 @@ const DEBUG = {
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
             "EmptyBottle", "SilverBar",
-            "Wine", "Fish", "DumbBell", "LeatherHide"
+            "Wine", "Fish", "DumbBell", "LeatherHide",
+            "LeatherHide", "FishBone", "Wine","DumbBell", "BabySheep"
 
             //debug
 
@@ -233,7 +232,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.33",
+    VERSION: "0.10.34",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

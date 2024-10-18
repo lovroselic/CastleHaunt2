@@ -181,6 +181,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RuberellaInventory: {
+        name: "RuberellaInventory",
+        sprite: "RuberellaInventory",
+        category: 'crest',
+        voice: "Female",
+        text: "Be mindful of your inventory space. I hope your pockets are bigger then mine.",
+        interactionCategory: "oracle",
+    },
     HornySitting: {
         name: "HornySitting",
         sprite: "HornySitting",
@@ -636,6 +644,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We are building such nice traps for you, hahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaEyes: {
+        name: "ApparitiaEyes",
+        sprite: "ApparitiaEyes",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "By orders of her majesty, Hauntessa Spookish - lie down and die.",
         interactionCategory: "oracle",
     },
 };
