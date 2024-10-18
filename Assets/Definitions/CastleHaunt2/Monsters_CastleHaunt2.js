@@ -654,6 +654,22 @@ const ORACLE_TYPE = {
         text: "By orders of her majesty, Hauntessa Spookish - lie down and die.",
         interactionCategory: "oracle",
     },
+    ApparitiaSheep: {
+        name: "ApparitiaSheep",
+        sprite: "ApparitiaSheep",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I made all the sheep go wild and princessvore. Hohohoho.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaBored: {
+        name: "ApparitiaBored",
+        sprite: "ApparitiaBored",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am bored of your incompetence Princess. You are letting us win to easy",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

@@ -129,12 +129,12 @@ const DEBUG = {
 
         *
         * COINS used (6x):
-            * Alpinist
+            * Alpinist USED
                 * Barbarian (2x)
                 * Horny (2x) EXCLUSIVE
             * Reaper
-            * BustyDemoness
-            * RedHeadKnightessa
+            * BustyDemoness USED?
+            * RedHeadKnightessa uSED?
      
         
         * key not yet used:
@@ -152,10 +152,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 62;
+        GAME.level = 42;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
-        //41-->62-->41-->44-->62
-        GAME.gold = 2647;
+        //41-->62-->41-->44-->62-->44-->43-->45-->43-->42
+        GAME.gold = 4002;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -165,9 +165,9 @@ const DEBUG = {
         HERO.orbs = 3;
         HERO.orbsLost = 0;
         HERO.magic = 14;
-        HERO.attack = 15;
+        HERO.attack = 16;
 
-        HERO.health = 32;
+        HERO.health = 128;
         HERO.maxHealth = 128;
 
 
@@ -176,8 +176,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -192,8 +192,10 @@ const DEBUG = {
             "GreenApple", "Gloves", "BabySheep",
             "FishBone", "Moon",
             "EmptyBottle", "SilverBar",
-            "Wine", "Fish", "DumbBell", "LeatherHide",
-            "LeatherHide", "FishBone", "Wine","DumbBell", "BabySheep"
+            "Fish", "LeatherHide",
+            "LeatherHide", "FishBone", "BabySheep",
+            "GoldCoin",
+            "Apple", "BabySheep", "LeatherHide"
 
             //debug
 
@@ -232,7 +234,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.34",
+    VERSION: "0.10.35",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

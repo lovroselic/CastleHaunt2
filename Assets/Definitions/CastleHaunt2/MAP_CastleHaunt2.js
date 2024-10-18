@@ -978,32 +978,37 @@ const MAP = {
         monsterList: '["GhostMinion","AngrySheep","Goblin","MissGalaxyGold","MissGalaxy","Wolf"]',
         }
     ,
-    42: {
+    42 : {
         name: "Seamstress",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB7AA18BAA5BAA33BAA9BAA8BAA11BAA13BAA2BAA9BABAA11BAA4BB2AA21BABAA10BABB11ABB3AA2BB15AA2BB2ABB5ABB11ABB3ABB2ABB2AA6BAA2BABB6ABABB12ABB29ABB8$"}',
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"21","height":"15","map":"BB7AA21BAA2BAA25BAA19BB2AA18BABAA19BAA5BABAA12BAA3BB3AA14BAA3BB2AA5BAA2BB2AA10BB2ABB10ABB3AA2BB4AA2BB14AA3BABB7ABB11AA2BB2ABABABABB2AA7BABB5ABB3AA2BB31A$"}',
         wall: "SmallBlackBricks44",
         floor: "MarbleFloor104",
         ceil: "MC_Wall9",
         start: '[151,3]',
+        decals: '[[173,7,"TempleOfApshai70","picture"],[24,7,"Domme230","picture"],[27,7,"Princess414","picture"],[52,7,"ShinyBlackRuberella10","picture"],[56,7,"Domme240","picture"],[18,7,"Domme223","picture"],[159,7,"CastleLady43","picture"],[130,1,"CastleLady24","picture"],[275,1,"Princess411","picture"],[278,1,"Gauntlet","picture"],[259,1,"AI_pic248","picture"],[159,1,"GirlSwims13","picture"],[262,1,"Princess12","picture"],[286,1,"AI_PIC_445","picture"],[312,1,"DancingSkelies1","crest"],[163,4,"PuddleDecal07","crest"],[150,4,"Drain2_96","crest"],[156,4,"PuddleDecal14","crest"],[148,5,"Domme349","picture"],[42,5,"AI_pic240","picture"],[252,5,"KokotoniWilf70","picture"],[106,5,"GirlSwims14","picture"],[190,5,"BookShelf17","picture"],[159,5,"CastleBabes45","picture"],[131,5,"ManicMiner63","picture"],[173,5,"PrincessAI_13","picture"],[280,5,"TheHobbit15","picture"],[302,1,"BrianBloodaxe71","picture"],[153,1,"AI_Pic_146","picture"],[153,7,"RobinOfTheWood4","picture"],[145,3,"Domme346","picture"],[82,3,"MoonPatrol500","picture"],[187,3,"SP64","picture"],[271,3,"Domme123","picture"],[159,3,"AI_PIC_455","picture"],[130,3,"SittingSkelly14","crest"],[172,3,"Skull1","crest"]]',
         lights: '[[64,5,"Candelabra07","standardDimmed"],[232,5,"Candelabra07","standardDimmed"],[153,5,"Lamp45","weakCandle"],[16,7,"Fireplace13","fire"],[310,1,"Fireplace07","fire"],[124,3,"Candelabra17","standardDimmed"],[208,3,"WallLamp18","standardDimmed"]]',
-        gates: '[[152,3,"42.1","36.3","Down"],[167,3,"42.","43.1","Closed"]]',
+        gates: '[[152,3,"42.1","36.3","Down"],[167,3,"42.2","43.1","Closed"]]',
         monsters: '[[133,"AngrySheep"],[175,"AngrySheep"],[100,"AngrySheep"],[247,"AngrySheep"]]',
+        skills: '[[161,"Heart"]]',
         containers: '[[283,"TreasureChest","INTERACTION_ITEM.Frog",3],[57,"Wardrobe","INTERACTION_ITEM.ScubaMask",7]]',
         entities: '[[12,7,"Seamstress"]]',
+        oracles: '[[8,7,"ApparitiaBored"]]',
         movables: '[[164,"BabySheep"]]',
-    }
+        lairs: '[[1,7,"Lair27"],[295,1,"Lair04"],[41,3,"Lair13"],[293,3,"Lair14"]]',
+        monsterList: '["MissGalaxyGold","Goblin","Goblin","GhostMinion","AngrySheep","AngrySheep"]',
+        }
     ,
-    43: {
+    43 : {
         name: "Meadow",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"21","height":"15","map":"BB2ABABB7AA54BAA39BAA3BAA31BB2AA18BAA14BAA8BABB11ABABAA2BB19ABB5ABB5ABB2ABAA7BB15ABB13ABB36A$"}',
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 4000,
+        data: '{"width":"21","height":"15","map":"BB4AA2BABAA3BB2AA4BAA3BAA44BAA39BAA8BAA26BB2AA4BB2AA5BAA18BAA2BB2AA5BABABB2ABAA5BABAA4BB9AA3BABABB3ABB2ABB9ABABB5ABB3ABB2AA2BAA2BABB2AA2BB3AA5BAA4BB36$BB2A"}',
         wall: "MistyMeadow4",
         floor: "GrassMeadow101",
         ceil: "Overcast2",
@@ -1011,11 +1016,15 @@ const MAP = {
         lights: '[[110,1,"Lights112","standardDimmed"],[121,1,"Lights112","standardDimmed"],[197,7,"Lights112","standardDimmed"],[201,7,"Lights112","standardDimmed"]]',
         gates: '[[147,5,"43.1","42.2","Closed"],[167,3,"43.2","44.1","Closed"],[10,7,"43.3","45.1","Up"]]',
         monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
-        containers: '[[270,"Crate","INTERACTION_ITEM.HayBale",1]]',
+        gold: '[[72,"SilverBar"],[87,"SilverBar"],[192,"SilverBar"],[234,"SilverBar"],[261,"SilverBar"],[186,"SilverBar"],[246,"SilverBar"],[156,"SilverBar"],[117,"SilverBar"],[59,"SilverBar"]]',
+        containers: '[[270,"Crate","INTERACTION_ITEM.HayBale",1],[22,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[40,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[274,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
         entities: '[[304,1,"Shepardess"],[14,7,"CowGirl1"]]',
         objects: '[[214,"Apple"]]',
+        oracles: '[[310,1,"ApparitiaSheep"]]',
         movables: '[[115,"BabySheep"]]',
-    }
+        lairs: '[[6,7,"Lair01"],[301,1,"Lair30"],[307,1,"Lair16"],[230,3,"Lair10"]]',
+        monsterList: '["MissGalaxyGold","Goblin","Goblin"]',
+        }
     ,
     44 : {
         name: "Hedge of the Hog",
@@ -1040,13 +1049,13 @@ const MAP = {
         monsterList: '["MissGalaxyGold","Goblin","GhostMinion"]',
         }
     ,
-    45: {
+    45 : {
         name: "Alps",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB2ABB6ABB2AA9BAA7BAA89BABB44ABB2AA6BABB4AA2BB15ABABB24A$"}',
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"15","height":"15","map":"BB4AA3BABAA2BAA6BB3AA2BAA3BAA78BB3AA3BB4AA7BB2ABB8AA3BB5AA3BB6ABB6AA3BB5ABB3ABB7AA2BAA2BB5AA3BB13ABB13$BB5A"}',
         wall: "Hills2",
         floor: "Grass12",
         ceil: "Overcast1",
@@ -1055,11 +1064,14 @@ const MAP = {
         lights: '[[18,7,"Candelabra08","standard"],[26,7,"Candelabra08","standard"],[199,1,"Candelabra10","standardDimmed"],[205,1,"Candelabra10","standardDimmed"]]',
         gates: '[[217,1,"45.1","43.3","Down"]]',
         monsters: '[[67,"AngrySheep"],[107,"AngrySheep"],[117,"AngrySheep"]]',
+        gold: '[[16,"RedGem"],[28,"RedGem"],[49,"GoldBar"],[70,"GoldBar"],[167,"GoldBar"],[161,"GoldBar"]]',
         containers: '[[182,"Barrel","INTERACTION_ITEM.HayBale",1]]',
         entities: '[[7,7,"Climber"],[119,3,"MissHill"]]',
         movables: '[[52,"BabySheep"]]',
         trainers: '[[105,5,"Alpinist"]]',
-    }
+        lairs: '[[1,7,"Lair01"],[13,7,"Lair27"],[179,3,"Lair15"],[165,5,"Lair23"]]',
+        monsterList: '["AngrySheep"]',
+        }
     ,
     46: {
         name: "KeyMistress",

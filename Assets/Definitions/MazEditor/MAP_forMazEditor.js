@@ -106,7 +106,11 @@ const DECAL_PAINTINGS = [
     "Domme241", "Domme242", "Domme243", "GirlOnStairs", "GirlOnStairs101", "GirlOnStairs102", "GirlOnStairs103", "GirlOnStairs104", "GirlOnStairs105", "GirlOnStairs106", "GirlOnStairs107", "SabreWulfAI_101", "SabreWulfAI_102",
     "SabreWulfAI_103", "ShinyBlackRuberella01", "ShinyBlackRuberella02", "ShinyBlackRuberella03", "ShinyBlackRuberella04", "ShinyBlackRuberella05", "ShinyBlackRuberella06", "ShinyBlackRuberella07", "ShinyBlackRuberella08",
     "ShinyBlackRuberella09", "ShinyBlackRuberella10", "ShinyBlackRuberella101", "ShinyBlackRuberella102", "ShinyBlackRuberella103", "ShinyBlackRuberella104", "ShinyBlackRuberella105", "ShinyBlackRuberella11", "ShinyBlackRuberella12",
-    "ShinyBlackRuberella13", "ShinyBlackRuberella14", "ShinyBlackRuberella15", "ShinyBlackRuberella16", "ShinyBlackRuberella17", "ShinyBlackRuberella18"
+    "ShinyBlackRuberella13", "ShinyBlackRuberella14", "ShinyBlackRuberella15", "ShinyBlackRuberella16", "ShinyBlackRuberella17", "ShinyBlackRuberella18",
+    "Domme301", "Domme302", "Domme303", "Domme304", "Domme305", "Domme306", "Domme307", "Domme308", "Domme309", "Domme310", "Domme311", "Domme312", "Domme313", "Domme314", "Domme315", "Domme316", "Domme317", "Domme318", "Domme319",
+    "Domme320", "Domme321", "Domme322", "Domme323", "Domme324", "Domme325", "Domme326", "Domme327", "Domme328", "Domme329", "Domme330", "Domme331", "Domme332", "Domme333", "Domme334", "Domme335", "Domme336", "Domme337", "Domme338",
+    "Domme339", "Domme340", "Domme341", "Domme342", "Domme343", "Domme344", "Domme345", "Domme346", "Domme347", "Domme348", "Domme349", "Domme350", "Domme351", "Domme352", "Domme353", "Domme354", "Domme355", "Domme356", "Domme357",
+    "Domme358", "Domme359", "Domme360", "Domme361", "Domme362", "Domme363", "Domme364", "Domme365", "Domme366", "Domme367", "Domme368", "Domme369", "Domme370", "Domme371", "Domme372", "Domme373", "Domme374", "Domme375"
 ].sort();
 
 /** Crests */
