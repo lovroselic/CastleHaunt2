@@ -1199,22 +1199,27 @@ const MAP = {
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
     }
     ,
-    53: {
-        name: "Shue Shop",
+    53 : {
+        name: "Shoe Shop",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"19","height":"19","map":"BB7AA11BABAA48BB2AA9BB3EAA6BB2AA3BB2AA18BB4AA16BAEAA35BB2AA11BB2AA3BB10ABB3AA3BAA4BB33AA2BB5ABABB2AA5BB3AA2BB4ABABB20ABB12AA2BB18EBB13ABB4$ABB10AA2B"}',
+        maxSpawned: 3,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"19","height":"19","map":"BB3ABB2ABB2AA11BABAA48BABAA8BB2AEAA5BB2AA3BAA4BAA11BABB3AA3BABAA13EAA31BAA6BB2AA9BB3AA3BB10ABB2AA2BB3AA4BB4ABB4ABB11AA2BB13ABABB4ABABAA2BAA2BB3AA2BB4ABABB20ABB2ABB8ABB12EBB17ABB4$ABB10AA2B"}',
         wall: "RedBricks1",
         floor: "Wood10",
         ceil: "Wood1",
         start: '[332,1]',
+        decals: '[[141,7,"Princess9","picture"],[143,7,"AI_pic257","picture"],[173,7,"Ishar80","picture"],[155,7,"HunchBack10","picture"],[167,7,"Fred100","picture"],[187,7,"Pitfall23","picture"],[23,7,"AticAtac205","picture"],[21,7,"Domme356","picture"],[25,7,"LargePicLadies06","picture"],[31,7,"CastleBabes28","picture"],[33,7,"CastleLady59","picture"],[35,7,"Princess409","picture"],[135,1,"CastleLady33","picture"],[120,1,"AI_pic244","picture"],[137,1,"Rambo11","picture"],[126,1,"PharaohCurse130","picture"],[149,1,"Portal130","picture"],[147,1,"Hero60","picture"],[141,1,"Princess418","picture"],[143,1,"LeisureSuitLarry90","picture"],[331,1,"ShinyBlackRuberella102","picture"],[320,1,"OilWell50","picture"],[338,1,"SP66","picture"],[333,1,"CastleLady112","picture"],[306,1,"TheHobbit72","picture"],[326,1,"LastNinja131","picture"],[237,4,"Drain2_96","crest"],[294,4,"PuddleDecal07","crest"],[199,4,"PuddleDecal04","crest"],[87,3,"Domme310","picture"],[83,5,"Princess408","picture"]]',
         lights: '[[347,1,"Fireplace09","fire"],[355,1,"Fireplace06","fire"],[9,7,"Fireplace05","fire"],[83,3,"WallLamp31","dim"],[87,5,"Candelabra05","dim"],[156,7,"Lights106","dim"],[166,7,"Lights115","dim"]]',
         gates: '[[351,1,"53.1","34.9","Closed"]]',
+        containers: '[[307,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",5],[174,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",5],[186,"Barrel","GOLD_ITEM_TYPE.SilverBar",3],[301,"Crate","GOLD_ITEM_TYPE.GoldCube",3],[41,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",7],[42,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",7],[52,"PlainCloset","GOLD_ITEM_TYPE.SilverBar",7],[53,"PlainCloset","GOLD_ITEM_TYPE.SilverBar",7],[192,"Crate","GOLD_ITEM_TYPE.GoldCube",7],[206,"Crate","GOLD_ITEM_TYPE.GoldCube",7],[287,"Barrel","GOLD_ITEM_TYPE.GoldCube",1],[319,"Barrel","GOLD_ITEM_TYPE.GoldCube",1]]',
         doors: '[64,68,142]',
         entities: '[[94,3,"BootMaker2"],[76,5,"BootMaker"]]',
-    }
+        oracles: '[[139,7,"ApparitiaFashion"],[145,7,"ApparitiaWhite"]]',
+        lairs: '[[247,5,"Lair35"],[246,3,"Lair36"]]',
+        monsterList: '["GhostMinion"]',
+        }
     ,
     54: {
         name: "Gold Mine",

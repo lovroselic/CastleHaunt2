@@ -149,7 +149,7 @@ const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerB
 
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
-const MAX_LAIR_COUNT = 34;
+const MAX_LAIR_COUNT = 49;
 for (let i = 1; i <= MAX_LAIR_COUNT; i++) {
     LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
 }
