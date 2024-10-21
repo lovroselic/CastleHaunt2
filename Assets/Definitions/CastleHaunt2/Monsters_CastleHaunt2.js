@@ -181,6 +181,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    PacGirl: {
+        name: "PacGirl",
+        sprite: "PacGirl",
+        category: 'crest',
+        voice: "Female",
+        text: "Don't you feel like PacMan collecting all those gold cubes?",
+        interactionCategory: "oracle",
+    },
     RuberellaInventory: {
         name: "RuberellaInventory",
         sprite: "RuberellaInventory",

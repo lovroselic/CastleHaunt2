@@ -152,11 +152,11 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 53;
+        GAME.level = 47;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
-        //53
-        GAME.gold = 4591;
+        //53-->34....->37-->34-->43---->47
+        GAME.gold = 2266;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -165,7 +165,7 @@ const DEBUG = {
 
         HERO.orbs = 3;
         HERO.orbsLost = 0;
-        HERO.magic = 14;
+        HERO.magic = 16;
         HERO.attack = 16;
 
         HERO.health = 136;
@@ -173,7 +173,7 @@ const DEBUG = {
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -190,14 +190,16 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GreenApple", "Gloves", "BabySheep",
+            "GreenApple", "Gloves",
             "FishBone", "Moon",
             "EmptyBottle", "SilverBar",
             "Fish", "LeatherHide",
-            "LeatherHide", "FishBone", "BabySheep",
+            "FishBone", 
             "GoldCoin",
-            "Apple", "BabySheep", "LeatherHide",
-            "BabySheep","ScubaMask","Frog",
+            "Apple", 
+             "ScubaMask", "Frog",
+            "HikingBoot", 
+            "WoolenCap"
 
             //debug
 
@@ -236,7 +238,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.10.38",
+    VERSION: "0.10.40",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
