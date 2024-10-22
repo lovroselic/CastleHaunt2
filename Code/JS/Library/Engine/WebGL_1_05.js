@@ -3069,6 +3069,7 @@ class $3D_Entity {
         this.swordTipDistance = null;                                       //attack priority resolution
         this.dirStack = [];
         this.final_boss = false;
+        this.boss = false;
         this.dropped = false;                                               //spawned as a trap
         this.texture = null;                                                //model is the texture source, until change is forced
         this.resetTime();
@@ -3340,6 +3341,9 @@ class $3D_Entity {
         const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
         orb.createTexture();
         ITEM3D.add(orb);
+    }
+    drainMana() {
+        this.mana = 0;
     }
     shoot() {
         const dir = Vector3.from_2D_dir(this.moveState.lookDir);

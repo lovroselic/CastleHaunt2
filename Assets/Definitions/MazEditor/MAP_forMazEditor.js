@@ -110,7 +110,13 @@ const DECAL_PAINTINGS = [
     "Domme301", "Domme302", "Domme303", "Domme304", "Domme305", "Domme306", "Domme307", "Domme308", "Domme309", "Domme310", "Domme311", "Domme312", "Domme313", "Domme314", "Domme315", "Domme316", "Domme317", "Domme318", "Domme319",
     "Domme320", "Domme321", "Domme322", "Domme323", "Domme324", "Domme325", "Domme326", "Domme327", "Domme328", "Domme329", "Domme330", "Domme331", "Domme332", "Domme333", "Domme334", "Domme335", "Domme336", "Domme337", "Domme338",
     "Domme339", "Domme340", "Domme341", "Domme342", "Domme343", "Domme344", "Domme345", "Domme346", "Domme347", "Domme348", "Domme349", "Domme350", "Domme351", "Domme352", "Domme353", "Domme354", "Domme355", "Domme356", "Domme357",
-    "Domme358", "Domme359", "Domme360", "Domme361", "Domme362", "Domme363", "Domme364", "Domme365", "Domme366", "Domme367", "Domme368", "Domme369", "Domme370", "Domme371", "Domme372", "Domme373", "Domme374", "Domme375"
+    "Domme358", "Domme359", "Domme360", "Domme361", "Domme362", "Domme363", "Domme364", "Domme365", "Domme366", "Domme367", "Domme368", "Domme369", "Domme370", "Domme371", "Domme372", "Domme373", "Domme374", "Domme375",
+    "ApparitiaFrame135", "ApparitiaFrame136", "ApparitiaFrame137", "ApparitiaFrame138", "ApparitiaFrame139", "ApparitiaFrame235", "ApparitiaFrame236", "ApparitiaFrame237", "ApparitiaFrame238", "ApparitiaFrame239",
+    "ApparitiaFrame240", "Domme401", "Domme402", "Domme403", "Domme404", "Domme405", "Domme406", "Domme407", "Domme408", "Domme409", "Domme410", "Domme411", "Domme412", "Domme413", "FemaleWarrior101",
+    "FemaleWarrior102", "FemaleWarrior103", "FemaleWarrior104", "FemaleWarrior105", "FemaleWarrior106", "FemaleWarrior107", "FemaleWarrior108", "FemaleWarrior109", "FemaleWarrior201", "FemaleWarrior202",
+    "FemaleWarrior203", "FemaleWarrior204", "FemaleWarrior205", "FemaleWarrior206", "FemaleWarrior207", "FemaleWarrior208", "FemaleWarrior209", "FemaleWarrior210", "FemaleWarrior211", "FemaleWarrior212",
+    "Morana035", "Morana036", "Morana037", "Morana038", "Morana039", "Morana040", "Morana041", "Morana042", "Morana043", "Morana044", "Morana045", "Morana046", "Morana047", "Morana135", "Morana136",
+    "Morana137", "Morana138", "Morana139", "Princess601", "Princess602", "Princess603", "Princess604", "Princess605", "Princess606", "Princess607", "Princess608", "Princess609", "Princess610", "Princess611"
 ].sort();
 
 /** Crests */

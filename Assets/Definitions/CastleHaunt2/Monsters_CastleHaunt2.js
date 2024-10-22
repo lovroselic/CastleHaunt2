@@ -24,7 +24,8 @@ for (let [index, key] of KEY_TYPES.entries()) {
 }
 
 const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeapon", "BoostArmor", "DestroyArmor", "DestroyWeapon",
-    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar"];
+    "Petrify", "MagicBoost", "Luck", "HalfLife", "Explode", "Radar",
+    "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
     KickShrine: {
@@ -181,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    ButterWasp: {
+        name: "ButterWasp",
+        sprite: "ButterWasp",
+        category: 'crest',
+        voice: "Female2",
+        text: "If your inventory is full you can't pick anything. Not even your orbs. Be careful.",
+        interactionCategory: "oracle",
+    },
     PacGirl: {
         name: "PacGirl",
         sprite: "PacGirl",
@@ -1171,6 +1180,7 @@ const MONSTER_TYPE = {
         material: MATERIAL.gold,
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
+        boss: true,
     },
     Goblin: {
         name: "Goblin",
@@ -2928,7 +2938,7 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfect! Now I can train harder. Here's your gold coin—earned through sweat and strength!"
         }
     },
-    
+
     ApplePicker: {
         name: "ApplePicker",
         sprite: "ApplePicker",
@@ -3738,7 +3748,7 @@ const INTERACTION_SHRINE = {
             conclusion: "That coin's bought you some serious sword skills. Now go forth and let your enemies fear your blade!"
         }
     },
-    
+
 
 
 };

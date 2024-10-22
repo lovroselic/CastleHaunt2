@@ -152,10 +152,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 50;
+        GAME.level = 50; //52 unlocked cont there!
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
-        //53-->34....->37-->34-->43---->47-->34-->53-->34-->50
+        //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50
         GAME.gold = 2868;
         GAME.lives = 3;
 
@@ -168,7 +168,7 @@ const DEBUG = {
         HERO.magic = 16;
         HERO.attack = 16;
 
-        HERO.health = 90;
+        HERO.health = 64;
         HERO.maxHealth = 136;
 
 
@@ -177,7 +177,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -211,7 +211,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Gold"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -237,10 +237,12 @@ const INI = {
         BeerHealth: 120,
     },
     HEALTH_INC: 8,
+    SCROLL_RANGE: 11,
+    CRIPPLE_SPEED: 0.1
 };
 
 const PRG = {
-    VERSION: "0.10.41",
+    VERSION: "0.11.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -392,11 +394,12 @@ class Scroll {
     action() {
         console.warn("scroll action", this);
         let T;
+        let count = 0;
         switch (this.type) {
             case "Cripple":
                 for (let enemy of ENTITY3D.POOL) {
                     if (enemy === null) continue;
-                    if (enemy.final_boss) continue;
+                    if (enemy.final_boss || enemy.boss) continue;
                     if (enemy.distance === null) continue;
                     if (enemy.distance <= INI.SCROLL_RANGE) {
                         enemy.moveSpeed = INI.CRIPPLE_SPEED;
@@ -433,6 +436,71 @@ class Scroll {
                 ];
 
                 HERO.speak(escapeTexts.chooseRandom());
+                break;
+            case "Death":
+                for (let enemy of ENTITY3D.POOL) {
+                    if (enemy === null) continue;
+                    if (enemy.final_boss || enemy.boss) continue;
+                    if (enemy.distance === null) continue;
+                    if (enemy.distance <= INI.SCROLL_RANGE) {
+                        enemy.die();
+                        count++;
+                    }
+                }
+                if (count === 0) return;
+                const masacreTexts = [
+                    "I feel naughty.",
+                    "I just burned them all. Almost.",
+                    "Burn bastards.",
+                    "Oops, did I do that?",
+                    "I guess I won't need a mop.",
+                    "That was… efficient.",
+                    "Well, that escalated quickly.",
+                    "Cleanup in the dungeon!",
+                    "Don't mess with royalty!",
+                    "So much for diplomacy.",
+                    "Consider yourself... canceled.",
+                    "Guess that's one way to solve a problem.",
+                    "Who's next? Oh wait, no one!",
+                    "I came, I saw, I obliterated."
+                ];
+
+                HERO.speak(masacreTexts.chooseRandom());
+                break;
+            case "MagicSupremacy":
+                for (let enemy of ENTITY3D.POOL) {
+                    if (enemy === null) continue;
+                    if (enemy.final_boss || enemy.boss) continue;
+                    if (enemy.distance === null) continue;
+                    if (enemy.distance <= INI.SCROLL_RANGE) {
+                        count++;
+                        enemy.drainMana();
+                    }
+                }
+                if (count === 0) return;
+                const drainTexts = [
+                    "I squeezed the magic out of them.",
+                    "Made them magic virgins.",
+                    "No green meanies from them anymore.",
+                    "I made them ballless. Ha ha.",
+                    "Oops, guess you're powerless now!",
+                    "Look who's out of tricks.",
+                    "I drained them dry. Magic, I mean.",
+                    "And poof! No more spells for you.",
+                    "I took their magic, and their dignity.",
+                    "Looks like someone's got mana issues now.",
+                    "No more green balls? What a shame.",
+                    "Their magic went bye bye!",
+                    "I guess I'll hold onto that mana, thanks.",
+                    "No spells? Guess it's fistfight time!",
+                    "Who needs magic anyway, right?"
+                ];
+                HERO.speak(drainTexts.chooseRandom());
+                break;
+            case "DestroyOrbs":
+                for (let missile of MISSILE3D.POOL) {
+                    if (!missile.friendly) missile.explode(MISSILE3D);
+                }
                 break;
             default:
                 console.error("ERROR scroll action", this);
