@@ -703,6 +703,14 @@ const ORACLE_TYPE = {
         text: "White is the new white.",
         interactionCategory: "oracle",
     },
+    ApparitiaHorny: {
+        name: "ApparitiaHorny",
+        sprite: "ApparitiaHorny",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "So you prefer Horny girls and their magical approach?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1251,6 +1259,25 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    Viking: {
+        name: "Viking",
+        model: "Viking",
+        scale: 0.9 / 2 ** 8,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 50,
+        attack: 50,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "HumanAttack1",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [7, ["wanderer"], 4, ["advancer"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.standard,
+    },
 
     /** */
 
@@ -1316,29 +1343,6 @@ const MONSTER_TYPE = {
         missile: Missile,
         missileType: COMMON_ITEM_TYPE.Fireball,
     },
-
-    Viking: {
-        name: "Viking",
-        model: "Viking",
-        scale: 0.9 / 2 ** 8,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 20,
-        defense: 10,
-        magic: 5,
-        health: 25,
-        xp: 30,
-        gold: 30,
-        attackSound: "HumanAttack1",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [7, ["wanderer"], 4, ["advancer"]],
-        moveSpeed: 1.0,
-        material: MATERIAL.standard,
-    },
-
-
     Astro: {
         name: "Astro",
         model: "Astro",

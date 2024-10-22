@@ -147,16 +147,18 @@ const DEBUG = {
 
         * temple1 usage:
             * heart
+            * magic
         * temple2 usage
+        *  heart
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 50; //52 unlocked cont there!
+        GAME.level = 51;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
-        //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50
-        GAME.gold = 2868;
+        //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
+        GAME.gold = 3652;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -165,20 +167,20 @@ const DEBUG = {
 
         HERO.orbs = 3;
         HERO.orbsLost = 0;
-        HERO.magic = 16;
+        HERO.magic = 18;
         HERO.attack = 16;
 
-        HERO.health = 64;
+        HERO.health = 75;
         HERO.maxHealth = 136;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -186,6 +188,15 @@ const DEBUG = {
             let item = new ActionItem(obj.which, obj.inventorySprite);
             HERO.inventory.scroll.add(item);
         }
+
+        let scrollTypes = [
+            "DestroyOrbs", "MagicSupremacy"
+        ];
+        for (let scrType of scrollTypes) {
+            let scroll = new Scroll(scrType);
+            HERO.inventory.scroll.add(scroll);
+        }
+
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
@@ -195,13 +206,13 @@ const DEBUG = {
             "EmptyBottle", "SilverBar",
             "Fish",
             "FishBone",
-            "GoldCoin",
             "Apple",
             "ScubaMask", "Frog",
             "HikingBoot",
             "WoolenCap",
             "GoldBar",
             "HikingBoot",
+            "Frog", "Fish",
 
             //debug
 
@@ -242,7 +253,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.00",
+    VERSION: "0.11.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

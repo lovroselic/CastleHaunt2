@@ -791,7 +791,7 @@ LoadObjects = [
 ];
 
 LoadModels = [
-    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf"
+    'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
 ];
 
 LoadSprites = [
@@ -821,6 +821,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaBored.jpg", name: "ApparitiaBored" },
     { srcName: "EntityPictures/ApparitiaFashion.jpg", name: "ApparitiaFashion" },
     { srcName: "EntityPictures/ApparitiaWhite.jpg", name: "ApparitiaWhite" },
+    { srcName: "EntityPictures/ApparitiaHorny.jpg", name: "ApparitiaHorny" },
 
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },

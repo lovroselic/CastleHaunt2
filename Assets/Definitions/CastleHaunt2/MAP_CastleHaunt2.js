@@ -1151,7 +1151,7 @@ const MAP = {
         entities: '[[217,1,"Blacksmistress"]]',
     }
     ,
-    50 : {
+    50: {
         name: "Barefoot Twins",
         sg: 0,
         maxSpawned: 2,
@@ -1165,14 +1165,14 @@ const MAP = {
         decals: '[[185,3,"AA_CREST_AI","crest"],[219,3,"AA_CREST_AI","crest"],[83,3,"KnightStatue104","crest"],[117,3,"KnightStatue102","crest"],[144,4,"FloorGrille111","crest"],[25,4,"PersianRug06","crest"],[263,4,"PersianRug06","crest"],[1,7,"Ishar11","picture"],[13,7,"LCP","picture"],[20,7,"Skyrim3","picture"],[23,7,"CastleBabes15","picture"],[29,7,"KQ102","picture"],[27,7,"Domme109","picture"],[110,7,"ImpossibleMsission112","picture"],[142,7,"ShinyBlackRuberella14","picture"],[142,1,"ReturnToCastleWolfenstein11","picture"],[274,1,"CastleLady73","picture"],[285,1,"Domme213","picture"],[258,1,"Domme374","picture"],[261,1,"CastleLady09","picture"],[178,1,"SVS132","picture"],[265,1,"CastleLady27","picture"],[267,1,"TombRaider97","picture"],[34,5,"Dominatrix09","picture"],[255,5,"JupiterLander99","picture"],[103,5,"BC90","picture"],[52,5,"CrystalCastles200","picture"],[171,5,"CastleBabes09","picture"],[222,5,"KQ101","picture"],[110,5,"HunchBack10","picture"],[178,5,"Princess16","picture"],[110,3,"Princess7","picture"],[178,3,"Infiltrator60","picture"],[142,3,"LSL100","picture"]]',
         lights: '[[110,1,"Lights102","standard"],[178,7,"WallLamp12","standard"],[142,5,"Lamp41","standard"]]',
         gates: '[[136,5,"50.1","34.8","Closed"],[101,3,"50.2","51.1","Green"],[203,3,"50.3","52.1","Blue"]]',
-        scrolls: '[[141,16]]',
         gold: '[[73,"SilverBar"],[208,"SilverBar"],[232,"SilverBar"],[148,"SilverBar"],[62,"SilverBar"]]',
         containers: '[[127,"Barrel","INTERACTION_ITEM.Fish",7],[256,"Closet","INTERACTION_ITEM.Boots",5],[18,"Barrel","INTERACTION_ITEM.Frog",7],[30,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[268,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
         entities: '[[8,7,"RestingBabe1"],[280,1,"RestingBabe2"]]',
+        objects: '[[151,"Steak"]]',
         oracles: '[[152,3,"Kneel"],[85,5,"ButterWasp"]]',
         lairs: '[[33,3,"Lair27"],[271,3,"Lair32"]]',
         monsterList: '["GhostMinion"]',
-        }
+    }
     ,
     51: {
         name: "Dangerous Girls",
@@ -1190,21 +1190,29 @@ const MAP = {
         trainers: '[[6,7,"Barbarian"],[162,1,"NymphWarrior"]]',
     }
     ,
-    52: {
+    52 : {
         name: "Horny Girls",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB2AA2BB6AA14BB2AA36BABAA16BABB11AA2BB15ABB7ABB4AA6BB7ABB13ABB12ABB4$"}',
+        maxSpawned: 1,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"13","height":"13","map":"BB2ABAA2BABB2AA3BAA3BB2AA3BAA19BAA12BAA2BB2AA9BB5AA2BB2AA4BAA9BB3ABABB6AA4BB10ABB10ABAA2BB2AA3BAA2BAA2BB2ABABABB17A$"}',
         wall: "BlackWall44",
         floor: "MarbleFloor103",
         ceil: "DarkBricks111",
         start: '[79,5]',
+        decals: '[[73,3,"CastleLady108","picture"],[99,3,"Domme326","picture"],[63,3,"AticAtac113","picture"],[37,3,"Domme133","picture"],[115,3,"Fred_AI_3","picture"],[141,3,"Tutankham104","picture"],[148,3,"Underwurlde141","picture"],[73,5,"DungeonMaster92","picture"],[99,5,"Ski64","picture"],[66,5,"Domme410","picture"],[52,5,"PrincessAI_09","picture"],[17,3,"Domme220","picture"],[13,5,"Princess201","picture"],[92,5,"EricTheViking10","picture"],[133,5,"SabreWulfAI_103","picture"],[143,5,"KL10","picture"],[30,5,"Oblivion141","picture"],[41,5,"AmberStar203","picture"],[73,7,"ArticShipwreck2","picture"],[1,7,"CrystalCastles90","picture"],[19,7,"HeavyOnTheMagick60","picture"],[10,7,"ManicMiner61","picture"],[105,7,"Domme305","picture"],[99,1,"AlleyKat","picture"],[166,1,"AI_PIC_442","picture"],[149,1,"BCAI2","picture"],[160,1,"CastleLady112","picture"],[133,1,"Domme224","picture"],[66,1,"PWE","picture"]]',
         lights: '[[73,1,"Lamp49","dim"],[99,7,"Candelabra11","dim"]]',
         gates: '[[78,5,"52.1","50.3","Open"]]',
+        scrolls: '[[118,15],[60,16]]',
+        gold: '[[86,"GreenGem"]]',
+        containers: '[[16,"TreasureChest","SKILL_ITEM_TYPE.Magic",3]]',
+        objects: '[[84,"BeerHealth"]]',
+        oracles: '[[90,3,"ApparitiaHorny"]]',
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
-    }
+        lairs: '[[25,3,"Lair06"],[155,3,"Lair49"]]',
+        monsterList: '["Viking"]',
+        }
     ,
     53: {
         name: "Shoe Shop",
