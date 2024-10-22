@@ -955,7 +955,7 @@ const MAP = {
         monsterList: '["Goblin","GhostMinion","GhostMinion"]',
     }
     ,
-    41 : {
+    41: {
         name: "Staircase East",
         sg: 0,
         maxSpawned: 4,
@@ -976,9 +976,9 @@ const MAP = {
         oracles: '[[179,3,"HornySitting"]]',
         lairs: '[[105,5,"Lair16"],[89,3,"Lair30"],[149,3,"Lair16"]]',
         monsterList: '["GhostMinion","AngrySheep","Goblin","MissGalaxyGold","MissGalaxy","Wolf"]',
-        }
+    }
     ,
-    42 : {
+    42: {
         name: "Seamstress",
         sg: 0,
         maxSpawned: 4,
@@ -1001,9 +1001,9 @@ const MAP = {
         movables: '[[164,"BabySheep"]]',
         lairs: '[[1,7,"Lair27"],[295,1,"Lair04"],[41,3,"Lair13"],[293,3,"Lair14"]]',
         monsterList: '["MissGalaxyGold","Goblin","Goblin","GhostMinion","AngrySheep","AngrySheep"]',
-        }
+    }
     ,
-    43 : {
+    43: {
         name: "Meadow",
         sg: 0,
         maxSpawned: 3,
@@ -1025,9 +1025,9 @@ const MAP = {
         movables: '[[115,"BabySheep"]]',
         lairs: '[[6,7,"Lair01"],[301,1,"Lair30"],[307,1,"Lair16"],[230,3,"Lair10"]]',
         monsterList: '["MissGalaxyGold","Goblin","Goblin"]',
-        }
+    }
     ,
-    44 : {
+    44: {
         name: "Hedge of the Hog",
         sg: 0,
         maxSpawned: 4,
@@ -1048,9 +1048,9 @@ const MAP = {
         movables: '[[156,"BabySheep"]]',
         lairs: '[[7,7,"Lair17"],[15,7,"Lair24"],[301,1,"Lair04"],[309,1,"Lair13"]]',
         monsterList: '["MissGalaxyGold","Goblin","GhostMinion"]',
-        }
+    }
     ,
-    45 : {
+    45: {
         name: "Alps",
         sg: 0,
         maxSpawned: 4,
@@ -1072,7 +1072,7 @@ const MAP = {
         trainers: '[[105,5,"Alpinist"]]',
         lairs: '[[1,7,"Lair01"],[13,7,"Lair27"],[179,3,"Lair15"],[165,5,"Lair23"]]',
         monsterList: '["AngrySheep"]',
-        }
+    }
     ,
     46: {
         name: "KeyMistress",
@@ -1094,7 +1094,7 @@ const MAP = {
         movables: '[[179,"BabySheep"]]',
     }
     ,
-    47 : {
+    47: {
         name: "Smithy",
         sg: 0,
         maxSpawned: 6,
@@ -1105,7 +1105,7 @@ const MAP = {
         floor: "ComplexFloor2",
         ceil: "GoldWithVines2",
         start: '[137,5]',
-        decals: '[[140,3,"LaughingSkeleton3","crest"],[5,7,"CastleLady107","picture"],[9,7,"Dominatrix11","picture"],[12,7,"BoogaBoo90","picture"],[15,7,"CastleBabes10","picture"],[1,7,"AI_PIC_317","picture"],[88,7,"Domme342","picture"],[190,7,"Witcher103","picture"],[80,7,"BookShelf26","picture"],[211,7,"Domme126","picture"],[83,7,"Unknown502","picture"],[215,7,"Drelbs3","picture"],[185,7,"Princess9","picture"],[154,7,"RedWarrior1","picture"],[189,1,"AI_PIC_315","picture"],[120,1,"CastleLady12","picture"],[195,1,"CrawlMaster131","picture"],[134,1,"Ishar98","picture"],[185,1,"Fred102","picture"],[287,1,"Domme324","picture"],[283,1,"Serpentine50","picture"],[273,1,"CastleBabes13","picture"],[275,1,"AticAtac200","picture"],[88,1,"AI_pic253","picture"],[277,1,"CastleLady50","picture"],[279,1,"LargePicLadies16","picture"],[251,1,"Ishar14","picture"],[199,1,"TombRaider101","picture"],[80,1,"GirlSwims15","picture"],[77,1,"Hero104","picture"],[3,7,"MoonPatrol500","picture"],[134,7,"Domme105","picture"],[76,7,"ShieldDecal08","crest"]]',
+        decals: '[[140,3,"LaughingSkeleton3","crest"],[5,7,"CastleLady107","picture"],[9,7,"Dominatrix11","picture"],[12,7,"BoogaBoo90","picture"],[15,7,"CastleBabes10","picture"],[1,7,"AI_PIC_317","picture"],[88,7,"Domme342","picture"],[190,7,"Witcher103","picture"],[80,7,"BookShelf26","picture"],[211,7,"Domme126","picture"],[83,7,"Unknown502","picture"],[215,7,"Drelbs3","picture"],[185,7,"Princess9","picture"],[154,7,"RedWarrior1","picture"],[189,1,"AI_PIC_315","picture"],[120,1,"CastleLady12","picture"],[195,1,"CrawlMaster131","picture"],[134,1,"Ishar98","picture"],[185,1,"Fred102","picture"],[287,1,"Domme324","picture"],[283,1,"Serpentine50","picture"],[273,1,"CastleBabes13","picture"],[275,1,"AticAtac200","picture"],[88,1,"AI_pic253","picture"],[277,1,"CastleLady50","picture"],[279,1,"LargePicLadies16","picture"],[251,1,"Ishar14","picture"],[199,1,"TombRaider101","picture"],[80,1,"GirlSwims15","picture"],[77,1,"Hero104","picture"],[3,7,"MoonPatrol500","picture"],[134,7,"Domme105","picture"],[76,7,"ShieldDecal08","crest"],[67,3,"CastleLady73","picture"],[74,3,"AI_PIC_314","picture"],[271,3,"Fred21","picture"],[244,3,"Scarab200","picture"],[210,3,"Apshai10","picture"],[203,3,"SVS101","picture"],[169,3,"Domme302","picture"],[101,3,"SVS131","picture"],[133,3,"Tutankhamun88","picture"],[68,5,"ShinyBlackRuberella08","picture"],[17,5,"Barbarian3","picture"],[204,5,"RobinOfTheWood4","picture"],[227,5,"Domme350","picture"],[120,5,"DemonSkull3","crest"],[154,5,"DemonSkull3","crest"],[92,5,"Skull20","crest"],[177,5,"Skull20","crest"],[130,4,"Grate1_128","crest"],[55,5,"CastleLady57","picture"],[240,5,"CastleBabes19","picture"],[45,7,"Pitfall96","picture"],[263,5,"Domme219","picture"],[142,3,"LaughingSkeleton5","crest"],[160,5,"LaughingSkeleton4","crest"]]',
         lights: '[[78,7,"Candelabra17","standardDimmed"],[108,3,"Candelabra17","weakCandle"],[176,3,"Candelabra12","weakCandle"],[33,3,"WallLamp19","standard"],[237,3,"WallLamp35","standard"]]',
         gates: '[[136,5,"47.1","34.6","Closed"]]',
         monsters: '[[117,"GhostMinion"],[168,"GhostMinion"],[49,"GhostMinion"],[43,"GhostMinion"],[39,"GhostMinion"],[71,"GhostMinion"],[224,"GhostMinion"],[258,"GhostMinion"],[261,"GhostMinion"],[231,"GhostMinion"],[268,"GhostMinion"],[201,"GhostMinion"],[146,"GhostMinion"]]',
@@ -1114,7 +1114,7 @@ const MAP = {
         entities: '[[214,1,"AlloyaPinkass"]]',
         objects: '[[117,"GoldBar"],[19,"Cake"],[257,"Cake"],[129,"Steak"]]',
         oracles: '[[125,5,"PacGirl"]]',
-        }
+    }
     ,
     48: {
         name: "Gem Mine",
@@ -1154,20 +1154,23 @@ const MAP = {
     50: {
         name: "Barefoot Twins",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB4AA2BB6ABAA31BAA31BB2AA5BABAA5BAA63BAA17BB14ABB2AA2BB32AA2BAA3BB4AA2BAA6BB7ABB3ABB7ABB18$BB6A"}',
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"17","height":"17","map":"BB3AA2BB7AA8BAA22BAA31BB2AA4BABAA6BAA34BAA13BAA17BAA16BB2AA3BABB11ABB2AA2BB16ABB16ABABB2AA2BB7AA4BAA6BB4ABABB2ABB23A$"}',
         wall: "BlackWall42",
         floor: "MarbleFloor101",
         ceil: "DarkBrick113",
         start: '[137,5]',
-        decals: '[[185,3,"AA_CREST_AI","crest"],[219,3,"AA_CREST_AI","crest"],[83,3,"KnightStatue104","crest"],[117,3,"KnightStatue102","crest"]]',
+        decals: '[[185,3,"AA_CREST_AI","crest"],[219,3,"AA_CREST_AI","crest"],[83,3,"KnightStatue104","crest"],[117,3,"KnightStatue102","crest"],[144,4,"FloorGrille111","crest"],[25,4,"PersianRug06","crest"],[263,4,"PersianRug06","crest"]]',
         lights: '[[110,1,"Lights102","standard"],[178,7,"WallLamp12","standard"],[142,5,"Lamp41","standard"]]',
         gates: '[[136,5,"50.1","34.8","Closed"],[101,3,"50.2","51.1","Green"],[203,3,"50.3","52.1","Blue"]]',
-        containers: '[[127,"Barrel","INTERACTION_ITEM.Fish",7],[256,"Closet","INTERACTION_ITEM.Boots",5],[18,"Barrel","INTERACTION_ITEM.Frog",7]]',
+        gold: '[[73,"SilverBar"],[208,"SilverBar"],[232,"SilverBar"],[148,"SilverBar"],[62,"SilverBar"]]',
+        containers: '[[127,"Barrel","INTERACTION_ITEM.Fish",7],[256,"Closet","INTERACTION_ITEM.Boots",5],[18,"Barrel","INTERACTION_ITEM.Frog",7],[30,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[268,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
         entities: '[[8,7,"RestingBabe1"],[280,1,"RestingBabe2"]]',
         oracles: '[[152,3,"Kneel"]]',
+        lairs: '[[33,3,"Lair27"],[271,3,"Lair32"]]',
+        monsterList: '["GhostMinion"]',
     }
     ,
     51: {
@@ -1202,7 +1205,7 @@ const MAP = {
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
     }
     ,
-    53 : {
+    53: {
         name: "Shoe Shop",
         sg: 0,
         maxSpawned: 3,
@@ -1222,7 +1225,7 @@ const MAP = {
         oracles: '[[139,7,"ApparitiaFashion"],[145,7,"ApparitiaWhite"]]',
         lairs: '[[247,5,"Lair35"],[246,3,"Lair36"]]',
         monsterList: '["GhostMinion"]',
-        }
+    }
     ,
     54: {
         name: "Gold Mine",
@@ -1390,7 +1393,7 @@ const MAP = {
         oracles: '[[55,5,"RedheadSittingDomme"]]',
     }
     ,
-    62 : {
+    62: {
         name: "Temple of Saint Heels",
         sg: 0,
         maxSpawned: -1,
@@ -1413,5 +1416,5 @@ const MAP = {
         entities: '[[357,1,"Rugrat"],[351,1,"Strongarmed"]]',
         traps: '[[207,3,"SmoothWallButton",0,"Bounceball",135]]',
         oracles: '[[171,5,"ApparitiaGrin"]]',
-        }
+    }
 };
