@@ -1284,13 +1284,13 @@ const MAP = {
         objects: '[[133,"GreenGem"],[231,"Pear"],[192,"Banana"]]',
     }
     ,
-    56: {
+    56 : {
         name: "Cellar",
         sg: 0,
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB2ABB7AA9BAA43BAA2BAA10BAA22BABABAA10BAA5BAA8BB2ABABABAA6BAA9BB11ABABB39ABB6ABAA2BABAA2BB3AA2BB3AA10BABB5ABABB37A$"}',
+        data: '{"width":"17","height":"17","map":"BB2AA2BB7AA10BAA42BAA3BAA10BAA8BAA3BAA12BAA14BAA5BAA6BB3ABAA2BB2AA8BAA6BABB2ABB9ABABB17ABB26ABB4ABAA4BAA2BB4AA2BB4AA7BABABB4ABABB3AA2BB23A$"}',
         wall: "DarkBricks101",
         floor: "GreyRocks42",
         ceil: "PebbleWall2",
@@ -1299,7 +1299,7 @@ const MAP = {
         gates: '[[8,7,"56.1","34.12","Up"]]',
         containers: '[[32,"TreasureChest","INTERACTION_ITEM.Moon",7],[256,"BookShelf","INTERACTION_ITEM.Scissors",5]]',
         entities: '[[280,1,"DyeMaker"]]',
-    }
+        }
     ,
     57: {
         name: "Crypt",
