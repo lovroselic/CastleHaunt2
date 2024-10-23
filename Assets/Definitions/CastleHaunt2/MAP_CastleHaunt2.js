@@ -1174,21 +1174,29 @@ const MAP = {
         monsterList: '["GhostMinion"]',
     }
     ,
-    51: {
+    51 : {
         name: "Dangerous Girls",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB9AA24BAA13BAA33BABB11ABB23ABB3AA3BAA4BB15ABABB20A$"}',
+        maxSpawned: 1,
+        killCountdown: 3,
+        spawnDelay: 5000,
+        data: '{"width":"13","height":"13","map":"BB7AA20BAA3BAA3BB2AA12BB2ABAA7BAA14BB2AA2BB2AA7BB2AA5BB3AA2BB3ABB14ABB7AA2BB2AA4BAA2BAA3BB3ABABAA2BB18A$"}',
         wall: "BlackWall43",
         floor: "MarbleFloor102",
         ceil: "DarkBricks110",
         start: '[79,5]',
+        decals: '[[66,5,"Montezumas revenge2","picture"],[52,5,"DM105","picture"],[92,5,"AI_Pic_144","picture"],[104,5,"RickDangerous70","picture"],[13,5,"AI_pic224","picture"],[143,5,"DungeonMaster92","picture"],[41,5,"CastleBabes29","picture"],[30,5,"AI_Pic_126","picture"],[119,5,"MonkeyIsland142","picture"],[134,5,"Domme349","picture"],[84,3,"ShinyBlackRuberella103","picture"],[25,3,"LargePicLadies07","picture"],[155,3,"CastleLady62","picture"],[140,3,"BruceLee200","picture"],[36,3,"Platoon50","picture"],[21,7,"Domme127","picture"],[9,7,"DommeInGrass1","picture"],[151,1,"Neptunes daughters","picture"],[165,1,"AMC3","picture"],[140,1,"CastleLady70","picture"],[36,7,"TempleOfApshai70","picture"],[81,4,"FloorGrille103","crest"],[17,3,"Dominatrix03","picture"],[147,3,"ShinyBlackRuberella10","picture"],[63,3,"WallSkelly102","crest"],[115,3,"Skeleton21","crest"]]',
         lights: '[[84,1,"Candelabra04","standardDimmed"],[84,7,"WallLamp9","standardDimmed"],[84,5,"Candelabra15","standardDimmed"]]',
         gates: '[[78,5,"51.1","50.2","Open"]]',
+        scrolls: '[[154,14],[85,16]]',
+        gold: '[[24,"GreenGem"]]',
+        containers: '[[16,"IronChest","SKILL_ITEM_TYPE.Attack",3]]',
+        objects: '[[86,"BeerHealth"]]',
+        oracles: '[[90,3,"ApparitiaDangerous"]]',
         trainers: '[[6,7,"Barbarian"],[162,1,"NymphWarrior"]]',
-    }
+        lairs: '[[51,3,"Lair16"],[129,3,"Lair47"]]',
+        monsterList: '["GhostMinionGreen"]',
+        }
     ,
     52 : {
         name: "Horny Girls",

@@ -150,15 +150,17 @@ const DEBUG = {
             * magic
         * temple2 usage
         *  heart
+        * magic
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 51;
+        GAME.level = 34;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
         //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
-        GAME.gold = 3652;
+        //50-->34-->62--34
+        GAME.gold = 652;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -167,10 +169,10 @@ const DEBUG = {
 
         HERO.orbs = 3;
         HERO.orbsLost = 0;
-        HERO.magic = 18;
+        HERO.magic = 20;
         HERO.attack = 16;
 
-        HERO.health = 75;
+        HERO.health = 136;
         HERO.maxHealth = 136;
 
 
@@ -253,7 +255,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.01",
+    VERSION: "0.11.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
