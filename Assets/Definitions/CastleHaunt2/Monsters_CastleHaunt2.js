@@ -182,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Masked: {
+        name: "Masked",
+        sprite: "Masked",
+        category: 'crest',
+        voice: "Female",
+        text: "Be smart, search for shortcuts.",
+        interactionCategory: "oracle",
+    },
     RuberellaDontshoot: {
         name: "RuberellaDontshoot",
         sprite: "RuberellaDontshoot",

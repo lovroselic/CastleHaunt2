@@ -1074,7 +1074,7 @@ const MAP = {
         monsterList: '["AngrySheep"]',
     }
     ,
-    46: {
+    46 : {
         name: "KeyMistress",
         sg: 0,
         maxSpawned: 6,
@@ -1085,13 +1085,21 @@ const MAP = {
         floor: "MossyWall33",
         ceil: "GoldBlackWallwithPillar",
         start: '[187,3]',
-        lights: '[[170,7,"Lamp40","standardDimmed"]]',
+        decals: '[[205,3,"LaughingSkeleton2","crest"],[163,3,"LaughingSkeleton2","crest"],[163,5,"LaughingSkeleton1","crest"],[205,5,"LaughingSkeleton1","crest"],[182,5,"LaughingSkeleton6","crest"],[121,5,"RedWarrior1","picture"],[226,5,"BookShelf19","picture"],[59,5,"AI_Pic_123","picture"],[54,5,"GirlSwims02","picture"],[109,5,"Domme108","picture"],[189,5,"RobinsonsRequiem1","picture"],[231,5,"Domme340","picture"],[90,5,"ZimSalaBim201","picture"],[239,5,"Witcher102","picture"],[285,5,"CastleLady42","picture"],[63,5,"Domme132","picture"],[273,5,"Pacman201","picture"],[215,1,"ApparitiaFrame239","picture"],[355,1,"Babes405","picture"],[265,1,"Morana041","picture"],[280,1,"AI_pic258","picture"],[225,1,"FemaleWarrior206","picture"],[349,1,"Zeppelin89","picture"],[344,1,"Nature04","picture"],[133,1,"Domme358","picture"],[166,1,"Domme348","picture"],[335,3,"AI_Pic_137","picture"],[230,3,"Domme356","picture"],[208,7,"AI_pic235","picture"],[40,3,"Miner70","picture"],[59,3,"ShinyBlackRuberella14","picture"],[36,5,"LargePicLadies12","picture"],[142,3,"TheHobbit14","picture"],[102,3,"CodenameIceman98","picture"],[247,3,"CrawlMaster115","picture"],[178,3,"Paperboy2","picture"],[239,3,"Domme243","picture"],[256,3,"WizardOfWor500","picture"],[214,3,"CastleLady29","picture"],[25,5,"Domme403","picture"],[51,7,"CastleLady43","picture"],[75,3,"Fred100","picture"],[98,5,"KokotoniWilf2","picture"],[180,5,"AztecChallenge100","picture"],[222,5,"Invaders_AI_1","picture"],[220,3,"MrRobot60","picture"],[115,7,"Skull3","crest"],[117,7,"SatanRam9","crest"],[262,1,"DemonSkull2","crest"],[309,1,"SittingSkelly14","crest"],[291,3,"Scramble60","picture"],[215,7,"AI_pic253","picture"],[109,3,"Underwurlde130","picture"],[151,3,"Domme335","picture"],[134,5,"Domme346","picture"]]',
+        lights: '[[170,7,"Lamp40","standardDimmed"],[80,7,"Candelabra01","weakCandle"],[353,1,"Candelabra03","weakCandle"],[40,7,"Candelabra03","weakCandle"],[11,7,"Candelabra04","weakCandle"],[7,7,"Candelabra05","weakCandle"],[13,7,"Candelabra06","weakCandle"],[341,1,"Candelabra07","weakCandle"],[347,1,"Candelabra08","weakCandle"],[282,1,"Candelabra09","weakCandle"],[133,7,"Candelabra10","weakCandle"],[86,1,"Lamp44","darkgray"]]',
         gates: '[[188,3,"46.1","34.5","Closed"]]',
         keys: '[[191,1]]',
+        monsters: '[[120,"Goblin"],[330,"Goblin"],[135,"GhostMinion"],[259,"GhostMinion"],[233,"GhostMinionGreen"],[44,"Viking"]]',
+        gold: '[[69,"SilverBar"],[196,"SilverBar"],[238,"SilverBar"],[320,"SilverBar"],[326,"SilverBar"],[288,"SilverBar"],[228,"SilverBar"],[181,"SilverBar"],[179,"SilverBar"],[55,"SilverBar"],[39,"SilverBar"],[95,"GoldBar"],[30,"GoldBar"],[107,"GoldBar"],[254,"GoldBar"],[302,"GoldBar"],[244,"GoldBar"],[138,"GoldBar"],[101,"GoldBar"]]',
+        skills: '[[149,"Heart"]]',
         containers: '[[26,"TreasureChest","INTERACTION_ITEM.Frog",5],[145,"PlainCloset","INTERACTION_ITEM.Fish",1]]',
         triggers: '[[168,5,"SmoothWallButton",1,199],[126,5,"SmoothWallButton",1,201],[84,5,"SmoothWallButton",1,184]]',
         entities: '[[338,1,"Keysa"]]',
-    }
+        objects: '[[292,"Cake"],[111,"Cake"]]',
+        oracles: '[[2,7,"Masked"]]',
+        lairs: '[[281,7,"Lair06"]]',
+        monsterList: '["GhostMinionGreen","Viking","GhostMinion","GhostMinion","AngrySheep","Goblin","MissGalaxyGold","Wolf"]',
+        }
     ,
     47: {
         name: "Smithy",
