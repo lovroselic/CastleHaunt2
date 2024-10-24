@@ -929,8 +929,11 @@ LoadSprites = [
     { srcName: "EntityPictures/Strongarmed.jpg", name: "Strongarmed" },
     { srcName: "EntityPictures/Horny3.jpg", name: "HornySitting" },
     { srcName: "EntityPictures/RuberellaBlack2.jpg", name: "RuberellaInventory" },
+    { srcName: "EntityPictures/RuberellaBlack1.jpg", name: "RuberellaDontshoot" },
     { srcName: "EntityPictures/PacGirl.jpg", name: "PacGirl" },
     { srcName: "EntityPictures/ButterWasp1.jpg", name: "ButterWasp" },
+    { srcName: "EntityPictures/RedCutie.jpg", name: "RedCutie" },
+    { srcName: "EntityPictures/Morana2.jpg", name: "Morana" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

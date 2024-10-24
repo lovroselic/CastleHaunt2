@@ -811,13 +811,13 @@ const MAP = {
         floor: "MossyFloor212",
         ceil: "GoldWithVines2",
         start: '[34,7]',
-        decals: '[[32,7,"AticAtac200","picture"],[36,7,"HeadOverHeels3","picture"],[40,7,"Hero72","picture"],[28,7,"EyeOfTheBeholder112","picture"],[98,7,"Popeye2","picture"],[108,7,"RickDangerous51","picture"],[202,7,"AI_pic224","picture"],[222,7,"Barbarian110","picture"],[214,7,"TombRaider96","picture"],[188,7,"Pitfall91","picture"],[258,7,"ForgottenForest1","picture"],[270,7,"Skyrim3","picture"],[354,7,"GhostFace1","picture"],[358,7,"Sentinel50","picture"],[420,7,"Imhotep2","picture"],[430,7,"CastleLady107","picture"],[98,1,"AI_PIC_317","picture"],[108,1,"LeisureSuitLarry300","picture"],[170,1,"ActecChallenge2","picture"],[174,1,"SeaWolf60","picture"],[258,1,"CastleLady117","picture"],[270,1,"PrincessAI_06","picture"],[326,1,"CastleLady60","picture"],[306,1,"AI_PIC_305","picture"],[314,1,"WhoDaresWins88","picture"],[340,1,"AI_pic214","picture"],[420,1,"CastleLady60","picture"],[430,1,"CastleLady68","picture"],[488,1,"Oblivion140","picture"],[492,1,"Maze","picture"],[496,1,"PrincessAI_07","picture"],[500,1,"PrincessAI_04","picture"],[513,1,"ForbiddenForest502","picture"],[521,1,"Movie","picture"],[116,5,"SatanRam5","crest"],[208,5,"Scramble23","picture"],[300,5,"MassEffect2","picture"],[161,5,"AticAtac117","picture"],[345,5,"CastleLady23","picture"],[392,5,"Wolfenstein50","picture"],[100,5,"MonkeyIsland110","picture"],[142,5,"AlleyKat","picture"],[126,5,"BrianBloodaxe20","picture"],[395,5,"GirlSwims13","picture"],[170,5,"GatewayToApshai11","picture"],[354,5,"Dominatrix102","picture"],[386,5,"PrincessAI_11","picture"],[156,5,"AI_pic219","picture"],[422,5,"SatanRam5","crest"],[367,3,"CrawlingSkelly2","crest"],[183,3,"BookShelf06","crest"],[106,3,"LastNinja130","picture"],[136,3,"Ishar11","picture"],[228,3,"Nature05","picture"],[320,3,"Zeppelin4","picture"],[412,3,"Dominatrix100","picture"],[174,3,"RadarRatRace20","picture"],[156,3,"AztecChallenge100","picture"],[358,3,"AI_Pic_142","picture"],[126,3,"TombRaider112","picture"],[402,3,"EyeOfTheBeholder110","picture"],[428,3,"GirlSwims22","picture"],[409,3,"AI_PIC_448","picture"],[402,5,"Underwurlde130","picture"],[214,3,"TheHobbit70","picture"],[306,3,"AMC3","picture"],[222,5,"TheHobbit16","picture"],[314,5,"SirFred4","picture"]]',
+        decals: '[[32,7,"AticAtac200","picture"],[36,7,"HeadOverHeels3","picture"],[40,7,"Hero72","picture"],[28,7,"EyeOfTheBeholder112","picture"],[98,7,"Popeye2","picture"],[108,7,"RickDangerous51","picture"],[202,7,"AI_pic224","picture"],[222,7,"Barbarian110","picture"],[214,7,"TombRaider96","picture"],[188,7,"Pitfall91","picture"],[258,7,"ForgottenForest1","picture"],[270,7,"Skyrim3","picture"],[354,7,"GhostFace1","picture"],[358,7,"Sentinel50","picture"],[420,7,"Imhotep2","picture"],[430,7,"CastleLady107","picture"],[98,1,"AI_PIC_317","picture"],[108,1,"LeisureSuitLarry300","picture"],[170,1,"ActecChallenge2","picture"],[174,1,"SeaWolf60","picture"],[258,1,"CastleLady117","picture"],[270,1,"PrincessAI_06","picture"],[326,1,"CastleLady60","picture"],[306,1,"AI_PIC_305","picture"],[314,1,"WhoDaresWins88","picture"],[340,1,"AI_pic214","picture"],[420,1,"CastleLady60","picture"],[430,1,"CastleLady68","picture"],[488,1,"Oblivion140","picture"],[492,1,"Maze","picture"],[496,1,"PrincessAI_07","picture"],[500,1,"PrincessAI_04","picture"],[513,1,"ForbiddenForest502","picture"],[521,1,"Movie","picture"],[116,5,"SatanRam5","crest"],[208,5,"Scramble23","picture"],[300,5,"MassEffect2","picture"],[161,5,"AticAtac117","picture"],[392,5,"Wolfenstein50","picture"],[100,5,"MonkeyIsland110","picture"],[142,5,"AlleyKat","picture"],[126,5,"BrianBloodaxe20","picture"],[395,5,"GirlSwims13","picture"],[170,5,"GatewayToApshai11","picture"],[354,5,"Dominatrix102","picture"],[386,5,"PrincessAI_11","picture"],[156,5,"AI_pic219","picture"],[422,5,"SatanRam5","crest"],[367,3,"CrawlingSkelly2","crest"],[183,3,"BookShelf06","crest"],[106,3,"LastNinja130","picture"],[136,3,"Ishar11","picture"],[228,3,"Nature05","picture"],[320,3,"Zeppelin4","picture"],[412,3,"Dominatrix100","picture"],[174,3,"RadarRatRace20","picture"],[156,3,"AztecChallenge100","picture"],[358,3,"AI_Pic_142","picture"],[126,3,"TombRaider112","picture"],[402,3,"EyeOfTheBeholder110","picture"],[428,3,"GirlSwims22","picture"],[409,3,"AI_PIC_448","picture"],[402,5,"Underwurlde130","picture"],[214,3,"TheHobbit70","picture"],[306,3,"AMC3","picture"],[222,5,"TheHobbit16","picture"],[314,5,"SirFred4","picture"]]',
         lights: '[[126,1,"Lamp45","standardDimmed"],[402,1,"Lamp44","standardDimmed"],[126,7,"Candelabra10","standardDimmed"],[402,7,"Candelabra18","standardDimmed"],[258,3,"Candelabra15","standardDimmed"],[270,3,"Lamp49","standardDimmed"],[258,5,"Lamp40","standardDimmed"],[270,5,"Lights115","standardDimmed"],[25,7,"WallLamp14","dim"],[43,7,"Candelabra12","dim"],[485,1,"Lamp42","dim"],[503,1,"Lamp47","dim"]]',
         gates: '[[11,7,"34.1","33.2","Closed"],[517,1,"34.2","35.1","Purple"],[69,5,"34.3","36.1","Closed"],[91,3,"34.4","41.2","Closed"],[437,5,"34.5","46.1","Red"],[275,3,"34.6","47.1","Down"],[253,5,"34.7","48.1","Closed"],[459,3,"34.8","50.1","Closed"],[3,7,"34.9","53.1","Closed"],[525,1,"34.10","54.1","Down"],[19,7,"34.11","55.1","Up"],[509,1,"34.12","56.1","Down"]]',
         gold: '[[260,"GoldCube"],[404,"GoldCube"],[295,"GoldCube"],[152,"GoldCube"],[117,"GoldCube"],[470,"SilverBar"],[457,"SilverBar"],[310,"SilverBar"],[85,"SilverBar"],[79,"GoldBar"],[325,"GoldBar"],[269,"GoldBar"]]',
         containers: '[[376,"PirateChest","INTERACTION_ITEM.Gloves",7],[162,"Wardrobe","GOLD_ITEM_TYPE.SilverBar",5],[223,"Closet","GOLD_ITEM_TYPE.SilverBar",5],[442,"BookShelf","GOLD_ITEM_TYPE.SilverBar",7]]',
         objects: '[[216,"GreenApple"],[144,"Orb"],[154,"Orb"],[374,"Orb"],[384,"Orb"]]',
-        oracles: '[[7,7,"ApparitiaDoom"],[15,7,"Maid"]]',
+        oracles: '[[7,7,"ApparitiaDoom"],[15,7,"Maid"],[345,5,"RuberellaDontshoot"]]',
         movables: '[[356,"BabySheep"]]',
         lairs: '[[241,1,"Lair34"],[287,7,"Lair32"],[263,3,"Lair25"],[265,5,"Lair04"]]',
         monsterList: '["MissGalaxyGold","Goblin"]',
@@ -1091,7 +1091,6 @@ const MAP = {
         containers: '[[26,"TreasureChest","INTERACTION_ITEM.Frog",5],[145,"PlainCloset","INTERACTION_ITEM.Fish",1]]',
         triggers: '[[168,5,"SmoothWallButton",1,199],[126,5,"SmoothWallButton",1,201],[84,5,"SmoothWallButton",1,184]]',
         entities: '[[338,1,"Keysa"]]',
-        movables: '[[179,"BabySheep"]]',
     }
     ,
     47: {
@@ -1174,7 +1173,7 @@ const MAP = {
         monsterList: '["GhostMinion"]',
     }
     ,
-    51 : {
+    51: {
         name: "Dangerous Girls",
         sg: 0,
         maxSpawned: 1,
@@ -1196,9 +1195,9 @@ const MAP = {
         trainers: '[[6,7,"Barbarian"],[162,1,"NymphWarrior"]]',
         lairs: '[[51,3,"Lair16"],[129,3,"Lair47"]]',
         monsterList: '["GhostMinionGreen"]',
-        }
+    }
     ,
-    52 : {
+    52: {
         name: "Horny Girls",
         sg: 0,
         maxSpawned: 1,
@@ -1220,7 +1219,7 @@ const MAP = {
         trainers: '[[8,7,"Horny"],[164,1,"Horny2"]]',
         lairs: '[[25,3,"Lair06"],[155,3,"Lair49"]]',
         monsterList: '["Viking"]',
-        }
+    }
     ,
     53: {
         name: "Shoe Shop",
@@ -1284,22 +1283,30 @@ const MAP = {
         objects: '[[133,"GreenGem"],[231,"Pear"],[192,"Banana"]]',
     }
     ,
-    56 : {
+    56: {
         name: "Cellar",
         sg: 0,
-        maxSpawned: 6,
-        killCountdown: 5,
+        maxSpawned: 4,
+        killCountdown: 4,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB2AA2BB7AA10BAA42BAA3BAA10BAA8BAA3BAA12BAA14BAA5BAA6BB3ABAA2BB2AA8BAA6BABB2ABB9ABABB17ABB26ABB4ABAA4BAA2BB4AA2BB4AA7BABABB4ABABB3AA2BB23A$"}',
+        data: '{"width":"17","height":"17","map":"BB2AA2BB7AA10BAA42BAA3BAA10BAA8BAA3BAA13BAA13BAA2BAA3BAA6BB2ABB3AA2BB2AA4BAA5BAA6BB2ABB9ABABB10ABB3ABB4ABB26ABB4ABAA4BAA3BABB2AA2BB3AA8BABB7AA2BB23A$"}',
         wall: "DarkBricks101",
         floor: "GreyRocks42",
         ceil: "PebbleWall2",
         start: '[25,7]',
+        decals: '[[278,1,"BookShelf10","crest"],[282,1,"BookShelf08","crest"],[193,7,"BookShelf16","picture"],[197,7,"BookShelf21","picture"],[23,7,"Elvira1","picture"],[27,7,"AI_pic240","picture"],[19,7,"MonkeyIsland102","picture"],[31,7,"Popeye2","picture"],[73,7,"GirlSwims21","picture"],[79,7,"FemaleWarrior109","picture"],[143,7,"AI_Pic_139","picture"],[145,7,"CastleLady25","picture"],[72,1,"EveryoneIsAWally2","picture"],[80,1,"Domme214","picture"],[110,1,"Domme102","picture"],[142,1,"Portal140","picture"],[146,1,"TombRaider98","picture"],[191,1,"AA100","picture"],[199,1,"Pitfall50","picture"],[274,1,"WhoDaresWins50","picture"],[241,1,"CastleLady72","picture"],[260,1,"MontyMole100","picture"],[267,1,"IM13","picture"],[286,1,"Princess407","picture"],[110,5,"Hero81","picture"],[73,5,"LeisureSuitLarry50","picture"],[52,5,"LeisureSuitLarry88","picture"],[103,5,"MonkeyIsland143","picture"],[188,5,"Galaga70","picture"],[222,5,"MonkeyIsland111","picture"],[193,5,"AntAttack4","picture"],[199,5,"MonkeyIsland141","picture"],[110,3,"AI_pic207","picture"],[79,3,"BetrayedAlliance","picture"],[66,3,"PrincessAI_16","picture"],[141,3,"FireAnt60","picture"],[197,3,"Princess11","picture"],[117,3,"AI_pic204","picture"],[185,3,"AI_PIC_435","picture"],[219,3,"Elvira3","picture"],[191,3,"CastleBabes49","picture"],[15,7,"Pyjamarama50","picture"],[255,5,"Babes405","picture"]]',
         lights: '[[110,7,"Lamp41","candle"],[71,7,"Lamp52","dimRed"],[81,7,"Lamp52","dimRed"],[141,7,"Candelabra09","standardDimmed"],[147,7,"Candelabra09","standardDimmed"],[191,7,"Lamp45","dim"],[199,7,"Lamp45","dim"]]',
         gates: '[[8,7,"56.1","34.12","Up"]]',
-        containers: '[[32,"TreasureChest","INTERACTION_ITEM.Moon",7],[256,"BookShelf","INTERACTION_ITEM.Scissors",5]]',
+        scrolls: '[[127,15]]',
+        gold: '[[37,"GoldCube"],[60,"GoldCube"],[156,"GoldCube"],[212,"GoldCube"],[132,"GoldCube"],[234,"GoldCube"]]',
+        containers: '[[32,"TreasureChest","INTERACTION_ITEM.Moon",7],[256,"BookShelf","INTERACTION_ITEM.Scissors",5],[90,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[96,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[159,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[163,"TreasureChest","GOLD_ITEM_TYPE.SilverBar",7],[209,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[215,"Barrel","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[280,1,"DyeMaker"]]',
-        }
+        objects: '[[18,"Cake"],[270,"Cake"]]',
+        oracles: '[[136,5,"RedCutie"],[152,3,"Morana"]]',
+        movables: '[[144,"BabySheep"]]',
+        lairs: '[[1,7,"Lair06"],[271,3,"Lair36"]]',
+        monsterList: '["Goblin","GhostMinion","GhostMinion","AngrySheep","MissGalaxyGold"]',
+    }
     ,
     57: {
         name: "Crypt",

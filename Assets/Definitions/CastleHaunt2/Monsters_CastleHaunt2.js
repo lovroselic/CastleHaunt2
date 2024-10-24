@@ -182,6 +182,30 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RuberellaDontshoot: {
+        name: "RuberellaDontshoot",
+        sprite: "RuberellaDontshoot",
+        category: 'crest',
+        voice: "Female2",
+        text: "Don't cast fireballs with your inventory full. Or you'll feel like a fool.",
+        interactionCategory: "oracle",
+    },
+    Morana: {
+        name: "Morana",
+        sprite: "Morana",
+        category: 'crest',
+        voice: "Female2",
+        text: "Let's have a moment of silence to remember GhostFace .... Ok, go on now.",
+        interactionCategory: "oracle",
+    },
+    RedCutie: {
+        name: "RedCutie",
+        sprite: "RedCutie",
+        category: 'crest',
+        voice: "Female",
+        text: "I was stealing sheep from my sister. But I lost them then.",
+        interactionCategory: "oracle",
+    },
     ButterWasp: {
         name: "ButterWasp",
         sprite: "ButterWasp",
@@ -1429,7 +1453,7 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
-    
+
 
     GreatChick: {
         name: "GreatChick",
@@ -3465,7 +3489,7 @@ const INTERACTION_ENTITY = {
         wants: ["EmptyBottle"],
         gives: "RedColor",
         text: {
-            intro: "I’ve got the perfect red dye ready, but I need something to pour it into. Bring me an empty bottle, and I'll fill it with vibrant color.",
+            intro: "I've got the perfect red dye ready, but I need something to pour it into. Bring me an empty bottle, and I'll fill it with vibrant color.",
             progress: null,
             conclusion: "Ah, the perfect vessel! Here's your red dye, all bottled up and ready to use."
         }
