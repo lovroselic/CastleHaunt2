@@ -751,6 +751,14 @@ const ORACLE_TYPE = {
         text: "So you prefer Dangerous girls and their violent approach?",
         interactionCategory: "oracle",
     },
+    ApparitiaPiss: {
+        name: "ApparitiaPiss",
+        sprite: "ApparitiaPiss",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Ours is a religion of piss. We will piss on your grave.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
