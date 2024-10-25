@@ -148,20 +148,21 @@ const DEBUG = {
         * temple1 usage:
             * heart
             * magic
+            * * attack
         * temple2 usage
-        *  heart
-        * magic
+            *  heart
+            * magic
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 55;
+        GAME.level = 49;
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
         //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
-        //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55
-        GAME.gold = 1847;
-        GAME.lives = 3;
+        //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55->34-->41-->49
+        GAME.gold = 222;
+        GAME.lives = 2;
 
         HERO.hasCapacity = true;
         HERO.capacity = 3;
@@ -169,20 +170,20 @@ const DEBUG = {
 
         HERO.orbs = 3;
         HERO.orbsLost = 0;
-        HERO.magic = 20;
-        HERO.attack = 16;
+        HERO.magic = 21;
+        HERO.attack = 18;
 
-        HERO.health = 97;
-        HERO.maxHealth = 144;
+        HERO.health = 152;
+        HERO.maxHealth = 152;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -203,15 +204,14 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GreenApple",
+            "GreenGem", "Amethyst", "Pearl", "Moonstone",
             "SilverBar",
-            "Apple",
+            "Apple", "Banana", "GreenApple",
             "HikingBoot",
             "GoldBar",
             "HikingBoot",
-            "Moon", "Moon",
-            "Hammer", "Amethyst",
-             "Pearl"
+            "Hammer", "Anvil"
+
 
             //debug
 
@@ -252,7 +252,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.07",
+    VERSION: "0.11.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
