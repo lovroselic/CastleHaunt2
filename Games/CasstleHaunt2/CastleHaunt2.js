@@ -156,11 +156,12 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 49;
+        GAME.level = 49; //49 unlocked
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
         //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
-        //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55->34-->41-->49
+        //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55->34-->41-->49-->44->45
+        //49
         GAME.gold = 222;
         GAME.lives = 2;
 
@@ -204,15 +205,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GreenGem", "Amethyst", "Pearl", "Moonstone",
-            "SilverBar",
-            "Apple", "Banana", "GreenApple",
-            "HikingBoot",
-            "GoldBar",
-            "HikingBoot",
-            "Hammer", "Anvil"
-
-
+            "GreenGem", 
+            "Amethyst", "Pearl", "Moonstone",
+            "SilverBar","GoldBar","UraniumBar","IronBar",
             //debug
 
         ];
@@ -252,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.09",
+    VERSION: "0.11.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

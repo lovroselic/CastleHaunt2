@@ -767,6 +767,15 @@ const ORACLE_TYPE = {
         text: "Ours is a religion of piss. We will piss on your grave.",
         interactionCategory: "oracle",
     },
+    ApparitiaBanker: {
+        name: "ApparitiaBanker",
+        sprite: "ApparitiaBanker",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am a personal banker of Her Majesty, Hauntessa Spookish.",
+        interactionCategory: "oracle",
+        price: -1,
+    },
 };
 
 const GOLD_ITEM_TYPE = {

@@ -824,6 +824,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaHorny.jpg", name: "ApparitiaHorny" },
     { srcName: "EntityPictures/ApparitiaDangerous.jpg", name: "ApparitiaDangerous" },
     { srcName: "EntityPictures/ApparitiaPiss.jpg", name: "ApparitiaPiss" },
+    { srcName: "EntityPictures/ApparitiaBanker.jpg", name: "ApparitiaBanker" },
 
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
