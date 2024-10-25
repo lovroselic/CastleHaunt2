@@ -182,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RubberDoll: {
+        name: "RubberDoll",
+        sprite: "RubberDoll",
+        category: 'crest',
+        voice: "Female2",
+        text: "I have heard Keysa is looking for Purple Tear. But this gem is not found tin the nature. It must be made with magic.",
+        interactionCategory: "oracle",
+    },
     Masked: {
         name: "Masked",
         sprite: "Masked",
