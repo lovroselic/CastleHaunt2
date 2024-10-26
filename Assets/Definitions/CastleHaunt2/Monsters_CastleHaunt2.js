@@ -784,6 +784,14 @@ const ORACLE_TYPE = {
         interactionCategory: "oracle",
         price: -1,
     },
+    ApparitiaProgress: {
+        name: "ApparitiaProgress",
+        sprite: "ApparitiaProgress",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Your progress is slow Princess. We are winning.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

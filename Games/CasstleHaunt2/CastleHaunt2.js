@@ -247,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.11",
+    VERSION: "0.11.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
