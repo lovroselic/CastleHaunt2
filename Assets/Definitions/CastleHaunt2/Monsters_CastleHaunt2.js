@@ -182,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    BlacksmistressApprentice: {
+        name: "BlacksmistressApprentice",
+        sprite: "BlacksmistressApprentice",
+        category: 'crest',
+        voice: "Female2",
+        text: "For GoldSteel you need four metals. Heavy metals. Including Uranium.",
+        interactionCategory: "oracle",
+    },
     RubberDoll: {
         name: "RubberDoll",
         sprite: "RubberDoll",

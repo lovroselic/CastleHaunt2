@@ -156,13 +156,13 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 49; //49 unlocked
+        GAME.level = 48; 
         //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
         //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
         //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
         //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55->34-->41-->49-->44->45
-        //49
-        GAME.gold = 222;
+        //49-->41-->57--->34->48
+        GAME.gold = 1084;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -174,14 +174,14 @@ const DEBUG = {
         HERO.magic = 21;
         HERO.attack = 18;
 
-        HERO.health = 152;
+        HERO.health = 87;
         HERO.maxHealth = 152;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
@@ -207,7 +207,7 @@ const DEBUG = {
         let invItems = [
             "GreenGem", 
             "Amethyst", "Pearl", "Moonstone",
-            "SilverBar","GoldBar","UraniumBar","IronBar",
+            "GoldSteel"
             //debug
 
         ];
@@ -216,7 +216,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Silver"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -247,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.10",
+    VERSION: "0.11.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
