@@ -764,7 +764,7 @@ const MAP = {
         monsterList: '["MissGalaxyGold"]',
     }
     ,
-    32: {
+    32 : {
         name: "The Way Forward?",
         sg: 2,
         maxSpawned: 6,
@@ -775,12 +775,13 @@ const MAP = {
         floor: "OrnateFloor1",
         ceil: "DarkBrick113",
         start: '[118,3]',
-        decals: '[[107,4,"PuddleDecal10","crest"],[109,4,"PuddleDecal10","crest"],[111,4,"PuddleDecal10","crest"],[113,4,"PuddleDecal10","crest"],[116,4,"PuddleDecal10","crest"],[114,4,"PuddleDecal08","crest"],[110,4,"PuddleDecal08","crest"],[23,7,"Ishar71","picture"],[27,7,"FalconPatrol7","picture"],[103,3,"CastleLady55","picture"],[133,3,"AI_pic201","picture"],[97,5,"LaughingSkeleton2","crest"],[127,5,"LaughingSkeleton5","crest"],[204,1,"ShieldDecal05","crest"],[206,1,"ShieldDecal04","crest"],[91,5,"SatanRam2","crest"],[121,5,"SatanRam10","crest"],[31,5,"JSW111","picture"],[181,5,"CastleBabes38","picture"],[222,1,"Princess17","picture"],[218,1,"CastleBabes41","picture"],[51,1,"KQ101","picture"],[171,7,"CastleBabes05","picture"]]',
+        decals: '[[107,4,"PuddleDecal10","crest"],[109,4,"PuddleDecal10","crest"],[111,4,"PuddleDecal10","crest"],[113,4,"PuddleDecal10","crest"],[116,4,"PuddleDecal10","crest"],[114,4,"PuddleDecal08","crest"],[110,4,"PuddleDecal08","crest"],[23,7,"Ishar71","picture"],[27,7,"FalconPatrol7","picture"],[103,3,"CastleLady55","picture"],[133,3,"AI_pic201","picture"],[97,5,"LaughingSkeleton2","crest"],[127,5,"LaughingSkeleton5","crest"],[204,1,"ShieldDecal05","crest"],[206,1,"ShieldDecal04","crest"],[91,5,"SatanRam2","crest"],[121,5,"SatanRam10","crest"],[31,5,"JSW111","picture"],[181,5,"CastleBabes38","picture"],[222,1,"Princess17","picture"],[218,1,"CastleBabes41","picture"],[51,1,"KQ101","picture"],[171,7,"CastleBabes05","picture"],[18,7,"Witcher101","picture"],[199,1,"GatewayToApshai110","picture"],[81,3,"SVS1011","picture"],[156,3,"AI_pic206","picture"]]',
         lights: '[[73,3,"Candelabra12","standard"],[163,3,"Candelabra02","standard"],[52,5,"Lamp47","dim"],[172,5,"WallLamp33","dim"],[60,5,"Fireplace13","fire"],[150,5,"Fireplace11","fire"]]',
-        gates: '[[119,3,"32.1","31.2","Closed"],[220,1,"32.2","33.1","Closed"]]',
+        gates: '[[119,3,"32.1","31.2","Closed"],[220,1,"32.2","33.1","Closed"],[105,5,"32.3","63.1","Pearl"]]',
+        keys: '[[108,7]]',
         monsters: '[[70,"Wolf"],[190,"Wolf"]]',
         oracles: '[[10,7,"SaveGameOracle"],[194,3,"ApparitiaBlock"]]',
-    }
+        }
     ,
     33: {
         name: "The Corridor",
@@ -826,19 +827,25 @@ const MAP = {
     35: {
         name: "Demolition Group",
         sg: 0,
-        maxSpawned: 6,
+        maxSpawned: 4,
         killCountdown: 5,
-        spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB5AA24ÁAA9ÁAA12ÁAÁÁ3AA8BAÁBB3AA3ÁÁ7ABABÁÁ2BB2AÁÁ2AÁÁ2ABAÁÁ4BB3ÁÁ2AÁÁ5ABB45ABABAA2BABB8AA3BB2AA7BB5ABB7ABB25$BAA2ÁAA5ÁÁ2AA7ÁÁ2AÁAA11ÁÁ6AÁÁ2AA2ÁÁ6AÁÁ10AA2"}',
+        spawnDelay: 8000,
+        data: '{"width":"17","height":"17","map":"BB3AA4BB2AA24ÁAA9ÁAA12ÁAÁÁ2AA2ÁAA6BABB3AÁAÁBB3AA2BB2ÁÁ6ABÁÁ2BB2AÁÁ2AÁÁ2ABAÁÁ4BB3ÁÁ2AÁÁ5ABB27ABB3ABB3ABABB11AA2BAA2BABABB2ABB7ABAA9BB26A$AÁAA4ÁAÁAA7ÁÁ2AÁAA11ÁÁ6AÁÁ2AA2ÁÁ6AÁÁ10AA2"}',
         wall: "IvyWall4",
         floor: "MossyFloor211",
         ceil: "GreenWall1",
         start: '[25,7]',
+        decals: '[[23,7,"HalfLife91","picture"],[27,7,"AI_pic227","picture"],[15,7,"Domme218","picture"],[1,7,"TombRaider101","picture"],[257,1,"AticAtac204","picture"],[269,1,"Babes407","picture"],[34,5,"CastleBabes13","picture"],[103,5,"DigDug2","picture"],[188,5,"AI_Pic_144","picture"],[238,5,"AI_PIC_306","picture"],[50,3,"SeaWolf60","picture"],[117,3,"AI_pic239","picture"],[202,3,"MontyMole111","picture"],[254,3,"FF5","picture"]]',
         lights: '[[259,1,"Candelabra06","standard"],[267,1,"Candelabra06","standard"],[66,3,"Lights108","standard"],[52,5,"Candelabra15","standard"]]',
         gates: '[[8,7,"35.1","34.1","Open"]]',
+        scrolls: '[[55,15],[63,16],[195,12]]',
+        gold: '[[256,"GreenGem"],[270,"RedGem"],[154,"GoldBar"],[168,"GoldBar"]]',
+        containers: '[[18,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[32,"Barrel","GOLD_ITEM_TYPE.GoldBar",7]]',
         shrines: '[[278,1,"ScrollSell_Explode"]]',
         triggers: '[[263,1,"RockTriggerButton",0,93],[208,4,"SmoothWallButton",0,229]]',
-        oracles: '[[282,1,"JapananeseMistress"]]',
+        oracles: '[[282,1,"JapananeseMistress"],[4,7,"ApparitiaDemolition"],[12,7,"RootingDomme"]]',
+        lairs: '[[169,3,"Lair01"],[153,5,"Lair01"],[273,1,"Lair08"],[169,3,"Lair38"],[287,1,"Lair11"]]',
+        monsterList: '["GhostMinionGreen"]',
     }
     ,
     36: {
@@ -1123,7 +1130,7 @@ const MAP = {
         oracles: '[[125,5,"PacGirl"]]',
     }
     ,
-    48 : {
+    48: {
         name: "Gem Mine",
         sg: 0,
         maxSpawned: 5,
@@ -1147,9 +1154,9 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaProgress"]]',
         lairs: '[[125,1,"Lair49"],[351,1,"Lair49"],[1,7,"Lair49"]]',
         monsterList: '["GhostMinion","GhostMinion","GhostMinion","GhostMinionGreen","AngrySheep"]',
-        }
+    }
     ,
-    49 : {
+    49: {
         name: "Blacksmistress",
         sg: 0,
         maxSpawned: 3,
@@ -1170,7 +1177,7 @@ const MAP = {
         oracles: '[[105,5,"ApparitiaBanker"],[119,3,"BlacksmistressApprentice"]]',
         lairs: '[[1,7,"Lair02"],[223,1,"Lair23"]]',
         monsterList: '["GhostMinion","GhostMinion","GhostMinionGreen"]',
-        }
+    }
     ,
     50: {
         name: "Barefoot Twins",
@@ -1265,7 +1272,7 @@ const MAP = {
         monsterList: '["GhostMinion"]',
     }
     ,
-    54 : {
+    54: {
         name: "Gold Mine",
         sg: 0,
         maxSpawned: 6,
@@ -1289,7 +1296,7 @@ const MAP = {
         oracles: '[[276,5,"ApparitiaGold"]]',
         lairs: '[[345,5,"Lair49"],[344,3,"Lair32"],[76,1,"Lair24"],[284,1,"Lair40"]]',
         monsterList: '["GhostMinion","GhostMinionGreen"]',
-        }
+    }
     ,
     55: {
         name: "Attic",
@@ -1476,4 +1483,6 @@ const MAP = {
         traps: '[[207,3,"SmoothWallButton",0,"Bounceball",135]]',
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
+    ,
+    63: {}
 };

@@ -48,93 +48,16 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area 3:
+        /** main area 4:
          * 
-        ----* Purple key: from Keysa by giving "GoldSteel", "PurpleTear"; DONE;
-        ----* "RedKey" from Climber by giving "Shawl", "Gloves", "WoolenCap"; DONE
-        ----* GoldSteel: from AlloyaPinkass by giving "GoldBar", "IronBar", "SilverBar", "UraniumBar"; DONE
-        ----* PurpleTear: Gemma by giving "Diamond", "Amethyst", "Moonstone", "Pearl" DONE
-        ----* "UraniumBar" MissHill by giving:"HikingBoot", "HikingBoot", "BackPack": DONE
-        ----* "IronBar": BlackSmithsress: "Anvil", "Hammer" ; DONE
-        ----* Diamond": Jeweliette by giving "GreenGem", "BlueGem"; DONE
-        ----* "Shawl": Seamstress by giving "BabySheep", "RedColor", "Scissors"; DONE
-        ----* "WoolenCap": Shepardess by giving: "BabySheep", "BabySheep", "BabySheep", "BabySheep", "BabySheep"; DONE
-        ----* "HikingBoot": BootMaker by giving "LeatherHide", "LeatherHide"; DONE
-        ----* "HikingBoot" :BootMaker2 by giving "LeatherHide", "LeatherHide"; DONE
-        ----* "LeatherHide": CowGirl1 by giving: "HayBale", "HayBale" ; DONE
-        ----* "Pearl": Scobby by giving "ScubaMask", "Fins"; DONE;
-        ----* "BackPack": HedheHog by giving "Apple", "Pear", "Banana", "GreenApple"; DONE
-        ----* "Fins"; Finette by giving "FishBone", "FishBone"; DONE
-        ---- * "GoldBar", GoldSmelter: by giving : "GoldOre", "GoldOre", "GoldOre"; DONE
-        ---- * "Hammer" : Swampy by giving "Frog", "Frog", "Frog"; DONE
-        ---- * "Amethyst", Fishelly by giving "Fish", "Fish", "Fish"; DONE
-        ---- * "Moonstone", MoonElf by giving: "Moon", "Moon"; DONE
-        ---- * "RedColor" :: DyeMaker by giving "EmptyBottle"; DONE
-        ---- * Shell: Surfer by giving SunScreen, Towel
-        ---- * Shell: Venus by giving SunScreen, Towel
-        ---- * GoldKEy: Tourist by giving "Shell", "Shell"
-         * 
-        ----* HayBale", 43 DONE
-        ---- * "HayBale" 45 DONE
-        ---- * "GoldBar", 54, DONE
-        ---- * "GoldBar", 48 DONE
-        ---- * "GoldBar", 47 DONE
-        ---- * "GoldOre", 54; DONE
-        ---- * "GoldOre", 54; DONE
-        ---- * GoldOre" 54; DONE
-        ---- * "SilverBar", 40 DONE
-        ---- * "LeatherHide" 47 DONE
-        ---- * "LeatherHide", 44 DONE
-        ---- * "LeatherHide" 41 DONE
-        ----* "Gloves", 34 DONE;
-        ---- * "FishBone", 36, DONE
-        ---- * "FishBone" 44 DONE
-        ---- * "BabySheep" 5x: 43, 45, 34, 44, 46 DONE
-        ----* "BabySheep" 1x: 42; DONE
-        ----* "Fish", 41 DONE
-        ---- * "Fish", 46 DONE
-        ----* "Fish" 50 DONE
-        ----* Boots 50 DONE
-        ---- * "Frog", 46 DONE
-        ---- * "Frog", 50 DONE
-        ---- * "Frog" 42 DONE
-        ---- * "ScubaMask", 42 DONE
-        ---- * "GreenGem", 55 DONE
-        ---- * "BlueGem" 48 DONE
-        ----- * "Apple", 43 DONE
-        ---- * "Pear", 55 DONE
-        ---- * "Banana", 55 DONE
-        ---- * "GreenApple": 34; DONE
-        ---- * "Anvil", 55 DONE
-        ---- * "Moon" 56 DONE
-        ---- * "Scissors" 56 DONE
-        ---- * "Moon", 36 DONE
-        ---- * "EmptyBottle" 37 DONE
-        ---- * SunScreen, 38 DONE;
-        ---- * Towel 38 DONE;
-        ---- * SunScreen, 39 DONE
-        ---- * Towel 39 DONE
-        ---- * "DumbBell", 41 DONE
-        ---- * "Wine",  41 DONE
-        ---- * "Wine", 44 DONE
-        ---- * "DumbBell" 44 DONE
+  
 
          * coins sources (6x, missing 0x):
-            ----"GoldCoin" by GOldie by giving  "GoldBar", "GoldBar", "GoldBar",; DONE
-            ---- 36 floor
-            ---- "GoldCoin" vy Squirell by giving Acorn 3x
-            ---- 40 floor
-            ---- Rugrate
-            ---- Strongarm
+ 
 
         *
         * COINS used (6x):
-            * Alpinist USED
-                * Barbarian (2x)
-                * Horny (2x) EXCLUSIVE
-            * Reaper
-            * BustyDemoness USED?
-            * RedHeadKnightessa uSED?
+
      
         
         * key not yet used:
@@ -145,26 +68,15 @@ const DEBUG = {
          * missing sources for: 
             * 
 
-        * temple1 usage:
-            * heart
-            * magic
-            * * attack
-        * temple2 usage
-            *  heart
-            * magic
-            * attack
+        * temple usage:
+
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 35;
-        //34->36->37->38 --> 57 --> 38 --> 58 --> 38->39->59->39-->60-->39-->38->39->40-->61->40
-        //41-->62-->41-->44-->62-->44-->43-->45-->43-->42-->36-->
-        //53-->34....->37-->34-->43---->47-->34-->53-->34-->50-->52-->50 ---- ((51))
-        //50-->34-->62--34-->56---->42--->45-->34-->46-->34-->39-->38-->55->34-->41-->49-->44->45
-        //49-->41-->57--->34->48-->40-->48-->46-->54 .........34
-        //35
-        GAME.gold = 970;
+        GAME.level = 32;
+
+        GAME.gold = 1852;
         GAME.lives = 2;
 
         HERO.hasCapacity = true;
@@ -176,18 +88,18 @@ const DEBUG = {
         HERO.magic = 23;
         HERO.attack = 21;
 
-        HERO.health = 160;
+        HERO.health = 84;
         HERO.maxHealth = 160;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -197,7 +109,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "DestroyOrbs", "MagicSupremacy", "MagicSupremacy"
+            "Explode", "MagicSupremacy"
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -217,7 +129,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Purple"];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -248,7 +160,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.11.14",
+    VERSION: "0.12.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

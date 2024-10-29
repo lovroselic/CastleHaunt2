@@ -182,6 +182,15 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RootingDomme: {
+        name: "RootingDomme",
+        sprite: "RootingDomme",
+        category: 'crest',
+        voice: "Female",
+        text: "We are collecting tiny contributions for your success, Princess. Everybody is rooting for you. I mean, almost everybody. Some, that is.",
+        interactionCategory: "oracle",
+        price: -1,
+    },
     BlacksmistressApprentice: {
         name: "BlacksmistressApprentice",
         sprite: "BlacksmistressApprentice",
@@ -798,6 +807,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We will take all your gold, Princess. You will be poor before you die.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaDemolition: {
+        name: "ApparitiaDemolition",
+        sprite: "ApparitiaDemolition",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Did you figure this out by yourself? Maybe you are not that stupid.",
         interactionCategory: "oracle",
     },
 };
