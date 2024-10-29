@@ -764,7 +764,7 @@ const MAP = {
         monsterList: '["MissGalaxyGold"]',
     }
     ,
-    32 : {
+    32: {
         name: "The Way Forward?",
         sg: 2,
         maxSpawned: 6,
@@ -781,7 +781,7 @@ const MAP = {
         keys: '[[108,7]]',
         monsters: '[[70,"Wolf"],[190,"Wolf"]]',
         oracles: '[[10,7,"SaveGameOracle"],[194,3,"ApparitiaBlock"]]',
-        }
+    }
     ,
     33: {
         name: "The Corridor",
@@ -1484,5 +1484,17 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63: {}
+    63: {
+        name: "Are we there yet?",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"17","height":"17","map":"BB2ABB2AA3BB2AA5BB4AA72BB43ABB7ABB2ABB5ABB3ABB2AA2BABB126A$"}',
+        wall: "DarkMossyWall101",
+        floor: "OrnateFloor1",
+        ceil: "DarkBrick113",
+        start: '[151,3]',
+        gates: '[[152,3,"63.1","32.3","Open"]]',
+    }
 };
