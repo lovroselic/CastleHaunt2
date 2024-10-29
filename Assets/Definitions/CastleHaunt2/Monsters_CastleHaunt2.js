@@ -792,6 +792,14 @@ const ORACLE_TYPE = {
         text: "Your progress is slow Princess. We are winning.",
         interactionCategory: "oracle",
     },
+    ApparitiaGold: {
+        name: "ApparitiaGold",
+        sprite: "ApparitiaGold",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We will take all your gold, Princess. You will be poor before you die.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

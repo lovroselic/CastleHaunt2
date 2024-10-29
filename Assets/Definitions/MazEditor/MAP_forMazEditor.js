@@ -116,7 +116,20 @@ const DECAL_PAINTINGS = [
     "FemaleWarrior102", "FemaleWarrior103", "FemaleWarrior104", "FemaleWarrior105", "FemaleWarrior106", "FemaleWarrior107", "FemaleWarrior108", "FemaleWarrior109", "FemaleWarrior201", "FemaleWarrior202",
     "FemaleWarrior203", "FemaleWarrior204", "FemaleWarrior205", "FemaleWarrior206", "FemaleWarrior207", "FemaleWarrior208", "FemaleWarrior209", "FemaleWarrior210", "FemaleWarrior211", "FemaleWarrior212",
     "Morana035", "Morana036", "Morana037", "Morana038", "Morana039", "Morana040", "Morana041", "Morana042", "Morana043", "Morana044", "Morana045", "Morana046", "Morana047", "Morana135", "Morana136",
-    "Morana137", "Morana138", "Morana139", "Princess601", "Princess602", "Princess603", "Princess604", "Princess605", "Princess606", "Princess607", "Princess608", "Princess609", "Princess610", "Princess611"
+    "Morana137", "Morana138", "Morana139", "Princess601", "Princess602", "Princess603", "Princess604", "Princess605", "Princess606", "Princess607", "Princess608", "Princess609", "Princess610", "Princess611",
+    "GameScreen1002", "GameScreen1003", "GameScreen1004", "GameScreen1005", "GameScreen1006", "GameScreen1007", "GameScreen1010", "GameScreen1013", "GameScreen1014", "GameScreen1015", "GameScreen1016",
+    "GameScreen1018", "GameScreen1019", "GameScreen1020", "GameScreen1021", "GameScreen1022", "GameScreen1023", "GameScreen1027", "GameScreen1029", "GameScreen1030", "GameScreen1031", "GameScreen1032",
+    "GameScreen1033", "GameScreen1035", "GameScreen1036", "GameScreen1039", "GameScreen1040", "GameScreen1043", "GameScreen1045", "GameScreen1046", "GameScreen1049", "GameScreen1054", "GameScreen1055",
+    "GameScreen1057", "GameScreen2001", "GameScreen2002", "GameScreen2003", "GameScreen2004", "GameScreen2005", "GameScreen2006", "GameScreen2007", "GameScreen2008", "GameScreen2009", "GameScreen2010",
+    "GameScreen2011", "GameScreen2012", "GameScreen2013", "GameScreen2014", "GameScreen2015", "GameScreen2016", "GameScreen2017", "GameScreen2018", "GameScreen2019", "GameScreen2020", "GameScreen2021",
+    "GameScreen2022", "GameScreen2023", "GameScreen2024", "GameScreen2025", "GameScreen2026", "GameScreen2027", "GameScreen2028", "GameScreen2029", "GameScreen2030", "GameScreen2031", "GameScreen2032",
+    "GameScreen2033", "GameScreen2034", "GameScreen2035", "GameScreen2036",
+    "FemDommes6001", "FemDommes6002", "FemDommes6003", "FemDommes6004", "FemDommes6005", "FemDommes6006", "FemDommes6007", "FemDommes6008", "FemDommes6009", "FemDommes6010", "FemDommes6011", "FemDommes6012", "FemDommes6013",
+    "FemDommes6014", "FemDommes6015", "FemDommes6016", "FemDommes6017", "FemDommes6018", "FemDommes6019", "FemDommes6020", "FemDommes6021", "FemDommes6022", "FemDommes6023", "FemDommes6024", "FemDommes6025", "FemDommes6026",
+    "FemDommes6027", "FemDommes6028", "FemDommes6029", "FemDommes6030", "FemDommes6031", "FemDommes6032", "FemDommes6033", "FemDommes6034", "FemDommes6035", "FemDommes6036", "FemDommes6037", "FemDommes6038", "FemDommes6039",
+    "FemDommes6040", "FemDommes6041", "FemDommes6042", "FemDommes6043", "FemDommes6044", "FemDommes6045", "FemDommes6046", "FemDommes6047", "FemDommes6048", "FemDommes6049", "FemDommes6050", "FemDommes6051", "FemDommes6052",
+    "FemDommes6053", "FemDommes6054", "FemDommes6055", "FemDommes6056", "FemDommes6057", "FemDommes6058", "FemDommes6059", "FemDommes6060", "FemDommes6061", "FemDommes6062", "FemDommes6063", "FemDommes6064", "FemDommes6065",
+    "FemDommes6066", "FemDommes6067", "FemDommes6068", "FemDommes6069", "FemDommes6070", "FemDommes6071", "FemDommes6072", "FemDommes6073", "FemDommes6074", "FemDommes6075", "FemDommes6076"
 ].sort();
 
 /** Crests */
