@@ -68,7 +68,11 @@ const MAP_TEXT = {
     56: "",
     57: "",
     58: "",
-    59: "A secret garden full of beer. How cool."
+    59: "A secret garden full of beer. How cool.",
+    60: "",
+    61: "",
+    62: "",
+    63: "We are not there yet, but we are making good progress.",
 };
 
 /** Map definitions */
@@ -1484,17 +1488,19 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63: {
+    63 : {
         name: "Are we there yet?",
         sg: 0,
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 3500,
-        data: '{"width":"17","height":"17","map":"BB2ABB2AA3BB2AA5BB4AA72BB43ABB7ABB2ABB5ABB3ABB2AA2BABB126A$"}',
-        wall: "DarkMossyWall101",
-        floor: "OrnateFloor1",
-        ceil: "DarkBrick113",
+        data: '{"width":"17","height":"17","map":"BB3ABAEE2BB4AA14EAA2BB2AA10BB2AA2BEBB2AA3BB2EBAA2BB5AA18BAA9BAA5BAA11BAA2BB2AA3BABB4AA2BAA7BB3ABB13AA2BB17ABB3ABB3AA2BABABAA2BAA2BB3ABABB9AA3BB2AA2BABB4ABB6EE2ABB8AA2BAA2BAA2BB2ABB5ABB21A$AA2BB6AA5BB2"}',
+        wall: "DarkRedBricks1",
+        floor: "OrnateFloor101",
+        ceil: "Wood5",
         start: '[151,3]',
+        lights: '[[144,5,"WallLamp11","standard"],[129,3,"Candelabra11","standardDimmed"],[163,3,"Lamp47","standardDimmed"],[144,3,"Candelabra14","weakCandle"],[8,7,"Fireplace10","fire"],[280,1,"Fireplace15","fire"],[84,3,"Candelabra02","weakCandle"],[68,5,"Candelabra05","weakCandle"],[221,5,"Candelabra08","weakCandle"],[237,3,"Candelabra12","weakCandle"]]',
         gates: '[[152,3,"63.1","32.3","Open"]]',
-    }
+        doors: '[229,59,46,250,139,242,38]',
+        }
 };
