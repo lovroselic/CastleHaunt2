@@ -76,20 +76,20 @@ const DEBUG = {
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         GAME.level = 63;
 
-        GAME.gold = 1852;
-        GAME.lives = 2;
+        GAME.gold = 2678;
+        GAME.lives = 3;
 
         HERO.hasCapacity = true;
-        HERO.capacity = 3;
+        HERO.capacity = 4;
         HERO.maxCapacity = 5;
 
         HERO.orbs = 3;
         HERO.orbsLost = 0;
-        HERO.magic = 23;
-        HERO.attack = 21;
+        HERO.magic = 24;
+        HERO.attack = 22;
 
-        HERO.health = 84;
-        HERO.maxHealth = 160;
+        HERO.health = 168;
+        HERO.maxHealth = 168;
 
 
         let actItems = [
@@ -109,7 +109,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Explode", "MagicSupremacy", "Invisibility"
+            "Explode", "MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -162,7 +162,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.04",
+    VERSION: "0.12.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

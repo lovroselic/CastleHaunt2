@@ -182,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    XmasSnake: {
+        name: "XmasSnake",
+        sprite: "XmasSnake",
+        category: 'crest',
+        voice: "Female2",
+        text: "Obviously you were a good girl Princess. Look at all the presents.",
+        interactionCategory: "oracle",
+    },
     RootingDomme: {
         name: "RootingDomme",
         sprite: "RootingDomme",
@@ -823,6 +831,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "What will it take to defeat you? More monsters? You've got it. You'll get it.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaXmas: {
+        name: "ApparitiaXmas",
+        sprite: "ApparitiaXmas",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Do you know what you'll get for Christmas from me? A dagger. Into the heart. Hahahaha.",
         interactionCategory: "oracle",
     },
 };
