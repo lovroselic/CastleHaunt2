@@ -1240,6 +1240,19 @@ class $3D_player {
         this.setMode("idle");
         this.actionModes = ["attacking"];
         this.actionCallback = null;
+        this.initTextureMap();
+    }
+    initTextureMap(normal = "normal") {
+        if (!this.model) return;
+        this.textureMap = {};
+        this.textureMap[normal] = WebGL.createTexture(this.model.textures[0]);
+        this.texture = this.textureMap[normal];
+    }
+    addToTextureMap(label, image) {
+        this.textureMap[label] = WebGL.createTexture(image);
+    }
+    useTexture(label) {
+        this.texture = this.textureMap[label];
     }
     setMode(mode) {
         /**

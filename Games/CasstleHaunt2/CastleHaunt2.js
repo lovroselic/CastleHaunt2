@@ -157,12 +157,12 @@ const INI = {
     HEALTH_INC: 8,
     SCROLL_RANGE: 11,
     CRIPPLE_SPEED: 0.1,
-    INVISIBILITY_TIME: 59, //59
+    INVISIBILITY_TIME: 59,
 
 };
 
 const PRG = {
-    VERSION: "0.12.03",
+    VERSION: "0.12.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -463,7 +463,6 @@ const HERO = {
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
         this.mana = 0;      //unusd, compatibility
-        //this.invisible = false;
         this.revive();
         this.visible();
 
@@ -720,6 +719,7 @@ const HERO = {
         HERO.removeStatus("Invisibility");
         HERO.visible();
         TITLE.keys();
+        HERO.player.useTexture("normal");
 
         const text = [
             "Oops, guess I'm back in the spotlight!",
@@ -753,6 +753,7 @@ const HERO = {
     startInvisibility() {
         console.warn("invisinbility START");
         HERO.invisible = true;
+        HERO.player.useTexture("invisible");
         const text = [
             "Nobody can see me now.",
             "I am invisible",
@@ -915,6 +916,7 @@ const GAME = {
         }
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
         HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
+        HERO.player.addToTextureMap("invisible", TEXTURE.TheInvisiblePrincess);
         this.setCamera();
         AI.initialize(HERO.player, "3D");
         this.setWorld(level);

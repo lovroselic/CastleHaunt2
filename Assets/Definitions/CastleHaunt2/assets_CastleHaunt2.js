@@ -677,6 +677,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/Green_Apple_Basecolor.jpg", name: "Green_Apple_Basecolor" },
     { srcName: "ObjectTextures/CanTexture.jpg", name: "CanTexture" },
 
+    { srcName: "ObjectTextures/TheInvisiblePrincess.png", name: "TheInvisiblePrincess" },
+
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
     { srcName: "ObjectTextures/Barrel.jpg", name: "Barrel" },
@@ -775,7 +777,7 @@ LoadAudio = [
 ];
 
 LoadShaders = [
-    'vShader_1_0.glsl', 'fShader_1_0.glsl', 'pick_vShader_1_0.glsl', 'pick_fShader_1_0.glsl',
+    'vShader_1_0.glsl', 'fShader_1_1.glsl', 'pick_vShader_1_0.glsl', 'pick_fShader_1_0.glsl',
     'particle_render_fShader_1_0.glsl', 'particle_render_vShader_1_0.glsl', 'particle_transform_fShader_1_0.glsl', 'particle_transform_vShader_1_0.glsl',
     'model_vShader_1_0.glsl',
 ];
