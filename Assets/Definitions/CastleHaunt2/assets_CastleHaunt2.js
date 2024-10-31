@@ -828,6 +828,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaProgress.jpg", name: "ApparitiaProgress" },
     { srcName: "EntityPictures/ApparitiaGold.jpg", name: "ApparitiaGold" },
     { srcName: "EntityPictures/ApparitiaDemolition.jpg", name: "ApparitiaDemolition" },
+    { srcName: "EntityPictures/ApparitiaWhat.jpg", name: "ApparitiaWhat" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1048,7 +1049,10 @@ LoadSprites = [
     { srcName: "Scrolls/SCR_Death.png", name: "SCR_Death" },
     { srcName: "Scrolls/SCR_MagicSupremacy.png", name: "SCR_MagicSupremacy" },
     { srcName: "Scrolls/SCR_DestroyOrbs.png", name: "SCR_DestroyOrbs" },
+    { srcName: "Scrolls/SCR_Invisibility2.png", name: "SCR_Invisibility" },
 
+    //status
+    { srcName: "Status/Invisible2.png", name: "Invisible" },
 
     // items
     { srcName: "Items/Apple.png", name: "Apple" },

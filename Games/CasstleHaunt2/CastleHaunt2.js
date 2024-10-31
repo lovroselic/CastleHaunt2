@@ -109,7 +109,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Explode", "MagicSupremacy"
+            "Explode", "MagicSupremacy", "Invisibility"
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -156,11 +156,13 @@ const INI = {
     },
     HEALTH_INC: 8,
     SCROLL_RANGE: 11,
-    CRIPPLE_SPEED: 0.1
+    CRIPPLE_SPEED: 0.1,
+    INVISIBILITY_TIME: 59, //59
+
 };
 
 const PRG = {
-    VERSION: "0.12.02",
+    VERSION: "0.12.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -420,6 +422,20 @@ class Scroll {
                     if (!missile.friendly) missile.explode(MISSILE3D);
                 }
                 break;
+            case "Invisibility":
+                console.warn("invisibility");
+                HERO.startInvisibility();
+                const invisibilityTimerId = "invisibilityTimer";
+                if (ENGINE.TIMERS.exists(invisibilityTimerId)) {
+                    T = ENGINE.TIMERS.access(invisibilityTimerId);
+                    T.extend(INI.INVISIBILITY_TIME);
+                } else {
+                    T = new CountDown(invisibilityTimerId, INI.INVISIBILITY_TIME, HERO.cancelInvisibility);
+                    let status = new Status("Invisibility", "Invisible");
+                    HERO.inventory.status.push(status);
+                    TITLE.keys();
+                }
+                break;
             default:
                 console.error("ERROR scroll action", this);
                 break;
@@ -447,8 +463,9 @@ const HERO = {
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
         this.mana = 0;      //unusd, compatibility
-        this.invisible = false;
+        //this.invisible = false;
         this.revive();
+        this.visible();
 
         const propsToSave = ["health", "maxHealth", "attack", "magic", "orbs", "maxCapacity", "capacity", "hasCapacity"];
         this.attributesForSaveGame = [];
@@ -694,6 +711,76 @@ const HERO = {
         this[max] += INI[`${type.toUpperCase()}_INC`] * level;
         this[type] = this[max];
         TITLE.health();
+    },
+    visible() {
+        HERO.invisible = false;
+    },
+    cancelInvisibility() {
+        console.warn("invisinbility END");
+        HERO.removeStatus("Invisibility");
+        HERO.visible();
+        TITLE.keys();
+
+        const text = [
+            "Oops, guess I'm back in the spotlight!",
+            "Ta-da! The Princess has reappeared.",
+            "Miss me? Didn't think so.",
+            "Invisible no more... fabulous as ever.",
+            "Back to being everyone's favorite target.",
+            "Hide-and-seek's over, I guess.",
+            "So much for stealth mode.",
+            "Can everyone see me now? Great.",
+            "Back to dodging monsters the hard way!",
+            "I'm visible... again. Lovely.",
+            "The magic wore off... typical.",
+            "Stealth was fun while it lasted.",
+            "Guess I'll have to fight fair now!",
+            "Aaaand I'm back in the spotlight.",
+            "Surprise! Did you miss me?",
+            "Oops, cover's blown.",
+            "Guess the magic ran out...",
+            "Oh great, now I'm a target again.",
+            "Visibility: 100%. Not ideal.",
+            "So much for my ghostly exit.",
+            "Oh, now you can see me? Fun.",
+            "I guess stealth isn't forever.",
+            "Busted! Time to fight like a Princess!",
+            "Can't stay hidden forever, I suppose.",
+
+        ];
+        HERO.speak(text.chooseRandom());
+    },
+    startInvisibility() {
+        console.warn("invisinbility START");
+        HERO.invisible = true;
+        const text = [
+            "Nobody can see me now.",
+            "I am invisible",
+            "Peek-a-boo, I'm gone!",
+            "Now you see me… well, no you don't.",
+            "Guess I'm too fabulous to be seen.",
+            "Catch me if you... oh wait, you can't!",
+            "Invisible and invincible—perfect combo.",
+            "I'm like a ghost, but, you know, alive.",
+            "Just your friendly neighborhood invisible princess!",
+            "Sorry, monsters, can't kill what you can't see!",
+            "Playing hide and seek, anyone?",
+            "I'm like a royal ghost now.",
+            "Try finding what isn't there!",
+            "Poof! Princess gone, just like magic.",
+            "If you can't see me, you can't hurt me!",
+            "I could get used to this stealthy life."
+
+        ];
+        this.speak(text.chooseRandom());
+    },
+    removeStatus(status) {
+        for (let i = HERO.inventory.status.length - 1; i >= 0; i--) {
+            if (HERO.inventory.status[i].type === status) {
+                HERO.inventory.status.splice(i, 1);
+                break;
+            }
+        }
     },
 };
 

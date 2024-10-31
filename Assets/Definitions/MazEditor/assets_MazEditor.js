@@ -832,7 +832,6 @@ LoadSprites = [
     { srcName: "Scrolls/SCR_DrainMana.png", name: "SCR_DrainMana" },
     { srcName: "Scrolls/SCR_Explode2.png", name: "SCR_Explode" },
     { srcName: "Scrolls/SCR_HalfLife2.png", name: "SCR_HalfLife" },
-    { srcName: "Scrolls/SCR_Invisibility.png", name: "SCR_Invisibility" },
     { srcName: "Scrolls/SCR_Light.png", name: "SCR_Light" },
     { srcName: "Scrolls/SCR_Luck.png", name: "SCR_Luck" },
     { srcName: "Scrolls/SCR_MagicBoost.png", name: "SCR_MagicBoost" },
@@ -843,6 +842,7 @@ LoadSprites = [
     { srcName: "Scrolls/SCR_Death.png", name: "SCR_Death" },
     { srcName: "Scrolls/SCR_MagicSupremacy.png", name: "SCR_MagicSupremacy" },
     { srcName: "Scrolls/SCR_DestroyOrbs.png", name: "SCR_DestroyOrbs" },
+    { srcName: "Scrolls/SCR_Invisibility2.png", name: "SCR_Invisibility" },
 
     //lights
     { srcName: "Lights/Lamp4.png", name: "Lamp4" },

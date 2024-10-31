@@ -817,6 +817,14 @@ const ORACLE_TYPE = {
         text: "Did you figure this out by yourself? Maybe you are not that stupid.",
         interactionCategory: "oracle",
     },
+    ApparitiaWhat: {
+        name: "ApparitiaWhat",
+        sprite: "ApparitiaWhat",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "What will it take to defeat you? More monsters? You've got it. You'll get it.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
