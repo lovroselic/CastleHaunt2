@@ -182,6 +182,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Baker: {
+        name: "Baker",
+        sprite: "Baker",
+        category: 'crest',
+        voice: "Female2",
+        text: "Of course cakes are healthy. Natural antidepressants.",
+        interactionCategory: "oracle",
+    },
     XmasSnake: {
         name: "XmasSnake",
         sprite: "XmasSnake",
@@ -839,6 +847,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "Do you know what you'll get for Christmas from me? A dagger. Into the heart. Hahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaBeer: {
+        name: "ApparitiaBeer",
+        sprite: "ApparitiaBeer",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Do you really really think all those cakes and beer is good for you? You'll get fat.",
         interactionCategory: "oracle",
     },
 };

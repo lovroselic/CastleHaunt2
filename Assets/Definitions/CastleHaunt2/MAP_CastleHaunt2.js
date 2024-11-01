@@ -1488,26 +1488,26 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63: {
+    63 : {
         name: "Are we there yet?",
         sg: 0,
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 3500,
-        data: '{"width":"17","height":"17","map":"BB4AA2EE2BB4AA14EAA2BABAA9BABEBB2ABB2AA2EBAA2BABB4AA6BAA20BAA5BAA8BAA2BB2ABAA4BB4AA3BAA7BB3ABB12AA2BB18ABB3ABB2ABABB2AA3BABB4ABB11AA3BB2AA3BABB2ABB2ABB6EE2ABB9ABAA2BAA2BB3ABB6AA2BB21A$AA2BB6AA5BB2"}',
+        data: '{"width":"17","height":"17","map":"BB4AA2EE2BB4AA14EAA2BABAA10BEBB2ABB2AEABAA2BABB4AA14BAA11BAA11BB2AA2BB2AA6BB5AA3BAA7BB3ABB11AA2BB26ABB2AA3BABB4ABB12AA4BB2AA3BB2ABB3ABABB6EE2ABB10ABAA2BAA2BB2ABABB6AA2BB21A$AA2BB6AA5BB2"}',
         wall: "DarkRedBricks1",
         floor: "OrnateFloor101",
         ceil: "Wood5",
         start: '[151,3]',
         lights: '[[144,5,"WallLamp11","standard"],[129,3,"Candelabra11","standardDimmed"],[163,3,"Lamp47","standardDimmed"],[144,3,"Candelabra14","weakCandle"],[8,7,"Fireplace10","fire"],[280,1,"Fireplace15","fire"],[84,3,"Candelabra02","weakCandle"],[68,5,"Candelabra05","weakCandle"],[221,5,"Candelabra08","weakCandle"],[237,3,"Candelabra12","weakCandle"]]',
-        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"]]',
+        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"],[104,1,"63.3","65.1","Down"]]',
         monsters: '[[100,"GhostMinionGreen"],[87,"GhostMinionGreen"]]',
         scrolls: '[[145,1]]',
         doors: '[229,59,46,250,139,242,38]',
-        oracles: '[[14,7,"ApparitiaWhat"]]',
-    }
+        oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"]]',
+        }
     ,
-    64 : {
+    64: {
         name: "Early Xmas",
         sg: 0,
         maxSpawned: 6,
@@ -1529,5 +1529,27 @@ const MAP = {
         movables: '[[58,"Life"]]',
         lairs: '[[90,3,"Lair42"],[78,5,"Lair47"]]',
         monsterList: '["Viking"]',
+    }
+    ,
+    65 : {
+        name: "Comfort Food",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"15","height":"15","map":"BB3AA12BB2AA6BB2ABB2AA9BB5AA4BB3ABAA3BB3AA20BB3AA5BAA5BB2AA2BAA8BB9ABABB2ABB7ABABB2ABAA2BB3ABB6ABB3AA2BB6ABB2AEABEABB2AA2BB10ABB4ABB3ABABB9AA2BB13A$AA2BB6"}',
+        wall: "DarkMossy124",
+        floor: "OrnateFloor108",
+        ceil: "Wood13",
+        start: '[127,7]',
+        decals: '[[1,7,"Domme322","picture"],[3,7,"Morana035","picture"],[20,7,"BC_AI1","picture"],[24,7,"SVS1011","picture"],[11,7,"GameScreen2020","picture"],[13,7,"AI_pic214","picture"],[50,7,"ZimSalaBim200","picture"],[54,7,"Bagitman90","picture"],[64,7,"TombRaider111","picture"],[70,7,"Sp61","picture"],[78,7,"CastleBabes45","picture"],[86,7,"Hero80","picture"],[151,7,"CastleLady33","picture"],[153,7,"Wolfenstein31","picture"],[170,7,"Yennefer21","picture"],[174,7,"Scramble7","picture"],[161,7,"LargePicLadies20","picture"],[163,7,"MassEffect2","picture"],[211,1,"JetSetWilly88","picture"],[213,1,"GirlSwims15","picture"],[200,1,"CastleBabes32","picture"],[204,1,"WhoDaresWins71","picture"],[221,1,"AI_Pic_105","picture"],[223,1,"GameScreen1020","picture"],[170,1,"Morana047","picture"],[174,1,"FemDommes6070","picture"],[160,1,"SabreWulfAI_102","picture"],[146,1,"ManiacMansion11","picture"],[154,1,"BoogaBoo4","picture"],[138,1,"WhoDaresWins70","picture"],[61,1,"AI_PIC_454","picture"],[63,1,"CrawlMaster110","picture"],[71,1,"Pitfall71","picture"],[73,1,"Cuthbert20","picture"],[50,1,"MassEffect1","picture"],[54,1,"Princess15","picture"],[105,5,"GameScreens057","picture"],[30,5,"GameScreens045","picture"],[180,5,"MonkeyIsland110","picture"],[44,3,"CastleLady104","picture"],[119,3,"TheHobbit70","picture"],[194,3,"AI_pic247","picture"],[64,5,"Domme350","picture"],[78,5,"Domme215","picture"],[92,5,"CastleLady35","picture"],[122,5,"Domme127","picture"],[138,5,"PrincessAI_07","picture"],[154,5,"Domme125","picture"],[70,3,"GameScreen2003","picture"],[86,3,"FemDommes6027","picture"],[102,3,"GirlSwims07","picture"],[132,3,"CastleLady29","picture"],[146,3,"Goonies88","picture"],[160,3,"FemDommes6002","picture"]]',
+        lights: '[[126,7,"Candelabra12","weakCandle"],[128,7,"Candelabra08","weakCandle"],[97,1,"WallLamp","standardDimmed"],[111,3,"Candelabra01","standardDimmed"],[113,5,"Lamp53","standardDimmed"]]',
+        gates: '[[112,7,"65.1","63.3","Up"]]',
+        gold: '[[118,"RedGem"]]',
+        doors: '[52,172]',
+        objects: '[[32,"Cake"],[42,"Cake"],[26,"Cake"],[28,"Cake"],[46,"Cake"],[48,"Cake"],[106,"Steak"],[167,"BeerHealth"],[197,"BeerHealth"],[176,"BeerHealth"],[208,"BeerHealth"]]',
+        oracles: '[[7,7,"Baker"]]',
+        lairs: '[[76,7,"Lair48"],[88,7,"Lair02"],[148,1,"Lair45"],[136,1,"Lair44"]]',
+        monsterList: '["MissGalaxyGold","Viking","AngrySheep","Goblin","Wolf","SpiderGreen","GhostMinion"]',
         }
 };
