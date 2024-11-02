@@ -135,7 +135,14 @@ const DECAL_PAINTINGS = [
     "FemDommes6027", "FemDommes6028", "FemDommes6029", "FemDommes6030", "FemDommes6031", "FemDommes6032", "FemDommes6033", "FemDommes6034", "FemDommes6035", "FemDommes6036", "FemDommes6037", "FemDommes6038", "FemDommes6039",
     "FemDommes6040", "FemDommes6041", "FemDommes6042", "FemDommes6043", "FemDommes6044", "FemDommes6045", "FemDommes6046", "FemDommes6047", "FemDommes6048", "FemDommes6049", "FemDommes6050", "FemDommes6051", "FemDommes6052",
     "FemDommes6053", "FemDommes6054", "FemDommes6055", "FemDommes6056", "FemDommes6057", "FemDommes6058", "FemDommes6059", "FemDommes6060", "FemDommes6061", "FemDommes6062", "FemDommes6063", "FemDommes6064", "FemDommes6065",
-    "FemDommes6066", "FemDommes6067", "FemDommes6068", "FemDommes6069", "FemDommes6070", "FemDommes6071", "FemDommes6072", "FemDommes6073", "FemDommes6074", "FemDommes6075", "FemDommes6076"
+    "FemDommes6066", "FemDommes6067", "FemDommes6068", "FemDommes6069", "FemDommes6070", "FemDommes6071", "FemDommes6072", "FemDommes6073", "FemDommes6074", "FemDommes6075", "FemDommes6076",
+    "FemDommes901", "FemDommes902", "FemDommes903", "FemDommes904", "FemDommes905", "FemDommes906", "FemDommes907", "FemDommes908", "FemDommes909", "FemDommes910", "FemDommes911", "FemDommes912",
+    "FemDommes913", "FemDommes914", "UnusedEntities101", "UnusedEntities102", "UnusedEntities103", "UnusedEntities104", "UnusedEntities105", "UnusedEntities106", "UnusedEntities107", "UnusedEntities108",
+    "UnusedEntities109", "UnusedEntities110", "UnusedEntities111", "UnusedEntities112", "UnusedEntities113", "UnusedEntities114", "UnusedEntities115", "UnusedEntities116", "UnusedEntities117", "UnusedEntities118",
+    "UnusedEntities119", "UnusedEntities120", "UnusedEntities121", "UnusedEntities122", "UnusedEntities123", "UnusedEntities124", "UnusedEntities125", "UnusedEntities126", "UnusedEntities127", "UnusedEntities128",
+    "UnusedEntities129", "UnusedEntities130", "UnusedEntities131", "UnusedEntities132", "UnusedEntities133", "UnusedEntities134", "UnusedEntities135", "UnusedEntities136", "UnusedEntities137", "UnusedEntities138",
+    "UnusedEntities139", "UnusedEntities140", "UnusedEntities141", "UnusedEntities142", "UnusedEntities143", "UnusedEntities144", "UnusedEntities145", "UnusedEntities146", "UnusedEntities147", "UnusedEntities148",
+    "UnusedEntities149", "UnusedEntities150", "UnusedEntities151", "UnusedEntities152", "UnusedEntities153", "UnusedEntities154"
 ].sort();
 
 /** Crests */

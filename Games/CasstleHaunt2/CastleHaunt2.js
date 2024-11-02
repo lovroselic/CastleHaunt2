@@ -74,9 +74,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 65;
+        GAME.level = 67;
 
-        GAME.gold = 2678;
+        GAME.gold = 3752;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -95,13 +95,19 @@ const DEBUG = {
         let actItems = [
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -109,7 +115,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Explode", "MagicSupremacy",
+            "MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -129,7 +135,7 @@ const DEBUG = {
             HERO.inventory.item.push(item);
         }
 
-        let keys = [];
+        let keys = ["Gold"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -162,7 +168,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.06",
+    VERSION: "0.12.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -1488,7 +1488,7 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63 : {
+    63: {
         name: "Are we there yet?",
         sg: 0,
         maxSpawned: 6,
@@ -1500,12 +1500,12 @@ const MAP = {
         ceil: "Wood5",
         start: '[151,3]',
         lights: '[[144,5,"WallLamp11","standard"],[129,3,"Candelabra11","standardDimmed"],[163,3,"Lamp47","standardDimmed"],[144,3,"Candelabra14","weakCandle"],[8,7,"Fireplace10","fire"],[280,1,"Fireplace15","fire"],[84,3,"Candelabra02","weakCandle"],[68,5,"Candelabra05","weakCandle"],[221,5,"Candelabra08","weakCandle"],[237,3,"Candelabra12","weakCandle"]]',
-        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"],[104,1,"63.3","65.1","Down"]]',
-        monsters: '[[100,"GhostMinionGreen"],[87,"GhostMinionGreen"]]',
+        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"],[104,1,"63.3","65.1","Down"],[184,7,"63.4","66.1","Down"],[172,7,"63.5","67.1","Down"]]',
+        monsters: '[[100,"GhostMinionGreen"],[87,"GhostMinionGreen"],[201,"GhostMinionGreen"],[189,"GhostMinionGreen"]]',
         scrolls: '[[145,1]]',
         doors: '[229,59,46,250,139,242,38]',
-        oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"]]',
-        }
+        oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"],[286,1,"ScrollOracle"]]',
+    }
     ,
     64: {
         name: "Early Xmas",
@@ -1531,7 +1531,7 @@ const MAP = {
         monsterList: '["Viking"]',
     }
     ,
-    65 : {
+    65: {
         name: "Comfort Food",
         sg: 0,
         maxSpawned: 6,
@@ -1548,8 +1548,46 @@ const MAP = {
         gold: '[[118,"RedGem"]]',
         doors: '[52,172]',
         objects: '[[32,"Cake"],[42,"Cake"],[26,"Cake"],[28,"Cake"],[46,"Cake"],[48,"Cake"],[106,"Steak"],[167,"BeerHealth"],[197,"BeerHealth"],[176,"BeerHealth"],[208,"BeerHealth"]]',
-        oracles: '[[7,7,"Baker"]]',
+        oracles: '[[7,7,"Baker"],[217,1,"Barmaid"]]',
         lairs: '[[76,7,"Lair48"],[88,7,"Lair02"],[148,1,"Lair45"],[136,1,"Lair44"]]',
         monsterList: '["MissGalaxyGold","Viking","AngrySheep","Goblin","Wolf","SpiderGreen","GhostMinion"]',
+    }
+    ,
+    66: {
+        name: "Killing Fields",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"15","height":"23","map":"BB2ABAA4BAA6BB2AA5ÁÁ4AÁBB5AA2BAA6BB2ABAÁAA5BÁÁ5AA10BAA3BAA13BB2AA2BB2ÁÁ4BB2AA7BB3AA3BB3ABABAA3ÁÁ4AA2ÁÁ3AA3ÁABB4AA5BB2AA2BB18ABB7ABB7AA2BAA4BB4ABB2ABB7ABAA6BB2ÁABABB2ABB4ABAA2BÁBAA7BB23$AÁEBB2AA2BB9ÁAA2ÁÁ12AA4ÁÁ5BB2AA3ÁÁ10AA3ÁÁ2AÁÁ9AÁAA4BAA5"}',
+        wall: "BlackWall40",
+        floor: "DarkMarble50",
+        ceil: "WetShinyWall1",
+        start: '[322,1]',
+        decals: '[[231,7,"SatanRam6","crest"],[233,7,"SatanRam5","crest"],[90,5,"LaughingSkeleton1","crest"],[210,5,"LaughingSkeleton2","crest"],[150,5,"LaughingSkeleton3","crest"],[104,3,"LaughingSkeleton4","crest"],[164,3,"LaughingSkeleton5","crest"],[224,3,"LaughingSkeleton6","crest"],[47,7,"SatanRam7","crest"],[57,7,"SatanRam9","crest"],[21,7,"KnightStatue110","crest"],[23,7,"KnightStatue106","crest"],[35,7,"DemonSkull1","crest"],[39,7,"DemonSkull2","crest"],[33,7,"FemDommes6019","picture"],[41,7,"AI_Pic_108","picture"],[60,5,"ESB","picture"],[25,5,"Domme110","picture"],[74,3,"Dominatrix101","picture"],[19,3,"Cavelon4","picture"],[253,3,"Vixen89","picture"],[319,3,"CastleLady69","picture"],[241,5,"Dominatrix08","picture"],[325,5,"Princess603","picture"],[305,1,"CastleLady106","picture"],[309,1,"Babes403","picture"],[292,4,"FloorGrille107","crest"],[277,4,"FloorGrille106","crest"],[262,4,"FloorGrille104","crest"],[321,1,"GatewayToApshai11","picture"],[323,1,"FemaleWarrior101","picture"]]',
+        lights: '[[7,7,"Fireplace08","fire"],[1,7,"Candelabra11","standard"],[13,7,"Lamp50","standard"],[332,1,"Candelabra05","standard"],[342,1,"WallLamp14","standard"],[180,5,"Candelabra01","weakCandle"],[120,5,"WallLamp34","weakCandle"],[134,3,"WallLamp19","weakCandle"],[194,3,"Candelabra07","weakCandle"]]',
+        gates: '[[337,1,"66.1","63.4","Up"]]',
+        keys: '[[22,0]]',
+        monsters: '[[214,"GhostMinionGreen"],[184,"GhostMinionGreen"],[154,"GhostMinionGreen"],[124,"GhostMinionGreen"],[94,"GhostMinionGreen"],[100,"GhostMinionGreen"],[130,"GhostMinionGreen"],[160,"GhostMinionGreen"],[190,"GhostMinionGreen"],[220,"GhostMinionGreen"],[52,"GhostMinionGreen"],[127,"GhostMinionGreen"],[202,"GhostMinionGreen"],[242,"GhostMinionGreen"],[252,"GhostMinionGreen"]]',
+        scrolls: '[[17,14],[27,16]]',
+        gold: '[[18,"GreenGem"],[26,"GreenGem"],[326,"GreenGem"],[318,"GreenGem"]]',
+        containers: '[[306,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[308,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
+        doors: '[232]',
+        oracles: '[[273,5,"Angeless"],[281,3,"ApparitiaGauntlet"]]',
+    }
+    ,
+    67 : {
+        name: "Fireball Storage",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"13","height":"13","map":"BB3AA2BB2AA2BB2AA24BB2AA4BB3ABAA15BB2AA2BAA8BAA2BB6AA14BB11AA2BB2AA8BB14AA2BAA3BAA3BABAA2BB19A$"}',
+        wall: "PebbleWall1",
+        floor: "MarbleFloor102",
+        ceil: "DarkBricks111",
+        start: '[149,1]',
+        lights: '[[83,3,"Lamp50","standard"],[85,5,"Lamp50","standard"],[71,1,"Lamp50","standard"],[97,7,"Lamp50","standard"]]',
+        gates: '[[162,1,"67.1","63.5","Up"]]',
         }
 };

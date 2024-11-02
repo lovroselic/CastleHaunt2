@@ -182,6 +182,30 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Angeless: {
+        name: "Angeless",
+        sprite: "Angeless",
+        category: 'crest',
+        voice: "Female2",
+        text: "Girl, you should be invisible to get that key.",
+        interactionCategory: "oracle",
+    },
+    ScrollOracle: {
+        name: "ScrollOracle",
+        sprite: "ScrollOracle",
+        category: 'crest',
+        voice: "Female2",
+        text: "Be carefull, don't use scrolls in vain. They are in limited supply.",
+        interactionCategory: "oracle",
+    },
+    Barmaid: {
+        name: "Barmaid",
+        sprite: "Barmaid",
+        category: 'crest',
+        voice: "Female",
+        text: "Yes yes. It's a craft beer. Bitchcraft beer.",
+        interactionCategory: "oracle",
+    },
     Baker: {
         name: "Baker",
         sprite: "Baker",
@@ -855,6 +879,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "Do you really really think all those cakes and beer is good for you? You'll get fat.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaGauntlet: {
+        name: "ApparitiaGauntlet",
+        sprite: "ApparitiaGauntlet",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Talk to me. Take your time, while a little GhostFace minions shower your back with green orbs. Hahahahahahaha.",
         interactionCategory: "oracle",
     },
 };
