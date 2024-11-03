@@ -1488,7 +1488,7 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63: {
+    63 : {
         name: "Are we there yet?",
         sg: 0,
         maxSpawned: 6,
@@ -1504,8 +1504,8 @@ const MAP = {
         monsters: '[[100,"GhostMinionGreen"],[87,"GhostMinionGreen"],[201,"GhostMinionGreen"],[189,"GhostMinionGreen"]]',
         scrolls: '[[145,1]]',
         doors: '[229,59,46,250,139,242,38]',
-        oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"],[286,1,"ScrollOracle"]]',
-    }
+        oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"],[286,1,"ScrollOracle"],[274,1,"ApparitiaOffensive"]]',
+        }
     ,
     64: {
         name: "Early Xmas",
@@ -1579,15 +1579,22 @@ const MAP = {
     67 : {
         name: "Fireball Storage",
         sg: 0,
-        maxSpawned: 6,
-        killCountdown: 5,
-        spawnDelay: 3500,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 5000,
         data: '{"width":"13","height":"13","map":"BB3AA2BB2AA2BB2AA24BB2AA4BB3ABAA15BB2AA2BAA8BAA2BB6AA14BB11AA2BB2AA8BB14AA2BAA3BAA3BABAA2BB19A$"}',
         wall: "PebbleWall1",
         floor: "MarbleFloor102",
         ceil: "DarkBricks111",
         start: '[149,1]',
+        decals: '[[2,7,"CastleLady36","picture"],[10,7,"HunchBack71","picture"],[8,7,"GirlSwims09","picture"],[4,7,"FemaleWarrior107","picture"],[83,7,"AI_pic236","picture"],[85,7,"Bagitman90","picture"],[158,1,"FemDommes6057","picture"],[166,1,"Zaxxon70","picture"],[164,1,"Pitfall89","picture"],[160,1,"PrincessAI_10","picture"],[83,1,"Fred_AI_3","picture"],[85,1,"DynaBlaster60","picture"],[39,5,"CyberPunk201","picture"],[78,5,"Vixen51","picture"],[117,5,"Underwurlde141","picture"],[51,3,"Domme204","picture"],[90,3,"AI_pic204","picture"],[129,3,"FemDommes6015","picture"],[71,3,"GameScreen1002","picture"],[97,3,"CrystalCastles200","picture"],[71,5,"TombRaider96","picture"],[97,5,"BrideOfFrankenstein200","picture"]]',
         lights: '[[83,3,"Lamp50","standard"],[85,5,"Lamp50","standard"],[71,1,"Lamp50","standard"],[97,7,"Lamp50","standard"]]',
         gates: '[[162,1,"67.1","63.5","Up"]]',
+        gold: '[[144,"GoldBar"],[154,"GoldBar"]]',
+        containers: '[[17,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[21,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[147,"BookShelf","GOLD_ITEM_TYPE.GoldBar",1],[151,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",1]]',
+        objects: '[[40,"Orb"],[79,"Orb"],[118,"Orb"],[128,"Orb"],[89,"Orb"],[50,"Orb"]]',
+        oracles: '[[6,7,"StandingSerpent"],[143,5,"ApparitiaTrust"],[155,3,"SittingSerpent"]]',
+        lairs: '[[13,5,"Lair45"],[25,3,"Lair39"]]',
+        monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","GhostMinion"]',
         }
 };

@@ -834,6 +834,8 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaXmas.jpg", name: "ApparitiaXmas" },
     { srcName: "EntityPictures/ApparitiaBeer.jpg", name: "ApparitiaBeer" },
     { srcName: "EntityPictures/ApparitiaGauntlet.jpg", name: "ApparitiaGauntlet" },
+    { srcName: "EntityPictures/ApparitiaTrust.jpg", name: "ApparitiaTrust" },
+    { srcName: "EntityPictures/ApparitiaOffensive.jpg", name: "ApparitiaOffensive" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -953,6 +955,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Barmaid1.jpg", name: "Barmaid" },
     { srcName: "EntityPictures/ScrollSell_HalfLife.jpg", name: "ScrollOracle" },
     { srcName: "EntityPictures/Angeless1.jpg", name: "Angeless" },
+    { srcName: "EntityPictures/StandingSerpent.jpg", name: "StandingSerpent" },
+    { srcName: "EntityPictures/SittingSerpent.jpg", name: "SittingSerpent" },
 
 
     //action movables

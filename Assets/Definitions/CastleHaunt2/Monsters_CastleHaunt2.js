@@ -182,6 +182,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    SittingSerpent: {
+        name: "SittingSerpent",
+        sprite: "SittingSerpent",
+        category: 'crest',
+        voice: "Female",
+        text: "Enjoy the respite. Once you unlock the Golden Door, things will get brutal.",
+        interactionCategory: "oracle",
+    },
+    StandingSerpent: {
+        name: "StandingSerpent",
+        sprite: "StandingSerpent",
+        category: 'crest',
+        voice: "Female",
+        text: "Don't be greedy. Take only what you need. Or else.",
+        interactionCategory: "oracle",
+    },
     Angeless: {
         name: "Angeless",
         sprite: "Angeless",
@@ -887,6 +903,22 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "Talk to me. Take your time, while a little GhostFace minions shower your back with green orbs. Hahahahahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaTrust: {
+        name: "ApparitiaTrust",
+        sprite: "ApparitiaTrust",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Don't trust the serpent. Trust me, hehehe. Just take all.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaOffensive: {
+        name: "ApparitiaOffensive",
+        sprite: "ApparitiaOffensive",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "You came too far. But we, the Apparitias, are preparing the offensive in the name of her majesty, Hauntessa Spookish.",
         interactionCategory: "oracle",
     },
 };
