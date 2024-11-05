@@ -179,7 +179,10 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Fireplace201", "Fireplace202", "Fireplace203", "Fireplace204", "Fireplace205", "Fireplace206", "Fireplace207", "Fireplace208", "Fireplace209", "Fireplace210", "Fireplace211", "Fireplace212", "FluxLight101",
     "FluxLight102", "FluxLight103", "FluxLight104", "FluxLight105", "FluxLight106", "FluxLight107", "FluxLight108", "FluxLight109", "FluxLight110", "FluxLight111", "FluxLight112", "FluxLight113", "FluxLight114",
     "FluxLight115", "FluxLight116", "FluxLight117", "FluxLight118", "FluxLight119", "FluxLight120", "FluxLight121", "FluxLight122", "FluxLight123", "FluxLight124", "FluxLight125", "FluxLight126", "FluxLight127",
-    "FluxLight128", "FluxLight129"
+    "FluxLight128", "FluxLight129",
+    "DuaLLantern_001", "DuaLLantern_002", "DuaLLantern_003", "DuaLLantern_004", "DuaLLantern_005", "DuaLLantern_006", "DuaLLantern_007", "DuaLLantern_008", "DuaLLantern_009", "DuaLLantern_010", "DuaLLantern_011",
+    "DuaLLantern_012", "DuaLLantern_013", "DuaLLantern_014", "DuaLLantern_015", "DuaLLantern_016", "DuaLLantern_017", "DuaLLantern_018", "DuaLLantern_019", "DuaLLantern_020", "DuaLLantern_021", "DuaLLantern_022",
+    "DuaLLantern_023", "DuaLLantern_024", "DuaLLantern_025", "DuaLLantern_026", "DuaLLantern_027", "DuaLLantern_028", "DuaLLantern_029", "DuaLLantern_030", "DuaLLantern_031"
 ].sort();
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 

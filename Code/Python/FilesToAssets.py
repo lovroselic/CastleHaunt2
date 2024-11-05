@@ -22,8 +22,8 @@ from glob import glob
 # Directory = 'C:/Users/lovro/Downloads/Shield'
 Directory = 'C:/Users/Uporabnik/Downloads/Converted_AI_pic'
 # Prefix = 'Items/'
-Prefix = 'Wall/'
-# Prefix = "Lights/"
+# Prefix = 'Wall/'
+Prefix = "Lights/"
 # Prefix = "Lairs/"
 # Prefix = "PicDecals/"
 # Prefix = "ObjDecals/"

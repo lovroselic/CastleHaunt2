@@ -1613,13 +1613,13 @@ const MAP = {
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 3500,
-        data: '{"width":"27","height":"15","map":"BÁÁ3AA2ÁAÁAA15BB3AA5BAA27ÁÁ4AA5BAA2BAA2BB4AA6ÁÁ2AA34BAA22BB4AA4BB2AA4BAA7BAA24BB2AA5BB2AA12BB3AA4BB13AA2BB6ABB8ABB5AA2BAA2BB23ABB8AA2BB2ABB7ABAA2BB4ABB17AA2BB31$AA2BB3ABB6ÁÁ5AA2ÁÁ2AA2ÁÁ2AÁÁ6AA4ÁÁ4BB2"}',
+        data: '{"width":"27","height":"15","map":"BÁÁ2AA2ÁÁ2AA12BB3AA4BAA9ÁAA16ÁÁ2AÁAÁAA7BB4AA7ÁÁ2AA3BABB2AA28BAA23BB4AA2BB2AA7BAA7BAA20BB4AA5BB2ABB2AA16BB3AA2BB20AA2BB6ABB2AA3BB6AA5BB5AA2BAA2BB23ABB8AA2BB2ABB4AA2BABAA2BB2ABB40$AA2BB3ABB6ÁÁ5AA2ÁÁ2AA2ÁÁ4AÁÁ4AA4ÁÁ4BB2"}',
         wall: "SpiderWeb334",
         floor: "MarbleFloor101",
         ceil: "BrownBrick32",
         start: '[210,3]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.6","70.2","Closed"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
     }
     ,
@@ -1639,17 +1639,19 @@ const MAP = {
         doors: '[157,124,130]',
     }
     ,
-    70 : {
+    70: {
         name: "South Passage",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB12AA109BB2ABB44AA10BB5ABABB26$BB12A"}',
+        data: '{"width":"15","height":"15","map":"BB8AA7BAA16BAA27BAA7BAA3BAA9BAA2BAA9BABABB3ABB2AA9BAA2BB8ABB10ABB11AEABB2AA5BB2ABABB6AA2BB3AA6BB3ABB22$BB15AA2BB2"}',
         wall: "RockWall_SDXL_005",
         floor: "BloodMarbleFloorWall_SDXL_004",
         ceil: "BloodMarbleFloorWall_SDXL_010",
         start: '[25,7]',
+        lights: '[[22,7,"DuaLLantern_027","standard"]]',
         gates: '[[10,7,"70.1","68.4","Closed"],[4,7,"70.2","68.5","Closed"]]',
-        }
+        doors: '[82]',
+    }
 };
