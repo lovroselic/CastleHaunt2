@@ -73,6 +73,11 @@ const MAP_TEXT = {
     61: "",
     62: "",
     63: "We are not there yet, but we are making good progress.",
+    64: "",
+    65: "",
+    66: "",
+    67: "",
+    68: "Broken Hall? What is broken about it? Were you out of ideas, Lovro?",
 };
 
 /** Map definitions */
@@ -1488,7 +1493,7 @@ const MAP = {
         oracles: '[[171,5,"ApparitiaGrin"]]',
     }
     ,
-    63 : {
+    63: {
         name: "Are we there yet?",
         sg: 0,
         maxSpawned: 6,
@@ -1499,13 +1504,15 @@ const MAP = {
         floor: "OrnateFloor101",
         ceil: "Wood5",
         start: '[151,3]',
+        decals: '[[122,5,"KnightStatue110","crest"],[156,5,"KnightStatue108","crest"],[141,4,"PuddleDecal10","crest"],[140,4,"PuddleDecal10","crest"],[142,4,"PuddleDecal10","crest"],[123,4,"PuddleDecal08","crest"],[157,4,"PuddleDecal03","crest"],[149,4,"PuddleDecal03","crest"],[147,4,"PuddleDecal03","crest"],[58,7,"Portal140","picture"],[90,7,"AI_pic205","picture"],[61,7,"Invaders2","picture"],[97,7,"AI_pic218","picture"],[144,7,"UnusedEntities139","picture"],[200,7,"DungeonMaster91","picture"],[202,7,"Domme313","picture"],[188,7,"FemDommes6065","picture"],[190,7,"BeyondForbiddenForest111","picture"],[228,1,"Pitfall50","picture"],[231,1,"GatewayToApshai110","picture"],[215,1,"RedWarrior1","picture"],[199,1,"CastleLady13","picture"],[183,1,"AI_Pic_102","picture"],[210,1,"AI_pic244","picture"],[192,1,"GameScreen1006","picture"],[144,1,"KL102","picture"],[129,1,"AI_Pic_121","picture"],[163,1,"Gods2","picture"],[86,1,"Domme207","picture"],[88,1,"Pitfall88","picture"],[99,1,"Domme211","picture"],[74,7,"CastleLady101","picture"],[129,7,"RobinsonsRequiem1","picture"],[79,7,"CastleLady77","picture"],[115,7,"GameScreens045","picture"],[163,7,"FemDommes6012","picture"],[23,7,"CastleLady12","picture"],[27,7,"DungeonMaster91","picture"],[261,1,"FemDommes6043","picture"],[265,1,"RobinToTheRescue89","picture"],[90,5,"Elvira3","picture"],[34,5,"FemaleWarrior107","picture"],[63,5,"Paperboy50","picture"],[238,5,"CastleLady26","picture"],[233,5,"AI_pic249","picture"],[74,5,"GameScreens053","picture"],[192,5,"ShinyBlackRuberella101","picture"],[210,5,"Domme375","picture"],[50,3,"Domme324","picture"],[199,3,"TempleOfApshai70","picture"],[215,3,"UnusedEntities105","picture"],[79,3,"GameScreen2031","picture"],[97,3,"AticAtac111","picture"],[254,3,"Domme237","picture"],[183,3,"Morana037","picture"],[133,3,"Sorcery31","picture"],[167,3,"Domme319","picture"],[129,5,"GameScreen1013","picture"],[163,5,"Domme340","picture"],[58,1,"EveryoneIsAWally2","picture"],[60,1,"FemDommes6016","picture"],[228,7,"Morana136","picture"],[230,7,"AticAtac201","picture"],[225,3,"TombRaider100","picture"]]',
         lights: '[[144,5,"WallLamp11","standard"],[129,3,"Candelabra11","standardDimmed"],[163,3,"Lamp47","standardDimmed"],[144,3,"Candelabra14","weakCandle"],[8,7,"Fireplace10","fire"],[280,1,"Fireplace15","fire"],[84,3,"Candelabra02","weakCandle"],[68,5,"Candelabra05","weakCandle"],[221,5,"Candelabra08","weakCandle"],[237,3,"Candelabra12","weakCandle"]]',
-        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"],[104,1,"63.3","65.1","Down"],[184,7,"63.4","66.1","Down"],[172,7,"63.5","67.1","Down"]]',
+        gates: '[[152,3,"63.1","32.3","Open"],[117,1,"63.2","64.1","Down"],[104,1,"63.3","65.1","Down"],[184,7,"63.4","66.1","Down"],[172,7,"63.5","67.1","Down"],[136,5,"63.6","68.1","Gold"]]',
         monsters: '[[100,"GhostMinionGreen"],[87,"GhostMinionGreen"],[201,"GhostMinionGreen"],[189,"GhostMinionGreen"]]',
         scrolls: '[[145,1]]',
+        gold: '[[53,"SilverBar"],[223,"SilverBar"],[235,"SilverBar"],[65,"SilverBar"],[143,"SilverBar"]]',
         doors: '[229,59,46,250,139,242,38]',
         oracles: '[[14,7,"ApparitiaWhat"],[2,7,"ApparitiaBeer"],[286,1,"ScrollOracle"],[274,1,"ApparitiaOffensive"]]',
-        }
+    }
     ,
     64: {
         name: "Early Xmas",
@@ -1576,7 +1583,7 @@ const MAP = {
         oracles: '[[273,5,"Angeless"],[281,3,"ApparitiaGauntlet"]]',
     }
     ,
-    67 : {
+    67: {
         name: "Fireball Storage",
         sg: 0,
         maxSpawned: 4,
@@ -1596,5 +1603,37 @@ const MAP = {
         oracles: '[[6,7,"StandingSerpent"],[143,5,"ApparitiaTrust"],[155,3,"SittingSerpent"]]',
         lairs: '[[13,5,"Lair45"],[25,3,"Lair39"]]',
         monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","GhostMinion"]',
+    }
+    ,
+    68: {
+        name: "Broken Hall",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"27","height":"15","map":"BÁÁ2AA2ÁÁ2AA7ÁÁ3AA6ÁAÁAA6ÁAA2ÁAA79BB4AA30BAA16BB6AA2BAA7BAA18BB2AA5BB2AA12BB14AA2BB6ABB6ABB5AA2BB24ABB8AA2BB2ABB7ABAA2BB4ABB17AA2BB31$AA2BB3ABB6AA4ÁÁ9AÁÁ6AA4ÁÁ4BB2"}',
+        wall: "SpiderWeb334",
+        floor: "MarbleFloor101",
+        ceil: "BrownBrick32",
+        start: '[210,3]',
+        lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"]]',
+        triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
+    }
+    ,
+    69 : {
+        name: "Nort Pass",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 3500,
+        data: '{"width":"15","height":"15","map":"BB7AA30BB3AA5EBB3ABAA53BABB2AA2BB10AA3BB34AA6BAA2BB8ABB2EABB8ABB19ABB3$AEBB9ABB2"}',
+        wall: "SpiderWeb31",
+        floor: "MarbleFloor105",
+        ceil: "BrownWall40",
+        start: '[205,1]',
+        lights: '[[123,7,"Lights103","standard"],[131,7,"Lamp52","standard"],[125,7,"Lights104","standard"],[129,7,"Lights109","standard"],[126,1,"WallLamp19","standard"],[128,1,"Lamp42","standard"],[7,7,"Fireplace102","fire"]]',
+        gates: '[[220,1,"69.1","68.2","Closed"],[214,1,"69.2","68.3","Closed"]]',
+        doors: '[157,124,130]',
         }
 };

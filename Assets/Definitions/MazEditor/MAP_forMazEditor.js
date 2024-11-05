@@ -175,8 +175,12 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Lights102", "Lights103", "Lights104", "Lights105", "Lights106", "Lights107", "Lights108", "Lights109", "Lights110", "Lights111", "Lights112", "Lights113", "Lights114", "Lights115",
     "Candelabra01", "Candelabra02", "Candelabra03", "Candelabra04", "Candelabra05", "Candelabra06", "Candelabra07", "Candelabra08", "Candelabra09", "Candelabra10", "Candelabra11", "Candelabra12",
     "Candelabra14", "Candelabra15", "Candelabra16", "Candelabra17", "Candelabra18",
-    "Fireplace101", "Fireplace102", "Fireplace103", "Fireplace104", "Fireplace105", "Fireplace106", "Fireplace107"
-].sort();;
+    "Fireplace101", "Fireplace102", "Fireplace103", "Fireplace104", "Fireplace105", "Fireplace106", "Fireplace107",
+    "Fireplace201", "Fireplace202", "Fireplace203", "Fireplace204", "Fireplace205", "Fireplace206", "Fireplace207", "Fireplace208", "Fireplace209", "Fireplace210", "Fireplace211", "Fireplace212", "FluxLight101",
+    "FluxLight102", "FluxLight103", "FluxLight104", "FluxLight105", "FluxLight106", "FluxLight107", "FluxLight108", "FluxLight109", "FluxLight110", "FluxLight111", "FluxLight112", "FluxLight113", "FluxLight114",
+    "FluxLight115", "FluxLight116", "FluxLight117", "FluxLight118", "FluxLight119", "FluxLight120", "FluxLight121", "FluxLight122", "FluxLight123", "FluxLight124", "FluxLight125", "FluxLight126", "FluxLight127",
+    "FluxLight128", "FluxLight129"
+].sort();
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
 const LAIR_DECALS = [];

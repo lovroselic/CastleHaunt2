@@ -74,9 +74,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 63;
+        GAME.level = 69;
 
-        GAME.gold = 4262;
+        GAME.gold = 4444;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -88,7 +88,7 @@ const DEBUG = {
         HERO.magic = 24;
         HERO.attack = 22;
 
-        HERO.health = 100;
+        HERO.health = 139;
         HERO.maxHealth = 168;
 
 
@@ -98,8 +98,8 @@ const DEBUG = {
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
@@ -168,7 +168,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.08",
+    VERSION: "0.12.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
