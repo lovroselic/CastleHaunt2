@@ -78,6 +78,8 @@ const MAP_TEXT = {
     66: "",
     67: "",
     68: "Broken Hall? What is broken about it? Were you out of ideas, Lovro?",
+    69: "",
+    70: "",
 };
 
 /** Map definitions */
@@ -1611,18 +1613,18 @@ const MAP = {
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 3500,
-        data: '{"width":"27","height":"15","map":"BÁÁ2AA2ÁÁ2AA7ÁÁ3AA6ÁAÁAA6ÁAA2ÁAA79BB4AA30BAA16BB6AA2BAA7BAA18BB2AA5BB2AA12BB14AA2BB6ABB6ABB5AA2BB24ABB8AA2BB2ABB7ABAA2BB4ABB17AA2BB31$AA2BB3ABB6AA4ÁÁ9AÁÁ6AA4ÁÁ4BB2"}',
+        data: '{"width":"27","height":"15","map":"BÁÁ3AA2ÁAÁAA15BB3AA5BAA27ÁÁ4AA5BAA2BAA2BB4AA6ÁÁ2AA34BAA22BB4AA4BB2AA4BAA7BAA24BB2AA5BB2AA12BB3AA4BB13AA2BB6ABB8ABB5AA2BAA2BB23ABB8AA2BB2ABB7ABAA2BB4ABB17AA2BB31$AA2BB3ABB6ÁÁ5AA2ÁÁ2AA2ÁÁ2AÁÁ6AA4ÁÁ4BB2"}',
         wall: "SpiderWeb334",
         floor: "MarbleFloor101",
         ceil: "BrownBrick32",
         start: '[210,3]',
-        lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"]]',
+        lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.6","70.2","Closed"]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
     }
     ,
-    69 : {
-        name: "Nort Pass",
+    69: {
+        name: "North Pass",
         sg: 0,
         maxSpawned: 6,
         killCountdown: 5,
@@ -1635,5 +1637,19 @@ const MAP = {
         lights: '[[123,7,"Lights103","standard"],[131,7,"Lamp52","standard"],[125,7,"Lights104","standard"],[129,7,"Lights109","standard"],[126,1,"WallLamp19","standard"],[128,1,"Lamp42","standard"],[7,7,"Fireplace102","fire"]]',
         gates: '[[220,1,"69.1","68.2","Closed"],[214,1,"69.2","68.3","Closed"]]',
         doors: '[157,124,130]',
+    }
+    ,
+    70 : {
+        name: "South Passage",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB12AA109BB2ABB44AA10BB5ABABB26$BB12A"}',
+        wall: "RockWall_SDXL_005",
+        floor: "BloodMarbleFloorWall_SDXL_004",
+        ceil: "BloodMarbleFloorWall_SDXL_010",
+        start: '[25,7]',
+        gates: '[[10,7,"70.1","68.4","Closed"],[4,7,"70.2","68.5","Closed"]]',
         }
 };
