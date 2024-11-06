@@ -1025,7 +1025,6 @@ LoadSprites = [
     { srcName: "Lights/FluxLight107.png", name: "FluxLight107" },
     { srcName: "Lights/FluxLight108.png", name: "FluxLight108" },
     { srcName: "Lights/FluxLight109.png", name: "FluxLight109" },
-    { srcName: "Lights/FluxLight110.png", name: "FluxLight110" },
     { srcName: "Lights/FluxLight111.png", name: "FluxLight111" },
     { srcName: "Lights/FluxLight112.png", name: "FluxLight112" },
     { srcName: "Lights/FluxLight113.png", name: "FluxLight113" },
@@ -1235,6 +1234,7 @@ LoadSprites = [
     { srcName: "ObjDecals/Skull4.png", name: "Skull4" },
     { srcName: "ObjDecals/WOWc1.png", name: "WOWc1" },
     { srcName: "ObjDecals/WOWc2.png", name: "WOWc2" },
+    { srcName: "ObjDecals/TempleDecal.png", name: "TempleDecal" },
 
     { srcName: "ObjDecals/AA_CREST_AI.png", name: "AA_CREST_AI" },
     { srcName: "ObjDecals/CrawlingSkelly1.png", name: "CrawlingSkelly1" },

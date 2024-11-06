@@ -179,6 +179,36 @@ const SHRINE_TYPE = {
         price: 3000,
         level: 2,
     },
+    PrincessDesertHeart: {
+        name: "PrincessDesertHeart",
+        sprite: "PrincessDesertHeart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 4000,
+        level: 1,
+    },
+    PrincessDesertDagger: {
+        name: "PrincessDesertDagger",
+        sprite: "PrincessDesertDagger",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 4000,
+        level: 2,
+    },
+    PrincessDesertFire: {
+        name: "PrincessDesertFire",
+        sprite: "PrincessDesertFire",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 4000,
+        level: 2,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -921,6 +951,14 @@ const ORACLE_TYPE = {
         text: "You came too far. But we, the Apparitias, are preparing the offensive in the name of her majesty, Hauntessa Spookish.",
         interactionCategory: "oracle",
     },
+    ApparitiaTemple: {
+        name: "ApparitiaTemple",
+        sprite: "ApparitiaTemple",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We have invaded your temples. You won't be safe anywhere from our monster infestation. We even made some in your image.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -1513,6 +1551,30 @@ const MONSTER_TYPE = {
         moveSpeed: 1.0,
         material: MATERIAL.standard,
     },
+    MissWhite: {
+        name: "MissWhite",
+        model: "MissWhite",
+        scale: 1.6 / 2 ** 2,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 20,
+        health: 50,
+        attack: 50,
+        magic: 7,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "HumanAttack1",
+        hurtSound: "Ow",
+        behaviourArguments: [12, ["wanderer"], 10, ["shoot"]],
+        moveSpeed: 1.0,
+        shootDistance: 10,
+        stalkDistance: 3,
+        material: MATERIAL.standard,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
 
     /** */
 
@@ -1552,32 +1614,7 @@ const MONSTER_TYPE = {
     },
 
 
-    MissWhite: {
-        name: "MissWhite",
-        model: "MissWhite",
-        scale: 1.6 / 2 ** 2,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 15,
-        defense: 7,
-        magic: 10,
-        health: 15,
-        xp: 40,
-        gold: 50,
-        attackSound: "HumanAttack1",
-        hurtSound: "Ow",
-        behaviourArguments: [12, ["wanderer"], 10, ["shoot"]],
-        moveSpeed: 1.0,
-        mana: 3,
-        caster: true,
-        shootDistance: 10,
-        stalkDistance: 3,
-        material: MATERIAL.standard,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
-    },
+
     Astro: {
         name: "Astro",
         model: "Astro",
@@ -3112,6 +3149,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    ApparitiaCorruption: {
+        name: "ApparitiaCorruption",
+        sprite: "ApparitiaCorruption",
+        category: 'crest',
+        voice: "Apparitia",
+        wants: ["WhiteHandbag"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I stole one gold coin. You will not be able to train with all master Mistresses.",
+            progress: null,
+            conclusion: "Oh. I guess bribery works. Corruption rules. Here you go."
+        }
+    },
     Strongarmed: {
         name: "Strongarmed",
         sprite: "Strongarmed",

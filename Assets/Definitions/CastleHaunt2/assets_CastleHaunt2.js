@@ -863,6 +863,7 @@ LoadObjects = [
 
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
+    "MissWhite.gltf",
 ];
 
 LoadSprites = [
@@ -905,6 +906,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaGauntlet.jpg", name: "ApparitiaGauntlet" },
     { srcName: "EntityPictures/ApparitiaTrust.jpg", name: "ApparitiaTrust" },
     { srcName: "EntityPictures/ApparitiaOffensive.jpg", name: "ApparitiaOffensive" },
+    { srcName: "EntityPictures/ApparitiaTemple.jpg", name: "ApparitiaTemple" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1026,7 +1028,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Angeless1.jpg", name: "Angeless" },
     { srcName: "EntityPictures/StandingSerpent.jpg", name: "StandingSerpent" },
     { srcName: "EntityPictures/SittingSerpent.jpg", name: "SittingSerpent" },
-
+    { srcName: "EntityPictures/ApparitiaCorruption.jpg", name: "ApparitiaCorruption" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1124,6 +1126,10 @@ LoadSprites = [
     { srcName: "Shrines/PrincessMace.jpg", name: "PrincessMace" },
     { srcName: "Shrines/PrincessPineHeart.jpg", name: "PrincessPineHeart" },
     { srcName: "Shrines/PrincessFlame.jpg", name: "PrincessFlame" },
+
+    { srcName: "Shrines/PrincessDesertHeart.jpg", name: "PrincessDesertHeart" },
+    { srcName: "Shrines/PrincessDesertDagger.jpg", name: "PrincessDesertDagger" },
+    { srcName: "Shrines/PrincessDesertFire.jpg", name: "PrincessDesertFire" },
 
 
     //scrolls
@@ -1387,7 +1393,6 @@ LoadSprites = [
     { srcName: "Lights/FluxLight107.png", name: "FluxLight107" },
     { srcName: "Lights/FluxLight108.png", name: "FluxLight108" },
     { srcName: "Lights/FluxLight109.png", name: "FluxLight109" },
-    { srcName: "Lights/FluxLight110.png", name: "FluxLight110" },
     { srcName: "Lights/FluxLight111.png", name: "FluxLight111" },
     { srcName: "Lights/FluxLight112.png", name: "FluxLight112" },
     { srcName: "Lights/FluxLight113.png", name: "FluxLight113" },
@@ -1611,6 +1616,7 @@ LoadSprites = [
     { srcName: "ObjDecals/Skull4.png", name: "Skull4" },
     { srcName: "ObjDecals/WOWc1.png", name: "WOWc1" },
     { srcName: "ObjDecals/WOWc2.png", name: "WOWc2" },
+    { srcName: "ObjDecals/TempleDecal.png", name: "TempleDecal" },
 
 
     //decal-pics - all

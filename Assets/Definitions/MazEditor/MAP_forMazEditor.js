@@ -162,7 +162,7 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "FloorGrille112", "FloorGrille113",
     "Ivy11", "Ivy12",
     "AA_CREST_AI", "CrawlingSkelly1", "CrawlingSkelly2", "DancingSkelies1", "DancingSkelies2", "DancingSkelies3", "LaughingSkeleton1", "LaughingSkeleton2", "LaughingSkeleton3", "LaughingSkeleton4", "LaughingSkeleton5", "LaughingSkeleton6", "SittingSkelly1",
-    "SittingSkelly11", "SittingSkelly12", "SittingSkelly13", "SittingSkelly14", "SittingSkelly2", "SittingSkelly21", "SittingSkelly23"
+    "SittingSkelly11", "SittingSkelly12", "SittingSkelly13", "SittingSkelly14", "SittingSkelly2", "SittingSkelly21", "SittingSkelly23", "TempleDecal"
 ].sort();
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"].sort();
@@ -177,7 +177,7 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Candelabra14", "Candelabra15", "Candelabra16", "Candelabra17", "Candelabra18",
     "Fireplace101", "Fireplace102", "Fireplace103", "Fireplace104", "Fireplace105", "Fireplace106", "Fireplace107",
     "Fireplace201", "Fireplace202", "Fireplace203", "Fireplace204", "Fireplace205", "Fireplace206", "Fireplace207", "Fireplace208", "Fireplace209", "Fireplace210", "Fireplace211", "Fireplace212", "FluxLight101",
-    "FluxLight102", "FluxLight103", "FluxLight104", "FluxLight105", "FluxLight106", "FluxLight107", "FluxLight108", "FluxLight109", "FluxLight110", "FluxLight111", "FluxLight112", "FluxLight113", "FluxLight114",
+    "FluxLight102", "FluxLight103", "FluxLight104", "FluxLight105", "FluxLight106", "FluxLight107", "FluxLight108", "FluxLight109", "FluxLight111", "FluxLight112", "FluxLight113", "FluxLight114",
     "FluxLight115", "FluxLight116", "FluxLight117", "FluxLight118", "FluxLight119", "FluxLight120", "FluxLight121", "FluxLight122", "FluxLight123", "FluxLight124", "FluxLight125", "FluxLight126", "FluxLight127",
     "FluxLight128", "FluxLight129",
     "DuaLLantern_001", "DuaLLantern_002", "DuaLLantern_003", "DuaLLantern_004", "DuaLLantern_005", "DuaLLantern_006", "DuaLLantern_007", "DuaLLantern_008", "DuaLLantern_009", "DuaLLantern_010", "DuaLLantern_011",
