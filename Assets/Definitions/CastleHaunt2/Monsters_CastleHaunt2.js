@@ -212,6 +212,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    StandingDarkPriestess: {
+        name: "StandingDarkPriestess",
+        sprite: "StandingDarkPriestess",
+        category: 'crest',
+        voice: "Female",
+        text: "Welcome to the hall of Master Mistresses. Here you can train your skills. If you can afford it.",
+        interactionCategory: "oracle",
+    },
     SittingSerpent: {
         name: "SittingSerpent",
         sprite: "SittingSerpent",

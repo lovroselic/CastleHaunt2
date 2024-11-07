@@ -1029,6 +1029,7 @@ LoadSprites = [
     { srcName: "EntityPictures/StandingSerpent.jpg", name: "StandingSerpent" },
     { srcName: "EntityPictures/SittingSerpent.jpg", name: "SittingSerpent" },
     { srcName: "EntityPictures/ApparitiaCorruption.jpg", name: "ApparitiaCorruption" },
+    { srcName: "EntityPictures/StandingDarkPriestess.jpg", name: "StandingDarkPriestess" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

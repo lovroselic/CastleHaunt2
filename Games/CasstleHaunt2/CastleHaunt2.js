@@ -50,6 +50,7 @@ const DEBUG = {
     checkPoint() {
         /** main area 4:
          * 
+         * "WhiteHandbag"
   
 
         * coins sources (1x, missing 0x):
@@ -75,7 +76,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 71;
+        GAME.level = 68;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -169,7 +170,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.12",
+    VERSION: "0.12.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

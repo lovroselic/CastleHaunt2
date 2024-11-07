@@ -1618,9 +1618,9 @@ const MAP = {
         floor: "MarbleFloor101",
         ceil: "BrownBrick32",
         start: '[210,3]',
-        decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"]]',
+        decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"],[322,3,"KnightStatue106","crest"],[376,3,"ShieldDecal07","crest"]]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
         lairs: '[[204,3,"Lair31"]]',
         monsterList: '["GhostMinionGreen"]',
@@ -1677,4 +1677,21 @@ const MAP = {
         lairs: '[[135,5,"Lair28"],[177,5,"Lair16"]]',
         monsterList: '["MissWhite"]',
     }
+    ,
+    72 : {
+        name: "Hall of Master Mistresses",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"21","height":"17","map":"BB3AA5BAA10BAA7BB3AA14EBAA4BAA3BB3ABB5AA3BAA2EAA2BAA15BAA4BB2AA3BAA12BAA36BAA15BABAEABB3ABAA5BB3AA2BAA3BB11ABB3ABB11AA3BAA6BB14ABAA2BB11AEABABB2AA2BB13AA3BB7ABB7EBB24$AA2BB5EBEBB3ABB16AA3BB4"}',
+        wall: "DarkMossy9",
+        floor: "FloorTiles_SDXL_001",
+        ceil: "SpiderWeb334",
+        start: '[43,5]',
+        lights: '[[64,5,"FluxLight124","standardDimmed"],[26,5,"DuaLLantern_002","standardDimmed"],[32,7,"DuaLLantern_029","standardDimmed"],[18,7,"Fireplace209","fire"],[156,3,"DuaLLantern_021","standardDimmed"],[156,5,"FluxLight121","standardDimmed"],[214,7,"FluxLight114","dim"],[219,7,"FluxLight117","dim"],[226,7,"FluxLight102","dim"]]',
+        gates: '[[42,5,"72.1","68.7","Up"]]',
+        doors: '[47,95,213,220,227,259,265]',
+        oracles: '[[31,3,"StandingDarkPriestess"]]',
+        }
 };
