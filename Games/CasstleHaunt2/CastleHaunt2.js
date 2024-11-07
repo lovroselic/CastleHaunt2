@@ -136,7 +136,8 @@ const DEBUG = {
 
             //debug
             //"WhiteHandbag"
-            "SmallBarrel", "SmallBarrel", "SmallBarrel"
+            //"SmallBarrel", "SmallBarrel", "SmallBarrel"
+            "GlassOfBeer"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -176,7 +177,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.14",
+    VERSION: "0.12.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

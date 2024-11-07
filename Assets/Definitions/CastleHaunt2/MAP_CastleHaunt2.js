@@ -1703,7 +1703,7 @@ const MAP = {
     73 : {
         name: "Beer Cellar",
         sg: 0,
-        maxSpawned: 2,
+        maxSpawned: 5,
         killCountdown: 4,
         spawnDelay: 6000,
         data: '{"width":"17","height":"17","map":"BB3AA13BB9ABB2AA11BAA15BB8AA81BAA3BAA5BB3ABB2AA11BB2ABB4AA10BABB12ABB4ABABB6ABB5AA2BB5AA9BB12ABB8AA3BB2ABB21ABB2$"}',
@@ -1717,5 +1717,7 @@ const MAP = {
         containers: '[[239,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[222,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[205,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[188,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[171,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[103,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[86,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[69,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[52,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[35,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[92,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[75,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[177,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[194,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[82,"Barrel","GOLD_ITEM_TYPE.GoldBar",3],[99,"Barrel","GOLD_ITEM_TYPE.GoldBar",3]]',
         entities: '[[275,1,"BeerBarrelGirl"]]',
         objects: '[[116,"SmallBarrel"]]',
+        lairs: '[[15,7,"Lair13"],[287,1,"Lair22"],[152,3,"Lair47"]]',
+        monsterList: '["MissWhite","MissGreen","Skeleton","Viking","GhostMinionGreen"]',
         }
 };
