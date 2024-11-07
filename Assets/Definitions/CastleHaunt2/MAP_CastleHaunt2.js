@@ -80,6 +80,9 @@ const MAP_TEXT = {
     68: "Broken Hall? What is broken about it? Were you out of ideas, Lovro?",
     69: "",
     70: "",
+    71: "",
+    72: "",
+    73: "Smells like fresh beer. Let's stay here.",
 };
 
 /** Map definitions */
@@ -1621,7 +1624,9 @@ const MAP = {
         decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"],[322,3,"KnightStatue106","crest"],[376,3,"ShieldDecal07","crest"]]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
         gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"]]',
+        containers: '[[336,"Barrel","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
+        objects: '[[310,"SmallBarrel"]]',
         lairs: '[[204,3,"Lair31"]]',
         monsterList: '["GhostMinionGreen"]',
     }
@@ -1670,7 +1675,7 @@ const MAP = {
         ceil: "marbleFloor106",
         start: '[148,5]',
         lights: '[[112,3,"FluxLight111","standard"],[196,3,"DuaLLantern_024","standard"],[5,7,"Lamp53","standard"],[299,1,"DuaLLantern_011","standard"]]',
-        gates: '[[147,5,"71.1","68.6","Up"]]',
+        gates: '[[147,5,"71.1","68.6","Up"],[167,3,"71.2","73.1","Down"]]',
         shrines: '[[156,3,"PrincessDesertHeart"],[16,7,"PrincessDesertDagger"],[310,1,"PrincessDesertFire"]]',
         entities: '[[252,5,"ApparitiaCorruption"]]',
         oracles: '[[42,5,"ApparitiaTemple"]]',
@@ -1678,7 +1683,7 @@ const MAP = {
         monsterList: '["MissWhite"]',
     }
     ,
-    72 : {
+    72: {
         name: "Hall of Master Mistresses",
         sg: 0,
         maxSpawned: -1,
@@ -1693,5 +1698,24 @@ const MAP = {
         gates: '[[42,5,"72.1","68.7","Up"]]',
         doors: '[47,95,213,220,227,259,265]',
         oracles: '[[31,3,"StandingDarkPriestess"]]',
+    }
+    ,
+    73 : {
+        name: "Beer Cellar",
+        sg: 0,
+        maxSpawned: 2,
+        killCountdown: 4,
+        spawnDelay: 6000,
+        data: '{"width":"17","height":"17","map":"BB3AA13BB9ABB2AA11BAA15BB8AA81BAA3BAA5BB3ABB2AA11BB2ABB4AA10BABB12ABB4ABABB6ABB5AA2BB5AA9BB12ABB8AA3BB2ABB21ABB2$"}',
+        wall: "BloodMarbleFloorWall_SDXL_012",
+        floor: "BloodMarbleFloorWall_SDXL_010",
+        ceil: "Wall100",
+        start: '[137,5]',
+        decals: '[[170,5,"FluxDommes2068","picture"],[238,5,"FluxDommes2133","picture"],[204,5,"FluxDommes2171","picture"]]',
+        lights: '[[144,3,"DuaLLantern_026","standard"],[156,7,"DuaLLantern_004","standard"],[13,7,"Fireplace101","fire"],[285,1,"Fireplace209","fire"],[144,5,"Lamp52","weakCandle"],[122,1,"Lamp40","standardDimmed"],[66,3,"Candelabra14","standardDimmed"],[236,3,"DuaLLantern_015","standardDimmed"]]',
+        gates: '[[136,5,"73.1","71.2","Up"]]',
+        containers: '[[239,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[222,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[205,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[188,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[171,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[103,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[86,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[69,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[52,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[35,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[92,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[75,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[177,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[194,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[82,"Barrel","GOLD_ITEM_TYPE.GoldBar",3],[99,"Barrel","GOLD_ITEM_TYPE.GoldBar",3]]',
+        entities: '[[275,1,"BeerBarrelGirl"]]',
+        objects: '[[116,"SmallBarrel"]]',
         }
 };

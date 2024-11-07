@@ -2431,6 +2431,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         text: "Oh, it's an apple. A green one."
     },
+    SmallBarrel: {
+        name: "SmallBarrel",
+        category: "interaction_item",
+        element: "BARREL",
+        scale: 1.75 / 2 ** 3,
+        glueToFloor: true,
+        texture: "Barrel",
+        material: MATERIAL.standard,
+        inventorySprite: "SmallBarrel",
+        text: "Such a small barrel. Not a lot of drink."
+    },
 };
 
 const MOVABLE_INTERACTION_OBJECT = {
@@ -3154,9 +3165,29 @@ const INTERACTION_ITEM = {
         inventorySprite: "DumbBell",
         text: "Heavy. I am building muscles as we speak."
     },
+    GlassOfBeer: {
+        name: "GlassOfBeer",
+        category: "interaction_item",
+        inventorySprite: "GlassOfBeer",
+        text: "Cheers mates. To victory!"
+    },
 };
 
 const INTERACTION_ENTITY = {
+    BeerBarrelGirl: {
+        name: "BeerBarrelGirl",
+        sprite: "BeerBarrelGirl",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["SmallBarrel", "SmallBarrel", "SmallBarrel"],
+        gives: "GlassOfBeer",
+        text: {
+            intro: "I'm stuck down here, my barrels are gone! Bring me three, and I'll share just one.",
+            progress: "A barrel here, a barrel there... Keep 'em coming, we're almost there!",
+            conclusion: "Three barrels back, my cellar's cheer! Enjoy this prize — a glass of beer!"
+        }
+    },
+
     ApparitiaCorruption: {
         name: "ApparitiaCorruption",
         sprite: "ApparitiaCorruption",
@@ -3183,7 +3214,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfect! Now I can train harder. Here's your gold coin—earned through sweat and strength!"
         }
     },
-
     ApplePicker: {
         name: "ApplePicker",
         sprite: "ApplePicker",

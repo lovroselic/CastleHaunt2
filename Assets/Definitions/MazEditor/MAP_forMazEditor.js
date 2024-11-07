@@ -142,8 +142,37 @@ const DECAL_PAINTINGS = [
     "UnusedEntities119", "UnusedEntities120", "UnusedEntities121", "UnusedEntities122", "UnusedEntities123", "UnusedEntities124", "UnusedEntities125", "UnusedEntities126", "UnusedEntities127", "UnusedEntities128",
     "UnusedEntities129", "UnusedEntities130", "UnusedEntities131", "UnusedEntities132", "UnusedEntities133", "UnusedEntities134", "UnusedEntities135", "UnusedEntities136", "UnusedEntities137", "UnusedEntities138",
     "UnusedEntities139", "UnusedEntities140", "UnusedEntities141", "UnusedEntities142", "UnusedEntities143", "UnusedEntities144", "UnusedEntities145", "UnusedEntities146", "UnusedEntities147", "UnusedEntities148",
-    "UnusedEntities149", "UnusedEntities150", "UnusedEntities151", "UnusedEntities152", "UnusedEntities153", "UnusedEntities154"
+    "UnusedEntities149", "UnusedEntities150", "UnusedEntities151", "UnusedEntities152", "UnusedEntities153", "UnusedEntities154",
+    "FluxDommes2001", "FluxDommes2002", "FluxDommes2003", "FluxDommes2004", "FluxDommes2005", "FluxDommes2006", "FluxDommes2007", "FluxDommes2008", "FluxDommes2009", "FluxDommes2010", "FluxDommes2011", "FluxDommes2012",
+    "FluxDommes2013", "FluxDommes2014", "FluxDommes2015", "FluxDommes2016", "FluxDommes2017", "FluxDommes2018", "FluxDommes2019", "FluxDommes2020", "FluxDommes2021", "FluxDommes2022", "FluxDommes2023", "FluxDommes2024",
+    "FluxDommes2025", "FluxDommes2026", "FluxDommes2027", "FluxDommes2028", "FluxDommes2029", "FluxDommes2030", "FluxDommes2031", "FluxDommes2032", "FluxDommes2033", "FluxDommes2034", "FluxDommes2035", "FluxDommes2036",
+    "FluxDommes2037", "FluxDommes2038", "FluxDommes2039", "FluxDommes2040", "FluxDommes2041", "FluxDommes2042", "FluxDommes2043", "FluxDommes2044", "FluxDommes2045", "FluxDommes2046", "FluxDommes2047", "FluxDommes2048",
+    "FluxDommes2049", "FluxDommes2050", "FluxDommes2051", "FluxDommes2052", "FluxDommes2053", "FluxDommes2054", "FluxDommes2055", "FluxDommes2056", "FluxDommes2057", "FluxDommes2058", "FluxDommes2059", "FluxDommes2060",
+    "FluxDommes2061", "FluxDommes2062", "FluxDommes2063", "FluxDommes2064", "FluxDommes2065", "FluxDommes2066", "FluxDommes2067", "FluxDommes2068", "FluxDommes2069", "FluxDommes2070", "FluxDommes2071", "FluxDommes2072",
+    "FluxDommes2073", "FluxDommes2074", "FluxDommes2075", "FluxDommes2076", "FluxDommes2077", "FluxDommes2078", "FluxDommes2079", "FluxDommes2080", "FluxDommes2081", "FluxDommes2082", "FluxDommes2083", "FluxDommes2084",
+    "FluxDommes2085", "FluxDommes2086", "FluxDommes2087", "FluxDommes2088", "FluxDommes2089", "FluxDommes2090", "FluxDommes2091", "FluxDommes2092", "FluxDommes2093", "FluxDommes2094", "FluxDommes2095", "FluxDommes2096",
+    "FluxDommes2097", "FluxDommes2098", "FluxDommes2099", "FluxDommes2100", "FluxDommes2101", "FluxDommes2102", "FluxDommes2103", "FluxDommes2104", "FluxDommes2105", "FluxDommes2106", "FluxDommes2107", "FluxDommes2108",
+    "FluxDommes2109", "FluxDommes2110", "FluxDommes2111", "FluxDommes2112", "FluxDommes2113", "FluxDommes2114", "FluxDommes2115", "FluxDommes2116", "FluxDommes2117", "FluxDommes2118", "FluxDommes2119", "FluxDommes2120",
+    "FluxDommes2121", "FluxDommes2122", "FluxDommes2123", "FluxDommes2124", "FluxDommes2125", "FluxDommes2126", "FluxDommes2127", "FluxDommes2128", "FluxDommes2129", "FluxDommes2130", "FluxDommes2131", "FluxDommes2132",
+    "FluxDommes2133", "FluxDommes2134", "FluxDommes2135", "FluxDommes2136", "FluxDommes2137", "FluxDommes2138", "FluxDommes2139", "FluxDommes2140", "FluxDommes2141", "FluxDommes2142", "FluxDommes2143", "FluxDommes2144",
+    "FluxDommes2145", "FluxDommes2146", "FluxDommes2147", "FluxDommes2148", "FluxDommes2149", "FluxDommes2150", "FluxDommes2151", "FluxDommes2152", "FluxDommes2153", "FluxDommes2154", "FluxDommes2155", "FluxDommes2156",
+    "FluxDommes2157", "FluxDommes2158", "FluxDommes2159", "FluxDommes2160", "FluxDommes2161", "FluxDommes2162", "FluxDommes2163", "FluxDommes2164", "FluxDommes2165", "FluxDommes2166", "FluxDommes2167", "FluxDommes2168",
+    "FluxDommes2169", "FluxDommes2170", "FluxDommes2171", "FluxDommes2172", "FluxDommes2173", "FluxDommes2174", "FluxDommes2175", "FluxDommes2176", "FluxDommes2177", "FluxDommes2178", "FluxDommes2179", "FluxDommes2180",
+    "FluxDommes2181", "FluxDommes2182", "FluxDommes2183", "FluxDommes2184", "FluxDommes2185", "FluxDommes2186", "FluxDommes2187", "FluxDommes2188", "FluxDommes2189", "FluxDommes2190", "FluxDommes2191", "FluxDommes2192",
+    "FluxDommes2193", "FluxDommes2194", "FluxDommes2195", "FluxDommes2196", "FluxDommes2197", "FluxDommes2198", "FluxDommes2199", "FluxDommes2200", "FluxDommes2201", "FluxDommes2202", "FluxDommes2203", "FluxDommes2204",
+    "FluxDommes2205", "FluxDommes2206", "FluxDommes2207", "FluxDommes2208", "FluxDommes2209", "FluxDommes2210", "FluxDommes2211", "FluxDommes2212", "FluxDommes2213", "FluxDommes2214", "FluxDommes2215", "FluxDommes2216",
+    "FluxDommes2217", "FluxDommes2218", "FluxDommes2219", "FluxDommes2220", "FluxDommes2221", "FluxDommes2222", "FluxDommes2223", "FluxDommes2224", "FluxDommes2225", "FluxDommes2226", "FluxDommes2227", "FluxDommes2228",
+    "FluxDommes2229", "FluxDommes2230", "FluxDommes2231", "FluxDommes2232", "FluxDommes2233", "FluxDommes2234", "FluxDommes2235", "FluxDommes2236", "FluxDommes2237", "FluxDommes2238", "FluxDommes2239", "FluxDommes2240",
+    "FluxDommes2241", "FluxDommes2242", "FluxDommes2243", "FluxDommes2244", "FluxDommes2245", "FluxDommes2246", "FluxDommes2247", "FluxDommes2248", "FluxDommes2249", "FluxDommes2250", "FluxDommes2251", "FluxDommes2252",
+    "FluxDommes2253", "FluxDommes2254", "FluxDommes2255", "FluxDommes2256", "FluxDommes2257", "FluxDommes2258", "FluxDommes2259", "FluxDommes2260", "FluxDommes2261", "FluxDommes2262", "FluxDommes2263", "FluxDommes2264",
+    "FluxDommes2265", "FluxDommes2266", "FluxDommes2267", "FluxDommes2268", "FluxDommes2269", "FluxDommes2270", "FluxDommes2271", "FluxDommes2272", "FluxDommes2273", "FluxDommes2274", "FluxDommes2275", "FluxDommes2276",
+    "FluxDommes2277", "FluxDommes2278", "FluxDommes2279", "FluxDommes2280", "FluxDommes2281", "FluxDommes2282", "FluxDommes2283", "FluxDommes2284", "FluxDommes2285", "FluxDommes2286", "FluxDommes2287", "FluxDommes2288",
+    "FluxDommes2289", "FluxDommes2290", "FluxDommes2291", "FluxDommes2292", "FluxDommes2293", "FluxDommes2294", "FluxDommes2295", "FluxDommes2296", "FluxDommes2297", "FluxDommes2298", "FluxDommes2299", "FluxDommes2300",
+    "FluxDommes2301", "FluxDommes2302", "FluxDommes2303", "FluxDommes2304", "FluxDommes2305", "FluxDommes2306", "FluxDommes2307", "FluxDommes2308", "FluxDommes2309", "FluxDommes2310", "FluxDommes2311", "FluxDommes2312",
+    "FluxDommes2313", "FluxDommes2314", "FluxDommes2315", "FluxDommes2316", "FluxDommes2317", "FluxDommes2318", "FluxDommes2319", "FluxDommes2320", "FluxDommes2321", "FluxDommes2322", "FluxDommes2323", "FluxDommes2324",
+    "FluxDommes2325", "FluxDommes2326"
 ].sort();
+
 
 /** Crests */
 

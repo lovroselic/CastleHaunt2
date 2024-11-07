@@ -49,8 +49,13 @@ const DEBUG = {
     },
     checkPoint() {
         /** main area 4:
+         * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
          * 
          * "WhiteHandbag"
+            * "SmallBarrel" --> 68
+            * "SmallBarrel" --> 73
+         * "SmallBarrel"
+            * "GlassOfBeer" ---> BeerBarrelGirl
   
 
         * coins sources (1x, missing 0x):
@@ -76,7 +81,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 68;
+        GAME.level = 73;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -131,6 +136,7 @@ const DEBUG = {
 
             //debug
             //"WhiteHandbag"
+            "SmallBarrel", "SmallBarrel", "SmallBarrel"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -170,7 +176,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.13",
+    VERSION: "0.12.14",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
