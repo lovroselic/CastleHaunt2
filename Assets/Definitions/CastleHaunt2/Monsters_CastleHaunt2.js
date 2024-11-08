@@ -3178,6 +3178,33 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    GoldKeysa1: {
+        name: "GoldKeysa1",
+        sprite: "GoldKeysa1",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldBar", "GoldBar", "GoldBar"],
+        gives: "GoldKey",
+        text: {
+            intro: "I crave gold bars, shiny and true! Bring me three, I'll craft a key for you.",
+            progress: "More gold please, keep it flowing! Soon your key will start glowing.",
+            conclusion: "Three bars complete! Here's your key, forged with gold, shiny as can be!"
+        }
+    },
+    
+    GoldKeysa2: {
+        name: "GoldKeysa2",
+        sprite: "GoldKeysa2",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldOre", "GoldOre", "GoldOre"],
+        gives: "GoldKey",
+        text: {
+            intro: "Bring me raw gold, from deep in the ground. Three chunks will get you a key, safe and sound.",
+            progress: "More ore to make it whole, keep digging for that golden goal!",
+            conclusion: "With gold in hand, your key is now made. Shiny, bright, time to upgrade!"
+        }
+    },    
     BeerBarrelGirl: {
         name: "BeerBarrelGirl",
         sprite: "BeerBarrelGirl",
@@ -3191,7 +3218,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Three barrels back, my cellar's cheer! Enjoy this prize — a glass of beer!"
         }
     },
-
     ApparitiaCorruption: {
         name: "ApparitiaCorruption",
         sprite: "ApparitiaCorruption",

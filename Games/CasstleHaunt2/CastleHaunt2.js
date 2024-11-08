@@ -49,17 +49,25 @@ const DEBUG = {
     },
     checkPoint() {
         /** main area 4:
-         * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
+            DONE * GoldKeysa1 wants "GoldBar", "GoldBar", "GoldBar", ---> GoldKey
+            DONE * GoldKeysa2 wants "GoldOre", "GoldOre", "GoldOre" ---> GoldKey
+            DONE * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
          * 
          * "WhiteHandbag"
             * "SmallBarrel" --> 68
             * "SmallBarrel" --> 73
          * "SmallBarrel"
             * "GlassOfBeer" ---> BeerBarrelGirl
+        * "GoldBar", 
+        * "GoldBar", 
+        * "GoldBar"
+        * "GoldOre", 
+        * "GoldOre", 
+        * "GoldOre"
   
 
-        * coins sources (1x, missing 0x):
-        * ApparitiaCorruption
+        * coins sources (1x, missing -1x):
+            * ApparitiaCorruption
  
 
         *
@@ -70,7 +78,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            * 
+            * Silver
             * 
          * missing sources for: 
             * 
@@ -81,7 +89,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 73;
+        GAME.level = 75;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -137,14 +145,16 @@ const DEBUG = {
             //debug
             //"WhiteHandbag"
             //"SmallBarrel", "SmallBarrel", "SmallBarrel"
-            "GlassOfBeer"
+            "GlassOfBeer",
+            "GoldBar", "GoldBar", "GoldBar",
+            "GoldOre", "GoldOre", "GoldOre"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Gold"];
+        let keys = ["Gold", "Silver"];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -177,7 +187,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.15",
+    VERSION: "0.12.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

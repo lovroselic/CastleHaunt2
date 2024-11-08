@@ -1623,7 +1623,7 @@ const MAP = {
         start: '[210,3]',
         decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"],[322,3,"KnightStatue106","crest"],[376,3,"ShieldDecal07","crest"]]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"],[17,7,"68.8","74.1","Silver"]]',
         containers: '[[336,"Barrel","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
         objects: '[[310,"SmallBarrel"]]',
@@ -1695,12 +1695,12 @@ const MAP = {
         ceil: "SpiderWeb334",
         start: '[43,5]',
         lights: '[[64,5,"FluxLight124","standardDimmed"],[26,5,"DuaLLantern_002","standardDimmed"],[32,7,"DuaLLantern_029","standardDimmed"],[18,7,"Fireplace209","fire"],[156,3,"DuaLLantern_021","standardDimmed"],[156,5,"FluxLight121","standardDimmed"],[214,7,"FluxLight114","dim"],[219,7,"FluxLight117","dim"],[226,7,"FluxLight102","dim"]]',
-        gates: '[[42,5,"72.1","68.7","Up"]]',
+        gates: '[[42,5,"72.1","68.7","Up"],[83,3,"72.2","75.1","Down"]]',
         doors: '[47,95,213,220,227,259,265]',
         oracles: '[[31,3,"StandingDarkPriestess"]]',
     }
     ,
-    73 : {
+    73: {
         name: "Beer Cellar",
         sg: 0,
         maxSpawned: 5,
@@ -1719,5 +1719,38 @@ const MAP = {
         objects: '[[116,"SmallBarrel"]]',
         lairs: '[[15,7,"Lair13"],[287,1,"Lair22"],[152,3,"Lair47"]]',
         monsterList: '["MissWhite","MissGreen","Skeleton","Viking","GhostMinionGreen"]',
-        }
+    }
+    ,
+    74: {
+        name: "The Golden Ladies",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 3,
+        spawnDelay: 8000,
+        data: '{"width":"17","height":"17","map":"BEBB5ABB4ABB2AA26EBAA5BAA2BABB5ABABB2AA2BB2ABB5EABABB2ABABB4AA2BB18ABB17ABB159$ABAA2B"}',
+        wall: "3d wall2",
+        floor: "BloodMarbleFloorWall_SDXL_030",
+        ceil: "DarkMarble1",
+        start: '[263,1]',
+        lights: '[[229,1,"Lamp52","standardDimmed"],[229,3,"DuaLLantern_021","standardDimmed"],[229,5,"DuaLLantern_009","standardDimmed"]]',
+        gates: '[[280,1,"74.1","68.8","Closed"]]',
+        doors: '[227,195,231]',
+        entities: '[[221,5,"GoldKeysa1"],[237,3,"GoldKeysa2"]]',
+    }
+    ,
+    75: {
+        name: "The Mines",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"19","height":"19","map":"BB4AA4EABAA2BB68ABB2ABB10EBB5$BB240AA2BB16AB"}',
+        wall: "RoughCave02",
+        floor: "Relief18",
+        ceil: "Cracked01",
+        start: '[39,5]',
+        lights: '[[20,5,"FluxLight119","dim"]]',
+        gates: '[[38,5,"75.1","72.2","Up"]]',
+        doors: '[43,79]',
+    }
 };
