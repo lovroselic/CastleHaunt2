@@ -3175,9 +3175,61 @@ const INTERACTION_ITEM = {
         inventorySprite: "GlassOfBeer",
         text: "Cheers mates. To victory!"
     },
+    Pizza: {
+        name: "Pizza",
+        category: "interaction_item",
+        inventorySprite: "Pizza",
+        text: "I am not hungry. I can give away this pizza."
+    },
+    PickAxe: {
+        name: "PickAxe",
+        category: "interaction_item",
+        inventorySprite: "PickAxe",
+        text: "Pickaxe. Let's go mining."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    HungryMiner: {
+        name: "HungryMiner",
+        sprite: "HungryMiner",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Pizza", "Beer"],
+        gives: "GoldOre",
+        text: {
+            intro: "Toiling away in your gold mines, sweating and starving, the least you could do is bring me some pizza and beer!",
+            progress: "Pizza or beer, but not both? Come on, I need a full meal to keep going!",
+            conclusion: "Now that's more like it! Thanks for the grub. Here, a little something from the mines as a ‘thank you’."
+        }
+    },
+    
+    PickaxeMiner: {
+        name: "PickaxeMiner",
+        sprite: "PickaxeMiner",
+        category: 'crest',
+        voice: "Female",
+        wants: ["PickAxe"],
+        gives: "GoldOre",
+        text: {
+            intro: "Do you see how rusty my pickaxe is? What will you do about it?",
+            progress: null,
+            conclusion: "Oh, this is better! Here's your gold ore for your trouble"
+        }
+    },
+    ThirstyMiner: {
+        name: "ThirstyMiner",
+        sprite: "ThirstyMiner",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GlassOfBeer"],
+        gives: "GoldOre",
+        text: {
+            intro: "Phew! I'm parched from all this digging! Bring me a glass of beer, and I'll pay in gold.",
+            progress: null,
+            conclusion: "Ah, that hit the spot! Here's your gold ore, worth every sip!"
+        }
+    },
     GoldKeysa1: {
         name: "GoldKeysa1",
         sprite: "GoldKeysa1",
@@ -3191,7 +3243,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Three bars complete! Here's your key, forged with gold, shiny as can be!"
         }
     },
-    
     GoldKeysa2: {
         name: "GoldKeysa2",
         sprite: "GoldKeysa2",
@@ -3204,7 +3255,7 @@ const INTERACTION_ENTITY = {
             progress: "More ore to make it whole, keep digging for that golden goal!",
             conclusion: "With gold in hand, your key is now made. Shiny, bright, time to upgrade!"
         }
-    },    
+    },
     BeerBarrelGirl: {
         name: "BeerBarrelGirl",
         sprite: "BeerBarrelGirl",
@@ -4048,12 +4099,25 @@ const INTERACTION_SHRINE = {
         wants: ["GoldCoin"],
         gives: "Attack",
         text: {
-            intro: "I’m a master of the sword, and for a gold coin, I'll teach you how to wield it with violent precision.",
+            intro: "I'm a master of the sword, and for a gold coin, I'll teach you how to wield it with violent precision.",
             progress: null,
             conclusion: "That coin's bought you some serious sword skills. Now go forth and let your enemies fear your blade!"
         }
     },
-
+    BlondeKnight: {
+        name: "BlondeKnight",
+        sprite: "BlondeKnight",
+        category: "crest",
+        voice: "Female2",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        text: {
+            intro: "Want to learn how to swing a sword like a pro? For a gold coin, I'll teach you the art of the perfect strike.",
+            progress: null,
+            conclusion: "Lesson complete! With those moves, you'll make even the fiercest foes think twice. Go show them what you've learned!"
+        }
+    },
+    
 
 
 };

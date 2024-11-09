@@ -1683,12 +1683,12 @@ const MAP = {
         monsterList: '["MissWhite"]',
     }
     ,
-    72: {
+    72 : {
         name: "Hall of Master Mistresses",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 5000,
         data: '{"width":"21","height":"17","map":"BB3AA5BAA10BAA7BB3AA14EBAA4BAA3BB3ABB5AA3BAA2EAA2BAA15BAA4BB2AA3BAA12BAA36BAA15BABAEABB3ABAA5BB3AA2BAA3BB11ABB3ABB11AA3BAA6BB14ABAA2BB11AEABABB2AA2BB13AA3BB7ABB7EBB24$AA2BB5EBEBB3ABB16AA3BB4"}',
         wall: "DarkMossy9",
         floor: "FloorTiles_SDXL_001",
@@ -1698,7 +1698,9 @@ const MAP = {
         gates: '[[42,5,"72.1","68.7","Up"],[83,3,"72.2","75.1","Down"]]',
         doors: '[47,95,213,220,227,259,265]',
         oracles: '[[31,3,"StandingDarkPriestess"]]',
-    }
+        trainers: '[[339,1,"BlondeKnight"]]',
+        monsterList: '["MissGreen"]',
+        }
     ,
     73: {
         name: "Beer Cellar",
@@ -1738,19 +1740,24 @@ const MAP = {
         entities: '[[221,5,"GoldKeysa1"],[237,3,"GoldKeysa2"]]',
     }
     ,
-    75: {
-        name: "The Mines",
+    75 : {
+        name: "The Gold Mines",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"19","height":"19","map":"BB4AA4EABAA2BB68ABB2ABB10EBB5$BB240AA2BB16AB"}',
+        maxSpawned: 6,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"19","height":"19","map":"BB3AA2BAA5BAA2BABB2AA6BAA4BAA3BABAA9BAA3BABABB4ABAA4BB2ABB4AA2EBB2AA2BAA2BAA2BAA13BABABAA3BB3AA4BABB4AA2BABB2ABAA3BB2ABB5AA2BB5AA7BABABB3AA3BB7AA2BB3ABAA4BB4ABB2AA3BABAA3BB6AA3BABAA7BB3AA2BB2AA2BABAA4BABB2AA3BB4AA2BB2AA5BB2ABABB5AA3BB5EABB3AA4BB7ABB3ABAA3BB2AA4BABB2ABB2ABB2ABABAA2BAA2BAA2BB2AA2BB28AB$ABB3AB"}',
         wall: "RoughCave02",
         floor: "Relief18",
         ceil: "Cracked01",
         start: '[39,5]',
-        lights: '[[20,5,"FluxLight119","dim"]]',
+        lights: '[[20,5,"FluxLight119","dim"],[128,3,"FluxLight115","weakCandle"],[84,5,"DuaLLantern_031","weakCandle"],[193,1,"WallLamp34","weakCandle"],[357,1,"DuaLLantern_022","weakCandle"],[240,1,"Lights111","weakCandle"],[309,1,"FluxLight129","weakCandle"],[345,1,"DuaLLantern_023","weakCandle"]]',
         gates: '[[38,5,"75.1","72.2","Up"]]',
+        keys: '[[340,1]]',
         doors: '[43,79]',
-    }
+        entities: '[[70,7,"ThirstyMiner"],[184,1,"PickaxeMiner"],[218,7,"HungryMiner"]]',
+        objects: '[[231,"GoldBar"]]',
+        lairs: '[[353,1,"Lair18"],[142,1,"Lair24"],[113,3,"Lair28"],[227,3,"Lair37"]]',
+        monsterList: '["MissWhite","MissGreen","Skeleton"]',
+        }
 };

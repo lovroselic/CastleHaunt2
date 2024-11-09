@@ -1104,6 +1104,10 @@ LoadSprites = [
     { srcName: "EntityPictures/Barmaid2.jpg", name: "BeerBarrelGirl" },
     { srcName: "EntityPictures/GoldKeysa1.jpg", name: "GoldKeysa1" },
     { srcName: "EntityPictures/GoldKeysa2.jpg", name: "GoldKeysa2" },
+    { srcName: "EntityPictures/Miner1.jpg", name: "ThirstyMiner" },
+    { srcName: "EntityPictures/Miner2.jpg", name: "PickaxeMiner" },
+    { srcName: "EntityPictures/Miner3.jpg", name: "HungryMiner" },
+    { srcName: "EntityPictures/BlondeKnight.jpg", name: "BlondeKnight" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1332,6 +1336,8 @@ LoadSprites = [
     { srcName: "Items/DumbBell.png", name: "DumbBell" },
     { srcName: "Items/SmallBarrel.png", name: "SmallBarrel" },
     { srcName: "Items/GlassOfBeer.png", name: "GlassOfBeer" },
+    { srcName: "Items/Pizza.png", name: "Pizza" },
+    { srcName: "Items/PickAxe.png", name: "PickAxe" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

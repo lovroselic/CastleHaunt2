@@ -52,33 +52,39 @@ const DEBUG = {
             DONE * GoldKeysa1 wants "GoldBar", "GoldBar", "GoldBar", ---> GoldKey
             DONE * GoldKeysa2 wants "GoldOre", "GoldOre", "GoldOre" ---> GoldKey
             DONE * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
+            DONE * Miner1- "GlassOfBeer" -->GoldOre
+            DONE * Miner2- "PickAxe" -->GoldOre
+        Miner3- "Pizza", "Beer" -->GoldOre
          * 
          * "WhiteHandbag"
-            * "SmallBarrel" --> 68
-            * "SmallBarrel" --> 73
+            DONE * "SmallBarrel" --> 68
+            DONE * "SmallBarrel" --> 73
          * "SmallBarrel"
             * "GlassOfBeer" ---> BeerBarrelGirl
-        * "GoldBar", 
+            DONE * "GoldBar", <--75
         * "GoldBar", 
         * "GoldBar"
-        * "GoldOre", 
-        * "GoldOre", 
+            DONE* "GoldOre", <--Miner1
+            DONE * "GoldOre", <-- Miner2
         * "GoldOre"
+        * "PickAxe"
+        * "Pizza"
   
 
-        * coins sources (1x, missing -1x):
+        * coins sources (1x, missing 0):
             * ApparitiaCorruption
  
 
         *
-        * COINS used (0x):
+        * COINS used (1x):
+            * BLondeKnight  
 
      
         
         * key not yet used:
             
          * missing placed keys: 
-            * Silver
+            * 
             * 
          * missing sources for: 
             * 
@@ -145,9 +151,12 @@ const DEBUG = {
             //debug
             //"WhiteHandbag"
             //"SmallBarrel", "SmallBarrel", "SmallBarrel"
-            "GlassOfBeer",
-            "GoldBar", "GoldBar", "GoldBar",
-            "GoldOre", "GoldOre", "GoldOre"
+            //"GlassOfBeer",
+            //"GoldBar", "GoldBar", "GoldBar",
+            //"GoldOre", "GoldOre", "GoldOre"
+            //"PickAxe",
+            //"Pizza", "Beer"
+            "GoldCoin"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -187,7 +196,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.16",
+    VERSION: "0.12.17",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
