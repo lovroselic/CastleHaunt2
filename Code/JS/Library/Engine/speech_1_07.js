@@ -45,7 +45,7 @@ const SPEECH = {
       SPEECH.settings[setting] = voice.setting[setting];
     }
   },
-  silence(){
+  silence() {
     speechSynthesis.cancel();
   },
   speak(txt) {
@@ -191,6 +191,14 @@ const VOICE = {
   'Female2': {
     voice: 1,
     setting: new VoiceSetting(1.0, 1.0, 1.0)
+  },
+  'FemaleLow': {
+    voice: 1,
+    setting: new VoiceSetting(0.8, 0.7, 1.0)
+  },
+  'FemaleLow2': {
+    voice: 6,
+    setting: new VoiceSetting(0.7, 0.6, 1.0)
   },
   'MaleLowSlow': {
     voice: 0,

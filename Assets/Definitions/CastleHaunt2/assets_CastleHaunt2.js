@@ -978,6 +978,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaTrust.jpg", name: "ApparitiaTrust" },
     { srcName: "EntityPictures/ApparitiaOffensive.jpg", name: "ApparitiaOffensive" },
     { srcName: "EntityPictures/ApparitiaTemple.jpg", name: "ApparitiaTemple" },
+    { srcName: "EntityPictures/ApparitiaMiner.jpg", name: "ApparitiaMiner" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1108,6 +1109,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Miner2.jpg", name: "PickaxeMiner" },
     { srcName: "EntityPictures/Miner3.jpg", name: "HungryMiner" },
     { srcName: "EntityPictures/BlondeKnight.jpg", name: "BlondeKnight" },
+    { srcName: "EntityPictures/GlassOrCan.jpg", name: "GlassOrCan" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

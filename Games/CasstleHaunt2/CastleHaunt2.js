@@ -54,7 +54,7 @@ const DEBUG = {
             DONE * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
             DONE * Miner1- "GlassOfBeer" -->GoldOre
             DONE * Miner2- "PickAxe" -->GoldOre
-        Miner3- "Pizza", "Beer" -->GoldOre
+            DONE Miner3- "Pizza", "Beer" -->GoldOre
          * 
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
@@ -66,7 +66,7 @@ const DEBUG = {
         * "GoldBar"
             DONE* "GoldOre", <--Miner1
             DONE * "GoldOre", <-- Miner2
-        * "GoldOre"
+            DONE * "GoldOre" <-- Miners
         * "PickAxe"
         * "Pizza"
   
@@ -156,14 +156,16 @@ const DEBUG = {
             //"GoldOre", "GoldOre", "GoldOre"
             //"PickAxe",
             //"Pizza", "Beer"
-            "GoldCoin"
+            //"GoldCoin"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = ["Gold", "Silver"];
+        let keys = [
+            //"Gold", "Silver",
+        ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -196,7 +198,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.17",
+    VERSION: "0.12.18",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

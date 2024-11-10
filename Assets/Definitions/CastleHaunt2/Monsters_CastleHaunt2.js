@@ -212,6 +212,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    GlassOrCan: {
+        name: "GlassOrCan",
+        sprite: "GlassOrCan",
+        category: 'crest',
+        voice: "FemaleLow2",
+        text: "Glass or can, a beer is a beer, but surely not for the miners here.",
+        interactionCategory: "oracle",
+    },
     StandingDarkPriestess: {
         name: "StandingDarkPriestess",
         sprite: "StandingDarkPriestess",
@@ -965,6 +973,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We have invaded your temples. You won't be safe anywhere from our monster infestation. We even made some in your image.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaMiner: {
+        name: "ApparitiaMiner",
+        sprite: "ApparitiaMiner",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We are mining your gold, Princess. And faster then your miners. Hahahahaha.",
         interactionCategory: "oracle",
     },
 };
