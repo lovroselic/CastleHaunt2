@@ -3203,9 +3203,46 @@ const INTERACTION_ITEM = {
         inventorySprite: "PickAxe",
         text: "Pickaxe. Let's go mining."
     },
+    Brush: {
+        name: "Brush",
+        category: "interaction_item",
+        inventorySprite: "Brush",
+        text: "A brush for polishing boots."
+    },
+    RedLeatherBoots: {
+        name: "RedLeatherBoots",
+        category: "interaction_item",
+        inventorySprite: "RedLeatherBoots",
+        text: "Red leather ankle boots. Sexy."
+    },
+    RedLeatherLeggings: {
+        name: "RedLeatherLeggings",
+        category: "interaction_item",
+        inventorySprite: "RedLeatherLeggings",
+        text: "Red leather leggins. I would look fabolous in that."
+    },
+    RedLeatherTop: {
+        name: "RedLeatherTop",
+        category: "interaction_item",
+        inventorySprite: "RedLeatherTop",
+        text: "Red leather top. Whoever wears this will have followers."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    PizzaMaker: {
+        name: "PizzaMaker",
+        sprite: "PizzaMaker",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Egg", "Milk"],
+        gives: "Pizza",
+        text: {
+            intro: "Bring me fresh egg and milk, and I'll whip up a pizza unlike any you've tasted before!",
+            progress: "Almost there, but I still need the final touch. Don't keep the dough waiting!",
+            conclusion: "Perfect! My special recipe is complete. Here's your pizza. Hot, fresh, and unforgettable! Like me."
+        }
+    },    
     HungryMiner: {
         name: "HungryMiner",
         sprite: "HungryMiner",
@@ -3219,7 +3256,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Now that's more like it! Thanks for the grub. Here, a little something from the mines as a ‘thank you’."
         }
     },
-    
     PickaxeMiner: {
         name: "PickaxeMiner",
         sprite: "PickaxeMiner",
@@ -4133,9 +4169,33 @@ const INTERACTION_SHRINE = {
             conclusion: "Lesson complete! With those moves, you'll make even the fiercest foes think twice. Go show them what you've learned!"
         }
     },
+    DarkPriestess: {
+        name: "DarkPriestess",
+        sprite: "DarkPriestess",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        text: {
+            intro: "Pray for magic, pray with gold. Make your enemies do as they are told.",
+            progress: null,
+            conclusion: "The coin is given, the spell is cast. Wield this magic, make their terror last."
+        }
+    },
+    Ruberella: {
+        name: "Ruberella",
+        sprite: "Ruberella",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldCoin"],
+        gives: "HeartSkill",
+        text: {
+            intro: "One gold coin, and I'll make you feel stronger! It could just be my charm... who knows?",
+            progress: null,
+            conclusion: "With that coin, your heart grows bold. Must be my magic, or maybe just me!"
+        }
+    },
     
-
-
 };
 
 const INTERACTOR = {

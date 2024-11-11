@@ -55,6 +55,7 @@ const DEBUG = {
             DONE * Miner1- "GlassOfBeer" -->GoldOre
             DONE * Miner2- "PickAxe" -->GoldOre
             DONE Miner3- "Pizza", "Beer" -->GoldOre
+            DONE PizzaMaker - "Milk", "Egg", -->Pizza
          * 
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
@@ -68,23 +69,29 @@ const DEBUG = {
             DONE * "GoldOre", <-- Miner2
             DONE * "GoldOre" <-- Miners
         * "PickAxe"
-        * "Pizza"
+            DONE* "Pizza" <--PizzaMAker
+        * "Egg", 
+        * "Milk"
+        * "Brush"
   
 
-        * coins sources (1x, missing 0):
+        * coins sources (1x, missing -2):
             * ApparitiaCorruption
  
 
         *
-        * COINS used (1x):
+        * COINS used (3x):
             * BLondeKnight  
-
+            * DArk Priestess
+            * RUberella
+        * Brush for the three Dommes, one brush three trainers
+            * brush will be in the hidden room down from 3Dommes - maze, with 1 entity and leather outfits   
      
         
         * key not yet used:
             
          * missing placed keys: 
-            * 
+            *
             * 
          * missing sources for: 
             * 
@@ -95,7 +102,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 75;
+        GAME.level = 77;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -156,6 +163,7 @@ const DEBUG = {
             //"GoldOre", "GoldOre", "GoldOre"
             //"PickAxe",
             //"Pizza", "Beer"
+            "Milk", "Egg",
             //"GoldCoin"
         ];
         for (let itm of invItems) {
@@ -198,7 +206,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.18",
+    VERSION: "0.12.19",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

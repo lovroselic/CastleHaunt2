@@ -170,7 +170,18 @@ const DECAL_PAINTINGS = [
     "FluxDommes2289", "FluxDommes2290", "FluxDommes2291", "FluxDommes2292", "FluxDommes2293", "FluxDommes2294", "FluxDommes2295", "FluxDommes2296", "FluxDommes2297", "FluxDommes2298", "FluxDommes2299", "FluxDommes2300",
     "FluxDommes2301", "FluxDommes2302", "FluxDommes2303", "FluxDommes2304", "FluxDommes2305", "FluxDommes2306", "FluxDommes2307", "FluxDommes2308", "FluxDommes2309", "FluxDommes2310", "FluxDommes2311", "FluxDommes2312",
     "FluxDommes2313", "FluxDommes2314", "FluxDommes2315", "FluxDommes2316", "FluxDommes2317", "FluxDommes2318", "FluxDommes2319", "FluxDommes2320", "FluxDommes2321", "FluxDommes2322", "FluxDommes2323", "FluxDommes2324",
-    "FluxDommes2325", "FluxDommes2326"
+    "FluxDommes2325", "FluxDommes2326",
+    "UnusedEntities2001", "UnusedEntities2002", "UnusedEntities2003", "UnusedEntities2004", "UnusedEntities2005", "UnusedEntities2006", "UnusedEntities2007", "UnusedEntities2008", "UnusedEntities2009", "UnusedEntities2010",
+    "UnusedEntities2011", "UnusedEntities2012", "UnusedEntities2013", "UnusedEntities2014", "UnusedEntities2015", "UnusedEntities2016", "UnusedEntities2017", "UnusedEntities2018", "UnusedEntities2019", "UnusedEntities2020",
+    "UnusedEntities2021", "UnusedEntities2022", "UnusedEntities2023", "UnusedEntities2024", "UnusedEntities2025", "UnusedEntities2026", "UnusedEntities2027", "UnusedEntities2028", "UnusedEntities2029", "UnusedEntities2030",
+    "UnusedEntities2031", "UnusedEntities2032", "UnusedEntities2033", "UnusedEntities2034", "UnusedEntities2035", "UnusedEntities2036", "UnusedEntities2037", "UnusedEntities2038", "UnusedEntities2039", "UnusedEntities2040",
+    "UnusedEntities2041", "UnusedEntities2042", "UnusedEntities2043", "UnusedEntities2044", "UnusedEntities2045", "UnusedEntities2046", "UnusedEntities2047", "UnusedEntities2048", "UnusedEntities2049", "UnusedEntities2050",
+    "UnusedEntities2051", "UnusedEntities2052", "UnusedEntities2053", "UnusedEntities2054", "UnusedEntities2055", "UnusedEntities2056", "UnusedEntities2057", "UnusedEntities2058", "UnusedEntities2059", "UnusedEntities2060",
+    "UnusedEntities2061", "UnusedEntities2062", "UnusedEntities2063", "UnusedEntities2064", "UnusedEntities2065", "UnusedEntities2066", "UnusedEntities2067", "UnusedEntities2068", "UnusedEntities2069", "UnusedEntities2070",
+    "UnusedEntities2071", "UnusedEntities2072", "UnusedEntities2073", "UnusedEntities2074", "UnusedEntities2075", "UnusedEntities2076", "UnusedEntities2077", "UnusedEntities2078", "UnusedEntities2079", "UnusedEntities2080",
+    "UnusedEntities2081", "UnusedEntities2082", "UnusedEntities2083", "UnusedEntities2084", "UnusedEntities2085", "UnusedEntities2086", "UnusedEntities2087", "UnusedEntities2088", "UnusedEntities2089", "UnusedEntities2090",
+    "UnusedEntities2091", "UnusedEntities2092", "UnusedEntities2093", "UnusedEntities2094", "UnusedEntities2095", "UnusedEntities2096", "UnusedEntities2097", "UnusedEntities2098", "UnusedEntities2099", "UnusedEntities2100",
+    "UnusedEntities2101", "UnusedEntities2102"
 ].sort();
 
 

@@ -1623,7 +1623,7 @@ const MAP = {
         start: '[210,3]',
         decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"],[322,3,"KnightStatue106","crest"],[376,3,"ShieldDecal07","crest"]]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"],[17,7,"68.8","74.1","Silver"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"],[17,7,"68.8","74.1","Silver"],[398,1,"68.9","76.1","Red"]]',
         containers: '[[336,"Barrel","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
         objects: '[[310,"SmallBarrel"]]',
@@ -1683,7 +1683,7 @@ const MAP = {
         monsterList: '["MissWhite"]',
     }
     ,
-    72 : {
+    72: {
         name: "Hall of Master Mistresses",
         sg: 0,
         maxSpawned: 6,
@@ -1698,9 +1698,9 @@ const MAP = {
         gates: '[[42,5,"72.1","68.7","Up"],[83,3,"72.2","75.1","Down"]]',
         doors: '[47,95,213,220,227,259,265]',
         oracles: '[[31,3,"StandingDarkPriestess"]]',
-        trainers: '[[339,1,"BlondeKnight"]]',
+        trainers: '[[339,1,"BlondeKnight"],[346,1,"DarkPriestess"],[353,1,"Ruberella"]]',
         monsterList: '["MissGreen"]',
-        }
+    }
     ,
     73: {
         name: "Beer Cellar",
@@ -1708,7 +1708,7 @@ const MAP = {
         maxSpawned: 5,
         killCountdown: 4,
         spawnDelay: 6000,
-        data: '{"width":"17","height":"17","map":"BB3AA13BB9ABB2AA11BAA15BB8AA81BAA3BAA5BB3ABB2AA11BB2ABB4AA10BABB12ABB4ABABB6ABB5AA2BB5AA9BB12ABB8AA3BB2ABB21ABB2$"}',
+        data: '{"width":"17","height":"17","map":"BB3AA10BAA4BB8ABB2AA11BAA15BB8AA82BAA2BAA5BB3AA2BB2AA10BB2ABB4AA10BABB12ABB4ABABB5AA2BB5AA2BB5AA8BB12ABB8AA3BB2ABB21ABB2$"}',
         wall: "BloodMarbleFloorWall_SDXL_012",
         floor: "BloodMarbleFloorWall_SDXL_010",
         ceil: "Wall100",
@@ -1716,8 +1716,9 @@ const MAP = {
         decals: '[[170,5,"FluxDommes2068","picture"],[238,5,"FluxDommes2133","picture"],[204,5,"FluxDommes2171","picture"]]',
         lights: '[[144,3,"DuaLLantern_026","standard"],[156,7,"DuaLLantern_004","standard"],[13,7,"Fireplace101","fire"],[285,1,"Fireplace209","fire"],[144,5,"Lamp52","weakCandle"],[122,1,"Lamp40","standardDimmed"],[66,3,"Candelabra14","standardDimmed"],[236,3,"DuaLLantern_015","standardDimmed"]]',
         gates: '[[136,5,"73.1","71.2","Up"]]',
+        keys: '[[202,2]]',
         containers: '[[239,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[222,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[205,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[188,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[171,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[103,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[86,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[69,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[52,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[35,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[92,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[75,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[177,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[194,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[82,"Barrel","GOLD_ITEM_TYPE.GoldBar",3],[99,"Barrel","GOLD_ITEM_TYPE.GoldBar",3]]',
-        entities: '[[275,1,"BeerBarrelGirl"]]',
+        entities: '[[275,1,"BeerBarrelGirl"],[3,7,"PizzaMaker"]]',
         objects: '[[116,"SmallBarrel"]]',
         lairs: '[[15,7,"Lair13"],[287,1,"Lair22"],[152,3,"Lair47"]]',
         monsterList: '["MissWhite","MissGreen","Skeleton","Viking","GhostMinionGreen"]',
@@ -1740,7 +1741,7 @@ const MAP = {
         entities: '[[221,5,"GoldKeysa1"],[237,3,"GoldKeysa2"]]',
     }
     ,
-    75 : {
+    75: {
         name: "The Gold Mines",
         sg: 0,
         maxSpawned: 6,
@@ -1760,5 +1761,37 @@ const MAP = {
         oracles: '[[323,5,"ApparitiaMiner"],[355,1,"GlassOrCan"]]',
         lairs: '[[353,1,"Lair18"],[142,1,"Lair24"],[113,3,"Lair28"],[227,3,"Lair37"]]',
         monsterList: '["MissWhite","MissGreen","Skeleton"]',
+    }
+    ,
+    76: {
+        name: "Boudoir of The Three Dommes",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"16","height":"16","map":"BB3AA2BABAA4BABABB2AA13BAA12BAA22BAA6BB2AA37BB5ABABB4ABAA2BB2AA5BB2ABABB2ABB5AA7EBB6ABAA6BB11ABB2AA2BB5ABAA4BB2ABB3ABB10AA2BABB16ABABB13A$ABB3"}',
+        wall: "BoulderWall103",
+        floor: "IrregularTiledFloorCeil03",
+        ceil: "IrregularTiledFloorCeil13",
+        start: '[17,7]',
+        decals: '[[229,4,"PersianRug03","crest"],[231,4,"PersianRug03","crest"],[233,4,"PersianRug03","crest"],[235,4,"PersianRug03","crest"],[227,4,"PersianRug03","crest"],[211,4,"PersianRug03","crest"],[212,4,"PersianRug03","crest"],[213,4,"PersianRug03","crest"],[214,4,"PersianRug03","crest"],[215,4,"PersianRug03","crest"],[216,4,"PersianRug03","crest"],[217,4,"PersianRug03","crest"],[218,4,"PersianRug03","crest"],[219,4,"PersianRug03","crest"],[197,4,"PersianRug03","crest"],[198,4,"PersianRug03","crest"],[199,4,"PersianRug03","crest"],[200,4,"PersianRug03","crest"],[201,4,"PersianRug03","crest"],[182,4,"PersianRug03","crest"],[183,4,"PersianRug03","crest"],[184,4,"PersianRug03","crest"]]',
+        lights: '[[96,5,"FluxLight111","standard"],[71,5,"Candelabra02","standardDimmed"],[134,7,"FluxLight103","standardDimmed"],[136,7,"FluxLight103","standardDimmed"],[243,1,"Fireplace12","fire"],[251,1,"Fireplace201","fire"]]',
+        gates: '[[1,7,"76.1","68.9","Closed"],[254,1,"76.2","77.1","Down"]]',
+        doors: '[65]',
+        triggers: '[[226,3,"SmoothWallButton",1,222]]',
+    }
+    ,
+    77 : {
+        name: "The Fourth Domme",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"21","height":"21","map":"BB2AA3BABAA2BAA2BABABB2ABAA13BB2ABAA4BAA10BAA6BABABABABAA2BB3AA2BB3AA2BAA9BAA7BABAA2BAA4BAA3BB2ABB5ABABABAA3BABB3AA2BABB3ABB4AA5BB6ABB2ABB4AA2BB3ABB2ABAA2BABB4ABB3AA2BABB8AA2BB3AA2BB2ABAA2BB2ABABAA2BAA9BABB2ABAA6BAA2BB2AA3BAA2BABABAA7BB2ABABABB2ABABAA2BAA5BB2ABB2ABABAA2BAA2BABAA3BB3AA2BB4ABABB5ABABB6ABB2ABB2ABB11AA3BB4ABB4ABABB2ABABB2ABB12ABB23AA2BB11ABB5ABB10A$"}',
+        wall: "RoughCave23",
+        floor: "FloorTiles_SDXL_011",
+        ceil: "Relief11",
+        start: '[31,7]',
+        gates: '[[10,7,"77.1","76.2","Up"]]',
         }
 };
