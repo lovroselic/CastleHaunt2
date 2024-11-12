@@ -979,6 +979,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaOffensive.jpg", name: "ApparitiaOffensive" },
     { srcName: "EntityPictures/ApparitiaTemple.jpg", name: "ApparitiaTemple" },
     { srcName: "EntityPictures/ApparitiaMiner.jpg", name: "ApparitiaMiner" },
+    { srcName: "EntityPictures/ApparitiaSuspicious.jpg", name: "ApparitiaSuspicious" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1113,6 +1114,15 @@ LoadSprites = [
     { srcName: "EntityPictures/Ruberella9.jpg", name: "Ruberella" },
     { srcName: "EntityPictures/DarkPriestess1.jpg", name: "DarkPriestess" },
     { srcName: "EntityPictures/PizzaMaker.jpg", name: "PizzaMaker" },
+    { srcName: "EntityPictures/ApparitiaDomme.jpg", name: "ApparitiaDomme" },
+    { srcName: "EntityPictures/BlackMiniDomme.jpg", name: "BlackMiniDomme" },
+    { srcName: "EntityPictures/RedTopDomme.jpg", name: "RedTopDomme" },
+    { srcName: "EntityPictures/RedMiniDomme.jpg", name: "RedMiniDomme" },
+    { srcName: "EntityPictures/Serpent2.jpg", name: "SittingSerpent2" },
+
+    { srcName: "EntityPictures/Cow3.jpg", name: "Cow" },
+    { srcName: "EntityPictures/Cow4.jpg", name: "CowOracle" },
+
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

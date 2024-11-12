@@ -212,6 +212,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    CowOracle: {
+        name: "CowOracle",
+        sprite: "CowOracle",
+        category: 'crest',
+        voice: "Strange",
+        text: "Mooo off.",
+        interactionCategory: "oracle",
+    },
+    SittingSerpent2: {
+        name: "SittingSerpent2",
+        sprite: "SittingSerpent2",
+        category: 'crest',
+        voice: "Female2",
+        text: "Nobody knows which Domme is will with which skills. But you can only please one.",
+        interactionCategory: "oracle",
+    },
     GlassOrCan: {
         name: "GlassOrCan",
         sprite: "GlassOrCan",
@@ -981,6 +997,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We are mining your gold, Princess. And faster then your miners. Hahahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaSuspicious: {
+        name: "ApparitiaSuspicious",
+        sprite: "ApparitiaSuspicious",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Report all traitorous Apparitias to her majesty Hauntessa Spookish. Oh, it's you. The murderer. We're on to you. Just wait.",
         interactionCategory: "oracle",
     },
 };
@@ -3230,6 +3254,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    ApparitiaDomme: {
+        name: "ApparitiaDomme",
+        sprite: "ApparitiaDomme",
+        category: 'crest',
+        voice: "Apparitia",
+        wants: ["RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"],
+        gives: "Brush",
+        text: {
+            intro: "I'm tired of this dull, white look! Bring me a red leather outfit, sleek as the famous Three Dommes, and maybe I'll reconsider my alliances.",
+            progress: "One step closer to a daring new look! Keep going; I won't cross over until I'm fully dressed.",
+            conclusion: "Ah, finally! Now I'm as fierce as the Three Dommes. As promised, here's a brush to keep those boots shining. Consider me on your side now."
+        }
+    },    
     PizzaMaker: {
         name: "PizzaMaker",
         sprite: "PizzaMaker",
@@ -3242,7 +3279,7 @@ const INTERACTION_ENTITY = {
             progress: "Almost there, but I still need the final touch. Don't keep the dough waiting!",
             conclusion: "Perfect! My special recipe is complete. Here's your pizza. Hot, fresh, and unforgettable! Like me."
         }
-    },    
+    },
     HungryMiner: {
         name: "HungryMiner",
         sprite: "HungryMiner",
@@ -3958,6 +3995,19 @@ const INTERACTION_ENTITY = {
             conclusion: "Here you go love. Buy youreself something. Now leave me."
         }
     },
+    Cow: {
+        name: "Cow",
+        sprite: "Cow",
+        category: 'crest',
+        voice: "Princess",
+        wants: ["HayBale", "HayBale"],
+        gives: "Milk",
+        text: {
+            intro: "Poor mute thing, are you hungry? Cow? Would you let me milk you if I feed you?",
+            progress: "Hey, you like the hay. I'll bring more.",
+            conclusion: "Now I will milk you. Stand ready."
+        }
+    },
 };
 
 const INTERACTION_SHRINE = {
@@ -4195,7 +4245,46 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, your heart grows bold. Must be my magic, or maybe just me!"
         }
     },
-    
+    RedMiniDomme: {
+        name: "RedMiniDomme",
+        sprite: "RedMiniDomme",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Brush"],
+        gives: "HeartSkill",
+        text: {
+            intro: "Find the brush, kneel and clean my boots. Show humility and respect and you will be rewarded.",
+            progress: null,
+            conclusion: "Your service is accepted. As a reward I increased your health."
+        }
+    },
+    BlackMiniDomme: {
+        name: "BlackMiniDomme",
+        sprite: "BlackMiniDomme",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Brush"],
+        gives: "Magic",
+        text: {
+            intro: "Find the brush, kneel and clean my pumps. Show humility and respect and you will be rewarded.",
+            progress: null,
+            conclusion: "Your service is accepted. As a reward I increased your magic skills."
+        }
+    },
+    RedTopDomme: {
+        name: "RedTopDomme",
+        sprite: "RedTopDomme",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Brush"],
+        gives: "Attack",
+        text: {
+            intro: "Find the brush, kneel and clean my boots. Show humility and respect and you will be rewarded.",
+            progress: null,
+            conclusion: "Your service is accepted. As a reward I increased your fighting skills."
+        }
+    },
+
 };
 
 const INTERACTOR = {

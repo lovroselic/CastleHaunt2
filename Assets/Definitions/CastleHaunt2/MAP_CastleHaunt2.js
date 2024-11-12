@@ -85,8 +85,9 @@ const MAP_TEXT = {
     73: "Smells like fresh beer. Let's stay here.",
     74: "",
     75: "",
-    76: "",
-    77: "",
+    76: "The Three Dommes. I should treat the with respect to keep their alliance.",
+    77: "THe Fourth Domme wannabe. Maybe I can get her to work for me.",
+    78: "Everybody say moo."
 };
 
 /** Map definitions */
@@ -1627,7 +1628,8 @@ const MAP = {
         start: '[210,3]',
         decals: '[[52,3,"TempleDecal","crest"],[106,3,"TempleDecal","crest"],[322,3,"KnightStatue106","crest"],[376,3,"ShieldDecal07","crest"]]',
         lights: '[[136,5,"Lamp50","standardRedish"],[244,5,"Lamp50","standardRedish"],[157,3,"Lamp42","standard"],[265,3,"Lamp44","standard"],[95,7,"FluxLight109","dimCandle"],[311,1,"FluxLight105","dimCandle"]]',
-        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"],[17,7,"68.8","74.1","Silver"],[398,1,"68.9","76.1","Red"]]',
+        gates: '[[211,3,"68.1","63.6","Closed"],[10,7,"68.2","69.1","Gold"],[4,7,"68.3","69.2","Closed"],[388,1,"68.4","70.1","Gold"],[382,1,"68.5","70.2","Closed"],[80,3,"68.6","71.1","Down"],[350,3,"68.7","72.1","Down"],[17,7,"68.8","74.1","Silver"],[398,1,"68.9","76.1","Red"],[20,7,"68.10","78.1","Green"]]',
+        keys: '[[203,3]]',
         containers: '[[336,"Barrel","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
         objects: '[[310,"SmallBarrel"]]',
@@ -1783,9 +1785,11 @@ const MAP = {
         gates: '[[1,7,"76.1","68.9","Closed"],[254,1,"76.2","77.1","Down"]]',
         doors: '[65]',
         triggers: '[[226,3,"SmoothWallButton",1,222]]',
+        oracles: '[[5,7,"SittingSerpent2"],[11,7,"ApparitiaSuspicious"]]',
+        trainers: '[[247,1,"RedMiniDomme"],[249,1,"BlackMiniDomme"],[245,1,"RedTopDomme"]]',
     }
     ,
-    77 : {
+    77: {
         name: "The Fourth Domme",
         sg: 0,
         maxSpawned: -1,
@@ -1799,5 +1803,24 @@ const MAP = {
         decals: '[[94,1,"FluxDommes3028","picture"]]',
         lights: '[[55,3,"DuaLLantern_010","standardDimmed"],[55,5,"Lamp51","standardDimmed"]]',
         gates: '[[10,7,"77.1","76.2","Up"]]',
+        containers: '[[179,"Wardrobe","INTERACTION_ITEM.RedLeatherBoots",1],[313,"Closet","INTERACTION_ITEM.RedLeatherLeggings",7],[257,"Crate","INTERACTION_ITEM.RedLeatherTop",7]]',
+        entities: '[[62,3,"ApparitiaDomme"]]',
+    }
+    ,
+    78 : {
+        name: "The Barn of Blonde Chick",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB2ABB2AA18BAA3BB2ABB11ABAA2BAA57BB8AA8BB2AA6BAA3BB3ABABB13AA16BABB3ABB21ABB2ABB14AA3BAA2BAA2BB3ABB6AA2BB15ABABB7ABABB28A$"}',
+        wall: "Wood10",
+        floor: "Relief05",
+        ceil: "SpiderWeb10",
+        start: '[263,1]',
+        lights: '[[8,7,"Lights110","standard"]]',
+        gates: '[[280,1,"78.1","68.10","Closed"]]',
+        entities: '[[204,5,"Cow"]]',
+        oracles: '[[119,5,"CowOracle"]]',
         }
 };

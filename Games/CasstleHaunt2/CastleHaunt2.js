@@ -56,6 +56,7 @@ const DEBUG = {
             DONE * Miner2- "PickAxe" -->GoldOre
             DONE Miner3- "Pizza", "Beer" -->GoldOre
             DONE PizzaMaker - "Milk", "Egg", -->Pizza
+            Cow "HayBale",HayBale --> Milk
          * 
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
@@ -73,6 +74,11 @@ const DEBUG = {
         * "Egg", 
         * "Milk"
         * "Brush"
+            DONE * "RedLeatherTop",  <-- 77
+            DONE * "RedLeatherLeggings", <-- 77
+            DONE * "RedLeatherBoots"<-- 77
+        "HayBale"
+        "HayBale"
   
 
         * coins sources (1x, missing -2):
@@ -102,7 +108,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 77;
+        GAME.level = 78;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -156,6 +162,8 @@ const DEBUG = {
         let invItems = [
 
             //debug
+            "HayBale", "HayBale"
+            //"Brush",
             //"WhiteHandbag"
             //"SmallBarrel", "SmallBarrel", "SmallBarrel"
             //"GlassOfBeer",
@@ -163,8 +171,10 @@ const DEBUG = {
             //"GoldOre", "GoldOre", "GoldOre"
             //"PickAxe",
             //"Pizza", "Beer"
-            "Milk", "Egg",
+            //"Milk", "Egg",
             //"GoldCoin"
+            //"RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"
+            ,
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -206,7 +216,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.20",
+    VERSION: "0.12.21",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1294,7 +1304,6 @@ const GAME = {
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();
                 TITLE.keys();
-                //TITLE.skills();
                 break;
             case "life":
                 console.info("LIFE", interaction);
@@ -1307,6 +1316,7 @@ const GAME = {
                 HERO.incStatus(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.PowerUp.play();
+                TITLE.keys();
                 break;
             case 'chest':
                 AUDIO.OpenChest.play();

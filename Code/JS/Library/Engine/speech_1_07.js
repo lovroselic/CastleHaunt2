@@ -180,6 +180,10 @@ const VOICE = {
     voice: 0,
     setting: new VoiceSetting(0.75, 1.0, 1.0)
   },
+  'Strange': {
+    voice: 0,
+    setting: new VoiceSetting(0.5, 0.2, 0.9)
+  },
   'MaleQ': {
     voice: 0,
     setting: new VoiceSetting(1.3, 0.8, 1.0)
@@ -222,7 +226,7 @@ const VOICE = {
   },
   'Apparitia': {
     voice: 1,
-    setting: new VoiceSetting(1.75, 1.65, 1.0)
+    setting: new VoiceSetting(1.65, 1.8, 1.0)
   },
 };
 console.log(`%cSPEECH ${SPEECH.VERSION} loaded.`, SPEECH.CSS);
