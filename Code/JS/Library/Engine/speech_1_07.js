@@ -184,6 +184,10 @@ const VOICE = {
     voice: 0,
     setting: new VoiceSetting(0.5, 0.2, 0.9)
   },
+  'StrangeFemale': {
+    voice: 1,
+    setting: new VoiceSetting(0.5, 0.2, 0.9)
+  },
   'MaleQ': {
     voice: 0,
     setting: new VoiceSetting(1.3, 0.8, 1.0)

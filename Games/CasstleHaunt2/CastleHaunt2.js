@@ -56,7 +56,8 @@ const DEBUG = {
             DONE * Miner2- "PickAxe" -->GoldOre
             DONE Miner3- "Pizza", "Beer" -->GoldOre
             DONE PizzaMaker - "Milk", "Egg", -->Pizza
-            Cow "HayBale",HayBale --> Milk
+            DONE Cow "HayBale",HayBale --> Milk
+            DONE BlondeChick: "Chicken", "Chicken","Chicken","Chicken","Chicken" --> Egg
          * 
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
@@ -79,6 +80,11 @@ const DEBUG = {
             DONE * "RedLeatherBoots"<-- 77
         "HayBale"
         "HayBale"
+        "Chicken", 
+        "Chicken",
+        "Chicken",
+        "Chicken","
+        Chicken"
   
 
         * coins sources (1x, missing -2):
@@ -97,7 +103,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            *
+            * Blue
             * 
          * missing sources for: 
             * 
@@ -108,7 +114,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 78;
+        GAME.level = 79;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -162,7 +168,8 @@ const DEBUG = {
         let invItems = [
 
             //debug
-            "HayBale", "HayBale"
+            //"Chicken", "Chicken","Chicken","Chicken","Chicken",
+            //"HayBale", "HayBale"
             //"Brush",
             //"WhiteHandbag"
             //"SmallBarrel", "SmallBarrel", "SmallBarrel"
@@ -174,7 +181,7 @@ const DEBUG = {
             //"Milk", "Egg",
             //"GoldCoin"
             //"RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"
-            ,
+            
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -216,7 +223,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.21",
+    VERSION: "0.12.22",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1738,7 +1745,7 @@ const TITLE = {
     drawButtons() {
         ENGINE.clearLayer("button");
         FORM.BUTTON.POOL.clear();
-        let x = 0;
+        let x = 8;
         let y = 668;
         const w = 100;
         const h = 24;
@@ -1908,7 +1915,7 @@ const TITLE = {
             CTX.putImageData(imageData, cX - SPRITE.Avatar.width / 2, cY - SPRITE.Avatar.height / 2);
         }
 
-        const fs = 46;
+        const fs = 40;
         CTX.font = `300 ${fs}px CPU`
         CTX.fillStyle = "#DDD";
         CTX.textAlign = "center";

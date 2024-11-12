@@ -934,7 +934,7 @@ LoadObjects = [
 
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
-    "MissWhite.gltf", "Skeleton.gltf"
+    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf"
 ];
 
 LoadSprites = [
@@ -1119,9 +1119,15 @@ LoadSprites = [
     { srcName: "EntityPictures/RedTopDomme.jpg", name: "RedTopDomme" },
     { srcName: "EntityPictures/RedMiniDomme.jpg", name: "RedMiniDomme" },
     { srcName: "EntityPictures/Serpent2.jpg", name: "SittingSerpent2" },
-
     { srcName: "EntityPictures/Cow3.jpg", name: "Cow" },
     { srcName: "EntityPictures/Cow4.jpg", name: "CowOracle" },
+    { srcName: "EntityPictures/BlondeChick.jpg", name: "BlondeChick" },
+
+    { srcName: "EntityPictures/CatBabe1.jpg", name: "CatBabe1" },
+    { srcName: "EntityPictures/CatBabe2.jpg", name: "CatBabe2" },
+    { srcName: "EntityPictures/CatBabe3.jpg", name: "CatBabe3" },
+    { srcName: "EntityPictures/CatBabe4.jpg", name: "CatBabe4" },
+    { srcName: "EntityPictures/CatBabe5.jpg", name: "CatBabe5" },
 
 
     //action movables
@@ -1354,10 +1360,10 @@ LoadSprites = [
     { srcName: "Items/Pizza.png", name: "Pizza" },
     { srcName: "Items/PickAxe.png", name: "PickAxe" },
     { srcName: "Items/Brush.png", name: "Brush" },
-
     { srcName: "Items/RedLeatherBoots.png", name: "RedLeatherBoots" },
     { srcName: "Items/RedLeatherLeggings.png", name: "RedLeatherLeggings" },
     { srcName: "Items/RedLeatherTop.png", name: "RedLeatherTop" },
+    { srcName: "Items/Chicken.png", name: "Chicken" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

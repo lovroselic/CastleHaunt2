@@ -212,6 +212,46 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    CatBabe5: {
+        name: "CatBabe5",
+        sprite: "CatBabe5",
+        category: 'crest',
+        voice: "StrangeFemale",
+        text: "Let's hunt some chicken. Meeow.",
+        interactionCategory: "oracle",
+    },
+    CatBabe4: {
+        name: "CatBabe4",
+        sprite: "CatBabe4",
+        category: 'crest',
+        voice: "StrangeFemale",
+        text: "Are you a pussy? I am.",
+        interactionCategory: "oracle",
+    },
+    CatBabe3: {
+        name: "CatBabe3",
+        sprite: "CatBabe3",
+        category: 'crest',
+        voice: "StrangeFemale",
+        text: "Talk meeow to meeow boss.",
+        interactionCategory: "oracle",
+    },
+    CatBabe2: {
+        name: "CatBabe2",
+        sprite: "CatBabe2",
+        category: 'crest',
+        voice: "StrangeFemale",
+        text: "Meeow the fuck off.",
+        interactionCategory: "oracle",
+    },
+    CatBabe1: {
+        name: "CatBabe1",
+        sprite: "CatBabe1",
+        category: 'crest',
+        voice: "StrangeFemale",
+        text: "Meeow. Meeow?",
+        interactionCategory: "oracle",
+    },
     CowOracle: {
         name: "CowOracle",
         sprite: "CowOracle",
@@ -2524,10 +2564,8 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "WolfPuppy",
         text: "Such a cute puppy.",
     },
-
-    /** */
-
     LittleChicken: {
+        /** food */
         name: "LittleChicken",
         category: "interaction_item",
         model: "Chicken",
@@ -2539,6 +2577,20 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "LittleChicken",
         text: "Chicken dinner? Yummy."
     },
+    Chicken: {
+        /** alive */
+        name: "Chicken",
+        category: "interaction_item",
+        model: "Chicken",
+        scale: 1 / 2 ** 6,
+        rotateToNorth: -Math.PI / 2,
+        moveSpeed: 1.5,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "Chicken",
+        text: "Blonde chick. Not yet fried."
+    },
+    /** */
     Spider: {
         name: "Spider",
         category: "interaction_item",
@@ -2593,6 +2645,12 @@ const MOVABLE_INTERACTION_OBJECT = {
 };
 
 const INTERACTION_ITEM = {
+    Chicken: {
+        name: "Chicken",
+        category: "interaction_item",
+        inventorySprite: "Chicken",
+        text: "Blonde chick. Not yet fried."
+    },
     Fly: {
         name: "Fly",
         category: "interaction_item",
@@ -3254,6 +3312,20 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    BlondeChick: {
+        name: "BlondeChick",
+        sprite: "BlondeChick",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Chicken", "Chicken", "Chicken", "Chicken", "Chicken"],
+        gives: "Egg",
+        text: {
+            intro: "My poor little chicks, lost and alone! Bring them back to me, all five, and I'll give you a special gift.",
+            progress: "A chick returned! But there are more still out there, waiting for a safe return.",
+            conclusion: "My flock is whole again! As promised, here's an egg, a little one who hasn't hatched yet. Take good care of it!"
+        }
+    },
+
     ApparitiaDomme: {
         name: "ApparitiaDomme",
         sprite: "ApparitiaDomme",
@@ -3266,7 +3338,7 @@ const INTERACTION_ENTITY = {
             progress: "One step closer to a daring new look! Keep going; I won't cross over until I'm fully dressed.",
             conclusion: "Ah, finally! Now I'm as fierce as the Three Dommes. As promised, here's a brush to keep those boots shining. Consider me on your side now."
         }
-    },    
+    },
     PizzaMaker: {
         name: "PizzaMaker",
         sprite: "PizzaMaker",
