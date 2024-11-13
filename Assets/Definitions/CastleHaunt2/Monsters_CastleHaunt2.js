@@ -3322,6 +3322,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "Cheese",
         text: "Full of holes. Hole-y. Got it?"
     },
+    Mouse: {
+        name: "Mouse",
+        category: "interaction_item",
+        inventorySprite: "Mouse",
+        text: "Cute little mose. Someone will want to eat it."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -4432,6 +4438,19 @@ const INTERACTION_SHRINE = {
             intro: "Meeow. Hungry. Chicken, yes. Fried.",
             progress: null,
             conclusion: "Princess. Magic. Strong."
+        }
+    },
+    LastCat: {
+        name: "LastCat",
+        sprite: "LastCat",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Mouse"],
+        gives: "Magic",
+        text: {
+            intro: "Get me some focking mouse, you brat.",
+            progress: null,
+            conclusion: "Just purr. And everybody will be your slave."
         }
     },
 };

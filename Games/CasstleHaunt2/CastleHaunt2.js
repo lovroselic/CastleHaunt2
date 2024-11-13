@@ -73,9 +73,9 @@ const DEBUG = {
             DONE * "GoldOre" <-- Miners
         * "PickAxe"
             DONE* "Pizza" <--PizzaMAker
-        * "Egg", 
-        * "Milk"
-        * "Brush"
+            DONE * "Egg", 
+            DONE * "Milk"
+            DONE * "Brush"
             DONE * "RedLeatherTop",  <-- 77
             DONE * "RedLeatherLeggings", <-- 77
             DONE * "RedLeatherBoots"<-- 77
@@ -84,9 +84,9 @@ const DEBUG = {
         "Chicken", 
         "Chicken",
         "Chicken",
-        "Chicken","
-            "Chicken" <-- 78
-            "Cat", <-- 79
+            DONE "Chicken" <-- CatMama
+            DONE "Chicken" <-- 78
+            DONE "Cat", <-- 79
         "Cat", 
         "Cat", 
         "Cat", 
@@ -94,6 +94,7 @@ const DEBUG = {
         "Rat"
         "Cheese",
         "Fish"
+        "Mouse"
   
 
         * coins sources (1x, missing -2):
@@ -105,10 +106,7 @@ const DEBUG = {
             * BLondeKnight  
             * DArk Priestess
             * RUberella
-        * Brush for the three Dommes, one brush three trainers
-            * brush will be in the hidden room down from 3Dommes - maze, with 1 entity and leather outfits   
-        * CatBabeMagic: Rat-> magic
-        * CatBabeAttack: cheese --> attack
+
         
         * key not yet used:
             
@@ -124,7 +122,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 79;
+        GAME.level = 68;
 
         GAME.gold = 4444;
         GAME.lives = 3;
@@ -178,6 +176,7 @@ const DEBUG = {
         let invItems = [
 
             //debug
+            "Mouse"
             //"LittleChicken",
             //"Fish",
             //"Cat", "Cat", "Cat", "Cat", "Cat",
@@ -238,7 +237,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.23",
+    VERSION: "0.13.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

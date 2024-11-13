@@ -196,8 +196,28 @@ const DECAL_PAINTINGS = [
     "UnusedEntities2071", "UnusedEntities2072", "UnusedEntities2073", "UnusedEntities2074", "UnusedEntities2075", "UnusedEntities2076", "UnusedEntities2077", "UnusedEntities2078", "UnusedEntities2079", "UnusedEntities2080",
     "UnusedEntities2081", "UnusedEntities2082", "UnusedEntities2083", "UnusedEntities2084", "UnusedEntities2085", "UnusedEntities2086", "UnusedEntities2087", "UnusedEntities2088", "UnusedEntities2089", "UnusedEntities2090",
     "UnusedEntities2091", "UnusedEntities2092", "UnusedEntities2093", "UnusedEntities2094", "UnusedEntities2095", "UnusedEntities2096", "UnusedEntities2097", "UnusedEntities2098", "UnusedEntities2099", "UnusedEntities2100",
-    "UnusedEntities2101", "UnusedEntities2102"
+    "UnusedEntities2101", "UnusedEntities2102",
+    "FluxDommes4001", "FluxDommes4002", "FluxDommes4003", "FluxDommes4004", "FluxDommes4005", "FluxDommes4006", "FluxDommes4007", "FluxDommes4008", "FluxDommes4009", "FluxDommes4010", "FluxDommes4011", "FluxDommes4012",
+    "FluxDommes4013", "FluxDommes4014", "FluxDommes4015", "FluxDommes4016", "FluxDommes4017", "FluxDommes4018", "FluxDommes4019", "FluxDommes4020", "FluxDommes4021", "FluxDommes4022", "FluxDommes4023", "FluxDommes4024",
+    "FluxDommes4025", "FluxDommes4026", "FluxDommes4027", "FluxDommes4028", "FluxDommes4029", "FluxDommes4030", "FluxDommes4031", "FluxDommes4032", "FluxDommes4033", "FluxDommes4034", "FluxDommes4035", "FluxDommes4036",
+    "FluxDommes4037", "FluxDommes4038", "FluxDommes4039", "FluxDommes4040", "FluxDommes4041", "FluxDommes4042", "FluxDommes4043", "FluxDommes4044", "FluxDommes4045", "FluxDommes4046", "FluxDommes4047", "FluxDommes4048",
+    "FluxDommes4049", "FluxDommes4050", "FluxDommes4051", "FluxDommes4052", "FluxDommes4053", "UnusedEntities5001", "UnusedEntities5002", "UnusedEntities5003", "UnusedEntities5004", "UnusedEntities5005", "UnusedEntities5006",
+    "UnusedEntities5007", "UnusedEntities5008", "UnusedEntities5009", "UnusedEntities5010", "UnusedEntities5011", "UnusedEntities5012", "UnusedEntities5013", "UnusedEntities5014", "UnusedEntities5015", "UnusedEntities5016",
+    "UnusedEntities5017", "UnusedEntities5018", "UnusedEntities5019", "UnusedEntities5020", "UnusedEntities5021", "UnusedEntities5022", "UnusedEntities5023", "UnusedEntities5024", "UnusedEntities5025", "UnusedEntities5026",
+    "UnusedEntities5027", "UnusedEntities5028", "UnusedEntities5029", "UnusedEntities5030", "UnusedEntities5031", "UnusedEntities5032", "UnusedEntities5033", "UnusedEntities5034", "UnusedEntities5035", "UnusedEntities5036",
+    "UnusedEntities5037", "UnusedEntities5038", "UnusedEntities5039", "UnusedEntities5040", "UnusedEntities5041", "UnusedEntities5042", "UnusedEntities5043", "UnusedEntities5044", "UnusedEntities5045", "UnusedEntities5046",
+    "UnusedEntities5047", "UnusedEntities5048", "UnusedEntities5049", "UnusedEntities5050", "UnusedEntities5051", "UnusedEntities5052", "UnusedEntities5053", "UnusedEntities5054", "UnusedEntities5055", "UnusedEntities5056",
+    "UnusedEntities5057", "UnusedEntities5058", "UnusedEntities5059", "UnusedEntities5060", "UnusedEntities5061", "UnusedEntities5062", "UnusedEntities5063", "UnusedEntities5064", "UnusedEntities5065", "UnusedEntities5066",
+    "UnusedEntities5067", "UnusedEntities5068", "UnusedEntities5069", "UnusedEntities5070", "UnusedEntities5071", "UnusedEntities5072", "UnusedEntities5073", "UnusedEntities5074", "UnusedEntities5075", "UnusedEntities5076",
+    "UnusedEntities5077", "UnusedEntities5078", "UnusedEntities5079", "UnusedEntities5080", "UnusedEntities5081", "UnusedEntities5082", "UnusedEntities5083", "UnusedEntities5084", "UnusedEntities5085", "UnusedEntities5086",
+    "UnusedEntities5087", "UnusedEntities5088", "UnusedEntities5089", "UnusedEntities5090", "UnusedEntities5091", "UnusedEntities5092", "UnusedEntities5093", "UnusedEntities5094", "UnusedEntities5095", "UnusedEntities5096",
+    "UnusedEntities5097", "UnusedEntities5098", "UnusedEntities5099", "UnusedEntities5100", "UnusedEntities5101", "UnusedEntities5102", "UnusedEntities5103", "UnusedEntities5104", "UnusedEntities5105", "UnusedEntities5106",
+    "UnusedEntities5107", "UnusedEntities5108", "UnusedEntities5109", "UnusedEntities5110", "UnusedEntities5111", "UnusedEntities5112", "UnusedEntities5113", "UnusedEntities5114", "UnusedEntities5115", "UnusedEntities5116",
+    "UnusedEntities5117", "UnusedEntities5118", "UnusedEntities5119", "UnusedEntities5120", "UnusedEntities5121", "UnusedEntities5122", "UnusedEntities5123", "UnusedEntities5124", "UnusedEntities5125", "UnusedEntities5126",
+    "UnusedEntities5127", "UnusedEntities5128", "UnusedEntities5129", "UnusedEntities5130", "UnusedEntities5131", "UnusedEntities5132", "UnusedEntities5133", "UnusedEntities5134", "UnusedEntities5135", "UnusedEntities5136",
+    "UnusedEntities5137"
 ].sort();
+
 
 
 /** Crests */

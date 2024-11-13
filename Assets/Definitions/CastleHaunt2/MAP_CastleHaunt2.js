@@ -87,7 +87,8 @@ const MAP_TEXT = {
     75: "",
     76: "The Three Dommes. I should treat the with respect to keep their alliance.",
     77: "THe Fourth Domme wannabe. Maybe I can get her to work for me.",
-    78: "Everybody say moo."
+    78: "Everybody say moo.",
+    79: "Smells like pussy."
 };
 
 /** Map definitions */
@@ -1836,11 +1837,12 @@ const MAP = {
         floor: "MarbleFloor105",
         ceil: "RockWall_SDXL_018",
         start: '[31,7]',
+        decals: '[[241,1,"UnusedEntities5020","picture"]]',
         lights: '[[136,1,"Lamp45","standard"],[241,7,"FluxLight107","standard"],[424,1,"Fireplace201","fire"],[436,1,"Fireplace210","fire"],[152,1,"DuaLLantern_024","weakCandle"],[162,1,"FluxLight101","weakCandle"],[196,3,"Lamp53","weakCandle"],[202,5,"DuaLLantern_017","weakCandle"]]',
-        gates: '[[10,7,"70.1","68.11","Closed"]]',
+        gates: '[[10,7,"79.1","68.11","Closed"]]',
         entities: '[[430,1,"CatQueen"]]',
         oracles: '[[7,7,"CatBabe1"],[13,7,"CatBabe2"],[3,7,"CatBabe4"],[17,7,"CatBabe3"],[63,5,"CatBabe5"],[167,3,"ApparitiaCat"]]',
         movables: '[[178,"Cat"]]',
-        trainers: '[[83,3,"CatBabeMagic"],[356,3,"CatBabeAttack"],[336,5,"CatBabeHealth"],[251,3,"CatBabeMagicChicken"]]',
+        trainers: '[[83,3,"CatBabeMagic"],[356,3,"CatBabeAttack"],[336,5,"CatBabeHealth"],[251,3,"CatBabeMagicChicken"],[231,5,"LastCat"]]',
         }
 };
