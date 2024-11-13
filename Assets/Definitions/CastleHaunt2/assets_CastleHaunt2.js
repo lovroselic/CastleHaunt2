@@ -934,7 +934,7 @@ LoadObjects = [
 
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
-    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf"
+    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf"
 ];
 
 LoadSprites = [
@@ -980,6 +980,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaTemple.jpg", name: "ApparitiaTemple" },
     { srcName: "EntityPictures/ApparitiaMiner.jpg", name: "ApparitiaMiner" },
     { srcName: "EntityPictures/ApparitiaSuspicious.jpg", name: "ApparitiaSuspicious" },
+    { srcName: "EntityPictures/ApparitiaCat.jpg", name: "ApparitiaCat" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1122,12 +1123,17 @@ LoadSprites = [
     { srcName: "EntityPictures/Cow3.jpg", name: "Cow" },
     { srcName: "EntityPictures/Cow4.jpg", name: "CowOracle" },
     { srcName: "EntityPictures/BlondeChick.jpg", name: "BlondeChick" },
+    { srcName: "EntityPictures/CatQueen.jpg", name: "CatQueen" },
 
     { srcName: "EntityPictures/CatBabe1.jpg", name: "CatBabe1" },
     { srcName: "EntityPictures/CatBabe2.jpg", name: "CatBabe2" },
     { srcName: "EntityPictures/CatBabe3.jpg", name: "CatBabe3" },
     { srcName: "EntityPictures/CatBabe4.jpg", name: "CatBabe4" },
     { srcName: "EntityPictures/CatBabe5.jpg", name: "CatBabe5" },
+    { srcName: "EntityPictures/CatBabe6.jpg", name: "CatBabeMagic" },
+    { srcName: "EntityPictures/CatBabe7.jpg", name: "CatBabeAttack" },
+    { srcName: "EntityPictures/CatBabe8.jpg", name: "CatBabeHealth" },
+    { srcName: "EntityPictures/CatBabe9.jpg", name: "CatBabeMagicChicken" },
 
 
     //action movables
@@ -1364,6 +1370,7 @@ LoadSprites = [
     { srcName: "Items/RedLeatherLeggings.png", name: "RedLeatherLeggings" },
     { srcName: "Items/RedLeatherTop.png", name: "RedLeatherTop" },
     { srcName: "Items/Chicken.png", name: "Chicken" },
+    { srcName: "Items/Cheese2.png", name: "Cheese" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

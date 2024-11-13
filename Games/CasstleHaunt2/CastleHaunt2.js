@@ -58,6 +58,7 @@ const DEBUG = {
             DONE PizzaMaker - "Milk", "Egg", -->Pizza
             DONE Cow "HayBale",HayBale --> Milk
             DONE BlondeChick: "Chicken", "Chicken","Chicken","Chicken","Chicken" --> Egg
+            DONE CatMama "Cat", "Cat", "Cat", "Cat", "Cat" --> "Chicken"
          * 
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
@@ -84,7 +85,15 @@ const DEBUG = {
         "Chicken",
         "Chicken",
         "Chicken","
-        Chicken"
+            "Chicken" <-- 78
+            "Cat", <-- 79
+        "Cat", 
+        "Cat", 
+        "Cat", 
+        "Cat"
+        "Rat"
+        "Cheese",
+        "Fish"
   
 
         * coins sources (1x, missing -2):
@@ -98,7 +107,8 @@ const DEBUG = {
             * RUberella
         * Brush for the three Dommes, one brush three trainers
             * brush will be in the hidden room down from 3Dommes - maze, with 1 entity and leather outfits   
-     
+        * CatBabeMagic: Rat-> magic
+        * CatBabeAttack: cheese --> attack
         
         * key not yet used:
             
@@ -168,6 +178,11 @@ const DEBUG = {
         let invItems = [
 
             //debug
+            //"LittleChicken",
+            //"Fish",
+            //"Cat", "Cat", "Cat", "Cat", "Cat",
+            //"Rat",
+            //"Cheese",
             //"Chicken", "Chicken","Chicken","Chicken","Chicken",
             //"HayBale", "HayBale"
             //"Brush",
@@ -181,7 +196,7 @@ const DEBUG = {
             //"Milk", "Egg",
             //"GoldCoin"
             //"RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"
-            
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -223,7 +238,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.12.22",
+    VERSION: "0.12.23",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

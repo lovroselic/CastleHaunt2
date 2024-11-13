@@ -1047,6 +1047,14 @@ const ORACLE_TYPE = {
         text: "Report all traitorous Apparitias to her majesty Hauntessa Spookish. Oh, it's you. The murderer. We're on to you. Just wait.",
         interactionCategory: "oracle",
     },
+    ApparitiaCat: {
+        name: "ApparitiaCat",
+        sprite: "ApparitiaCat",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am under cover. Nobody recognizes me. Hahaha. How smart spy I am.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2590,6 +2598,18 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "Chicken",
         text: "Blonde chick. Not yet fried."
     },
+    Cat: {
+        name: "Cat",
+        category: "interaction_item",
+        model: "Cat",
+        scale: 1.8 / 2 ** 8,
+        rotateToNorth: Math.PI,
+        moveSpeed: 1.75,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "Cat",
+        text: "Here, kitty kitty kitty!"
+    },
     /** */
     Spider: {
         name: "Spider",
@@ -2616,18 +2636,6 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "BabyGreenSpider",
         text: "Eight hairy legs? Creepy spider."
     },
-    Cat: {
-        name: "Cat",
-        category: "interaction_item",
-        model: "Cat",
-        scale: 1.8 / 2 ** 8,
-        rotateToNorth: Math.PI,
-        moveSpeed: 1.75,
-        material: MATERIAL.standard,
-        behaviourArguments: [Infinity, ["wanderer"], -1],
-        inventorySprite: "Cat",
-        text: "Here, kitty kitty kitty!"
-    },
     BabyDragon: {
         name: "BabyDragon",
         category: "interaction_item",
@@ -2641,7 +2649,6 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "BabyDragon",
         text: "Come to mamma."
     },
-
 };
 
 const INTERACTION_ITEM = {
@@ -3309,9 +3316,28 @@ const INTERACTION_ITEM = {
         inventorySprite: "RedLeatherTop",
         text: "Red leather top. Whoever wears this will have followers."
     },
+    Cheese: {
+        name: "Cheese",
+        category: "interaction_item",
+        inventorySprite: "Cheese",
+        text: "Full of holes. Hole-y. Got it?"
+    },
 };
 
 const INTERACTION_ENTITY = {
+    CatQueen: {
+        name: "CatQueen",
+        sprite: "CatQueen",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Cat", "Cat", "Cat", "Cat", "Cat"],
+        gives: "Chicken",
+        text: {
+            intro: "My little kitties have wandered off! Bring them back, all five, and I'll share a chicken I was just about to fry.",
+            progress: "One kitty found, but my brood is still scattered. Keep searching, dear!",
+            conclusion: "All my kitties are safely home! As promised, here's that chicken, still alive, and just waiting to be cooked!"
+        }
+    },
     BlondeChick: {
         name: "BlondeChick",
         sprite: "BlondeChick",
@@ -4356,7 +4382,58 @@ const INTERACTION_SHRINE = {
             conclusion: "Your service is accepted. As a reward I increased your fighting skills."
         }
     },
-
+    CatBabeMagic: {
+        name: "CatBabeMagic",
+        sprite: "CatBabeMagic",
+        category: 'crest',
+        voice: "StrangeFemale",
+        wants: ["Rat"],
+        gives: "Magic",
+        text: {
+            intro: "Meeow. Hungry. Rat. Now. Magic.",
+            progress: null,
+            conclusion: "Princess. Magic. Best."
+        }
+    },
+    CatBabeAttack: {
+        name: "CatBabeAttack",
+        sprite: "CatBabeAttack",
+        category: 'crest',
+        voice: "StrangeFemale",
+        wants: ["Cheese"],
+        gives: "Attack",
+        text: {
+            intro: "Meeow. Cheese. Mouse trap. Help.",
+            progress: null,
+            conclusion: "Princess. Fights. Best."
+        }
+    },
+    CatBabeHealth: {
+        name: "CatBabeHealth",
+        sprite: "CatBabeHealth",
+        category: 'crest',
+        voice: "StrangeFemale",
+        wants: ["Fish"],
+        gives: "HeartSkill",
+        text: {
+            intro: "Meeow. Fish. Health. Good.",
+            progress: null,
+            conclusion: "Princess. Healthy."
+        }
+    },
+    CatBabeMagicChicken: {
+        name: "CatBabeMagicChicken",
+        sprite: "CatBabeMagicChicken",
+        category: 'crest',
+        voice: "StrangeFemale",
+        wants: ["LittleChicken"],
+        gives: "Magic",
+        text: {
+            intro: "Meeow. Hungry. Chicken, yes. Fried.",
+            progress: null,
+            conclusion: "Princess. Magic. Strong."
+        }
+    },
 };
 
 const INTERACTOR = {
