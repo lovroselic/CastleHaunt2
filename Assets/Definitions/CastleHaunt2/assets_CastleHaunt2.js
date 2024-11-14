@@ -816,8 +816,8 @@ LoadTextures = [
     { srcName: "ObjectTextures/SteakTexture.jpg", name: "Steak_Texture" },
     { srcName: "ObjectTextures/Green_Apple_Basecolor.jpg", name: "Green_Apple_Basecolor" },
     { srcName: "ObjectTextures/CanTexture.jpg", name: "CanTexture" },
-
     { srcName: "ObjectTextures/TheInvisiblePrincess.png", name: "TheInvisiblePrincess" },
+    { srcName: "ObjectTextures/Fish.jpg", name: "FishTexture" },
 
     /** not yet used object textures*/
     { srcName: "ObjectTextures/AstroRed.jpg", name: "AstroRed" },
@@ -929,7 +929,7 @@ LoadObjects = [
     "pear.obj", "blockwall.obj",
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
     "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj",
-    "banana.obj", "steak.obj", "green apple.obj", "can.obj"
+    "banana.obj", "steak.obj", "green apple.obj", "can.obj", "fish.obj"
 ];
 
 LoadModels = [
@@ -1124,7 +1124,6 @@ LoadSprites = [
     { srcName: "EntityPictures/Cow4.jpg", name: "CowOracle" },
     { srcName: "EntityPictures/BlondeChick.jpg", name: "BlondeChick" },
     { srcName: "EntityPictures/CatQueen.jpg", name: "CatQueen" },
-
     { srcName: "EntityPictures/CatBabe1.jpg", name: "CatBabe1" },
     { srcName: "EntityPictures/CatBabe2.jpg", name: "CatBabe2" },
     { srcName: "EntityPictures/CatBabe3.jpg", name: "CatBabe3" },
@@ -1135,6 +1134,7 @@ LoadSprites = [
     { srcName: "EntityPictures/CatBabe8.jpg", name: "CatBabeHealth" },
     { srcName: "EntityPictures/CatBabe9.jpg", name: "CatBabeMagicChicken" },
     { srcName: "EntityPictures/LastCat.jpg", name: "LastCat" },
+    { srcName: "EntityPictures/Dominatrix2.jpg", name: "DominatrixBarn" },
 
 
     //action movables
@@ -1373,6 +1373,7 @@ LoadSprites = [
     { srcName: "Items/Chicken.png", name: "Chicken" },
     { srcName: "Items/Cheese2.png", name: "Cheese" },
     { srcName: "Items/Mouse2.png", name: "Mouse" },
+    { srcName: "Items/TropicalFish.png", name: "TropicalFish" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

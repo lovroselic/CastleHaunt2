@@ -212,6 +212,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    DominatrixBarn: {
+        name: "DominatrixBarn",
+        sprite: "DominatrixBarn",
+        category: 'crest',
+        voice: "Female",
+        text: "Never underestimate the power of the farm animals. Watch your back. Even now.",
+        interactionCategory: "oracle",
+    },
     CatBabe5: {
         name: "CatBabe5",
         sprite: "CatBabe5",
@@ -1720,6 +1728,44 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    GreatChick: {
+        name: "GreatChick",
+        model: "Chicken",
+        scale: 1 / 2 ** 5,
+        rotateToNorth: -Math.PI / 2,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 10,
+        attack: 100,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "PainSqueek",
+        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
+        moveSpeed: 1.2,
+        material: MATERIAL.standard,
+    },
+    GreatCat: {
+        name: "GreatCat",
+        model: "Cat",
+        scale: 1.7 / 2 ** 7,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 8,
+        attack: 75,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "AngryCat",
+        hurtSound: "PainSqueek",
+        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
+        moveSpeed: 1.2,
+        material: MATERIAL.standard,
+    },
 
     /** */
 
@@ -1789,46 +1835,7 @@ const MONSTER_TYPE = {
     },
 
 
-    GreatChick: {
-        name: "GreatChick",
-        model: "Chicken",
-        scale: 1 / 2 ** 5,
-        rotateToNorth: -Math.PI / 2,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 50,
-        defense: 0,
-        magic: 0,
-        health: 50,
-        xp: 25,
-        gold: 1,
-        attackSound: "MonsterAttack1",
-        hurtSound: "PainSqueek",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 1.2,
-        material: MATERIAL.standard,
-    },
-    GreatCat: {
-        name: "GreatCat",
-        model: "Cat",
-        scale: 1.7 / 2 ** 7,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 60,
-        defense: 0,
-        magic: 0,
-        health: 60,
-        xp: 30,
-        gold: 1,
-        attackSound: "AngryCat",
-        hurtSound: "PainSqueek",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 1.2,
-        material: MATERIAL.standard,
-    },
+    
 
     RedSkeleton: {
         name: "RedSkeleton",
@@ -2533,6 +2540,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         inventorySprite: "SmallBarrel",
         text: "Such a small barrel. Not a lot of drink."
+    },
+    TropicalFish: {
+        name: "TropicalFish",
+        category: "interaction_item",
+        element: "FISH",
+        scale: 1.5 / 2 ** 4,
+        glueToFloor: true,
+        texture: "FishTexture",
+        material: MATERIAL.standard,
+        inventorySprite: "TropicalFish",
+        text: "XXX"
     },
 };
 
@@ -4419,7 +4437,7 @@ const INTERACTION_SHRINE = {
         sprite: "CatBabeHealth",
         category: 'crest',
         voice: "StrangeFemale",
-        wants: ["Fish"],
+        wants: ["TropicalFish"],
         gives: "HeartSkill",
         text: {
             intro: "Meeow. Fish. Health. Good.",

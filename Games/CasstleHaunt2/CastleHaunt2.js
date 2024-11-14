@@ -63,10 +63,10 @@ const DEBUG = {
          * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
             DONE * "SmallBarrel" --> 73
-         * "SmallBarrel"
-            * "GlassOfBeer" ---> BeerBarrelGirl
+            DONE* "SmallBarrel" --> 80
+            DONE * "GlassOfBeer" ---> BeerBarrelGirl
             DONE * "GoldBar", <--75
-        * "GoldBar", 
+            DONE * "GoldBar", --> 80
         * "GoldBar"
             DONE* "GoldOre", <--Miner1
             DONE * "GoldOre", <-- Miner2
@@ -79,25 +79,25 @@ const DEBUG = {
             DONE * "RedLeatherTop",  <-- 77
             DONE * "RedLeatherLeggings", <-- 77
             DONE * "RedLeatherBoots"<-- 77
-        "HayBale"
+            DONE "HayBale" <-- 78
         "HayBale"
         "Chicken", 
-        "Chicken",
-        "Chicken",
+            DONE "Chicken",<-- 73
+            DONE "Chicken", <-- 68
             DONE "Chicken" <-- CatMama
             DONE "Chicken" <-- 78
             DONE "Cat", <-- 79
-        "Cat", 
-        "Cat", 
-        "Cat", 
-        "Cat"
+            DONE "Cat", <-- 68
+            DONE "Cat", <-- 78
+            DONE "Cat", <-- 73
+            DONE "Cat" --> 80
         "Rat"
-        "Cheese",
-        "Fish"
+            DONE "Cheese", <-- 73
+            DONE "TropicalFish" <-- 80
         "Mouse"
   
 
-        * coins sources (1x, missing -2):
+        * coins sources (1x, missing 2x):
             * ApparitiaCorruption
  
 
@@ -111,7 +111,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            * Blue
+            * 
             * 
          * missing sources for: 
             * 
@@ -122,9 +122,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 68;
+        GAME.level = 80;
 
-        GAME.gold = 4444;
+        GAME.gold = 5087;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -136,7 +136,7 @@ const DEBUG = {
         HERO.magic = 24;
         HERO.attack = 22;
 
-        HERO.health = 139;
+        HERO.health = 102;
         HERO.maxHealth = 168;
 
 
@@ -175,8 +175,10 @@ const DEBUG = {
 
         let invItems = [
 
+            "Chicken","Cat",  "SmallBarrel",
+
             //debug
-            "Mouse"
+            //"Mouse"
             //"LittleChicken",
             //"Fish",
             //"Cat", "Cat", "Cat", "Cat", "Cat",
@@ -237,7 +239,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.00",
+    VERSION: "0.13.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
