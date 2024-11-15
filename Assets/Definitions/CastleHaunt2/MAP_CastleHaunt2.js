@@ -1672,7 +1672,7 @@ const MAP = {
         doors: '[82]',
     }
     ,
-    71: {
+    71 : {
         name: "The Long Temple",
         sg: 0,
         maxSpawned: 2,
@@ -1685,12 +1685,16 @@ const MAP = {
         start: '[148,5]',
         lights: '[[112,3,"FluxLight111","standard"],[196,3,"DuaLLantern_024","standard"],[5,7,"Lamp53","standard"],[299,1,"DuaLLantern_011","standard"]]',
         gates: '[[147,5,"71.1","68.6","Up"],[167,3,"71.2","73.1","Down"]]',
+        gold: '[[82,"GoldBar"],[244,"GoldBar"],[250,"GoldBar"]]',
+        containers: '[[228,"Crate","INTERACTION_ITEM.Sponge",7],[239,"Wardrobe","INTERACTION_ITEM.HayBale",7],[25,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[266,"IronChest","GOLD_ITEM_TYPE.GoldBar",1],[98,"Barrel","GOLD_ITEM_TYPE.GoldBar",5]]',
         shrines: '[[156,3,"PrincessDesertHeart"],[16,7,"PrincessDesertDagger"],[310,1,"PrincessDesertFire"]]',
         entities: '[[252,5,"ApparitiaCorruption"]]',
+        objects: '[[76,"GoldBar"]]',
         oracles: '[[42,5,"ApparitiaTemple"]]',
+        movables: '[[159,"Chicken"]]',
         lairs: '[[135,5,"Lair28"],[177,5,"Lair16"]]',
-        monsterList: '["MissWhite"]',
-    }
+        monsterList: '["MissWhite","MissWhite","MissGreen"]',
+        }
     ,
     72: {
         name: "Hall of Master Mistresses",

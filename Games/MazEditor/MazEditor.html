@@ -125,24 +125,36 @@
                         </fieldset>
                         <fieldset>
                             <legend>Shrines</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchShrines" class="w-75" placeholder="Search shrines ...">
+                            </div>
                             <div class="d-flex justify-content-center">
                                 <select id="shrine_type"> </select>
                             </div>
                         </fieldset>
                         <fieldset>
                             <legend>Trainers</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchTrainer" class="w-75" placeholder="Search trainers ...">
+                            </div>
                             <div class="d-flex justify-content-center">
                                 <select id="item_shrine_type"> </select>
                             </div>
                         </fieldset>
                         <fieldset>
                             <legend>Oracles</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchOracle" class="w-75" placeholder="Search oracles ...">
+                            </div>
                             <div class="d-flex justify-content-center">
                                 <select id="oracle_type"> </select>
                             </div>
                         </fieldset>
                         <fieldset>
                             <legend>Interaction objects</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchIO" class="w-75" placeholder="Search interaction objects ...">
+                            </div>
                             <div class="d-flex justify-content-center">
                                 <select id="interaction_object_type"> </select>
                             </div>
@@ -152,6 +164,9 @@
                         </fieldset>
                         <fieldset>
                             <legend>Movable interaction entity</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchMIE" class="w-75" placeholder="Search mie ...">
+                            </div>
                             <div class="d-flex justify-content-center">
                                 <select id="movable_type"> </select>
                             </div>
@@ -161,6 +176,9 @@
                         </fieldset>
                         <fieldset>
                             <legend>Interactors</legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchInteractors" class="w-75" placeholder="Search interactors ...">
+                            </div>
                             <div class="d-flex justify-content-center my-2">
                                 <select id="interactor_type"> </select>
                             </div>
@@ -243,6 +261,9 @@
                                 Lights
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchLights" class="w-75" placeholder="Search lights ...">
+                                </div>
                                 <input type="button" id="randlight" value="Random" />
                                 <div class="d-flex justify-content-center">
                                     <select id="light_decal"> </select>
@@ -268,6 +289,10 @@
                                 Monsters
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchMonster" class="w-75" placeholder="Search monster ...">
+                                </div>
+
                                 <div class="d-flex justify-content-center">
                                     <input type="button" id="add_monster_list" value="Add to list" />
                                     <input type="button" id="clear_list" value="Clear list" class="red_button" />
@@ -293,6 +318,10 @@
                                 Entities
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchEntity" class="w-75" placeholder="Search entities ...">
+                                </div>
+
                                 <div class="d-flex justify-content-center">
                                     <select id="entity_type"> </select>
                                 </div>
@@ -306,6 +335,10 @@
                             <legend>Wall Pictures
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchPics" class="w-75" placeholder="Search pics ...">
+                                </div>
+
                                 <input type="radio" name="decalusage" value="picture" checked="checked"> Use pictures
                                 <input type="button" id="randpic" value="Random" />
                                 <br />
@@ -321,6 +354,10 @@
                             <legend>Crests
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchDecals" class="w-75" placeholder="Search decals ...">
+                                </div>
+
                                 <input type="radio" name="decalusage" value="crest"> Use crests
                                 <input type="button" id="randcrest" value="Random" />
                                 <br />
@@ -332,10 +369,16 @@
                                 </div>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>Textures
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchDecalTexture" class="w-75"
+                                        placeholder="Search textures ...">
+                                </div>
+
                                 <input type="radio" name="decalusage" value="texture"> Use texture
 
                                 <br />
@@ -347,6 +390,7 @@
                                 </div>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>
                                 Trigger & trap decals
@@ -360,6 +404,7 @@
                                 <canvas id="triggercanvas" width="48" height="48"></canvas>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>Scroll</legend>
                             <div class="d-flex justify-content-center">
@@ -369,6 +414,7 @@
                                 <canvas id="scrollcanvas" width="48" height="48"></canvas>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>
                                 Potions
@@ -380,6 +426,7 @@
                                 </div>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>
                                 Gold
@@ -390,6 +437,7 @@
                                 </div>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>
                                 Skill
@@ -400,6 +448,7 @@
                                 </div>
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>
                                 Container
@@ -408,15 +457,23 @@
                                 <div class="d-flex justify-content-center">
                                     <p>Container type: <select id="container_type"> </select></p>
                                 </div>
-                                <div class="d-flex justify-content-center">
-                                    <p>Contained item: <select id="content_type"> </select></p>
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchItems" class="w-75" placeholder="Search items ...">
                                 </div>
+
+                                <div class="d-flex justify-content-center align-items-center my-3">
+                                    <label for="content_type" class="text-center me-2">Contained item:
+                                        <select id="content_type"> </select>
+                                    </label>
+                                </div>
+
                                 Orientation:<br />
                                 <input type="radio" name="orientation" value="FIXED" checked="checked"> FIXED <br />
                                 <input type="radio" name="orientation" value="RANDOM"> RANDOM <br />
-
                             </div>
                         </fieldset>
+
                         <fieldset>
                             <legend>Lair
                             </legend>
@@ -445,6 +502,9 @@
                             <legend>
                                 Wall Texture
                             </legend>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="text" id="searchWall" class="w-75" placeholder="Search wall textures ...">
+                            </div>
                             <div>
                                 <input type="button" id="randwall" value="Random" />
                                 <div class="d-flex justify-content-center">
@@ -467,6 +527,9 @@
                                 Floor Texture
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchFloor" class="w-75" placeholder="Search floor textures ...">
+                                </div>
                                 <input type="button" id="randfloor" value="Random" />
                                 <div class="d-flex justify-content-center">
                                     <select id="floortexture"> </select>
@@ -488,6 +551,9 @@
                                 Ceiling Texture
                             </legend>
                             <div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="text" id="searchCeil" class="w-75" placeholder="Search ceiling textures ...">
+                                </div>
                                 <input type="button" id="randceil" value="Random" />
                                 <div class="d-flex justify-content-center">
                                     <select id="ceiltexture"> </select>
@@ -511,7 +577,7 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            71: {
+                            71 : {
                                 name: "The Long Temple",
                                 sg: 0,
                                 maxSpawned: 2,
@@ -524,12 +590,16 @@
                                 start: '[148,5]',
                                 lights: '[[112,3,"FluxLight111","standard"],[196,3,"DuaLLantern_024","standard"],[5,7,"Lamp53","standard"],[299,1,"DuaLLantern_011","standard"]]',
                                 gates: '[[147,5,"71.1","68.6","Up"],[167,3,"71.2","73.1","Down"]]',
+                                gold: '[[82,"GoldBar"],[244,"GoldBar"],[250,"GoldBar"]]',
+                                containers: '[[228,"Crate","INTERACTION_ITEM.Sponge",7],[239,"Wardrobe","INTERACTION_ITEM.HayBale",7],[25,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[266,"IronChest","GOLD_ITEM_TYPE.GoldBar",1],[98,"Barrel","GOLD_ITEM_TYPE.GoldBar",5]]',
                                 shrines: '[[156,3,"PrincessDesertHeart"],[16,7,"PrincessDesertDagger"],[310,1,"PrincessDesertFire"]]',
                                 entities: '[[252,5,"ApparitiaCorruption"]]',
+                                objects: '[[76,"GoldBar"]]',
                                 oracles: '[[42,5,"ApparitiaTemple"]]',
+                                movables: '[[159,"Chicken"]]',
                                 lairs: '[[135,5,"Lair28"],[177,5,"Lair16"]]',
-                                monsterList: '["MissWhite"]',
-                            }
+                                monsterList: '["MissWhite","MissWhite","MissGreen"]',
+                                }
                         </textarea>
                     </fieldset>
                 </div>

@@ -67,7 +67,7 @@ const DEBUG = {
             DONE * "GlassOfBeer" ---> BeerBarrelGirl
             DONE * "GoldBar", <--75
             DONE * "GoldBar", --> 80
-        * "GoldBar"
+            DONE * "GoldBar" <-- 71
             DONE* "GoldOre", <--Miner1
             DONE * "GoldOre", <-- Miner2
             DONE * "GoldOre" <-- Miners
@@ -81,7 +81,7 @@ const DEBUG = {
             DONE * "RedLeatherBoots"<-- 77
             DONE "HayBale" <-- 78
         "HayBale"
-        "Chicken", 
+            DONE "Chicken", <-- 71
             DONE "Chicken",<-- 73
             DONE "Chicken", <-- 68
             DONE "Chicken" <-- CatMama
@@ -91,12 +91,12 @@ const DEBUG = {
             DONE "Cat", <-- 78
             DONE "Cat", <-- 73
             DONE "Cat" --> 80
-        "Rat"
+            DONE "Rat" <-- 78
             DONE "Cheese", <-- 73
             DONE "TropicalFish" <-- 80
         "Mouse"
         "RubberDuck", 
-        "Sponge"
+            DONE "Sponge" -->71
         "RedSandals",
         "RedLeatherHat"
   
@@ -247,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.02",
+    VERSION: "0.13.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

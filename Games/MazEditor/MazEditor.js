@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.12.05",
+  VERSION: "0.13.00",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -1113,6 +1113,34 @@ const GAME = {
 
     $("#clear_list").click(GAME.clearMonsterList);
     $("#add_monster_list").click(GAME.addToMonsterList);
+
+    /** search inputs */
+    const filterOptions = (selectId, searchId) => {
+      const filter = $(searchId).val().toLowerCase();
+
+      $(`${selectId} option`).each((_, option) => {
+        const text = $(option).text().toLowerCase();
+        $(option).toggle(text.includes(filter));
+      });
+    };
+
+    $('#searchItems').on('keyup', () => filterOptions("#content_type", "#searchItems"));
+    $('#searchDecalTexture').on('keyup', () => filterOptions("#texture_decal", "#searchDecalTexture"));
+    $('#searchDecals').on('keyup', () => filterOptions("#crest_decal", "#searchDecals"));
+    $('#searchPics').on('keyup', () => filterOptions("#picture_decal", "#searchPics"));
+    $('#searchEntity').on('keyup', () => filterOptions("#entity_type", "#searchEntity"));
+    $('#searchMonster').on('keyup', () => filterOptions("#monster_type", "#searchMonster"));
+    $('#searchLights').on('keyup', () => filterOptions("#light_decal", "#searchLights"));
+    $('#searchIO').on('keyup', () => filterOptions("#interaction_object_type", "#searchIO"));
+    $('#searchOracle').on('keyup', () => filterOptions("#oracle_type", "#searchOracle"));
+    $('#searchTrainer').on('keyup', () => filterOptions("#item_shrine_type", "#searchTrainer"));
+    $('#searchShrines').on('keyup', () => filterOptions("#shrine_type", "#searchShrines"));
+    $('#searchMIE').on('keyup', () => filterOptions("#movable_type", "#searchMIE"));
+    $('#searchInteractors').on('keyup', () => filterOptions("#interactor_type", "#searchInteractors"));
+    $('#searchWall').on('keyup', () => filterOptions("#walltexture", "#searchWall"));
+    $('#searchFloor').on('keyup', () => filterOptions("#floortexture", "#searchFloor"));
+    $('#searchCeil').on('keyup', () => filterOptions("#ceiltexture", "#searchCeil"));
+
   },
   clearMonsterList() {
     $MAP.map.monsterList = [];
