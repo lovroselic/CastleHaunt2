@@ -28,6 +28,15 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    WhiteLeatherHandbagSeller: {
+        name: "HandBagSeller",
+        sprite: "HandBagSeller",
+        category: 'crest',
+        interactionCategory: 'interaction_item',
+        inventorySprite: "WhiteHandbag",
+        price: 666,
+        text: "I just bought very expensive handbag. For 666 gold. I hope it was worth it."
+    },
     KickShrine: {
         name: "KickShrine",
         sprite: "KickShrine",
@@ -4163,8 +4172,8 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfection! Now my outfit is as dazzling as the sun. Here's your gold coin, sweetie, you've earned it!"
         }
     },
-    
-    
+
+
 
 };
 

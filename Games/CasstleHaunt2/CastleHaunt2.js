@@ -247,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.03",
+    VERSION: "0.13.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1358,6 +1358,7 @@ const GAME = {
                 AUDIO.Thud.play();
                 break;
             case "interaction_item":
+                console.warn("interaction_item", interaction);
                 const item = new NamedInventoryItem(interaction.name, interaction.inventorySprite);
                 HERO.inventory.item.push(item);
                 TITLE.keys();
@@ -1367,7 +1368,6 @@ const GAME = {
                 TITLE.keys()
                 break;
             case "munition":
-                //console.info("munition inteatction, dropped", interaction.dropped);
                 HERO.pickOrb(interaction.dropped);
                 display(interaction.inventorySprite);
                 break;
@@ -1503,8 +1503,6 @@ const GAME = {
             if (missile.friendly) missile.drop();
             MISSILE3D.remove(missile.id);
         }
-
-        //LAIR.stop();
 
         GAME.STORE.storeIAM(MAP[GAME.level].map);
         GAME.level = destination.level;
