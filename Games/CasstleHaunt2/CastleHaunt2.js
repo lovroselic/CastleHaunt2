@@ -95,10 +95,16 @@ const DEBUG = {
             DONE "Cheese", <-- 73
             DONE "TropicalFish" <-- 80
         "Mouse"
+        "RubberDuck", 
+        "Sponge"
+        "RedSandals",
+        "RedLeatherHat"
   
 
-        * coins sources (1x, missing 2x):
+        * coins sources (3x, missing 0x):
             * ApparitiaCorruption
+            * Bathy
+            * Beatchy
  
 
         *
@@ -122,7 +128,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 80;
+        GAME.level = 71;
 
         GAME.gold = 5087;
         GAME.lives = 3;
@@ -197,6 +203,8 @@ const DEBUG = {
             //"Milk", "Egg",
             //"GoldCoin"
             //"RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"
+            //"RubberDuck", "Sponge",
+            //"RedSandals","RedLeatherHat"
 
         ];
         for (let itm of invItems) {
@@ -239,7 +247,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.01",
+    VERSION: "0.13.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

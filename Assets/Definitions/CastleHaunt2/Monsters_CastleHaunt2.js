@@ -212,6 +212,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    BeatchBeachBitch: {
+        name: "BeatchBeachBitch",
+        sprite: "BeatchBeachBitch",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "Are you still playing this silly game? You ought to go to the beach. Just quit, and let Hauntessa Spookish win.",
+        interactionCategory: "oracle",
+    },
     DominatrixBarn: {
         name: "DominatrixBarn",
         sprite: "DominatrixBarn",
@@ -1835,7 +1843,7 @@ const MONSTER_TYPE = {
     },
 
 
-    
+
 
     RedSkeleton: {
         name: "RedSkeleton",
@@ -3375,7 +3383,6 @@ const INTERACTION_ENTITY = {
             conclusion: "My flock is whole again! As promised, here's an egg, a little one who hasn't hatched yet. Take good care of it!"
         }
     },
-
     ApparitiaDomme: {
         name: "ApparitiaDomme",
         sprite: "ApparitiaDomme",
@@ -4130,6 +4137,35 @@ const INTERACTION_ENTITY = {
             conclusion: "Now I will milk you. Stand ready."
         }
     },
+    Bathy: {
+        name: "Bathy",
+        sprite: "Bathy",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["RubberDuck", "Sponge"],
+        gives: "GoldCoin",
+        text: {
+            intro: "Bath time shouldn't be so lonely! Bring me some company and a gentle touch, and I'll make it worth your while.",
+            progress: "One thing's here, but I still need more to make this bath perfect.",
+            conclusion: "Ahh, everything I needed for the perfect soak! Here's your gold coin, thanks for making bath time blissful."
+        }
+    },
+    Beatchy: {
+        name: "Beatchy",
+        sprite: "Beatchy",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["RedSandals", "RedLeatherHat"],
+        gives: "GoldCoin",
+        text: {
+            intro: "This red bikini is fire, but my look is not complete. I need some headturning headwear and fancy footwear. Help me out, darling!",
+            progress: "One piece found, fabulous! But I'm still feeling incomplete. Keep searching, my stylish savior!",
+            conclusion: "Perfection! Now my outfit is as dazzling as the sun. Here's your gold coin, sweetie, you've earned it!"
+        }
+    },
+    
+    
+
 };
 
 const INTERACTION_SHRINE = {

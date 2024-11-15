@@ -1859,10 +1859,10 @@ const MAP = {
     }
     ,
     80 : {
-        name: "XXXX",
+        name: "Flooded Depths",
         sg: 0,
         maxSpawned: 5,
-        killCountdown: 4,
+        killCountdown: 5,
         spawnDelay: 6000,
         data: '{"width":"17","height":"17","map":"BB2AA2BAA2BB2AA2BABAA7BB4ABB2ABB2ABABABB4AA10BAA8BB2AA3EABB2ABABAA4BB2ABABB5AA2BAA3BABB2AA4BB5ABAA2BB4ABB4ABB3ABABABABB4AA3BB3AA2BB4AA2BB5ABABB2AA2BB4ABB2ABB3ABAA3BB2AA2BB3ABAA2BAA2BB3ABAA2BABB3AA2BB8ABABB2AA2BAA4BB2AA2BB2ABABB7ABABEBABAA2BB2ABB5ABB4AA2BB20A$ABAB"}',
         wall: "RockWall_SDXL_009",
@@ -1872,8 +1872,15 @@ const MAP = {
         decals: '[[140,4,"FloorTiles_SDXL_004","texture"],[157,4,"FloorTiles_SDXL_004","texture"],[139,4,"FloorTiles_SDXL_004","texture"],[138,4,"FloorTiles_SDXL_004","texture"],[155,4,"FloorTiles_SDXL_004","texture"],[156,4,"FloorTiles_SDXL_004","texture"],[174,4,"FloorTiles_SDXL_004","texture"],[173,4,"FloorTiles_SDXL_004","texture"],[172,4,"FloorTiles_SDXL_004","texture"],[154,4,"FloorTiles_SDXL_004","texture"],[122,4,"FloorTiles_SDXL_004","texture"],[190,4,"FloorTiles_SDXL_004","texture"],[80,4,"FloorTiles_SDXL_006","texture"],[81,4,"FloorTiles_SDXL_006","texture"],[82,4,"FloorTiles_SDXL_006","texture"],[63,4,"FloorTiles_SDXL_006","texture"],[64,4,"FloorTiles_SDXL_006","texture"],[65,4,"FloorTiles_SDXL_006","texture"],[66,4,"FloorTiles_SDXL_006","texture"],[48,4,"FloorTiles_SDXL_006","texture"],[47,4,"FloorTiles_SDXL_006","texture"],[30,4,"FloorTiles_SDXL_006","texture"],[46,4,"FloorTiles_SDXL_006","texture"],[62,4,"FloorTiles_SDXL_006","texture"],[257,3,"HauntedForest16","texture"],[240,3,"HauntedForest16","texture"],[206,3,"HauntedForest16","texture"],[255,5,"HauntedForest16","texture"],[238,5,"HauntedForest16","texture"],[221,5,"HauntedForest16","texture"],[204,5,"HauntedForest16","texture"],[188,7,"HauntedForest16","texture"],[273,1,"HauntedForest16","texture"]]',
         lights: '[[225,3,"DuaLLantern_029","dimCandle"],[178,7,"Candelabra03","weakCandle"],[202,7,"Candelabra01","weakCandle"],[56,7,"Lights110","weakCandle"],[1,7,"FluxLight122","weakCandle"],[123,7,"WallLamp9","weakCandle"],[83,3,"DuaLLantern_003","weakCandle"]]',
         gates: '[[280,1,"80.1","73.2","Up"]]',
+        monsters: '[[30,"GreatCat"],[154,"GreatCat"]]',
+        gold: '[[103,"GreenGem"]]',
+        containers: '[[205,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[117,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[95,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         doors: '[98,158]',
+        entities: '[[13,7,"Bathy"],[153,5,"Beatchy"]]',
         objects: '[[256,"TropicalFish"],[122,"SmallBarrel"],[62,"GoldBar"]]',
+        oracles: '[[120,1,"BeatchBeachBitch"]]',
         movables: '[[37,"Cat"]]',
+        lairs: '[[77,3,"Lair05"],[287,1,"Lair20"],[275,1,"Lair36"]]',
+        monsterList: '["Skeleton"]',
         }
 };
