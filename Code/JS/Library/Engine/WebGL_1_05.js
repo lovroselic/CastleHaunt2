@@ -2368,6 +2368,7 @@ class Shrine extends WallFeature3D {
     constructor(grid, face, type) {
         super(grid, face, type);
         this.expand = true;
+        this.virgin = true;
     }
     interact(GA, inventory, click, hero) {
 
@@ -2390,7 +2391,7 @@ class Shrine extends WallFeature3D {
         if (this.deductGold(value)) {
             this.storageLog();
             this.deactivate();
-            if (this.text) hero.speak(this.text);
+            
             return {
                 category: this.interactionCategory,
                 inventorySprite: this.inventorySprite,

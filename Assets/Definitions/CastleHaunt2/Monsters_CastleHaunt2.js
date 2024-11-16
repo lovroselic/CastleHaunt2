@@ -28,14 +28,16 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
-    WhiteLeatherHandbagSeller: {
+    HandBagSeller: {
         name: "HandBagSeller",
         sprite: "HandBagSeller",
         category: 'crest',
         interactionCategory: 'interaction_item',
         inventorySprite: "WhiteHandbag",
         price: 666,
-        text: "I just bought very expensive handbag. For 666 gold. I hope it was worth it."
+        text: "White leather handbag for 666 gold. Do we want this?",
+        introduce: true,
+        voice: "Princess",
     },
     KickShrine: {
         name: "KickShrine",
