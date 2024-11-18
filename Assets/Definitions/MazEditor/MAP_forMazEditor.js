@@ -215,7 +215,20 @@ const DECAL_PAINTINGS = [
     "UnusedEntities5107", "UnusedEntities5108", "UnusedEntities5109", "UnusedEntities5110", "UnusedEntities5111", "UnusedEntities5112", "UnusedEntities5113", "UnusedEntities5114", "UnusedEntities5115", "UnusedEntities5116",
     "UnusedEntities5117", "UnusedEntities5118", "UnusedEntities5119", "UnusedEntities5120", "UnusedEntities5121", "UnusedEntities5122", "UnusedEntities5123", "UnusedEntities5124", "UnusedEntities5125", "UnusedEntities5126",
     "UnusedEntities5127", "UnusedEntities5128", "UnusedEntities5129", "UnusedEntities5130", "UnusedEntities5131", "UnusedEntities5132", "UnusedEntities5133", "UnusedEntities5134", "UnusedEntities5135", "UnusedEntities5136",
-    "UnusedEntities5137"
+    "UnusedEntities5137",
+    "UnusedEdtitiesFramed_001", "UnusedEdtitiesFramed_002", "UnusedEdtitiesFramed_003", "UnusedEdtitiesFramed_004", "UnusedEdtitiesFramed_005", "UnusedEdtitiesFramed_006", "UnusedEdtitiesFramed_007", "UnusedEdtitiesFramed_008",
+    "UnusedEdtitiesFramed_009", "UnusedEdtitiesFramed_010", "UnusedEdtitiesFramed_011", "UnusedEdtitiesFramed_012", "UnusedEdtitiesFramed_013", "UnusedEdtitiesFramed_014", "UnusedEdtitiesFramed_015", "UnusedEdtitiesFramed_016",
+    "UnusedEdtitiesFramed_017", "UnusedEdtitiesFramed_018", "UnusedEdtitiesFramed_019", "UnusedEdtitiesFramed_020", "UnusedEdtitiesFramed_021", "UnusedEdtitiesFramed_022", "UnusedEdtitiesFramed_023", "UnusedEdtitiesFramed_024",
+    "UnusedEdtitiesFramed_025", "UnusedEdtitiesFramed_026", "UnusedEdtitiesFramed_027", "UnusedEdtitiesFramed_028", "UnusedEdtitiesFramed_029", "UnusedEdtitiesFramed_030", "UnusedEdtitiesFramed_031", "UnusedEdtitiesFramed_032",
+    "UnusedEdtitiesFramed_033", "UnusedEdtitiesFramed_034", "UnusedEdtitiesFramed_035", "UnusedEdtitiesFramed_036", "UnusedEdtitiesFramed_037", "UnusedEdtitiesFramed_038", "UnusedEdtitiesFramed_039", "UnusedEdtitiesFramed_040",
+    "UnusedEdtitiesFramed_041", "UnusedEdtitiesFramed_042", "UnusedEdtitiesFramed_043", "UnusedEdtitiesFramed_044", "UnusedEdtitiesFramed_045", "UnusedEdtitiesFramed_046", "UnusedEdtitiesFramed_047", "UnusedEdtitiesFramed_048",
+    "UnusedEdtitiesFramed_049", "UnusedEdtitiesFramed_050", "UnusedEdtitiesFramed_051", "UnusedEdtitiesFramed_052", "UnusedEdtitiesFramed_053", "UnusedEdtitiesFramed_054", "UnusedEdtitiesFramed_055", "UnusedEdtitiesFramed_056",
+    "UnusedEdtitiesFramed_057", "UnusedEdtitiesFramed_058", "UnusedEdtitiesFramed_059", "UnusedEdtitiesFramed_060", "UnusedEdtitiesFramed_061", "Various6001", "Various6002", "Various6003", "Various6004", "Various6005", "Various6006",
+    "Various6007", "Various6008", "Various6009", "Various6010", "Various6011", "Various6012", "Various6013", "Various6014", "Various6015", "Various6016", "Various6017", "Various6018", "Various6019", "Various6020", "Various6021",
+    "Various6022", "Various6023", "Various6024", "Various6025", "Various6026", "Various6027", "Various6028", "Various6029", "Various6030", "Various6031", "Various6032", "Various6033", "Various6034", "Various6035", "Various6036",
+    "Various6037", "Various6038", "Various6039", "Various6040", "Various6041", "Various6042", "Various6043", "Various6044", "Various6045", "Various6046", "Various6047", "Various6048", "Various6049", "Various6050", "Various6051",
+    "Various6052", "Various7001", "Various7002", "Various7003", "Various7004", "Various7005", "Various7006", "Various7007", "Various7008", "Various7009", "Various7010", "Various7011", "Various7012", "Various7013", "Various7014",
+    "Various7015", "Various7016", "Various7017", "Various7018", "Various7019"
 ].sort();
 
 
