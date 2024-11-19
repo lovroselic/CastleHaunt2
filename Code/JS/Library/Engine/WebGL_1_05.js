@@ -2369,6 +2369,7 @@ class Shrine extends WallFeature3D {
         super(grid, face, type);
         this.expand = true;
         this.virgin = true;
+        this.itemName = null;
     }
     interact(GA, inventory, click, hero) {
 
@@ -2391,6 +2392,11 @@ class Shrine extends WallFeature3D {
         if (this.deductGold(value)) {
             this.storageLog();
             this.deactivate();
+
+            /**
+             * some shrines are item shops or scroll shops
+             */
+            if (this.interactionCategory === 'interaction_item') this.itemName = this.inventorySprite;
             
             return {
                 category: this.interactionCategory,
@@ -2398,6 +2404,7 @@ class Shrine extends WallFeature3D {
                 which: this.which,
                 level: this.level,
                 text: this.text,
+                name: this.itemName,
             };
         } else {
             AUDIO.MagicFail.play();
