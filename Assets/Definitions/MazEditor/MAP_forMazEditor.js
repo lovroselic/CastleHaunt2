@@ -258,7 +258,8 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "DevilStatue01", "DevilStatue02", "DevilStatue03", "DevilStatue04", "DevilStatue05", "DevilStatue06", "DevilStatue07", "DevilStatue08", "DevilStatue09", "DevilStatue10", "Ivy14", "Ivy15", "Ivy16", "Ivy17", "Skull301", "Skull302", "Skull303", "Skull304",
     "Skull305", "Skull306", "Skull307", "Skull308", "Skull309", "Skull310", "Skull311", "Skull312", "Skull313", "Skull314", "Skull315", "Skull316", "Skull317", "Skull318", "Skull319", "Skull320", "Skull321", "Skull322", "Skull401", "Skull402", "Skull403",
     "Skull404", "Skull405", "Skull406", "Skull407", "Skull408",
-    "RustyFloorGrille_01", "RustyFloorGrille_02", "RustyFloorGrille_03", "RustyFloorGrille_04", "RustyFloorGrille_05", "RustyFloorGrille_06", "RustyFloorGrille_07", "RustyFloorGrille_08", "RustyFloorGrille_09", "RustyFloorGrille_10"
+    "RustyFloorGrille_01", "RustyFloorGrille_02", "RustyFloorGrille_03", "RustyFloorGrille_04", "RustyFloorGrille_05", "RustyFloorGrille_06", "RustyFloorGrille_07", "RustyFloorGrille_08", "RustyFloorGrille_09", "RustyFloorGrille_10",
+    "Fungus1", "Fungus2", "Moss01", "Moss02", "Moss03", "Moss04", "Moss05", "Moss06", "Moss07", "Moss08", "Moss09", "Moss10", "Moss11", "Moss12", "Moss13", "Moss14", "Moss15"
 ].sort();
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"].sort();

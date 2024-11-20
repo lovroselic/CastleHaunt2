@@ -41,8 +41,9 @@ const DEBUG = {
     },
     kill() {
         console.log("KILL all");
-        ENTITY3D.POOL.clear();
         LAIR.stop();
+        ENTITY3D.POOL.clear();
+        
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
@@ -71,7 +72,6 @@ const DEBUG = {
             DONE* "GoldOre", <--Miner1
             DONE * "GoldOre", <-- Miner2
             DONE * "GoldOre" <-- Miners
-        
             DONE* "Pizza" <--PizzaMAker
             DONE * "Egg", 
             DONE * "Milk"
@@ -95,12 +95,12 @@ const DEBUG = {
             DONE "Cheese", <-- 73
             DONE "TropicalFish" <-- 80
             DONE "Mouse" <-- 80
-        
             DONE "Sponge" -->71
-        "RedSandals",
+            DONE "RubberDuck", <-- 79
+            DONE "RedSandals", <-- 79
+
         "RedLeatherHat"
         "PickAxe"
-        "RubberDuck", 
         "LittleChicken"
   
 
@@ -185,12 +185,13 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            "Cat",
             "Chicken", "Cat", "Chicken", "Sponge", "GoldBar",
             "GoldCoin",
-            "Cat", "Chicken", "Cheese", 
-            "TropicalFish", "GoldBar",  "Cat", "Mouse", 
-            "GlassOfBeer", "Milk", "Rat"
+            "Cat", "Chicken", "Cheese",
+            "TropicalFish", "GoldBar", "Cat", "Mouse",
+            "GlassOfBeer",
+            "Milk", "Rat"
 
             //debug
             //"Mouse"

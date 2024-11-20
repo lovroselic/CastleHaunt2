@@ -3365,6 +3365,18 @@ const INTERACTION_ITEM = {
         inventorySprite: "Mouse",
         text: "Cute little mose. Someone will want to eat it."
     },
+    RedSandals: {
+        name: "RedSandals",
+        category: "interaction_item",
+        inventorySprite: "RedSandals",
+        text: "Beatchwear. Bitchwear?"
+    },
+    RedLeatherHat: {
+        name: "RedLeatherHat",
+        category: "interaction_item",
+        inventorySprite: "RedLeatherHat",
+        text: "Too big for my cute small head."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -4174,9 +4186,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfection! Now my outfit is as dazzling as the sun. Here's your gold coin, sweetie, you've earned it!"
         }
     },
-
-
-
 };
 
 const INTERACTION_SHRINE = {
