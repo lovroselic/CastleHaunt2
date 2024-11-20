@@ -1845,11 +1845,11 @@ const MAP = {
         monsterList: '["GreatChick","GreatChick","GreatCat"]',
     }
     ,
-    79: {
+    79 : {
         name: "Hell Kitties",
         sg: 0,
-        maxSpawned: 4,
-        killCountdown: 3,
+        maxSpawned: 5,
+        killCountdown: 4,
         spawnDelay: 8000,
         data: '{"width":"21","height":"21","map":"BB3AA2BB2ABABB2AA13BAA41BB2AA5BAA4BAA6BAA7BAA26BB2ABABAA7BAA3BB2AA2BABAA8BAA5BAA4BAA19BB2AA7BAA10BAA7BAA5BAA6BAA7BAA4BAA2BB2AA12BB3AA7BB2AA2BB11AA2BAA2BAA3BABB3AA3BB5ABAA2BB31ABABB5AA2BB3AA2BABAA4BB2AA2BB2AA2BABB18AA7BABB2AA2BABB4ABB33$A"}',
         wall: "BoulderWall1",
@@ -1863,7 +1863,9 @@ const MAP = {
         oracles: '[[7,7,"CatBabe1"],[13,7,"CatBabe2"],[3,7,"CatBabe4"],[17,7,"CatBabe3"],[63,5,"CatBabe5"],[167,3,"ApparitiaCat"]]',
         movables: '[[178,"Cat"]]',
         trainers: '[[83,3,"CatBabeMagic"],[356,3,"CatBabeAttack"],[336,5,"CatBabeHealth"],[251,3,"CatBabeMagicChicken"],[231,5,"LastCat"]]',
-    }
+        lairs: '[[147,5,"Lair49"],[279,7,"Lair24"],[287,7,"Lair41"]]',
+        monsterList: '["GreatCat","Skeleton","Skeleton","MissGreen"]',
+        }
     ,
     80 : {
         name: "Flooded Depths",

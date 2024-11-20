@@ -101,6 +101,7 @@ const DEBUG = {
         "RedLeatherHat"
         "PickAxe"
         "RubberDuck", 
+        "LittleChicken"
   
 
         * coins sources (3x, missing 0x):
@@ -126,14 +127,15 @@ const DEBUG = {
 
         * temple usage:
             * heart
+            * *magic
 
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 80;
+        GAME.level = 79;
 
-        GAME.gold = 4172;
+        GAME.gold = 172;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -145,7 +147,7 @@ const DEBUG = {
         HERO.magic = 24;
         HERO.attack = 23;
 
-        HERO.health = 147;
+        HERO.health = 176;
         HERO.maxHealth = 176;
 
 
@@ -184,10 +186,11 @@ const DEBUG = {
 
         let invItems = [
 
-            "Chicken", "Cat", "SmallBarrel", "HayBale", "Chicken", "Sponge", "GoldBar",
+            "Chicken", "Cat", "Chicken", "Sponge", "GoldBar",
             "GoldCoin",
-            "Cat", "Chicken", "Cheese", "SmallBarrel",
-            "TropicalFish", "GoldBar", "HayBale", "Cat", "Mouse", "SmallBarrel"
+            "Cat", "Chicken", "Cheese", 
+            "TropicalFish", "GoldBar",  "Cat", "Mouse", 
+            "GlassOfBeer", "Milk", "Rat"
 
             //debug
             //"Mouse"
@@ -254,7 +257,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.10",
+    VERSION: "0.13.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
