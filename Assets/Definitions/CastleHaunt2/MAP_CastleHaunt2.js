@@ -1716,7 +1716,7 @@ const MAP = {
         monsterList: '["MissGreen"]',
     }
     ,
-    73: {
+    73 : {
         name: "Beer Cellar",
         sg: 0,
         maxSpawned: 5,
@@ -1727,7 +1727,7 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_010",
         ceil: "Wall100",
         start: '[137,5]',
-        decals: '[[170,5,"FluxDommes2068","picture"],[238,5,"FluxDommes2133","picture"],[204,5,"FluxDommes2171","picture"]]',
+        decals: '[[170,5,"FluxDommes2068","picture"],[238,5,"FluxDommes2133","picture"],[204,5,"FluxDommes2171","picture"],[34,5,"CastleLady52","picture"],[68,5,"FemDommes6073","picture"],[123,5,"FemDommes6074","picture"],[102,5,"FluxDommes2230","picture"],[157,5,"FluxDommes4052","picture"],[57,5,"FluxDommes2044","picture"],[91,5,"LeisureSuitLarry70","picture"],[125,5,"UnusedEntities5047","picture"],[193,5,"RickDangerous70","picture"],[159,5,"UnusedEntities5032","picture"],[227,5,"AI_pic230","picture"],[144,7,"Princess418","picture"],[18,7,"BetrayedAlliance","picture"],[22,7,"Elite100","picture"],[25,7,"CastleLady21","picture"],[28,7,"FluxDommes3130","picture"],[31,7,"DungeonMaster202","picture"],[125,7,"CodenameIceman2","picture"],[154,7,"SabreWulfAI_103","picture"],[157,7,"FluxDommes2053","picture"],[236,7,"FluxDommes2081","picture"],[100,3,"GameScreen1002","picture"],[50,3,"LaraCroft102","picture"],[117,3,"CastleLady76","picture"],[185,3,"AI_pic252","picture"],[203,3,"AntAttack200","picture"],[254,3,"FluxDommes2186","picture"],[57,3,"UnusedEntities135","picture"],[91,3,"Domme241","picture"],[125,3,"FireAnt21","picture"],[159,3,"UnusedEntities2090","picture"],[193,3,"Domme323","picture"],[227,3,"AntAttack200","picture"],[120,1,"FluxDommes3005","picture"],[123,1,"AI_Pic_134","picture"],[144,1,"Domme121","picture"],[256,1,"FemDommes6010","picture"],[260,1,"Domme129","picture"],[262,1,"CastleLady50","picture"],[266,1,"BookShelf26","picture"],[264,1,"Domme236","picture"],[282,1,"BookShelf09","crest"],[139,4,"FloorGrille101","crest"],[141,4,"FloorGrille102","crest"],[143,4,"FloorGrille106","crest"],[147,4,"PuddleDecal01","crest"],[77,4,"PuddleDecal07","crest"],[216,4,"PuddleDecal14","crest"],[168,3,"CreepyWindow_01","picture"],[134,3,"CreepyWindow_02","picture"],[149,4,"RustyFloorGrille_01","crest"]]',
         lights: '[[144,3,"DuaLLantern_026","standard"],[156,7,"DuaLLantern_004","standard"],[13,7,"Fireplace101","fire"],[285,1,"Fireplace209","fire"],[144,5,"Lamp52","weakCandle"],[122,1,"Lamp40","standardDimmed"],[66,3,"Candelabra14","standardDimmed"],[236,3,"DuaLLantern_015","standardDimmed"]]',
         gates: '[[136,5,"73.1","71.2","Up"],[10,7,"73.2","80.1","Down"]]',
         keys: '[[202,2]]',
@@ -1737,7 +1737,7 @@ const MAP = {
         movables: '[[54,"Cat"],[207,"Chicken"]]',
         lairs: '[[15,7,"Lair13"],[287,1,"Lair22"],[152,3,"Lair47"]]',
         monsterList: '["MissWhite","MissGreen","Skeleton","Viking","GhostMinionGreen"]',
-    }
+        }
     ,
     74: {
         name: "The Golden Ladies",

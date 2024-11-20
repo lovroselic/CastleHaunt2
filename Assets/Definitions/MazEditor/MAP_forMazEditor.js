@@ -228,7 +228,11 @@ const DECAL_PAINTINGS = [
     "Various6022", "Various6023", "Various6024", "Various6025", "Various6026", "Various6027", "Various6028", "Various6029", "Various6030", "Various6031", "Various6032", "Various6033", "Various6034", "Various6035", "Various6036",
     "Various6037", "Various6038", "Various6039", "Various6040", "Various6041", "Various6042", "Various6043", "Various6044", "Various6045", "Various6046", "Various6047", "Various6048", "Various6049", "Various6050", "Various6051",
     "Various6052", "Various7001", "Various7002", "Various7003", "Various7004", "Various7005", "Various7006", "Various7007", "Various7008", "Various7009", "Various7010", "Various7011", "Various7012", "Various7013", "Various7014",
-    "Various7015", "Various7016", "Various7017", "Various7018", "Various7019"
+    "Various7015", "Various7016", "Various7017", "Various7018", "Various7019",
+    "CreepyWindow_01", "CreepyWindow_02", "CreepyWindow_03", "CreepyWindow_04", "CreepyWindow_05", "CreepyWindow_06", "CreepyWindow_07", "CreepyWindow_08", "CreepyWindow_09", "CreepyWindow_10", "CreepyWindow_11",
+    "Geek_001", "Geek_002", "Geek_003", "Geek_004", "Geek_005", "Geek_006", "Geek_007", "Geek_008", "Geek_009", "HoleDomme_001", "HoleDomme_002", "HoleDomme_003", "HoleDomme_004", "HoleDomme_005", "HoleDomme_006",
+    "HoleDomme_007", "HoleDomme_008", "HoleDomme_009", "HoleDomme_010", "HoleDomme_011", "HoleDomme_012", "HoleDomme_013", "HoleDomme_014", "HoleDomme_015", "HoleDomme_016", "HoleDomme_017", "HoleDomme_018", "HoleDomme_019",
+    "SnakeGirl_001", "SnakeGirl_002", "SnakeGirl_003", "SnakeGirl_004", "SnakeGirl_005", "SnakeGirl_006", "SnakeGirl_007", "SnakeGirl_008", "SnakeGirl_009"
 ].sort();
 
 
@@ -253,7 +257,8 @@ const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "C
     "SittingSkelly11", "SittingSkelly12", "SittingSkelly13", "SittingSkelly14", "SittingSkelly2", "SittingSkelly21", "SittingSkelly23", "TempleDecal",
     "DevilStatue01", "DevilStatue02", "DevilStatue03", "DevilStatue04", "DevilStatue05", "DevilStatue06", "DevilStatue07", "DevilStatue08", "DevilStatue09", "DevilStatue10", "Ivy14", "Ivy15", "Ivy16", "Ivy17", "Skull301", "Skull302", "Skull303", "Skull304",
     "Skull305", "Skull306", "Skull307", "Skull308", "Skull309", "Skull310", "Skull311", "Skull312", "Skull313", "Skull314", "Skull315", "Skull316", "Skull317", "Skull318", "Skull319", "Skull320", "Skull321", "Skull322", "Skull401", "Skull402", "Skull403",
-    "Skull404", "Skull405", "Skull406", "Skull407", "Skull408"
+    "Skull404", "Skull405", "Skull406", "Skull407", "Skull408",
+    "RustyFloorGrille_01", "RustyFloorGrille_02", "RustyFloorGrille_03", "RustyFloorGrille_04", "RustyFloorGrille_05", "RustyFloorGrille_06", "RustyFloorGrille_07", "RustyFloorGrille_08", "RustyFloorGrille_09", "RustyFloorGrille_10"
 ].sort();
 const BOTTOM_CRESTS = ["Grate1_128"];
 const TOP_CRESTS = ["Drain2_96", "Drain64", "Grate1_128", "RoundGrille96", "FlatPond", "FlatPond2", "FlatPond3", "FlatPond4", "FlatPond5", "FlatPond6", "FlatPond7"].sort();

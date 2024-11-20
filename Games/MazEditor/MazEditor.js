@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.13.00",
+  VERSION: "0.13.01",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -1141,6 +1141,18 @@ const GAME = {
     $('#searchFloor').on('keyup', () => filterOptions("#floortexture", "#searchFloor"));
     $('#searchCeil').on('keyup', () => filterOptions("#ceiltexture", "#searchCeil"));
 
+    /** shortcuts */
+
+    $(document).keydown((event) => {
+      switch (event.key) {
+          case 'F8':
+              GAME.randomPic();
+              break;
+          default:
+              break;
+      }
+  });
+  
   },
   clearMonsterList() {
     $MAP.map.monsterList = [];
