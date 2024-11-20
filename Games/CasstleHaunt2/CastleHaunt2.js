@@ -60,7 +60,7 @@ const DEBUG = {
             DONE BlondeChick: "Chicken", "Chicken","Chicken","Chicken","Chicken" --> Egg
             DONE CatMama "Cat", "Cat", "Cat", "Cat", "Cat" --> "Chicken"
          * 
-         * "WhiteHandbag"
+            DONE, Bought;;; * "WhiteHandbag"
             DONE * "SmallBarrel" --> 68
             DONE * "SmallBarrel" --> 73
             DONE* "SmallBarrel" --> 80
@@ -71,7 +71,7 @@ const DEBUG = {
             DONE* "GoldOre", <--Miner1
             DONE * "GoldOre", <-- Miner2
             DONE * "GoldOre" <-- Miners
-        * "PickAxe"
+        
             DONE* "Pizza" <--PizzaMAker
             DONE * "Egg", 
             DONE * "Milk"
@@ -80,7 +80,7 @@ const DEBUG = {
             DONE * "RedLeatherLeggings", <-- 77
             DONE * "RedLeatherBoots"<-- 77
             DONE "HayBale" <-- 78
-        "HayBale"
+            DONE "HayBale" <-- 80
             DONE "Chicken", <-- 71
             DONE "Chicken",<-- 73
             DONE "Chicken", <-- 68
@@ -94,11 +94,13 @@ const DEBUG = {
             DONE "Rat" <-- 78
             DONE "Cheese", <-- 73
             DONE "TropicalFish" <-- 80
-        "Mouse"
-        "RubberDuck", 
+            DONE "Mouse" <-- 80
+        
             DONE "Sponge" -->71
         "RedSandals",
         "RedLeatherHat"
+        "PickAxe"
+        "RubberDuck", 
   
 
         * coins sources (3x, missing 0x):
@@ -129,9 +131,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 73;
+        GAME.level = 80;
 
-        GAME.gold = 1400;
+        GAME.gold = 4172;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -141,9 +143,9 @@ const DEBUG = {
         HERO.orbs = 4;
         HERO.orbsLost = 0;
         HERO.magic = 24;
-        HERO.attack = 22;
+        HERO.attack = 23;
 
-        HERO.health = 176;
+        HERO.health = 147;
         HERO.maxHealth = 176;
 
 
@@ -151,16 +153,16 @@ const DEBUG = {
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
         ];
@@ -170,7 +172,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "MagicSupremacy",
+            //"MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -184,6 +186,8 @@ const DEBUG = {
 
             "Chicken", "Cat", "SmallBarrel", "HayBale", "Chicken", "Sponge", "GoldBar",
             "GoldCoin",
+            "Cat", "Chicken", "Cheese", "SmallBarrel",
+            "TropicalFish", "GoldBar", "HayBale", "Cat", "Mouse", "SmallBarrel"
 
             //debug
             //"Mouse"
@@ -215,6 +219,7 @@ const DEBUG = {
         }
 
         let keys = [
+            "Red"
             //"Gold", "Silver",
         ];
         for (let key of keys) {
@@ -249,7 +254,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.09",
+    VERSION: "0.13.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

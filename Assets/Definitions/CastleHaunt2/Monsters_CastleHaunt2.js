@@ -2569,7 +2569,7 @@ const INTERACTION_OBJECT = {
         texture: "FishTexture",
         material: MATERIAL.standard,
         inventorySprite: "TropicalFish",
-        text: "XXX"
+        text: "Also smelly, but more colors."
     },
 };
 

@@ -153,7 +153,8 @@
                         <fieldset>
                             <legend>Interaction objects</legend>
                             <div class="d-flex justify-content-center align-items-center">
-                                <input type="text" id="searchIO" class="w-75" placeholder="Search interaction objects ...">
+                                <input type="text" id="searchIO" class="w-75"
+                                    placeholder="Search interaction objects ...">
                             </div>
                             <div class="d-flex justify-content-center">
                                 <select id="interaction_object_type"> </select>
@@ -177,7 +178,8 @@
                         <fieldset>
                             <legend>Interactors</legend>
                             <div class="d-flex justify-content-center align-items-center">
-                                <input type="text" id="searchInteractors" class="w-75" placeholder="Search interactors ...">
+                                <input type="text" id="searchInteractors" class="w-75"
+                                    placeholder="Search interactors ...">
                             </div>
                             <div class="d-flex justify-content-center my-2">
                                 <select id="interactor_type"> </select>
@@ -212,7 +214,7 @@
                             <input type="radio" name="painter" value="key"> Key <br />
                             <input type="radio" name="painter" value="scroll"> Scroll <br />
                             <input type="radio" name="painter" value="potion"> Potion <br />
-                            <input type="radio" name="painter" value="gold"> Gold <br />
+                            <input type="radio" name="painter" value="gold"> <span style="color:gold">Gold</span> <br />
                             <input type="radio" name="painter" value="skill"> Skill <br />
                             <hr>
                             <input type="radio" name="painter" value="container"> Container <br />
@@ -528,7 +530,8 @@
                             </legend>
                             <div>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <input type="text" id="searchFloor" class="w-75" placeholder="Search floor textures ...">
+                                    <input type="text" id="searchFloor" class="w-75"
+                                        placeholder="Search floor textures ...">
                                 </div>
                                 <input type="button" id="randfloor" value="Random" />
                                 <div class="d-flex justify-content-center">
@@ -552,7 +555,8 @@
                             </legend>
                             <div>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <input type="text" id="searchCeil" class="w-75" placeholder="Search ceiling textures ...">
+                                    <input type="text" id="searchCeil" class="w-75"
+                                        placeholder="Search ceiling textures ...">
                                 </div>
                                 <input type="button" id="randceil" value="Random" />
                                 <div class="d-flex justify-content-center">
@@ -577,27 +581,31 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            73 : {
-                                name: "Beer Cellar",
+                            80 : {
+                                name: "Flooded Depths",
                                 sg: 0,
                                 maxSpawned: 5,
-                                killCountdown: 4,
+                                killCountdown: 5,
                                 spawnDelay: 6000,
-                                data: '{"width":"17","height":"17","map":"BB3AA10BAA4BB8ABB2AA11BAA15BB8AA82BAA2BAA5BB3AA2BB2AA10BB2ABB4AA10BABB12ABB4ABABB5AA2BB5AA2BB5AA8BB12ABB8AA3BB2ABB21ABB2$"}',
-                                wall: "BloodMarbleFloorWall_SDXL_012",
-                                floor: "BloodMarbleFloorWall_SDXL_010",
-                                ceil: "Wall100",
-                                start: '[137,5]',
-                                decals: '[[170,5,"FluxDommes2068","picture"],[238,5,"FluxDommes2133","picture"],[204,5,"FluxDommes2171","picture"],[34,5,"CastleLady52","picture"],[68,5,"FemDommes6073","picture"],[123,5,"FemDommes6074","picture"],[102,5,"FluxDommes2230","picture"],[157,5,"FluxDommes4052","picture"],[57,5,"FluxDommes2044","picture"],[91,5,"LeisureSuitLarry70","picture"],[125,5,"UnusedEntities5047","picture"],[193,5,"RickDangerous70","picture"],[159,5,"UnusedEntities5032","picture"],[227,5,"AI_pic230","picture"],[144,7,"Princess418","picture"],[18,7,"BetrayedAlliance","picture"],[22,7,"Elite100","picture"],[25,7,"CastleLady21","picture"],[28,7,"FluxDommes3130","picture"],[31,7,"DungeonMaster202","picture"],[125,7,"CodenameIceman2","picture"],[154,7,"SabreWulfAI_103","picture"],[157,7,"FluxDommes2053","picture"],[236,7,"FluxDommes2081","picture"],[100,3,"GameScreen1002","picture"],[50,3,"LaraCroft102","picture"],[117,3,"CastleLady76","picture"],[185,3,"AI_pic252","picture"],[203,3,"AntAttack200","picture"],[254,3,"FluxDommes2186","picture"],[57,3,"UnusedEntities135","picture"],[91,3,"Domme241","picture"],[125,3,"FireAnt21","picture"],[159,3,"UnusedEntities2090","picture"],[193,3,"Domme323","picture"],[227,3,"AntAttack200","picture"],[120,1,"FluxDommes3005","picture"],[123,1,"AI_Pic_134","picture"],[144,1,"Domme121","picture"],[256,1,"FemDommes6010","picture"],[260,1,"Domme129","picture"],[262,1,"CastleLady50","picture"],[266,1,"BookShelf26","picture"],[264,1,"Domme236","picture"],[282,1,"BookShelf09","crest"],[139,4,"FloorGrille101","crest"],[141,4,"FloorGrille102","crest"],[143,4,"FloorGrille106","crest"],[147,4,"PuddleDecal01","crest"],[77,4,"PuddleDecal07","crest"],[216,4,"PuddleDecal14","crest"],[168,3,"CreepyWindow_01","picture"],[134,3,"CreepyWindow_02","picture"],[149,4,"RustyFloorGrille_01","crest"]]',
-                                lights: '[[144,3,"DuaLLantern_026","standard"],[156,7,"DuaLLantern_004","standard"],[13,7,"Fireplace101","fire"],[285,1,"Fireplace209","fire"],[144,5,"Lamp52","weakCandle"],[122,1,"Lamp40","standardDimmed"],[66,3,"Candelabra14","standardDimmed"],[236,3,"DuaLLantern_015","standardDimmed"]]',
-                                gates: '[[136,5,"73.1","71.2","Up"],[10,7,"73.2","80.1","Down"]]',
-                                keys: '[[202,2]]',
-                                containers: '[[239,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[222,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[205,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[188,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[171,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[103,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[86,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[69,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[52,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[35,"Barrel","GOLD_ITEM_TYPE.SilverBar",5],[92,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[75,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[177,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[194,"Barrel","GOLD_ITEM_TYPE.GoldCube",5],[82,"Barrel","GOLD_ITEM_TYPE.GoldBar",3],[99,"Barrel","GOLD_ITEM_TYPE.GoldBar",3],[184,"Barrel","INTERACTION_ITEM.Cheese",3]]',
-                                entities: '[[275,1,"BeerBarrelGirl"],[3,7,"PizzaMaker"]]',
-                                objects: '[[116,"SmallBarrel"]]',
-                                movables: '[[54,"Cat"],[207,"Chicken"]]',
-                                lairs: '[[15,7,"Lair13"],[287,1,"Lair22"],[152,3,"Lair47"]]',
-                                monsterList: '["MissWhite","MissGreen","Skeleton","Viking","GhostMinionGreen"]',
+                                data: '{"width":"17","height":"17","map":"BB2AA2BAA2BB2AA2BABAA7BB4ABB2ABB2ABABABB4AA10BAA8BB2AA3EABB2ABABAA4BB2ABABB5AA2BAA3BABB2AA4BB5ABAA2BB4ABB4ABB3ABABABABB4AA3BB3AA2BB4AA2BB5ABABB2AA2BB4ABB2ABB3ABAA3BB2AA2BB3ABAA2BAA2BB3ABAA2BABB3AA2BB8ABABB2AA2BAA4BB2AA2BB2ABABB7ABABEBABAA2BB2ABB5ABB4AA2BB20A$ABAB"}',
+                                wall: "RockWall_SDXL_009",
+                                floor: "Water32",
+                                ceil: "Sand7",
+                                start: '[263,1]',
+                                decals: '[[140,4,"FloorTiles_SDXL_004","texture"],[157,4,"FloorTiles_SDXL_004","texture"],[139,4,"FloorTiles_SDXL_004","texture"],[138,4,"FloorTiles_SDXL_004","texture"],[155,4,"FloorTiles_SDXL_004","texture"],[156,4,"FloorTiles_SDXL_004","texture"],[174,4,"FloorTiles_SDXL_004","texture"],[173,4,"FloorTiles_SDXL_004","texture"],[172,4,"FloorTiles_SDXL_004","texture"],[154,4,"FloorTiles_SDXL_004","texture"],[122,4,"FloorTiles_SDXL_004","texture"],[190,4,"FloorTiles_SDXL_004","texture"],[80,4,"FloorTiles_SDXL_006","texture"],[81,4,"FloorTiles_SDXL_006","texture"],[82,4,"FloorTiles_SDXL_006","texture"],[63,4,"FloorTiles_SDXL_006","texture"],[64,4,"FloorTiles_SDXL_006","texture"],[65,4,"FloorTiles_SDXL_006","texture"],[66,4,"FloorTiles_SDXL_006","texture"],[48,4,"FloorTiles_SDXL_006","texture"],[47,4,"FloorTiles_SDXL_006","texture"],[30,4,"FloorTiles_SDXL_006","texture"],[46,4,"FloorTiles_SDXL_006","texture"],[62,4,"FloorTiles_SDXL_006","texture"],[257,3,"HauntedForest16","texture"],[240,3,"HauntedForest16","texture"],[206,3,"HauntedForest16","texture"],[255,5,"HauntedForest16","texture"],[238,5,"HauntedForest16","texture"],[221,5,"HauntedForest16","texture"],[204,5,"HauntedForest16","texture"],[188,7,"HauntedForest16","texture"],[273,1,"HauntedForest16","texture"],[228,7,"GameScreens014","picture"],[230,7,"Various6041","picture"],[192,7,"FluxDommes3074","picture"],[232,7,"CastleBabes49","picture"],[234,7,"FluxDommes3007","picture"],[163,7,"FluxDommes2124","picture"],[126,7,"FluxDommes3054","picture"],[94,7,"AI_Pic_137","picture"],[78,7,"DM100","picture"],[96,7,"UnusedEntities2080","picture"],[100,7,"FluxDommes3156","picture"],[3,7,"FluxDommes2065","picture"],[5,7,"FluxDommes3083","picture"],[7,7,"Various6051","picture"],[9,7,"Goonies90","picture"],[105,7,"CastleLady77","picture"],[260,1,"FluxDommes3167","picture"],[262,1,"UnusedEntities134","picture"],[264,1,"FemDommes6020","picture"],[283,1,"LeisureSuitLarry76","picture"],[285,1,"ManiacMansion11","picture"],[231,1,"HoleDomme_003","picture"],[207,1,"Ishar15","picture"],[211,1,"FluxDommes4051","picture"],[202,1,"Domme203","picture"],[166,1,"UnusedEdtitiesFramed_055","picture"],[164,1,"ShinyBlackRuberella08","picture"],[162,1,"FluxDommes2256","picture"],[124,1,"CastleBabes49","picture"],[105,1,"CrawlMaster113","picture"],[56,1,"FluxDommes4049","picture"],[92,1,"AirWolf31","picture"],[60,1,"FemaleWarrior202","picture"],[97,1,"UnusedEdtitiesFramed_016","picture"],[99,1,"AticAtac114","picture"],[67,3,"MontyMole99","picture"],[141,3,"Miner3","picture"],[175,3,"DM_AI_2","picture"],[250,3,"Galaxians_AI_1","picture"],[254,3,"FluxDommes2204","picture"],[186,3,"CastleLady14","picture"],[152,3,"FluxDommes2018","picture"],[114,3,"Dominatrix07","picture"],[74,3,"GameScreen2035","picture"],[40,3,"JungleHunt50","picture"],[21,3,"GirlSwims09","picture"],[25,3,"GameScreens027","picture"],[28,3,"FluxDommes3057","picture"],[161,3,"Wolfenstein70","picture"],[240,5,"FluxDommes2088","picture"],[250,5,"FluxDommes2164","picture"],[265,5,"UnusedEntities5021","picture"],[213,5,"AI_pic258","picture"],[179,5,"FluxDommes2101","picture"],[193,5,"Domme101","picture"],[142,5,"GameScreens014","picture"],[106,5,"Pitfall2-100","picture"],[70,5,"UnusedEntities146","picture"],[17,5,"FluxDommes2201","picture"],[21,5,"Nature02","picture"],[40,5,"CrawlMaster132","picture"],[61,5,"Invaders_AI_1","picture"],[146,5,"FluxDommes3007","picture"],[36,5,"MoonPatrol500","picture"],[137,5,"Skull322","crest"],[171,5,"Skull318","crest"],[29,7,"Skull306","crest"],[31,7,"Skull408","crest"]]',
+                                lights: '[[225,3,"DuaLLantern_029","dimCandle"],[178,7,"Candelabra03","weakCandle"],[202,7,"Candelabra01","weakCandle"],[56,7,"Lights110","weakCandle"],[1,7,"FluxLight122","weakCandle"],[123,7,"WallLamp9","weakCandle"],[83,3,"DuaLLantern_003","weakCandle"]]',
+                                gates: '[[280,1,"80.1","73.2","Up"]]',
+                                monsters: '[[30,"GreatCat"],[154,"GreatCat"]]',
+                                gold: '[[103,"GreenGem"],[270,"SilverBar"],[248,"SilverBar"],[242,"SilverBar"],[223,"SilverBar"],[212,"SilverBar"],[159,"SilverBar"],[182,"SilverBar"],[218,"SilverBar"],[149,"SilverBar"],[128,"SilverBar"],[90,"SilverBar"],[54,"SilverBar"],[35,"SilverBar"],[23,"SilverBar"],[75,"SilverBar"],[46,"RedGem"],[190,"RedGem"]]',
+                                skills: '[[88,"Attack"]]',
+                                containers: '[[205,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[117,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[95,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[66,"TreasureChest","INTERACTION_ITEM.HayBale",3],[27,"Wardrobe","INTERACTION_ITEM.Mouse",3]]',
+                                doors: '[98,158]',
+                                entities: '[[13,7,"Bathy"],[153,5,"Beatchy"]]',
+                                objects: '[[256,"TropicalFish"],[122,"SmallBarrel"],[62,"GoldBar"],[209,"Steak"]]',
+                                oracles: '[[120,1,"BeatchBeachBitch"]]',
+                                movables: '[[37,"Cat"]]',
+                                lairs: '[[77,3,"Lair05"],[287,1,"Lair20"],[275,1,"Lair36"]]',
+                                monsterList: '["Skeleton"]',
                                 }
                         </textarea>
                     </fieldset>
