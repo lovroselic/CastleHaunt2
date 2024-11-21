@@ -38,12 +38,13 @@ const DEBUG = {
             list.push(item.name);
         }
         console.info("items", list);
+        console.log(`"${list.join('", "')}"`);
     },
     kill() {
         console.log("KILL all");
         LAIR.stop();
         ENTITY3D.POOL.clear();
-        
+
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
@@ -98,10 +99,10 @@ const DEBUG = {
             DONE "Sponge" -->71
             DONE "RubberDuck", <-- 79
             DONE "RedSandals", <-- 79
-
-        "RedLeatherHat"
+            DONE "RedLeatherHat" <--76
+            DONE "LittleChicken" <-- 78
         "PickAxe"
-        "LittleChicken"
+        
   
 
         * coins sources (3x, missing 0x):
@@ -133,9 +134,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 79;
+        GAME.level = 77;
 
-        GAME.gold = 172;
+        GAME.gold = 2207;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -144,17 +145,17 @@ const DEBUG = {
 
         HERO.orbs = 4;
         HERO.orbsLost = 0;
-        HERO.magic = 24;
-        HERO.attack = 23;
+        HERO.magic = 26;
+        HERO.attack = 24;
 
-        HERO.health = 176;
-        HERO.maxHealth = 176;
+        HERO.health = 135;
+        HERO.maxHealth = 192;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -165,8 +166,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -174,6 +175,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
+            //"DestroyOrbs",
             //"MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
@@ -185,36 +187,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Cat",
-            "Chicken", "Cat", "Chicken", "Sponge", "GoldBar",
-            "GoldCoin",
-            "Cat", "Chicken", "Cheese",
-            "TropicalFish", "GoldBar", "Cat", "Mouse",
-            "GlassOfBeer",
-            "Milk", "Rat"
-
-            //debug
-            //"Mouse"
-            //"LittleChicken",
-            //"Fish",
-            //"Cat", "Cat", "Cat", "Cat", "Cat",
-            //"Rat",
-            //"Cheese",
-            //"Chicken", "Chicken","Chicken","Chicken","Chicken",
-            //"HayBale", "HayBale"
-            //"Brush",
-            //"WhiteHandbag"
-            //"SmallBarrel", "SmallBarrel", "SmallBarrel"
-            //"GlassOfBeer",
-            //"GoldBar", "GoldBar", "GoldBar",
-            //"GoldOre", "GoldOre", "GoldOre"
-            //"PickAxe",
-            //"Pizza", "Beer"
-            //"Milk", "Egg",
-            //"GoldCoin"
-            //"RedLeatherTop", "RedLeatherLeggings", "RedLeatherBoots"
-            //"RubberDuck", "Sponge",
-            //"RedSandals","RedLeatherHat"
+            "Chicken", "Chicken", "Sponge", "GoldBar", "GoldCoin", "Chicken", "GoldBar", "GlassOfBeer", "Milk", "Chicken", "RubberDuck", "RedSandals", "LittleChicken", "RedLeatherHat"
 
         ];
         for (let itm of invItems) {
@@ -223,7 +196,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Red"
+            //"Red"
             //"Gold", "Silver",
         ];
         for (let key of keys) {
@@ -258,7 +231,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.11",
+    VERSION: "0.13.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
