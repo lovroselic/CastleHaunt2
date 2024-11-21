@@ -134,9 +134,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 77;
+        GAME.level = 72;
 
-        GAME.gold = 2207;
+        GAME.gold = 3417;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -145,16 +145,16 @@ const DEBUG = {
 
         HERO.orbs = 4;
         HERO.orbsLost = 0;
-        HERO.magic = 26;
-        HERO.attack = 24;
+        HERO.magic = 27;
+        HERO.attack = 27;
 
-        HERO.health = 135;
-        HERO.maxHealth = 192;
+        HERO.health = 208;
+        HERO.maxHealth = 208;
 
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -164,8 +164,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
         ];
@@ -175,6 +175,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
+            "Death"
             //"DestroyOrbs",
             //"MagicSupremacy",
         ];
@@ -187,7 +188,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Chicken", "Chicken", "Sponge", "GoldBar", "GoldCoin", "Chicken", "GoldBar", "GlassOfBeer", "Milk", "Chicken", "RubberDuck", "RedSandals", "LittleChicken", "RedLeatherHat"
+           "Chicken", "Chicken", "GoldBar", "GoldCoin", "Chicken", "GoldBar", "GlassOfBeer", "Milk", "Chicken", "LittleChicken", "GoldCoin", "GoldCoin"
 
         ];
         for (let itm of invItems) {
@@ -231,7 +232,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.12",
+    VERSION: "0.13.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

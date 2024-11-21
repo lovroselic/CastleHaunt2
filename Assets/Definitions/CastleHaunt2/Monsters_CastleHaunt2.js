@@ -1157,6 +1157,18 @@ const GOLD_ITEM_TYPE = {
         value: 500,
         material: MATERIAL.standard,
     },
+    BlueGem: {
+        name: "BlueGem",
+        category: "gold",
+        element: "GEM",
+        scale: 1.1 / 2 ** 4,
+        glueToFloor: true,
+        texture: "BlueMetal",
+        minVal: 500,
+        maxVal: 1000,
+        value: 1000,
+        material: MATERIAL.standard,
+    },
 };
 
 const SKILL_ITEM_TYPE = {
