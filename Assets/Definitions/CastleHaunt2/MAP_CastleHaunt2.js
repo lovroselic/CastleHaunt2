@@ -1704,17 +1704,18 @@ const MAP = {
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"21","height":"17","map":"BB3AA5BAA10BAA7BB3AA14EBAA4BAA3BB3ABB5AA3BAA2EAA2BAA15BAA4BB2AA3BAA12BAA36BAA15BABAEABB3ABAA5BB3AA2BAA3BB11ABB3ABB11AA3BAA6BB14ABAA2BB11AEABABB2AA2BB13AA3BB7ABB7EBB24$AA2BB5EBEBB3ABB16AA3BB4"}',
+        data: '{"width":"21","height":"17","map":"BB3AA5BAA10BAA7BB3AA14EBAA4BAA3BB3ABB5AA3BAA2EAA2BAA14BAA5BB2AA3BAA12BAA36BAA13BAA2BB3ABAEAA2BB3AA5BB3AA2BAA3BB11ABB3ABB13AA3BAA6BB8ABB7ABAA2BB4ABABB5AEABAA4BB10AA2BB13EBB24$AA2BB5EBEBB3ABB16AA3BB4"}',
         wall: "DarkMossy9",
         floor: "FloorTiles_SDXL_001",
         ceil: "SpiderWeb334",
         start: '[43,5]',
         lights: '[[64,5,"FluxLight124","standardDimmed"],[26,5,"DuaLLantern_002","standardDimmed"],[32,7,"DuaLLantern_029","standardDimmed"],[18,7,"Fireplace209","fire"],[156,3,"DuaLLantern_021","standardDimmed"],[156,5,"FluxLight121","standardDimmed"],[214,7,"FluxLight114","dim"],[219,7,"FluxLight117","dim"],[226,7,"FluxLight102","dim"]]',
-        gates: '[[42,5,"72.1","68.7","Up"],[83,3,"72.2","75.1","Down"]]',
+        gates: '[[42,5,"72.1","68.7","Up"],[83,3,"72.2","75.1","Down"],[14,7,"72.3","81.1","Down"]]',
         doors: '[47,95,213,220,227,259,265]',
         oracles: '[[31,3,"StandingDarkPriestess"]]',
         trainers: '[[339,1,"BlondeKnight"],[346,1,"DarkPriestess"],[353,1,"Ruberella"]]',
-        monsterList: '["MissGreen"]',
+        lairs: '[[167,3,"Lair39"],[147,5,"Lair07"]]',
+        monsterList: '["MissGreen","Skeleton","Skeleton","GreatChick"]',
     }
     ,
     73: {
@@ -1830,7 +1831,7 @@ const MAP = {
         monsterList: '["Skeleton"]',
     }
     ,
-    78: {
+    78 : {
         name: "The Barn of Blonde Chick",
         sg: 0,
         maxSpawned: 4,
@@ -1841,21 +1842,22 @@ const MAP = {
         floor: "Relief05",
         ceil: "SpiderWeb10",
         start: '[263,1]',
+        decals: '[[23,7,"Fungus1","crest"],[28,7,"Fungus2","crest"],[156,7,"Domme106","picture"],[158,7,"Portal132","picture"],[163,7,"UnusedEntities2059","picture"],[166,7,"Domme243","picture"],[99,7,"SnakeGirl_004","picture"],[96,7,"FluxDommes2209","picture"],[90,7,"TombRaider110","picture"],[87,7,"Princess402","picture"],[19,7,"AI_pic227","picture"],[21,7,"UnusedEntities5023","picture"],[31,7,"UnusedEntities5060","picture"],[261,1,"BetrayedAlliance","picture"],[257,1,"FemDommes6046","picture"],[156,1,"CastleLady34","picture"],[159,1,"GameScreens017","picture"],[163,1,"UnusedEntities5080","picture"],[166,1,"SP67","picture"],[96,1,"AntAttack200","picture"],[98,1,"BookShelf27","picture"],[90,1,"JetPac70","picture"],[87,1,"Bagitman90","picture"],[228,1,"FluxDommes4053","picture"],[230,1,"FluxDommes3066","picture"],[160,1,"UnusedEdtitiesFramed_049","picture"],[162,1,"Various6012","picture"],[92,1,"FemaleWarrior102","picture"],[94,1,"GameScreens006","picture"],[58,7,"Domme326","picture"],[60,7,"FemaleWarrior105","picture"],[126,7,"UnusedEdtitiesFramed_057","picture"],[128,7,"FluxDommes2164","picture"],[194,7,"CyberPunk200","picture"],[196,7,"GameScreen1006","picture"],[154,5,"LSL101","picture"],[171,5,"DynaBlaster60","picture"],[196,5,"CBM_VIC20","picture"],[230,5,"FluxDommes2071","picture"],[111,5,"ApparitiaFrame238","picture"],[60,5,"Various6024","picture"],[228,3,"Elvira1","picture"],[194,3,"FluxDommes2243","picture"],[109,3,"FluxDommes3133","picture"],[58,3,"FluxDommes2004","picture"],[185,3,"UnusedEntities5089","picture"],[253,3,"Zeppelin89","picture"],[269,1,"UnusedEntities153","picture"],[267,1,"CastleLady107","picture"]]',
         lights: '[[8,7,"Lights110","standard"],[260,1,"Candelabra04","weakCandle"],[268,1,"FluxLight101","weakCandle"],[22,7,"DuaLLantern_010","standardDimmed"],[27,7,"Lamp46","standardDimmed"],[126,3,"DuaLLantern_018","dimCandle"],[128,5,"DuaLLantern_021","dimCandle"]]',
         gates: '[[280,1,"78.1","68.10","Closed"]]',
         keys: '[[64,4]]',
         monsters: '[[123,"GreatChick"],[132,"GreatChick"]]',
-        gold: '[[56,"SilverBar"],[125,"SilverBar"],[127,"SilverBar"],[76,"SilverBar"],[63,"SilverBar"],[130,"SilverBar"],[216,"SilverBar"],[208,"SilverBar"]]',
+        gold: '[[56,"SilverBar"],[125,"SilverBar"],[127,"SilverBar"],[76,"SilverBar"],[63,"SilverBar"],[130,"SilverBar"],[216,"SilverBar"],[208,"SilverBar"],[105,"GoldCube"],[139,"GoldCube"],[144,"GoldCube"],[212,"GoldCube"],[42,"GoldCube"],[183,"GoldCube"],[224,"GoldCube"],[198,"GoldCube"]]',
         skills: '[[259,"Magic"]]',
-        containers: '[[70,"Chest","INTERACTION_ITEM.HayBale",1]]',
+        containers: '[[70,"Chest","INTERACTION_ITEM.HayBale",1],[36,"Crate","GOLD_ITEM_TYPE.GoldBar",7],[46,"Crate","GOLD_ITEM_TYPE.GoldBar",7],[244,"Crate","GOLD_ITEM_TYPE.GoldBar",1],[252,"Crate","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[26,3,"SmoothWallButton",1,259]]',
         entities: '[[204,5,"Cow"],[220,3,"BlondeChick"]]',
-        objects: '[[192,"Rat"]]',
+        objects: '[[192,"Rat"],[120,"Steak"]]',
         oracles: '[[119,5,"CowOracle"],[135,3,"DominatrixBarn"]]',
         movables: '[[131,"Chicken"],[54,"Cat"]]',
         lairs: '[[51,5,"Lair47"],[67,3,"Lair35"]]',
         monsterList: '["GreatChick","GreatChick","GreatCat"]',
-    }
+        }
     ,
     79: {
         name: "Hell Kitties",
@@ -1910,4 +1912,19 @@ const MAP = {
         lairs: '[[77,3,"Lair05"],[287,1,"Lair20"],[275,1,"Lair36"]]',
         monsterList: '["Skeleton"]',
     }
+    ,
+    81 : {
+        name: "Going Down",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"11","height":"11","map":"BB3ABB2AA2BB4AA8BAA6BAA2BB28ABB4AA2BB5ABB6AA5BB7ABB6AA3BB3AA4BB14A$"}',
+        wall: "DarkMossy78",
+        floor: "FloorTiles_SDXL_004",
+        ceil: "SpiderWeb22",
+        start: '[107,1]',
+        lights: '[[21,3,"DuaLLantern_026","standard"],[2,7,"Candelabra18","standard"]]',
+        gates: '[[118,1,"81.1","72.3","Up"],[112,1,"81.2","82.1","Down"]]',
+        }
 };

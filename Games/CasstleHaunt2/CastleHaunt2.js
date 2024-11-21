@@ -134,9 +134,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 72;
+        GAME.level = 81
 
-        GAME.gold = 3417;
+        GAME.gold = 4224;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -145,7 +145,7 @@ const DEBUG = {
 
         HERO.orbs = 4;
         HERO.orbsLost = 0;
-        HERO.magic = 27;
+        HERO.magic = 29;
         HERO.attack = 27;
 
         HERO.health = 208;
@@ -163,7 +163,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -188,7 +188,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-           "Chicken", "Chicken", "GoldBar", "GoldCoin", "Chicken", "GoldBar", "GlassOfBeer", "Milk", "Chicken", "LittleChicken", "GoldCoin", "GoldCoin"
+            "GoldBar", "GoldCoin", "GoldBar", "GlassOfBeer", "GoldCoin", "GoldCoin", "Pizza"
 
         ];
         for (let itm of invItems) {
@@ -232,7 +232,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.13",
+    VERSION: "0.13.14",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
