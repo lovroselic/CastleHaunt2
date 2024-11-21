@@ -131,12 +131,16 @@ const DEBUG = {
             * *magic
 
 
+        * hole:
+            HoleDomme:
+            DommeFromTheHole:
+            Emerging:
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 81
+        GAME.level = 82
 
-        GAME.gold = 4224;
+        GAME.gold = 4423;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -166,8 +170,8 @@ const DEBUG = {
             INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -232,7 +236,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.14",
+    VERSION: "0.13.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

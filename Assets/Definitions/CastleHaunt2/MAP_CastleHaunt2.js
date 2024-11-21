@@ -1831,7 +1831,7 @@ const MAP = {
         monsterList: '["Skeleton"]',
     }
     ,
-    78 : {
+    78: {
         name: "The Barn of Blonde Chick",
         sg: 0,
         maxSpawned: 4,
@@ -1857,7 +1857,7 @@ const MAP = {
         movables: '[[131,"Chicken"],[54,"Cat"]]',
         lairs: '[[51,5,"Lair47"],[67,3,"Lair35"]]',
         monsterList: '["GreatChick","GreatChick","GreatCat"]',
-        }
+    }
     ,
     79: {
         name: "Hell Kitties",
@@ -1913,18 +1913,47 @@ const MAP = {
         monsterList: '["Skeleton"]',
     }
     ,
-    81 : {
+    81: {
         name: "Going Down",
         sg: 0,
         maxSpawned: 6,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"11","height":"11","map":"BB3ABB2AA2BB4AA8BAA6BAA2BB28ABB4AA2BB5ABB6AA5BB7ABB6AA3BB3AA4BB14A$"}',
+        data: '{"width":"11","height":"11","map":"BB3ABB5AA2BAA8BB3AA3BAA2BB5ABABABB11AA6BB14ABB2AA2BB4AA5BABABAA2BB3ABB4AA2BABB2ABB14A$"}',
         wall: "DarkMossy78",
         floor: "FloorTiles_SDXL_004",
         ceil: "SpiderWeb22",
         start: '[107,1]',
+        decals: '[[62,7,"AI_Pic_113","picture"],[64,7,"ArticShipwreck2","picture"],[8,7,"Arnie200","picture"],[5,7,"FluxDommes2303","picture"],[56,7,"FluxDommes4024","picture"],[58,7,"FluxDommes4050","picture"],[100,1,"GameScreen1035","picture"],[102,1,"FluxDommes2326","picture"],[106,1,"JetSetWilly60","picture"],[108,1,"CastleBabes48","picture"],[28,3,"AI_Pic_121","picture"],[87,3,"CastleLady09","picture"],[81,3,"Domme214","picture"],[23,5,"FluxDommes2061","picture"],[15,5,"Domme243","picture"],[77,5,"UnusedEntities5102","picture"],[83,5,"AI_PIC_440","picture"],[36,1,"GameScreen1022","picture"],[29,1,"FluxDommes2271","picture"],[31,1,"CastleLady17","picture"]]',
         lights: '[[21,3,"DuaLLantern_026","standard"],[2,7,"Candelabra18","standard"]]',
         gates: '[[118,1,"81.1","72.3","Up"],[112,1,"81.2","82.1","Down"]]',
+        containers: '[[67,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",5],[97,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",3]]',
+        triggers: '[[53,3,"SmoothWallButton",1,38]]',
+        objects: '[[104,"BeerHealth"],[93,"BeerHealth"]]',
+        oracles: '[[115,1,"ShortBlackDress"]]',
+    }
+    ,
+    82 : {
+        name: "Pretty Deep Already",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"13","height":"13","map":"BB3AA2BB2AA6BAA2BAA3BAA4BB2AA5BABAA2BABB2AA2BB3ABABB3ABB2ABB6ABAA2BB4AA2BB2ABB4ABABB2ABB4ABB3AA4BAA2BB3ABAA2BB3ABB2AA2BB2ABABABAA2BB2AA5BAA2BB3AA3BAA2BB5ABABB16A$"}',
+        wall: "DarkMossy9",
+        floor: "FloorTiles_SDXL_005",
+        ceil: "StoneBlockPavement",
+        start: '[19,7]',
+        decals: '[[83,4,"FloorGrille101","crest"],[85,4,"FloorGrille105","crest"],[71,4,"RoundGrille96","crest"],[97,4,"RustyFloorGrille_10","crest"],[1,7,"Ishar70","picture"],[4,7,"FemDommes6057","picture"],[8,7,"GhostFace4","picture"],[11,7,"LeisureSuitLarry72","picture"],[44,7,"AI_Pic_133","picture"],[46,7,"GameScreens039","picture"],[56,7,"LargePicLadies11","picture"],[60,7,"UnusedEntities5052","picture"],[74,7,"AI_PIC_445","picture"],[92,7,"UnusedEntities5039","picture"],[79,1,"Domme347","picture"],[93,1,"FluxDommes2074","picture"],[108,1,"UnusedEdtitiesFramed_020","picture"],[112,1,"UnusedEntities5075","picture"],[163,1,"AI_pic234","picture"],[157,1,"UnusedEntities115","picture"],[165,1,"UnusedEntities104","picture"],[167,1,"GirlOnStairs105","picture"],[25,3,"ManicMiner12","picture"],[155,3,"Arena201","picture"],[101,3,"AticAtac140","picture"],[151,3,"FalconPatrol70","picture"],[18,3,"TombRaider95","picture"],[13,5,"Domme347","picture"],[65,5,"UnusedEntities5026","picture"],[104,5,"MassEffect2","picture"],[143,5,"ApparitiaFrame135","picture"],[151,5,"Domme134","picture"],[81,5,"FluxDommes2304","picture"],[20,5,"CastleLady55","picture"],[108,5,"Princess605","picture"],[112,3,"FluxDommes2032","picture"]]',
+        lights: '[[123,1,"FluxLight116","standard"]]',
+        gates: '[[6,7,"82.1","81.2","Up"]]',
+        gold: '[[40,"GoldBar"],[147,"GoldBar"],[95,"GoldBar"],[63,"GoldBar"],[154,"GoldBar"],[113,"GoldBar"]]',
+        containers: '[[84,"Barrel","GOLD_ITEM_TYPE.GoldBar",4],[14,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[24,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[144,"PirateChest","GOLD_ITEM_TYPE.GoldBar",1]]',
+        shrines: '[[43,1,"HoleDomme"]]',
+        entities: '[[47,1,"DommeFromTheHole"]]',
+        objects: '[[80,"Steak"]]',
+        oracles: '[[107,3,"Emerging"]]',
+        lairs: '[[42,3,"Lair35"],[121,7,"Lair02"],[48,5,"Lair21"]]',
+        monsterList: '["Skeleton","Skeleton","Skeleton","RedSkeleton"]',
         }
 };

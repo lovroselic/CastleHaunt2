@@ -28,6 +28,17 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    HoleDomme: {
+        name: "HoleDomme",
+        sprite: "HoleDomme",
+        category: 'crest',
+        interactionCategory: 'interaction_item',
+        inventorySprite: "PickAxe",
+        price: 666,
+        text: "Pickaxe from Deep Down, nice price for you my friend. Only 666 gold.",
+        introduce: true,
+        voice: "Female",
+    },
     HandBagSeller: {
         name: "HandBagSeller",
         sprite: "HandBagSeller",
@@ -223,6 +234,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Emerging: {
+        name: "Emerging",
+        sprite: "Emerging",
+        category: 'crest',
+        voice: "FemaleLow2",
+        text: "You realize that you need only one pickaxe, right?",
+        interactionCategory: "oracle",
+    },
+    ShortBlackDress: {
+        name: "ShortBlackDress",
+        sprite: "ShortBlackDress",
+        category: 'crest',
+        voice: "Female2",
+        text: "What do you say to the beer at the end of the corridor? Yes, please.",
+        interactionCategory: "oracle",
+    },
     BeatchBeachBitch: {
         name: "BeatchBeachBitch",
         sprite: "BeatchBeachBitch",
@@ -1755,9 +1782,34 @@ const MONSTER_TYPE = {
         moveSpeed: 1.1,
         shootDistance: 12,
         stalkDistance: 5,
-        material: MATERIAL.standardShine,
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.standardShine,
+    },
+    RedSkeleton: {
+        name: "RedSkeleton",
+        texture: "Red2",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        mana: 30,
+        health: 100,
+        attack: 100,
+        magic: 12,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [16, ["wanderer"], 13, ["shoot"]],
+        moveSpeed: 1.2,
+        shootDistance: 13,
+        stalkDistance: 5,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.redShine,
     },
     GreatChick: {
         name: "GreatChick",
@@ -1868,27 +1920,7 @@ const MONSTER_TYPE = {
 
 
 
-    RedSkeleton: {
-        name: "RedSkeleton",
-        texture: "Red2",
-        model: "Skeleton",
-        scale: 1.8 / 2 ** 3,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "SmokeExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 35,
-        defense: 25,
-        magic: 20,
-        health: 50,
-        xp: 80,
-        gold: 80,
-        attackSound: "MonsterAttack2",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 1.1,
-        material: MATERIAL.redShine,
-    },
+   
     SilverSkeleton: {
         name: "SilverSkeleton",
         texture: "Silver",
@@ -4198,6 +4230,19 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfection! Now my outfit is as dazzling as the sun. Here's your gold coin, sweetie, you've earned it!"
         }
     },
+    DommeFromTheHole: {
+        name: "DommeFromTheHole",
+        sprite: "DommeFromTheHole",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["GoldCoin"],
+        gives: "PickAxe",
+        text: {
+            intro: "From the depths, I bring a deal. A PickAxe for a single gold coin. Do you dare to dig deeper?",
+            progress: null,
+            conclusion: "The coin is mine, and the PickAxe is yours. Happy mining... if you survive."
+        }
+    },    
 };
 
 const INTERACTION_SHRINE = {
