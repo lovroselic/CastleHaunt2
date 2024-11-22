@@ -1145,14 +1145,17 @@ const GAME = {
 
     $(document).keydown((event) => {
       switch (event.key) {
-          case 'F8':
-              GAME.randomPic();
-              break;
-          default:
-              break;
+        case 'F8':
+          GAME.randomPic();
+          break;
+        case 'F7':
+          GAME.random_lair();
+          break;
+        default:
+          break;
       }
-  });
-  
+    });
+
   },
   clearMonsterList() {
     $MAP.map.monsterList = [];

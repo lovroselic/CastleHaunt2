@@ -232,7 +232,15 @@ const DECAL_PAINTINGS = [
     "CreepyWindow_01", "CreepyWindow_02", "CreepyWindow_03", "CreepyWindow_04", "CreepyWindow_05", "CreepyWindow_06", "CreepyWindow_07", "CreepyWindow_08", "CreepyWindow_09", "CreepyWindow_10", "CreepyWindow_11",
     "Geek_001", "Geek_002", "Geek_003", "Geek_004", "Geek_005", "Geek_006", "Geek_007", "Geek_008", "Geek_009", "HoleDomme_001", "HoleDomme_002", "HoleDomme_003", "HoleDomme_004", "HoleDomme_005", "HoleDomme_006",
     "HoleDomme_007", "HoleDomme_008", "HoleDomme_009", "HoleDomme_010", "HoleDomme_011", "HoleDomme_012", "HoleDomme_013", "HoleDomme_014", "HoleDomme_015", "HoleDomme_016", "HoleDomme_017", "HoleDomme_018", "HoleDomme_019",
-    "SnakeGirl_001", "SnakeGirl_002", "SnakeGirl_003", "SnakeGirl_004", "SnakeGirl_005", "SnakeGirl_006", "SnakeGirl_007", "SnakeGirl_008", "SnakeGirl_009"
+    "SnakeGirl_001", "SnakeGirl_002", "SnakeGirl_003", "SnakeGirl_004", "SnakeGirl_005", "SnakeGirl_006", "SnakeGirl_007", "SnakeGirl_008", "SnakeGirl_009",
+    "C64_ZX_Classics101", "C64_ZX_Classics102", "C64_ZX_Classics103", "C64_ZX_Classics104", "C64_ZX_Classics105", "C64_ZX_Classics106", "C64_ZX_Classics107", "C64_ZX_Classics108", "C64_ZX_Classics109", "C64_ZX_Classics110",
+    "C64_ZX_Classics111", "C64_ZX_Classics112", "C64_ZX_Classics113", "C64_ZX_Classics114", "C64_ZX_Classics115", "C64_ZX_Classics116", "C64_ZX_Classics117", "C64_ZX_Classics118", "C64_ZX_Classics119", "C64_ZX_Classics120",
+    "C64_ZX_Classics121", "C64_ZX_Classics122", "C64_ZX_Classics201", "C64_ZX_Classics202", "C64_ZX_Classics203", "C64_ZX_Classics204", "C64_ZX_Classics205", "C64_ZX_Classics206", "C64_ZX_Classics207", "C64_ZX_Classics208",
+    "C64_ZX_Classics209", "C64_ZX_Classics210", "C64_ZX_Classics211", "C64_ZX_Classics212", "C64_ZX_Classics213", "C64_ZX_Classics214", "C64_ZX_Classics215", "C64_ZX_Classics216", "ShortBlackSkirt_001", "ShortBlackSkirt_002",
+    "ShortBlackSkirt_003", "ShortBlackSkirt_004", "ShortBlackSkirt_005", "ShortBlackSkirt_006", "ShortBlackSkirt_007", "ShortBlackSkirt_008", "ShortBlackSkirt_009", "ShortBlackSkirt_010", "ShortBlackSkirt_011", "ShortBlackSkirt_012",
+    "ShortBlackSkirt_013", "ShortBlackSkirt_014", "ShortBlackSkirt_015", "ShortBlackSkirt_016", "ShortBlackSkirt_017", "ShortBlackSkirt_018", "ShortBlackSkirt_019", "ShortBlackSkirt_020", "ShortBlackSkirt_021", "ShortBlackSkirt_022",
+    "ShortBlackSkirt_023", "ShortBlackSkirt_024", "ShortBlackSkirt_025", "ShortBlackSkirt_026", "ShortBlackSkirt_027", "ShortBlackSkirt_028", "ShortBlackSkirt_029", "ShortBlackSkirt_030", "ShortBlackSkirt_031", "ShortBlackSkirt_032",
+    "ShortBlackSkirt_033", "ShortBlackSkirt_034", "ShortBlackSkirt_035", "ShortBlackSkirt_036", "ShortBlackSkirt_037", "ShortBlackSkirt_038", "ShortBlackSkirt_039", "ShortBlackSkirt_040", "ShortBlackSkirt_041", "ShortBlackSkirt_042"
 ].sort();
 
 
@@ -285,7 +293,7 @@ const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerB
 
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
-const MAX_LAIR_COUNT = 49;
+const MAX_LAIR_COUNT = 82;
 for (let i = 1; i <= MAX_LAIR_COUNT; i++) {
     LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
 }

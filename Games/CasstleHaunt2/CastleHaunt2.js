@@ -101,7 +101,8 @@ const DEBUG = {
             DONE "RedSandals", <-- 79
             DONE "RedLeatherHat" <--76
             DONE "LittleChicken" <-- 78
-        "PickAxe"
+            DONE "PickAxe" <-- 82
+            "Beer"
         
   
 
@@ -129,6 +130,7 @@ const DEBUG = {
         * temple usage:
             * heart
             * *magic
+            * attack
 
 
         * hole:
@@ -138,9 +140,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 72;
+        GAME.level = 74;
 
-        GAME.gold = 4602;
+        GAME.gold = 4019;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -149,25 +151,25 @@ const DEBUG = {
 
         HERO.orbs = 4;
         HERO.orbsLost = 0;
-        HERO.magic = 29;
-        HERO.attack = 27;
+        HERO.magic = 30;
+        HERO.attack = 32;
 
-        HERO.health = 190;
-        HERO.maxHealth = 208;
+        HERO.health = 232;
+        HERO.maxHealth = 232;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -179,9 +181,9 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death"
-            //"DestroyOrbs",
-            //"MagicSupremacy",
+            "Death",
+            "DestroyOrbs",
+            "MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -192,7 +194,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldBar", "GoldCoin", "GoldBar", "GlassOfBeer", "GoldCoin", "GoldCoin", "Pizza", "PickAxe",
+            "GoldBar", "GoldBar", "GoldOre", "GoldOre", "GoldBar", "GoldOre"
 
         ];
         for (let itm of invItems) {
@@ -201,8 +203,7 @@ const DEBUG = {
         }
 
         let keys = [
-            //"Red"
-            //"Gold", "Silver",
+
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -236,7 +237,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.16",
+    VERSION: "0.13.17",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
