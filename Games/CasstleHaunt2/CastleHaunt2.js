@@ -138,9 +138,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 82
+        GAME.level = 72;
 
-        GAME.gold = 4423;
+        GAME.gold = 4602;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -152,13 +152,13 @@ const DEBUG = {
         HERO.magic = 29;
         HERO.attack = 27;
 
-        HERO.health = 208;
+        HERO.health = 190;
         HERO.maxHealth = 208;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -168,10 +168,10 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -192,7 +192,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldBar", "GoldCoin", "GoldBar", "GlassOfBeer", "GoldCoin", "GoldCoin", "Pizza"
+            "GoldBar", "GoldCoin", "GoldBar", "GlassOfBeer", "GoldCoin", "GoldCoin", "Pizza", "PickAxe",
 
         ];
         for (let itm of invItems) {
@@ -236,7 +236,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.15",
+    VERSION: "0.13.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
