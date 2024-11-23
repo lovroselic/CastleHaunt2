@@ -981,6 +981,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaMiner.jpg", name: "ApparitiaMiner" },
     { srcName: "EntityPictures/ApparitiaSuspicious.jpg", name: "ApparitiaSuspicious" },
     { srcName: "EntityPictures/ApparitiaCat.jpg", name: "ApparitiaCat" },
+    { srcName: "EntityPictures/ApparitiaNorthPass.jpg", name: "ApparitiaNorthPass" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1140,10 +1141,11 @@ LoadSprites = [
     { srcName: "EntityPictures/BeatchBeachBitch.jpg", name: "BeatchBeachBitch" },
     { srcName: "EntityPictures/HandBagSeller.jpg", name: "HandBagSeller" },
     { srcName: "EntityPictures/ShortBlackDress.jpg", name: "ShortBlackDress" },
-
     { srcName: "EntityPictures/HoleDomme.jpg", name: "HoleDomme" },
     { srcName: "EntityPictures/DommeFromTheHole.jpg", name: "DommeFromTheHole" },
     { srcName: "EntityPictures/Emerging.jpg", name: "Emerging" },
+
+    { srcName: "EntityPictures/BlackBeretHeart1.jpg", name: "BlackBeretHeart" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

@@ -28,6 +28,20 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    BlackBeretHeart: {
+        name: "BlackBeretHeart",
+        sprite: "BlackBeretHeart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 4000,
+        level: 3,
+        text: "Deep healing for 4000 gold.",
+        introduce: true,
+        voice: "Female",
+    },
+
     HoleDomme: {
         name: "HoleDomme",
         sprite: "HoleDomme",
@@ -1107,6 +1121,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "I am under cover. Nobody recognizes me. Hahaha. How smart spy I am.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaNorthPass: {
+        name: "ApparitiaNorthPass",
+        sprite: "ApparitiaNorthPass",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Where were you Princess so long. We are already preparing for the final battle. Hahaha.",
         interactionCategory: "oracle",
     },
 };

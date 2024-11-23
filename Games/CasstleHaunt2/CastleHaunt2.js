@@ -140,9 +140,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 74;
+        GAME.level = 69;
 
-        GAME.gold = 4019;
+        GAME.gold = 619;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -154,15 +154,15 @@ const DEBUG = {
         HERO.magic = 30;
         HERO.attack = 32;
 
-        HERO.health = 232;
-        HERO.maxHealth = 232;
+        HERO.health = 234;
+        HERO.maxHealth = 256;
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -181,9 +181,9 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death",
-            "DestroyOrbs",
-            "MagicSupremacy",
+            //"Death",
+            //"DestroyOrbs",
+            //"MagicSupremacy",
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -194,7 +194,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldBar", "GoldBar", "GoldOre", "GoldOre", "GoldBar", "GoldOre"
+
 
         ];
         for (let itm of invItems) {
@@ -203,7 +203,7 @@ const DEBUG = {
         }
 
         let keys = [
-
+            "Gold", 
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -237,7 +237,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.17",
+    VERSION: "0.13.18",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
