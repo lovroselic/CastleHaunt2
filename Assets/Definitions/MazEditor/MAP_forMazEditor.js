@@ -240,7 +240,19 @@ const DECAL_PAINTINGS = [
     "ShortBlackSkirt_003", "ShortBlackSkirt_004", "ShortBlackSkirt_005", "ShortBlackSkirt_006", "ShortBlackSkirt_007", "ShortBlackSkirt_008", "ShortBlackSkirt_009", "ShortBlackSkirt_010", "ShortBlackSkirt_011", "ShortBlackSkirt_012",
     "ShortBlackSkirt_013", "ShortBlackSkirt_014", "ShortBlackSkirt_015", "ShortBlackSkirt_016", "ShortBlackSkirt_017", "ShortBlackSkirt_018", "ShortBlackSkirt_019", "ShortBlackSkirt_020", "ShortBlackSkirt_021", "ShortBlackSkirt_022",
     "ShortBlackSkirt_023", "ShortBlackSkirt_024", "ShortBlackSkirt_025", "ShortBlackSkirt_026", "ShortBlackSkirt_027", "ShortBlackSkirt_028", "ShortBlackSkirt_029", "ShortBlackSkirt_030", "ShortBlackSkirt_031", "ShortBlackSkirt_032",
-    "ShortBlackSkirt_033", "ShortBlackSkirt_034", "ShortBlackSkirt_035", "ShortBlackSkirt_036", "ShortBlackSkirt_037", "ShortBlackSkirt_038", "ShortBlackSkirt_039", "ShortBlackSkirt_040", "ShortBlackSkirt_041", "ShortBlackSkirt_042"
+    "ShortBlackSkirt_033", "ShortBlackSkirt_034", "ShortBlackSkirt_035", "ShortBlackSkirt_036", "ShortBlackSkirt_037", "ShortBlackSkirt_038", "ShortBlackSkirt_039", "ShortBlackSkirt_040", "ShortBlackSkirt_041", "ShortBlackSkirt_042",
+    "BlackBeret_001", "BlackBeret_002", "BlackBeret_003", "BlackBeret_004", "BlackBeret_005", "BlackBeret_006", "BlackBeret_007", "BlackBeret_008", "BlackBeret_009", "BlackBeret_010", "BlackBeret_011", "BlackBeret_012", "BlackBeret_013",
+    "BlackBeret_014", "BlackBeret_015", "BlackBeret_016", "BlackBeret_017", "BlackBeret_018", "BlackBeret_019", "BlackBeret_020", "BlackBeret_021", "BlackBeret_022", "BlackBeret_023", "BlackBeret_024", "BlackBeret_025", "BlackBeret_026",
+    "BlackBeret_027", "BlackBeret_028", "BlackBeret_029", "BlackBeret_030", "BlackBeret_031", "BlackBeret_032", "BlackBeret_033", "BlackBeret_034", "BlackBeret_035", "BlackBeret_036", "BlackBeret_037", "BlackBeret_038", "BlackBeret_039",
+    "BlackBeret_040", "BlackBeret_041", "BlackBeret_042", "BlackBeret_043", "BlackBeret_044", "BlackBeret_045", "BlackBeret_046", "BlackBeret_047", "BlackBeret_048", "BlackBeret_049", "BlackBeret_050", "BlackBeret_051", "BlackBeret_052",
+    "BlackBeret_053", "BlackBeret_054", "BlackBeret_055", "BlackBeret_056", "BlackBeret_057", "BlackBeret_058", "BlackBeret_059", "BlackBeret_060", "BlackBeret_061", "BlackBeret_062", "BlackBeret_063", "BlackBeret_064", "BlackBeret_065",
+    "BlackBeret_066", "BlackBeret_067", "BlackBeret_068", "BlackBeret_069", "BlackBeret_070", "BlackBeret_071", "BlackBeret_072", "BlackBeret_073", "BlackBeret_074", "BlackBeret_075", "BlackBeret_076", "BlackBeret_077", "BlackBeret_078",
+    "BlackBeret_079", "BlackBeret_080", "BlackBeret_081", "BlackBeret_082", "BlackBeret_083", "BlackBeret_084", "BlackBeret_085", "BlackBeret_086", "BlackBeret_087", "BlackBeret_088", "BlackBeret_089", "BlackBeret_090", "BlackBeret_091",
+    "BlackBeret_092", "BlackBeret_093", "BlackBeret_094", "BlackBeret_095", "BlackBeret_096", "BlackBeret_097", "BlackBeret_098", "BlackBeret_099", "BlackBeret_100", "BlackBeret_101", "BlackBeret_102", "BlackBeret_103", "BlackBeret_104",
+    "BlackBeret_105", "BlackBeret_106", "BlackBeret_107", "BlackBeret_108", "BlackBeret_109", "BlackBeret_110", "BlackBeret_111", "BlackBeret_112", "BlackBeret_113", "BlackBeret_114", "BlackBeret_115", "BlackBeret_116", "BlackBeret_117",
+    "BlackBeret_118", "BlackBeret_119", "BlackBeret_120", "BlackBeret_121", "BlackBeret_122", "BlackBeret_123", "BlackBeret_124", "BlackBeret_125", "BlackBeret_126", "BlackBeret_127", "BlackBeret_128", "BlackBeret_129", "BlackBeret_130",
+    "BlackBeret_131", "BlackBeret_132", "BlackBeret_133", "BlackBeret_134", "BlackBeret_135", "BlackBeret_136", "BlackBeret_137", "BlackBeret_138", "BlackBeret_139", "BlackBeret_140", "BlackBeret_141", "BlackBeret_142", "BlackBeret_143",
+    "BlackBeret_144", "BlackBeret_145", "BlackBeret_146"
 ].sort();
 
 

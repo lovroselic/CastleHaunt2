@@ -911,7 +911,7 @@ const ENGINE = {
       const parts = line.split(/\s+/).slice(1);
       const handler = keywords[keyword];
       if (!handler) {
-        console.warn('unhandled keyword:', keyword);
+        console.warn(NAME, ': unhandled keyword:', keyword);
         continue;
       }
       handler(parts);
@@ -931,7 +931,11 @@ const ENGINE = {
     function addVertex(vert) {
       const ptn = vert.split('/');
       ptn.forEach((objIndexStr, i) => {
-        const objIndex = parseInt(objIndexStr);
+        if (objIndexStr === "") {
+          console.warn(NAME, ': ignoring missing coordinate: vert', vert, ".. Posibly a missing texture coordinate");
+          return;
+        }
+        const objIndex = parseInt(objIndexStr, 10);
         const index = objIndex + (objIndex >= 0 ? 0 : objVertexData[i].length);
         webglVertexData[i].push(...objVertexData[i][index]);
       });

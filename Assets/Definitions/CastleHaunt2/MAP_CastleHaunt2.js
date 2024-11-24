@@ -1617,7 +1617,7 @@ const MAP = {
         monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","GhostMinion"]',
     }
     ,
-    68: {
+    68 : {
         name: "Broken Hall",
         sg: 0,
         maxSpawned: 4,
@@ -1635,11 +1635,11 @@ const MAP = {
         gold: '[[145,"GoldCube"],[252,"GoldCube"],[314,"GoldCube"],[99,"SilverBar"],[104,"SilverBar"],[318,"SilverBar"],[201,"GoldBar"],[56,"GoldBar"],[86,"GoldBar"],[219,"GoldBar"],[326,"GoldBar"],[328,"GoldBar"],[196,"GoldBar"]]',
         containers: '[[336,"Barrel","GOLD_ITEM_TYPE.GoldBar",1],[65,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[51,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[375,"Crate","GOLD_ITEM_TYPE.GoldBar",1]]',
         triggers: '[[2,7,"SmoothWallButton",0,61],[81,5,"SmoothWallButton",0,194],[297,5,"SmoothWallButton",0,195],[380,1,"SmoothWallButton",0,331]]',
-        objects: '[[310,"SmallBarrel"]]',
+        objects: '[[310,"SmallBarrel"],[193,"Bone"]]',
         movables: '[[91,"Chicken"],[307,"Cat"]]',
         lairs: '[[204,3,"Lair31"]]',
         monsterList: '["GhostMinionGreen","GhostMinionGreen","GreatChick","GreatCat"]',
-    }
+        }
     ,
     69 : {
         name: "North Pass",
@@ -1647,17 +1647,23 @@ const MAP = {
         maxSpawned: 2,
         killCountdown: 3,
         spawnDelay: 6000,
-        data: '{"width":"15","height":"15","map":"BB6AA2BAA30BB3AA5EBB3ABAA45BAA8BABB2AA2BB10AA3BB18ABB2AA2BB13AA4BAA2BB8ABB2EBABB7ABB19A$AEBB9ABB2"}',
+        data: '{"width":"15","height":"15","map":"BB3ABABAA3BABAA24BB3AA4EBB2ABABAA45BB2AA8BB2ABAA2BB10AA3BB18ABABB4AA2BB10AA2BB2ABAA2BB5ABB3ABAEBABB24A$ABEBB9ABB2"}',
         wall: "SpiderWeb31",
         floor: "MarbleFloor105",
         ceil: "BrownWall40",
         start: '[205,1]',
+        decals: '[[10,7,"DungeonDoor_Blocked4","crest"],[21,7,"UnusedEntities5001","picture"],[23,7,"CastleBabes48","picture"],[26,7,"FluxDommes2293","picture"],[17,7,"CastleBabes07","picture"],[122,7,"FluxDommes2041","picture"],[126,7,"Domme207","picture"],[128,7,"AI_PIC_302","picture"],[132,7,"C64_ZX_Classics101","picture"],[122,1,"UnusedEntities5124","picture"],[125,1,"FluxDommes2062","picture"],[129,1,"SpaceQuest103","picture"],[131,1,"CastleBabes44","picture"],[102,1,"Domme225","picture"],[198,1,"Galaxians10","picture"],[200,1,"AI_pic255","picture"],[204,1,"FluxDommes4014","picture"],[206,1,"SP67","picture"],[42,7,"FluxDommes2063","picture"],[136,5,"Various7018","picture"],[181,5,"TombRaider97","picture"],[142,5,"TempleOfApshai70","picture"],[172,5,"CastleLady59","picture"],[42,3,"Domme130","picture"],[102,3,"JetSetWilly11","picture"],[148,3,"CodenameIceman3","picture"],[178,3,"ArticShipwreck7","picture"],[142,3,"HoleDomme_004","picture"],[172,3,"FemDommes6039","picture"],[31,5,"Skull321","crest"],[106,5,"Skull315","crest"],[61,5,"Skull306","crest"],[76,5,"Skull404","crest"]]',
         lights: '[[123,7,"Lights103","standard"],[131,7,"Lamp52","standard"],[125,7,"Lights104","standard"],[129,7,"Lights109","standard"],[126,1,"WallLamp19","standard"],[128,1,"Lamp42","standard"],[7,7,"Fireplace102","fire"]]',
         gates: '[[220,1,"69.1","68.2","Closed"],[214,1,"69.2","68.3","Closed"]]',
+        scrolls: '[[144,16],[140,14]]',
+        gold: '[[138,"SilverBar"],[169,"SilverBar"],[176,"SilverBar"],[174,"SilverBar"],[49,"SilverBar"],[99,"SilverBar"],[56,"SilverBar"],[79,"GoldBar"],[68,"GoldBar"],[39,"GoldBar"]]',
+        containers: '[[107,"Chest","GOLD_ITEM_TYPE.GoldBar",1],[112,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",1],[116,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",1],[36,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[41,"Crate","GOLD_ITEM_TYPE.GoldBar",7],[32,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         doors: '[157,124,130]',
+        entities: '[[74,3,"CaveGirl"]]',
+        objects: '[[154,"Orb"],[62,"Bag"],[182,"BeerHealth"],[47,"Cake"],[92,"Cake"]]',
         oracles: '[[4,7,"ApparitiaNorthPass"]]',
         lairs: '[[45,5,"Lair59"],[90,5,"Lair30"]]',
-        monsterList: '["RedSkeleton"]',
+        monsterList: '["RedSkeleton","Skeleton","Skeleton"]',
         }
     ,
     70: {

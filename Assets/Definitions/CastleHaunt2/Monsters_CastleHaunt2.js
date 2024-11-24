@@ -1942,7 +1942,7 @@ const MONSTER_TYPE = {
 
 
 
-   
+
     SilverSkeleton: {
         name: "SilverSkeleton",
         texture: "Silver",
@@ -2636,6 +2636,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         inventorySprite: "TropicalFish",
         text: "Also smelly, but more colors."
+    },
+    Bone: {
+        name: "Bone",
+        category: "interaction_item",
+        element: "BONE",
+        scale: 1.0 / 2 ** 4,
+        glueToFloor: true,
+        texture: "Marble",
+        material: MATERIAL.standard,
+        inventorySprite: "Bone",
+        text: "Bone. Human? Or animal? I don't know. Does it matter to you?"
     },
 };
 
@@ -3446,6 +3457,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    CaveGirl: {
+        name: "CatQueen",
+        sprite: "CaveGirl",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Bone"],
+        gives: "GoldCoin",
+        text: {
+            intro: "Bring the old lady a bone to chew on, would you, dear?.",
+            progress: null,
+            conclusion: "Excellent! Is it vegan? WHo cares. Here's the gold coin. I have no use for it."
+        }
+    },
     CatQueen: {
         name: "CatQueen",
         sprite: "CatQueen",
@@ -4264,7 +4288,7 @@ const INTERACTION_ENTITY = {
             progress: null,
             conclusion: "The coin is mine, and the PickAxe is yours. Happy mining... if you survive."
         }
-    },    
+    },
 };
 
 const INTERACTION_SHRINE = {
