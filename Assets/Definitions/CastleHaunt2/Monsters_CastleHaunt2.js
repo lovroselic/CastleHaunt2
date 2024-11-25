@@ -28,6 +28,19 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    Nurse: {
+        name: "Nurse",
+        sprite: "Nurse",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 999, //change
+        level: 3,
+        text: "Last chance for some cheap aid before you go deeper. Special price for you my Princess. Only 999 gold.", //
+        introduce: true,
+        voice: "Female2",
+    },
     BlackBeretHeart: {
         name: "BlackBeretHeart",
         sprite: "BlackBeretHeart",
@@ -41,7 +54,6 @@ const SHRINE_TYPE = {
         introduce: true,
         voice: "Female",
     },
-
     HoleDomme: {
         name: "HoleDomme",
         sprite: "HoleDomme",
@@ -4628,6 +4640,34 @@ const INTERACTION_SHRINE = {
             intro: "Get me some focking mouse, you brat.",
             progress: null,
             conclusion: "Just purr. And everybody will be your slave."
+        }
+    },
+    BlackBeret: {
+        name: "BlackBeret",
+        sprite: "BlackBeret",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "You thought red berets are special forces? Black berets are even more special, don't you see? For a coin of course you'll kick even more ass. And harder.",
+            progress: null,
+            conclusion: "Just see? Use your heels. Pierce them like with stiletto."
+        }
+    },
+    Alchemist: {
+        name: "Alchemist",
+        sprite: "Alchemist",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["GoldCoin"],
+        gives: "HeartSkill",
+        level: 5,
+        text: {
+            intro: "I brew this amazing potion which will maybe improve your health. Or kill you. Would you want to try it? For a coin? Consider it a clinical trial, haha.",
+            progress: null,
+            conclusion: "You survived. Amazing."
         }
     },
 };

@@ -90,6 +90,8 @@ const MAP_TEXT = {
     78: "Everybody say moo.",
     79: "Smells like pussy.",
     80: "I'll get my feet wet.",
+    81: "",
+    82: "",
 };
 
 /** Map definitions */
@@ -1617,7 +1619,7 @@ const MAP = {
         monsterList: '["MissGalaxyGreen","MissGalaxyGold","Goblin","GhostMinion"]',
     }
     ,
-    68 : {
+    68: {
         name: "Broken Hall",
         sg: 0,
         maxSpawned: 4,
@@ -1639,9 +1641,9 @@ const MAP = {
         movables: '[[91,"Chicken"],[307,"Cat"]]',
         lairs: '[[204,3,"Lair31"]]',
         monsterList: '["GhostMinionGreen","GhostMinionGreen","GreatChick","GreatCat"]',
-        }
+    }
     ,
-    69 : {
+    69: {
         name: "North Pass",
         sg: 0,
         maxSpawned: 2,
@@ -1664,22 +1666,28 @@ const MAP = {
         oracles: '[[4,7,"ApparitiaNorthPass"]]',
         lairs: '[[45,5,"Lair59"],[90,5,"Lair30"]]',
         monsterList: '["RedSkeleton","Skeleton","Skeleton"]',
-        }
+    }
     ,
     70: {
         name: "South Passage",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB8AA7BAA16BAA27BAA7BAA3BAA9BAA2BAA9BABABB3ABB2AA9BAA2BB8ABB10ABB11AEABB2AA5BB2ABABB6AA2BB3AA6BB3ABB22$BB15AA2BB2"}',
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 8000,
+        data: '{"width":"15","height":"15","map":"BB5AA6BB2AA8BAA16BAA27BABB3AA9BB2AA6BAA6BAA3BAA5BABB3ABB2AA7BB3ABABB7ABB4ABABB6ABB8ABABB2AEABB3AA5BB4ABB2AA7BB3AA2BB5ABABB21$BAA2BB2"}',
         wall: "RockWall_SDXL_005",
         floor: "BloodMarbleFloorWall_SDXL_004",
         ceil: "BloodMarbleFloorWall_SDXL_010",
         start: '[25,7]',
-        lights: '[[22,7,"DuaLLantern_027","standard"]]',
-        gates: '[[10,7,"70.1","68.4","Closed"],[4,7,"70.2","68.5","Closed"]]',
+        decals: '[[20,7,"FluxDommes3108","picture"],[24,7,"AI_pic231","picture"],[81,1,"Princess7","picture"],[83,1,"UnusedEntities5066","picture"],[47,7,"AI_pic206","picture"],[63,7,"Domme208","picture"],[81,7,"Domme101","picture"],[83,7,"LaraCroft2","picture"],[70,7,"AI_Pic_125","picture"],[57,7,"FluxDommes2066","picture"],[133,7,"Fred102","picture"],[121,7,"C64_ZX_Classics108","picture"],[64,1,"AI_PIC_459","picture"],[70,1,"FluxDommes4053","picture"],[181,1,"CastleLady31","picture"],[185,1,"Various7003","picture"],[189,1,"Fred111","picture"],[193,1,"FluxDommes2318","picture"],[91,1,"PharaohCurse110","picture"],[103,1,"FluxDommes2188","picture"],[32,5,"Yennefer21","picture"],[48,5,"ORileysMine60","picture"],[75,5,"UnusedEntities5061","picture"],[150,5,"Elite","picture"],[181,5,"FluxDommes3089","picture"],[185,5,"FluxDommes4049","picture"],[189,5,"ShortBlackSkirt_003","picture"],[89,3,"UnusedEntities2011","picture"],[42,3,"Princess5","picture"],[56,3,"Commando200","picture"],[164,3,"FluxDommes4028","picture"],[193,3,"Paperboy2","picture"],[189,3,"UnusedEntities5115","picture"],[185,3,"Pipeline88","picture"]]',
+        lights: '[[22,7,"DuaLLantern_027","standard"],[80,7,"WallLamp32","standardDimmed"],[84,7,"DuaLLantern_028","standardDimmed"]]',
+        gates: '[[10,7,"70.1","68.4","Closed"],[4,7,"70.2","68.5","Closed"],[1,7,"70.3","83.1","Down"],[13,7,"70.4","84.1","Down"]]',
+        gold: '[[112,"GoldBar"],[138,"GoldBar"],[157,"GoldBar"],[162,"GoldBar"],[151,"RedGem"],[178,"GreenGem"]]',
+        containers: '[[36,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[38,"IronChest","GOLD_ITEM_TYPE.GoldBar",7],[95,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[99,"PirateChest","GOLD_ITEM_TYPE.GoldBar",7],[62,"BookShelf","GOLD_ITEM_TYPE.SilverBar",7],[72,"PlainCloset","GOLD_ITEM_TYPE.SilverBar",7]]',
         doors: '[82]',
+        trainers: '[[217,1,"BlackBeret"],[213,1,"Alchemist"]]',
+        lairs: '[[105,5,"Lair34"],[119,3,"Lair58"]]',
+        monsterList: '["Skeleton","Skeleton","RedSkeleton"]',
     }
     ,
     71: {
@@ -1982,4 +1990,34 @@ const MAP = {
         lairs: '[[42,3,"Lair35"],[121,7,"Lair02"],[48,5,"Lair21"]]',
         monsterList: '["Skeleton","Skeleton","Skeleton","RedSkeleton"]',
     }
+    ,
+    83: {
+        name: "First Aid Underground Station",
+        sg: 0,
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 8000,
+        data: '{"width":"11","height":"11","map":"BB3AA3BB2AA9BAA5BABAA3BAA4BAA5BB2ABB4AA6BB2AA3BB8ABB2ABB12AA4BAA3BB3AA3BB2AA2BB3ABB2ABB13A$"}',
+        wall: "RockWall_SDXL_006",
+        floor: "BloodMarbleFloorWall_SDXL_005",
+        ceil: "BloodMarbleFloorWall_SDXL_012",
+        start: '[16,7]',
+        lights: '[[26,7,"Lamp41","standard"],[28,7,"Lamp41","standard"]]',
+        gates: '[[5,7,"83.1","70.3","Up"]]',
+        shrines: '[[115,1,"Nurse"]]',
+    }
+    ,
+    84 : {
+        name: "XXXX",
+        sg: 0,
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 8000,
+        data: '{"width":"11","height":"11","map":"BB2AA3BAA4BB3ABAA6BB8AA4BB4ABAA3BB3ABB3ABB2AA4BB13ABB3AA3BB2ABAA4BB3AA4BAA2BABABB5AA3BB14A$"}',
+        wall: "RockWall_SDXL_014",
+        floor: "BloodMarbleFloorWall_SDXL_014",
+        ceil: "IrregularTiledFloorCeil09",
+        start: '[16,7]',
+        gates: '[[5,7,"84.1","70.4","Up"]]',
+        }
 };

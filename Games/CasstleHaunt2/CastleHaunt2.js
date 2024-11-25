@@ -44,79 +44,24 @@ const DEBUG = {
         console.log("KILL all");
         LAIR.stop();
         ENTITY3D.POOL.clear();
-
+        MISSILE3D.POOL.clear(); 
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
         /** main area 4:
-            DONE * GoldKeysa1 wants "GoldBar", "GoldBar", "GoldBar", ---> GoldKey
-            DONE * GoldKeysa2 wants "GoldOre", "GoldOre", "GoldOre" ---> GoldKey
-            DONE * "BeerBarrelGirl" wants: "SmallBarrel","SmallBarrel","SmallBarrel", ---> "GlassOfBeer"
-            DONE * Miner1- "GlassOfBeer" -->GoldOre
-            DONE * Miner2- "PickAxe" -->GoldOre
-            DONE Miner3- "Pizza", "Beer" -->GoldOre
-            DONE PizzaMaker - "Milk", "Egg", -->Pizza
-            DONE Cow "HayBale",HayBale --> Milk
-            DONE BlondeChick: "Chicken", "Chicken","Chicken","Chicken","Chicken" --> Egg
-            DONE CatMama "Cat", "Cat", "Cat", "Cat", "Cat" --> "Chicken"
-         * 
-            DONE, Bought;;; * "WhiteHandbag"
-            DONE * "SmallBarrel" --> 68
-            DONE * "SmallBarrel" --> 73
-            DONE* "SmallBarrel" --> 80
-            DONE * "GlassOfBeer" ---> BeerBarrelGirl
-            DONE * "GoldBar", <--75
-            DONE * "GoldBar", --> 80
-            DONE * "GoldBar" <-- 71
-            DONE* "GoldOre", <--Miner1
-            DONE * "GoldOre", <-- Miner2
-            DONE * "GoldOre" <-- Miners
-            DONE* "Pizza" <--PizzaMAker
-            DONE * "Egg", 
-            DONE * "Milk"
-            DONE * "Brush"
-            DONE * "RedLeatherTop",  <-- 77
-            DONE * "RedLeatherLeggings", <-- 77
-            DONE * "RedLeatherBoots"<-- 77
-            DONE "HayBale" <-- 78
-            DONE "HayBale" <-- 80
-            DONE "Chicken", <-- 71
-            DONE "Chicken",<-- 73
-            DONE "Chicken", <-- 68
-            DONE "Chicken" <-- CatMama
-            DONE "Chicken" <-- 78
-            DONE "Cat", <-- 79
-            DONE "Cat", <-- 68
-            DONE "Cat", <-- 78
-            DONE "Cat", <-- 73
-            DONE "Cat" --> 80
-            DONE "Rat" <-- 78
-            DONE "Cheese", <-- 73
-            DONE "TropicalFish" <-- 80
-            DONE "Mouse" <-- 80
-            DONE "Sponge" -->71
-            DONE "RubberDuck", <-- 79
-            DONE "RedSandals", <-- 79
-            DONE "RedLeatherHat" <--76
-            DONE "LittleChicken" <-- 78
-            DONE "PickAxe" <-- 82
-            "Beer"
+            
         
   
 
-        * coins sources (3x, missing 0x):
-            * ApparitiaCorruption
-            * Bathy
-            * Beatchy
+        * coins sources (x, missing x):
+ 
  
 
         *
-        * COINS used (3x):
-            * BLondeKnight  
-            * DArk Priestess
-            * RUberella
+        * COINS used (x):
+           
 
         
         * key not yet used:
@@ -127,20 +72,11 @@ const DEBUG = {
          * missing sources for: 
             * 
 
-        * temple usage:
-            * heart
-            * *magic
-            * attack
 
-
-        * hole:
-            HoleDomme:
-            DommeFromTheHole:
-            Emerging:
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 70;
+        GAME.level = 84;  //70
 
         GAME.gold = 1877;
         GAME.lives = 3;
@@ -194,7 +130,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            "GoldCoin"
 
         ];
         for (let itm of invItems) {
@@ -203,7 +139,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Gold", 
+            "Gold",
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -237,7 +173,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.19",
+    VERSION: "0.13.20",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1302,6 +1238,7 @@ const GAME = {
                 AUDIO.Scroll.play();
                 break;
             case 'shrine':
+                console.log("SHRINE", interaction);
                 if (interaction.which === 'health') {
                     interaction.category = 'status';
                     return GAME.processInteraction(interaction);
@@ -1355,6 +1292,7 @@ const GAME = {
                 display(interaction.inventorySprite);
                 break;
             case "entity_interaction":
+                console.log("entity_interaction", interaction);
                 TITLE.keys()
                 break;
             case "munition":

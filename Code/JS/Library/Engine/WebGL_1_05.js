@@ -2397,7 +2397,7 @@ class Shrine extends WallFeature3D {
              * some shrines are item shops or scroll shops
              */
             if (this.interactionCategory === 'interaction_item') this.itemName = this.inventorySprite;
-            
+
             return {
                 category: this.interactionCategory,
                 inventorySprite: this.inventorySprite,
@@ -2478,6 +2478,8 @@ class InteractionEntity extends WallFeature3D {
     }
     interact(GA, inventory) {
         if (!this.ready) return;
+        if (WebGL.VERBOSE) console.log("** InteractionEntity", this);
+
         this.block();
         setTimeout(this.reset.bind(this), WebGL.INI.INTERACTION_TIMEOUT);
 
@@ -2485,7 +2487,7 @@ class InteractionEntity extends WallFeature3D {
         let name = null;
         let color = null;
         let which = null;
-        let level = null;
+        let level = this.level || null;
         let category = "entity_interaction";
         if (!this.virgin) {
             this.checkWants(inventory.item);
@@ -2498,7 +2500,7 @@ class InteractionEntity extends WallFeature3D {
                 category = INTERACTION_ITEM[name].category;
                 color = INTERACTION_ITEM[name].color;
                 which = INTERACTION_ITEM[name].which;
-                level = INTERACTION_ITEM[name].level;
+                level = this.level || INTERACTION_ITEM[name].level;
 
             } else if (this.wants.length < this.wantCount) {
                 this.setMode("progress");
