@@ -50,7 +50,7 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area 4:
+        /** main area 5:
             
         
   
@@ -76,9 +76,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 84;  //70
+        GAME.level = 85;  
 
-        GAME.gold = 1877;
+        GAME.gold = 2760;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -87,29 +87,29 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 30;
+        HERO.magic = 32;
         HERO.attack = 32;
 
-        HERO.health = 183;
-        HERO.maxHealth = 256;
+        HERO.health = 310;
+        HERO.maxHealth = 320;
 
 
         let actItems = [
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -130,7 +130,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldCoin"
+            
 
         ];
         for (let itm of invItems) {
@@ -139,7 +139,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Gold",
+            
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -159,7 +159,7 @@ const INI = {
     BOUNCE_COUNT: 5,
     SPAWN_DELAY: 9999,
     MONSTER_ATTACK_TIMEOUT: 2000,
-    MONSTER_SHOOT_TIMEOUT: 4000,
+    MONSTER_SHOOT_TIMEOUT: 5000,
     HEALTH: {
         Cake: 40,
         Steak: 80,
@@ -173,7 +173,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.13.20",
+    VERSION: "0.14.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
