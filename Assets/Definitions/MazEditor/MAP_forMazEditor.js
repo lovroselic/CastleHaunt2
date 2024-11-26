@@ -252,7 +252,21 @@ const DECAL_PAINTINGS = [
     "BlackBeret_105", "BlackBeret_106", "BlackBeret_107", "BlackBeret_108", "BlackBeret_109", "BlackBeret_110", "BlackBeret_111", "BlackBeret_112", "BlackBeret_113", "BlackBeret_114", "BlackBeret_115", "BlackBeret_116", "BlackBeret_117",
     "BlackBeret_118", "BlackBeret_119", "BlackBeret_120", "BlackBeret_121", "BlackBeret_122", "BlackBeret_123", "BlackBeret_124", "BlackBeret_125", "BlackBeret_126", "BlackBeret_127", "BlackBeret_128", "BlackBeret_129", "BlackBeret_130",
     "BlackBeret_131", "BlackBeret_132", "BlackBeret_133", "BlackBeret_134", "BlackBeret_135", "BlackBeret_136", "BlackBeret_137", "BlackBeret_138", "BlackBeret_139", "BlackBeret_140", "BlackBeret_141", "BlackBeret_142", "BlackBeret_143",
-    "BlackBeret_144", "BlackBeret_145", "BlackBeret_146"
+    "BlackBeret_144", "BlackBeret_145", "BlackBeret_146",
+    "NurseAlchemyMagic_001", "NurseAlchemyMagic_002", "NurseAlchemyMagic_003", "NurseAlchemyMagic_004", "NurseAlchemyMagic_005", "NurseAlchemyMagic_006", "NurseAlchemyMagic_007", "NurseAlchemyMagic_008", "NurseAlchemyMagic_009",
+    "NurseAlchemyMagic_010", "NurseAlchemyMagic_011", "NurseAlchemyMagic_012", "NurseAlchemyMagic_013", "NurseAlchemyMagic_014", "NurseAlchemyMagic_015", "NurseAlchemyMagic_016", "NurseAlchemyMagic_017", "NurseAlchemyMagic_018",
+    "NurseAlchemyMagic_019", "NurseAlchemyMagic_020", "NurseAlchemyMagic_021", "NurseAlchemyMagic_022", "NurseAlchemyMagic_023", "NurseAlchemyMagic_024", "NurseAlchemyMagic_025", "NurseAlchemyMagic_026", "NurseAlchemyMagic_027",
+    "NurseAlchemyMagic_028", "NurseAlchemyMagic_029", "NurseAlchemyMagic_030", "NurseAlchemyMagic_031", "NurseAlchemyMagic_032", "NurseAlchemyMagic_033", "NurseAlchemyMagic_034", "NurseAlchemyMagic_035", "NurseAlchemyMagic_036",
+    "NurseAlchemyMagic_037", "NurseAlchemyMagic_038", "NurseAlchemyMagic_039", "NurseAlchemyMagic_040", "NurseAlchemyMagic_041", "NurseAlchemyMagic_042", "NurseAlchemyMagic_043", "NurseAlchemyMagic_044", "NurseAlchemyMagic_045",
+    "NurseAlchemyMagic_046", "NurseAlchemyMagic_047", "NurseAlchemyMagic_048", "NurseAlchemyMagic_049", "NurseAlchemyMagic_050", "NurseAlchemyMagic_051", "NurseAlchemyMagic_052", "NurseAlchemyMagic_053", "NurseAlchemyMagic_054",
+    "NurseAlchemyMagic_055", "NurseAlchemyMagic_056", "NurseAlchemyMagic_057", "NurseAlchemyMagic_058", "NurseAlchemyMagic_059", "NurseAlchemyMagic_060", "NurseAlchemyMagic_061", "NurseAlchemyMagic_062", "NurseAlchemyMagic_063",
+    "NurseAlchemyMagic_064", "NurseAlchemyMagic_065", "NurseAlchemyMagic_066", "NurseAlchemyMagic_067", "NurseAlchemyMagic_068", "NurseAlchemyMagic_069", "NurseAlchemyMagic_070", "NurseAlchemyMagic_071", "NurseAlchemyMagic_072",
+    "NurseAlchemyMagic_073", "NurseAlchemyMagic_074", "NurseAlchemyMagic_075", "NurseAlchemyMagic_076", "NurseAlchemyMagic_077", "NurseAlchemyMagic_078", "NurseAlchemyMagic_079", "NurseAlchemyMagic_080", "NurseAlchemyMagic_081",
+    "NurseAlchemyMagic_082", "NurseAlchemyMagic_083", "NurseAlchemyMagic_084", "NurseAlchemyMagic_085", "NurseAlchemyMagic_086", "NurseAlchemyMagic_087", "NurseAlchemyMagic_088", "NurseAlchemyMagic_089", "NurseAlchemyMagic_090",
+    "NurseAlchemyMagic_091", "NurseAlchemyMagic_092", "NurseAlchemyMagic_093", "NurseAlchemyMagic_094", "NurseAlchemyMagic_095", "NurseAlchemyMagic_096", "NurseAlchemyMagic_097", "NurseAlchemyMagic_098", "NurseAlchemyMagic_099",
+    "NurseAlchemyMagic_100", "NurseAlchemyMagic_101", "NurseAlchemyMagic_102", "NurseAlchemyMagic_103", "NurseAlchemyMagic_104", "NurseAlchemyMagic_105", "NurseAlchemyMagic_106", "NurseAlchemyMagic_107", "NurseAlchemyMagic_108",
+    "NurseAlchemyMagic_109", "NurseAlchemyMagic_110", "NurseAlchemyMagic_111", "NurseAlchemyMagic_112", "NurseAlchemyMagic_113", "NurseAlchemyMagic_114", "NurseAlchemyMagic_115", "NurseAlchemyMagic_116", "NurseAlchemyMagic_117",
+    "NurseAlchemyMagic_118", "NurseAlchemyMagic_119", "NurseAlchemyMagic_120", "NurseAlchemyMagic_121", "NurseAlchemyMagic_122", "NurseAlchemyMagic_123", "NurseAlchemyMagic_124"
 ].sort();
 
 
