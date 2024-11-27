@@ -57,7 +57,8 @@ const ENGINE = {
     PATH_ROUNDS: 1999,
     MAX_PATH: 999,
     MOUSE_IDLE: 3000,
-    OVERLAP_TOLERANCE: 4
+    OVERLAP_TOLERANCE: 4,
+    MAX_JOINTS: 128,
   },
   verbose: false,
   setGridSize(size = 48) {
@@ -1578,8 +1579,9 @@ const ENGINE = {
             const modelName = model.scenes[0].name;
             if (ENGINE.verbose) console.info(modelName, model);
 
-            //assume single buffer!
-            if (model.buffers.length > 1) throw new Error(`Expected single buffer, got ${model.buffers.length}`);
+            
+            if (model.buffers.length > 1) throw new Error(`Expected single buffer, got ${model.buffers.length}`);                                           //assume single buffer!
+            if (model.nodes.length > ENGINE.INI.MAX_JOINTS) throw new Error(`Expected ${ENGINE.INI.MAX_JOINTS} nodes, but got ${model.nodes.length}`);      //assume no more than ### joints, this is hardcoded in fragment shader
             const bin_name = ENGINE.MODEL_SOURCE + model.buffers[0].uri;
             const buffer = await loadBinaryFile(bin_name);
 

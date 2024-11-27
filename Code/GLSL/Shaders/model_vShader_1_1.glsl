@@ -1,6 +1,6 @@
 ///model_vShader///
 /*
-* v1.0
+* v1.1
 */
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
@@ -8,7 +8,7 @@ precision highp float;
 precision mediump float;
 #endif
 
-const int MAX_JOINTS = 256;
+const int MAX_JOINTS = 128;
 
 attribute vec4 aVertexPosition;
 attribute vec3 aVertexNormal;

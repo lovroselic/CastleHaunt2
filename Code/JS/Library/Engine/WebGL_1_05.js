@@ -41,7 +41,7 @@ const WebGL = {
     VERSION: "1.05",
     CSS: "color: gold",
     CTX: null,
-    VERBOSE: false,
+    VERBOSE: true, //default: false
     INI: {
         PIC_WIDTH: 0.5,
         PIC_TOP: 0.2,
@@ -147,10 +147,78 @@ const WebGL = {
     },
     update_shaders_forLightSources: ['fShader'],
     hero: null,
+    checkUniformVectorUsage(gl, program, vertexShaderSource, fragmentShaderSource) {
+        function getUniformVectorCount(type, size) {
+            switch (type) {
+                case gl.FLOAT: return 1 * size;
+                case gl.FLOAT_VEC2: return 2 * size;
+                case gl.FLOAT_VEC3: return 3 * size;
+                case gl.FLOAT_VEC4: return 4 * size;
+                case gl.INT: return 1 * size;
+                case gl.INT_VEC2: return 2 * size;
+                case gl.INT_VEC3: return 3 * size;
+                case gl.INT_VEC4: return 4 * size;
+                case gl.BOOL: return 1 * size;
+                case gl.BOOL_VEC2: return 2 * size;
+                case gl.BOOL_VEC3: return 3 * size;
+                case gl.BOOL_VEC4: return 4 * size;
+                case gl.FLOAT_MAT2: return 4 * size; // 2x2 = 4 components
+                case gl.FLOAT_MAT3: return 9 * size; // 3x3 = 9 components
+                case gl.FLOAT_MAT4: return 16 * size; // 4x4 = 16 components
+                case gl.SAMPLER_2D: return 0; // Texture samplers don't consume uniform vectors
+                case gl.SAMPLER_CUBE: return 0;
+                default: return 0; // Unsupported or unknown type
+            }
+        }
+
+        console.log("----------------------------------");
+        const maxVertexUniformVectors = gl.getParameter(gl.MAX_VERTEX_UNIFORM_VECTORS);
+        const maxFragmentUniformVectors = gl.getParameter(gl.MAX_FRAGMENT_UNIFORM_VECTORS);
+        const activeUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
+
+        let vertexUniformVectors = 0;
+        let fragmentUniformVectors = 0;
+
+        for (let i = 0; i < activeUniforms; i++) {
+            const uniformInfo = gl.getActiveUniform(program, i);
+            if (!uniformInfo) continue;
+
+            const { type, size, name } = uniformInfo;
+            const vectorCount = getUniformVectorCount(type, size);
+            const keyWord = name.split(/[.\[]/)[0];
+            const uniform_declaration = new RegExp(`uniform\\s+\\w+\\s+${keyWord}`);
+
+            const isVertexUniform = uniform_declaration.test(vertexShaderSource);
+            const isFragmentUniform = uniform_declaration.test(fragmentShaderSource);
+
+            if (isVertexUniform) vertexUniformVectors += vectorCount;
+            if (isFragmentUniform) fragmentUniformVectors += vectorCount;
+
+            if (!isFragmentUniform && !isVertexUniform) {
+                console.warn(`NOT FOUND Uniform Name: ${name}, Type: ${type}, Size: ${size}, Vectors: ${vectorCount}, Keyword: ${keyWord}.  Exists in Vertex Shader: ${isVertexUniform}, Fragment Shader: ${isFragmentUniform}`);
+            } else console.log(`Uniform Name: ${name}, Type: ${type}, Size: ${size}, Vectors: ${vectorCount}`);
+        }
+
+        console.log(`Vertex Shader Uniform Vectors Used: ${vertexUniformVectors}, available: ${maxVertexUniformVectors - vertexUniformVectors}`);
+        console.log(`Fragment Shader Uniform Vectors Used: ${fragmentUniformVectors}, available: ${maxFragmentUniformVectors - fragmentUniformVectors}`);
+        //console.log(`Max: ${maxVertexUniformVectors} Vertex, ${maxFragmentUniformVectors} Fragment.`);
+        console.assert(vertexUniformVectors <= maxVertexUniformVectors, `Vertex shader exceeds uniform vector limit! Used: ${vertexUniformVectors}, Max: ${maxVertexUniformVectors}`);
+        console.assert(fragmentUniformVectors <= maxFragmentUniformVectors, `Fragment shader exceeds uniform vector limit! Used: ${fragmentUniformVectors}, Max: ${maxFragmentUniformVectors}`);
+        console.log("----------------------------------");
+
+    },
+
     setContext(layer) {
         this.CTX = LAYER[layer];
-        if (this.VERBOSE) console.log(`%cContext:`, this.CSS, this.CTX);
-        if (!this.CTX) console.error("Unable to initialize WebGL. Your browser or machine may not support it.");
+        const gl = this.CTX;
+        if (this.VERBOSE) {
+            console.info("******* WebGL initialized *******");
+            console.log(`%cContext:`, this.CSS, gl);
+            console.info(`MAX_VERTEX_UNIFORM_VECTORS ${gl.getParameter(gl.MAX_VERTEX_UNIFORM_VECTORS)}`);
+            console.info(`MAX_FRAGMENT_UNIFORM_VECTORS ${gl.getParameter(gl.MAX_FRAGMENT_UNIFORM_VECTORS)}`)
+            console.info("*********************************");
+        }
+        if (!gl) console.error("Unable to initialize WebGL. Your browser or machine may not support it.");
     },
     setWorld(world) {
         const gl = this.CTX;
@@ -372,6 +440,11 @@ const WebGL = {
                 uMaterialSpecularColor: gl.getUniformLocation(this[prog].program, 'uMaterial.specularColor'),
                 uMaterialShininess: gl.getUniformLocation(this[prog].program, 'uMaterial.shininess'),
             };
+
+            if (this.VERBOSE) {
+                console.info(`\nOther ${T} program:`);
+                this.checkUniformVectorUsage(gl, shaderProgram, vSource, fSource);
+            }
         }
     },
     initParticlePrograms(gl) {
@@ -398,6 +471,11 @@ const WebGL = {
                     return null;
                 }
                 this[prog][ST].program = shaderProgram;
+
+                if (this.VERBOSE) {
+                    console.info(`\nParticle ${PT} program:`);
+                    this.checkUniformVectorUsage(gl, shaderProgram, vSource, fSource);
+                }
             }
         }
     },
@@ -430,6 +508,11 @@ const WebGL = {
         };
 
         this.pickProgram = programInfo;
+
+        if (this.VERBOSE) {
+            console.info("\nPick program:");
+            this.checkUniformVectorUsage(gl, shaderProgram, vSource, fSource);
+        }
     },
     initShaderProgram(gl) {
         const vSource = SHADER[this.main_program.vSource];
@@ -471,6 +554,12 @@ const WebGL = {
         };
 
         this.program = programInfo;
+
+        if (this.VERBOSE) {
+            console.info("\nShader program:");
+            this.checkUniformVectorUsage(gl, shaderProgram, vSource, fSource);
+        }
+
     },
     setModelBuffers(gl) {
         for (let m of this.models) {

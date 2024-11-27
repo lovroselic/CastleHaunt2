@@ -2044,12 +2044,13 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 3,
         spawnDelay: 8000,
-        data: '{"width":"17","height":"11","map":"BB2AA6BB2AA6BB2AA10BABAA23BB6AA2BB7ABB13ABB6AA2BB92ABB2$"}',
+        data: '{"width":"17","height":"11","map":"BB3AA5EAA8BABAA11BB2AA15BB2AA15BB2AA7BAA2BAA2BB3AA3BB2AA2BB2AA3BB7AA2BB13AA3BB3ABAA2BB5ABB4AA2BB9AA2BB2ABB2ABAA2BB5ABB20A$A"}',
         wall: "RoughCave09",
         floor: "BloodMarbleFloorWall_SDXL_027",
         ceil: "BigRockWall2",
         start: '[100,3]',
         lights: '[[78,3,"Candelabra07","standardDimmed"],[112,3,"Candelabra07","standardDimmed"]]',
         gates: '[[101,3,"85.1","68.12","Closed"]]',
+        doors: '[88]',
         }
 };
