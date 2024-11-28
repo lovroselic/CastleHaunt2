@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.13.02",
+  VERSION: "0.14.00",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",

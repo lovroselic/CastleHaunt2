@@ -1301,7 +1301,7 @@ class GridArray extends ArrayBasedDataStructure {
     }
     return GA;
   }
-  toTextureMap() {
+  /* toTextureMap() {
     const width = this.width;
     const height = this.height;
     const pixelData = new Uint8Array(width * height);
@@ -1310,6 +1310,21 @@ class GridArray extends ArrayBasedDataStructure {
         const grid = new Grid(x, y);
         const index = this.gridToIndex(grid);
         // Assign 0 for passable (light) and 255 for impassable (wall)
+        pixelData[index] = this.notWall(grid) ? 0 : 255;
+      }
+    }
+    return pixelData;
+  } */
+  toTextureMap() {
+    const paddedWidth = POT(this.width);
+    const paddedHeight = POT(this.height);
+
+    const pixelData = new Uint8Array(paddedWidth * paddedHeight).fill(255);
+
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x++) {
+        const grid = new Grid(x, y);
+        const index = y * paddedWidth + x;
         pixelData[index] = this.notWall(grid) ? 0 : 255;
       }
     }

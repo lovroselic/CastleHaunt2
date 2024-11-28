@@ -307,15 +307,19 @@ const WebGL = {
         } else console.info(`${label}: WebGL Error Code ${error}`);
     },
     createOcclusionTexture(pixelData, width, height) {
-        if (this.VERBOSE) console.log("new occlusion texture creation", width, height);
         const gl = this.CTX;
+        const paddedWidth = POT(width);
+        const paddedHeight = POT(height);
+        if (this.VERBOSE) console.log("new occlusion texture creation", width, height, "->", paddedWidth, paddedHeight);
         if (this.previousOcclusionTexture) gl.deleteTexture(this.previousOcclusionTexture);
+
         const texture = gl.createTexture();
         gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
         gl.bindTexture(gl.TEXTURE_2D, texture);
         gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);                                       // Explicitly disable alpha premultiplication
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);                                                  // Explicitly disable Y-flipping
-        gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, width, height, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
+        //gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, width, height, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, paddedWidth, paddedHeight, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
@@ -325,13 +329,20 @@ const WebGL = {
         return texture;
     },
     visualizeTexture(texture, width, height, CTX, scale = 8) {
-        if (this.VERBOSE) console.warn("visualize texture", width, height);
         const gl = this.CTX;
-
+        //const paddedWidth = POT(width);
+        //const paddedHeight = POT(height);
+        width = POT(width);
+        height = POT(height);
+        
+        if (this.VERBOSE) console.warn("visualize texture", width, height);
         if (this.frameBuffer) gl.deleteFramebuffer(this.frameBuffer);
 
+        //CTX.canvas.width = paddedWidth * scale;
+        //CTX.canvas.height = paddedHeight * scale;
+
         CTX.canvas.width = width * scale;
-        CTX.canvas.height = height * scale;
+        CTX.canvas.height = width * scale;
 
         const framebuffer = gl.createFramebuffer();
         gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
