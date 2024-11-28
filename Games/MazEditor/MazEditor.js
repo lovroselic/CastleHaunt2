@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.13.01",
+  VERSION: "0.13.02",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -129,7 +129,11 @@ const GAME = {
   levelStart() {
     GAME.initLevel(GAME.level);
     GAME.setFirstPerson();
-    WebGL.renderScene();
+    WebGL.renderScene($MAP.map);
+    // render occlusion map
+    console.info("rendering occlusion map ...", $MAP.map, $MAP.map.textureMap);
+    $MAP.map.occlusionMap = WebGL.createOcclusionTexture($MAP.map.textureMap, $MAP.map.width, $MAP.map.height);
+    WebGL.visualizeTexture($MAP.map.occlusionMap, $MAP.map.width, $MAP.map.height, LAYER.debug);
   },
   setFirstPerson() {
     WebGL.CONFIG.set("first_person", false);
@@ -144,6 +148,7 @@ const GAME = {
     console.warn("building world, level", level);
     SPAWN_TOOLS.spawn(level);
     MAP[level].world = WORLD.build(MAP[level].map);
+    $MAP.map.textureMap = $MAP.map.GA.toTextureMap();
   },
   setWorld(level, decalsAreSet = false) {
     console.log("setting world");
@@ -164,19 +169,16 @@ const GAME = {
     const start_dir = MAP[level].map.startPosition.vector;
     let start_grid = MAP[level].map.startPosition.grid;
     start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), 0.6);
-
     WebGL.CONFIG.set("first_person", false);
 
     if (WebGL.CONFIG.firstperson) {
       HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, null);
     }
 
-    WebGL.init_required_IAM(MAP[level].map, HERO);
     WebGL.setContext('webgl');
-
+    WebGL.init_required_IAM($MAP.map, HERO);
     this.buildWorld(level);
     this.setWorld(level);
-
   },
   arena() {
     GAME.init();
@@ -806,7 +808,7 @@ const GAME = {
       $MAP.height = $("#verticalGrid").val();
       $MAP.map = FREE_MAP.create($MAP.width, $MAP.height, null, MAP_TOOLS.INI.GA_BYTE_SIZE);
       $MAP.init();
-      console.log("map:", $MAP.map);
+      console.log("GAME.init ->map:", $MAP.map);
       GAME.render();
     }
   },
@@ -885,6 +887,7 @@ const GAME = {
     $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 4);
     ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["pacgrid", "wall", "grid", "coord", "click"], null);
     ENGINE.addBOX("WEBGL", 800, 600, ["3d_webgl"], null);
+    ENGINE.addBOX("DEBUG", 320, 200, ["debug"], null);
 
     $("#buttons").append("<input type='button' id='new' value='New'>");
     $("#buttons").append("<input type='button' id='arena' value='Arena'>");
@@ -1232,6 +1235,7 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
     $("#exp").val(roomExport);
   },
   import() {
+    $MAP.map.textureMap = null;
     const ImportText = $("#exp").val();
     console.info("ImportText", ImportText);
     const Import = JSON.parse(ImportText.extractGroup(/data:\s\'(.*)\'/));
@@ -1256,9 +1260,11 @@ ceil: "${$("#ceiltexture")[0].value}",\n`;
       $(`#${prop}texture`).val(ImportText.extractGroup(pattern));
     }
 
-    GAME.updateTextures();
     $MAP.map = FREE_MAP.import(Import, MAP_TOOLS.INI.GA_BYTE_SIZE);
     $MAP.init();
+    WebGL.init_required_IAM($MAP.map, HERO);
+    console.log("$MAP.map", $MAP.map);
+    GAME.updateTextures();  //restarts the level
 
     for (const prop of [...$MAP.properties, ...$MAP.lists]) {
       const pattern = new RegExp(`${prop}:\\s'(.*)'`);

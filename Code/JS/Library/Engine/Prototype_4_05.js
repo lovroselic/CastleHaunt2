@@ -158,6 +158,30 @@ changelog:
     return obj;
   }
 
+ /**
+ * Calculates the smallest power of two greater than or equal to the given value.
+ *
+ * This function is useful for scenarios where alignment to powers of two is required,
+ * such as memory allocation, binary operations, or certain algorithms.
+ *
+ * @param {number} value - A positive numerical value for which the next power of two is calculated.
+ * @returns {number} The smallest power of two greater than or equal to the input value.
+ * 
+ * @throws {TypeError} If the input value is not a number.
+ * @throws {RangeError} If the input value is less than or equal to zero.
+ *
+ */
+function POT(value) {
+  if (typeof value !== 'number') {
+    throw new TypeError('Input value must be a number.');
+  }
+  if (value <= 0) {
+    throw new RangeError('Input value must be greater than zero.');
+  }
+  
+  return Math.pow(2, Math.ceil(Math.log2(value)));
+}
+
   window.RND = RND;
   window.RNDF = RNDF;
   window.RandomFloat = RandomFloat;
@@ -178,6 +202,7 @@ changelog:
   window.listObjectKeys = listObjectKeys;
   window.stringifyObjectList = stringifyObjectList;
   window.evalObjectString = evalObjectString;
+  window.POT = POT;
 })();
 
 /** Date prototypes */

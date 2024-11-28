@@ -84,6 +84,7 @@ const MAP_TOOLS = {
         this.MAP[level].map.maxSpawned = this.MAP[level].maxSpawned || -1;
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
         this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
+        this.MAP[level].map.textureMap = GA.toTextureMap();
         /**  */
         if (ENGINE.verbose) console.info("Unpacked MAP level", level, "map", this.MAP[level].map);
     },

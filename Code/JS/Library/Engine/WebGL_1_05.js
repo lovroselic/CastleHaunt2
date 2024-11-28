@@ -147,6 +147,25 @@ const WebGL = {
     },
     update_shaders_forLightSources: ['fShader'],
     hero: null,
+    cleanupResources() {
+        const gl = this.CTX;
+
+        // Cleanup framebuffers
+        if (this.frameBuffer) {
+            gl.deleteFramebuffer(this.frameBuffer);
+            this.frameBuffer = null;
+        }
+
+        // Cleanup textures
+        if (this.texture) {
+            for (let key in this.texture) {
+                gl.deleteTexture(this.texture[key]);
+            }
+            this.texture = null;
+        }
+
+        if (this, VERBOSE) console.log("WebGL resources cleaned up.");
+    },
     checkUniformVectorUsage(gl, program, vertexShaderSource, fragmentShaderSource) {
         function getUniformVectorCount(type, size) {
             switch (type) {
@@ -201,13 +220,11 @@ const WebGL = {
 
         console.log(`Vertex Shader Uniform Vectors Used: ${vertexUniformVectors}, available: ${maxVertexUniformVectors - vertexUniformVectors}`);
         console.log(`Fragment Shader Uniform Vectors Used: ${fragmentUniformVectors}, available: ${maxFragmentUniformVectors - fragmentUniformVectors}`);
-        //console.log(`Max: ${maxVertexUniformVectors} Vertex, ${maxFragmentUniformVectors} Fragment.`);
         console.assert(vertexUniformVectors <= maxVertexUniformVectors, `Vertex shader exceeds uniform vector limit! Used: ${vertexUniformVectors}, Max: ${maxVertexUniformVectors}`);
         console.assert(fragmentUniformVectors <= maxFragmentUniformVectors, `Fragment shader exceeds uniform vector limit! Used: ${fragmentUniformVectors}, Max: ${maxFragmentUniformVectors}`);
         console.log("----------------------------------");
 
     },
-
     setContext(layer) {
         this.CTX = LAYER[layer];
         const gl = this.CTX;
@@ -271,12 +288,88 @@ const WebGL = {
         EXPLOSION3D.init(map, hero);
         LAIR.init(map, hero);
         this.hero = hero;
+        if (map.textureMap) {
+            map.occlusionMap = this.createOcclusionTexture(map.textureMap, map.width, map.height);
+            if (this.VERBOSE) console.log("WebGL occlusionMap set:", map.occlusionMap);
+        }
     },
     setCamera(camera) {
         this.camera = camera;
         const projectionMatrix = glMatrix.mat4.create();
         glMatrix.mat4.perspective(projectionMatrix, this.camera.fov, this.aspect, this.zNear, this.zFar);
         this.projectionMatrix = projectionMatrix;
+    },
+    checkError(label) {
+        const gl = this.CTX;
+        const error = gl.getError();
+        if (error !== gl.NO_ERROR) {
+            console.error(`${label}: WebGL Error Code ${error}`);
+        } else console.info(`${label}: WebGL Error Code ${error}`);
+    },
+    createOcclusionTexture(pixelData, width, height) {
+        if (this.VERBOSE) console.log("new occlusion texture creation", width, height);
+        const gl = this.CTX;
+        if (this.previousOcclusionTexture) gl.deleteTexture(this.previousOcclusionTexture);
+        const texture = gl.createTexture();
+        gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);                                       // Explicitly disable alpha premultiplication
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);                                                  // Explicitly disable Y-flipping
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, width, height, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+
+        this.previousOcclusionTexture = texture;
+        return texture;
+    },
+    visualizeTexture(texture, width, height, CTX, scale = 8) {
+        if (this.VERBOSE) console.warn("visualize texture", width, height);
+        const gl = this.CTX;
+
+        if (this.frameBuffer) gl.deleteFramebuffer(this.frameBuffer);
+
+        CTX.canvas.width = width * scale;
+        CTX.canvas.height = height * scale;
+
+        const framebuffer = gl.createFramebuffer();
+        gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
+        gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+
+        const pixels = new Uint8Array(width * height);                                                  // Single-channel (GL_R8)
+        gl.readPixels(0, 0, width, height, gl.RED, gl.UNSIGNED_BYTE, pixels);
+        WebGL.checkError("read pixels");
+
+        const imageData = CTX.createImageData(width, height);
+        for (let i = 0; i < pixels.length; i++) {
+            const value = pixels[i];
+            imageData.data[i * 4] = value;                                                              // Red channel
+            imageData.data[i * 4 + 1] = value;                                                          // Green channel (copy red for grayscale)
+            imageData.data[i * 4 + 2] = value;                                                          // Blue channel (copy red for grayscale)
+            imageData.data[i * 4 + 3] = 255;                                                            // Alpha channel
+        }
+
+        // Upscale the ImageData to the canvas
+        const offscreenCanvas = document.createElement('canvas');
+        offscreenCanvas.width = width;
+        offscreenCanvas.height = height;
+        const offscreenCtx = offscreenCanvas.getContext('2d');
+        offscreenCtx.putImageData(imageData, 0, 0);
+
+        // Draw the upscaled image to the visible canvas
+        CTX.imageSmoothingEnabled = false;                                                               // Disable smoothing for pixelated look
+        CTX.drawImage(offscreenCanvas, 0, 0, width * scale, height * scale);
+
+        if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) !== gl.FRAMEBUFFER_COMPLETE) {
+            console.error("Framebuffer is not complete.");
+        }
+
+        this.frameBuffer = framebuffer;
+
+        // Cleanup
+        gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+        gl.deleteFramebuffer(framebuffer);
     },
     createTexture(T, S = null, flip = false) {
         if (T instanceof WebGLTexture) return T;
@@ -550,6 +643,8 @@ const WebGL = {
                 uMaterialDiffuseColor: gl.getUniformLocation(shaderProgram, 'uMaterial.diffuseColor'),
                 uMaterialSpecularColor: gl.getUniformLocation(shaderProgram, 'uMaterial.specularColor'),
                 uMaterialShininess: gl.getUniformLocation(shaderProgram, 'uMaterial.shininess'),
+                uOcclusionMap: gl.getUniformLocation(shaderProgram, "uOcclusionMap"),
+                uGridSize: gl.getUniformLocation(shaderProgram, "uGridSize")
             },
         };
 
@@ -589,7 +684,7 @@ const WebGL = {
         gl.clearDepth(1.0);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     },
-    renderScene() {
+    renderScene(map) {
         const gl = this.CTX;
         gl.clearColor(0.0, 0.0, 0.0, 1.0);
         gl.clearDepth(1.0);
@@ -680,6 +775,12 @@ const WebGL = {
         gl.uniform3fv(this.program.uniformLocations.lightColors, lightColors);
         gl.uniform3fv(this.program.uniformLocations.lightDirections, lightDirections);
 
+        //occlusion map
+        gl.activeTexture(gl.TEXTURE1); // Use texture unit 1
+        gl.bindTexture(gl.TEXTURE_2D, map.occlusionMap);
+        gl.uniform1i(this.program.uniformLocations.uOcclusionMap, 1);
+        gl.uniform2f(this.program.uniformLocations.uGridSize, map.width, map.height);
+
         //set global uniforms for model program - could be extended to loop over more programs if required
         gl.useProgram(this.model_program.program);
         gl.uniformMatrix4fv(this.model_program.uniforms.projection_matrix, false, this.projectionMatrix);
@@ -697,7 +798,9 @@ const WebGL = {
         gl.uniformMatrix4fv(this.pickProgram.uniformLocations.uTranslate, false, translationMatrix);
         gl.uniformMatrix4fv(this.pickProgram.uniformLocations.uRotY, false, rotateY);
 
-        this.renderDungeon();
+
+
+        this.renderDungeon(map);
     },
     enableAttributes(gl) {
         //dungeon
@@ -731,9 +834,14 @@ const WebGL = {
         gl.vertexAttribPointer(this.pickProgram.attribLocations.vertexPosition, 3, gl.FLOAT, false, 0, 0);
         gl.enableVertexAttribArray(this.pickProgram.attribLocations.vertexPosition);
     },
-    renderDungeon() {
+    renderDungeon(map) {
         const gl = this.CTX;
         gl.useProgram(this.program.program);
+
+        // Bind occlusion map
+        gl.activeTexture(gl.TEXTURE1);
+        gl.bindTexture(gl.TEXTURE_2D, map.occlusionMap);
+
         this.enableAttributes(gl);
 
         //start draw

@@ -16,7 +16,7 @@ known bugs:
 */
 
 const GRID = {
-  VERSION: "3.14",
+  VERSION: "3.15",
   CSS: "color: #0AA",
   SETTING: {
     ALLOW_CROSS: false,
@@ -1211,7 +1211,6 @@ class GridArray extends ArrayBasedDataStructure {
     }
     return [start, lastDir];
   }
-
   positionIsNotWall(pos) {
     const grid = Grid.toClass(pos);
     const check = this.check(grid, AIR_MOVE_GRID_EXCLUSION.sum());
@@ -1225,7 +1224,6 @@ class GridArray extends ArrayBasedDataStructure {
     }
     return true;
   }
-
   /**
  * @param {FP_Grid} pos - position of entity
  * @param {number} exlusion - binary constant array of MAP_DICT values, @default GROUND_MOVE_GRID_EXCLUSION
@@ -1244,7 +1242,6 @@ class GridArray extends ArrayBasedDataStructure {
     }
     return true;
   }
-
   entityInWallPoint(pos, dir, r, resolution = 8) {
     let checks = this.pointsAroundEntity(pos, dir, r, resolution);
     for (const point of checks) {
@@ -1303,6 +1300,20 @@ class GridArray extends ArrayBasedDataStructure {
       GA.map[i] = string[i].charCodeAt(0) - offset;
     }
     return GA;
+  }
+  toTextureMap() {
+    const width = this.width;
+    const height = this.height;
+    const pixelData = new Uint8Array(width * height);
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const grid = new Grid(x, y);
+        const index = this.gridToIndex(grid);
+        // Assign 0 for passable (light) and 255 for impassable (wall)
+        pixelData[index] = this.notWall(grid) ? 0 : 255;
+      }
+    }
+    return pixelData;
   }
 }
 class NodeArray extends ArrayBasedDataStructure {
