@@ -44,7 +44,7 @@ const DEBUG = {
         console.log("KILL all");
         LAIR.stop();
         ENTITY3D.POOL.clear();
-        MISSILE3D.POOL.clear(); 
+        MISSILE3D.POOL.clear();
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
@@ -76,7 +76,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 85;  
+        GAME.level = 85;
 
         GAME.gold = 2760;
         GAME.lives = 3;
@@ -130,7 +130,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            
+
 
         ];
         for (let itm of invItems) {
@@ -139,7 +139,7 @@ const DEBUG = {
         }
 
         let keys = [
-            
+
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -172,7 +172,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.14.04",
+    VERSION: "0.14.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -238,6 +238,7 @@ const PRG = {
 
         if (DEBUG._2D_display) {
             ENGINE.addBOX("LEVEL", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["pacgrid", "grid", "coord", "player"], null);
+            //ENGINE.addBOX("DEBUG", 320, 200, ["debug"], null);
         }
 
         /** dev settings */
@@ -1148,10 +1149,12 @@ const GAME = {
             GAME.FPS(lapsedTime);
         }
         if (DEBUG._2D_display) {
-            ENGINE.BLOCKGRID.draw(MAP[GAME.level].map);
+            const map = MAP[GAME.level].map;
+            ENGINE.BLOCKGRID.draw(map);
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
             DYNAMIC_ITEM3D.drawVector2D();
+            //WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
         }
     },
     processInteraction(interaction) {

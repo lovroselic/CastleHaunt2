@@ -2038,7 +2038,7 @@ const MAP = {
         oracles: '[[115,1,"ApparitiaJustMe"]]',
     }
     ,
-    85 : {
+    85: {
         name: "Descent",
         sg: 0,
         maxSpawned: 4,
@@ -2049,8 +2049,8 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_027",
         ceil: "BigRockWall2",
         start: '[100,3]',
-        lights: '[[44,7,"DuaLLantern_007","standard"],[175,1,"DuaLLantern_007","standardRedish"],[71,5,"Lamp44","standard"]]',
+        lights: '[[44,7,"DuaLLantern_007","standard"]]',
         gates: '[[101,3,"85.1","68.12","Closed"]]',
         doors: '[88]',
-        }
+    }
 };

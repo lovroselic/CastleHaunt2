@@ -42,12 +42,13 @@ const float PL_SpecularStrength = 6.5;
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 25;                                   // Max steps for raycasting loop - 25
+const float EPSILON = 0.02;                                  // don't enter the wall, check for occlusion before 0.05
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
-bool Raycast(vec3 rayOrigin, vec3 raytarget);
-vec2 worldToGridTexCoord(vec3 worldPos);
-vec2 worldToNormalizedTexCoord(vec3 worldPos);
-bool isOccluded(vec3 fragPos);
+bool Raycast(vec3 rayOrigin, vec3 rayTarget, vec3 lightDir);
+vec2 worldToGridTexCoord(vec2 position2D);
+vec2 worldToNormalizedTexCoord(vec2 position2D);
+bool isOccluded(vec2 position2D);
 
 void main(void) {
     vec3 ambientColor = uMaterial.ambientColor;
@@ -79,9 +80,7 @@ void main(void) {
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection) {
     float distance = distance(lightPosition, FragPos);
     vec3 lightDir = normalize(lightPosition - FragPos);
-    bool occluded = Raycast(lightPosition, FragPos);
-    //if (occluded) return vec3(0.0); // No contribution if occluded
-
+    bool occluded = Raycast(lightPosition, FragPos, lightDir);
     float attenuation = 1.0 / (1.0 + 0.1 * distance + 0.65 * (distance * distance));
 
     //is fragment illuminated by ligh source? omni dir is (255,255,255)
@@ -118,26 +117,35 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     diffuselight = clamp(diffuselight, 0.0, 1.0);
     specularLight = clamp(specularLight, 0.0, 1.0);
 
-    if (illumination <= 0.0 || occluded) {
+    if (illumination <= 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
+    } else if (occluded && inner == 0) {
+        return vec3(0.0); // No contribution if occluded - debug
     }
 
     return ambientLight + diffuselight + specularLight;
 }
 
-bool Raycast(vec3 rayOrigin, vec3 rayTarget) {
-    vec2 gridOrigin = worldToGridTexCoord(rayOrigin);
-    vec2 gridTarget = worldToGridTexCoord(rayTarget);
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir) {
+    vec2 lightDir2D = normalize(-lightDir).xz;
+    vec2 origin = rayOrigin3D.xz;
+    vec2 target = rayTarget3D.xz;
+    vec2 normalizedDelta = normalize(target - origin);
+    target -= normalizedDelta * EPSILON;
+
+    vec2 gridOrigin = worldToGridTexCoord(origin + lightDir2D * EPSILON);
+    vec2 gridTarget = worldToGridTexCoord(target);
     vec2 delta = gridTarget - gridOrigin;
+
     vec2 step = sign(delta);
-    vec2 tDelta = abs(1.0 / delta);
+    vec2 tDelta = abs(1.0 / delta);     // How far to go in each direction to cross a grid line
     vec2 tMax = (vec2(step.x > 0.0 ? (1.0 - fract(gridOrigin.x)) : fract(gridOrigin.x), step.y > 0.0 ? (1.0 - fract(gridOrigin.y)) : fract(gridOrigin.y)) * tDelta);
-    vec2 current = floor(gridOrigin);
+    vec2 current = gridOrigin;
 
     for (int i = 0; i < MAX_STEPS; i++) {
-        if (isOccluded(vec3(current.x * uGridSize.x, current.y * uGridSize.y, rayOrigin.z)))
+        if (isOccluded(current))
             return true; // Blocked
-        if (current == floor(gridTarget))
+        if (current == gridTarget)
             break; // Reached target
         if (tMax.x < tMax.y) {
             tMax.x += tDelta.x;
@@ -150,16 +158,16 @@ bool Raycast(vec3 rayOrigin, vec3 rayTarget) {
     return false; // No occlusion detected
 }
 
-vec2 worldToGridTexCoord(vec3 worldPos) {
-    return vec2(floor(worldPos.x), floor(worldPos.y));
+vec2 worldToGridTexCoord(vec2 position2D) {
+    return vec2(floor(position2D.x), floor(position2D.y));
 }
 
-vec2 worldToNormalizedTexCoord(vec3 worldPos) {
-    return vec2(floor(worldPos.x) / uGridSize.x, floor(worldPos.y) / uGridSize.y);
+vec2 worldToNormalizedTexCoord(vec2 position2D) {
+    return vec2(floor(position2D.x) / uGridSize.x, floor(position2D.y) / uGridSize.y);
 }
 
-bool isOccluded(vec3 fragPos) {
-    vec2 texCoord = worldToNormalizedTexCoord(fragPos);
+bool isOccluded(vec2 position2D) {
+    vec2 texCoord = worldToNormalizedTexCoord(position2D);
     float occlusion = texture2D(uOcclusionMap, texCoord).r; // Sample red channel
-    return occlusion > 0.5; // Assume >0.5 indicates impassable
+    return occlusion > 0.5; //  >0.5 indicates impassable
 }

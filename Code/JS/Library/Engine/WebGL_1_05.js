@@ -318,7 +318,6 @@ const WebGL = {
         gl.bindTexture(gl.TEXTURE_2D, texture);
         gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);                                       // Explicitly disable alpha premultiplication
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);                                                  // Explicitly disable Y-flipping
-        //gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, width, height, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, paddedWidth, paddedHeight, 0, gl.RED, gl.UNSIGNED_BYTE, pixelData);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
@@ -330,16 +329,11 @@ const WebGL = {
     },
     visualizeTexture(texture, width, height, CTX, scale = 8) {
         const gl = this.CTX;
-        //const paddedWidth = POT(width);
-        //const paddedHeight = POT(height);
         width = POT(width);
         height = POT(height);
-        
-        if (this.VERBOSE) console.warn("visualize texture", width, height);
-        if (this.frameBuffer) gl.deleteFramebuffer(this.frameBuffer);
 
-        //CTX.canvas.width = paddedWidth * scale;
-        //CTX.canvas.height = paddedHeight * scale;
+        if (this.VERBOSE) console.warn("WebGL.visualizeTexture", width, height, texture);
+        //if (this.frameBuffer) gl.deleteFramebuffer(this.frameBuffer);
 
         CTX.canvas.width = width * scale;
         CTX.canvas.height = width * scale;
@@ -350,7 +344,7 @@ const WebGL = {
 
         const pixels = new Uint8Array(width * height);                                                  // Single-channel (GL_R8)
         gl.readPixels(0, 0, width, height, gl.RED, gl.UNSIGNED_BYTE, pixels);
-        WebGL.checkError("read pixels");
+        if (this.VERBOSE) WebGL.checkError("read pixels");
 
         const imageData = CTX.createImageData(width, height);
         for (let i = 0; i < pixels.length; i++) {
@@ -372,11 +366,8 @@ const WebGL = {
         CTX.imageSmoothingEnabled = false;                                                               // Disable smoothing for pixelated look
         CTX.drawImage(offscreenCanvas, 0, 0, width * scale, height * scale);
 
-        if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) !== gl.FRAMEBUFFER_COMPLETE) {
-            console.error("Framebuffer is not complete.");
-        }
-
-        this.frameBuffer = framebuffer;
+        if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) !== gl.FRAMEBUFFER_COMPLETE) console.error("Framebuffer is not complete.");
+        //this.frameBuffer = framebuffer;
 
         // Cleanup
         gl.bindFramebuffer(gl.FRAMEBUFFER, null);
@@ -695,7 +686,63 @@ const WebGL = {
         gl.clearDepth(1.0);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     },
+    computeLights() {
+        const lights = [];
+        const lightColors = [];
+        const lightDirections = [];
+
+        // Static lights
+        for (let light of LIGHTS3D.POOL) {
+            const dir = Vector3.from_2D_dir(FaceToDirection(light.face));
+            lightDirections.push(...dir.array);
+            lights.push(...light.position.array);
+            lightColors.push(...light.lightColor);
+        }
+
+        // Dynamic lights
+        const dynLights = [];
+        const dynLightColors = [];
+        const dynLightDirs = [];
+        let dynCount = 0;
+
+        for (let source of this.dynamicLightSources) {
+            for (let light of source.POOL) {
+                if (!light) continue;
+
+                dynLights.push(...light.pos.array);
+                dynLightColors.push(...light.lightColor);
+                dynLightDirs.push(255, 255, 255); // No specific direction
+
+                dynCount++;
+                if (dynCount > this.INI.DYNAMIC_LIGHTS_RESERVATION) {
+                    console.error("Dynamic light sources exceed reserved memory!");
+                    break;
+                }
+            }
+        }
+
+        // Fill remaining slots for dynamic lights
+        while (dynLights.length < this.INI.DYNAMIC_LIGHTS_RESERVATION * 3) {
+            dynLights.push(-1, -1, -1);
+            dynLightColors.push(0, 0, 0);
+            dynLightDirs.push(255, 255, 255);
+        }
+
+        // Combine static and dynamic lights
+        lights.push(...dynLights);
+        lightColors.push(...dynLightColors);
+        lightDirections.push(...dynLightDirs);
+
+        return {
+            lights: new Float32Array(lights),
+            lightColors: new Float32Array(lightColors),
+            lightDirections: new Float32Array(lightDirections),
+        };
+    },
     renderScene(map) {
+        let paddedWidth = POT(map.width);
+        let paddedHeight = POT(map.height);
+
         const gl = this.CTX;
         gl.clearColor(0.0, 0.0, 0.0, 1.0);
         gl.clearDepth(1.0);
@@ -731,56 +778,7 @@ const WebGL = {
         gl.uniform3fv(this.program.uniformLocations.uMaterialSpecularColor, MATERIAL.wall.specularColor);
         gl.uniform1f(this.program.uniformLocations.uMaterialShininess, MATERIAL.wall.shininess);
 
-
-        //light uniforms
-        let lights = [];
-        let lightColors = [];
-        let lightDirections = [];
-        for (let L = 0; L < LIGHTS3D.POOL.length; L++) {
-            let dir = Vector3.from_2D_dir(FaceToDirection(LIGHTS3D.POOL[L].face));
-            lightDirections.push(...dir.array);
-            lights.push(...LIGHTS3D.POOL[L].position.array);
-            lightColors.push(...LIGHTS3D.POOL[L].lightColor);
-        }
-
-        //dynamic lights
-        let dynLights = [];
-        let dynLightColors = [];
-        let dynLightDirs = [];                      // in current implementation dynamic light has no direction - same level in all directions
-        let dynCount = 0;
-        let cont = true;
-        for (let iam of this.dynamicLightSources) {
-            for (let LS of iam.POOL) {
-                if (!LS) continue;
-
-                dynLights.push(...LS.pos.array);
-                dynLightColors.push(...LS.lightColor);
-                dynLightDirs.push(255, 255, 255);
-                dynCount++;
-                if (dynCount > this.INI.DYNAMIC_LIGHTS_RESERVATION) {
-                    console.error("Dynamic light sources exceed reserved memory! Ignoring silently.");
-                    cont = false;
-                    break;
-                }
-            }
-            if (!cont) break;
-        }
-
-        while (dynLights.length < this.INI.DYNAMIC_LIGHTS_RESERVATION * 3) {
-            dynLights.push(-1, -1, -1);
-            dynLightColors.push(0, 0, 0);
-            dynLightDirs.push(255, 255, 255);
-        }
-
-        lights.push(...dynLights);
-        lightColors.push(...dynLightColors);
-        lightDirections.push(...dynLightDirs);
-        lights = new Float32Array(lights);
-        lightColors = new Float32Array(lightColors);
-        lightDirections = new Float32Array(lightDirections);
-
-        //console.info("lightDirections", lightDirections);
-
+        let { lights, lightColors, lightDirections } = this.computeLights();
 
         gl.uniform3fv(this.program.uniformLocations.lights, lights);
         gl.uniform3fv(this.program.uniformLocations.lightColors, lightColors);
@@ -790,7 +788,8 @@ const WebGL = {
         gl.activeTexture(gl.TEXTURE1); // Use texture unit 1
         gl.bindTexture(gl.TEXTURE_2D, map.occlusionMap);
         gl.uniform1i(this.program.uniformLocations.uOcclusionMap, 1);
-        gl.uniform2f(this.program.uniformLocations.uGridSize, map.width, map.height);
+        //gl.uniform2f(this.program.uniformLocations.uGridSize, paddedWidth, paddedHeight); //
+        gl.uniform2fv(this.program.uniformLocations.uGridSize, new Float32Array([paddedWidth, paddedHeight])); //
 
         //set global uniforms for model program - could be extended to loop over more programs if required
         gl.useProgram(this.model_program.program);
@@ -808,8 +807,6 @@ const WebGL = {
         gl.uniformMatrix4fv(this.pickProgram.uniformLocations.uScale, false, scaleMatrix);
         gl.uniformMatrix4fv(this.pickProgram.uniformLocations.uTranslate, false, translationMatrix);
         gl.uniformMatrix4fv(this.pickProgram.uniformLocations.uRotY, false, rotateY);
-
-
 
         this.renderDungeon(map);
     },
