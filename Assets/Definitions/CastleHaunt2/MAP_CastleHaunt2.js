@@ -2038,8 +2038,8 @@ const MAP = {
         oracles: '[[115,1,"ApparitiaJustMe"]]',
     }
     ,
-    85: {
-        name: "Descent",
+    85 : {
+        name: "Final Descent?",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 3,
@@ -2049,8 +2049,14 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_027",
         ceil: "BigRockWall2",
         start: '[100,3]',
-        lights: '[[44,7,"DuaLLantern_007","standard"]]',
+        decals: '[[89,4,"PuddleDecal03","crest"],[90,4,"PuddleDecal03","crest"],[91,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal03","crest"]]',
+        lights: '[[44,7,"DuaLLantern_007","standard"],[141,1,"Candelabra01","standard"],[117,3,"Candelabra03","standard"],[171,1,"Candelabra03","fire"],[169,3,"DuaLLantern_028","standardRedish"]]',
         gates: '[[101,3,"85.1","68.12","Closed"]]',
+        monsters: '[[76,"Bat"],[92,"RedGoldBat"],[56,"SpiderGreen"],[125,"Spider"],[22,"Wolf"],[159,"Wolf"],[31,"Viking"],[167,"Viking"],[19,"AngrySheep"],[155,"GreatChick"],[87,"GreatCat"]]',
+        gold: '[[52,"GoldCube"],[35,"GoldCube"],[18,"GoldCube"],[19,"GoldCube"],[20,"GoldCube"],[21,"GoldCube"],[22,"GoldCube"],[23,"GoldCube"],[24,"GoldCube"],[41,"GoldCube"],[58,"GoldCube"],[75,"GoldCube"],[92,"GoldCube"],[93,"GoldCube"],[94,"GoldCube"],[95,"GoldCube"],[96,"GoldCube"],[97,"GoldCube"],[98,"GoldCube"],[99,"GoldCube"],[121,"BlueGem"],[151,"GreenGem"],[49,"RedGem"]]',
+        skills: '[[53,"Magic"]]',
+        containers: '[[62,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         doors: '[88]',
-    }
+        oracles: '[[122,3,"WonderfulChest"],[54,3,"ApparitiaPacMan"]]',
+        }
 };

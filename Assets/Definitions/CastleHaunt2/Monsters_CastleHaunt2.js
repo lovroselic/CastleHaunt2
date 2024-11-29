@@ -260,6 +260,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    WonderfulChest: {
+        name: "WonderfulChest",
+        sprite: "WonderfulChest",
+        category: 'crest',
+        voice: "Female",
+        text: "Trivia: this level was a sandbox to update the fragment shader to see all those beautiful shadows.",
+        interactionCategory: "oracle",
+    },
     Emerging: {
         name: "Emerging",
         sprite: "Emerging",
@@ -1149,6 +1157,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "Just me, trying to kill you. Disappointed?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaPacMan: {
+        name: "ApparitiaPacMan",
+        sprite: "ApparitiaPacMan",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Don't you see that you are treated like a PacMan? Hahaha. Collect this. Collect that. Collect all that gold. Give up. Just surrender.",
         interactionCategory: "oracle",
     },
 };

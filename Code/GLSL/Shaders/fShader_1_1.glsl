@@ -42,7 +42,9 @@ const float PL_SpecularStrength = 6.5;
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 25;                                   // Max steps for raycasting loop - 25
-const float EPSILON = 0.02;                                  // don't enter the wall, check for occlusion before 0.05
+const float EPSILON = 0.02;                                 // don't enter the wall, check for occlusion before 0.05
+const float PL_AMBIENT_OCCLUSION = 0.45;                     //how much of ambient light gets through occlusion
+const float PL_DIFFUSE_OCCLUSION = 0.50;                    //how much of diffused light gets through occlusion
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin, vec3 rayTarget, vec3 lightDir);
@@ -120,7 +122,8 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     if (illumination <= 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
     } else if (occluded && inner == 0) {
-        return vec3(0.0); // No contribution if occluded - debug
+        //return vec3(0.0); // No contribution if occluded - debug
+        return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
     }
 
     return ambientLight + diffuselight + specularLight;
