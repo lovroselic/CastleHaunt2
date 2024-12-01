@@ -3307,6 +3307,7 @@ class $3D_Entity {
         this.resetTime();
         this.grid = grid;
         this.type = type;
+        this.which = null;
         for (const prop in type) {
             this[prop] = type[prop];
         }
@@ -3658,6 +3659,7 @@ class $Movable_Interactive_entity extends $3D_Entity {
             category: this.category,
             inventorySprite: this.inventorySprite,
             name: this.name,
+            which: this.which,
         };
     }
     storageLog() {

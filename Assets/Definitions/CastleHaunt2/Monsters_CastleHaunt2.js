@@ -1167,6 +1167,22 @@ const ORACLE_TYPE = {
         text: "Don't you see that you are treated like a PacMan? Hahaha. Collect this. Collect that. Collect all that gold. Give up. Just surrender.",
         interactionCategory: "oracle",
     },
+    ApparitiaZing: {
+        name: "ApparitiaZing",
+        sprite: "ApparitiaZing",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I so love the sweet zing of the green orb's bounce, and the green light emerging, just before it hits Princess. Hahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaOutOfFashion: {
+        name: "ApparitiaOutOfFashion",
+        sprite: "ApparitiaOutOfFashion",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I started to learn some things about colors in fashion from your creator. I will still kill you, though",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2280,6 +2296,18 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Bone",
         text: "Bone. Human? Or animal? I don't know. Does it matter to you?"
     },
+    Champagne: {
+        name: "Champagne",
+        category: "action_item",
+        which: "health",
+        element: "WINE",
+        scale: 1.5 / 2 ** 7,
+        glueToFloor: true,
+        texture: "Wine",
+        material: MATERIAL.standard,
+        inventorySprite: "Champagne",
+        text: "Expensive champagne. This will improve my spirits."
+    },
 };
 
 const MOVABLE_INTERACTION_OBJECT = {
@@ -2344,6 +2372,34 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "Chicken",
         text: "Blonde chick. Not yet fried."
     },
+    RoastChicken: {
+        /** health */
+        name: "RoastChicken",
+        category: "action_item",
+        which: "health",
+        model: "Chicken",
+        scale: 1 / 2 ** 6,
+        rotateToNorth: -Math.PI / 2,
+        moveSpeed: 1.6,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "RoastChicken",
+        text: "Yummy chick. Store for later."
+    },
+    RoastPig: {
+        /** health */
+        name: "RoastPig",
+        category: "action_item",
+        which: "health",
+        model: "Pig",
+        scale: 1 / 2 ** 3,
+        rotateToNorth: -Math.PI / 2,
+        moveSpeed: 1.6,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "RoastPig",
+        text: "Pig"
+    },
     Cat: {
         name: "Cat",
         category: "interaction_item",
@@ -2356,7 +2412,6 @@ const MOVABLE_INTERACTION_OBJECT = {
         inventorySprite: "Cat",
         text: "Here, kitty kitty kitty!"
     },
-    /** */
     Spider: {
         name: "Spider",
         category: "interaction_item",
@@ -3085,6 +3140,25 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "RedLeatherHat",
         text: "Too big for my cute small head."
+    },
+
+    EmeraldIngots: {
+        name: "EmeraldIngots",
+        category: "interaction_item",
+        inventorySprite: "EmeraldIngots",
+        text: "Ingots made from emerald."
+    },
+    Document: {
+        name: "Document",
+        category: "interaction_item",
+        inventorySprite: "Document",
+        text: "Looks like some kind of instructions. Maybe I should read them."
+    },
+    GuitarPick: {
+        name: "GuitarPick",
+        category: "interaction_item",
+        inventorySprite: "GuitarPick",
+        text: "Guitar pick. Let's rock."
     },
 };
 

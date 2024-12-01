@@ -52,8 +52,18 @@ const DEBUG = {
     checkPoint() {
         /** main area 5:
             
+        * Emerald key:
+
         
-  
+        * Metal babe wants . metal records (LP) gives -->
+        * Dragon mothers wans babies(5x) gives --> EmeraldSteel procedure
+        * GuitarGirl wants guitarpick (1) gives --> 1LP
+        * 
+            DONE* BabyDragon <- 86
+        * BabyDragon
+        * BabyDragon
+        * BabyDragon
+        * BabyDragon
 
         * coins sources (x, missing x):
  
@@ -76,9 +86,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 85;
+        GAME.level = 86;
 
-        GAME.gold = 2760;
+        GAME.gold = 4469;
         GAME.lives = 3;
 
         HERO.hasCapacity = true;
@@ -87,10 +97,10 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 32;
+        HERO.magic = 33;
         HERO.attack = 32;
 
-        HERO.health = 310;
+        HERO.health = 310; //310
         HERO.maxHealth = 320;
 
 
@@ -164,6 +174,9 @@ const INI = {
         Cake: 40,
         Steak: 80,
         BeerHealth: 120,
+        Champagne: 175,
+        RoastChicken: 250,
+        RoastPig: 500,
     },
     HEALTH_INC: 8,
     SCROLL_RANGE: 11,
@@ -172,7 +185,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.00",
+    VERSION: "0.15.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

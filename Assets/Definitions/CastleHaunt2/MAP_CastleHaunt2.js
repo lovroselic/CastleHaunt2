@@ -2038,7 +2038,7 @@ const MAP = {
         oracles: '[[115,1,"ApparitiaJustMe"]]',
     }
     ,
-    85 : {
+    85: {
         name: "Final Descent?",
         sg: 0,
         maxSpawned: 4,
@@ -2049,14 +2049,39 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_027",
         ceil: "BigRockWall2",
         start: '[100,3]',
-        decals: '[[89,4,"PuddleDecal03","crest"],[90,4,"PuddleDecal03","crest"],[91,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal03","crest"]]',
+        decals: '[[89,4,"PuddleDecal03","crest"],[90,4,"PuddleDecal03","crest"],[91,4,"PuddleDecal03","crest"],[87,4,"PuddleDecal03","crest"],[7,7,"FluxDommes2317","picture"],[12,7,"UnusedEntities125","picture"],[1,7,"Domme109","picture"],[15,7,"FluxDommes3060","picture"],[103,7,"FluxDommes3142","picture"],[39,7,"UnusedEntities102","picture"],[42,7,"Skullkeep","picture"],[47,7,"Princess10","picture"],[65,7,"Goonies70","picture"],[134,7,"Pooyan3","picture"],[69,1,"BlackBeret_010","picture"],[177,1,"HoleDomme_012","picture"],[182,1,"FluxDommes2024","picture"],[185,1,"AticAtac112","picture"],[142,1,"FluxDommes2104","picture"],[144,1,"UnusedEntities111","picture"],[147,1,"LargePicLadies07","picture"],[149,1,"CastleLady79","picture"],[71,5,"UnusedEntities5071","picture"],[105,5,"GameScreens026","picture"],[153,5,"FluxDommes2318","picture"],[17,5,"AI_pic222","picture"],[112,5,"AI_pic261","picture"],[78,5,"FluxDommes2041","picture"],[78,3,"UnusedEntities2033","picture"],[112,3,"ShortBlackSkirt_010","picture"],[33,3,"Domme367","picture"],[133,3,"FluxDommes2031","picture"],[66,1,"PitfallII_AI_1","picture"]]',
         lights: '[[44,7,"DuaLLantern_007","standard"],[141,1,"Candelabra01","standard"],[117,3,"Candelabra03","standard"],[171,1,"Candelabra03","fire"],[169,3,"DuaLLantern_028","standardRedish"]]',
-        gates: '[[101,3,"85.1","68.12","Closed"]]',
+        gates: '[[101,3,"85.1","68.12","Closed"],[85,5,"85.2","86.1","Down"]]',
         monsters: '[[76,"Bat"],[92,"RedGoldBat"],[56,"SpiderGreen"],[125,"Spider"],[22,"Wolf"],[159,"Wolf"],[31,"Viking"],[167,"Viking"],[19,"AngrySheep"],[155,"GreatChick"],[87,"GreatCat"]]',
         gold: '[[52,"GoldCube"],[35,"GoldCube"],[18,"GoldCube"],[19,"GoldCube"],[20,"GoldCube"],[21,"GoldCube"],[22,"GoldCube"],[23,"GoldCube"],[24,"GoldCube"],[41,"GoldCube"],[58,"GoldCube"],[75,"GoldCube"],[92,"GoldCube"],[93,"GoldCube"],[94,"GoldCube"],[95,"GoldCube"],[96,"GoldCube"],[97,"GoldCube"],[98,"GoldCube"],[99,"GoldCube"],[121,"BlueGem"],[151,"GreenGem"],[49,"RedGem"]]',
         skills: '[[53,"Magic"]]',
         containers: '[[62,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7]]',
         doors: '[88]',
         oracles: '[[122,3,"WonderfulChest"],[54,3,"ApparitiaPacMan"]]',
+    }
+    ,
+    86 : {
+        name: "Resistance HQ",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"25","height":"25","map":"BB2AA3BAA25ÁÁ2AÁÁ4AA8BAA4BB2ÁÁ2AA4BB2ABAA2ÁABABÁAA10ÁÁ2AA2BB3ABB4ÁÁ2AA3BABAA3BAA2BB2AA4BB2AA6EAÁÁ2AA5ÁAA9ÁAA2ÁAA9BAA2BB2AA10BB4ÁÁ2BB7AÁÁ2ABB6ÁÁ2BB5ABB2ABAA4ÁABAA3BB2ÁÁ3AA2ÁABABÁAA5BB2AA2BB2ÁBABAA3BB3AA3BB4AA2BB5ABAA2BB2AA2BB3AA8BB21AA2BB7AA2BB3AA5BB2ABB13ABB10AA2BB7ABB3ABB3ABB6AA2BB5AA2BB6AA2BAA2BABB2AA2BB4AA5BB2ABB2ABAA3BB4ABB2AA2BB5AA2BB9ABB2ABB2ABB4ABABB8AA8BB2AA4BB2ABB3AA5BAA2BABB2AA2BB4ABAA2BB3ABB2AA2BAA2BABABB41A$AÁÁ2AA2ÁÁ2AA2ÁÁ2AA2ÁÁ2AA18ÁÁ4AA2ÁÁ16AA4ÁÁ2AA2"}',
+        wall: "GlossyBrownBrickedWall52",
+        floor: "StoneWall40",
+        ceil: "MossyTiles666",
+        start: '[73,3]',
+        lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"]]',
+        doors: '[71]',
+        triggers: '[[336,4,"SmoothWallButton",0,308]]',
+        objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
+        oracles: '[[168,7,"ApparitiaZing"],[130,5,"ApparitiaOutOfFashion"]]',
+        movables: '[[448,"Life"],[286,"RoastChicken"],[338,"RoastPig"],[288,"BabyDragon"]]',
+        lairs: '[[608,1,"Lair38"],[614,1,"Lair23"],[399,3,"Lair17"],[249,3,"Lair81"],[14,7,"Lair45"],[8,7,"Lair16"],[225,5,"Lair33"],[375,5,"Lair29"]]',
+        monsterList: '["Skeleton","RedSkeleton"]',
         }
+    ,
+    87: {}
+    ,
 };
