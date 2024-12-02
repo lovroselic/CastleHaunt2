@@ -958,7 +958,7 @@ LoadObjects = [
 
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
-    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf"
+    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf", "Dragon.gltf",
 ];
 
 LoadSprites = [
@@ -1180,6 +1180,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Alchemist2.jpg", name: "Alchemist" },
     { srcName: "EntityPictures/MagicHillBillie2.jpg", name: "MagicHillBillie" },
     { srcName: "EntityPictures/WonderfulChest.jpg", name: "WonderfulChest" },
+    { srcName: "EntityPictures/Dragoness.jpg", name: "Dragoness" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1310,10 +1311,12 @@ LoadSprites = [
     { srcName: "Shrines/PrincessMace.jpg", name: "PrincessMace" },
     { srcName: "Shrines/PrincessPineHeart.jpg", name: "PrincessPineHeart" },
     { srcName: "Shrines/PrincessFlame.jpg", name: "PrincessFlame" },
-
     { srcName: "Shrines/PrincessDesertHeart.jpg", name: "PrincessDesertHeart" },
     { srcName: "Shrines/PrincessDesertDagger.jpg", name: "PrincessDesertDagger" },
     { srcName: "Shrines/PrincessDesertFire.jpg", name: "PrincessDesertFire" },
+    { srcName: "Shrines/PrincessCryptHealth.jpg", name: "PrincessCryptHealth" },
+    { srcName: "Shrines/PrincessCryptSword.jpg", name: "PrincessCryptSword" },
+    { srcName: "Shrines/PrincessCryptFireball.jpg", name: "PrincessCryptFireball" },
 
 
     //scrolls

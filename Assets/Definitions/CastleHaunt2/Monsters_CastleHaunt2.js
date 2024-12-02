@@ -257,6 +257,36 @@ const SHRINE_TYPE = {
         price: 4000,
         level: 2,
     },
+    PrincessCryptHealth: {
+        name: "PrincessCryptHealth",
+        sprite: "PrincessCryptHealth",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 5000,
+        level: 5,
+    },
+    PrincessCryptSword: {
+        name: "PrincessDesertDagger",
+        sprite: "PrincessCryptSword",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 5000,
+        level: 5,
+    },
+    PrincessCryptFireball: {
+        name: "PrincessCryptFireball",
+        sprite: "PrincessCryptFireball",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 5000,
+        level: 5,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -3163,8 +3193,21 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    Dragoness: {
+        name: "Dragoness",
+        sprite: "Dragoness",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["BabyDragon", "BabyDragon", "BabyDragon", "BabyDragon", "BabyDragon"],
+        gives: "Document",
+        text: {
+            intro: "My precious hatchlings are lost! Bring back all five, and I'll share with you a rare secret on how to craft emerald ingots.",
+            progress: "One of my babies is safe, but the others are still out there. Don't stop until they are all home!",
+            conclusion: "My hatchlings are finally safe. You've earned this, and here's the instructions to forge emerald ingots, knowledge as rare as my treasures."
+        }
+    },
     CaveGirl: {
-        name: "CatQueen",
+        name: "CaveGirl",
         sprite: "CaveGirl",
         category: 'crest',
         voice: "FemaleLow2",

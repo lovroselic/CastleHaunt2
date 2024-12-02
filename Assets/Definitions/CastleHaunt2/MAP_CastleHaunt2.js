@@ -2060,7 +2060,7 @@ const MAP = {
         oracles: '[[122,3,"WonderfulChest"],[54,3,"ApparitiaPacMan"]]',
     }
     ,
-    86 : {
+    86: {
         name: "Resistance HQ",
         sg: 0,
         maxSpawned: 4,
@@ -2071,8 +2071,9 @@ const MAP = {
         floor: "StoneWall40",
         ceil: "MossyTiles666",
         start: '[73,3]',
+        decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
         lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2080,8 +2081,39 @@ const MAP = {
         movables: '[[448,"Life"],[286,"RoastChicken"],[338,"RoastPig"],[288,"BabyDragon"]]',
         lairs: '[[608,1,"Lair38"],[614,1,"Lair23"],[399,3,"Lair17"],[249,3,"Lair81"],[14,7,"Lair45"],[8,7,"Lair16"],[225,5,"Lair33"],[375,5,"Lair29"]]',
         monsterList: '["Skeleton","RedSkeleton"]',
-        }
+    }
     ,
     87: {}
     ,
+    88: {
+        name: "Dragoness Lair",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB3AA6BAA9ÁAA2ÁAA2ÁAA2ÁÁ3AA7ÁÁ2AA3ÁÁ4AA11BB2AA2BB2AA2ÁBB2AA9ÁÁ2AA2BB4AA2BB5AA2BB4AA2BB4AA2BB20ABB4ABB2ABB3ABB7AA3BB3AA9BB6AA3BB22$BB2AÁÁ4AA2ÁÁ4AA5ÁÁ2AA6ÁÁ4AA2"}',
+        wall: "GlossyBrownBrickedWall58",
+        floor: "RoughCave06",
+        ceil: "GlossyBrownBrickedWall54",
+        start: '[118,3]',
+        lights: '[[103,3,"Lamp45","dimRed"],[133,3,"Lamp45","dimRed"],[20,7,"Lamp52","standard"],[200,1,"DuaLLantern_021","standard"],[105,5,"DuaLLantern_004","standard"],[10,7,"Fireplace205","fire"],[220,1,"Fireplace102","fire"]]',
+        gates: '[[119,3,"88.1","86.3","Closed"]]',
+        entities: '[[110,5,"Dragoness"]]',
+    }
+    ,
+    89 : {
+        name: "Chapel of Hope",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB2ABABAA3BAA2BB2ABB2AA16BABAA29BB2AA2BB2AA2BAA4BAA16BABB2ABB4AA4BB2AA3BAA7BB4ABB5ABB10AA3BB4ABB7ABB2ABB3AA2BB3ABB2ABB4AA2BB2ABB2AA2BB5ABAA3BABB2ABB2AA2BB19A$"}',
+        wall: "GlossyBrownBrickedWall69",
+        floor: "IrregularTiledFloorCeil15",
+        ceil: "FloorTiles_SDXL_006",
+        start: '[106,5]',
+        lights: '[[112,1,"DuaLLantern_013","standard"],[112,7,"WallLamp20","standard"],[112,3,"FluxLight111","standard"],[112,5,"WallLamp33","standard"],[151,7,"Candelabra01","weakCandle"],[163,7,"Lamp46","weakCandle"],[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
+        gates: '[[105,5,"89.1","86.4","Closed"]]',
+        shrines: '[[119,3,"PrincessCryptHealth"],[7,7,"PrincessCryptSword"],[217,1,"PrincessCryptFireball"]]',
+        }
 };
