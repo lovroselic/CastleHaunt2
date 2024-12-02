@@ -266,7 +266,26 @@ const DECAL_PAINTINGS = [
     "NurseAlchemyMagic_091", "NurseAlchemyMagic_092", "NurseAlchemyMagic_093", "NurseAlchemyMagic_094", "NurseAlchemyMagic_095", "NurseAlchemyMagic_096", "NurseAlchemyMagic_097", "NurseAlchemyMagic_098", "NurseAlchemyMagic_099",
     "NurseAlchemyMagic_100", "NurseAlchemyMagic_101", "NurseAlchemyMagic_102", "NurseAlchemyMagic_103", "NurseAlchemyMagic_104", "NurseAlchemyMagic_105", "NurseAlchemyMagic_106", "NurseAlchemyMagic_107", "NurseAlchemyMagic_108",
     "NurseAlchemyMagic_109", "NurseAlchemyMagic_110", "NurseAlchemyMagic_111", "NurseAlchemyMagic_112", "NurseAlchemyMagic_113", "NurseAlchemyMagic_114", "NurseAlchemyMagic_115", "NurseAlchemyMagic_116", "NurseAlchemyMagic_117",
-    "NurseAlchemyMagic_118", "NurseAlchemyMagic_119", "NurseAlchemyMagic_120", "NurseAlchemyMagic_121", "NurseAlchemyMagic_122", "NurseAlchemyMagic_123", "NurseAlchemyMagic_124"
+    "NurseAlchemyMagic_118", "NurseAlchemyMagic_119", "NurseAlchemyMagic_120", "NurseAlchemyMagic_121", "NurseAlchemyMagic_122", "NurseAlchemyMagic_123", "NurseAlchemyMagic_124",
+    "PrincessDragonDomme_001", "PrincessDragonDomme_002", "PrincessDragonDomme_003", "PrincessDragonDomme_004", "PrincessDragonDomme_005", "PrincessDragonDomme_006", "PrincessDragonDomme_007", "PrincessDragonDomme_008",
+    "PrincessDragonDomme_009", "PrincessDragonDomme_010", "PrincessDragonDomme_011", "PrincessDragonDomme_012", "PrincessDragonDomme_013", "PrincessDragonDomme_014", "PrincessDragonDomme_015", "PrincessDragonDomme_016",
+    "PrincessDragonDomme_017", "PrincessDragonDomme_018", "PrincessDragonDomme_019", "PrincessDragonDomme_020", "PrincessDragonDomme_021", "PrincessDragonDomme_022", "PrincessDragonDomme_023", "PrincessDragonDomme_024",
+    "PrincessDragonDomme_025", "PrincessDragonDomme_026", "PrincessDragonDomme_027", "PrincessDragonDomme_028", "PrincessDragonDomme_029", "PrincessDragonDomme_030", "PrincessDragonDomme_031", "PrincessDragonDomme_032",
+    "PrincessDragonDomme_033", "PrincessDragonDomme_034", "PrincessDragonDomme_035", "PrincessDragonDomme_036", "PrincessDragonDomme_037", "PrincessDragonDomme_038", "PrincessDragonDomme_039", "PrincessDragonDomme_040",
+    "PrincessDragonDomme_041", "PrincessDragonDomme_042", "PrincessDragonDomme_043", "PrincessDragonDomme_044", "PrincessDragonDomme_045", "PrincessDragonDomme_046", "PrincessDragonDomme_047", "PrincessDragonDomme_048",
+    "PrincessDragonDomme_049", "PrincessDragonDomme_050", "PrincessDragonDomme_051", "PrincessDragonDomme_052", "PrincessDragonDomme_053", "PrincessDragonDomme_054", "PrincessDragonDomme_055", "PrincessDragonDomme_056",
+    "PrincessDragonDomme_057", "PrincessDragonDomme_058", "PrincessDragonDomme_059", "PrincessDragonDomme_060", "PrincessDragonDomme_061", "PrincessDragonDomme_062", "PrincessDragonDomme_063", "PrincessDragonDomme_064",
+    "PrincessDragonDomme_065", "PrincessDragonDomme_066", "PrincessDragonDomme_067", "PrincessDragonDomme_068", "PrincessDragonDomme_069", "PrincessDragonDomme_070", "PrincessDragonDomme_071", "PrincessDragonDomme_072",
+    "PrincessDragonDomme_073", "PrincessDragonDomme_074", "PrincessDragonDomme_075", "PrincessDragonDomme_076", "PrincessDragonDomme_077", "PrincessDragonDomme_078", "PrincessDragonDomme_079", "PrincessDragonDomme_080",
+    "PrincessDragonDomme_081", "PrincessDragonDomme_082", "PrincessDragonDomme_083", "PrincessDragonDomme_084", "PrincessDragonDomme_085", "PrincessDragonDomme_086", "PrincessDragonDomme_087", "PrincessDragonDomme_088",
+    "PrincessDragonDomme_089", "PrincessDragonDomme_090", "PrincessDragonDomme_091", "PrincessDragonDomme_092", "PrincessDragonDomme_093", "PrincessDragonDomme_094", "PrincessDragonDomme_095", "PrincessDragonDomme_096",
+    "PrincessDragonDomme_097", "PrincessDragonDomme_098", "PrincessDragonDomme_099", "PrincessDragonDomme_100", "PrincessDragonDomme_101", "PrincessDragonDomme_102", "PrincessDragonDomme_103", "PrincessDragonDomme_104",
+    "PrincessDragonDomme_105", "PrincessDragonDomme_106", "PrincessDragonDomme_107", "PrincessDragonDomme_108", "PrincessDragonDomme_109", "PrincessDragonDomme_110", "PrincessDragonDomme_111", "PrincessDragonDomme_112",
+    "PrincessDragonDomme_113", "PrincessDragonDomme_114", "PrincessDragonDomme_115", "PrincessDragonDomme_116", "PrincessDragonDomme_117", "PrincessDragonDomme_118", "PrincessDragonDomme_119", "PrincessDragonDomme_120",
+    "PrincessDragonDomme_121", "PrincessDragonDomme_122", "PrincessDragonDomme_123", "PrincessDragonDomme_124", "PrincessDragonDomme_125", "PrincessDragonDomme_126", "PrincessDragonDomme_127", "PrincessDragonDomme_128",
+    "PrincessDragonDomme_129", "PrincessDragonDomme_130", "PrincessDragonDomme_131", "PrincessDragonDomme_132", "PrincessDragonDomme_133", "PrincessDragonDomme_134", "PrincessDragonDomme_135", "PrincessDragonDomme_136",
+    "PrincessDragonDomme_137", "PrincessDragonDomme_138", "PrincessDragonDomme_139", "PrincessDragonDomme_140", "PrincessDragonDomme_141", "PrincessDragonDomme_142", "PrincessDragonDomme_143", "PrincessDragonDomme_144",
+    "PrincessDragonDomme_145"
 ].sort();
 
 
