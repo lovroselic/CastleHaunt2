@@ -1181,6 +1181,14 @@ LoadSprites = [
     { srcName: "EntityPictures/MagicHillBillie2.jpg", name: "MagicHillBillie" },
     { srcName: "EntityPictures/WonderfulChest.jpg", name: "WonderfulChest" },
     { srcName: "EntityPictures/Dragoness.jpg", name: "Dragoness" },
+    { srcName: "EntityPictures/EngineerDomme.jpg", name: "EngineerDomme" },
+    { srcName: "EntityPictures/Metallica.jpg", name: "Metallica" },
+
+    { srcName: "EntityPictures/GothicGuitarist.jpg", name: "GothicGuitarist" },
+    { srcName: "EntityPictures/MetalGuitarist.jpg", name: "MetalGuitarist" },
+    { srcName: "EntityPictures/BassPlayer.jpg", name: "BassPlayer" },
+    { srcName: "EntityPictures/Drummer.jpg", name: "Drummer" },
+
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1463,6 +1471,7 @@ LoadSprites = [
     { srcName: "Items/GuitarPick.png", name: "GuitarPick" },
     { srcName: "Items/RoastChicken.png", name: "RoastChicken" },
     { srcName: "Items/RoastPig.png", name: "RoastPig" },
+    { srcName: "Items/KeyMould.png", name: "KeyMould" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

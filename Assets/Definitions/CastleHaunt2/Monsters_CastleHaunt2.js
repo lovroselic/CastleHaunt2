@@ -28,6 +28,30 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    Drummer: {
+        name: "Drummer",
+        sprite: "Drummer",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 999,
+        level: 1,
+        text: "I'll show you how to beat someone with a stick. Only 999 gold.",
+        introduce: true,
+        voice: "FemaleLow2",
+    },
+    BassPlayer: {
+        name: "BassPlayer",
+        sprite: "BassPlayer",
+        category: 'crest',
+        interactionCategory: 'interaction_item',
+        inventorySprite: "GuitarPick",
+        price: 666,
+        text: "I play with fingers. I have a pick to spare, for a meagre 666 gold.",
+        introduce: true,
+        voice: "FemaleLow",
+    },
     Nurse: {
         name: "Nurse",
         sprite: "Nurse",
@@ -290,6 +314,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    GothicGuitarist: {
+        name: "GothicGuitarist",
+        sprite: "GothicGuitarist",
+        category: 'crest',
+        voice: "Female2",
+        text: "Not all members of the group are famous. I just play guitar. But this tour turned strange.",
+        interactionCategory: "oracle",
+    },
     WonderfulChest: {
         name: "WonderfulChest",
         sprite: "WonderfulChest",
@@ -3190,9 +3222,54 @@ const INTERACTION_ITEM = {
         inventorySprite: "GuitarPick",
         text: "Guitar pick. Let's rock."
     },
+    KeyMould: {
+        name: "KeyMould",
+        category: "interaction_item",
+        inventorySprite: "KeyMould",
+        text: "Mould for making keys. This will come handy."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    MetalGuitarist: {
+        name: "MetalGuitarist",
+        sprite: "MetalGuitarist",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GuitarPick", "GuitarPick", "GuitarPick"],
+        gives: "LP",
+        text: {
+            intro: "Shredding this hard breaks a lot of picks. Bring me some spares, and I'll give you the latest LaughingSkull album.",
+            progress: "I'm still missing enough  picks to finish my solos. Keep going!",
+            conclusion: "Yes! Now I can rock without worry. Here's the LaughingSkull album. Play it loud!"
+        }
+    },
+    Metallica: {
+        name: "Metallica",
+        sprite: "Metallica",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["LP", "LP", "LP", "LP", "LP"],
+        gives: "KeyMould",
+        text: {
+            intro: "I live for metal, both the music and the craft. Bring me five heavy records, and I'll gift you something truly unique. a KeyMould. Think of it as your key to A Minor success. Got it? Hahaha.",
+            progress: "The rhythm's building, but I need more records to hit the perfect note. Rock me more!",
+            conclusion: "Five records of pure metal bliss! As promised, here's your KeyMould. It's a masterpiece, just like a killer riff! And me."
+        }
+    },
+    EngineerDomme: {
+        name: "EngineerDomme",
+        sprite: "EngineerDomme",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["KeyMould", "EmeraldIngots"],
+        gives: "EmeraldKey",
+        text: {
+            intro: "I can craft you an Emerald Key, but I'll need the proper tools and materials. Bring me a key mould and some emerald ingots, and I'll work my magic.",
+            progress: "I've got part of what I need, but I can't make the key without everything. Keep going!",
+            conclusion: "Perfect! With these materials, your Emerald Key is ready. Treasure it. It's a work of art. like me!"
+        }
+    },
     Dragoness: {
         name: "Dragoness",
         sprite: "Dragoness",

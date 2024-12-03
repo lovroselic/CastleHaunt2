@@ -2073,7 +2073,7 @@ const MAP = {
         start: '[73,3]',
         decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
         lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2101,7 +2101,7 @@ const MAP = {
         entities: '[[110,5,"Dragoness"]]',
     }
     ,
-    89 : {
+    89: {
         name: "Chapel of Hope",
         sg: 0,
         maxSpawned: 4,
@@ -2115,5 +2115,55 @@ const MAP = {
         lights: '[[112,1,"DuaLLantern_013","standard"],[112,7,"WallLamp20","standard"],[112,3,"FluxLight111","standard"],[112,5,"WallLamp33","standard"],[151,7,"Candelabra01","weakCandle"],[163,7,"Lamp46","weakCandle"],[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
         gates: '[[105,5,"89.1","86.4","Closed"]]',
         shrines: '[[119,3,"PrincessCryptHealth"],[7,7,"PrincessCryptSword"],[217,1,"PrincessCryptFireball"]]',
+    }
+    ,
+    90: {
+        name: "Key Engineering",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB3AA2BB2AA4BAA9BB3ABAA9BB2AA6BB2AA7BAA30BB10AA2BB21ABB3AA4BB7ABABB2AA3BABB83A$"}',
+        wall: "DarkBricks108",
+        floor: "RockWall101",
+        ceil: "BrownWall40",
+        start: '[106,5]',
+        lights: '[[91,5,"Lamp52","standard"],[121,5,"Lamp52","standard"]]',
+        gates: '[[105,5,"90.1","86.5","Closed"]]',
+        entities: '[[113,3,"EngineerDomme"]]',
+    }
+    ,
+    91: {
+        name: "Metal Rulz",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB5AA8BAA9BAA19BB5AA2BABAA3BAA10BABB2AA8BAA4BAA6BAA22BAA2BB3ABAA13BABB2AA2BB7ABB5ABB2ABB4ABB2ABB13ABB2ABB6ABABABB10ABB5ABB4AA3BB2ABABABB2ABB4AA2BAA2BB4ABB2AA2BB2ABB21$BB18A"}',
+        wall: "GlossyBrownBrickedWall58",
+        floor: "BlackWall45",
+        ceil: "GlossyBrownBrickedWall64",
+        start: '[25,7]',
+        lights: '[[73,7,"Lamp44","standard"],[79,7,"Lamp44","standard"],[88,7,"DuaLLantern_029","standard"],[98,7,"DuaLLantern_029","standard"]]',
+        gates: '[[8,7,"91.1","86.6","Closed"]]',
+        entities: '[[178,1,"Metallica"]]',
+    }
+    ,
+    92 : {
+        name: "Meet The Band",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"19","height":"19","map":"BB2ABB4AA10BB2AA2BAA8BABB2ABAA2BB2ABB2ABAA6BAA3BB3AA6BB2AA2BABAA3BB2AA25BB2AA44BAA9BB2AA30BB12ABABAA2BB39ABB8AA4BB4AA2BABB6AA2BAA3BB7ABABAA2BB2ABB3ABAA4BB5ABB4ABB11ABB4ABB28A$"}',
+        wall: "DarkMossy9",
+        floor: "RedAndGreyBricks1",
+        ceil: "RoughCave06",
+        start: '[188,3]',
+        lights: '[[149,3,"DuaLLantern_013","standard"],[225,3,"FluxLight128","standard"],[124,7,"DuaLLantern_025","standardDimmed"],[238,1,"Candelabra01","standardDimmed"]]',
+        gates: '[[189,3,"92.1","86.7","Closed"]]',
+        shrines: '[[158,5,"BassPlayer"],[196,5,"Drummer"]]',
+        entities: '[[104,7,"MetalGuitarist"]]',
+        oracles: '[[256,1,"GothicGuitarist"]]',
         }
 };

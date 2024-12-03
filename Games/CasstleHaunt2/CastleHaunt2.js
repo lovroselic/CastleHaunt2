@@ -52,18 +52,29 @@ const DEBUG = {
     checkPoint() {
         /** main area 5:
             
-        * Emerald key:
-
-        
-        * Metal babe wants . metal records (LP) gives -->
-        * Dragon mothers wans babies(5x) gives --> EmeraldSteel procedure
-        * GuitarGirl wants guitarpick (1) gives --> 1LP
+            DONE * EngineerDomme wants: EmeraldIngots, Key mould :: makes -> Emerald key:
+            DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
+            DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
+            DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
         * 
+        * 
+        * 
+            DONE * Document<- Dragoness
             DONE* BabyDragon <- 86
         * BabyDragon
         * BabyDragon
         * BabyDragon
         * BabyDragon
+            DONE * "KeyMould", <-- Metallica
+        * "EmeraldIngots"
+            DONE * "LP", from MetalGuitarist
+        * "LP",       
+        * "LP",
+        * "LP",                    
+        * "LP",
+            DONE* "GuitarPick", <-- buy from Bass Player
+        * "GuitarPick", 
+        * "GuitarPick"
 
         * coins sources (x, missing x):
  
@@ -77,7 +88,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            * 
+            * Gold key
             * 
          * missing sources for: 
             * 
@@ -141,7 +152,6 @@ const DEBUG = {
 
         let invItems = [
             
-
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -185,7 +195,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.03",
+    VERSION: "0.15.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
