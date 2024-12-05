@@ -2085,12 +2085,12 @@ const MAP = {
     ,
     87: {}
     ,
-    88: {
+    88 : {
         name: "Dragoness Lair",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 4,
-        spawnDelay: 9999,
+        spawnDelay: 8000,
         data: '{"width":"15","height":"15","map":"BB3AA6BAA9ÁAA2ÁAA2ÁAA2ÁÁ3AA7ÁÁ2AA3ÁÁ4AA11BB2AA2BB2AA2ÁBB2AA9ÁÁ2AA2BB4AA2BB5AA2BB4AA2BB4AA2BB20ABB4ABB2ABB3ABB7AA3BB3AA9BB6AA3BB22$BB2AÁÁ4AA2ÁÁ4AA5ÁÁ2AA6ÁÁ4AA2"}',
         wall: "GlossyBrownBrickedWall58",
         floor: "RoughCave06",
@@ -2098,8 +2098,13 @@ const MAP = {
         start: '[118,3]',
         lights: '[[103,3,"Lamp45","dimRed"],[133,3,"Lamp45","dimRed"],[20,7,"Lamp52","standard"],[200,1,"DuaLLantern_021","standard"],[105,5,"DuaLLantern_004","standard"],[10,7,"Fireplace205","fire"],[220,1,"Fireplace102","fire"]]',
         gates: '[[119,3,"88.1","86.3","Closed"]]',
+        keys: '[[22,2]]',
+        monsters: '[[112,"SkeleDwarf"],[106,"Dragon"]]',
         entities: '[[110,5,"Dragoness"]]',
-    }
+        movables: '[[108,"BabyDragon"]]',
+        lairs: '[[1,7,"Lair51"],[211,1,"Lair50"]]',
+        monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
+        }
     ,
     89: {
         name: "Chapel of Hope",

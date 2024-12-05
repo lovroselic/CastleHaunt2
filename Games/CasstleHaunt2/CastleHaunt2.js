@@ -65,7 +65,7 @@ const DEBUG = {
         * 
             DONE * Document<- Dragoness
             DONE* BabyDragon <- 86
-        * BabyDragon
+            DONE * BabyDragon <-- 88
         * BabyDragon
         * BabyDragon
         * BabyDragon
@@ -105,7 +105,7 @@ const DEBUG = {
          * missing placed keys: 
                 DONE * Gold key --> 93
                 DONE * Silver key --> 94
-            * Red key
+                DONE * Red key <--88
          * missing sources for: 
             * 
 
@@ -211,7 +211,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.06",
+    VERSION: "0.15.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

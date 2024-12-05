@@ -1985,6 +1985,50 @@ const MONSTER_TYPE = {
         moveSpeed: 1.2,
         material: MATERIAL.standard,
     },
+    SkeleDwarf: {
+        name: "SkeleDwarf",
+        model: "SkeleDwarf",
+        scale: 1.2 / 2 ** 4,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 50,
+        attack: 100,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt3",
+        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
+        moveSpeed: 1.2,
+        material: MATERIAL.standardShine,
+    },
+    Dragon: {
+        name: "Dragon",
+        model: "Dragon",
+        scale: 1.9 / 2 ** 4,
+        rotateToNorth: Math.PI,
+        midHeight: 0.25,
+        fly: 0.25,
+        deathType: "BloodExplosion",
+        mana: 25,
+        health: 75,
+        attack: 100,
+        magic: 15,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [20, ["wanderer"], 15, ["shoot"]],
+        moveSpeed: 1.0,
+        shootDistance: 15,
+        stalkDistance: 8,
+        material: MATERIAL.gold,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
 };
 
 const HERO_TYPE = {
@@ -3284,7 +3328,7 @@ const INTERACTION_ENTITY = {
             conclusion: "Two pink diamonds! Here's your emerald, love. And don't forget, AssMeralda has a thing for them."
         }
     },
-    
+
     SassyPhire: {
         name: "SassyPhire",
         sprite: "SassyPhire",
@@ -3297,7 +3341,7 @@ const INTERACTION_ENTITY = {
             progress: "A sapphire here, a sapphire there… but I need all three for the magic to happen.",
             conclusion: "Three sapphires! Here's your emerald, darling. Oh, and I hear AssMeralda has a thing for these beauties."
         }
-    },    
+    },
     RubyErella: {
         name: "RubyErella",
         sprite: "RubyErella",
