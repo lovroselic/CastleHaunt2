@@ -58,6 +58,8 @@ const DEBUG = {
             DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
             DONE AssMeralda wants : Emerald", "Emerald", "Emerald" gives --> EmeraldIngots
             DONE RubyErella wants Ruby 3x gives Emerald
+            DONE SassyPhire wants Sapphire 3x gives Emerald
+            DONE Sparklyssa wants PinkDiamond 2x gives Emerald
         * 
         * 
         * 
@@ -78,11 +80,16 @@ const DEBUG = {
         * "GuitarPick", 
         * "GuitarPick"
             DONE * Emerald", <-- RubyErella
-        * "Emerald", 
-        * "Emerald"
+            DONE * "Emerald", <-- SassyPhire
+            DONE * "Emerald" <-- Sparklyssa
         * "Ruby", 
         * "Ruby", 
         * "Ruby"
+        * "Sapphire", 
+        * "Sapphire", 
+        * "Sapphire"
+        * "PinkDiamond", 
+        * "PinkDiamond"
 
         * coins sources (x, missing x):
  
@@ -106,7 +113,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 94; //86
+        GAME.level = 86; //86
 
         GAME.gold = 4469; //4469
         GAME.lives = 3;
@@ -160,7 +167,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Ruby", "Ruby", "Ruby"
+           
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -204,7 +211,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.05",
+    VERSION: "0.15.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

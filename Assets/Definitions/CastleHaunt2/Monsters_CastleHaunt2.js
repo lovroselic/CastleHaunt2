@@ -3271,6 +3271,33 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    Sparklyssa: {
+        name: "Sparklyssa",
+        sprite: "Sparklyssa",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["PinkDiamond", "PinkDiamond"],
+        gives: "Emerald",
+        text: {
+            intro: "Me, Sparklyssa, I'm not as greedy as SassyPhire or RubyErella. But I have standards to uphold. Two rare pink diamons for an emerald. Final price!",
+            progress: "One pink diamond? Nice start, but I need a pair to keep my sparkle standards.",
+            conclusion: "Two pink diamonds! Here's your emerald, love. And don't forget, AssMeralda has a thing for them."
+        }
+    },
+    
+    SassyPhire: {
+        name: "SassyPhire",
+        sprite: "SassyPhire",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Sapphire", "Sapphire", "Sapphire"],
+        gives: "Emerald",
+        text: {
+            intro: "Three sapphires for one emerald. A deal sparkling with sass. Just like me. Care to trade?",
+            progress: "A sapphire here, a sapphire there… but I need all three for the magic to happen.",
+            conclusion: "Three sapphires! Here's your emerald, darling. Oh, and I hear AssMeralda has a thing for these beauties."
+        }
+    },    
     RubyErella: {
         name: "RubyErella",
         sprite: "RubyErella",
@@ -3284,7 +3311,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Three rubies, such shiny beauties! Here's your emerald. AssMeralda will know what to do with it. "
         }
     },
-
     AssMeralda: {
         name: "AssMeralda",
         sprite: "AssMeralda",

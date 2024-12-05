@@ -1,6 +1,7 @@
 ///fShader///
 /*
 * v1.1
+* last change in CastleHunt II
 */
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
@@ -42,9 +43,11 @@ const float PL_SpecularStrength = 7.0;
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 25;                                   // Max steps for raycasting loop - 25
-const float EPSILON = 0.02;                                 // don't enter the wall, check for occlusion before 0.05
-const float PL_AMBIENT_OCCLUSION = 0.45;                     //how much of ambient light gets through occlusion
+const float EPSILON = 0.02;                                 // don't enter the wall, check for occlusion - 0.02
+const float PL_AMBIENT_OCCLUSION = 0.45;                    //how much of ambient light gets through occlusion
 const float PL_DIFFUSE_OCCLUSION = 0.50;                    //how much of diffused light gets through occlusion
+const float ATTNF = 0.08;                                   // linear arrenuation factor - 0.1
+const float ATTNF2 = 0.65;                                  //quadratic attenuation factor
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin, vec3 rayTarget, vec3 lightDir);
@@ -83,7 +86,7 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     float distance = distance(lightPosition, FragPos);
     vec3 lightDir = normalize(lightPosition - FragPos);
     bool occluded = Raycast(lightPosition, FragPos, lightDir);
-    float attenuation = 1.0 / (1.0 + 0.1 * distance + 0.65 * (distance * distance));
+    float attenuation = 1.0 / (1.0 + ATTNF * distance + ATTNF2 * (distance * distance));
 
     //is fragment illuminated by ligh source? omni dir is (255,255,255)
     if (inner == 0) {

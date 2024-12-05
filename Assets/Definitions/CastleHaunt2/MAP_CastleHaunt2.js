@@ -2198,6 +2198,6 @@ const MAP = {
         lights: '[[178,7,"DuaLLantern_018","standard"],[190,7,"FluxLight103","standardDimmed"],[200,7,"DuaLLantern_006","standardDimmed"],[15,7,"Fireplace211","fire"]]',
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
-        entities: '[[314,1,"RubyErella"]]',
+        entities: '[[314,1,"RubyErella"],[320,1,"SassyPhire"],[308,1,"Sparklyssa"]]',
         }
 };
