@@ -56,6 +56,8 @@ const DEBUG = {
             DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
             DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
             DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
+            DONE AssMeralda wants : Emerald", "Emerald", "Emerald" gives --> EmeraldIngots
+            DONE RubyErella wants Ruby 3x gives Emerald
         * 
         * 
         * 
@@ -75,6 +77,12 @@ const DEBUG = {
             DONE* "GuitarPick", <-- buy from Bass Player
         * "GuitarPick", 
         * "GuitarPick"
+            DONE * Emerald", <-- RubyErella
+        * "Emerald", 
+        * "Emerald"
+        * "Ruby", 
+        * "Ruby", 
+        * "Ruby"
 
         * coins sources (x, missing x):
  
@@ -88,8 +96,9 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            * Gold key
-            * 
+                DONE * Gold key --> 93
+                DONE * Silver key --> 94
+            * Red key
          * missing sources for: 
             * 
 
@@ -97,7 +106,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 86; //86
+        GAME.level = 94; //86
 
         GAME.gold = 4469; //4469
         GAME.lives = 3;
@@ -151,7 +160,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            
+            "Ruby", "Ruby", "Ruby"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -195,7 +204,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.04",
+    VERSION: "0.15.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

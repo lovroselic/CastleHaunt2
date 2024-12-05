@@ -34,11 +34,11 @@ varying vec2 vTextureCoord;
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
 const float innerAmbientStrength = 0.225;
 const float innerDiffuseStrength = 2.1;
-const float innerSpecularStrength = 1.0;
+const float innerSpecularStrength = 5.0;    //1.25->3.25
 
 const float PL_AmbientStrength = 2.0;
 const float PL_DiffuseStrength = 5.0;
-const float PL_SpecularStrength = 6.5;
+const float PL_SpecularStrength = 7.0;
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 25;                                   // Max steps for raycasting loop - 25

@@ -2073,7 +2073,7 @@ const MAP = {
         start: '[73,3]',
         decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
         lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2149,7 +2149,7 @@ const MAP = {
         entities: '[[178,1,"Metallica"]]',
     }
     ,
-    92 : {
+    92: {
         name: "Meet The Band",
         sg: 0,
         maxSpawned: 4,
@@ -2165,5 +2165,39 @@ const MAP = {
         shrines: '[[158,5,"BassPlayer"],[196,5,"Drummer"]]',
         entities: '[[104,7,"MetalGuitarist"]]',
         oracles: '[[256,1,"GothicGuitarist"]]',
+    }
+    ,
+    93: {
+        name: "Esmeralda",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB2AA3BABB6AA33BABAA6BAA10BAA5BAA6BAA3BB2AA3BB2AA7BB4ABB8ABABABB6ABB9ABB2ABB19ABB16ABB2AA2BB3AA5BABB16ABB12ABB3$BB5A"}',
+        wall: "RockWall_SDXL_012",
+        floor: "Relief10",
+        ceil: "Relief09",
+        start: '[202,1]',
+        lights: '[[110,1,"FluxLight106","standardDimmed"],[114,1,"DuaLLantern_005","standardDimmed"],[110,7,"Lamp46","standardDimmed"],[114,7,"DuaLLantern_013","standardDimmed"]]',
+        gates: '[[217,1,"93.1","86.8","Closed"]]',
+        keys: '[[19,0]]',
+        entities: '[[22,7,"AssMeralda"]]',
+    }
+    ,
+    94 : {
+        name: "Show Me Your Jewels",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"19","map":"BB4AA5BB2AA6BB2AA5BB2AA18BAA20BAA9BAA6BAA29BB4AA4BAA19BAA12BB3AA2BB2ABB2AA2BB15ABB7AA3BB9ABB10ABB4ABB8AA2BB7ABABAA3BB9AA2BABB10AA2BB4ABB4ABB2ABB4AA2BAA2BB4ABB3ABB19ABB6$"}',
+        wall: "Relief11",
+        floor: "RedMArbleFloor2",
+        ceil: "RockWall_SDXL_002",
+        start: '[25,7]',
+        lights: '[[178,7,"DuaLLantern_018","standard"],[190,7,"FluxLight103","standardDimmed"],[200,7,"DuaLLantern_006","standardDimmed"],[15,7,"Fireplace211","fire"]]',
+        gates: '[[8,7,"94.1","86.9","Closed"]]',
+        keys: '[[117,1]]',
+        entities: '[[314,1,"RubyErella"]]',
         }
 };

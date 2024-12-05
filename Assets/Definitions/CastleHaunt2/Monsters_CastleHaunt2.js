@@ -2105,6 +2105,17 @@ const INTERACTION_OBJECT = {
         inventorySprite: "RedGem",
         text: "Nice? Shiny? I'll keep that."
     },
+    Ruby: {
+        name: "Ruby",
+        category: "interaction_item",
+        element: "GEM",
+        scale: 1.8 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Red",
+        material: MATERIAL.standard,
+        inventorySprite: "Ruby",
+        text: "Nice? Shiny? Bloodred ruby? I'll keep that."
+    },
     BlueGem: {
         name: "BlueGem",
         category: "interaction_item",
@@ -2115,6 +2126,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         inventorySprite: "BlueGem",
         text: "Nice? Shiny? I'll keep that."
+    },
+    Sapphire: {
+        name: "Sapphire",
+        category: "interaction_item",
+        element: "GEM",
+        scale: 1.7 / 2 ** 5,
+        glueToFloor: true,
+        texture: "BlueMetal",
+        material: MATERIAL.standard,
+        inventorySprite: "Sapphire",
+        text: "Nice? Shiny blue sapphire? I'll keep that."
     },
     GreenGem: {
         name: "GreenGem",
@@ -3228,9 +3250,54 @@ const INTERACTION_ITEM = {
         inventorySprite: "KeyMould",
         text: "Mould for making keys. This will come handy."
     },
+    Ruby: {
+        name: "Ruby",
+        category: "interaction_item",
+        inventorySprite: "Ruby",
+        text: "Nice shiny bloodred ruby."
+    },
+    Sapphire: {
+        name: "Sapphire",
+        category: "interaction_item",
+        inventorySprite: "Sapphire",
+        text: "Nice shiny blue sapphire."
+    },
+    PinkDiamond: {
+        name: "PinkDiamond",
+        category: "interaction_item",
+        inventorySprite: "PinkDiamond",
+        text: "What a rarity. Pink diamond. welcome to my pocket."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    RubyErella: {
+        name: "RubyErella",
+        sprite: "RubyErella",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Ruby", "Ruby", "Ruby"],
+        gives: "Emerald",
+        text: {
+            intro: "Three rubies for one emerald? Sounds like a deal to me. Fair? Maybe not, but do you really have another choice?",
+            progress: "A ruby or two, but not enough for this trade. Keep them coming!",
+            conclusion: "Three rubies, such shiny beauties! Here's your emerald. AssMeralda will know what to do with it. "
+        }
+    },
+
+    AssMeralda: {
+        name: "AssMeralda",
+        sprite: "AssMeralda",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Emerald", "Emerald", "Emerald"],
+        gives: "EmeraldIngots",
+        text: {
+            intro: "Emerald ingots? Of course, I can make those. Bring me enough emeralds, and I'll handle the rest. Trust me, I know my gems.",
+            progress: "Some emeralds are here, but it's not quite enough to fire up my craft. Keep looking!",
+            conclusion: "All the emeralds I need! Here are your Emerald Ingots, expertly forged. You're welcome!"
+        }
+    },
     MetalGuitarist: {
         name: "MetalGuitarist",
         sprite: "MetalGuitarist",
