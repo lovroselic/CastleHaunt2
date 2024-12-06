@@ -3315,6 +3315,32 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    RocketScientist: {
+        name: "RocketScientist",
+        sprite: "RocketScientist",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["RocketTop", "RocketBottom"],
+        gives: "PocketRocket",
+        text: {
+            intro: "There's only one genius in the galaxy who can assemble a PocketRocket, and you're looking at her. Bring me the parts, and I'll make it happen.",
+            progress: "I've got part of it, but we're not launching yet. Keep those parts coming!",
+            conclusion: "All systems go! Your PocketRocket is assembled and ready for liftoff. You're welcome, by the way. I am such a smart blonde."
+        }
+    },
+    SpaceWarrior: {
+        name: "SpaceWarrior",
+        sprite: "SpaceWarrior",
+        category: 'crest',
+        voice: "Female",
+        wants: ["PocketRocket"],
+        gives: "PinkDiamond",
+        text: {
+            intro: "I'm grounded without a PocketRocket! Bring me one, and I'll reward you with a very rare gem, straight from the stars.",
+            progress: null,
+            conclusion: "PocketRocket secured! Here's your PinkDiamond. Don't spend it all in one galaxy."
+        }
+    },
     Sparklyssa: {
         name: "Sparklyssa",
         sprite: "Sparklyssa",
@@ -3328,7 +3354,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Two pink diamonds! Here's your emerald, love. And don't forget, AssMeralda has a thing for them."
         }
     },
-
     SassyPhire: {
         name: "SassyPhire",
         sprite: "SassyPhire",
@@ -4633,6 +4658,20 @@ const INTERACTION_SHRINE = {
             intro: "I know a new magic trick. Would you care to learn it? For a coin?",
             progress: null,
             conclusion: "Wow. You learn quickly. It's magic, right?"
+        }
+    },
+    SpaceTrainer: {
+        name: "SpaceTrainer",
+        sprite: "SpaceTrainer",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "I can show you how to attack from space. For a coin, I'll show you the advantage of having high ground.",
+            progress: null,
+            conclusion: "Now you can fight in zero gravity. Go forth and strike with ferocity!"
         }
     },
 };

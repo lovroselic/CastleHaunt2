@@ -2073,7 +2073,7 @@ const MAP = {
         start: '[73,3]',
         decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
         lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"],[3,7,"86.10","95.1","Up"],[621,1,"86.11","96.1","Green"]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2085,7 +2085,7 @@ const MAP = {
     ,
     87: {}
     ,
-    88 : {
+    88: {
         name: "Dragoness Lair",
         sg: 0,
         maxSpawned: 4,
@@ -2104,7 +2104,7 @@ const MAP = {
         movables: '[[108,"BabyDragon"]]',
         lairs: '[[1,7,"Lair51"],[211,1,"Lair50"]]',
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
-        }
+    }
     ,
     89: {
         name: "Chapel of Hope",
@@ -2189,7 +2189,7 @@ const MAP = {
         entities: '[[22,7,"AssMeralda"]]',
     }
     ,
-    94 : {
+    94: {
         name: "Show Me Your Jewels",
         sg: 0,
         maxSpawned: 4,
@@ -2204,5 +2204,38 @@ const MAP = {
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
         entities: '[[314,1,"RubyErella"],[320,1,"SassyPhire"],[308,1,"Sparklyssa"]]',
+    }
+    ,
+    95: {
+        name: "Babes In Space",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB3AA3BAA7BB6AA12BAA36BAA10BAA16BB2AA26BABB2AA9BB13ABB8ABB16ABB9AA3BB14AA2BB10ABABAA5BABB2ABB24ABB34$"}',
+        wall: "RoughCave01",
+        floor: "RoughCave03",
+        ceil: "NightSky1",
+        start: '[263,1]',
+        lights: '[[173,7,"DuaLLantern_011","standardDimmed"],[183,7,"FluxLight111","standardDimmed"],[161,1,"DuaLLantern_015","standard"]]',
+        gates: '[[280,1,"95.1","86.10","Down"]]',
+        entities: '[[285,1,"SpaceWarrior"]]',
+        trainers: '[[275,1,"SpaceTrainer"]]',
+    }
+    ,
+    96 : {
+        name: "Rocket Science",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB8AA35BB2AA7BABAA6BAA3BABAA10BABB11ABB3ABB15AA2BB46ABAA6BABB17ABB4ABB14ABABB15A$"}',
+        wall: "IvyWall4",
+        floor: "Relief19",
+        ceil: "BlackWall44",
+        start: '[22,7]',
+        lights: '[[111,7,"FluxLight127","standard"],[113,7,"FluxLight127","standard"]]',
+        gates: '[[7,7,"96.1","86.11","Closed"]]',
+        entities: '[[217,1,"RocketScientist"]]',
         }
 };

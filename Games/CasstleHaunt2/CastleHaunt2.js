@@ -60,6 +60,8 @@ const DEBUG = {
             DONE RubyErella wants Ruby 3x gives Emerald
             DONE SassyPhire wants Sapphire 3x gives Emerald
             DONE Sparklyssa wants PinkDiamond 2x gives Emerald
+            DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
+            DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
         * 
         * 
         * 
@@ -88,15 +90,19 @@ const DEBUG = {
         * "Sapphire", 
         * "Sapphire", 
         * "Sapphire"
-        * "PinkDiamond", 
+            DONE * "PinkDiamond", <-- SpaceWarrior
         * "PinkDiamond"
+            DONE * "PocketRocket" <-- RocketScientist
+        * RocketTop
+        * RocketBottom
 
-        * coins sources (x, missing x):
+        * coins sources (x, missing 1x):
  
  
 
         *
-        * COINS used (x):
+        * COINS used (1x):
+        * Space trainer - attack5x  
            
 
         
@@ -106,6 +112,7 @@ const DEBUG = {
                 DONE * Gold key --> 93
                 DONE * Silver key --> 94
                 DONE * Red key <--88
+            Green
          * missing sources for: 
             * 
 
@@ -113,7 +120,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 86; //86
+        GAME.level = 96; //86
 
         GAME.gold = 4469; //4469
         GAME.lives = 3;
@@ -167,7 +174,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-           
+            "RocketTop", "RocketBottom",
+           //"GoldCoin"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -211,7 +219,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.07",
+    VERSION: "0.15.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
