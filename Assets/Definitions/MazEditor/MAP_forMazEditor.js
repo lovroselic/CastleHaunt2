@@ -285,7 +285,31 @@ const DECAL_PAINTINGS = [
     "PrincessDragonDomme_121", "PrincessDragonDomme_122", "PrincessDragonDomme_123", "PrincessDragonDomme_124", "PrincessDragonDomme_125", "PrincessDragonDomme_126", "PrincessDragonDomme_127", "PrincessDragonDomme_128",
     "PrincessDragonDomme_129", "PrincessDragonDomme_130", "PrincessDragonDomme_131", "PrincessDragonDomme_132", "PrincessDragonDomme_133", "PrincessDragonDomme_134", "PrincessDragonDomme_135", "PrincessDragonDomme_136",
     "PrincessDragonDomme_137", "PrincessDragonDomme_138", "PrincessDragonDomme_139", "PrincessDragonDomme_140", "PrincessDragonDomme_141", "PrincessDragonDomme_142", "PrincessDragonDomme_143", "PrincessDragonDomme_144",
-    "PrincessDragonDomme_145"
+    "PrincessDragonDomme_145",
+    "GemDommes_001", "GemDommes_002", "GemDommes_003", "GemDommes_004", "GemDommes_005", "GemDommes_006", "GemDommes_007", "GemDommes_008", "GemDommes_009", "GemDommes_010", "GemDommes_011", "GemDommes_012", "GemDommes_013",
+    "GemDommes_014", "GemDommes_015", "GemDommes_016", "GemDommes_017", "GemDommes_018", "GemDommes_019", "GemDommes_020", "GemDommes_021", "GemDommes_022", "GemDommes_023", "GemDommes_024", "GemDommes_025", "GemDommes_026",
+    "GemDommes_027", "GemDommes_028", "GemDommes_029", "GemDommes_030", "GemDommes_031", "GemDommes_032", "GemDommes_033", "GemDommes_034", "GemDommes_035", "GemDommes_036", "GemDommes_037", "GemDommes_038", "GemDommes_039",
+    "GemDommes_040", "GemDommes_041", "GemDommes_042", "GemDommes_043", "GemDommes_044", "GemDommes_045", "GemDommes_046", "GemDommes_047", "GemDommes_048", "GemDommes_049", "GemDommes_050", "GemDommes_051", "GemDommes_052",
+    "GemDommes_053", "GemDommes_054", "GemDommes_055", "GemDommes_056", "GemDommes_057", "GemDommes_058", "GemDommes_059", "GemDommes_060", "GemDommes_061", "GemDommes_062", "GemDommes_063", "GemDommes_064", "GemDommes_065",
+    "GemDommes_066", "GemDommes_067", "GemDommes_068", "GemDommes_069", "GemDommes_070", "GemDommes_071", "GemDommes_072", "GemDommes_073", "GemDommes_074", "GemDommes_075", "GemDommes_076", "GemDommes_077", "GemDommes_078",
+    "GemDommes_079", "GemDommes_080", "GemDommes_081", "GemDommes_082", "GemDommes_083", "GemDommes_084", "GemDommes_085", "GemDommes_086", "GemDommes_087", "GemDommes_088", "GemDommes_089", "GemDommes_090", "GemDommes_091",
+    "GemDommes_092", "GemDommes_093", "GemDommes_094", "GemDommes_095", "GemDommes_096", "GemDommes_097", "GemDommes_098", "GemDommes_099", "GemDommes_100", "GemDommes_101", "GemDommes_102", "GemDommes_103", "GemDommes_104",
+    "GemDommes_105", "GemDommes_106", "GemDommes_107", "GemDommes_108", "GemDommes_109", "GemDommes_110", "GemDommes_111", "GemDommes_112", "GemDommes_113", "GemDommes_114", "GemDommes_115", "GemDommes_116", "GemDommes_117",
+    "GemDommes_118", "GemDommes_119", "GemDommes_120", "GemDommes_121", "GemDommes_122", "GemDommes_123", "GemDommes_124", "GemDommes_125", "GemDommes_126", "GemDommes_127", "GemDommes_128", "GemDommes_129", "GemDommes_130",
+    "GemDommes_131", "GemDommes_132", "GemDommes_133", "GemDommes_134", "GemDommes_135", "GemDommes_136", "GemDommes_137", "GemDommes_138", "GemDommes_139", "GemDommes_140", "GemDommes_141", "GemDommes_142", "GemDommes_143",
+    "GemDommes_144", "GemDommes_145", "GemDommes_146", "GemDommes_147", "GemDommes_148", "GemDommes_149", "GemDommes_150", "GemDommes_151", "GemDommes_152", "GemDommes_153", "GemDommes_154", "GemDommes_155", "GemDommes_156",
+    "GemDommes_157", "GemDommes_158", "GemDommes_159", "GemDommes_160", "GemDommes_161", "GemDommes_162", "GemDommes_163", "GemDommes_164", "GemDommes_165", "GemDommes_166", "GemDommes_167", "GemDommes_168", "GemDommes_169",
+    "GemDommes_170", "GemDommes_171", "GemDommes_172", "GemDommes_173", "GemDommes_174", "GemDommes_175", "GemDommes_176", "GemDommes_177", "GemDommes_178", "GemDommes_179", "GemDommes_180", "GemDommes_181", "GemDommes_182",
+    "GemDommes_183", "GemDommes_184", "GemDommes_185", "GemDommes_186", "GemDommes_187", "GemDommes_188", "GemDommes_189", "GemDommes_190", "GemDommes_191", "GemDommes_192", "GemDommes_193", "GemDommes_194", "GemDommes_195",
+    "GemDommes_196", "GemDommes_197", "GemDommes_198", "GemDommes_199", "GemDommes_200", "GemDommes_201", "GemDommes_202", "GemDommes_203", "GemDommes_204", "GemDommes_205", "GemDommes_206", "GemDommes_207", "GemDommes_208",
+    "GemDommes_209", "GemDommes_210", "GemDommes_211", "GemDommes_212", "GemDommes_213", "GemDommes_214", "GemDommes_215", "GemDommes_216", "GemDommes_217", "GemDommes_218", "GemDommes_219", "GemDommes_220", "GemDommes_221",
+    "GemDommes_222", "GemDommes_223", "GemDommes_224", "GemDommes_225", "GemDommes_226", "GemDommes_227", "GemDommes_228", "GemDommes_229", "GemDommes_230", "GemDommes_231", "GemDommes_232", "GemDommes_233", "GemDommes_234",
+    "GemDommes_235", "GemDommes_236", "GemDommes_237", "GemDommes_238", "GemDommes_239", "GemDommes_240", "GemDommes_241", "GemDommes_242", "GemDommes_243", "GemDommes_244", "GemDommes_245", "GemDommes_246", "GemDommes_247",
+    "GemDommes_248", "GemDommes_249", "GemDommes_250", "GemDommes_251", "GemDommes_252", "GemDommes_253", "GemDommes_254", "GemDommes_255", "GemDommes_256", "GemDommes_257", "GemDommes_258", "GemDommes_259", "GemDommes_260",
+    "GemDommes_261", "GemDommes_262", "GemDommes_263", "GemDommes_264", "GemDommes_265", "GemDommes_266", "GemDommes_267", "GemDommes_268", "GemDommes_269", "GemDommes_270", "GemDommes_271", "GemDommes_272", "GemDommes_273",
+    "GemDommes_274", "GemDommes_275", "GemDommes_276", "GemDommes_277", "GemDommes_278", "GemDommes_279", "GemDommes_280", "GemDommes_281", "GemDommes_282", "GemDommes_283", "GemDommes_284", "GemDommes_285", "GemDommes_286",
+    "GemDommes_287", "GemDommes_288", "GemDommes_289", "GemDommes_290", "GemDommes_291", "GemDommes_292", "GemDommes_293", "GemDommes_294", "GemDommes_295", "GemDommes_296", "GemDommes_297", "GemDommes_298", "GemDommes_299",
+    "GemDommes_300", "GemDommes_301", "GemDommes_302", "GemDommes_303", "GemDommes_304", "GemDommes_305", "GemDommes_306", "GemDommes_307"
 ].sort();
 
 
@@ -332,7 +356,8 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "FluxLight128", "FluxLight129",
     "DuaLLantern_001", "DuaLLantern_002", "DuaLLantern_003", "DuaLLantern_004", "DuaLLantern_005", "DuaLLantern_006", "DuaLLantern_007", "DuaLLantern_008", "DuaLLantern_009", "DuaLLantern_010", "DuaLLantern_011",
     "DuaLLantern_012", "DuaLLantern_013", "DuaLLantern_014", "DuaLLantern_015", "DuaLLantern_016", "DuaLLantern_017", "DuaLLantern_018", "DuaLLantern_019", "DuaLLantern_020", "DuaLLantern_021", "DuaLLantern_022",
-    "DuaLLantern_023", "DuaLLantern_024", "DuaLLantern_025", "DuaLLantern_026", "DuaLLantern_027", "DuaLLantern_028", "DuaLLantern_029", "DuaLLantern_030", "DuaLLantern_031"
+    "DuaLLantern_023", "DuaLLantern_024", "DuaLLantern_025", "DuaLLantern_026", "DuaLLantern_027", "DuaLLantern_028", "DuaLLantern_029", "DuaLLantern_030", "DuaLLantern_031",
+    "Moon50", "Moon51", "Moon52", "Moon54", "Moon55", "Moon56", "Moon58", "Moon59", "Moon60", "Moon62", "Moon63", "Sun1", "Sun2", "Sun3"
 ].sort();
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 

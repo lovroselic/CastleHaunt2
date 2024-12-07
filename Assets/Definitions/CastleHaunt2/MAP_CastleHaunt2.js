@@ -94,6 +94,21 @@ const MAP_TEXT = {
     82: "",
     83: "",
     84: "",
+    85: "",
+    86: "So many dungeons to check. I should get some rest. But no. I should keep going.",
+    87: "",
+    88: "",
+    89: "",
+    90: "",
+    91: "",
+    92: "",
+    93: "",
+    94: "",
+    95: "",
+    96: "",
+    97: "Look at those bitches on the beach. Almost as hot as me.",
+    98: "",
+    99: "",
 };
 
 /** Map definitions */
@@ -2073,7 +2088,7 @@ const MAP = {
         start: '[73,3]',
         decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
         lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"],[3,7,"86.10","95.1","Up"],[621,1,"86.11","96.1","Green"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"],[3,7,"86.10","95.1","Up"],[621,1,"86.11","96.1","Green"],[468,1,"86.12","97.1","Down"]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2223,7 +2238,7 @@ const MAP = {
         trainers: '[[275,1,"SpaceTrainer"]]',
     }
     ,
-    96 : {
+    96: {
         name: "Rocket Science",
         sg: 0,
         maxSpawned: 4,
@@ -2237,5 +2252,39 @@ const MAP = {
         lights: '[[111,7,"FluxLight127","standard"],[113,7,"FluxLight127","standard"]]',
         gates: '[[7,7,"96.1","86.11","Closed"]]',
         entities: '[[217,1,"RocketScientist"]]',
+    }
+    ,
+    97: {
+        name: "Bitch Beach",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB3AA2BB2AA2BB7AA109BABB30AA2BB6AA2BB4AA2BAA4BB19ABABB24A$"}',
+        wall: "Beach2",
+        floor: "Sand",
+        ceil: "Sky1",
+        start: '[22,7]',
+        lights: '[[25,7,"Sun1","harshSun"],[19,7,"Sun2","normalSun"]]',
+        gates: '[[7,7,"97.1","86.12","Up"],[164,3,"97.2","98.1","Closed"]]',
+        entities: '[[217,1,"BeachGirl"]]',
+        trainers: '[[60,5,"Swimmer"]]',
+    }
+    ,
+    98 : {
+        name: "Bitch Goes On",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"15","map":"BB2ABB5ABB5AA112BB2AA3BAA8BB3AA8BB4AA7BB14AA2BB4AA2BB19AA3BB5AA2BB2AA5BAA6BB27A$"}',
+        wall: "Beach1",
+        floor: "Sand15",
+        ceil: "Sky1",
+        start: '[120,5]',
+        lights: '[[66,3,"Sun3","normalSun"],[202,3,"Sun1","normalSun"],[227,1,"Sun1","normalSun"]]',
+        gates: '[[119,5,"98.1","97.2","Closed"]]',
+        shrines: '[[8,7,"ShesellsSeaShells"]]',
+        oracles: '[[135,3,"BitchBother"],[242,1,"SeaGodess"]]',
         }
 };

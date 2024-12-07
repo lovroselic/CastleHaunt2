@@ -33,6 +33,8 @@ const LIGHT_COLORS = {
     candle: new Float32Array([1.0, 0.823529, 0.1098]),
     dimCandle: new Float32Array([0.8, 0.7, 0.10]),
     weakCandle: new Float32Array([0.5, 0.41, 0.05]),
+    harshSun: new Float32Array([1.0, 1.0, 1.0]),
+    normalSun: new Float32Array([0.9, 0.85, 0.8]),
 };
 
 /** Materials */

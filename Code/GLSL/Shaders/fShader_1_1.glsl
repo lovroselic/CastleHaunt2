@@ -35,7 +35,7 @@ varying vec2 vTextureCoord;
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
 const float innerAmbientStrength = 0.225;
 const float innerDiffuseStrength = 2.1;
-const float innerSpecularStrength = 5.0;    //1.25->3.25
+const float innerSpecularStrength = 2.5;    //1.25->3.25
 
 const float PL_AmbientStrength = 2.0;
 const float PL_DiffuseStrength = 5.0;

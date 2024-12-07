@@ -28,6 +28,17 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    ShesellsSeaShells: {
+        name: "ShesellsSeaShells",
+        sprite: "ShesellsSeaShells",
+        category: 'crest',
+        interactionCategory: 'interaction_item',
+        inventorySprite: "Shell",
+        price: 666,
+        text: "She sells sea shells on a sea shore. Yep, that's me. Only 666 gold.",
+        introduce: true,
+        voice: "Female2",
+    },
     Drummer: {
         name: "Drummer",
         sprite: "Drummer",
@@ -314,6 +325,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    SeaGodess: {
+        name: "SeaGodess",
+        sprite: "SeaGodess",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "If I were you, I would rather be on a beach than playing this game.",
+        interactionCategory: "oracle",
+    },
+    BitchBother: {
+        name: "BitchBother",
+        sprite: "BitchBother",
+        category: 'crest',
+        voice: "Female",
+        text: "I am just a tourist. Don't bother me.",
+        interactionCategory: "oracle",
+    },
     GothicGuitarist: {
         name: "GothicGuitarist",
         sprite: "GothicGuitarist",
@@ -3315,6 +3342,20 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    BeachGirl: {
+        name: "BeachGirl",
+        sprite: "BeachGirl",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Shell", "Shell"],
+        gives: "Sapphire",
+        text: {
+            intro: "You won't believe this, but I found a sapphire on the beach! Trade me two shells, and it's yours.",
+            progress: "One shell down, but I need two for the trade. Keep searching!",
+            conclusion: "Two shells? Deal! Here’s your sapphire. Who knew beachcombing could be so lucrative?"
+        }
+    },
+    
     RocketScientist: {
         name: "RocketScientist",
         sprite: "RocketScientist",
@@ -4672,6 +4713,20 @@ const INTERACTION_SHRINE = {
             intro: "I can show you how to attack from space. For a coin, I'll show you the advantage of having high ground.",
             progress: null,
             conclusion: "Now you can fight in zero gravity. Go forth and strike with ferocity!"
+        }
+    },
+    Swimmer: {
+        name: "Swimmer",
+        sprite: "Swimmer",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        level: 3,
+        text: {
+            intro: "Swimming is good for your muscles and coordination. For a gold coin I will teach you to swim like a fish. And this will improve your fighting skills.",
+            progress: null,
+            conclusion: "Your moves are amazing. Go and show them what you've learned!"
         }
     },
 };
