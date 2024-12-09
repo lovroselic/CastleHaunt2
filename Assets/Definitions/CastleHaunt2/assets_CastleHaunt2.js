@@ -879,6 +879,15 @@ LoadTextures = [
     { srcName: "ObjectTextures/Wood1.jpg", name: "WoodTexture" },
     { srcName: "ObjectTextures/SpiderGreen.jpg", name: "SpiderGreen" },
     { srcName: "ObjectTextures/Wine.jpg", name: "Wine" },
+    { srcName: "ObjectTextures/Crate2.jpg", name: "Crate2" },
+    { srcName: "ObjectTextures/Crate3.jpg", name: "Crate3" },
+    { srcName: "ObjectTextures/Barell2.jpg", name: "Barell2" },
+    { srcName: "ObjectTextures/Barell3.jpg", name: "Barell3" },
+    { srcName: "ObjectTextures/Wood_Bamboo.jpg", name: "Wood_Bamboo" },
+    { srcName: "ObjectTextures/WoodenCrate.jpg", name: "WoodenCrate" },
+    { srcName: "ObjectTextures/CrateFragile.jpg", name: "CrateFragile" },
+    { srcName: "ObjectTextures/BoringWood.jpg", name: "BoringWood" },
+    { srcName: "ObjectTextures/LongBox.jpg", name: "LongBox" },
 
     //decal-gates
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
@@ -955,7 +964,8 @@ LoadObjects = [
     "barrel.obj", "crate.obj", "skull.obj", "rat.obj", "lizard.obj", "mushroom.obj", "coin.obj",
     "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj",
     "banana.obj", "steak.obj", "green apple.obj", "can.obj", "fish.obj",
-    "bone.obj", "wine.obj"
+    "bone.obj", "wine.obj", "crate2.obj", "Barell2.obj", "Barell3.obj", "Box.obj", "WoodenCrate.obj",
+    "crateFragile.obj", "LongBox.obj",
 ];
 
 LoadModels = [
@@ -1201,7 +1211,7 @@ LoadSprites = [
     { srcName: "EntityPictures/SeaGoddess3.jpg", name: "BitchBother" },
     { srcName: "EntityPictures/SeaGoddess5.jpg", name: "ShesellsSeaShells" },
     { srcName: "EntityPictures/SeaGodess.jpg", name: "SeaGodess" },
-
+    { srcName: "EntityPictures/CuddlyBear2.jpg", name: "CuddlyBear" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

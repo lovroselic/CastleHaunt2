@@ -2075,7 +2075,7 @@ const MAP = {
         oracles: '[[122,3,"WonderfulChest"],[54,3,"ApparitiaPacMan"]]',
     }
     ,
-    86: {
+    86 : {
         name: "Resistance HQ",
         sg: 0,
         maxSpawned: 4,
@@ -2087,8 +2087,9 @@ const MAP = {
         ceil: "MossyTiles666",
         start: '[73,3]',
         decals: '[[321,4,"PuddleDecal10","crest"],[246,4,"PuddleDecal10","crest"],[171,4,"PuddleDecal10","crest"],[146,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal10","crest"],[95,4,"PuddleDecal10","crest"],[70,4,"PuddleDecal10","crest"],[72,4,"PuddleDecal10","crest"]]',
-        lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"]]',
-        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"],[3,7,"86.10","95.1","Up"],[621,1,"86.11","96.1","Green"],[468,1,"86.12","97.1","Down"]]',
+        lights: '[[19,7,"DuaLLantern_017","standard"],[324,3,"Fireplace12","fire"],[611,1,"Fireplace210","fire"],[11,7,"Fireplace208","fire"],[300,5,"Fireplace104","fire"],[287,1,"DuaLLantern_003","standard"],[311,3,"FluxLight123","standard"],[313,5,"FluxLight104","standard"],[337,7,"FluxLight125","standard"],[162,5,"Candelabra01","standardDimmed"]]',
+        gates: '[[74,3,"86.1","85.2","Up"],[319,5,"86.2","87.1","Emerald"],[75,5,"86.3","88.1","Closed"],[549,3,"86.4","89.1","Closed"],[305,3,"86.5","90.1","Gold"],[603,1,"86.6","91.1","Closed"],[525,5,"86.7","92.1","Closed"],[486,7,"86.8","93.1","Silver"],[136,1,"86.9","94.1","Red"],[3,7,"86.10","95.1","Up"],[621,1,"86.11","96.1","Green"],[468,1,"86.12","97.1","Down"],[455,1,"86.13","99.1","Up"]]',
+        containers: '[[166,"Crate2","INTERACTION_ITEM.GuitarPick",3]]',
         doors: '[71]',
         triggers: '[[336,4,"SmoothWallButton",0,308]]',
         objects: '[[78,"Orb"],[94,"Orb"],[528,"Orb"],[546,"Orb"],[176,"BeerHealth"],[426,"BeerHealth"],[198,"Champagne"]]',
@@ -2096,7 +2097,7 @@ const MAP = {
         movables: '[[448,"Life"],[286,"RoastChicken"],[338,"RoastPig"],[288,"BabyDragon"]]',
         lairs: '[[608,1,"Lair38"],[614,1,"Lair23"],[399,3,"Lair17"],[249,3,"Lair81"],[14,7,"Lair45"],[8,7,"Lair16"],[225,5,"Lair33"],[375,5,"Lair29"]]',
         monsterList: '["Skeleton","RedSkeleton"]',
-    }
+        }
     ,
     87: {}
     ,
@@ -2254,7 +2255,7 @@ const MAP = {
         entities: '[[217,1,"RocketScientist"]]',
     }
     ,
-    97: {
+    97 : {
         name: "Bitch Beach",
         sg: 0,
         maxSpawned: 4,
@@ -2265,11 +2266,13 @@ const MAP = {
         floor: "Sand",
         ceil: "Sky1",
         start: '[22,7]',
-        lights: '[[25,7,"Sun1","harshSun"],[19,7,"Sun2","normalSun"]]',
+        lights: '[[25,7,"Sun1","harshSun"],[19,7,"Sun2","normalSun"],[106,5,"Sun2","standard"],[178,3,"Sun2","standard"],[200,1,"Sun1","harshSun"]]',
         gates: '[[7,7,"97.1","86.12","Up"],[164,3,"97.2","98.1","Closed"]]',
+        keys: '[[110,3]]',
+        containers: '[[47,"Barell3","GOLD_ITEM_TYPE.GoldBar",5],[102,"Box","GOLD_ITEM_TYPE.GoldBar",3],[55,"WoodenCrate","GOLD_ITEM_TYPE.GoldBar",4],[111,"FragileCrate","GOLD_ITEM_TYPE.GoldBar",5],[174,"BoringBox","GOLD_ITEM_TYPE.SilverBar",4],[167,"LongBox","INTERACTION_ITEM.Shell",5]]',
         entities: '[[217,1,"BeachGirl"]]',
         trainers: '[[60,5,"Swimmer"]]',
-    }
+        }
     ,
     98 : {
         name: "Bitch Goes On",
@@ -2284,7 +2287,24 @@ const MAP = {
         start: '[120,5]',
         lights: '[[66,3,"Sun3","normalSun"],[202,3,"Sun1","normalSun"],[227,1,"Sun1","normalSun"]]',
         gates: '[[119,5,"98.1","97.2","Closed"]]',
+        containers: '[[65,"Crate2","INTERACTION_ITEM.GuitarPick",3],[99,"Crate","GOLD_ITEM_TYPE.GoldBar",3],[69,"Crate3","INTERACTION_ITEM.LP",5],[189,"Barrel2","GOLD_ITEM_TYPE.GoldBar",5],[199,"Barrel2","INTERACTION_ITEM.RocketTop",4]]',
         shrines: '[[8,7,"ShesellsSeaShells"]]',
         oracles: '[[135,3,"BitchBother"],[242,1,"SeaGodess"]]',
+        }
+    ,
+    99 : {
+        name: "Allowed Forest",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB12AA109BABB45AA10BB19ABABB24A$"}',
+        wall: "HauntedForest06",
+        floor: "ForestFloor02",
+        ceil: "DarkSky06",
+        start: '[22,7]',
+        lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"]]',
+        gates: '[[7,7,"99.1","86.13","Down"]]',
+        trainers: '[[217,1,"CuddlyBear"]]',
         }
 };

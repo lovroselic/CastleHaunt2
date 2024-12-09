@@ -35,22 +35,22 @@ varying vec2 vTextureCoord;
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
 const float innerAmbientStrength = 0.225;
 const float innerDiffuseStrength = 2.1;
-const float innerSpecularStrength = 2.5;    //1.25->3.25
+const float innerSpecularStrength = 2.0;        //2.0
 
-const float PL_AmbientStrength = 2.0;
-const float PL_DiffuseStrength = 5.0;
-const float PL_SpecularStrength = 7.0;
+const float PL_AmbientStrength = 1.8;           //2.0
+const float PL_DiffuseStrength = 5.5;           //5.5
+const float PL_SpecularStrength = 0.5;          //0.5
 
 const float IGNORE_ALPHA = 0.2;
-const int MAX_STEPS = 25;                                   // Max steps for raycasting loop - 25
+const int MAX_STEPS = 50;                                   // Max steps for raycasting loop - 50
 const float EPSILON = 0.02;                                 // don't enter the wall, check for occlusion - 0.02
-const float PL_AMBIENT_OCCLUSION = 0.45;                    //how much of ambient light gets through occlusion
-const float PL_DIFFUSE_OCCLUSION = 0.50;                    //how much of diffused light gets through occlusion
-const float ATTNF = 0.08;                                   // linear arrenuation factor - 0.1
-const float ATTNF2 = 0.65;                                  //quadratic attenuation factor
+const float PL_AMBIENT_OCCLUSION = 0.225;                    //how much of ambient light gets through occlusion - 0.225
+const float PL_DIFFUSE_OCCLUSION = 0.30;                    //how much of diffused light gets through occlusion - 0.30
+const float ATTNF = 0.05;                                   // linear arrenuation factor - 0.1
+const float ATTNF2 = 0.5;                                  //quadratic attenuation factor
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
-bool Raycast(vec3 rayOrigin, vec3 rayTarget, vec3 lightDir);
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D);
 vec2 worldToGridTexCoord(vec2 position2D);
 vec2 worldToNormalizedTexCoord(vec2 position2D);
 bool isOccluded(vec2 position2D);
@@ -85,15 +85,18 @@ void main(void) {
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection) {
     float distance = distance(lightPosition, FragPos);
     vec3 lightDir = normalize(lightPosition - FragPos);
-    bool occluded = Raycast(lightPosition, FragPos, lightDir);
+    vec2 lightDir2D = normalize(-lightDir).xz;
+    vec2 lightDirection2D = normalize(-lightDirection).xz;
+    bool occluded = Raycast(lightPosition, FragPos, lightDir2D);
     float attenuation = 1.0 / (1.0 + ATTNF * distance + ATTNF2 * (distance * distance));
 
-    //is fragment illuminated by ligh source? omni dir is (255,255,255)
+    //is fragment illuminated by ligh source? omni dir is (255,255,255) so if x < 2.0 it is noit omni dir!
+
     if (inner == 0) {
         if (lightDirection.x < 2.0) {
         // considers only directional lights
         //lightDirection points away from light source, so it needs to be reversed
-            illumination = dot(lightDir, normalize(-lightDirection));
+            illumination = dot(lightDir2D, lightDirection2D);
         }
     } else {
         illumination = 1.0;
@@ -107,10 +110,17 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
         ambientLight = pointLightColor * ambientStrength * attenuation * ambientColor;
     }
 
-    //diffuse
+    // Diffuse lighting - thanks to AI for writing docs 
+    // The diffuse term is calculated as a weighted combination of two components:
+    // 1. diffLight: Standard diffuse lighting based on the angle between the surface normal and light direction.
+    //    This represents the primary contribution to diffuse lighting (95% weight).
+    // 2. diffView: An additional term based on the alignment of the surface normal and the view direction.
+    //    This contributes 5% to the final result, subtly brightening areas facing the camera.
+    // Combining these helps to smooth out lighting transitions and reduce harsh shadows, but note that 
+    // it is not physically accurate and is primarily an artistic enhancement.
     float diffLight = max(dot(normal, lightDir), 0.0);
     float diffView = max(dot(normal, viewDir), 0.0);
-    float diff = 0.9 * diffLight + 0.1 * diffView;
+    float diff = 0.95 * diffLight + 0.05 * diffView;
     vec3 diffuselight = pointLightColor * diff * diffuseStrength * attenuation * diffuseColor;
 
     // specular shading
@@ -125,15 +135,13 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     if (illumination <= 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
     } else if (occluded && inner == 0) {
-        //return vec3(0.0); // No contribution if occluded - debug
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
     }
 
     return ambientLight + diffuselight + specularLight;
 }
 
-bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir) {
-    vec2 lightDir2D = normalize(-lightDir).xz;
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D) {
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
     vec2 normalizedDelta = normalize(target - origin);
@@ -144,15 +152,15 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir) {
     vec2 delta = gridTarget - gridOrigin;
 
     vec2 step = sign(delta);
-    vec2 tDelta = abs(1.0 / delta);     // How far to go in each direction to cross a grid line
+    vec2 tDelta = abs(1.0 / delta);             // How far to go in each direction to cross a grid line
     vec2 tMax = (vec2(step.x > 0.0 ? (1.0 - fract(gridOrigin.x)) : fract(gridOrigin.x), step.y > 0.0 ? (1.0 - fract(gridOrigin.y)) : fract(gridOrigin.y)) * tDelta);
     vec2 current = gridOrigin;
 
     for (int i = 0; i < MAX_STEPS; i++) {
         if (isOccluded(current))
-            return true; // Blocked
+            return true;                        // Blocked
         if (current == gridTarget)
-            break; // Reached target
+            break;                              // Reached target
         if (tMax.x < tMax.y) {
             tMax.x += tDelta.x;
             current.x += step.x;
@@ -161,7 +169,7 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir) {
             current.y += step.y;
         }
     }
-    return false; // No occlusion detected
+    return false;                               // No occlusion detected
 }
 
 vec2 worldToGridTexCoord(vec2 position2D) {

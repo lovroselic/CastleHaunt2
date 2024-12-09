@@ -1405,7 +1405,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1 / 2 ** 3,
         glueToFloor: true,
         texture: "WoodTexture",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: Math.PI / 2,
     },
     TreasureChest: {
@@ -1425,7 +1425,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.23 / 2 ** 2,
         glueToFloor: true,
         texture: "Wardrobe",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: Math.PI,
     },
     Barrel: {
@@ -1435,7 +1435,27 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.15 / 2 ** 1,
         glueToFloor: true,
         texture: "Barrel",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    Barrel2: {
+        name: "Barrel2",
+        category: "chest",
+        element: "BARREL2",
+        scale: 1.8 / 2 ** 4,
+        glueToFloor: true,
+        texture: "Barell2",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    Barell3: {
+        name: "Barell3",
+        category: "chest",
+        element: "BARELL3",
+        scale: 1.0 / 2 ** 8,
+        glueToFloor: true,
+        texture: "Barell3",
+        material: MATERIAL.standardShine,
         rotateToNorth: 0,
     },
     Crate: {
@@ -1445,7 +1465,77 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.25 / 2 ** 3,
         glueToFloor: true,
         texture: "Crate",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    Crate2: {
+        name: "Crate2",
+        category: "chest",
+        element: "CRATE2",
+        scale: 1.9 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Crate2",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    Crate3: {
+        name: "Crate3",
+        category: "chest",
+        element: "CUBE",
+        scale: 1.8 / 2 ** 3,
+        glueToFloor: true,
+        texture: "Crate3",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    BoringBox: {
+        name: "BoringBox",
+        category: "chest",
+        element: "CUBE",
+        scale: 1.6 / 2 ** 3,
+        glueToFloor: true,
+        texture: "BoringWood",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    LongBox: {
+        name: "LongBox",
+        category: "chest",
+        element: "LONG_BOX",
+        scale: 1.6 / 2 ** 3,
+        glueToFloor: true,
+        texture: "LongBox",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    WoodenCrate: {
+        name: "WoodenCrate",
+        category: "chest",
+        element: "WOODEN_CRATE",
+        scale: 1.0 / 2 ** 3,
+        glueToFloor: true,
+        texture: "WoodenCrate",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    FragileCrate: {
+        name: "FragileCrate",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.25 / 2 ** 4,
+        glueToFloor: true,
+        texture: "CrateFragile",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+    },
+    Box: {
+        name: "Box",
+        category: "chest",
+        element: "BOX",
+        scale: 1.5 / 2 ** 6,
+        glueToFloor: true,
+        texture: "Wood_Bamboo",
+        material: MATERIAL.standardShine,
         rotateToNorth: 0,
     },
     Closet: {
@@ -1455,7 +1545,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.75 / 2 ** 1,
         glueToFloor: true,
         texture: "Closet",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: Math.PI,
     },
     BookShelf: {
@@ -1465,7 +1555,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.4 / 2 ** 5,
         glueToFloor: true,
         texture: "BookShelf",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: 0,
     },
     PirateChest: {
@@ -1475,7 +1565,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.0 / 2 ** 3,
         glueToFloor: true,
         texture: "PirateChest",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: Math.PI,
     },
     PlainCloset: {
@@ -1485,7 +1575,7 @@ const CONTAINER_ITEM_TYPE = {
         scale: 1.2 / 2 ** 2,
         glueToFloor: true,
         texture: "Closet4",
-        material: MATERIAL.standard,
+        material: MATERIAL.standardShine,
         rotateToNorth: 0,
     },
     IronChest: {
@@ -3355,7 +3445,7 @@ const INTERACTION_ENTITY = {
             conclusion: "Two shells? Deal! Here’s your sapphire. Who knew beachcombing could be so lucrative?"
         }
     },
-    
+
     RocketScientist: {
         name: "RocketScientist",
         sprite: "RocketScientist",
@@ -4727,6 +4817,20 @@ const INTERACTION_SHRINE = {
             intro: "Swimming is good for your muscles and coordination. For a gold coin I will teach you to swim like a fish. And this will improve your fighting skills.",
             progress: null,
             conclusion: "Your moves are amazing. Go and show them what you've learned!"
+        }
+    },
+    CuddlyBear: {
+        name: "CuddlyBear",
+        sprite: "CuddlyBear",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "Let me show you a bear hug. For a single gold coin.",
+            progress: null,
+            conclusion: "Excellent. Hug them and break their tiny bones."
         }
     },
 };

@@ -73,15 +73,15 @@ const DEBUG = {
         * BabyDragon
         * BabyDragon
             DONE * "KeyMould", <-- Metallica
-        * "EmeraldIngots"
+            DONE * "EmeraldIngots" <-- Assmeralda
             DONE * "LP", from MetalGuitarist
-        * "LP",       
+            DONE* "LP",       <--98
         * "LP",
         * "LP",                    
         * "LP",
             DONE* "GuitarPick", <-- buy from Bass Player
-        * "GuitarPick", 
-        * "GuitarPick"
+            DONE * "GuitarPick", 86
+            DONE  * "GuitarPick" <-- 98
             DONE * Emerald", <-- RubyErella
             DONE * "Emerald", <-- SassyPhire
             DONE * "Emerald" <-- Sparklyssa
@@ -94,19 +94,20 @@ const DEBUG = {
             DONE * "PinkDiamond", <-- SpaceWarrior
         * "PinkDiamond"
             DONE * "PocketRocket" <-- RocketScientist
-        * RocketTop
-        * RocketBottom
-        * "Shell", 
+            DONE* RocketTop <-- 98
+        * RocketBottom 
+            DONE * "Shell", <-- 97
             DONE * "Shell" <--ShesellsSeaShells
 
-        * coins sources (x, missing 1x):
+        * coins sources (x, missing 3x):
  
  
 
         *
-        * COINS used (2x):
+        * COINS used (3x):
         * Space trainer - attack5x  
         * Swimmer attack3x
+        * cuddly bear 5x
            
 
         
@@ -116,7 +117,7 @@ const DEBUG = {
                 DONE * Gold key --> 93
                 DONE * Silver key --> 94
                 DONE * Red key <--88
-            Green
+                DONE Green <-- 97
          * missing sources for: 
             * 
 
@@ -124,7 +125,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 98; //86
+        GAME.level = 88; //86 //88 //97
 
         GAME.gold = 4469; //4469
         GAME.lives = 3;
@@ -223,7 +224,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.09",
+    VERSION: "0.15.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
