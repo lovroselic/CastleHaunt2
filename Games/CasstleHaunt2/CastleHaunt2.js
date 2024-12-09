@@ -85,7 +85,7 @@ const DEBUG = {
             DONE * Emerald", <-- RubyErella
             DONE * "Emerald", <-- SassyPhire
             DONE * "Emerald" <-- Sparklyssa
-        * "Ruby", 
+            DONE * "Ruby", <--88
         * "Ruby", 
         * "Ruby"
             DONE * "Sapphire",  <--BeachGirl
@@ -224,7 +224,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.10",
+    VERSION: "0.15.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

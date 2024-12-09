@@ -19,7 +19,7 @@ const MAP_TOOLS = {
         LEGACY_WIDTH: 256,
     },
     manageMAP(level) {
-        /** check of lair cooldown */
+        /** check the lair cooldown */
         if (MAP[level].map.killCount >= MAP[level].map.killCountdown) {
             MAP[level].map.killCountdown = Math.max(1, --MAP[level].map.killCountdown);
             MAP[level].map.maxSpawned = Math.max(1, --MAP[level].map.maxSpawned);

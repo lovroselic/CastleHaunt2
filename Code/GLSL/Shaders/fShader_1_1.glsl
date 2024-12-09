@@ -37,9 +37,9 @@ const float innerAmbientStrength = 0.225;
 const float innerDiffuseStrength = 2.1;
 const float innerSpecularStrength = 2.0;        //2.0
 
-const float PL_AmbientStrength = 1.8;           //2.0
+const float PL_AmbientStrength = 2.0;           //2.0
 const float PL_DiffuseStrength = 5.5;           //5.5
-const float PL_SpecularStrength = 0.5;          //0.5
+const float PL_SpecularStrength = 1.5;          //1.5
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 50;                                   // Max steps for raycasting loop - 50

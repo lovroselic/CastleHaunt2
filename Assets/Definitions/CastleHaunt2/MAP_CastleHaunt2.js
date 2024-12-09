@@ -2101,26 +2101,31 @@ const MAP = {
     ,
     87: {}
     ,
-    88: {
+    88 : {
         name: "Dragoness Lair",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 4,
         spawnDelay: 8000,
-        data: '{"width":"15","height":"15","map":"BB3AA6BAA9ÁAA2ÁAA2ÁAA2ÁÁ3AA7ÁÁ2AA3ÁÁ4AA11BB2AA2BB2AA2ÁBB2AA9ÁÁ2AA2BB4AA2BB5AA2BB4AA2BB4AA2BB20ABB4ABB2ABB3ABB7AA3BB3AA9BB6AA3BB22$BB2AÁÁ4AA2ÁÁ4AA5ÁÁ2AA6ÁÁ4AA2"}',
+        data: '{"width":"15","height":"15","map":"BB3AA10BAA9ÁÁ2AA4ÁÁ4AA7ÁÁ2AA3ÁÁ4AA11BB2AA2BB2AA2BÁABB3ABAA7ÁÁ2AA2BB3AA2BB5AA2BB4AA2BB4AA2BB20ABABAA3BB2ABAA2BB3ABB6AA2BB3AA8BB5AA2BB21A$ÁÁ4AA2ÁÁ4AA5ÁÁ2AA6ÁÁ4AA2"}',
         wall: "GlossyBrownBrickedWall58",
         floor: "RoughCave06",
         ceil: "GlossyBrownBrickedWall54",
         start: '[118,3]',
-        lights: '[[103,3,"Lamp45","dimRed"],[133,3,"Lamp45","dimRed"],[20,7,"Lamp52","standard"],[200,1,"DuaLLantern_021","standard"],[105,5,"DuaLLantern_004","standard"],[10,7,"Fireplace205","fire"],[220,1,"Fireplace102","fire"]]',
+        decals: '[[18,7,"AI_Pic_148","picture"],[7,7,"UW27","picture"],[24,7,"DommeInGrass1","picture"],[13,7,"Princess413","picture"],[27,7,"Domme136","picture"],[140,7,"GameScreen2013","picture"],[124,7,"Various6019","picture"],[80,1,"GameScreens035","picture"],[94,1,"GemDommes_026","picture"],[96,1,"GemDommes_088","picture"],[197,1,"FluxDommes2078","picture"],[217,1,"AI_Pic_127","picture"],[223,1,"UnusedEntities5123","picture"],[207,1,"DungeonMaster201","picture"],[45,5,"AI_PIC_305","picture"],[60,5,"Princess2","picture"],[165,5,"ShinyBlackRuberella17","picture"],[150,5,"FluxDommes3025","picture"],[80,5,"FluxDommes3037","picture"],[140,5,"FluxDommes2039","picture"],[109,3,"Dominatrix08","picture"],[44,3,"SP62","picture"],[194,3,"GemDommes_288","picture"],[73,3,"GemDommes_044","picture"],[178,3,"MassEffect1","picture"],[80,3,"ReturnToCastleWolfenstein11","picture"],[140,3,"SP64","picture"]]',
+        lights: '[[103,3,"Lamp45","dimRed"],[133,3,"Lamp45","dimRed"],[20,7,"Lamp52","standard"],[200,1,"DuaLLantern_021","standard"],[105,5,"DuaLLantern_004","standard"],[10,7,"Fireplace205","fire"],[220,1,"Fireplace102","fire"],[30,5,"WallLamp34","standard"],[180,5,"DuaLLantern_008","standard"]]',
         gates: '[[119,3,"88.1","86.3","Closed"]]',
         keys: '[[22,2]]',
         monsters: '[[112,"SkeleDwarf"],[106,"Dragon"]]',
+        scrolls: '[[28,15],[208,16]]',
+        gold: '[[138,"SilverBar"],[82,"SilverBar"],[160,"SilverBar"],[56,"SilverBar"],[46,"SilverBar"],[191,"GoldBar"],[182,"GoldBar"],[47,"GoldBar"],[25,"GoldBar"],[142,"GoldBar"]]',
+        containers: '[[139,"Barell3","GOLD_ITEM_TYPE.GoldBar",7],[79,"LongBox","GOLD_ITEM_TYPE.GoldBar",1],[87,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",3],[147,"FragileCrate","GOLD_ITEM_TYPE.SilverBar",3]]',
         entities: '[[110,5,"Dragoness"]]',
-        movables: '[[108,"BabyDragon"]]',
+        objects: '[[202,"Ruby"]]',
+        movables: '[[108,"BabyDragon"],[187,"RoastPig"]]',
         lairs: '[[1,7,"Lair51"],[211,1,"Lair50"]]',
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
-    }
+        }
     ,
     89: {
         name: "Chapel of Hope",
