@@ -63,6 +63,7 @@ const DEBUG = {
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
             DONE BeachGirl wants Shell 2x gives Sapphire
+        SpiderMom wants BabyGreenSpider 3x, gives ruby
         * 
         * 
         * 
@@ -86,7 +87,7 @@ const DEBUG = {
             DONE * "Emerald", <-- SassyPhire
             DONE * "Emerald" <-- Sparklyssa
             DONE * "Ruby", <--88
-        * "Ruby", 
+        * "Ruby", <-- SpiderMom
         * "Ruby"
             DONE * "Sapphire",  <--BeachGirl
         * "Sapphire", 
@@ -98,8 +99,12 @@ const DEBUG = {
         * RocketBottom 
             DONE * "Shell", <-- 97
             DONE * "Shell" <--ShesellsSeaShells
+            DONE "BabyGreenSpider", <-- 86
+        "BabyGreenSpider", 
+        "BabyGreenSpider",
 
-        * coins sources (x, missing 3x):
+        * coins sources (1x, missing 2x):
+            floor - 86;
  
  
 
@@ -125,7 +130,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 88; //86 //88 //97
+        GAME.level = 86; //86 //88 //97
 
         GAME.gold = 4469; //4469
         GAME.lives = 3;
@@ -179,7 +184,6 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
             "GoldCoin"
         ];
         for (let itm of invItems) {
@@ -224,7 +228,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.11",
+    VERSION: "0.15.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -33,8 +33,8 @@ varying vec2 vTextureCoord;
 
 //bloody hardcoded constants
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
-const float innerAmbientStrength = 0.225;
-const float innerDiffuseStrength = 2.1;
+const float innerAmbientStrength = 0.25;        //0.25
+const float innerDiffuseStrength = 2.5;          //2.5
 const float innerSpecularStrength = 2.0;        //2.0
 
 const float PL_AmbientStrength = 2.0;           //2.0

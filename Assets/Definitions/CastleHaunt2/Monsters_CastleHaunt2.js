@@ -325,6 +325,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    CuteDomme: {
+        name: "CuteDomme",
+        sprite: "CuteDomme",
+        category: 'crest',
+        voice: "Female",
+        text: "You know that reloading game will reset all lairs to ther initial spawning rates? So all your killing will be in vain?",
+        interactionCategory: "oracle",
+    },
+    SpiderOracle: {
+        name: "SpiderOracle",
+        sprite: "SpiderOracle",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "Not so long ago, a tiny green baby spider went past.",
+        interactionCategory: "oracle",
+    },
     SeaGodess: {
         name: "SeaGodess",
         sprite: "SeaGodess",
@@ -2643,7 +2659,7 @@ const MOVABLE_INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         behaviourArguments: [Infinity, ["wanderer"], -1],
         inventorySprite: "RoastPig",
-        text: "Pig"
+        text: "Here piggy piggy piggy.",
     },
     Cat: {
         name: "Cat",
@@ -3432,6 +3448,20 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    SpiderMom: {
+        name: "SpiderMom",
+        sprite: "SpiderMom",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["BabyGreenSpider", "BabyGreenSpider", "BabyGreenSpider"],
+        gives: "Ruby",
+        text: {
+            intro: "My little green darlings are missing! Bring them back to me, and I'll share a precious thing from my web's treasures.",
+            progress: "One of my babies is home, but the web still feels empty. Keep searching!",
+            conclusion: "All my babies are safe and sound! As promised, here's a bloodred ruby. A small price for a mother's peace of mind."
+        }
+    },
+
     BeachGirl: {
         name: "BeachGirl",
         sprite: "BeachGirl",
@@ -3445,7 +3475,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Two shells? Deal! Here’s your sapphire. Who knew beachcombing could be so lucrative?"
         }
     },
-
     RocketScientist: {
         name: "RocketScientist",
         sprite: "RocketScientist",
