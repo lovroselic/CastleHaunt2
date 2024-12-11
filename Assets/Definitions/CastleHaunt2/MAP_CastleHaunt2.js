@@ -2075,7 +2075,7 @@ const MAP = {
         oracles: '[[122,3,"WonderfulChest"],[54,3,"ApparitiaPacMan"]]',
     }
     ,
-    86 : {
+    86: {
         name: "Resistance HQ",
         sg: 0,
         maxSpawned: 4,
@@ -2099,11 +2099,11 @@ const MAP = {
         movables: '[[448,"Life"],[286,"RoastChicken"],[338,"RoastPig"],[288,"BabyDragon"],[536,"BabyGreenSpider"]]',
         lairs: '[[608,1,"Lair38"],[614,1,"Lair23"],[399,3,"Lair17"],[249,3,"Lair81"],[14,7,"Lair45"],[8,7,"Lair16"],[225,5,"Lair33"],[375,5,"Lair29"]]',
         monsterList: '["Skeleton","RedSkeleton"]',
-        }
+    }
     ,
     87: {}
     ,
-    88: {
+    88 : {
         name: "Dragoness Lair",
         sg: 0,
         maxSpawned: 4,
@@ -2124,26 +2124,34 @@ const MAP = {
         containers: '[[139,"Barell3","GOLD_ITEM_TYPE.GoldBar",7],[79,"LongBox","GOLD_ITEM_TYPE.GoldBar",1],[87,"PlainCloset","GOLD_ITEM_TYPE.GoldBar",3],[147,"FragileCrate","GOLD_ITEM_TYPE.SilverBar",3]]',
         entities: '[[110,5,"Dragoness"]]',
         objects: '[[202,"Ruby"]]',
-        movables: '[[108,"BabyDragon"],[187,"RoastPig"]]',
+        movables: '[[108,"BabyDragon"],[187,"RoastPig"],[91,"BabyGreenSpider"]]',
         lairs: '[[1,7,"Lair51"],[211,1,"Lair50"]]',
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
-    }
+        }
     ,
-    89: {
+    89 : {
         name: "Chapel of Hope",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 4,
         spawnDelay: 9999,
-        data: '{"width":"15","height":"15","map":"BB2ABABAA3BAA2BB2ABB2AA16BABAA29BB2AA2BB2AA2BAA4BAA16BABB2ABB4AA4BB2AA3BAA7BB4ABB5ABB10AA3BB4ABB7ABB2ABB3AA2BB3ABB2ABB4AA2BB2ABB2AA2BB5ABAA3BABB2ABB2AA2BB19A$"}',
+        data: '{"width":"15","height":"15","map":"BB2AA2BB2AA3BB2AA2BB2ABAA16BAA3BAA19BAA6BAA4BABAA2BABAA20BB2ABB2AA2BB4AA2BAA4BABB2AA6BB4AA2BB4ABB11ABAA2BABB2ABB6AA3BB4AA3BABABB2ABB3AA2BB4ABB3ABB2AA3BABABB2ABB19A$"}',
         wall: "GlossyBrownBrickedWall69",
         floor: "IrregularTiledFloorCeil15",
         ceil: "FloorTiles_SDXL_006",
         start: '[106,5]',
+        decals: '[[1,7,"Princess404","picture"],[33,7,"CastleBabes51","picture"],[35,7,"FemDommes6009","picture"],[39,7,"Nature07","picture"],[41,7,"GameScreen2033","picture"],[13,7,"UnusedEntities5125","picture"],[77,7,"Bagitman90","picture"],[87,7,"FluxDommes3111","picture"],[213,1,"PrincessAI_16","picture"],[184,1,"GameScreen2016","picture"],[190,1,"HunchBack10","picture"],[211,1,"Domme217","picture"],[223,1,"CastleLady64","picture"],[137,1,"Portal132","picture"],[147,1,"GemDommes_241","picture"],[62,1,"MontyMole100","picture"],[72,1,"Tutankham105","picture"],[35,5,"Domme374","picture"],[185,5,"BlackBeret_026","picture"],[195,5,"Various7002","picture"],[45,5,"FluxDommes2296","picture"],[62,5,"UnusedEdtitiesFramed_059","picture"],[167,5,"FluxDommes2026","picture"],[59,3,"CastleBabes41","picture"],[39,3,"Cavelon4","picture"],[189,3,"Barbarian111","picture"],[209,3,"NurseAlchemyMagic_031","picture"],[177,3,"Ishar71","picture"],[87,3,"CastleOfTerror3","picture"],[221,1,"GemDommes_149","picture"]]',
         lights: '[[112,1,"DuaLLantern_013","standard"],[112,7,"WallLamp20","standard"],[112,3,"FluxLight111","standard"],[112,5,"WallLamp33","standard"],[151,7,"Candelabra01","weakCandle"],[163,7,"Lamp46","weakCandle"],[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
         gates: '[[105,5,"89.1","86.4","Closed"]]',
+        scrolls: '[[18,14]]',
+        gold: '[[166,"RedGem"],[26,"RedGem"],[94,"GoldBar"],[158,"GoldBar"],[70,"GoldBar"],[61,"GoldBar"],[198,"GoldCube"],[154,"GoldCube"],[66,"GoldCube"],[31,"GoldCube"],[73,"GoldCube"],[193,"GoldCube"],[206,"GoldCube"],[130,"GoldCube"],[83,"GoldCube"],[110,"GoldCube"],[141,"GoldCube"]]',
+        containers: '[[36,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[102,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[122,"Barrel2","GOLD_ITEM_TYPE.GoldBar",5],[186,"Box","GOLD_ITEM_TYPE.GoldBar",5]]',
         shrines: '[[119,3,"PrincessCryptHealth"],[7,7,"PrincessCryptSword"],[217,1,"PrincessCryptFireball"]]',
-    }
+        objects: '[[178,"GoldCoin"]]',
+        movables: '[[58,"BabyGreenSpider"]]',
+        lairs: '[[76,1,"Lair79"],[88,1,"Lair03"],[204,5,"Lair37"],[200,3,"Lair49"]]',
+        monsterList: '["SkeleDwarf"]',
+        }
     ,
     90: {
         name: "Key Engineering",

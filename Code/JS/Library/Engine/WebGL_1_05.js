@@ -1101,17 +1101,16 @@ const WORLD = {
                 topY = 1.0 - WebGL.INI.LIGHT_TOP;
                 bottomY = 1.0 - ((WebGL.INI.LIGHT_WIDTH / R) + WebGL.INI.LIGHT_TOP);
                 let relHeightLight = topY - bottomY;
-                console.info(",,relHeightLight", relHeightLight, "*",leftX,rightX, topY, bottomY);
+                //console.info(",,relHeightLight", relHeightLight, "*",leftX,rightX, topY, bottomY);
 
                 if (relHeightLight > 1) {
-                    //resolution /= WebGL.INI.LIGHT_SCALE_FACTOR;
                     return this.getBoundaries("texture", W, H, resolution / WebGL.INI.LIGHT_SCALE_FACTOR);
                 } else if (relHeightLight > (1.0 - 2 * WebGL.INI.LIGHT_TOP)) {
                     let adjustment = (1.0 - relHeightLight) / 2;
                     if (adjustment < WebGL.INI.LIGHT_ADJUSTMENT_LIMIT) return this.getBoundaries("texture", W, H, resolution / WebGL.INI.LIGHT_SCALE_FACTOR);
                     topY = 1.0 - adjustment;
                     bottomY = adjustment;
-                    console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
+                    //console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
                 }
                 break;
             case "crest":
@@ -1149,7 +1148,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        console.info("..............addpic", decal, decal.category, decal.name, resolution);
+        //console.info("..............addpic", decal, decal.category, decal.name, resolution);
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();

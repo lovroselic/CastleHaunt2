@@ -63,7 +63,7 @@ const DEBUG = {
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
             DONE BeachGirl wants Shell 2x gives Sapphire
-        SpiderMom wants BabyGreenSpider 3x, gives ruby
+            DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
         * 
         * 
         * 
@@ -87,7 +87,7 @@ const DEBUG = {
             DONE * "Emerald", <-- SassyPhire
             DONE * "Emerald" <-- Sparklyssa
             DONE * "Ruby", <--88
-        * "Ruby", <-- SpiderMom
+            DONE * "Ruby", <-- SpiderMom
         * "Ruby"
             DONE * "Sapphire",  <--BeachGirl
         * "Sapphire", 
@@ -100,19 +100,20 @@ const DEBUG = {
             DONE * "Shell", <-- 97
             DONE * "Shell" <--ShesellsSeaShells
             DONE "BabyGreenSpider", <-- 86
-        "BabyGreenSpider", 
-        "BabyGreenSpider",
+            DONE "BabyGreenSpider", <-- 89
+            DONE "BabyGreenSpider", <-- 88
 
-        * coins sources (1x, missing 2x):
+        * coins sources (2x, missing 1x):
             floor - 86;
+            floor - 89;
  
  
 
         *
         * COINS used (3x):
-        * Space trainer - attack5x  
-        * Swimmer attack3x
-        * cuddly bear 5x
+            * Space trainer - attack5x  
+            * Swimmer attack3x
+            * cuddly bear 5x
            
 
         
@@ -125,15 +126,18 @@ const DEBUG = {
                 DONE Green <-- 97
          * missing sources for: 
             * 
+        * temple of hope used:
+            * heart   
 
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 86; //86 //88 //97
+        //86-->89-->(86)-->88-->(86)-->91
+        GAME.level = 91;
 
-        GAME.gold = 4469; //4469
-        GAME.lives = 3;
+        GAME.gold = 3845;
+        GAME.lives = 4;
 
         HERO.hasCapacity = true;
         HERO.capacity = 5;
@@ -144,13 +148,13 @@ const DEBUG = {
         HERO.magic = 33;
         HERO.attack = 32;
 
-        HERO.health = 310; //310
-        HERO.maxHealth = 320; //320
+        HERO.health = 334;
+        HERO.maxHealth = 360; //320
 
 
         let actItems = [
             INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -164,6 +168,11 @@ const DEBUG = {
             //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
+
+            INTERACTION_OBJECT.Champagne,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -171,7 +180,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            //"Death",
+            "Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
         ];
@@ -184,7 +193,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "GoldCoin"
+            "BabyDragon", "GuitarPick", "GoldCoin", "BabyGreenSpider", "BabyGreenSpider", "GoldCoin", "BabyGreenSpider", "Ruby", "BabyDragon"
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -192,7 +201,7 @@ const DEBUG = {
         }
 
         let keys = [
-
+            "Red"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -228,7 +237,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.12",
+    VERSION: "0.15.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
