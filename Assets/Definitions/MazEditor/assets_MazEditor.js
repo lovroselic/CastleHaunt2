@@ -8,6 +8,9 @@ console.log("%cAssets for MazeEditor ready.", "color: orange");
 
 LoadTextures = [
     /**wall, floor, ceil */
+    { srcName: "Wall/SeaWater1.jpg", name: "SeaWater1" },
+    { srcName: "Wall/SeaWater2.jpg", name: "SeaWater2" },
+    { srcName: "Wall/SeaWaterWall.jpg", name: "SeaWaterWall" },
     { srcName: "Wall/3d wall.jpg", name: "3d wall" },
     { srcName: "Wall/3d wall2.jpg", name: "3d wall2" },
     { srcName: "Wall/BeautifullWall1.jpg", name: "BeautifullWall1" },

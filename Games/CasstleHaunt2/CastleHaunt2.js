@@ -63,7 +63,8 @@ const DEBUG = {
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
             DONE BeachGirl wants Shell 2x gives Sapphire
-            DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
+            DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
+                $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
         * 
         * 
         * 
@@ -93,7 +94,7 @@ const DEBUG = {
         * "Sapphire", 
         * "Sapphire"
             DONE * "PinkDiamond", <-- SpaceWarrior
-        * "PinkDiamond"
+            DONE * "PinkDiamond" <-- Mermaid
             DONE * "PocketRocket" <-- RocketScientist
             DONE* RocketTop <-- 98
         * RocketBottom 
@@ -102,18 +103,21 @@ const DEBUG = {
             DONE "BabyGreenSpider", <-- 86
             DONE "BabyGreenSpider", <-- 89
             DONE "BabyGreenSpider", <-- 88
+        RedFishTail", 
+        "RedLatexBra"
 
-        * coins sources (2x, missing 1x):
+        * coins sources (2x, missing 2x = 4):
             floor - 86;
             floor - 89;
  
  
 
         *
-        * COINS used (3x):
+        * COINS used (4x):
             * Space trainer - attack5x  
             * Swimmer attack3x
             * cuddly bear 5x
+            * axe Babe attack 5x
            
 
         
@@ -134,7 +138,7 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91
-        GAME.level = 91;
+        GAME.level = 91; //91
 
         GAME.gold = 3845;
         GAME.lives = 4;
@@ -193,7 +197,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabyDragon", "GuitarPick", "GoldCoin", "BabyGreenSpider", "BabyGreenSpider", "GoldCoin", "BabyGreenSpider", "Ruby", "BabyDragon"
+            "BabyDragon", "GuitarPick", "GoldCoin", "GoldCoin", "Ruby", "BabyDragon", "Ruby",
+            
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -237,7 +242,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.13",
+    VERSION: "0.15.14",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -2103,7 +2103,7 @@ const MAP = {
     ,
     87: {}
     ,
-    88 : {
+    88: {
         name: "Dragoness Lair",
         sg: 0,
         maxSpawned: 4,
@@ -2127,9 +2127,9 @@ const MAP = {
         movables: '[[108,"BabyDragon"],[187,"RoastPig"],[91,"BabyGreenSpider"]]',
         lairs: '[[1,7,"Lair51"],[211,1,"Lair50"]]',
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
-        }
+    }
     ,
-    89 : {
+    89: {
         name: "Chapel of Hope",
         sg: 0,
         maxSpawned: 4,
@@ -2151,7 +2151,7 @@ const MAP = {
         movables: '[[58,"BabyGreenSpider"]]',
         lairs: '[[76,1,"Lair79"],[88,1,"Lair03"],[204,5,"Lair37"],[200,3,"Lair49"]]',
         monsterList: '["SkeleDwarf"]',
-        }
+    }
     ,
     90: {
         name: "Key Engineering",
@@ -2183,6 +2183,7 @@ const MAP = {
         lights: '[[73,7,"Lamp44","standard"],[79,7,"Lamp44","standard"],[88,7,"DuaLLantern_029","standard"],[98,7,"DuaLLantern_029","standard"],[171,7,"Candelabra01","candle"],[185,7,"Candelabra11","candle"]]',
         gates: '[[8,7,"91.1","86.6","Closed"]]',
         entities: '[[178,1,"Metallica"],[258,3,"SpiderMom"]]',
+        trainers: '[[268,5,"AxeBabe"]]',
     }
     ,
     92: {
@@ -2301,7 +2302,7 @@ const MAP = {
         ceil: "Sky1",
         start: '[120,5]',
         lights: '[[66,3,"Sun3","normalSun"],[202,3,"Sun1","normalSun"],[227,1,"Sun1","normalSun"]]',
-        gates: '[[119,5,"98.1","97.2","Closed"]]',
+        gates: '[[119,5,"98.1","97.2","Closed"],[237,3,"98.2","100.1","Down"]]',
         containers: '[[65,"Crate2","INTERACTION_ITEM.GuitarPick",3],[99,"Crate","GOLD_ITEM_TYPE.GoldBar",3],[69,"Crate3","INTERACTION_ITEM.LP",5],[189,"Barrel2","GOLD_ITEM_TYPE.GoldBar",5],[199,"Barrel2","INTERACTION_ITEM.RocketTop",4]]',
         shrines: '[[8,7,"ShesellsSeaShells"]]',
         oracles: '[[135,3,"BitchBother"],[242,1,"SeaGodess"]]',
@@ -2321,5 +2322,21 @@ const MAP = {
         lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"]]',
         gates: '[[7,7,"99.1","86.13","Down"]]',
         trainers: '[[217,1,"CuddlyBear"]]',
-    }
+    },
+    100 : {
+        name: "Merplace",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"13","height":"13","map":"BB2ABABB3AA3BABABB2AA62BABB23ABB2ABB7AA3BB6ABAA2BB14ABB16$BB9A"}',
+        wall: "SeaWaterWall",
+        floor: "SeaWater1",
+        ceil: "Sky1",
+        start: '[79,5]',
+        lights: '[[21,7,"Sun2","normalSun"],[146,1,"Sun2","normalSun"],[150,1,"Sun1","normalSun"]]',
+        gates: '[[78,5,"100.1","98.2","Up"]]',
+        entities: '[[90,3,"Mermaid"]]',
+        oracles: '[[5,7,"RedMermaid"]]',
+        }
 };

@@ -325,6 +325,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RedMermaid: {
+        name: "RedMermaid",
+        sprite: "RedMermaid",
+        category: 'crest',
+        voice: "Female",
+        text: "I hear she wants the same red outfit as I have? Does that meke me an influencer? Or merfluencer?",
+        interactionCategory: "oracle",
+    },
     CuteDomme: {
         name: "CuteDomme",
         sprite: "CuteDomme",
@@ -3445,9 +3453,35 @@ const INTERACTION_ITEM = {
         inventorySprite: "PinkDiamond",
         text: "What a rarity. Pink diamond. welcome to my pocket."
     },
+    RedFishTail: {
+        name: "RedFishTail",
+        category: "interaction_item",
+        inventorySprite: "RedFishTail",
+        text: "Spare outfit for a fish. Or mermaid."
+    },
+    RedLatexBra: {
+        name: "RedLatexBra",
+        category: "interaction_item",
+        inventorySprite: "RedLatexBra",
+        text: "Sexy stuff. I should wear these. Maybe in the next game?"
+    },
 };
 
 const INTERACTION_ENTITY = {
+    Mermaid: {
+        name: "Mermaid",
+        sprite: "Mermaid",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["RedFishTail", "RedLatexBra"],
+        gives: "PinkDiamond",
+        text: {
+            intro: "This greenish sea look is so last season. I'm ready to go bold and red! Bring me the pieces I need, and I'll reward you with a PinkDiamond from the ocean's depths.",
+            progress: "One item down, but I'm not rocking red just yet. Keep going!",
+            conclusion: "Fabulous! My red transformation is complete. Here's your PinkDiamond, a gift from the waves."
+        }
+    },
+    
     SpiderMom: {
         name: "SpiderMom",
         sprite: "SpiderMom",
@@ -3461,7 +3495,6 @@ const INTERACTION_ENTITY = {
             conclusion: "All my babies are safe and sound! As promised, here's a bloodred ruby. A small price for a mother's peace of mind."
         }
     },
-
     BeachGirl: {
         name: "BeachGirl",
         sprite: "BeachGirl",
@@ -4860,6 +4893,20 @@ const INTERACTION_SHRINE = {
             intro: "Let me show you a bear hug. For a single gold coin.",
             progress: null,
             conclusion: "Excellent. Hug them and break their tiny bones."
+        }
+    },
+    AxeBabe: {
+        name: "AxeBabe",
+        sprite: "AxeBabe",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "For a shiny coin with the face of your mother, haha,  I will tell you something important.",
+            progress: null,
+            conclusion: "If you have enemies, just axe them. Ahahahaha."
         }
     },
 };
