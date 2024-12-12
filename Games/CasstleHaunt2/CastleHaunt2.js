@@ -64,6 +64,7 @@ const DEBUG = {
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
             DONE BeachGirl wants Shell 2x gives Sapphire
             DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
+            DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
         * 
         * 
@@ -78,8 +79,8 @@ const DEBUG = {
             DONE * "EmeraldIngots" <-- Assmeralda
             DONE * "LP", from MetalGuitarist
             DONE* "LP",       <--98
-        * "LP",
-        * "LP",                    
+            DONE * "LP", <-- 91
+            DONE * "LP",   <-- PinkPianoGirl                 
         * "LP",
             DONE* "GuitarPick", <-- buy from Bass Player
             DONE * "GuitarPick", 86
@@ -103,8 +104,10 @@ const DEBUG = {
             DONE "BabyGreenSpider", <-- 86
             DONE "BabyGreenSpider", <-- 89
             DONE "BabyGreenSpider", <-- 88
-        RedFishTail", 
+            DONE RedFishTail", <-- 91
         "RedLatexBra"
+        "PinkLatexGloves", 
+        "PinkBoots"
 
         * coins sources (2x, missing 2x = 4):
             floor - 86;
@@ -114,8 +117,8 @@ const DEBUG = {
 
         *
         * COINS used (4x):
-            * Space trainer - attack5x  
-            * Swimmer attack3x
+            * Space trainer - attack 5x  
+            * Swimmer attack 3x
             * cuddly bear 5x
             * axe Babe attack 5x
            
@@ -242,7 +245,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.14",
+    VERSION: "0.15.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

@@ -3465,9 +3465,34 @@ const INTERACTION_ITEM = {
         inventorySprite: "RedLatexBra",
         text: "Sexy stuff. I should wear these. Maybe in the next game?"
     },
+    PinkLatexGloves: {
+        name: "PinkLatexGloves",
+        category: "interaction_item",
+        inventorySprite: "PinkLatexGloves",
+        text: "Sexy stuff. I should wear these. Maybe in the next game?"
+    },
+    PinkBoots: {
+        name: "PinkBoots",
+        category: "interaction_item",
+        inventorySprite: "PinkBoots",
+        text: "Cute stuff. Befitting a princess. But not my style."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    PinkPianoGirl: {
+        name: "PinkPianoGirl",
+        sprite: "PinkPianoGirl",
+        category: 'crest',
+        voice: "Female",
+        wants: ["PinkLatexGloves", "PinkBoots"],
+        gives: "LP",
+        text: {
+            intro: "I'm recording my new metal masterpiece: Prelude for a Pink Piano Primadonna. I just need some sleek accessories for the promotion. Can you help?",
+            progress: "One piece ready, but the look isn't complete. Keep it coming!",
+            conclusion: "Now I'm perfectly styled for my album release! Here's your LP - turn it up to eleven!"
+        }
+    },
     Mermaid: {
         name: "Mermaid",
         sprite: "Mermaid",
@@ -3481,7 +3506,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Fabulous! My red transformation is complete. Here's your PinkDiamond, a gift from the waves."
         }
     },
-    
     SpiderMom: {
         name: "SpiderMom",
         sprite: "SpiderMom",
