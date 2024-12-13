@@ -16,7 +16,7 @@ struct Material {
     float shininess;
 };
 
-const int N_LIGHTS = 1;                                     //replaced before compiling
+const int N_LIGHTS = 1;                                         //replaced before compiling
 float illumination;
 uniform vec3 uPointLights[N_LIGHTS];
 uniform vec3 uLightColors[N_LIGHTS];
@@ -24,8 +24,8 @@ uniform vec3 uLightDirections[N_LIGHTS];
 uniform sampler2D uSampler;
 uniform vec3 uCameraPos;
 uniform Material uMaterial;
-uniform sampler2D uOcclusionMap;                            // Occlusion map
-uniform vec2 uGridSize;                                     // Size of the grid in the occlusion map
+uniform sampler2D uOcclusionMap;                                // Occlusion map
+uniform vec2 uGridSize;                                         // Size of the grid in the occlusion map
 
 varying vec3 FragPos;
 varying vec3 v_normal;
@@ -42,12 +42,12 @@ const float PL_DiffuseStrength = 5.5;           //5.5
 const float PL_SpecularStrength = 1.5;          //1.5
 
 const float IGNORE_ALPHA = 0.2;
-const int MAX_STEPS = 50;                                   // Max steps for raycasting loop - 50
-const float EPSILON = 0.02;                                 // don't enter the wall, check for occlusion - 0.02
-const float PL_AMBIENT_OCCLUSION = 0.225;                    //how much of ambient light gets through occlusion - 0.225
-const float PL_DIFFUSE_OCCLUSION = 0.30;                    //how much of diffused light gets through occlusion - 0.30
-const float ATTNF = 0.05;                                   // linear arrenuation factor - 0.1
-const float ATTNF2 = 0.5;                                  //quadratic attenuation factor
+const int MAX_STEPS = 50;                                       // Max steps for raycasting loop - 50
+const float EPSILON = 0.02;                                     // don't enter the wall, check for occlusion - 0.02
+const float PL_AMBIENT_OCCLUSION = 0.225;                       //how much of ambient light gets through occlusion - 0.225
+const float PL_DIFFUSE_OCCLUSION = 0.30;                        //how much of diffused light gets through occlusion - 0.30
+const float ATTNF = 0.05;                                       // linear arrenuation factor - 0.1
+const float ATTNF2 = 0.5;                                       //quadratic attenuation factor
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D);
@@ -90,16 +90,10 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     bool occluded = Raycast(lightPosition, FragPos, lightDir2D);
     float attenuation = 1.0 / (1.0 + ATTNF * distance + ATTNF2 * (distance * distance));
 
-    //is fragment illuminated by ligh source? omni dir is (255,255,255) so if x < 2.0 it is noit omni dir!
-
-    if (inner == 0) {
-        if (lightDirection.x < 2.0) {
-        // considers only directional lights
-        //lightDirection points away from light source, so it needs to be reversed
-            illumination = dot(lightDir2D, lightDirection2D);
-        }
-    } else {
-        illumination = 1.0;
+    //is fragment illuminated by ligh source? omni dir is (255,255,255) so if x < 2.0 it is not omni dir, but directional!
+    illumination = 1.0;
+    if (inner == 0 && lightDirection.x < 2.0) {
+        illumination = dot(lightDir2D, lightDirection2D);               // considers only directional lights
     }
 
     //ambient
@@ -132,7 +126,7 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     diffuselight = clamp(diffuselight, 0.0, 1.0);
     specularLight = clamp(specularLight, 0.0, 1.0);
 
-    if (illumination < 0.0) {
+    if (illumination <= 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
     } else if (occluded && inner == 0) {
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
