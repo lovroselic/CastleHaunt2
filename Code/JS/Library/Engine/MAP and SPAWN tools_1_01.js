@@ -42,6 +42,7 @@ const MAP_TOOLS = {
         if (ENGINE.verbose) console.log(`MAP TOOLS GA bytesize`, MAP_TOOLS.INI.GA_BYTE_SIZE);
     },
     unpack(level) {
+        if (this.MAP[level].unpacked) return;                                                   // already unpacked, nothing to do
         if (this.MAP[level].adapted_data) {
             const adapted_data = JSON.parse(this.MAP[level].data);
             adapted_data.map = this.MAP[level].adapted_data;
@@ -85,6 +86,7 @@ const MAP_TOOLS = {
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
         this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
         this.MAP[level].map.textureMap = GA.toTextureMap();
+        this.MAP[level].unpacked = true;
         /**  */
         if (ENGINE.verbose) console.info("Unpacked MAP level", level, "map", this.MAP[level].map);
     },

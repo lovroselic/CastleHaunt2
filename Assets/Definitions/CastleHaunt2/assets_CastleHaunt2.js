@@ -1023,9 +1023,10 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaNorthPass.jpg", name: "ApparitiaNorthPass" },
     { srcName: "EntityPictures/ApparitiaJustMe.jpg", name: "ApparitiaJustMe" },
     { srcName: "EntityPictures/ApparitiaPacMan.jpg", name: "ApparitiaPacMan" },
-
     { srcName: "EntityPictures/ApparitiaOutOfFashion.jpg", name: "ApparitiaOutOfFashion" },
     { srcName: "EntityPictures/ApparitiaZing.jpg", name: "ApparitiaZing" },
+    { srcName: "EntityPictures/ApparitiaHot.jpg", name: "ApparitiaHot" },
+    { srcName: "EntityPictures/ApparitiaBeach.jpg", name: "ApparitiaBeach" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1222,6 +1223,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Mermaid2.jpg", name: "Mermaid" },
     { srcName: "EntityPictures/RedMermaid.jpg", name: "RedMermaid" },
     { srcName: "EntityPictures/PinkPianoGirl.jpg", name: "PinkPianoGirl" },
+    { srcName: "EntityPictures/TransparentTibetan.jpg", name: "TransparentTibetan" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1231,6 +1233,7 @@ LoadSprites = [
     { srcName: "ActionMovables/Sheep.png", name: "BabySheep" },
     { srcName: "ActionMovables/SilverSpider.png", name: "Spider" },
     { srcName: "ActionMovables/Wolf.png", name: "WolfPuppy" },
+    { srcName: "ActionMovables/LittlePiggy.png", name: "LittlePiggy" },
 
     //triggers
     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },

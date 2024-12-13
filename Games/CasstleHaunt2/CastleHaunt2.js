@@ -13,6 +13,7 @@ TODO:
 
 known bugs: 
     * i don't do bugs
+    * princess death does not take into account current map changes!!
 retests:
     * 
 log:
@@ -28,7 +29,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: true,
+    INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -66,14 +67,15 @@ const DEBUG = {
             DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
             DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
+        Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
         * 
         * 
         * 
             DONE * Document<- Dragoness
             DONE* BabyDragon <- 86
             DONE * BabyDragon <-- 88
-        * BabyDragon
-        * BabyDragon
+            DONE * BabyDragon <-- 91
+            DONE * BabyDragon <--- 97
         * BabyDragon
             DONE * "KeyMould", <-- Metallica
             DONE * "EmeraldIngots" <-- Assmeralda
@@ -106,21 +108,25 @@ const DEBUG = {
             DONE "BabyGreenSpider", <-- 88
             DONE RedFishTail", <-- 91
         "RedLatexBra"
-        "PinkLatexGloves", 
+        "PinkLatexGloves", <-- Wolverine
         "PinkBoots"
+        "LittlePiggy", 
+        "LittlePiggy", 
+        "LittlePiggy"
 
-        * coins sources (2x, missing 2x = 4):
+        * coins sources (2x, missing 3x = 5):
             floor - 86;
             floor - 89;
  
  
 
         *
-        * COINS used (4x):
+        * COINS used (5x):
+                $$$$$* TransparentTibetan magic 5x 
             * Space trainer - attack 5x  
             * Swimmer attack 3x
             * cuddly bear 5x
-            * axe Babe attack 5x
+                $$$$$ * axe Babe attack 5x
            
 
         
@@ -140,10 +146,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //86-->89-->(86)-->88-->(86)-->91
-        GAME.level = 91; //91
+        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98
+        GAME.level = 98; //94
 
-        GAME.gold = 3845;
+        GAME.gold = 5176;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -152,15 +158,14 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 33;
-        HERO.attack = 32;
+        HERO.magic = 39;
+        HERO.attack = 38;
 
-        HERO.health = 334;
-        HERO.maxHealth = 360; //320
+        HERO.health = 339;
+        HERO.maxHealth = 360;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -168,7 +173,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
@@ -176,7 +182,7 @@ const DEBUG = {
             INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.BeerHealth,
 
-            INTERACTION_OBJECT.Champagne,
+            //INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
@@ -187,7 +193,8 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death", "Death",
+            "DestroyOrbs", "HalfLife", "Explode", "MagicSupremacy", "Death",
+            //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
         ];
@@ -200,8 +207,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabyDragon", "GuitarPick", "GoldCoin", "GoldCoin", "Ruby", "BabyDragon", "Ruby",
-            
+            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "Shell"
+
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -209,7 +216,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Red"
+            "Green"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -245,7 +252,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.15",
+    VERSION: "0.15.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -532,7 +539,6 @@ const HERO = {
     construct() {
         this.player = null;
         this.height = 0.6;
-        this.canShoot = true;
         this.hasCapacity = false;
         this.capacity = 0;
         this.maxCapacity = 0;
@@ -547,6 +553,7 @@ const HERO = {
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
         this.mana = 0;      //unusd, compatibility
+        this.ressurection = false;
         this.revive();
         this.visible();
 
@@ -559,6 +566,7 @@ const HERO = {
     revive() {
         this.dead = false;
         this.health = this.maxHealth;
+        this.canShoot = true;
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -603,6 +611,7 @@ const HERO = {
         }
     },
     shoot() {
+        console.info(HERO.dead, HERO.canShoot);
         if (HERO.dead) return;
         if (!HERO.canShoot) return;
 
@@ -756,6 +765,11 @@ const HERO = {
         const decal = SPRITE.DeathPlace;
         const deathPlace = new StaticDecal(grid, face, decal, "crest", "DeathPlace", true);
         GAME.deathPlaceDecals.push(deathPlace);
+
+        HERO.ressurection = true;
+        GAME.STORE.storeIAM(MAP[GAME.level].map);
+
+        console.info("dave IAM", MAP[GAME.level].map.store);
 
         ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
         ENGINE.GAME.ANIMATION.resetTimer();
@@ -1025,9 +1039,15 @@ const GAME = {
         console.timeEnd("setWorld");
     },
     buildWorld(level) {
-        console.info("building world, room/dungeon/level:", level);
+        console.info("building world, room/dungeon/level:", level, "ressurection", HERO.ressurection);
         WebGL.init_required_IAM(MAP[level].map, HERO);
-        SPAWN_TOOLS.spawn(level);
+
+        if (HERO.ressurection) {
+            GAME.reloadIAM(level);
+        } else {
+            SPAWN_TOOLS.spawn(level);
+        }
+        HERO.ressurection = false;
 
         /* adding death places*/
         for (const dp of GAME.deathPlaceDecals) {
@@ -1493,6 +1513,11 @@ const GAME = {
             }
         }
     },
+    reloadIAM(level) {
+        GAME.STORE.loadIAM(MAP[level].map);
+        GAME.STORE.linkMap(MAP[level].map);
+        GAME.setWorld(level, true);
+    },
     useStaircase(destination) {
         console.info("useStaircase", destination);
         console.time("usingStaircase");
@@ -1517,11 +1542,7 @@ const GAME = {
             GAME.buildWorld(level);
             GAME.STORE.linkMap(MAP[level].map);
             GAME.setWorld(level);
-        } else {
-            GAME.STORE.loadIAM(MAP[level].map);
-            GAME.STORE.linkMap(MAP[level].map);
-            GAME.setWorld(level, true);
-        }
+        } else GAME.reloadIAM(level);
 
         MAP_TOOLS.applyStorageActions(level);             //to be developed
         GAME.forceOpenDoor(destination.waypoint);
@@ -1535,7 +1556,6 @@ const GAME = {
         HERO.player.setPos(start_grid);
         HERO.player.setDir(Vector3.from_2D_dir(start_dir));
         GAME.setCamera();
-
 
         /** SAVE GAME each time */
         GAME.save(destination);                           //to be developed
@@ -1626,7 +1646,7 @@ const GAME = {
         if (DEBUG._2D_display) {
             GAME.drawPlayer();
         }
-        WebGL.renderScene();
+        WebGL.renderScene(MAP[GAME.level].map);
 
         if (DEBUG.FPS) {
             GAME.FPS(lapsedTime);
@@ -1657,7 +1677,7 @@ const GAME = {
         if (DEBUG._2D_display) {
             GAME.drawPlayer();
         }
-        WebGL.renderScene();
+        WebGL.renderScene(MAP[GAME.level].map);
 
         if (DEBUG.FPS) {
             GAME.FPS(lapsedTime);

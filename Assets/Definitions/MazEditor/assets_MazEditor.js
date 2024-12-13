@@ -1025,7 +1025,8 @@ LoadSprites = [
     { srcName: "ActionMovables/LittleChicken.png", name: "LittleChicken" },
     { srcName: "ActionMovables/Sheep.png", name: "Sheep" },
     { srcName: "ActionMovables/Spider.png", name: "Spider" },
-    { srcName: "ActionMovables/Wolf.png", name: "Wolf" },
+    { srcName: "ActionMovables/Wolf.png", name: "WolfPuppy" },
+    { srcName: "ActionMovables/LittlePiggy.png", name: "LittlePiggy" },
 
     //triggers
     { srcName: "Triggers/MarbleTriggerButton.png", name: "MarbleTriggerButton" },

@@ -62,27 +62,7 @@ const MONSTER_TYPE_BAK = {
 
 
 
-    SilverSkeleton: {
-        name: "SilverSkeleton",
-        texture: "Silver",
-        model: "Skeleton",
-        scale: 1.8 / 2 ** 3,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "SmokeExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 38,
-        defense: 28,
-        magic: 20,
-        health: 50,
-        xp: 90,
-        gold: 90,
-        attackSound: "MonsterAttack2",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 1.1,
-        material: MATERIAL.silver,
-    },
+   
 
     
     Basilisk: {

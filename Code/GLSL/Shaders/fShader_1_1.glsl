@@ -132,7 +132,7 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     diffuselight = clamp(diffuselight, 0.0, 1.0);
     specularLight = clamp(specularLight, 0.0, 1.0);
 
-    if (illumination <= 0.0) {
+    if (illumination < 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
     } else if (occluded && inner == 0) {
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;

@@ -1293,7 +1293,23 @@ const ORACLE_TYPE = {
         sprite: "ApparitiaOutOfFashion",
         category: 'crest',
         voice: "Apparitia",
-        text: "I started to learn some things about colors in fashion from your creator. I will still kill you, though",
+        text: "I started to learn some things about colors in fashion from your creator. I will still kill you, though.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaHot: {
+        name: "ApparitiaHot",
+        sprite: "ApparitiaHot",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "So damned hot here. I can't even think about doing evil stuff. Well, I will anyway. Hahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaBeach: {
+        name: "ApparitiaBeach",
+        sprite: "ApparitiaBeach",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We shall fight on the beaches. We shall fight against the biches. We shall fight on the upper levels. However hot our outfits may be. We shall never surrender. Or will we?",
         interactionCategory: "oracle",
     },
 };
@@ -1505,8 +1521,8 @@ const CONTAINER_ITEM_TYPE = {
     Crate3: {
         name: "Crate3",
         category: "chest",
-        element: "CUBE",
-        scale: 1.8 / 2 ** 3,
+        element: "FRAGILE_CRATE",
+        scale: 1.45 / 2 ** 4,
         glueToFloor: true,
         texture: "Crate3",
         material: MATERIAL.standardShine,
@@ -1515,8 +1531,8 @@ const CONTAINER_ITEM_TYPE = {
     BoringBox: {
         name: "BoringBox",
         category: "chest",
-        element: "CUBE",
-        scale: 1.6 / 2 ** 3,
+        element: "FRAGILE_CRATE",
+        scale: 1.0 / 2 ** 4,
         glueToFloor: true,
         texture: "BoringWood",
         material: MATERIAL.standardShine,
@@ -2087,6 +2103,31 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
         material: MATERIAL.redShine,
+    },
+    SilverSkeleton: {
+        name: "SilverSkeleton",
+        texture: "Silver",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        mana: 25,
+        health: 100,
+        attack: 100,
+        magic: 15,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [17, ["wanderer"], 14, ["shoot"]],
+        moveSpeed: 1.3,
+        shootDistance: 14,
+        stalkDistance: 10,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.silver,
     },
     GreatChick: {
         name: "GreatChick",
@@ -2668,6 +2709,18 @@ const MOVABLE_INTERACTION_OBJECT = {
         behaviourArguments: [Infinity, ["wanderer"], -1],
         inventorySprite: "RoastPig",
         text: "Here piggy piggy piggy.",
+    },
+    LittlePiggy: {
+        name: "LittlePiggy",
+        category: "interaction_item",
+        model: "Pig",
+        scale: 1.2 / 2 ** 3,
+        rotateToNorth: -Math.PI / 2,
+        moveSpeed: 1.6,
+        material: MATERIAL.standard,
+        behaviourArguments: [Infinity, ["wanderer"], -1],
+        inventorySprite: "LittlePiggy",
+        text: "Try not to huff and puff.",
     },
     Cat: {
         name: "Cat",
@@ -3480,6 +3533,20 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    Wolverine: {
+        name: "Wolverine",
+        sprite: "Wolverine",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["LittlePiggy", "LittlePiggy", "LittlePiggy"],
+        gives: "PinkLatexGloves",
+        text: {
+            intro: "I'm conducting a very important experiment. Will three little piggies still huff and puff when I get my claws on them? Bring them to me, and I'll reward you with some silly pink gloves I... acquired.",
+            progress: "A piggy here, a piggy there, but I still need all three to proceed with science.",
+            conclusion: "All three piggies, perfect! As promised, here are the pink latex gloves. They belonged to a certain pink-hooded rider... before lunch. My lunch."
+        }
+    },
+
     PinkPianoGirl: {
         name: "PinkPianoGirl",
         sprite: "PinkPianoGirl",
@@ -4931,6 +4998,20 @@ const INTERACTION_SHRINE = {
             intro: "For a shiny coin with the face of your mother, haha,  I will tell you something important.",
             progress: null,
             conclusion: "If you have enemies, just axe them. Ahahahaha."
+        }
+    },
+    TransparentTibetan: {
+        name: "TransparentTibetan",
+        sprite: "TransparentTibetan",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        level: 5,
+        text: {
+            intro: "Every little thing I do is magic. Want to learn?",
+            progress: null,
+            conclusion: "Now you can do it as well, even with your shaby outfit."
         }
     },
 };
