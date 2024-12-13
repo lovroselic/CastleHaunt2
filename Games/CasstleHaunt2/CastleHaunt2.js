@@ -146,10 +146,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98
-        GAME.level = 98; //94
+        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100
+        GAME.level = 100; //94
 
-        GAME.gold = 5176;
+        GAME.gold = 5852;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -159,10 +159,10 @@ const DEBUG = {
         HERO.orbs = 5;
         HERO.orbsLost = 0;
         HERO.magic = 39;
-        HERO.attack = 38;
+        HERO.attack = 39;
 
-        HERO.health = 339;
-        HERO.maxHealth = 360;
+        HERO.health = 236;
+        HERO.maxHealth = 368;
 
 
         let actItems = [
@@ -179,8 +179,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
 
             //INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
@@ -193,7 +193,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "DestroyOrbs", "HalfLife", "Explode", "MagicSupremacy", "Death",
+            "Explode", 
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -207,7 +207,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "Shell"
+            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "LittlePiggy", "GuitarPick", "LP", "RocketTop", "Sapphire"
 
         ];
         for (let itm of invItems) {
@@ -252,7 +252,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.17",
+    VERSION: "0.15.18",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
