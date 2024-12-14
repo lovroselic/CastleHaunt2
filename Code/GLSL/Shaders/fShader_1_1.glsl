@@ -90,26 +90,21 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     float distance = distance(lightPosition, FragPos);
     vec3 lightDir = normalize(lightPosition - FragPos);
     vec2 lightDir2D = normalize(-lightDir).xz;
-    vec2 lightDirection2D = normalize(-lightDirection).xz;
+    vec2 lightDirection2D = normalize(lightDirection).xz;
     float attenuation = 1.0 / (1.0 + ATTNF * distance + ATTNF2 * (distance * distance));
 
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
     if (inner == 0 && lightDirection.x < 128.0) {
-        illumination = -dot(lightDir2D, lightDirection2D);               // considers only directional lights
-    }
-
-    // debug
-    /*
-    if (illumination < 0.0) return vec3(0.0,0.0,0.0);
-    return vec3(0.0, illumination, 0.0);
-    */
-    //
+        illumination = dot(lightDir2D, lightDirection2D);               // considers only directional lights
+    } 
 
     bool occluded = false;
     if (lightDirection.x < 128.0) {
         occluded = Raycast(lightPosition, FragPos, lightDir2D, lightDirection2D);  //occlusion check only for directional light - simplification
-    } 
+    } else if (lightDirection.x == 128.0) {
+        occluded = Raycast(lightPosition, FragPos, lightDir2D, vec2(0.0, 0.0));
+    }
 
     //ambient
     vec3 ambientLight = vec3(0.0);
@@ -158,7 +153,7 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDire
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
 
-    vec2 gridOrigin = worldToGridTexCoord(origin - lightDirection2D * EPSILON);
+    vec2 gridOrigin = worldToGridTexCoord(origin + lightDirection2D * EPSILON);
     vec2 gridTarget = worldToGridTexCoord(target - lightDir2D * EPSILON);
     vec2 delta = gridTarget - gridOrigin;
 
