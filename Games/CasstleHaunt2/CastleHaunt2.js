@@ -114,9 +114,10 @@ const DEBUG = {
         "LittlePiggy", 
         "LittlePiggy"
 
-        * coins sources (2x, missing 3x = 5):
+        * coins sources (3x, missing 2x = 5):
             floor - 86;
             floor - 89;
+            floor - 94;
  
  
 
@@ -252,7 +253,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.19",
+    VERSION: "0.15.20",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

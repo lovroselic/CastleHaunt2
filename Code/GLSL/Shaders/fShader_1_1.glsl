@@ -33,23 +33,24 @@ varying vec2 vTextureCoord;
 
 //bloody hardcoded constants
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
-const float innerAmbientStrength = 0.25;        //0.25
-const float innerDiffuseStrength = 2.5;          //2.5
-const float innerSpecularStrength = 2.0;        //2.0
+const float innerAmbientStrength = 0.25;            //0.25
+const float innerDiffuseStrength = 2.5;             //2.5
+const float innerSpecularStrength = 2.0;            //2.0
 
-const float PL_AmbientStrength = 4.0;           //2.0--> 4.0
-const float PL_DiffuseStrength = 5.5;           //5.5
-const float PL_SpecularStrength = 1.5;          //1.5
+const float PL_AmbientStrength = 4.0;               //2.0--> 4.0
+const float PL_DiffuseStrength = 5.5;               //5.5
+const float PL_SpecularStrength = 1.5;              //1.5
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 50;                                       // Max steps for raycasting loop - 50
-const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.02
+const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.005
 const float PL_AMBIENT_OCCLUSION = 0.225;                       //how much of ambient light gets through occlusion - 0.225
 const float PL_DIFFUSE_OCCLUSION = 0.30;                        //how much of diffused light gets through occlusion - 0.30
 const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.25;            //how much of ambient light gets through in reverse direction - 0.25
-const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.25;            //how much of ambient light gets through in reverse direction - 0.25
+const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.50;            //how much of ambient light gets through in reverse direction - 0.25
 const float ATTNF = 0.3;                                        // linear arrenuation factor - 0.1 -- 0.3
 const float ATTNF2 = 0.75;                                      //quadratic attenuation factor - 0.5 -->0.75
+const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning;
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDirection2D);
@@ -94,8 +95,15 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
     if (inner == 0 && lightDirection.x < 128.0) {
-        illumination = dot(lightDir2D, lightDirection2D);               // considers only directional lights
+        illumination = -dot(lightDir2D, lightDirection2D);               // considers only directional lights
     }
+
+    // debug
+    /*
+    if (illumination < 0.0) return vec3(0.0,0.0,0.0);
+    return vec3(0.0, illumination, 0.0);
+    */
+    //
 
     bool occluded = false;
     if (lightDirection.x < 128.0) {
@@ -128,16 +136,14 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
     vec3 specularLight = pointLightColor * spec * specularStrength * attenuation * specularColor;
 
-    ambientLight = clamp(ambientLight, 0.0, 1.0);
-    diffuselight = clamp(diffuselight, 0.0, 1.0);
-    specularLight = clamp(specularLight, 0.0, 1.0);
+    ambientLight = clamp(ambientLight, 0.0, MAXLIGHT);
+    diffuselight = clamp(diffuselight, 0.0, MAXLIGHT);
+    specularLight = clamp(specularLight, 0.0, MAXLIGHT);
 
     if (illumination < 0.0) {
-        diffuselight = vec3(0.0, 0.0, 0.0);
-
-        //diffuselight *= PL_DIFUSSE_ILLUMINATION_REDUCTION;
-
-        //ambientLight *= PL_AMBIENT_ILLUMINATION_REDUCTION;
+        //diffuselight = vec3(0.0, 0.0, 0.0);
+        diffuselight *= PL_DIFUSSE_ILLUMINATION_REDUCTION;
+        ambientLight *= PL_AMBIENT_ILLUMINATION_REDUCTION;
     } else if (occluded && inner == 0) {
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
     }

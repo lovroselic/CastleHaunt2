@@ -2230,7 +2230,7 @@ const MAP = {
         entities: '[[22,7,"AssMeralda"]]',
     }
     ,
-    94: {
+    94 : {
         name: "Show Me Your Jewels",
         sg: 0,
         maxSpawned: 4,
@@ -2241,13 +2241,14 @@ const MAP = {
         floor: "RedMArbleFloor2",
         ceil: "RockWall_SDXL_002",
         start: '[25,7]',
+        decals: '[[255,5,"GemDommes_290","picture"],[87,5,"FluxDommes4010","picture"]]',
         lights: '[[178,7,"DuaLLantern_018","standard"],[190,7,"FluxLight103","standardDimmed"],[200,7,"DuaLLantern_006","standardDimmed"],[15,7,"Fireplace211","fire"]]',
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
         skills: '[[55,"Magic"]]',
         entities: '[[314,1,"RubyErella"],[320,1,"SassyPhire"],[308,1,"Sparklyssa"]]',
         objects: '[[39,"GoldCoin"]]',
-    }
+        }
     ,
     95: {
         name: "Babes In Space",
