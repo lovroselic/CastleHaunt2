@@ -13,7 +13,6 @@ TODO:
 
 known bugs: 
     * i don't do bugs
-    * NE fireball shadow
 retests:
     * 
 log:
@@ -253,7 +252,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.20",
+    VERSION: "0.15.21",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

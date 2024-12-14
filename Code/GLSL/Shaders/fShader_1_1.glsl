@@ -33,24 +33,25 @@ varying vec2 vTextureCoord;
 
 //bloody hardcoded constants
 const vec3 innerLightColor = vec3(0.9, 0.9, 0.81);
-const float innerAmbientStrength = 0.25;            //0.25
-const float innerDiffuseStrength = 2.5;             //2.5
-const float innerSpecularStrength = 2.0;            //2.0
+const float innerAmbientStrength = 0.25;                        //0.25
+const float innerDiffuseStrength = 2.5;                         //2.5
+const float innerSpecularStrength = 2.0;                        //2.0
 
-const float PL_AmbientStrength = 4.0;               //2.0--> 4.0
-const float PL_DiffuseStrength = 5.5;               //5.5
-const float PL_SpecularStrength = 1.5;              //1.5
+const float PL_AmbientStrength = 4.0;                           //4.0
+const float PL_DiffuseStrength = 5.5;                           //5.5
+const float PL_SpecularStrength = 1.5;                          //1.5
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 50;                                       // Max steps for raycasting loop - 50
 const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.005
 const float PL_AMBIENT_OCCLUSION = 0.225;                       //how much of ambient light gets through occlusion - 0.225
 const float PL_DIFFUSE_OCCLUSION = 0.30;                        //how much of diffused light gets through occlusion - 0.30
-const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.25;            //how much of ambient light gets through in reverse direction - 0.25
-const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.50;            //how much of ambient light gets through in reverse direction - 0.25
+const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.55;           //how much of ambient light gets through in reverse direction - 0.25
+const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.25;           //how much of ambient light gets through in reverse direction - 0.25
 const float ATTNF = 0.3;                                        // linear arrenuation factor - 0.1 -- 0.3
 const float ATTNF2 = 0.75;                                      //quadratic attenuation factor - 0.5 -->0.75
-const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning;
+const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning; - 0.95
+const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDirection2D);
@@ -141,9 +142,11 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     specularLight = clamp(specularLight, 0.0, MAXLIGHT);
 
     if (illumination < 0.0) {
-        //diffuselight = vec3(0.0, 0.0, 0.0);
         diffuselight *= PL_DIFUSSE_ILLUMINATION_REDUCTION;
-        ambientLight *= PL_AMBIENT_ILLUMINATION_REDUCTION;
+
+        if (distance > IGNORED_ATTN_DISTANCE) {
+            ambientLight *= PL_AMBIENT_ILLUMINATION_REDUCTION;
+        }
     } else if (occluded && inner == 0) {
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
     }
@@ -155,8 +158,7 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDire
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
 
-    //vec2 gridOrigin = worldToGridTexCoord(origin + lightDir2D * EPSILON);
-    vec2 gridOrigin = worldToGridTexCoord(origin + lightDirection2D * EPSILON);
+    vec2 gridOrigin = worldToGridTexCoord(origin - lightDirection2D * EPSILON);
     vec2 gridTarget = worldToGridTexCoord(target - lightDir2D * EPSILON);
     vec2 delta = gridTarget - gridOrigin;
 
