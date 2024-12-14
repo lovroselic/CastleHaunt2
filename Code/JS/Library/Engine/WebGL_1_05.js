@@ -45,7 +45,7 @@ const WebGL = {
     INI: {
         PIC_WIDTH: 0.5,
         PIC_TOP: 0.2,
-        PIC_OUT: 0.005, //0.0025
+        PIC_OUT: 0.01, //0.005
         ITEM_UP: 0.01,
         LIGHT_WIDTH: 0.4,
         LIGHT_TOP: 0.1,
@@ -725,7 +725,8 @@ const WebGL = {
         while (dynLights.length < this.INI.DYNAMIC_LIGHTS_RESERVATION * 3) {
             dynLights.push(-1, -1, -1);
             dynLightColors.push(0, 0, 0);
-            dynLightDirs.push(255, 255, 255);
+            //dynLightDirs.push(255, 255, 255);
+            dynLightDirs.push(128, 128, 128);
         }
 
         // Combine static and dynamic lights

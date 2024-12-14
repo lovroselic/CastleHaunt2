@@ -37,20 +37,22 @@ const float innerAmbientStrength = 0.25;        //0.25
 const float innerDiffuseStrength = 2.5;          //2.5
 const float innerSpecularStrength = 2.0;        //2.0
 
-const float PL_AmbientStrength = 2.0;           //2.0
+const float PL_AmbientStrength = 4.0;           //2.0--> 4.0
 const float PL_DiffuseStrength = 5.5;           //5.5
 const float PL_SpecularStrength = 1.5;          //1.5
 
 const float IGNORE_ALPHA = 0.2;
 const int MAX_STEPS = 50;                                       // Max steps for raycasting loop - 50
-const float EPSILON = 0.02;                                     // don't enter the wall, check for occlusion - 0.02
+const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.02
 const float PL_AMBIENT_OCCLUSION = 0.225;                       //how much of ambient light gets through occlusion - 0.225
 const float PL_DIFFUSE_OCCLUSION = 0.30;                        //how much of diffused light gets through occlusion - 0.30
-const float ATTNF = 0.05;                                       // linear arrenuation factor - 0.1
-const float ATTNF2 = 0.5;                                       //quadratic attenuation factor
+const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.25;            //how much of ambient light gets through in reverse direction - 0.25
+const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.25;            //how much of ambient light gets through in reverse direction - 0.25
+const float ATTNF = 0.3;                                        // linear arrenuation factor - 0.1 -- 0.3
+const float ATTNF2 = 0.75;                                      //quadratic attenuation factor - 0.5 -->0.75
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
-bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D);
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDirection2D);
 vec2 worldToGridTexCoord(vec2 position2D);
 vec2 worldToNormalizedTexCoord(vec2 position2D);
 bool isOccluded(vec2 position2D);
@@ -87,14 +89,18 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     vec3 lightDir = normalize(lightPosition - FragPos);
     vec2 lightDir2D = normalize(-lightDir).xz;
     vec2 lightDirection2D = normalize(-lightDirection).xz;
-    bool occluded = Raycast(lightPosition, FragPos, lightDir2D);
     float attenuation = 1.0 / (1.0 + ATTNF * distance + ATTNF2 * (distance * distance));
 
-    //is fragment illuminated by ligh source? omni dir is (255,255,255) so if x < 2.0 it is not omni dir, but directional!
+    //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
-    if (inner == 0 && lightDirection.x < 2.0) {
+    if (inner == 0 && lightDirection.x < 128.0) {
         illumination = dot(lightDir2D, lightDirection2D);               // considers only directional lights
     }
+
+    bool occluded = false;
+    if (lightDirection.x < 128.0) {
+        occluded = Raycast(lightPosition, FragPos, lightDir2D, lightDirection2D);  //occlusion check only for directional light - simplification
+    } 
 
     //ambient
     vec3 ambientLight = vec3(0.0);
@@ -104,7 +110,7 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
         ambientLight = pointLightColor * ambientStrength * attenuation * ambientColor;
     }
 
-    // Diffuse lighting - thanks to AI for writing docs 
+    // Diffuse lighting  
     // The diffuse term is calculated as a weighted combination of two components:
     // 1. diffLight: Standard diffuse lighting based on the angle between the surface normal and light direction.
     //    This represents the primary contribution to diffuse lighting (95% weight).
@@ -126,8 +132,12 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     diffuselight = clamp(diffuselight, 0.0, 1.0);
     specularLight = clamp(specularLight, 0.0, 1.0);
 
-    if (illumination <= 0.0) {
+    if (illumination < 0.0) {
         diffuselight = vec3(0.0, 0.0, 0.0);
+
+        //diffuselight *= PL_DIFUSSE_ILLUMINATION_REDUCTION;
+
+        //ambientLight *= PL_AMBIENT_ILLUMINATION_REDUCTION;
     } else if (occluded && inner == 0) {
         return PL_AMBIENT_OCCLUSION * ambientLight + PL_DIFFUSE_OCCLUSION * diffuselight;
     }
@@ -135,14 +145,13 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     return ambientLight + diffuselight + specularLight;
 }
 
-bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D) {
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec2 lightDir2D, vec2 lightDirection2D) {
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
-    vec2 normalizedDelta = normalize(target - origin);
-    target -= normalizedDelta * EPSILON;
 
-    vec2 gridOrigin = worldToGridTexCoord(origin + lightDir2D * EPSILON);
-    vec2 gridTarget = worldToGridTexCoord(target);
+    //vec2 gridOrigin = worldToGridTexCoord(origin + lightDir2D * EPSILON);
+    vec2 gridOrigin = worldToGridTexCoord(origin + lightDirection2D * EPSILON);
+    vec2 gridTarget = worldToGridTexCoord(target - lightDir2D * EPSILON);
     vec2 delta = gridTarget - gridOrigin;
 
     vec2 step = sign(delta);

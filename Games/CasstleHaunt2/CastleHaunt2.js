@@ -13,7 +13,7 @@ TODO:
 
 known bugs: 
     * i don't do bugs
-    * princess death does not take into account current map changes!!
+    * NE fireball shadow
 retests:
     * 
 log:
@@ -63,7 +63,7 @@ const DEBUG = {
             DONE Sparklyssa wants PinkDiamond 2x gives Emerald
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
-            DONE BeachGirl wants Shell 2x gives Sapphire
+                $$$$$$$$ DONE BeachGirl wants Shell 2x gives Sapphire
             DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
             DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
@@ -147,7 +147,7 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100
-        GAME.level = 100; //94
+        GAME.level = 94; //94 //100
 
         GAME.gold = 5852;
         GAME.lives = 4;
@@ -252,7 +252,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.15.18",
+    VERSION: "0.15.19",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
