@@ -2242,7 +2242,7 @@ const MAP = {
         ceil: "RockWall_SDXL_002",
         start: '[25,7]',
         decals: '[[255,5,"GemDommes_290","picture"],[87,5,"FluxDommes4010","picture"]]',
-        lights: '[[178,7,"DuaLLantern_018","standard"],[190,7,"FluxLight103","standardDimmed"],[200,7,"DuaLLantern_006","standardDimmed"],[15,7,"Fireplace211","fire"]]',
+        lights: '[[178,1,"Candelabra01","standard"]]',
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
         skills: '[[55,"Magic"]]',
@@ -2283,7 +2283,7 @@ const MAP = {
         entities: '[[217,1,"RocketScientist"]]',
     }
     ,
-    97 : {
+    97: {
         name: "Bitch Beach",
         sg: 0,
         maxSpawned: 4,
@@ -2307,9 +2307,9 @@ const MAP = {
         trainers: '[[60,5,"Swimmer"],[220,1,"TransparentTibetan"]]',
         lairs: '[[74,3,"Lair10"],[150,5,"Lair72"]]',
         monsterList: '["SilverSkeleton","RedSkeleton","Skeleton","SkeleDwarf","SkeleDwarf"]',
-        }
+    }
     ,
-    98 : {
+    98: {
         name: "The Bitch Goes On",
         sg: 0,
         maxSpawned: 4,
@@ -2332,7 +2332,7 @@ const MAP = {
         movables: '[[128,"RoastChicken"],[110,"LittlePiggy"]]',
         lairs: '[[4,7,"Lair67"],[250,1,"Lair53"]]',
         monsterList: '["SilverSkeleton","RedSkeleton","Skeleton","SkeleDwarf","SkeleDwarf"]',
-        }
+    }
     ,
     99: {
         name: "Allowed Forest",
@@ -2345,10 +2345,11 @@ const MAP = {
         floor: "ForestFloor02",
         ceil: "DarkSky06",
         start: '[22,7]',
-        lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"]]',
+        lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"],[106,5,"Moon50","standardDimmed"],[103,3,"Moon63","standardDimmed"]]',
         gates: '[[7,7,"99.1","86.13","Down"]]',
         trainers: '[[217,1,"CuddlyBear"]]',
-    },
+    }
+    ,
     100: {
         name: "Merplace",
         sg: 0,

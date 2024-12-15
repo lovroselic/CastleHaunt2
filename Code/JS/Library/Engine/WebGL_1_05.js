@@ -725,7 +725,6 @@ const WebGL = {
         while (dynLights.length < this.INI.DYNAMIC_LIGHTS_RESERVATION * 3) {
             dynLights.push(-1, -1, -1);
             dynLightColors.push(0, 0, 0);
-            //dynLightDirs.push(255, 255, 255);
             dynLightDirs.push(128, 128, 128);
         }
 
@@ -1878,7 +1877,7 @@ class LightDecal extends Decal {
     setPosition(grid, face) {
         let off = FaceToOffset(face, WebGL.INI.PIC_OUT);
         let pos = FP_Grid.toClass(grid).add(off);
-        this.position = new Vector3(pos.x, WebGL.INI.LIGHT_TOP, pos.y);
+        this.position = new Vector3(pos.x, 1.0 - WebGL.INI.LIGHT_TOP, pos.y);
     }
 }
 
