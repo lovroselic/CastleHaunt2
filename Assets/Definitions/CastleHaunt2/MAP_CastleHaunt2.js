@@ -2242,7 +2242,7 @@ const MAP = {
         ceil: "RockWall_SDXL_002",
         start: '[25,7]',
         decals: '[[255,5,"GemDommes_290","picture"],[87,5,"FluxDommes4010","picture"]]',
-        lights: '[[178,1,"Candelabra01","standard"]]',
+        lights: '[[121,5,"DuaLLantern_023","standardDimmed"]]',
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
         skills: '[[55,"Magic"]]',
@@ -2366,4 +2366,18 @@ const MAP = {
         entities: '[[90,3,"Mermaid"]]',
         oracles: '[[5,7,"RedMermaid"]]',
     }
+    ,
+    101 : {
+        name: "Raycast",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"16","height":"16","map":"BB2AA7BAA2BB3AA2BB2AA2BB9ABB72ABB69ABB5ABB23ABB2ABB6AA3BAA4BB22ABB12$"}',
+        wall: "BrownWapp51",
+        floor: "BoulderWall1",
+        ceil: "SpiderWall13",
+        start: '[135,1]',
+        lights: '[[167,1,"DuaLLantern_030","standard"],[116,7,"Moon51","standard"]]',
+        }
 };

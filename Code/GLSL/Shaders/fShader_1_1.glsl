@@ -51,7 +51,8 @@ const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.10;           //how much of am
 const float ATTNF = 0.3;                                        // linear arrenuation factor - 0.1 -- 0.3
 const float ATTNF2 = 0.75;                                      //quadratic attenuation factor - 0.5 -->0.75
 const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning; - 0.95
-const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 
+const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 0.012
+const float RC_STEP_TRESHOLD = 0.001;                            // RC algo adjusting for insignificant direction
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir, vec3 directionOfOrthoLight);
@@ -122,11 +123,10 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     }
 
     // debug
-    
+
     if (occluded && illumination > 0.01)
         return vec3(0.75, 0.0, 0.0);
     return vec3(0.0, illumination, 0.0);
-    
 
     // debug end
 
@@ -170,12 +170,29 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir, vec3 directionOfOrthoLight) {
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
-    
-    vec2 step = sign(target - origin);    
+
+    vec2 step = sign(target - origin);                                                      //still best approach
+
+    // makes long line artifacts
+    /*
+    vec2 delta = target - origin;
+    float totalDelta = abs(delta.x) + abs(delta.y);
+    vec2 step = vec2(0.0);                                                                  //keeping only significant direction
+    if (abs(delta.x) / totalDelta > RC_STEP_TRESHOLD) {
+        step.x = sign(delta.x);
+    }
+    if (abs(delta.y) / totalDelta > RC_STEP_TRESHOLD) {
+        step.y = sign(delta.y);
+    }
+    */
+
     vec2 gridOrigin = origin;                                                                     //offset already                                   
-    vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));           // Adjusted target with directional offset; -
-    vec2 delta = gridTarget - gridOrigin;
-    vec2 tDelta = abs(1.0 / max(abs(delta), vec2(EPSILON)));                     // How far to go in each direction to cross a grid line
+    vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall
+    
+    //step = sign(gridTarget - worldToGridTexCoord(gridOrigin)); //works badly
+    //vec2 deltaGrid = gridTarget - gridOrigin;
+    vec2 deltaGrid = target - origin;
+    vec2 tDelta = abs(1.0 / max(abs(deltaGrid), vec2(EPSILON)));                  // How far to go in each direction to cross a grid line
 
     vec2 tMax;
     tMax.x = step.x > 0.0 ? (1.0 - fract(gridOrigin.x)) * tDelta.x : fract(gridOrigin.x) * tDelta.x;

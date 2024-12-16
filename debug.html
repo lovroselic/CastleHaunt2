@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raycast Debug</title>
+</head>
+
+<body>
+    <h1>Raycast Debug Example</h1>
+    <button id="runExample1">Run Example 1</button>
+    <button id="runExample2">Run Example 2</button>
+    <pre id="output"></pre>
+
+    <script>
+        function raycast(rayOrigin3D, rayTarget3D, lightDir) {
+            const EPSILON = 0.005;
+            const MAX_STEPS = 99;
+
+            const origin = [rayOrigin3D[0], rayOrigin3D[2]]; // xz-plane
+            const target = [rayTarget3D[0], rayTarget3D[2]]; // xz-plane
+
+            const step = [
+                Math.sign(target[0] - origin[0]),
+                Math.sign(target[1] - origin[1])
+            ];
+
+    
+            const delta = [
+                target[0] - origin[0],
+                target[1] - origin[1]
+            ];
+
+            /*
+            const totalDelta = Math.abs(delta[0]) + Math.abs(delta[1]);
+
+            const step = [
+                Math.abs(delta[0]) / totalDelta > threshold ? Math.sign(delta[0]) : 0,
+                Math.abs(delta[1]) / totalDelta > threshold ? Math.sign(delta[1]) : 0
+            ];
+            */
+
+
+
+            const gridOrigin = [...origin]; // Directly use origin as gridOrigin
+            const gridTarget = [
+                Math.floor(target[0] - step[0] * (1.0 + EPSILON)),
+                Math.floor(target[1] - step[1] * (1.0 + EPSILON))
+            ];
+
+            /*const delta = [
+                gridTarget[0] - gridOrigin[0],
+                gridTarget[1] - gridOrigin[1]
+            ];*/
+            const tDelta = [
+                Math.abs(1.0 / Math.max(Math.abs(delta[0]), EPSILON)),
+                Math.abs(1.0 / Math.max(Math.abs(delta[1]), EPSILON))
+            ];
+
+            const tMax = [
+                step[0] > 0.0
+                    ? (1.0 - (gridOrigin[0] % 1)) * tDelta[0]
+                    : (gridOrigin[0] % 1) * tDelta[0],
+                step[1] > 0.0
+                    ? (1.0 - (gridOrigin[1] % 1)) * tDelta[1]
+                    : (gridOrigin[1] % 1) * tDelta[1]
+            ];
+
+            const current = [...gridOrigin];
+
+            const outputElement = document.getElementById("output");
+            outputElement.textContent += "target:" + target + "\n";
+
+            for (let i = 0; i < MAX_STEPS; i++) {
+                const logMessage = `Step ${i}: Current = [${current}], GridTarget = [${gridTarget}], tMax = [${tMax}]`;
+                console.log(logMessage);
+                outputElement.textContent += logMessage + "\n";
+
+                if (isOccluded([Math.floor(current[0]), Math.floor(current[1])])) {
+                    const occludedMessage = `Occluded at [${Math.floor(current[0])}, ${Math.floor(current[1])}]`;
+                    console.log(occludedMessage);
+                    outputElement.textContent += occludedMessage + "\n";
+                    return true; // Occluded
+                }
+
+                if (
+                    (step[0] > 0.0 && current[0] >= gridTarget[0]) ||
+                    (step[0] < 0.0 && current[0] <= gridTarget[0])
+                ) {
+                    if (
+                        (step[1] > 0.0 && current[1] >= gridTarget[1]) ||
+                        (step[1] < 0.0 && current[1] <= gridTarget[1])
+                    ) {
+                        const reachedMessage = `Target reached at [${Math.floor(current[0])}, ${Math.floor(current[1])}]`;
+                        console.log(reachedMessage);
+                        outputElement.textContent += reachedMessage + "\n";
+                        return false; // Successfully reached target
+                    }
+                }
+
+                if (tMax[0] < tMax[1]) {
+                    tMax[0] += tDelta[0];
+                    current[0] += step[0];
+                } else {
+                    tMax[1] += tDelta[1];
+                    current[1] += step[1];
+                }
+            }
+
+            const noOcclusionMessage = "No occlusion detected, but target not reached";
+            console.log(noOcclusionMessage);
+            outputElement.textContent += noOcclusionMessage + "\n";
+            return false; // No occlusion detected, but target not reached
+        }
+
+        function isOccluded(position) {
+            // Simulate an occlusion map check
+            console.log("Checking occlusion at", position);
+            if (position[0] === 8 && position[1] === 0) {
+                return true; // Hardcoded occlusion wall at [8, 0]
+            }
+            return false; // No occlusion otherwise
+        }
+
+        document.getElementById("runExample1").addEventListener("click", () => {
+            document.getElementById("output").textContent = ""; // Clear previous output
+            console.log("Example 1:");
+            raycast([8.5, 0, 9.99], [8.6, 0, 2.5], [0, 0, 0]);
+        });
+
+        document.getElementById("runExample2").addEventListener("click", () => {
+            document.getElementById("output").textContent = ""; // Clear previous output
+            console.log("Example 2:");
+            raycast([8.5, 0, 9.99], [8.4, 0, 2.5], [0, 0, 0]);
+        });
+    </script>
+</body>
+
+</html>
