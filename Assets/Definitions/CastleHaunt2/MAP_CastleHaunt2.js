@@ -2242,7 +2242,7 @@ const MAP = {
         ceil: "RockWall_SDXL_002",
         start: '[25,7]',
         decals: '[[255,5,"GemDommes_290","picture"],[87,5,"FluxDommes4010","picture"]]',
-        lights: '[[133,3,"FluxLight120","standard"]]',
+        lights: '[[178,1,"Candelabra01","standard"]]',
         gates: '[[8,7,"94.1","86.9","Closed"]]',
         keys: '[[117,1]]',
         skills: '[[55,"Magic"]]',

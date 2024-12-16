@@ -108,8 +108,8 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     float attenuation = invDistance / (ATTNF + ATTNF2 * distance);
 
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
-    illumination = 1.0;
-    //illumination = 0.0000001;
+    //illumination = 1.0;
+    illumination = 0.0000001;
     if (inner == 0 && lightDirection.x < 128.0) {
         illumination = dot(lightDir, directionOfOrthoLight);               // considers only directional lights
     }
@@ -122,11 +122,11 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     }
 
     // debug
-    /*
+    
     if (occluded && illumination > 0.01)
         return vec3(0.75, 0.0, 0.0);
     return vec3(0.0, illumination, 0.0);
-    */
+    
 
     // debug end
 
@@ -171,12 +171,8 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir, vec3 directionOf
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
     
-    
-                                                                   // it's already offset!
-    vec2 step = sign(target - origin);  
-    //vec2 gridOrigin = floor(origin + step * (3.0*EPSILON)); // Offset origin slightly in the step direction           
-    vec2 gridOrigin = origin;                                              
-    //vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));           // Adjusted target with directional offset; -
+    vec2 step = sign(target - origin);    
+    vec2 gridOrigin = origin;                                                                     //offset already                                   
     vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));           // Adjusted target with directional offset; -
     vec2 delta = gridTarget - gridOrigin;
     vec2 tDelta = abs(1.0 / max(abs(delta), vec2(EPSILON)));                     // How far to go in each direction to cross a grid line
