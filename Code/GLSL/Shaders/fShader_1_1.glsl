@@ -42,16 +42,17 @@ const float PL_DiffuseStrength = 20.0;                          //20.0
 const float PL_SpecularStrength = 2.5;                          //2.5
 
 const float IGNORE_ALPHA = 0.2;
-const int MAX_STEPS = 99;                                       // Max steps for raycasting loop - 50
+const int MAX_STEPS = 99;                                       // Max steps for raycasting loop - 99
 const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.005
 const float PL_AMBIENT_OCCLUSION = 0.225;                       //how much of ambient light gets through occlusion - 0.225
 const float PL_DIFFUSE_OCCLUSION = 0.30;                        //how much of diffused light gets through occlusion - 0.30
 const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.05;           //how much of ambient light gets through in reverse direction - 0.05
-const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.20;           //how much of ambient light gets through in reverse direction - 0.10
+const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.20;           //how much of ambient light gets through in reverse direction - 0.20
 const float ATTNF = 0.3;                                        // linear arrenuation factor - 0.1 -- 0.3
 const float ATTNF2 = 0.75;                                      //quadratic attenuation factor - 0.5 -->0.75
 const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning; - 0.95
 const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 0.012
+const float ILLUMINATION_CUTOFF = 0.001;                        // remove flickering
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir, vec3 directionOfOrthoLight);
@@ -96,7 +97,6 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
 
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
-    //illumination = 0.0000001;
     if (inner == 0 && lightDirection.x < 128.0) {
         illumination = dot(lightDir, directionOfOrthoLight);               // considers only directional lights
     }
@@ -107,15 +107,6 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     } else if (lightDirection.x == 128.0) {
         occluded = Raycast(lightPosition, FragPos, lightDir, vec3(0.0, 0.0, 0.0));
     }
-
-    // debug
-    /*
-    if (occluded && illumination > 0.01)
-        return vec3(0.75, 0.0, 0.0);
-    return vec3(0.0, illumination, 0.0);
-    */
-
-    // debug end
 
     //ambient
     vec3 ambientLight = vec3(0.0);
@@ -140,7 +131,7 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     diffuselight = clamp(diffuselight, 0.0, MAXLIGHT);
     specularLight = clamp(specularLight, 0.0, MAXLIGHT);
 
-    if (illumination < 0.0) {
+    if (illumination < ILLUMINATION_CUTOFF) {
         diffuselight *= PL_DIFUSSE_ILLUMINATION_REDUCTION;
 
         if (distance > IGNORED_ATTN_DISTANCE) {
@@ -159,7 +150,7 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, vec3 lightDir, vec3 directionOf
 
     vec2 deltaGrid = target - origin;
     vec2 step = sign(target - origin);
-    vec2 gridOrigin = origin;                                                                      //offset already                                   
+    vec2 gridOrigin = origin + directionOfOrthoLight.xz * EPSILON * 7.5;                           //offset 7.5 empirically found as best                         
     vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall    
     vec2 tDelta = abs(1.0 / max(abs(deltaGrid), vec2(EPSILON)));                  // How far to go in each direction to cross a grid line
 
