@@ -48,7 +48,7 @@ const WebGL = {
         PIC_OUT: 0.01, //0.01
         ITEM_UP: 0.01,
         LIGHT_WIDTH: 0.4,
-        LIGHT_TOP: 0.1,
+        LIGHT_TOP: 0.10,
         LIGHT_SCALE_FACTOR: 0.5,
         LIGHT_ADJUSTMENT_LIMIT: 0.075,
         DEFAULT_RESOLUTION: 256,
