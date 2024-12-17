@@ -46,6 +46,7 @@ const WebGL = {
         PIC_WIDTH: 0.5,
         PIC_TOP: 0.2,
         PIC_OUT: 0.001, //0.001
+        LIGHT_OUT: 0.001, //-0.01
         ITEM_UP: 0.01,
         LIGHT_WIDTH: 0.4,
         LIGHT_TOP: 0.10,
@@ -1875,7 +1876,8 @@ class LightDecal extends Decal {
         this.setPosition(grid, face);
     }
     setPosition(grid, face) {
-        let off = FaceToOffset(face, WebGL.INI.PIC_OUT);
+        //let off = FaceToOffset(face, WebGL.INI.PIC_OUT);
+        let off = FaceToOffset(face, WebGL.INI.LIGHT_OUT);
         let pos = FP_Grid.toClass(grid).add(off);
         this.position = new Vector3(pos.x, 1.0 - WebGL.INI.LIGHT_TOP, pos.y);
     }
