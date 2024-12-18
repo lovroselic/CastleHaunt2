@@ -76,7 +76,7 @@ const DEBUG = {
             DONE * BabyDragon <-- 88
             DONE * BabyDragon <-- 91
             DONE * BabyDragon <--- 97
-        * BabyDragon
+            DONE * BabyDragon <-- 94
             DONE * "KeyMould", <-- Metallica
             DONE * "EmeraldIngots" <-- Assmeralda
             DONE * "LP", from MetalGuitarist
@@ -111,7 +111,7 @@ const DEBUG = {
             DONE "PinkLatexGloves", <-- Wolverine
         "PinkBoots"
             DONE "LittlePiggy", <-- 98
-        "LittlePiggy", 
+            DONE "LittlePiggy", <-- 94
         "LittlePiggy"
             DONE 'TropicalFish', <-- 100
         "Fish"
@@ -144,6 +144,7 @@ const DEBUG = {
             * 
         * temple of hope used:
             * heart   
+            * magic
 
 
          */
@@ -256,7 +257,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.04",
+    VERSION: "0.16.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

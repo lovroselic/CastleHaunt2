@@ -2249,6 +2249,9 @@ const MAP = {
         entities: '[[314,1,"RubyErella"],[320,1,"SassyPhire"],[308,1,"Sparklyssa"]]',
         objects: '[[39,"GoldCoin"]]',
         oracles: '[[40,3,"ApparitiaHidden"]]',
+        movables: '[[195,"BabyDragon"],[207,"LittlePiggy"]]',
+        lairs: '[[153,5,"Lair02"],[169,3,"Lair78"]]',
+        monsterList: '["Dragon","SkeleDwarf","SilverSkeleton"]',
         }
     ,
     95: {
