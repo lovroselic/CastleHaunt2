@@ -37,8 +37,8 @@ const float innerAmbientStrength = 0.30;                        //0.30
 const float innerDiffuseStrength = 15.0;                        //15.0
 const float innerSpecularStrength = 5.0;                        //5.0
 
-const float PL_AmbientStrength = 8.0;                           //8.0
-const float PL_DiffuseStrength = 20.0;                          //20.0
+const float PL_AmbientStrength = 5.0;                           //8.0
+const float PL_DiffuseStrength = 10.0;                          //20.0
 const float PL_SpecularStrength = 2.5;                          //2.5
 
 const float IGNORE_ALPHA = 0.2;
@@ -46,24 +46,26 @@ const int MAX_STEPS = 99;                                       // Max steps for
 const float EPSILON = 0.005;                                    // don't enter the wall, check for occlusion - 0.005
 const float PL_AMBIENT_OCCLUSION = 0.225;                       // how much of ambient light gets through occlusion - 0.225
 const float PL_DIFFUSE_OCCLUSION = 0.30;                        // how much of diffused light gets through occlusion - 0.30
-const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.05;           // how much of ambient light gets through in reverse direction - 0.05
+const float PL_AMBIENT_ILLUMINATION_REDUCTION = 0.02;           // how much of ambient light gets through in reverse direction - 0.02
 const float PL_DIFUSSE_ILLUMINATION_REDUCTION = 0.20;           // how much of ambient light gets through in reverse direction - 0.20
-const float PL_DIFUSSE_LIGHT_HALO_REDUCTION = 0.80;             // intensity of light halo
+const float PL_DIFUSSE_LIGHT_HALO_REDUCTION = 0.40;             // intensity of light halo - 0.40
 const float ATTNF = 0.3;                                        // linear arrenuation factor 0.3
 const float ATTNF2 = 0.75;                                      // quadratic attenuation factor 0.75
-const float HATTNF = 1.5;                                       // light halo -- linear arrenuation factor - 0.1 -- 0.3
-const float HATTNF2 = 5.0;                                      // light halo quadratic attenuation factor - 0.5 -->0.75
-const float MAXLIGHT = 0.95;                                    // max contribution to avoid overburning; - 0.95
+const float HATTNF = 1.5;                                       // light halo -- linear arrenuation factor - 1.5
+const float HATTNF2 = 5.0;                                      // light halo quadratic attenuation factor - 5.0
+const float MAXLIGHT = 0.90;                                    // max contribution to avoid overburning; - 0.90
 const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 0.012
 const float ILLUMINATION_CUTOFF = 0.005;                        // remove flickering - 0.005
-const float DISTANCE_LIGHT = 0.475;                             // force illumination near the light source 
-const float LIGHT_POS_Y = 0.5;                                  // vertical light position change
+const float DISTANCE_LIGHT = 0.475;                             // force illumination near the light source  - 0.475
+const float LIGHT_POS_Y = 0.5;                                  // vertical light position change - 0.5 
+const float INTO_WALL = 0.98;                                  // into wall target raycast offset: 0.98
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D);
 vec2 worldToGridTexCoord(vec2 position2D);
 vec2 worldToNormalizedTexCoord(vec2 position2D);
 bool isOccluded(vec2 position2D);
+vec3 debugDisplay(bool occluded);
 
 void main(void) {
     vec3 ambientColor = uMaterial.ambientColor;
@@ -103,11 +105,13 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
 
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
-    if (inner == 0 && lightDirection.x < 128.0) {
+       if (inner == 0 && lightDirection.x < 128.0) {
         illumination = dot(lightDir, directionOfOrthoLight);               // considers only directional lights
     }
 
     bool occluded = Raycast(lightPosition, FragPos);
+
+    //return debugDisplay(occluded);                                            //debug
 
     bool isLight = false;
     if (lightDistance < DISTANCE_LIGHT) {
@@ -159,11 +163,10 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D) {
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
-
     vec2 deltaGrid = target - origin;
     vec2 step = sign(target - origin);
     vec2 gridOrigin = origin;
-    vec2 gridTarget = worldToGridTexCoord(target - step * (1.0 + EPSILON));            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall    
+    vec2 gridTarget = worldToGridTexCoord(target - step * (INTO_WALL + EPSILON));            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall    
     vec2 tDelta = abs(1.0 / max(abs(deltaGrid), vec2(EPSILON)));                  // How far to go in each direction to cross a grid line
 
     vec2 tMax;
@@ -204,4 +207,11 @@ bool isOccluded(vec2 position2D) {
     vec2 texCoord = worldToNormalizedTexCoord(position2D);
     float occlusion = texture2D(uOcclusionMap, texCoord).r; // Sample red channel
     return occlusion > 0.5; //  >0.5 indicates impassable
+}
+
+vec3 debugDisplay(bool occluded) {
+    if (occluded) {
+        return vec3(1.0, 0.0, 0.0);
+    } else
+        return vec3(0.0, illumination, 0.0);
 }

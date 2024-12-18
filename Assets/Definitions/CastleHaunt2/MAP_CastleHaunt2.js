@@ -2129,7 +2129,7 @@ const MAP = {
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
     }
     ,
-    89: {
+    89 : {
         name: "Chapel of Hope",
         sg: 0,
         maxSpawned: 4,
@@ -2141,7 +2141,7 @@ const MAP = {
         ceil: "FloorTiles_SDXL_006",
         start: '[106,5]',
         decals: '[[1,7,"Princess404","picture"],[33,7,"CastleBabes51","picture"],[35,7,"FemDommes6009","picture"],[39,7,"Nature07","picture"],[41,7,"GameScreen2033","picture"],[13,7,"UnusedEntities5125","picture"],[77,7,"Bagitman90","picture"],[87,7,"FluxDommes3111","picture"],[213,1,"PrincessAI_16","picture"],[184,1,"GameScreen2016","picture"],[190,1,"HunchBack10","picture"],[211,1,"Domme217","picture"],[223,1,"CastleLady64","picture"],[137,1,"Portal132","picture"],[147,1,"GemDommes_241","picture"],[62,1,"MontyMole100","picture"],[72,1,"Tutankham105","picture"],[35,5,"Domme374","picture"],[185,5,"BlackBeret_026","picture"],[195,5,"Various7002","picture"],[45,5,"FluxDommes2296","picture"],[62,5,"UnusedEdtitiesFramed_059","picture"],[167,5,"FluxDommes2026","picture"],[59,3,"CastleBabes41","picture"],[39,3,"Cavelon4","picture"],[189,3,"Barbarian111","picture"],[209,3,"NurseAlchemyMagic_031","picture"],[177,3,"Ishar71","picture"],[87,3,"CastleOfTerror3","picture"],[221,1,"GemDommes_149","picture"]]',
-        lights: '[[112,1,"DuaLLantern_013","standard"],[112,7,"WallLamp20","standard"],[112,3,"FluxLight111","standard"],[112,5,"WallLamp33","standard"],[151,7,"Candelabra01","weakCandle"],[163,7,"Lamp46","weakCandle"],[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
+        lights: '[[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
         gates: '[[105,5,"89.1","86.4","Closed"]]',
         scrolls: '[[18,14]]',
         gold: '[[166,"RedGem"],[26,"RedGem"],[94,"GoldBar"],[158,"GoldBar"],[70,"GoldBar"],[61,"GoldBar"],[198,"GoldCube"],[154,"GoldCube"],[66,"GoldCube"],[31,"GoldCube"],[73,"GoldCube"],[193,"GoldCube"],[206,"GoldCube"],[130,"GoldCube"],[83,"GoldCube"],[110,"GoldCube"],[141,"GoldCube"]]',
@@ -2151,7 +2151,7 @@ const MAP = {
         movables: '[[58,"BabyGreenSpider"]]',
         lairs: '[[76,1,"Lair79"],[88,1,"Lair03"],[204,5,"Lair37"],[200,3,"Lair49"]]',
         monsterList: '["SkeleDwarf"]',
-    }
+        }
     ,
     90: {
         name: "Key Engineering",
@@ -2230,7 +2230,7 @@ const MAP = {
         entities: '[[22,7,"AssMeralda"]]',
     }
     ,
-    94 : {
+    94: {
         name: "Show Me Your Jewels",
         sg: 0,
         maxSpawned: 4,
@@ -2248,7 +2248,7 @@ const MAP = {
         skills: '[[55,"Magic"]]',
         entities: '[[314,1,"RubyErella"],[320,1,"SassyPhire"],[308,1,"Sparklyssa"]]',
         objects: '[[39,"GoldCoin"]]',
-        }
+    }
     ,
     95: {
         name: "Babes In Space",
@@ -2340,30 +2340,39 @@ const MAP = {
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB12AA109BABB45AA10BB19ABABB24A$"}',
+        data: '{"width":"15","height":"15","map":"BB3AA3BB2ABB5AA9BAA21BAA63BB3ABB2ABAA9BABABB10ABB6ABB12AA2BAA3BB3AA2BB6ABB4AA3BAA4BB14ABB13ABB6$"}',
         wall: "HauntedForest06",
         floor: "ForestFloor02",
         ceil: "DarkSky06",
         start: '[22,7]',
         lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"],[106,5,"Moon50","standardDimmed"],[103,3,"Moon63","standardDimmed"]]',
         gates: '[[7,7,"99.1","86.13","Down"]]',
+        entities: '[[60,5,"Wolverine"]]',
         trainers: '[[217,1,"CuddlyBear"]]',
     }
     ,
     100: {
         name: "Merplace",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB2ABABB3AA3BABABB2AA62BABB23ABB2ABB7AA3BB6ABAA2BB14ABB16$BB9A"}',
+        maxSpawned: 3,
+        killCountdown: 3,
+        spawnDelay: 8000,
+        data: '{"width":"13","height":"13","map":"BB2ABB4ABB2AA5BAA3BAA43BAA10BAA3BB3AA3BB3AA2BABABB9ABB3AA2BB3ABB4ABB6ABB2ABB3ABB3AA2BABABABAA4BB3ABB17A$"}',
         wall: "SeaWaterWall",
         floor: "SeaWater1",
         ceil: "Sky1",
         start: '[79,5]',
-        lights: '[[21,7,"Sun2","normalSun"],[146,1,"Sun2","normalSun"],[150,1,"Sun1","normalSun"]]',
+        decals: '[[128,4,"BloodMarbleFloorWall_SDXL_017","texture"],[141,4,"BloodMarbleFloorWall_SDXL_017","texture"],[154,4,"BloodMarbleFloorWall_SDXL_017","texture"],[153,4,"BloodMarbleFloorWall_SDXL_017","texture"],[152,4,"BloodMarbleFloorWall_SDXL_017","texture"],[140,7,"LargeBlackBricks2","texture"],[115,7,"LargeBlackBricks2","texture"],[165,1,"LargeBlackBricks2","texture"],[166,1,"LargeBlackBricks2","texture"],[167,1,"LargeBlackBricks2","texture"],[129,3,"LargeBlackBricks2","texture"],[142,3,"LargeBlackBricks2","texture"],[155,3,"LargeBlackBricks2","texture"],[127,5,"LargeBlackBricks2","texture"],[140,5,"LargeBlackBricks2","texture"],[151,5,"LargeBlackBricks2","texture"]]',
+        lights: '[[21,7,"Sun2","normalSun"],[146,1,"Sun2","normalSun"],[150,1,"Sun1","normalSun"],[53,5,"Sun3","normalSun"]]',
         gates: '[[78,5,"100.1","98.2","Up"]]',
+        scrolls: '[[128,14]]',
+        gold: '[[56,"SilverBar"],[107,"SilverBar"],[99,"SilverBar"],[152,"GoldBar"],[126,"GoldBar"],[135,"GoldBar"],[49,"GoldBar"],[45,"GoldCube"],[81,"GoldCube"],[118,"GoldCube"],[84,"GoldCube"]]',
+        skills: '[[153,"Magic"]]',
+        containers: '[[144,"IronChest","INTERACTION_ITEM.LP",1],[14,"Barrel","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[90,3,"Mermaid"]]',
+        objects: '[[60,"TropicalFish"],[124,"Champagne"],[154,"Steak"]]',
         oracles: '[[5,7,"RedMermaid"]]',
+        lairs: '[[11,7,"Lair07"],[161,1,"Lair41"]]',
+        monsterList: '["SkeleDwarf","SilverSkeleton","RedSkeleton"]',
     }
 };

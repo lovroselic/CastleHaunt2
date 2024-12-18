@@ -66,7 +66,8 @@ const DEBUG = {
             DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
             DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
-        Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
+            DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
+        WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
         * 
         * 
         * 
@@ -82,7 +83,7 @@ const DEBUG = {
             DONE* "LP",       <--98
             DONE * "LP", <-- 91
             DONE * "LP",   <-- PinkPianoGirl                 
-        * "LP",
+            DONE * "LP", <-- 100
             DONE* "GuitarPick", <-- buy from Bass Player
             DONE * "GuitarPick", 86
             DONE  * "GuitarPick" <-- 98
@@ -93,7 +94,7 @@ const DEBUG = {
             DONE * "Ruby", <-- SpiderMom
         * "Ruby"
             DONE * "Sapphire",  <--BeachGirl
-        * "Sapphire", 
+        * "Sapphire", < WaterNymph
         * "Sapphire"
             DONE * "PinkDiamond", <-- SpaceWarrior
             DONE * "PinkDiamond" <-- Mermaid
@@ -107,11 +108,13 @@ const DEBUG = {
             DONE "BabyGreenSpider", <-- 88
             DONE RedFishTail", <-- 91
         "RedLatexBra"
-        "PinkLatexGloves", <-- Wolverine
+            DONE "PinkLatexGloves", <-- Wolverine
         "PinkBoots"
-        "LittlePiggy", 
+            DONE "LittlePiggy", <-- 98
         "LittlePiggy", 
         "LittlePiggy"
+            DONE 'TropicalFish', <-- 100
+        "Fish"
 
         * coins sources (3x, missing 2x = 5):
             floor - 86;
@@ -146,10 +149,10 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100
-        GAME.level = 99; //94 //100 //99  
+        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->94
+        GAME.level = 89; //94 
 
-        GAME.gold = 5852;
+        GAME.gold = 1369;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -158,10 +161,10 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 39;
+        HERO.magic = 45;
         HERO.attack = 39;
 
-        HERO.health = 236;
+        HERO.health = 174;
         HERO.maxHealth = 368;
 
 
@@ -182,7 +185,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
 
-            //INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
@@ -207,7 +210,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "LittlePiggy", "GuitarPick", "LP", "RocketTop", "Sapphire"
+            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "LittlePiggy", "GuitarPick", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP"
+        
 
         ];
         for (let itm of invItems) {
@@ -252,7 +256,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.01",
+    VERSION: "0.16.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

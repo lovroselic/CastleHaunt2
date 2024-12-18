@@ -3533,6 +3533,20 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    WaterNymph: {
+        name: "WaterNymph",
+        sprite: "WaterNymph",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Fish", "TropicalFish"],
+        gives: "Sapphire",
+        text: {
+            intro: "The shimmering waters need balance, and I seek two special fish to restore it. Bring me a simple fish and a vibrant tropical one, and I'll reward you with something I fould deep in the mud.",
+            progress: "One fish swims back to the waters, but the balance isn't complete yet. Keep searching.",
+            conclusion: "The waters are balanced again! Here's a nice blue sapphire, from a muddy waters, Use it wisely."
+        }
+    },
+    
     Wolverine: {
         name: "Wolverine",
         sprite: "Wolverine",
@@ -3541,12 +3555,11 @@ const INTERACTION_ENTITY = {
         wants: ["LittlePiggy", "LittlePiggy", "LittlePiggy"],
         gives: "PinkLatexGloves",
         text: {
-            intro: "I'm conducting a very important experiment. Will three little piggies still huff and puff when I get my claws on them? Bring them to me, and I'll reward you with some silly pink gloves I... acquired.",
+            intro: "I'm conducting a very important experiment. Will three little piggies still huff and puff when I get my claws on them? Bring them to me, and I'll reward you with some silly pink gloves I, acquired.",
             progress: "A piggy here, a piggy there, but I still need all three to proceed with science.",
-            conclusion: "All three piggies, perfect! As promised, here are the pink latex gloves. They belonged to a certain pink-hooded rider... before lunch. My lunch."
+            conclusion: "All three piggies, perfect! As promised, here are the pink latex gloves. They belonged to a certain pinkhooded rider. Before lunch. My lunch."
         }
     },
-
     PinkPianoGirl: {
         name: "PinkPianoGirl",
         sprite: "PinkPianoGirl",
