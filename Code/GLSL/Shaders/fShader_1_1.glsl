@@ -58,14 +58,15 @@ const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance afte
 const float ILLUMINATION_CUTOFF = 0.005;                        // remove flickering - 0.005
 const float DISTANCE_LIGHT = 0.475;                             // force illumination near the light source  - 0.475
 const float LIGHT_POS_Y = 0.5;                                  // vertical light position change - 0.5 
-const float INTO_WALL = 0.98;                                  // into wall target raycast offset: 0.98
+const float INTO_WALL = 0.01;                                  // into wall target raycast offset: 0.01
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
-bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D);
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, float illumination);
 vec2 worldToGridTexCoord(vec2 position2D);
 vec2 worldToNormalizedTexCoord(vec2 position2D);
 bool isOccluded(vec2 position2D);
 vec3 debugDisplay(bool occluded);
+vec3 illuminationDisplay(float illumination);
 
 void main(void) {
     vec3 ambientColor = uMaterial.ambientColor;
@@ -105,13 +106,14 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
 
     //is fragment illuminated by ligh source? omni dir is (128,128,128) so if x < 128.0 it is not omni dir, but directional!
     illumination = 1.0;
-       if (inner == 0 && lightDirection.x < 128.0) {
+    if (inner == 0 && lightDirection.x < 128.0) {
         illumination = dot(lightDir, directionOfOrthoLight);               // considers only directional lights
     }
 
-    bool occluded = Raycast(lightPosition, FragPos);
+    bool occluded = Raycast(lightPosition, FragPos, illumination);
 
     //return debugDisplay(occluded);                                            //debug
+    //return illuminationDisplay(illumination);                                 //debug
 
     bool isLight = false;
     if (lightDistance < DISTANCE_LIGHT) {
@@ -160,14 +162,15 @@ vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3
     return ambientLight + diffuselight + specularLight;
 }
 
-bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D) {
+bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, float illumination) {
     vec2 origin = rayOrigin3D.xz;
     vec2 target = rayTarget3D.xz;
     vec2 deltaGrid = target - origin;
     vec2 step = sign(target - origin);
     vec2 gridOrigin = origin;
-    vec2 gridTarget = worldToGridTexCoord(target - step * (INTO_WALL + EPSILON));            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall    
-    vec2 tDelta = abs(1.0 / max(abs(deltaGrid), vec2(EPSILON)));                  // How far to go in each direction to cross a grid line
+    float illumination2 = (illumination + EPSILON) * (illumination + EPSILON);
+    vec2 gridTarget = worldToGridTexCoord(target - step * INTO_WALL * illumination2);            // Adjusted target with directional offset so the target is reached when FragPOs is in the wall - iluminating wall   
+    vec2 tDelta = abs(1.0 / max(abs(deltaGrid), vec2(EPSILON)));                                         // How far to go in each direction to cross a grid line
 
     vec2 tMax;
     tMax.x = step.x > 0.0 ? (1.0 - fract(gridOrigin.x)) * tDelta.x : fract(gridOrigin.x) * tDelta.x;
@@ -178,6 +181,9 @@ bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D) {
     for (int i = 0; i < MAX_STEPS; i++) {
         if (isOccluded(current)) {
             return true;
+        }
+        if (worldToGridTexCoord(current) == gridTarget) {
+            return false;
         }
         if ((step.x > 0.0 && current.x >= gridTarget.x) || (step.x < 0.0 && current.x <= gridTarget.x)) {
             if ((step.y > 0.0 && current.y >= gridTarget.y) || (step.y < 0.0 && current.y <= gridTarget.y)) {
@@ -214,4 +220,8 @@ vec3 debugDisplay(bool occluded) {
         return vec3(1.0, 0.0, 0.0);
     } else
         return vec3(0.0, illumination, 0.0);
+}
+
+vec3 illuminationDisplay(float illumination) {
+    return vec3(0.0, illumination, 0.0);
 }

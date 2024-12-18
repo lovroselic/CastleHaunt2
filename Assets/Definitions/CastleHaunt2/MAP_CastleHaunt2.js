@@ -2129,7 +2129,7 @@ const MAP = {
         monsterList: '["Dragon","RedSkeleton","RedSkeleton","Skeleton"]',
     }
     ,
-    89 : {
+    89: {
         name: "Chapel of Hope",
         sg: 0,
         maxSpawned: 4,
@@ -2141,7 +2141,7 @@ const MAP = {
         ceil: "FloorTiles_SDXL_006",
         start: '[106,5]',
         decals: '[[1,7,"Princess404","picture"],[33,7,"CastleBabes51","picture"],[35,7,"FemDommes6009","picture"],[39,7,"Nature07","picture"],[41,7,"GameScreen2033","picture"],[13,7,"UnusedEntities5125","picture"],[77,7,"Bagitman90","picture"],[87,7,"FluxDommes3111","picture"],[213,1,"PrincessAI_16","picture"],[184,1,"GameScreen2016","picture"],[190,1,"HunchBack10","picture"],[211,1,"Domme217","picture"],[223,1,"CastleLady64","picture"],[137,1,"Portal132","picture"],[147,1,"GemDommes_241","picture"],[62,1,"MontyMole100","picture"],[72,1,"Tutankham105","picture"],[35,5,"Domme374","picture"],[185,5,"BlackBeret_026","picture"],[195,5,"Various7002","picture"],[45,5,"FluxDommes2296","picture"],[62,5,"UnusedEdtitiesFramed_059","picture"],[167,5,"FluxDommes2026","picture"],[59,3,"CastleBabes41","picture"],[39,3,"Cavelon4","picture"],[189,3,"Barbarian111","picture"],[209,3,"NurseAlchemyMagic_031","picture"],[177,3,"Ishar71","picture"],[87,3,"CastleOfTerror3","picture"],[221,1,"GemDommes_149","picture"]]',
-        lights: '[[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
+        lights: '[[112,1,"DuaLLantern_013","standard"],[112,7,"WallLamp20","standard"],[112,3,"FluxLight111","standard"],[112,5,"WallLamp33","standard"],[151,7,"Candelabra01","weakCandle"],[163,7,"Lamp46","weakCandle"],[19,3,"Fireplace106","fire"],[25,5,"Fireplace212","fire"]]',
         gates: '[[105,5,"89.1","86.4","Closed"]]',
         scrolls: '[[18,14]]',
         gold: '[[166,"RedGem"],[26,"RedGem"],[94,"GoldBar"],[158,"GoldBar"],[70,"GoldBar"],[61,"GoldBar"],[198,"GoldCube"],[154,"GoldCube"],[66,"GoldCube"],[31,"GoldCube"],[73,"GoldCube"],[193,"GoldCube"],[206,"GoldCube"],[130,"GoldCube"],[83,"GoldCube"],[110,"GoldCube"],[141,"GoldCube"]]',
@@ -2151,7 +2151,7 @@ const MAP = {
         movables: '[[58,"BabyGreenSpider"]]',
         lairs: '[[76,1,"Lair79"],[88,1,"Lair03"],[204,5,"Lair37"],[200,3,"Lair49"]]',
         monsterList: '["SkeleDwarf"]',
-        }
+    }
     ,
     90: {
         name: "Key Engineering",
