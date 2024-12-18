@@ -57,8 +57,8 @@ const float MAXLIGHT = 0.90;                                    // max contribut
 const float IGNORED_ATTN_DISTANCE = 0.012;                      // distance after attenuation starts taking effect - 0.012
 const float ILLUMINATION_CUTOFF = 0.005;                        // remove flickering - 0.005
 const float DISTANCE_LIGHT = 0.475;                             // force illumination near the light source  - 0.475
-const float LIGHT_POS_Y = 0.5;                                  // vertical light position change - 0.5 
-const float INTO_WALL = 0.01;                                  // into wall target raycast offset: 0.01
+const float LIGHT_POS_Y = 0.55;                                 // vertical light position change - 0.5 
+const float INTO_WALL = 0.01;                                   // into wall target raycast offset: 0.01
 
 vec3 CalcLight(vec3 lightPosition, vec3 FragPos, vec3 viewDir, vec3 normal, vec3 pointLightColor, float shininess, vec3 ambientColor, vec3 diffuseColor, vec3 specularColor, float ambientStrength, float diffuseStrength, float specularStrength, int inner, vec3 lightDirection);
 bool Raycast(vec3 rayOrigin3D, vec3 rayTarget3D, float illumination);

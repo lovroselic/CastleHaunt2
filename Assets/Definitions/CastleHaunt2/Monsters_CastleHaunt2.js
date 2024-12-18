@@ -1312,6 +1312,14 @@ const ORACLE_TYPE = {
         text: "We shall fight on the beaches. We shall fight against the biches. We shall fight on the upper levels. However hot our outfits may be. We shall never surrender. Or will we?",
         interactionCategory: "oracle",
     },
+    ApparitiaHidden: {
+        name: "ApparitiaHidden",
+        sprite: "ApparitiaHidden",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "You are so smart. You find all the hidden places. Or are you?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
