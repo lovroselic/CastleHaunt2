@@ -330,7 +330,7 @@ const ORACLE_TYPE = {
         sprite: "RedMermaid",
         category: 'crest',
         voice: "Female",
-        text: "I hear she wants the same red outfit as I have? Does that meke me an influencer? Or merfluencer?",
+        text: "I hear she wants the same red outfit as I have? Does that make me an influencer? Or merfluencer?",
         interactionCategory: "oracle",
     },
     CuteDomme: {
@@ -1318,6 +1318,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "You are so smart. You find all the hidden places. Or are you?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaPolka: {
+        name: "ApparitiaPolka",
+        sprite: "ApparitiaPolka",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "When you will be completely defeated, we will make everybody listen to polka. Muhahaha. No greater punishment.",
         interactionCategory: "oracle",
     },
 };
@@ -3549,7 +3557,7 @@ const INTERACTION_ENTITY = {
         wants: ["Fish", "TropicalFish"],
         gives: "Sapphire",
         text: {
-            intro: "The shimmering waters need balance, and I seek two special fish to restore it. Bring me a simple fish and a vibrant tropical one, and I'll reward you with something I fould deep in the mud.",
+            intro: "The shimmering waters need balance, and I seek two special fish to restore it. Bring me a simple fish and a vibrant tropical one, and I'll reward you with something I found deep in the mud.",
             progress: "One fish swims back to the waters, but the balance isn't complete yet. Keep searching.",
             conclusion: "The waters are balanced again! Here's a nice blue sapphire, from a muddy waters, Use it wisely."
         }

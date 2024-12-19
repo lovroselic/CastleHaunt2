@@ -54,10 +54,10 @@ const DEBUG = {
             
             DONE * EngineerDomme wants: EmeraldIngots, Key mould :: makes -> Emerald key:
             DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
-            DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
-            DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
+                $$$$$$$$ DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
+                $$$$$$$$ DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
             DONE AssMeralda wants : Emerald", "Emerald", "Emerald" gives --> EmeraldIngots
-            DONE RubyErella wants Ruby 3x gives Emerald
+                $$$$$$$$ DONE RubyErella wants Ruby 3x gives Emerald
             DONE SassyPhire wants Sapphire 3x gives Emerald
             DONE Sparklyssa wants PinkDiamond 2x gives Emerald
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
@@ -67,7 +67,7 @@ const DEBUG = {
             DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
             DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
-        WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
+            DONE WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
         * 
         * 
         * 
@@ -92,9 +92,9 @@ const DEBUG = {
             DONE * "Emerald" <-- Sparklyssa
             DONE * "Ruby", <--88
             DONE * "Ruby", <-- SpiderMom
-        * "Ruby"
+            DONE * "Ruby" <- 92
             DONE * "Sapphire",  <--BeachGirl
-        * "Sapphire", < WaterNymph
+            DONE * "Sapphire", < WaterNymph
         * "Sapphire"
             DONE * "PinkDiamond", <-- SpaceWarrior
             DONE * "PinkDiamond" <-- Mermaid
@@ -107,14 +107,14 @@ const DEBUG = {
             DONE "BabyGreenSpider", <-- 89
             DONE "BabyGreenSpider", <-- 88
             DONE RedFishTail", <-- 91
-        "RedLatexBra"
+            DONE "RedLatexBra" <-- 92
             DONE "PinkLatexGloves", <-- Wolverine
-        "PinkBoots"
+            DONE "PinkBoots" <--92
             DONE "LittlePiggy", <-- 98
             DONE "LittlePiggy", <-- 94
         "LittlePiggy"
             DONE 'TropicalFish', <-- 100
-        "Fish"
+            DONE "Fish" <--94
 
         * coins sources (3x, missing 2x = 5):
             floor - 86;
@@ -150,10 +150,11 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->94
-        GAME.level = 94; //94  //89 //100
+        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
+        //86-->96
+        GAME.level = 96; //96
 
-        GAME.gold = 1369;
+        GAME.gold = 4180;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -162,17 +163,17 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 45;
-        HERO.attack = 39;
+        HERO.magic = 46;
+        HERO.attack = 40;
 
-        HERO.health = 174;
+        HERO.health = 348;
         HERO.maxHealth = 368;
 
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -187,8 +188,8 @@ const DEBUG = {
             //INTERACTION_OBJECT.BeerHealth,
 
             INTERACTION_OBJECT.Champagne,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
+            //MOVABLE_INTERACTION_OBJECT.RoastPig,
+            ///MOVABLE_INTERACTION_OBJECT.RoastPig,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
@@ -197,7 +198,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Explode", 
+            "DestroyOrbs",
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -211,8 +212,10 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabyDragon", "GuitarPick", "Ruby", "BabyDragon", "Ruby", "BabyDragon", "RedFishTail", "LP", "BabyDragon", "LittlePiggy", "GuitarPick", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP"
-        
+            "LP", "LittlePiggy", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP", "PinkBoots", "LP", "Fish", "Emerald", "LittlePiggy", "Document", "GoldCoin", "PinkDiamond"
+            //debug
+
+
 
         ];
         for (let itm of invItems) {
@@ -221,7 +224,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Green"
+            "Silver"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -241,7 +244,7 @@ const INI = {
     BOUNCE_COUNT: 5,
     SPAWN_DELAY: 9999,
     MONSTER_ATTACK_TIMEOUT: 2000,
-    MONSTER_SHOOT_TIMEOUT: 5000,
+    MONSTER_SHOOT_TIMEOUT: 9999,
     HEALTH: {
         Cake: 40,
         Steak: 80,
@@ -257,7 +260,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.05",
+    VERSION: "0.16.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
