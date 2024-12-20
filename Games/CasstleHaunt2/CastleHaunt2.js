@@ -68,6 +68,7 @@ const DEBUG = {
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
             DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
             DONE WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
+            DONE ForestHedgeHog: wants "Apple", "Pear","GreenApple" gives RocketBottom 
         * 
         * 
         * 
@@ -95,12 +96,12 @@ const DEBUG = {
             DONE * "Ruby" <- 92
             DONE * "Sapphire",  <--BeachGirl
             DONE * "Sapphire", < WaterNymph
-        * "Sapphire"
+            DONE * "Sapphire" <-- 96
             DONE * "PinkDiamond", <-- SpaceWarrior
             DONE * "PinkDiamond" <-- Mermaid
             DONE * "PocketRocket" <-- RocketScientist
             DONE* RocketTop <-- 98
-        * RocketBottom 
+            DONE * RocketBottom <-- ForestHedgeHog
             DONE * "Shell", <-- 97
             DONE * "Shell" <--ShesellsSeaShells
             DONE "BabyGreenSpider", <-- 86
@@ -112,24 +113,34 @@ const DEBUG = {
             DONE "PinkBoots" <--92
             DONE "LittlePiggy", <-- 98
             DONE "LittlePiggy", <-- 94
-        "LittlePiggy"
+            DONE "LittlePiggy" <--- 96
             DONE 'TropicalFish', <-- 100
             DONE "Fish" <--94
+        "Acorn", 
+            DONE "Walnut", <-- 96
+        "Hazelnuts"
+        "Apple", 
+        "Pear", 
+        "GreenApple"
 
-        * coins sources (3x, missing 2x = 5):
+        * coins sources (5x, missing 2x = 7):
             floor - 86;
             floor - 89;
             floor - 94;
+            floor - 96
+            SquirellCoin: "Acorn", "Walnut", "Hazelnuts"
  
  
 
         *
-        * COINS used (5x):
+        * COINS used (7x):
                 $$$$$* TransparentTibetan magic 5x 
             * Space trainer - attack 5x  
             * Swimmer attack 3x
-            * cuddly bear 5x
+            * cuddly bear attack 5x
+            * ApparitiaMagix magic 5x
                 $$$$$ * axe Babe attack 5x
+            * SoreceressDomme magic 5x
            
 
         
@@ -152,7 +163,7 @@ const DEBUG = {
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
         //86-->96
-        GAME.level = 96; //96
+        GAME.level = 96; //96 //99
 
         GAME.gold = 4180;
         GAME.lives = 4;
@@ -212,10 +223,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "LP", "LittlePiggy", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP", "PinkBoots", "LP", "Fish", "Emerald", "LittlePiggy", "Document", "GoldCoin", "PinkDiamond"
+            "LP", "LittlePiggy", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP", "PinkBoots", "LP", "Fish", "Emerald", "LittlePiggy", "Document", "GoldCoin", "PinkDiamond",
             //debug
-
-
+            
 
         ];
         for (let itm of invItems) {
@@ -260,7 +270,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.06",
+    VERSION: "0.16.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

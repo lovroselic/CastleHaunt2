@@ -1029,6 +1029,8 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaBeach.jpg", name: "ApparitiaBeach" },
     { srcName: "EntityPictures/ApparitiaHidden.jpg", name: "ApparitiaHidden" },
     { srcName: "EntityPictures/ApparitiaPolka.jpg", name: "ApparitiaPolka" },
+    { srcName: "EntityPictures/ApparitiaSaboteur.jpg", name: "ApparitiaSaboteur" },
+    { srcName: "EntityPictures/ApparitiaMagic.jpg", name: "ApparitiaMagic" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1228,6 +1230,9 @@ LoadSprites = [
     { srcName: "EntityPictures/TransparentTibetan.jpg", name: "TransparentTibetan" },
     { srcName: "EntityPictures/Wolverine1.jpg", name: "Wolverine" },
     { srcName: "EntityPictures/WaterNymph.jpg", name: "WaterNymph" },
+    { srcName: "EntityPictures/Squirrel7.jpg", name: "SquirrelCoin" },
+    { srcName: "EntityPictures/SorceressDomme.jpg", name: "SorceressDomme" },
+    { srcName: "EntityPictures/HedgeHog3.jpg", name: "ForestHedgeHog" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1519,6 +1524,8 @@ LoadSprites = [
     { srcName: "Items/RedLatexBra.png", name: "RedLatexBra" },
     { srcName: "Items/PinkLatexGloves.png", name: "PinkLatexGloves" },
     { srcName: "Items/PinkBoots.png", name: "PinkBoots" },
+    { srcName: "Items/Hazelnuts.png", name: "Hazelnuts" },
+    { srcName: "Items/Walnut.png", name: "Walnut" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

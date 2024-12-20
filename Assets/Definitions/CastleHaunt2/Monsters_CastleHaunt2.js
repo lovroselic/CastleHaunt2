@@ -1328,6 +1328,14 @@ const ORACLE_TYPE = {
         text: "When you will be completely defeated, we will make everybody listen to polka. Muhahaha. No greater punishment.",
         interactionCategory: "oracle",
     },
+    ApparitiaSaboteur: {
+        name: "ApparitiaSaboteur",
+        sprite: "ApparitiaSaboteur",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I came here to sabotage your space program. You do have space program, right? No? Fuck.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -3546,9 +3554,36 @@ const INTERACTION_ITEM = {
         inventorySprite: "PinkBoots",
         text: "Cute stuff. Befitting a princess. But not my style."
     },
+
+    Walnut: {
+        name: "Walnut",
+        category: "interaction_item",
+        inventorySprite: "Walnut",
+        text: "Walnut looks like a tiny little brain."
+    },
+    Hazelnuts: {
+        name: "Hazelnuts",
+        category: "interaction_item",
+        inventorySprite: "Hazelnuts",
+        text: "Hazelnuts. Are there squirrels nearby?"
+    },
 };
 
 const INTERACTION_ENTITY = {
+    SquirrelCoin: {
+        name: "SquirrelCoin",
+        sprite: "SquirrelCoin",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Acorn", "Walnut", "Hazelnuts"],
+        gives: "GoldCoin",
+        text: {
+            intro: "I'm a collector of fine nuts. Acorns, walnuts, hazelnuts. Bring me one of each, and I'll pay you handsomly.",
+            progress: "You've brought me something tasty, but my collection isn't complete yet. Keep hunting!",
+            conclusion: "All the finest nuts, gathered at last! Here's your gold coin. Maybe you can train some more."
+        }
+    },
+    
     WaterNymph: {
         name: "WaterNymph",
         sprite: "WaterNymph",
@@ -3562,7 +3597,6 @@ const INTERACTION_ENTITY = {
             conclusion: "The waters are balanced again! Here's a nice blue sapphire, from a muddy waters, Use it wisely."
         }
     },
-    
     Wolverine: {
         name: "Wolverine",
         sprite: "Wolverine",
@@ -4330,6 +4364,19 @@ const INTERACTION_ENTITY = {
             conclusion: "All this delicious fruit, just for me! You've earned your reward - here's the backpack I promised."
         }
     },
+    ForestHedgeHog: {
+        name: "ForestHedgeHog",
+        sprite: "ForestHedgeHog",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Apple", "Pear", "GreenApple"],
+        gives: "RocketBottom",
+        text: {
+            intro: "I was starving, okay? So I borrowed ... fine, stole this shiny rocket part. Bring me some fruit, and I might give it back.",
+            progress: "You've brought some fruit, but I'm not full yet. More, or no rocket bottom for you!",
+            conclusion: "Mmm, delicious! Now that I'm full, here's your rocket part. Maybe next time, leave snacks lying around."
+        }
+    },
     Goldie: {
         name: "Goldie",
         sprite: "Goldie",
@@ -5043,6 +5090,35 @@ const INTERACTION_SHRINE = {
             conclusion: "Now you can do it as well, even with your shaby outfit."
         }
     },
+    ApparitiaMagic: {
+        name: "ApparitiaMagic",
+        sprite: "ApparitiaMagic",
+        category: 'crest',
+        voice: "Apparitia",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        level: 5,
+        text: {
+            intro: "I am sick of this war. I'll rather share my magic skills with you. For a price of gold coin, naturally.",
+            progress: null,
+            conclusion: "You are now skilled in the Apparitias magic. Show my silly sisters your progress."
+        }
+    },
+    SorceressDomme: {
+        name: "SorceressDomme",
+        sprite: "SorceressDomme",
+        category: 'crest',
+        voice: "Female",
+        wants: ["GoldCoin"],
+        gives: "Magic",
+        level: 5,
+        text: {
+            intro: "Power comes at a price, darling. Give me a gold coin, and I'll unlock new depths of ancient royal magic within you.",
+            progress: null,
+            conclusion: "Your payment is received. Feel the surge of magic coursing through you. Now you are a true sorceress."
+        }
+    },
+    
 };
 
 const INTERACTOR = {
