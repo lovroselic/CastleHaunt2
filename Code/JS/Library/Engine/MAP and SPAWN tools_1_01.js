@@ -17,8 +17,10 @@ const MAP_TOOLS = {
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 256,
+        VERBOSE: false,
     },
     manageMAP(level) {
+        if (MAP[level].map.stopSpawning) return;
         /** check the lair cooldown */
         if (MAP[level].map.killCount >= MAP[level].map.killCountdown) {
             MAP[level].map.killCountdown = Math.max(1, --MAP[level].map.killCountdown);
@@ -27,6 +29,11 @@ const MAP_TOOLS = {
             MAP[level].map.spawnDelay = Math.round(MAP[level].map.spawnDelay * MAP_TOOLS.INI.SPAWN_DELAY_INC_FACTOR);
             MAP[level].map.killCount = 0;
             LAIR.set_timeout(MAP[level].map.spawnDelay);
+        }
+        /** check the termination of spawning */
+        if (MAP[level].map.totalKills > MAP[level].map.killsRequiredToStopSpawning) {
+            if (MAP_TOOLS.INI.VERBOSE) console.warn("Terminating spawning on level ", level, "totalKills", MAP[level].map.totalKills, "killsRequiredToStopSpawning", MAP[level].map.killsRequiredToStopSpawning);
+            MAP[level].map.stopSpawning = true;
         }
     },
     initialize(pMapObject) {
@@ -46,7 +53,7 @@ const MAP_TOOLS = {
         if (this.MAP[level].adapted_data) {
             const adapted_data = JSON.parse(this.MAP[level].data);
             adapted_data.map = this.MAP[level].adapted_data;
-            console.warn("loading adapted data", adapted_data);
+            if (MAP_TOOLS.INI.VERBOSE) console.warn("loading adapted data", adapted_data);
             this.MAP[level].map = FREE_MAP.import(adapted_data, MAP_TOOLS.INI.GA_BYTE_SIZE);
             this.MAP[level].map.rebuilt = true;
         } else {
@@ -86,6 +93,9 @@ const MAP_TOOLS = {
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
         this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
         this.MAP[level].map.textureMap = GA.toTextureMap();
+        this.MAP[level].map.totalKills = 0;
+        this.MAP[level].map.killsRequiredToStopSpawning = factorial(this.MAP[level].killCountdown)+ this.MAP[level].killCountdown;
+        this.MAP[level].map.stopSpawning = false;
         this.MAP[level].unpacked = true;
         /**  */
         if (ENGINE.verbose) console.info("Unpacked MAP level", level, "map", this.MAP[level].map);

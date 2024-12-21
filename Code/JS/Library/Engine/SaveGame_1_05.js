@@ -6,7 +6,7 @@
 
 ///////////////SaveGame.js/////////////
 //                                  //
-//  version 1.04 by LS              //
+//  version 1.05 by LS              //
 //                                  //
 //////////////////////////////////////
 
@@ -17,12 +17,13 @@ TODO:
 */
 
 const SAVE_GAME = {
-  VERSION: "1.04",
+  VERSION: "1.05",
   LISTABR: "_LST",
   TIMEABR: "_TMR",
   OBJABR: "_OBJ",
   IAMABR: "_IAM",
   GAABR: "_GA",
+  MAPABR: "_MAP",
   CSS: "color: orange",
   that: window,
   ready() {
@@ -49,6 +50,7 @@ const SAVE_GAME = {
   lists: [],
   timers: [],
   objects: [],
+  map_properties: [],
   clearMap() {
     SAVE_GAME.MAP.value.clear();
     SAVE_GAME.MAP.pointer.clear();

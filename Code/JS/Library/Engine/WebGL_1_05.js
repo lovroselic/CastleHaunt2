@@ -1969,6 +1969,13 @@ class Lair_Spawner extends Decal {
         this.direction = direction;
         this.interactive = false;
         this.expand = true;
+        this.on();
+    }
+    on() {
+        this.spawning = true;
+    }
+    off() {
+        this.spawning = false;
     }
 }
 
@@ -3552,6 +3559,7 @@ class $3D_Entity {
         AUDIO.MonsterDeath.volume = RAY.volume(this.distance);
         AUDIO.MonsterDeath.play();
         this.IAM.map.killCount++;
+        this.IAM.map.totalKills++;
     }
     applyDamage(damage, exp) {
         this.health -= damage;

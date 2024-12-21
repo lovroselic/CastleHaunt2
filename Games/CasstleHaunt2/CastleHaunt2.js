@@ -28,7 +28,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: false,
+    INVINCIBLE: true,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -270,7 +270,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.07",
+    VERSION: "0.16.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -344,6 +344,7 @@ const PRG = {
             WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
             ENGINE.verbose = true;
+            MAP_TOOLS.INI.VERBOSE = true;
         }
     },
     start() {
@@ -958,6 +959,7 @@ const GAME = {
         ];
         SAVE_GAME.lists = ["HERO.inventory.scroll"];
         SAVE_GAME.timers = ["Main"];
+        SAVE_GAME.map_properties = ["killCount", "maxSpawned", "killCountdown", "spawnDelay", "totalKills", "stopSpawning"];
         //end SAVE
 
         //load from checkpoint
@@ -1637,6 +1639,7 @@ const GAME = {
         GAME.start();
     },
     canSpawn() {
+        if (MAP[GAME.level].map.stopSpawning) return false;
         if (!LAIR.getSize()) return false;
         if (ENTITY3D.getSize() >= MAP[GAME.level].map.maxSpawned) return false;
         //console.error("CAN SPAWN");
