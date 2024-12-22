@@ -58,7 +58,7 @@ const ENGINE = {
     MAX_PATH: 999,
     MOUSE_IDLE: 3000,
     OVERLAP_TOLERANCE: 4,
-    MAX_JOINTS: 128,
+    MAX_JOINTS: 128,                //don't mess with this, it's hardcoded in fragment shader, both needs to be corrected at the same time
   },
   verbose: false,
   setGridSize(size = 48) {
@@ -912,7 +912,7 @@ const ENGINE = {
       const parts = line.split(/\s+/).slice(1);
       const handler = keywords[keyword];
       if (!handler) {
-        console.warn(NAME, ': unhandled keyword:', keyword);
+        if (ENGINE.verbose) console.warn(NAME, ': unhandled keyword:', keyword);
         continue;
       }
       handler(parts);
@@ -1556,9 +1556,9 @@ const ENGINE = {
         if (ENGINE.LOAD.HMFonts) appendCanvas("Fonts");
         try {
           const fontPromises = fonts.map(font => loadFont(font));
-          console.debug("fontPromises", fontPromises);
+          if (ENGINE.verbose) console.debug("fontPromises", fontPromises);
           const loadedFonts = await Promise.all(fontPromises);
-          console.debug("loadedFonts", loadedFonts);
+          if (ENGINE.verbose) console.debug("loadedFonts", loadedFonts);
           loadedFonts.forEach(font => document.fonts.add(font));
         } catch (error) {
           console.error(`Error loading fonts: ${error}`);
@@ -1581,7 +1581,7 @@ const ENGINE = {
 
             
             if (model.buffers.length > 1) throw new Error(`Expected single buffer, got ${model.buffers.length}`);                                           //assume single buffer!
-            if (model.nodes.length > ENGINE.INI.MAX_JOINTS) throw new Error(`Expected ${ENGINE.INI.MAX_JOINTS} nodes, but got ${model.nodes.length}`);      //assume no more than ### joints, this is hardcoded in fragment shader
+            if (model.nodes.length > ENGINE.INI.MAX_JOINTS) throw new Error(`Expected ${ENGINE.INI.MAX_JOINTS} nodes, but got ${model.nodes.length}`);      //assume no more than ENGINE.INI.MAX_JOINTS joints, this is hardcoded in fragment shader
             const bin_name = ENGINE.MODEL_SOURCE + model.buffers[0].uri;
             const buffer = await loadBinaryFile(bin_name);
 

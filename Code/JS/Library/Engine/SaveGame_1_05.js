@@ -46,6 +46,10 @@ const SAVE_GAME = {
     pointer: [],
     class: []
   },
+  MAP_PROPERTY: {
+    level: [],
+    parameter_value_pair: [],
+  },
   pointers: [],
   lists: [],
   timers: [],
@@ -58,6 +62,8 @@ const SAVE_GAME = {
     SAVE_GAME.LIST.pointer.clear();
     SAVE_GAME.TIMER.value.clear();
     SAVE_GAME.TIMER.pointer.clear();
+    SAVE_GAME.MAP_PROPERTY.level.clear();
+    SAVE_GAME.MAP_PROPERTY.parameter_value_pair.clear();
   },
   setKey(key) {
     SAVE_GAME.key = key;
@@ -84,8 +90,10 @@ const SAVE_GAME = {
         ENGINE.TIMERS.STACK[idx].load(JSON.parse(load.value[i]));
         ENGINE.TIMERS.STACK[idx].continue();
       } else {
-        console.log("create timer!; NOT YET IMPLEMENTED!!!");
-        console.log(load.pointer[i], JSON.parse(load.value[i]));
+        if (ENGINE.verbose) {
+          console.log("create timer!; NOT YET IMPLEMENTED!!!");
+          console.log(load.pointer[i], JSON.parse(load.value[i]));
+        }
       }
     }
   },
@@ -100,6 +108,24 @@ const SAVE_GAME = {
         SAVE_GAME.that[load.pointer[i]][item].adopt(unpacked[item]);
       }
     }
+  },
+  load_map_properties(MAP_REFERENCE = MAP) {
+    if (ENGINE.verbose) console.log("*********************** loading map properties ***********************");
+    //const load = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.MAPABR]);
+    if (ENGINE.verbose) console.info("load:", load);
+    const LL = load.level.length;
+    for (let i = 0; i < LL; i++) {
+      const level = load.level[i];
+      const properties = JSON.parse(load.parameter_value_pair[i]);
+      if (ENGINE.verbose) console.log("..", level, properties);
+      MAP_REFERENCE[level].adapted_map_properties = true;
+      for (let i = 0; i < properties.length; i += 2) {
+        MAP_REFERENCE[level][properties[i]] = properties[i + 1];
+      }
+    }
+
+    if (ENGINE.verbose) console.log("----------------------------------------------------------------------");
+
   },
   saveObjects() {
     SAVE_GAME.objects.forEach(obj => {
@@ -129,6 +155,36 @@ const SAVE_GAME = {
     SAVE_GAME.saveLists();
     SAVE_GAME.saveTimers();
     SAVE_GAME.saveObjects();
+    SAVE_GAME.save_map_properties();
+  },
+  save_map_properties(MAP_REFERENCE = MAP) {
+    if (ENGINE.verbose) console.info("SAVE_GAME.map_properties", SAVE_GAME.map_properties);
+    for (const level in MAP_REFERENCE) {
+      if (MAP_REFERENCE[level].unpacked) {
+        //console.log("... level", level);
+        SAVE_GAME.MAP_PROPERTY.level.push(level);
+        const parameter_value_pairs = [];
+        for (const property of SAVE_GAME.map_properties) {
+          //console.log("property", property, "value", MAP_REFERENCE[level].map[property]);
+          parameter_value_pairs.push(property, MAP_REFERENCE[level].map[property]);
+        }
+        //console.log("LEVEL", level, "unpacked parameter_value_pairs", JSON.stringify(parameter_value_pairs));
+        SAVE_GAME.MAP_PROPERTY.parameter_value_pair.push(JSON.stringify(parameter_value_pairs));
+      } else if (MAP_REFERENCE[level].adapted_map_properties) {
+        //console.log("... adapted_map_properties level", level);
+        SAVE_GAME.MAP_PROPERTY.level.push(level);
+        const parameter_value_pairs = [];
+        for (const property of SAVE_GAME.map_properties) {
+          //console.log("property", property, "value", MAP_REFERENCE[level][property]);
+          parameter_value_pairs.push(property, MAP_REFERENCE[level][property]);
+        }
+        //console.log("LEVEL", level, "adapted parameter_value_pairs", JSON.stringify(parameter_value_pairs));
+        SAVE_GAME.MAP_PROPERTY.parameter_value_pair.push(JSON.stringify(parameter_value_pairs));
+      }
+    }
+    const map_propertySTR = JSON.stringify(SAVE_GAME.MAP_PROPERTY);
+    if (ENGINE.verbose) console.log("map_propertySTR", JSON.parse(map_propertySTR));
+    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MAPABR, map_propertySTR);
   },
   saveTimers() {
     if (ENGINE.verbose) console.info("SAVE_GAME.timers", SAVE_GAME.timers);
@@ -152,7 +208,7 @@ const SAVE_GAME = {
     localStorage.setItem(SAVE_GAME.key, SAVE_GAME.code(mapSTR));
   },
   loadMap() {
-    console.info("loading maps");
+    if (ENGINE.verbose) console.info("loading maps");
     const load = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key]));
     const LL = load.value.length;
     for (let i = 0; i < LL; i++) {
@@ -166,6 +222,7 @@ const SAVE_GAME = {
     SAVE_GAME.loadLists();
     SAVE_GAME.loadTimers();
     SAVE_GAME.loadObjects();
+    SAVE_GAME.load_map_properties();
   },
   code(string) {
     let codes = [...string].map(char => char.charCodeAt(0) + 13);
@@ -189,20 +246,20 @@ const SAVE_MAP_IAM = {
     for (const level in MAP_REFERENCE) {
       const storage = MAP_REFERENCE[level]?.map?.storage;
       if (storage && !storage.empty()) {
-        console.log("adding storage", level, storage);
+        if (ENGINE.verbose) console.log("adding storage", level, storage);
         map_iam[level] = storage;
       } else if (MAP_REFERENCE[level].unused_storage) {
-        console.log("adding unused storage", level, MAP_REFERENCE[level].unused_storage);
+        if (ENGINE.verbose) console.log("adding unused storage", level, MAP_REFERENCE[level].unused_storage);
         map_iam[level] = MAP_REFERENCE[level].unused_storage;
       }
     }
-    console.warn("save map_iam", map_iam);
+    if (ENGINE.verbose) console.warn("save map_iam", map_iam);
     const map_iam_string = JSON.stringify(map_iam);
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.IAMABR, SAVE_GAME.code(map_iam_string));
   },
   load_map(MAP_REFERENCE = MAP) {
     const map_iam = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.IAMABR]));
-    console.log("loaded map_iam", map_iam);
+    if (ENGINE.verbose) console.log("loaded map_iam", map_iam);
     for (const level in map_iam) {
       MAP_REFERENCE[level].unused_storage = new IAM_Storage(map_iam[level].action_list);
     }
@@ -211,7 +268,6 @@ const SAVE_MAP_IAM = {
     const map_GA = {};
     for (const level in MAP_REFERENCE) {
       const rebuilt = MAP_REFERENCE[level]?.map?.rebuilt;
-      //console.log("rebuilt", level, rebuilt, "has ad", MAP_REFERENCE[level].adapted_data);
       if (rebuilt) {
         const GA = MAP_REFERENCE[level].map.GA;
         map_GA[level] = GA.exportMap();
@@ -219,13 +275,12 @@ const SAVE_MAP_IAM = {
         map_GA[level] = MAP_REFERENCE[level].adapted_data;
       }
     }
-    //console.warn("map_GA", map_GA);
     const map_GA_string = JSON.stringify(map_GA);
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.GAABR, map_GA_string);
   },
   load_GA(MAP_REFERENCE = MAP) {
     const map_GA = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.GAABR]);
-    console.log("loaded map_GA", map_GA);
+    if (ENGINE.verbose) console.log("loaded map_GA", map_GA);
     for (const level in map_GA) {
       MAP_REFERENCE[level].adapted_data = map_GA[level];
     }

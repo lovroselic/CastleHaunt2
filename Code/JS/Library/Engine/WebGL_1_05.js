@@ -3581,6 +3581,7 @@ class $3D_Entity {
     dropOrb(missile) {
         const position = Vector3.to_FP_Grid(missile.pos);
         const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
+        orb.dropped = true;
         orb.createTexture();
         ITEM3D.add(orb);
     }

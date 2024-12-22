@@ -270,7 +270,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.08",
+    VERSION: "0.16.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -341,7 +341,7 @@ const PRG = {
 
         /** dev settings */
         if (DEBUG.VERBOSE) {
-            WebGL.VERBOSE = true;
+            //WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
             ENGINE.verbose = true;
             MAP_TOOLS.INI.VERBOSE = true;
@@ -752,6 +752,7 @@ const HERO = {
     dropOrb() {
         const position = Vector3.to_FP_Grid(HERO.player.pos);
         const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
+        orb.dropped = true;
         orb.createTexture();
         ITEM3D.add(orb);
     },
@@ -1630,7 +1631,6 @@ const GAME = {
         HERO.inventory.scroll.clear();
         HERO.inventory.item.clear();
         SAVE_GAME.load();
-
         SAVE_MAP_IAM.load_GA();
         console.timeEnd("load");
     },
@@ -1649,6 +1649,7 @@ const GAME = {
         const type = MONSTER_TYPE[MAP[GAME.level].map.monsterList.chooseRandom()];
         const grid = Grid.toCenter(lair.grid.add(lair.direction));
         const monster = new $3D_Entity(grid, type, lair.direction);
+        monster.dropped = true;
         ENTITY3D.add(monster);
         EXPLOSION3D.add(new SpawnCloud(Vector3.from_Grid(grid, 0.5)));
     },

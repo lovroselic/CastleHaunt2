@@ -88,16 +88,17 @@ const MAP_TOOLS = {
         const SG = this.MAP[level].sg || null;
         this.MAP[level].map.sg = SG;
         this.MAP[level].map.storage = new IAM_Storage();
-        this.MAP[level].map.killCount = 0;
+        this.MAP[level].map.textureMap = GA.toTextureMap();
+
+        this.MAP[level].map.killCount = this.MAP[level].killCount || 0;
         this.MAP[level].map.maxSpawned = this.MAP[level].maxSpawned || -1;
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
         this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
-        this.MAP[level].map.textureMap = GA.toTextureMap();
-        this.MAP[level].map.totalKills = 0;
-        this.MAP[level].map.killsRequiredToStopSpawning = factorial(this.MAP[level].killCountdown)+ this.MAP[level].killCountdown;
-        this.MAP[level].map.stopSpawning = false;
-        this.MAP[level].unpacked = true;
+        this.MAP[level].map.totalKills = this.MAP[level].totalKills || 0;
+        this.MAP[level].map.killsRequiredToStopSpawning = this.MAP[level].killsRequiredToStopSpawning || factorial(this.MAP[level].killCountdown) + this.MAP[level].killCountdown;
+        this.MAP[level].map.stopSpawning = this.MAP[level].stopSpawning || false;
         /**  */
+        this.MAP[level].unpacked = true;
         if (ENGINE.verbose) console.info("Unpacked MAP level", level, "map", this.MAP[level].map);
     },
 
