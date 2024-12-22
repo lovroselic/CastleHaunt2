@@ -2282,7 +2282,7 @@ const MAP = {
         trainers: '[[275,1,"SpaceTrainer"]]',
     }
     ,
-    96 : {
+    96: {
         name: "Rocket Science",
         sg: 0,
         maxSpawned: 4,
@@ -2306,7 +2306,7 @@ const MAP = {
         trainers: '[[200,3,"ApparitiaMagic"],[20,3,"SorceressDomme"]]',
         lairs: '[[120,5,"Lair04"],[134,3,"Lair23"]]',
         monsterList: '["Dragon","SilverSkeleton","SkeleDwarf"]',
-        }
+    }
     ,
     97: {
         name: "Bitch Beach",
@@ -2359,23 +2359,29 @@ const MAP = {
         monsterList: '["SilverSkeleton","RedSkeleton","Skeleton","SkeleDwarf","SkeleDwarf"]',
     }
     ,
-    99: {
+    99 : {
         name: "Allowed Forest",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB3ABAA2BB2AA2BB4AA9BAA21BAA63BB3ABB2ABAA9BABABB10ABB6ABB12AA2BAA3BB3AA2BABB4ABB4AA3BAA3BB14ABB13ABB6$"}',
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 7500,
+        data: '{"width":"15","height":"15","map":"BB2AA2BB3AA4BABAA3BAA3BAA4BAA2BAA6BAA21BAA8BAA9BAA3BAA2BAA2BAA15BABB2AA5BB2ABAA5BAA5BAA3BB5AA2BABB4AA2BB8ABB9ABB5ABAA3BB3ABB4AA3BABB2ABB3AA3BAA3BABB21A$"}',
         wall: "HauntedForest06",
         floor: "ForestFloor02",
         ceil: "DarkSky06",
         start: '[22,7]',
         decals: '[[73,4,"Water30","texture"]]',
-        lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"],[106,5,"Moon50","standardDimmed"],[103,3,"Moon63","standardDimmed"]]',
+        lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"],[106,5,"Moon50","standardDimmed"],[103,3,"Moon63","standardDimmed"],[150,5,"Moon62","standardDimmed"]]',
         gates: '[[7,7,"99.1","86.13","Down"]]',
+        scrolls: '[[123,15],[129,15]]',
+        gold: '[[197,"RedGem"],[207,"RedGem"],[108,"GoldBar"],[69,"GoldBar"],[101,"GoldBar"],[174,"GoldBar"],[169,"GoldBar"],[63,"GoldBar"],[112,"GoldBar"],[52,"SilverBar"],[157,"SilverBar"],[57,"SilverBar"]]',
+        containers: '[[47,"Barrel2","GOLD_ITEM_TYPE.GoldBar",7],[190,"Barell3","GOLD_ITEM_TYPE.GoldBar",1],[168,"WoodenCrate","INTERACTION_ITEM.WhiteFeather",1]]',
         entities: '[[60,5,"Wolverine"],[74,3,"WaterNymph"],[134,3,"SquirrelCoin"]]',
+        objects: '[[16,"Apple"],[28,"GoldCoin"],[17,"Steak"],[80,"Steak"],[159,"Steak"],[84,"Steak"]]',
         trainers: '[[217,1,"CuddlyBear"]]',
-    }
+        lairs: '[[198,3,"Lair30"],[206,5,"Lair18"]]',
+        monsterList: '["BlueSkeleton","GreenWolf","SilverSkeleton","RedSkeleton","Skeleton","Wolf","GreenWolf"]',
+        }
     ,
     100: {
         name: "Merplace",

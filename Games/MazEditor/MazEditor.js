@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.00",
+  VERSION: "0.14.01",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -1036,6 +1036,11 @@ const GAME = {
     for (const contentType of CONTAINER_CONTENT_LIST) {
       $("#content_type").append(`<option value="${contentType}">${contentType}</option>`);
     }
+    $("#content_type").change(function () {
+      const sprite = $("#content_type")[0].value.split(".")[1];
+      ENGINE.drawToId("container_item_canvas", 0, 0, SPRITE[sprite]);
+    });
+    $("#content_type").trigger("change");
 
     for (const shrineType in SHRINE_TYPE) {
       $("#shrine_type").append(`<option value="${shrineType}">${shrineType}</option>`);

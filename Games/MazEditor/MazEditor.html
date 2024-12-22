@@ -470,6 +470,10 @@
                                     </label>
                                 </div>
 
+                                <div class="d-flex justify-content-center my-2">
+                                    <canvas id="container_item_canvas" width="48" height="48"></canvas>
+                                </div>
+
                                 Orientation:<br />
                                 <input type="radio" name="orientation" value="FIXED" checked="checked"> FIXED <br />
                                 <input type="radio" name="orientation" value="RANDOM"> RANDOM <br />
@@ -581,22 +585,21 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            99: {
-                                name: "Allowed Forest",
+                            93: {
+                                name: "Esmeralda",
                                 sg: 0,
-                                maxSpawned: -1,
-                                killCountdown: -1,
-                                spawnDelay: -1,
-                                data: '{"width":"15","height":"15","map":"BB3ABAA2BB2AA2BB4AA9BAA21BAA63BB3ABB2ABAA9BABABB10ABB6ABB12AA2BAA3BB3AA2BABB4ABB4AA3BAA3BB14ABB13ABB6$"}',
-                                wall: "HauntedForest06",
-                                floor: "ForestFloor02",
-                                ceil: "DarkSky06",
-                                start: '[22,7]',
-                                decals: '[[73,4,"Water30","texture"]]',
-                                lights: '[[200,1,"Moon52","standardDimmed"],[24,7,"Moon56","standardDimmed"],[106,5,"Moon50","standardDimmed"],[103,3,"Moon63","standardDimmed"]]',
-                                gates: '[[7,7,"99.1","86.13","Down"]]',
-                                entities: '[[60,5,"Wolverine"],[74,3,"WaterNymph"],[134,3,"SquirrelCoin"]]',
-                                trainers: '[[217,1,"CuddlyBear"]]',
+                                maxSpawned: 4,
+                                killCountdown: 4,
+                                spawnDelay: 9999,
+                                data: '{"width":"15","height":"15","map":"BB2AA3BABB6AA33BABAA6BAA10BAA5BAA6BAA3BB2AA3BB2AA7BB4ABB8ABABABB6ABB9ABB2ABB19ABB16ABB2AA2BB3AA5BABB16ABB12ABB3$BB5A"}',
+                                wall: "RockWall_SDXL_012",
+                                floor: "Relief10",
+                                ceil: "Relief09",
+                                start: '[202,1]',
+                                lights: '[[110,1,"FluxLight106","standardDimmed"],[114,1,"DuaLLantern_005","standardDimmed"],[110,7,"Lamp46","standardDimmed"],[114,7,"DuaLLantern_013","standardDimmed"]]',
+                                gates: '[[217,1,"93.1","86.8","Closed"]]',
+                                keys: '[[19,0]]',
+                                entities: '[[22,7,"AssMeralda"]]',
                             }
                         </textarea>
                     </fieldset>

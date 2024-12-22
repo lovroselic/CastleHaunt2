@@ -1806,6 +1806,27 @@ const MONSTER_TYPE = {
         moveSpeed: 1.1,
         material: MATERIAL.standard,
     },
+    GreenWolf: {
+        name: "Wolf",
+        texture: "GreenWolf",
+        model: "Wolf",
+        scale: 1.6 / 2 ** 2,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        inventory: null,
+        mana: 0,
+        health: 60,
+        attack: 120,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt3",
+        behaviourArguments: [16, ["wanderer"], 14, ["advancer"]],
+        moveSpeed: 1.3,
+        material: MATERIAL.greenFluence,
+    },
     MissGalaxy: {
         name: "MissGalaxy",
         model: "MissGalaxy",
@@ -2152,6 +2173,31 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
         material: MATERIAL.silver,
+    },
+    BlueSkeleton: {
+        name: "BlueSkeleton",
+        texture: "BlueMetal",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        mana: 25,
+        health: 110,
+        attack: 120,
+        magic: 17,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [17, ["wanderer"], 15, ["shoot"]],
+        moveSpeed: 1.35,
+        shootDistance: 15,
+        stalkDistance: 10,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.standard,
     },
     GreatChick: {
         name: "GreatChick",
@@ -3487,7 +3533,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "RedLeatherHat",
         text: "Too big for my cute small head."
     },
-
     EmeraldIngots: {
         name: "EmeraldIngots",
         category: "interaction_item",
@@ -3554,7 +3599,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "PinkBoots",
         text: "Cute stuff. Befitting a princess. But not my style."
     },
-
     Walnut: {
         name: "Walnut",
         category: "interaction_item",
@@ -3566,6 +3610,30 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "Hazelnuts",
         text: "Hazelnuts. Are there squirrels nearby?"
+    },
+    WhiteFeather: {
+        name: "WhiteFeather",
+        category: "interaction_item",
+        inventorySprite: "WhiteFeather",
+        text: "A feather. White."
+    },
+    RedFeather: {
+        name: "RedFeather",
+        category: "interaction_item",
+        inventorySprite: "WhiteFeather",
+        text: "A feather. Red."
+    },
+    GreenFeather: {
+        name: "GreenFeather",
+        category: "interaction_item",
+        inventorySprite: "GreenFeather",
+        text: "A feather. Gree."
+    },
+    BlueFeather: {
+        name: "BlueFeather",
+        category: "interaction_item",
+        inventorySprite: "BlueFeather",
+        text: "A feather. Blue."
     },
 };
 
@@ -3583,7 +3651,6 @@ const INTERACTION_ENTITY = {
             conclusion: "All the finest nuts, gathered at last! Here's your gold coin. Maybe you can train some more."
         }
     },
-    
     WaterNymph: {
         name: "WaterNymph",
         sprite: "WaterNymph",
@@ -3761,7 +3828,7 @@ const INTERACTION_ENTITY = {
         wants: ["LP", "LP", "LP", "LP", "LP"],
         gives: "KeyMould",
         text: {
-            intro: "I live for metal, both the music and the craft. Bring me five heavy records, and I'll gift you something truly unique. a KeyMould. Think of it as your key to A Minor success. Got it? Hahaha.",
+            intro: "I live for metal, both the music and the craft. Bring me five heavy metal records, and I'll gift you something truly unique. a KeyMould. Think of it as your key to A Minor success. Got it? Hahaha.",
             progress: "The rhythm's building, but I need more records to hit the perfect note. Rock me more!",
             conclusion: "Five records of pure metal bliss! As promised, here's your KeyMould. It's a masterpiece, just like a killer riff! And me."
         }
@@ -5118,7 +5185,7 @@ const INTERACTION_SHRINE = {
             conclusion: "Your payment is received. Feel the surge of magic coursing through you. Now you are a true sorceress."
         }
     },
-    
+
 };
 
 const INTERACTOR = {

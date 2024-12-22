@@ -1371,7 +1371,6 @@ LoadSprites = [
     { srcName: "Shrines/PrincessCryptSword.jpg", name: "PrincessCryptSword" },
     { srcName: "Shrines/PrincessCryptFireball.jpg", name: "PrincessCryptFireball" },
 
-
     //scrolls
     { srcName: "Scrolls/SCR_Cripple2.png", name: "SCR_Cripple" },
     { srcName: "Scrolls/SCR_Explode2.png", name: "SCR_Explode" },
@@ -1390,8 +1389,6 @@ LoadSprites = [
     { srcName: "Items/GoldCoin.png", name: "GoldCoin" },
     { srcName: "Items/GreenGem.png", name: "GreenGem" },
     { srcName: "Items/RedGem.png", name: "RedGem" },
-
-    // unused items
     { srcName: "Items/Acorn.png", name: "Acorn" },
     { srcName: "Items/Amethyst.png", name: "Amethyst" },
     { srcName: "Items/Ammo.png", name: "Ammo" },
@@ -1526,6 +1523,10 @@ LoadSprites = [
     { srcName: "Items/PinkBoots.png", name: "PinkBoots" },
     { srcName: "Items/Hazelnuts.png", name: "Hazelnuts" },
     { srcName: "Items/Walnut.png", name: "Walnut" },
+    { srcName: "Items/WhiteFeather.png", name: "WhiteFeather" },
+    { srcName: "Items/RedFeather.png", name: "RedFeather" },
+    { srcName: "Items/GreenFeather.png", name: "GreenFeather" },
+    { srcName: "Items/BlueFeather.png", name: "BlueFeather" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
@@ -1809,7 +1810,6 @@ LoadSprites = [
     { srcName: "ObjDecals/WallSkelly102.png", name: "WallSkelly102" },
     { srcName: "ObjDecals/WallSkelly103.png", name: "WallSkelly103" },
     { srcName: "ObjDecals/WallSkelly104.png", name: "WallSkelly104" },
-
     { srcName: "ObjDecals/SatanRam1.png", name: "SatanRam1" },
     { srcName: "ObjDecals/SatanRam10.png", name: "SatanRam10" },
     { srcName: "ObjDecals/SatanRam2.png", name: "SatanRam2" },
@@ -1820,7 +1820,6 @@ LoadSprites = [
     { srcName: "ObjDecals/SatanRam7.png", name: "SatanRam7" },
     { srcName: "ObjDecals/SatanRam8.png", name: "SatanRam8" },
     { srcName: "ObjDecals/SatanRam9.png", name: "SatanRam9" },
-
     { srcName: "ObjDecals/DemonSkull1.png", name: "DemonSkull1" },
     { srcName: "ObjDecals/DemonSkull2.png", name: "DemonSkull2" },
     { srcName: "ObjDecals/DemonSkull3.png", name: "DemonSkull3" },
@@ -1841,7 +1840,6 @@ LoadSprites = [
     { srcName: "ObjDecals/Ivy12.png", name: "Ivy12" },
     { srcName: "ObjDecals/Ivy11a.png", name: "Ivy11a" },
     { srcName: "ObjDecals/Ivy12a.png", name: "Ivy12a" },
-
     { srcName: "ObjDecals/AA_CREST_AI.png", name: "AA_CREST_AI" },
     { srcName: "ObjDecals/CrawlingSkelly1.png", name: "CrawlingSkelly1" },
     { srcName: "ObjDecals/CrawlingSkelly2.png", name: "CrawlingSkelly2" },
@@ -1862,8 +1860,6 @@ LoadSprites = [
     { srcName: "ObjDecals/SittingSkelly2.png", name: "SittingSkelly2" },
     { srcName: "ObjDecals/SittingSkelly21.png", name: "SittingSkelly21" },
     { srcName: "ObjDecals/SittingSkelly23.png", name: "SittingSkelly23" },
-
-
     { srcName: "ObjDecals/AticAtacCrest1.png", name: "AticAtacCrest1" },
     { srcName: "ObjDecals/Crack20.png", name: "Crack20" },
     { srcName: "ObjDecals/Crack21.png", name: "Crack21" },
@@ -1905,7 +1901,6 @@ LoadSprites = [
     { srcName: "ObjDecals/WOWc1.png", name: "WOWc1" },
     { srcName: "ObjDecals/WOWc2.png", name: "WOWc2" },
     { srcName: "ObjDecals/TempleDecal.png", name: "TempleDecal" },
-
     { srcName: "ObjDecals/DevilStatue01.png", name: "DevilStatue01" },
     { srcName: "ObjDecals/DevilStatue02.png", name: "DevilStatue02" },
     { srcName: "ObjDecals/DevilStatue03.png", name: "DevilStatue03" },
@@ -1950,7 +1945,6 @@ LoadSprites = [
     { srcName: "ObjDecals/Skull406.png", name: "Skull406" },
     { srcName: "ObjDecals/Skull407.png", name: "Skull407" },
     { srcName: "ObjDecals/Skull408.png", name: "Skull408" },
-
     { srcName: "ObjDecals/RustyFloorGrille_01.jpg", name: "RustyFloorGrille_01" },
     { srcName: "ObjDecals/RustyFloorGrille_02.jpg", name: "RustyFloorGrille_02" },
     { srcName: "ObjDecals/RustyFloorGrille_03.jpg", name: "RustyFloorGrille_03" },
@@ -1961,7 +1955,6 @@ LoadSprites = [
     { srcName: "ObjDecals/RustyFloorGrille_08.jpg", name: "RustyFloorGrille_08" },
     { srcName: "ObjDecals/RustyFloorGrille_09.jpg", name: "RustyFloorGrille_09" },
     { srcName: "ObjDecals/RustyFloorGrille_10.jpg", name: "RustyFloorGrille_10" },
-
     { srcName: "ObjDecals/Fungus1.png", name: "Fungus1" },
     { srcName: "ObjDecals/Fungus2.png", name: "Fungus2" },
     { srcName: "ObjDecals/Moss01.png", name: "Moss01" },
@@ -1980,7 +1973,6 @@ LoadSprites = [
     { srcName: "ObjDecals/Moss14.png", name: "Moss14" },
     { srcName: "ObjDecals/Moss15.png", name: "Moss15" },
 
-
     //decal-pics - all
 
     { srcName: "PicDecals/BookShelf16.png", name: "BookShelf16" },
@@ -1995,8 +1987,6 @@ LoadSprites = [
     { srcName: "PicDecals/BookShelf25.png", name: "BookShelf25" },
     { srcName: "PicDecals/BookShelf26.png", name: "BookShelf26" },
     { srcName: "PicDecals/BookShelf27.png", name: "BookShelf27" },
-
-
     { srcName: "PicDecals/1942_200.png", name: "1942_200" },
     { srcName: "PicDecals/1942_201.png", name: "1942_201" },
     { srcName: "PicDecals/1943_200.png", name: "1943_200" },
