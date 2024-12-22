@@ -156,16 +156,17 @@ const DEBUG = {
         * temple of hope used:
             * heart   
             * magic
+            * attack
 
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
-        //86-->96
-        GAME.level = 96; //96 //99
+        //86-->96-->86-->89-->99
+        GAME.level = 99; 
 
-        GAME.gold = 4180;
+        GAME.gold = 660;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -174,10 +175,10 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 46;
+        HERO.magic = 56;
         HERO.attack = 40;
 
-        HERO.health = 348;
+        HERO.health = 368;
         HERO.maxHealth = 368;
 
 
@@ -200,7 +201,7 @@ const DEBUG = {
 
             INTERACTION_OBJECT.Champagne,
             //MOVABLE_INTERACTION_OBJECT.RoastPig,
-            ///MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
@@ -209,7 +210,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "DestroyOrbs",
+            "DestroyOrbs", "Cripple", "Cripple", 
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -223,7 +224,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "LP", "LittlePiggy", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP", "PinkBoots", "LP", "Fish", "Emerald", "LittlePiggy", "Document", "GoldCoin", "PinkDiamond",
+            "LP", "LittlePiggy", "LP", "RocketTop", "Sapphire", "TropicalFish", "LP", "PinkBoots", "LP", "Fish", "Emerald", "LittlePiggy", "Document", "PinkDiamond", "Sapphire", "LittlePiggy", "Walnut"
             //debug
             
 
@@ -270,7 +271,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.09",
+    VERSION: "0.16.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1329,9 +1330,8 @@ const GAME = {
                 AUDIO.Potion.play();
                 break;
             case 'action_item':
-                console.warn("action_item", interaction.which, interaction.inventorySprite);
+                if (DEBUG.VERBOSE)  console.warn("action_item", interaction.which, interaction.inventorySprite);
                 let aItem = new ActionItem(interaction.which, interaction.inventorySprite);
-                console.log("aItem", aItem);
                 HERO.inventory.scroll.add(aItem);
                 TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
                 TITLE.scrolls();
@@ -1372,20 +1372,20 @@ const GAME = {
             case 'oracle':
                 break;
             case 'skill':
-                console.log("SKILL", interaction);
+                if (DEBUG.VERBOSE)  console.log("SKILL", interaction);
                 HERO.raiseStat(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.LevelUp.play();
                 TITLE.keys();
                 break;
             case "life":
-                console.info("LIFE", interaction);
+                if (DEBUG.VERBOSE)  console.info("LIFE", interaction);
                 display(interaction.inventorySprite);
                 GAME.lives++;
                 TITLE.lives();
                 break;
             case 'status':
-                console.log("STATUS", interaction);
+                if (DEBUG.VERBOSE)  console.log("STATUS", interaction);
                 HERO.incStatus(interaction.which, interaction.level);
                 display(interaction.inventorySprite);
                 AUDIO.PowerUp.play();
@@ -1400,14 +1400,14 @@ const GAME = {
                 AUDIO.Thud.play();
                 break;
             case "interaction_item":
-                console.warn("interaction_item", interaction);
+                if (DEBUG.VERBOSE)  console.warn("interaction_item", interaction);
                 const item = new NamedInventoryItem(interaction.name, interaction.inventorySprite);
                 HERO.inventory.item.push(item);
                 TITLE.keys();
                 display(interaction.inventorySprite);
                 break;
             case "entity_interaction":
-                console.log("entity_interaction", interaction);
+                if (DEBUG.VERBOSE)  console.log("entity_interaction", interaction);
                 TITLE.keys()
                 break;
             case "munition":
