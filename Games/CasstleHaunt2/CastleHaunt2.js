@@ -28,7 +28,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: true,
+    INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -53,22 +53,24 @@ const DEBUG = {
         /** main area 5:
             
             DONE * EngineerDomme wants: EmeraldIngots, Key mould :: makes -> Emerald key:
-            DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
+                $$$$$$$$ DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
                 $$$$$$$$ DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
                 $$$$$$$$ DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
             DONE AssMeralda wants : Emerald", "Emerald", "Emerald" gives --> EmeraldIngots
                 $$$$$$$$ DONE RubyErella wants Ruby 3x gives Emerald
-            DONE SassyPhire wants Sapphire 3x gives Emerald
+                $$$$$$$$ DONE SassyPhire wants Sapphire 3x gives Emerald
             DONE Sparklyssa wants PinkDiamond 2x gives Emerald
             DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
             DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
                 $$$$$$$$ DONE BeachGirl wants Shell 2x gives Sapphire
-            DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
-            DONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
+                $$$$$$$$ DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
+                $$$$$$$$ ONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
                 $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
-            DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
-            DONE WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
+                $$$$$$$$ DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
+                $$$$$$$$ DONE WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
             DONE ForestHedgeHog: wants "Apple", "Pear","GreenApple" gives RocketBottom 
+            DONE WhiteAngel wants "WhiteFeather", "WhiteFeather", "WhiteFeather" gives PearlKey
+            DONE BlackAngels wants "RedFeather", "GreenFeather", "BlueFeather" gives PurpleKey
         * 
         * 
         * 
@@ -116,26 +118,27 @@ const DEBUG = {
             DONE "LittlePiggy" <--- 96
             DONE 'TropicalFish', <-- 100
             DONE "Fish" <--94
-        "Acorn", 
+            DONE "Acorn", <-- 101
             DONE "Walnut", <-- 96
-        "Hazelnuts"
+            DONE "Hazelnuts" <-- 93
             DONE "Apple",  <-- 99
-        "Pear", 
-        "GreenApple"
-        "WhiteFeather", <-- 99
+            DONE "Pear", <-- 93
+            DONE "GreenApple" <--101
+            DONE "WhiteFeather", <-- 99
+            DONE "WhiteFeather", <<--- 95
         "WhiteFeather",
-        "WhiteFeather",
-        "RedFeather",
-        "GreenFeather",
+            DONE "RedFeather",<--93
+            DONE "GreenFeather", <--95
         "BlueFeather",
 
-        * coins sources (6x, missing 1x = 7):
+        * coins sources (7x, missing 0x = 7):
             floor - 86;
             floor - 89;
             floor - 94;
             floor - 96
             SquirellCoin: "Acorn", "Walnut", "Hazelnuts"
             floor - 99  
+            floor - 93
  
  
 
@@ -170,10 +173,10 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
-        //86-->96-->86-->89-->99 -->91-->94-->86-->93
-        GAME.level = 93;
+        //86-->96-->86-->89-->99 -->91-->94-->86-->93-->86
+        GAME.level = 95; //101; 86->95
 
-        GAME.gold = 1729;
+        GAME.gold = 3195;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -183,15 +186,15 @@ const DEBUG = {
         HERO.orbs = 5;
         HERO.orbsLost = 0;
         HERO.magic = 56;
-        HERO.attack = 45;
+        HERO.attack = 47;
 
         HERO.health = 368;
         HERO.maxHealth = 368;
 
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
@@ -201,8 +204,8 @@ const DEBUG = {
             INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -212,7 +215,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.Champagne,
             //MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -234,9 +237,8 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "RocketTop", "Emerald", "Document", "PinkDiamond", "Walnut", "Apple", "WhiteFeather", "KeyMould", "Emerald"
+            "RocketTop", "Emerald", "Document", "PinkDiamond", "Walnut", "Apple", "WhiteFeather", "KeyMould", "Emerald", "GoldCoin", "Pear", "RedFeather", "Hazelnuts"
             //debug
-
 
         ];
         for (let itm of invItems) {
@@ -245,7 +247,7 @@ const DEBUG = {
         }
 
         let keys = [
-
+            "Gold"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -281,7 +283,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.11",
+    VERSION: "0.16.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

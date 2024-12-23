@@ -95,7 +95,7 @@ const MAP_TOOLS = {
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
         this.MAP[level].map.spawnDelay = this.MAP[level].spawnDelay || -1;
         this.MAP[level].map.totalKills = this.MAP[level].totalKills || 0;
-        this.MAP[level].map.killsRequiredToStopSpawning = this.MAP[level].killsRequiredToStopSpawning || factorial(this.MAP[level].killCountdown) + this.MAP[level].killCountdown;
+        this.MAP[level].map.killsRequiredToStopSpawning = this.MAP[level].killsRequiredToStopSpawning || factorial(this.MAP[level].killCountdown) + this.MAP[level].maxSpawned;
         this.MAP[level].map.stopSpawning = this.MAP[level].stopSpawning || false;
         /**  */
         this.MAP[level].unpacked = true;

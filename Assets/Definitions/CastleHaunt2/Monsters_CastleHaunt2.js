@@ -1336,6 +1336,14 @@ const ORACLE_TYPE = {
         text: "I came here to sabotage your space program. You do have space program, right? No? Fuck.",
         interactionCategory: "oracle",
     },
+    ApparitiaAngelDemon: {
+        name: "ApparitiaAngelDemon",
+        sprite: "ApparitiaAngelDemon",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "You thought that I am an agel undercover? No, I'm just a bitch, here to fuck you.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2281,6 +2289,55 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    Astro: {
+        name: "Astro",
+        model: "Astro",
+        scale: 1.5 / 2 ** 4,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 25,
+        health: 120,
+        attack: 125,
+        magic: 19,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "HumanAttack1",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [7, ["wanderer"], 5, ["shoot"]],
+        moveSpeed: 1.0,
+        shootDistance: 5,
+        stalkDistance: 6,
+        material: MATERIAL.standard,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
+    AstroRed: {
+        name: "AstroRed",
+        texture: "AstroRed",
+        model: "Astro",
+        scale: 1.7 / 2 ** 4,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 25,
+        health: 130,
+        attack: 135,
+        magic: 20,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "HumanAttack1",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [10, ["wanderer"], 8, ["shoot"]],
+        moveSpeed: 1.0,
+        shootDistance: 8,
+        stalkDistance: 6,
+        material: MATERIAL.redShine,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
 };
 
 const HERO_TYPE = {
@@ -2959,6 +3016,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "EmeraldKey",
         color: "Emerald"
     },
+    PearlKey: {
+        name: "PearlKey",
+        category: "key",
+        inventorySprite: "PearlKey",
+        color: "Pearl"
+    },
     PurpleKey: {
         name: "PurpleKey",
         category: "key",
@@ -3620,7 +3683,7 @@ const INTERACTION_ITEM = {
     RedFeather: {
         name: "RedFeather",
         category: "interaction_item",
-        inventorySprite: "WhiteFeather",
+        inventorySprite: "RedFeather",
         text: "A feather. Red."
     },
     GreenFeather: {
@@ -3638,6 +3701,33 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    BlackAngel: {
+        name: "BlackAngel",
+        sprite: "BlackAngel",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["BlueFeather", "GreenFeather", "RedFeather"],
+        gives: "PurpleKey",
+        text: {
+            intro: "Black is timeless, but a pop of color? Now that's modern. Bring me some vibrant feathers, and I'll reward you with the hellish delights.",
+            progress: "One color down, but my wings are still a monochrome bore. Keep those feathers coming!",
+            conclusion: "My wings are now a fashion statement! Here's the Purple Key. May it unlock a world of sinful pleasures."
+        }
+    },
+    
+    WhiteAngel: {
+        name: "WhiteAngel",
+        sprite: "WhiteAngel",
+        category: 'crest',
+        voice: "Female",
+        wants: ["WhiteFeather", "WhiteFeather", "WhiteFeather"],
+        gives: "PearlKey",
+        text: {
+            intro: "My wings are broken, and I need feathers to mend them. Help me fly again, and I'll give you a key to a heavenly place.",
+            progress: "A feather here, a feather there, but my wings still can't take flight. Don't stop now.",
+            conclusion: "With my wings restored, I can soar once more. As promised, here's the Pearl Key. May it guide you to the heavens."
+        }
+    },
     SquirrelCoin: {
         name: "SquirrelCoin",
         sprite: "SquirrelCoin",

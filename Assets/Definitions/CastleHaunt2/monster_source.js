@@ -3,67 +3,6 @@
 
 
 const MONSTER_TYPE_BAK = {
-
-    Astro: {
-        name: "Astro",
-        model: "Astro",
-        scale: 1.5 / 2 ** 4,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 24,
-        defense: 18,
-        magic: 15,
-        health: 35,
-        xp: 40,
-        gold: 40,
-        attackSound: "HumanAttack1",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [7, ["wanderer"], 5, ["shoot"]],
-        moveSpeed: 1.0,
-        mana: 2,
-        caster: true,
-        shootDistance: 5,
-        stalkDistance: 6,
-        material: MATERIAL.standard,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
-    },
-    AstroRed: {
-        name: "AstroRed",
-        texture: "AstroRed",
-        model: "Astro",
-        scale: 1.7 / 2 ** 4,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 25,
-        defense: 18,
-        magic: 16,
-        health: 42,
-        xp: 50,
-        gold: 50,
-        attackSound: "HumanAttack1",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [7, ["wanderer"], 5, ["shoot"]],
-        moveSpeed: 1.0,
-        mana: 3,
-        caster: true,
-        shootDistance: 5,
-        stalkDistance: 6,
-        material: MATERIAL.redShine,
-        missile: BouncingMissile,
-        missileType: COMMON_ITEM_TYPE.Bounceball,
-    },
-
-
-
-
-
-   
-
     
     Basilisk: {
         name: "Basilisk",

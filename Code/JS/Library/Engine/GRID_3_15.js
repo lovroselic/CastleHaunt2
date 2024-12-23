@@ -1301,20 +1301,6 @@ class GridArray extends ArrayBasedDataStructure {
     }
     return GA;
   }
-  /* toTextureMap() {
-    const width = this.width;
-    const height = this.height;
-    const pixelData = new Uint8Array(width * height);
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        const grid = new Grid(x, y);
-        const index = this.gridToIndex(grid);
-        // Assign 0 for passable (light) and 255 for impassable (wall)
-        pixelData[index] = this.notWall(grid) ? 0 : 255;
-      }
-    }
-    return pixelData;
-  } */
   toTextureMap() {
     const paddedWidth = POT(this.width);
     const paddedHeight = POT(this.height);

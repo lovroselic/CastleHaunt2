@@ -111,7 +111,7 @@ const SAVE_GAME = {
   },
   load_map_properties(MAP_REFERENCE = MAP) {
     if (ENGINE.verbose) console.log("*********************** loading map properties ***********************");
-    //const load = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.MAPABR]);
+    const load = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.MAPABR]));
     if (ENGINE.verbose) console.info("load:", load);
     const LL = load.level.length;
     for (let i = 0; i < LL; i++) {
@@ -123,9 +123,7 @@ const SAVE_GAME = {
         MAP_REFERENCE[level][properties[i]] = properties[i + 1];
       }
     }
-
     if (ENGINE.verbose) console.log("----------------------------------------------------------------------");
-
   },
   saveObjects() {
     SAVE_GAME.objects.forEach(obj => {
@@ -149,7 +147,7 @@ const SAVE_GAME = {
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.LISTABR, SAVE_GAME.code(listSTR));
   },
   save() {
-    //console.log(`%cSaving game ....`, SAVE_GAME.CSS);
+    console.log(`%cSaving game ....`, SAVE_GAME.CSS);
     SAVE_GAME.clearMap();
     SAVE_GAME.saveMap();
     SAVE_GAME.saveLists();
@@ -161,30 +159,24 @@ const SAVE_GAME = {
     if (ENGINE.verbose) console.info("SAVE_GAME.map_properties", SAVE_GAME.map_properties);
     for (const level in MAP_REFERENCE) {
       if (MAP_REFERENCE[level].unpacked) {
-        //console.log("... level", level);
         SAVE_GAME.MAP_PROPERTY.level.push(level);
         const parameter_value_pairs = [];
         for (const property of SAVE_GAME.map_properties) {
-          //console.log("property", property, "value", MAP_REFERENCE[level].map[property]);
           parameter_value_pairs.push(property, MAP_REFERENCE[level].map[property]);
         }
-        //console.log("LEVEL", level, "unpacked parameter_value_pairs", JSON.stringify(parameter_value_pairs));
         SAVE_GAME.MAP_PROPERTY.parameter_value_pair.push(JSON.stringify(parameter_value_pairs));
       } else if (MAP_REFERENCE[level].adapted_map_properties) {
-        //console.log("... adapted_map_properties level", level);
         SAVE_GAME.MAP_PROPERTY.level.push(level);
         const parameter_value_pairs = [];
         for (const property of SAVE_GAME.map_properties) {
-          //console.log("property", property, "value", MAP_REFERENCE[level][property]);
           parameter_value_pairs.push(property, MAP_REFERENCE[level][property]);
         }
-        //console.log("LEVEL", level, "adapted parameter_value_pairs", JSON.stringify(parameter_value_pairs));
         SAVE_GAME.MAP_PROPERTY.parameter_value_pair.push(JSON.stringify(parameter_value_pairs));
       }
     }
     const map_propertySTR = JSON.stringify(SAVE_GAME.MAP_PROPERTY);
     if (ENGINE.verbose) console.log("map_propertySTR", JSON.parse(map_propertySTR));
-    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MAPABR, map_propertySTR);
+    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MAPABR, SAVE_GAME.code(map_propertySTR));
   },
   saveTimers() {
     if (ENGINE.verbose) console.info("SAVE_GAME.timers", SAVE_GAME.timers);

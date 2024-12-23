@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.01",
+  VERSION: "0.14.02",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -87,6 +87,7 @@ const PRG = {
     $("#selector input[name=renderer]").click(GAME.render);
     $("#corr").click(GAME.render);
     $("#coord").click(GAME.render);
+    $("#all_coord").click(GAME.render);
     $("#grid").click(GAME.render);
 
     $("#buttons").on("click", "#new", GAME.init);
@@ -795,7 +796,7 @@ const GAME = {
     }
 
     if ($("input[name='grid']")[0].checked) GRID.grid();
-    if ($("input[name='coord']")[0].checked) GRID.paintCoord("coord", $MAP.map);
+    if ($("input[name='coord']")[0].checked) GRID.paintCoord("coord", $MAP.map, $("input[name='all_coord']")[0].checked);
     GAME.resizeGL_window();
   },
   init() {

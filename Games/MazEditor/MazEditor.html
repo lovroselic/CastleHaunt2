@@ -77,7 +77,9 @@
                             <input type="checkbox" id="corr" value="corr" name="corr"> Draw corridor gridline<br />
                             <input type="checkbox" id="grid" value="grid" name="grid" checked="checked"> Main grid<br />
                             <input type="checkbox" id="coord" value="coord" name="coord">
-                            Coordinates<br />
+                            Coordinates
+                            <input type="checkbox" id="all_coord" value="all_coord" name="all_coord">All
+                            <br />
                         </fieldset>
                         <fieldset>
                             <legend>
@@ -585,22 +587,25 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            93: {
-                                name: "Esmeralda",
+                            95 : {
+                                name: "Babes In Space",
                                 sg: 0,
                                 maxSpawned: 4,
                                 killCountdown: 4,
-                                spawnDelay: 9999,
-                                data: '{"width":"15","height":"15","map":"BB2AA3BABB6AA33BABAA6BAA10BAA5BAA6BAA3BB2AA3BB2AA7BB4ABB8ABABABB6ABB9ABB2ABB19ABB16ABB2AA2BB3AA5BABB16ABB12ABB3$BB5A"}',
-                                wall: "RockWall_SDXL_012",
-                                floor: "Relief10",
-                                ceil: "Relief09",
-                                start: '[202,1]',
-                                lights: '[[110,1,"FluxLight106","standardDimmed"],[114,1,"DuaLLantern_005","standardDimmed"],[110,7,"Lamp46","standardDimmed"],[114,7,"DuaLLantern_013","standardDimmed"]]',
-                                gates: '[[217,1,"93.1","86.8","Closed"]]',
-                                keys: '[[19,0]]',
-                                entities: '[[22,7,"AssMeralda"]]',
-                            }
+                                spawnDelay: 8000,
+                                data: '{"width":"17","height":"17","map":"BB5AA6BAA7BAA17BAA21BB2ABAA3BAA2BB2AA9BAA2BB2AA2BAA6BB2AA5BAA6BAA11BAA2BAA9BB2AA4BAA6BAA9BB3AA4BB7ABABABABB13ABB3ABB3AA2BB11ABABB3ABB5ABB5AA3BAA5BABB8ABABAA2BB3AA4BB2ABB23$BA"}',
+                                wall: "RoughCave01",
+                                floor: "RoughCave03",
+                                ceil: "NightSky1",
+                                start: '[263,1]',
+                                lights: '[[173,7,"DuaLLantern_011","standardDimmed"],[183,7,"FluxLight111","standardDimmed"],[161,1,"DuaLLantern_015","standard"],[3,7,"Moon52","standard"],[13,7,"Moon54","standard"],[136,5,"Moon55","standardDimmed"],[152,3,"Moon60","standardDimmed"],[161,7,"Candelabra03","weakCandle"]]',
+                                gates: '[[280,1,"95.1","86.10","Down"]]',
+                                containers: '[[52,"Closet","INTERACTION_ITEM.WhiteFeather",5],[66,"PirateChest","INTERACTION_ITEM.GreenFeather",3]]',
+                                entities: '[[285,1,"SpaceWarrior"]]',
+                                trainers: '[[275,1,"SpaceTrainer"]]',
+                                lairs: '[[103,7,"Lair70"],[171,1,"Lair24"],[117,7,"Lair27"],[185,1,"Lair06"]]',
+                                monsterList: '["Astro","Astro","AstroRed"]',
+                                }
                         </textarea>
                     </fieldset>
                 </div>

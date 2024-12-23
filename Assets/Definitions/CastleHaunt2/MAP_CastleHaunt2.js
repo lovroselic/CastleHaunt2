@@ -109,6 +109,10 @@ const MAP_TEXT = {
     97: "Look at those bitches on the beach. Almost as hot as me.",
     98: "",
     99: "",
+    100: "",
+    101: "",
+    102: "",
+    103: "",
 };
 
 /** Map definitions */
@@ -2221,22 +2225,30 @@ const MAP = {
         monsterList: '["Dragon","SkeleDwarf","SilverSkeleton","RedSkeleton","Skeleton"]',
     }
     ,
-    93: {
+    93 : {
         name: "Esmeralda",
         sg: 0,
-        maxSpawned: 4,
+        maxSpawned: 5,
         killCountdown: 4,
-        spawnDelay: 9999,
-        data: '{"width":"15","height":"15","map":"BB2AA3BABB6AA33BABAA6BAA10BAA5BAA6BAA3BB2AA3BB2AA7BB4ABB8ABABABB6ABB9ABB2ABB19ABB16ABB2AA2BB3AA5BABB16ABB12ABB3$BB5A"}',
+        spawnDelay: 7500,
+        data: '{"width":"15","height":"15","map":"BB3AA6BB2ABAA9BAA10BAA4BAA2BAA2BABAA2BB2ABAA13BAA2BAA2BAA4BAA5BB3AA2BAA5BB2ABB3ABB3ABAA7BB4ABB3AA2BB3AA2BB4AA3BB6ABB5AA3BB6ABAA3BB2AA8BAA2BB3AA2BB10AA2BB7ABAA4BB20A$"}',
         wall: "RockWall_SDXL_012",
         floor: "Relief10",
         ceil: "Relief09",
         start: '[202,1]',
-        lights: '[[110,1,"FluxLight106","standardDimmed"],[114,1,"DuaLLantern_005","standardDimmed"],[110,7,"Lamp46","standardDimmed"],[114,7,"DuaLLantern_013","standardDimmed"]]',
-        gates: '[[217,1,"93.1","86.8","Closed"]]',
+        decals: '[[142,7,"PrincessDragonDomme_042","picture"],[35,7,"AztecChallenge_AI","picture"],[39,7,"FluxDommes2289","picture"],[47,7,"FluxDommes2223","picture"],[57,7,"GemDommes_267","picture"],[13,7,"FluxDommes2276","picture"],[1,7,"FluxDommes2184","picture"],[76,7,"Princess401","picture"],[88,7,"ForbiddenForest90","picture"],[185,1,"LastNinja111","picture"],[189,1,"GameDommes_087","picture"],[153,1,"FemDommes_4045","picture"],[161,1,"GameDommes_100","picture"],[223,1,"MassEffect1","picture"],[211,1,"FemDommes6021","picture"],[76,1,"FemDommes_4058","picture"],[88,1,"RetroGames061","picture"],[107,1,"UnusedEntities5089","picture"],[117,1,"Nature03","picture"],[195,5,"BlackBeret_133","picture"],[165,5,"PrincessAI_04","picture"],[142,5,"Pitfall88","picture"],[110,5,"FemDommes6054","picture"],[114,5,"GemDommes_226","picture"],[60,5,"NurseAlchemyMagic_046","picture"],[15,5,"GameDommes_218","picture"],[24,5,"FluxDommes2092","picture"],[77,5,"FluxDommes3137","picture"],[29,3,"RetroGames058","picture"],[74,3,"FluxDommes2098","picture"],[20,3,"Valhalla88","picture"],[110,3,"OlympicSkier6","picture"],[114,3,"AI_PIC_441","picture"],[142,3,"JetSetWilly89","picture"],[179,3,"BlackBeret_031","picture"],[209,3,"CrystalsOfZong10","picture"],[161,3,"BlackBeret_121","picture"],[87,3,"GemDommes_052","picture"],[153,5,"GameDommes_128","picture"]]',
+        lights: '[[110,1,"FluxLight106","dim"],[114,1,"DuaLLantern_005","dim"],[110,7,"Lamp46","dim"],[114,7,"DuaLLantern_013","dim"],[186,1,"DuaLLantern_018","dim"],[33,7,"Candelabra09","standardDimmed"],[41,7,"FluxLight117","standardDimmed"],[90,5,"DuaLLantern_005","standard"],[104,3,"DuaLLantern_018","standard"],[188,1,"DuaLLantern_019","dim"],[142,1,"Lamp41","standard"]]',
+        gates: '[[217,1,"93.1","86.8","Closed"],[200,3,"93.2","101.1","Down"],[204,5,"93.3","101.2","Down"]]',
         keys: '[[19,0]]',
+        gold: '[[31,"GoldBar"],[79,"GoldBar"],[28,"GoldBar"],[118,"GoldBar"],[67,"GoldBar"],[92,"GoldBar"],[146,"GoldBar"],[136,"GoldBar"]]',
+        skills: '[[196,"Attack"],[207,"Attack"]]',
+        containers: '[[25,"LongBox","INTERACTION_ITEM.Hazelnuts",5],[177,"IronChest","INTERACTION_ITEM.RedFeather",7],[109,"Wardrobe","GOLD_ITEM_TYPE.GoldBar",3],[115,"FragileCrate","GOLD_ITEM_TYPE.GoldBar",5],[51,"Crate","GOLD_ITEM_TYPE.SilverBar",7],[53,"Crate","GOLD_ITEM_TYPE.SilverBar",7],[154,"Barrel","GOLD_ITEM_TYPE.GoldBar",1],[17,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[56,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[151,"Barrel","GOLD_ITEM_TYPE.GoldBar",5],[61,"Barrel2","GOLD_ITEM_TYPE.GoldBar",5],[174,"Barell3","GOLD_ITEM_TYPE.GoldBar",1]]',
         entities: '[[22,7,"AssMeralda"]]',
-    }
+        objects: '[[112,"Pear"],[167,"GoldCoin"],[95,"Cake"],[129,"Cake"],[198,"BeerHealth"]]',
+        movables: '[[82,"RoastChicken"]]',
+        lairs: '[[168,3,"Lair53"],[176,5,"Lair58"]]',
+        monsterList: '["Dragon","SkeleDwarf","BlueSkeleton","SilverSkeleton","RedSkeleton"]',
+        }
     ,
     94: {
         name: "Show Me Your Jewels",
@@ -2265,22 +2277,25 @@ const MAP = {
         monsterList: '["Dragon","SkeleDwarf","SilverSkeleton"]',
     }
     ,
-    95: {
+    95 : {
         name: "Babes In Space",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 4,
-        spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB3AA3BAA7BB6AA12BAA36BAA10BAA16BB2AA26BABB2AA9BB13ABB8ABB16ABB9AA3BB14AA2BB10ABABAA5BABB2ABB24ABB34$"}',
+        spawnDelay: 8000,
+        data: '{"width":"17","height":"17","map":"BB5AA6BAA7BAA17BAA21BB2ABAA3BAA2BB2AA9BAA2BB2AA2BAA6BB2AA5BAA6BAA11BAA2BAA9BB2AA4BAA6BAA9BB3AA4BB7ABABABABB13ABB3ABB3AA2BB11ABABB3ABB5ABB5AA3BAA5BABB8ABABAA2BB3AA4BB2ABB23$BA"}',
         wall: "RoughCave01",
         floor: "RoughCave03",
         ceil: "NightSky1",
         start: '[263,1]',
-        lights: '[[173,7,"DuaLLantern_011","standardDimmed"],[183,7,"FluxLight111","standardDimmed"],[161,1,"DuaLLantern_015","standard"]]',
+        lights: '[[173,7,"DuaLLantern_011","standardDimmed"],[183,7,"FluxLight111","standardDimmed"],[161,1,"DuaLLantern_015","standard"],[3,7,"Moon52","standard"],[13,7,"Moon54","standard"],[136,5,"Moon55","standardDimmed"],[152,3,"Moon60","standardDimmed"],[161,7,"Candelabra03","weakCandle"]]',
         gates: '[[280,1,"95.1","86.10","Down"]]',
+        containers: '[[52,"Closet","INTERACTION_ITEM.WhiteFeather",5],[66,"PirateChest","INTERACTION_ITEM.GreenFeather",3]]',
         entities: '[[285,1,"SpaceWarrior"]]',
         trainers: '[[275,1,"SpaceTrainer"]]',
-    }
+        lairs: '[[103,7,"Lair70"],[171,1,"Lair24"],[117,7,"Lair27"],[185,1,"Lair06"]]',
+        monsterList: '["Astro","Astro","AstroRed"]',
+        }
     ,
     96: {
         name: "Rocket Science",
@@ -2359,7 +2374,7 @@ const MAP = {
         monsterList: '["SilverSkeleton","RedSkeleton","Skeleton","SkeleDwarf","SkeleDwarf"]',
     }
     ,
-    99 : {
+    99: {
         name: "Allowed Forest",
         sg: 0,
         maxSpawned: 4,
@@ -2381,7 +2396,7 @@ const MAP = {
         trainers: '[[217,1,"CuddlyBear"]]',
         lairs: '[[198,3,"Lair30"],[206,5,"Lair18"]]',
         monsterList: '["BlueSkeleton","GreenWolf","SilverSkeleton","RedSkeleton","Skeleton","Wolf","GreenWolf"]',
-        }
+    }
     ,
     100: {
         name: "Merplace",
@@ -2407,4 +2422,28 @@ const MAP = {
         lairs: '[[11,7,"Lair07"],[161,1,"Lair41"]]',
         monsterList: '["SkeleDwarf","SilverSkeleton","RedSkeleton"]',
     }
+    ,
+    101 : {
+        name: "Lost Angels",
+        sg: 0,
+        maxSpawned: 5,
+        killCountdown: 4,
+        spawnDelay: 8000,
+        data: '{"width":"19","height":"19","map":"BB2ABAA3BB2AA2BB3AA9BAA13BAA8BAA3BAA29BB2AA4BAA2BAA2BAA5BAA3BAA17BAA4BABABB2AA4BAA8BB2AA17BB3AA4BB4AA3BB4AA3BAA3BB2AA5BB4AA2BAA2BAA2BAA2BB4AA2BB4ABABAA2BB3ABB10ABB2AA4BB3AA2BB2ABABB4ABB4ABB4ABB2ABB2AA6BB2AA2BABB10AA2BAA2BB2AA5BB5AA4BB3ABABB2AA2BABB28$A"}',
+        wall: "RockWall_SDXL_019",
+        floor: "Relief08",
+        ceil: "IntricateCeiling3",
+        start: '[330,5]',
+        lights: '[[275,7,"Lights108","standard"],[215,7,"DuaLLantern_012","standard"],[221,7,"DuaLLantern_020","standard"],[123,1,"WallLamp19","standard"],[156,1,"Lamp40","standard"],[166,1,"DuaLLantern_012","standard"],[173,5,"DuaLLantern_028","standard"],[187,3,"Lamp46","standard"],[191,7,"Lamp47","standard"],[207,7,"DuaLLantern_022","standard"],[275,1,"Lamp48","standard"],[123,7,"DuaLLantern_001","standard"]]',
+        gates: '[[329,5,"101.1","93.2","Up"],[335,3,"101.2","93.3","Up"],[7,7,"101.3","102.1","Pearl"],[11,7,"101.3","103.1","Purple"]]',
+        containers: '[[34,"TreasureChest","INTERACTION_ITEM.Acorn",5]]',
+        entities: '[[344,1,"WhiteAngel"],[358,1,"BlackAngel"]]',
+        objects: '[[22,"GreenApple"]]',
+        lairs: '[[28,7,"Lair77"],[172,1,"Lair65"],[188,1,"Lair63"]]',
+        monsterList: '["Dragon","SkeleDwarf","GreenWolf","BlueSkeleton","SilverSkeleton","RedSkeleton"]',
+        }
+    ,
+    102: {}
+    ,
+    103: {}
 };
