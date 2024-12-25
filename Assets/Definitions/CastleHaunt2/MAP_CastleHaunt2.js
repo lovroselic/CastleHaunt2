@@ -2157,21 +2157,24 @@ const MAP = {
         monsterList: '["SkeleDwarf"]',
     }
     ,
-    90: {
+    90 : {
         name: "Key Engineering",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB3AA2BB2AA4BAA9BB3ABAA9BB2AA6BB2AA7BAA30BB10AA2BB21ABB3AA4BB7ABABB2AA3BABB83A$"}',
+        maxSpawned: 5,
+        killCountdown: 4,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB3AA10BB3AA7BB2AA2BB3ABAA13BB2AA5BABAA4BAA30BABB5AA2BB7AA2BB3AA2BB7ABABB15ABB15ABB2AA2BAA3BB5AA2BB3ABAA2BB4AA2BB2ABB3ABABB8AA2BB22$A"}',
         wall: "DarkBricks108",
         floor: "RockWall101",
         ceil: "BrownWall40",
         start: '[106,5]',
-        lights: '[[91,5,"Lamp52","standard"],[121,5,"Lamp52","standard"]]',
+        lights: '[[91,5,"Lamp52","standard"],[121,5,"Lamp52","standard"],[17,7,"FluxLight120","standard"],[26,7,"FluxLight111","standard"],[206,1,"DuaLLantern_017","standard"],[197,1,"DuaLLantern_006","standard"]]',
         gates: '[[105,5,"90.1","86.5","Closed"]]',
+        containers: '[[61,"TreasureChest","INTERACTION_ITEM.WhiteFeather",5],[163,"PirateChest","INTERACTION_ITEM.BlueFeather",1]]',
         entities: '[[113,3,"EngineerDomme"]]',
-    }
+        lairs: '[[4,7,"Lair77"],[9,7,"Lair82"],[214,1,"Lair58"],[219,1,"Lair26"]]',
+        monsterList: '["Dragon","GreenSkeleton","BlueSkeleton"]',
+        }
     ,
     91: {
         name: "Metal Rulz",
@@ -2225,7 +2228,7 @@ const MAP = {
         monsterList: '["Dragon","SkeleDwarf","SilverSkeleton","RedSkeleton","Skeleton"]',
     }
     ,
-    93 : {
+    93: {
         name: "Esmeralda",
         sg: 0,
         maxSpawned: 5,
@@ -2248,7 +2251,7 @@ const MAP = {
         movables: '[[82,"RoastChicken"]]',
         lairs: '[[168,3,"Lair53"],[176,5,"Lair58"]]',
         monsterList: '["Dragon","SkeleDwarf","BlueSkeleton","SilverSkeleton","RedSkeleton"]',
-        }
+    }
     ,
     94: {
         name: "Show Me Your Jewels",
@@ -2277,7 +2280,7 @@ const MAP = {
         monsterList: '["Dragon","SkeleDwarf","SilverSkeleton"]',
     }
     ,
-    95 : {
+    95: {
         name: "Babes In Space",
         sg: 0,
         maxSpawned: 4,
@@ -2288,14 +2291,19 @@ const MAP = {
         floor: "RoughCave03",
         ceil: "NightSky1",
         start: '[263,1]',
+        decals: '[[110,7,"Skull408","crest"],[58,1,"Skull320","crest"],[60,1,"Skull309","crest"],[92,7,"FemaleWarrior107","picture"],[94,7,"Princess408","picture"],[56,7,"Zaxxon3","picture"],[62,7,"CastleLady102","picture"],[38,7,"GameDommes_025","picture"],[46,7,"SumerGames60","picture"],[14,7,"FluxDommes2137","picture"],[2,7,"GameDommes_130","picture"],[172,7,"MatchPoint2","picture"],[184,7,"GameDommes_054","picture"],[133,7,"BlackBeret_008","picture"],[121,7,"FluxDommes3054","picture"],[244,1,"GemDommes_284","picture"],[248,1,"WizardOfWor89","picture"],[173,1,"LeisureSuitLarry93","picture"],[183,1,"Domme239","picture"],[253,1,"AI_PIC_459","picture"],[239,1,"PrincessAI_11","picture"],[38,1,"GameScreen2019","picture"],[46,1,"UnusedEntities2096","picture"],[116,1,"FemDommes_4201","picture"],[104,1,"Maze","picture"],[262,1,"GameDommes_342","picture"],[264,1,"SP4","picture"],[17,5,"MissileCommand","picture"],[51,5,"GemDommes_307","picture"],[161,5,"FluxDommes2319","picture"],[155,5,"LSL400","picture"],[204,5,"GemDommes_026","picture"],[78,5,"PrincessDragonDomme_063","picture"],[46,5,"FluxDommes2039","picture"],[38,3,"GemDommes_107","picture"],[92,3,"Fred101","picture"],[167,3,"UnusedEdtitiesFramed_042","picture"],[220,3,"ShinyBlackRuberella18","picture"],[183,3,"FemDommes6030","picture"],[161,3,"Arena200","picture"]]',
         lights: '[[173,7,"DuaLLantern_011","standardDimmed"],[183,7,"FluxLight111","standardDimmed"],[161,1,"DuaLLantern_015","standard"],[3,7,"Moon52","standard"],[13,7,"Moon54","standard"],[136,5,"Moon55","standardDimmed"],[152,3,"Moon60","standardDimmed"],[161,7,"Candelabra03","weakCandle"]]',
         gates: '[[280,1,"95.1","86.10","Down"]]',
-        containers: '[[52,"Closet","INTERACTION_ITEM.WhiteFeather",5],[66,"PirateChest","INTERACTION_ITEM.GreenFeather",3]]',
+        gold: '[[54,"GoldBar"],[137,"GoldBar"],[198,"GoldBar"],[224,"GoldBar"],[29,"GoldBar"],[81,"GoldBar"],[134,"SilverBar"],[21,"SilverBar"],[178,"SilverBar"],[125,"SilverBar"]]',
+        skills: '[[18,"Attack"],[32,"Attack"]]',
+        containers: '[[52,"Closet","INTERACTION_ITEM.WhiteFeather",5],[66,"PirateChest","INTERACTION_ITEM.GreenFeather",3],[73,"FragileCrate","GOLD_ITEM_TYPE.GoldBar",7],[95,"Chest","GOLD_ITEM_TYPE.SilverBar",7],[189,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[219,"Crate2","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[285,1,"SpaceWarrior"]]',
+        oracles: '[[76,1,"ApparitiaGalactic"]]',
+        movables: '[[25,"RoastPig"],[87,"RoastChicken"]]',
         trainers: '[[275,1,"SpaceTrainer"]]',
         lairs: '[[103,7,"Lair70"],[171,1,"Lair24"],[117,7,"Lair27"],[185,1,"Lair06"]]',
         monsterList: '["Astro","Astro","AstroRed"]',
-        }
+    }
     ,
     96: {
         name: "Rocket Science",
@@ -2423,7 +2431,7 @@ const MAP = {
         monsterList: '["SkeleDwarf","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    101 : {
+    101: {
         name: "Lost Angels",
         sg: 0,
         maxSpawned: 5,
@@ -2439,9 +2447,10 @@ const MAP = {
         containers: '[[34,"TreasureChest","INTERACTION_ITEM.Acorn",5]]',
         entities: '[[344,1,"WhiteAngel"],[358,1,"BlackAngel"]]',
         objects: '[[22,"GreenApple"]]',
+        oracles: '[[24,7,"ApparitiaAngelDemon"]]',
         lairs: '[[28,7,"Lair77"],[172,1,"Lair65"],[188,1,"Lair63"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenWolf","BlueSkeleton","SilverSkeleton","RedSkeleton"]',
-        }
+    }
     ,
     102: {}
     ,

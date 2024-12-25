@@ -126,10 +126,10 @@ const DEBUG = {
             DONE "GreenApple" <--101
             DONE "WhiteFeather", <-- 99
             DONE "WhiteFeather", <<--- 95
-        "WhiteFeather",
+            DONE "WhiteFeather",<-- 90
             DONE "RedFeather",<--93
             DONE "GreenFeather", <--95
-        "BlueFeather",
+            DONE "BlueFeather",<--90
 
         * coins sources (7x, missing 0x = 7):
             floor - 86;
@@ -145,7 +145,7 @@ const DEBUG = {
         *
         * COINS used (7x):
                 $$$$$* TransparentTibetan magic 5x 
-            * Space trainer - attack 5x  
+                $$$$$* * Space trainer - attack 5x  
             * Swimmer attack 3x
                 $$$$$ * cuddly bear attack 5x
                 $$$$$* * ApparitiaMagix magic 5x
@@ -174,9 +174,9 @@ const DEBUG = {
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
         //86-->96-->86-->89-->99 -->91-->94-->86-->93-->86
-        GAME.level = 95; //101; 86->95
+        GAME.level = 90; //101; 86->95-->86-->90
 
-        GAME.gold = 3195;
+        GAME.gold = 4120;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -186,24 +186,24 @@ const DEBUG = {
         HERO.orbs = 5;
         HERO.orbsLost = 0;
         HERO.magic = 56;
-        HERO.attack = 47;
+        HERO.attack = 54;
 
-        HERO.health = 368;
+        HERO.health = 288;
         HERO.maxHealth = 368;
 
 
         let actItems = [
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Cake,
+            //INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Steak,
+            //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
@@ -214,6 +214,8 @@ const DEBUG = {
 
             //INTERACTION_OBJECT.Champagne,
             //MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
@@ -237,7 +239,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "RocketTop", "Emerald", "Document", "PinkDiamond", "Walnut", "Apple", "WhiteFeather", "KeyMould", "Emerald", "GoldCoin", "Pear", "RedFeather", "Hazelnuts"
+            "RocketTop", "Emerald", "Document", "PinkDiamond", "Walnut", "Apple", "WhiteFeather", "KeyMould", "Emerald", "Pear", "RedFeather", "Hazelnuts", "WhiteFeather", "GreenFeather"
             //debug
 
         ];
@@ -283,7 +285,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.12",
+    VERSION: "0.16.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -784,13 +786,13 @@ const HERO = {
     },
     death() {
         console.error("HERO DEATH");
+        MISSILE3D.POOL.clear();
         AUDIO.PrincessScream.play();
         GAME.lives--;
         TITLE.lives();
         HERO.player.pos.set_y(0.1);
         GAME.setFirstPerson();
         if (GAME.lives <= 0) return HERO.finalDeath();
-
 
         const grid = Vector3.toGrid(HERO.player.pos);
         const face = DirectionToFace(NOWAY);
@@ -800,9 +802,7 @@ const HERO = {
 
         HERO.ressurection = true;
         GAME.STORE.storeIAM(MAP[GAME.level].map);
-
-        console.info("dave IAM", MAP[GAME.level].map.store);
-
+        //console.info("save IAM", MAP[GAME.level].map.store);
         ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
         ENGINE.GAME.ANIMATION.resetTimer();
         ENGINE.GAME.ANIMATION.next(GAME.lifeLostRun);

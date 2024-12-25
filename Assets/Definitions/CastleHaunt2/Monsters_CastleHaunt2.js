@@ -1344,6 +1344,14 @@ const ORACLE_TYPE = {
         text: "You thought that I am an agel undercover? No, I'm just a bitch, here to fuck you.",
         interactionCategory: "oracle",
     },
+    ApparitiaGalactic: {
+        name: "ApparitiaGalactic",
+        sprite: "ApparitiaGalactic",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We come from all the parts of galaxy. You are doomed, Princess.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2202,6 +2210,31 @@ const MONSTER_TYPE = {
         behaviourArguments: [17, ["wanderer"], 15, ["shoot"]],
         moveSpeed: 1.35,
         shootDistance: 15,
+        stalkDistance: 10,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.standard,
+    },
+    GreenSkeleton: {
+        name: "GreenSkeleton",
+        texture: "GreenMetal",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        mana: 25,
+        health: 125,
+        attack: 150,
+        magic: 20,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [20, ["wanderer"], 17, ["shoot"]],
+        moveSpeed: 1.40,
+        shootDistance: 17,
         stalkDistance: 10,
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
@@ -3690,7 +3723,7 @@ const INTERACTION_ITEM = {
         name: "GreenFeather",
         category: "interaction_item",
         inventorySprite: "GreenFeather",
-        text: "A feather. Gree."
+        text: "A feather. Green."
     },
     BlueFeather: {
         name: "BlueFeather",
