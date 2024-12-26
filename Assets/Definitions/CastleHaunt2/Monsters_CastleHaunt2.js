@@ -28,6 +28,19 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    BlondeDomme1: {
+        name: "BlondeDomme1",
+        sprite: "BlondeDomme1",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 999,
+        level: 1,
+        text: "Course in magical deception. Only 999 gold.",
+        introduce: true,
+        voice: "Female",
+    },
     ShesellsSeaShells: {
         name: "ShesellsSeaShells",
         sprite: "ShesellsSeaShells",
@@ -325,6 +338,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    RecliningDomme: {
+        name: "RecliningDomme",
+        sprite: "RecliningDomme",
+        category: 'crest',
+        voice: "Female",
+        text: "Killing a crippled monster which cannot cast poisonous bounce balls is a very stupid strategy. ",
+        interactionCategory: "oracle",
+    },
     RedMermaid: {
         name: "RedMermaid",
         sprite: "RedMermaid",
@@ -1350,6 +1371,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We come from all the parts of galaxy. You are doomed, Princess.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaEngineer: {
+        name: "ApparitiaEngineer",
+        sprite: "ApparitiaEngineer",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "We are breeding new class of colorful skeletons for a war against you. Aren't they pretty? And deadly?",
         interactionCategory: "oracle",
     },
 };
@@ -3747,7 +3776,7 @@ const INTERACTION_ENTITY = {
             conclusion: "My wings are now a fashion statement! Here's the Purple Key. May it unlock a world of sinful pleasures."
         }
     },
-    
+
     WhiteAngel: {
         name: "WhiteAngel",
         sprite: "WhiteAngel",
@@ -3961,10 +3990,10 @@ const INTERACTION_ENTITY = {
         sprite: "EngineerDomme",
         category: 'crest',
         voice: "FemaleLow",
-        wants: ["KeyMould", "EmeraldIngots"],
+        wants: ["KeyMould", "EmeraldIngots", "Document"],
         gives: "EmeraldKey",
         text: {
-            intro: "I can craft you an Emerald Key, but I'll need the proper tools and materials. Bring me a key mould and some emerald ingots, and I'll work my magic.",
+            intro: "I can craft you an Emerald Key, but I'll need the proper tools and materials. Bring me a key mould and some emerald ingots, and instructions, and I'll work my magic.",
             progress: "I've got part of what I need, but I can't make the key without everything. Keep going!",
             conclusion: "Perfect! With these materials, your Emerald Key is ready. Treasure it. It's a work of art. like me!"
         }

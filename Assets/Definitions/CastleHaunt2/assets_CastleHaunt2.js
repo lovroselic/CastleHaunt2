@@ -1031,10 +1031,10 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaPolka.jpg", name: "ApparitiaPolka" },
     { srcName: "EntityPictures/ApparitiaSaboteur.jpg", name: "ApparitiaSaboteur" },
     { srcName: "EntityPictures/ApparitiaMagic.jpg", name: "ApparitiaMagic" },
-
-    //unused!!!
     { srcName: "EntityPictures/ApparitiaAngelDemon.jpg", name: "ApparitiaAngelDemon" },
     { srcName: "EntityPictures/ApparitiaGalactic.jpg", name: "ApparitiaGalactic" },
+    { srcName: "EntityPictures/ApparitiaEngineer.jpg", name: "ApparitiaEngineer" },
+
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1239,6 +1239,8 @@ LoadSprites = [
     { srcName: "EntityPictures/HedgeHog3.jpg", name: "ForestHedgeHog" },
     { srcName: "EntityPictures/WhiteAngel.jpg", name: "WhiteAngel" },
     { srcName: "EntityPictures/BlackAngel.jpg", name: "BlackAngel" },
+    { srcName: "EntityPictures/BlondeDomme1.jpg", name: "BlondeDomme1" },
+    { srcName: "EntityPictures/RecliningDomme.jpg", name: "RecliningDomme" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

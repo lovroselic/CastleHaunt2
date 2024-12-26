@@ -173,10 +173,10 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
-        //86-->96-->86-->89-->99 -->91-->94-->86-->93-->86
-        GAME.level = 90; //101; 86->95-->86-->90
+        //86-->96-->86-->89-->99 -->91-->94-->86-->93-->86-->90-->101-->96-->99-->97-->96-->95-->94-->92-->93-->90-->101
+        GAME.level = 101;
 
-        GAME.gold = 4120;
+        GAME.gold = 4001;
         GAME.lives = 4;
 
         HERO.hasCapacity = true;
@@ -185,10 +185,10 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 56;
-        HERO.attack = 54;
+        HERO.magic = 57;
+        HERO.attack = 59;
 
-        HERO.health = 288;
+        HERO.health = 331;
         HERO.maxHealth = 368;
 
 
@@ -205,7 +205,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -214,8 +214,8 @@ const DEBUG = {
 
             //INTERACTION_OBJECT.Champagne,
             //MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            //MOVABLE_INTERACTION_OBJECT.RoastPig,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
@@ -225,7 +225,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "DestroyOrbs", "Cripple", "Cripple", "MagicSupremacy", "MagicSupremacy",
+            "DestroyOrbs", "Cripple", "MagicSupremacy",
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -239,7 +239,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "RocketTop", "Emerald", "Document", "PinkDiamond", "Walnut", "Apple", "WhiteFeather", "KeyMould", "Emerald", "Pear", "RedFeather", "Hazelnuts", "WhiteFeather", "GreenFeather"
+
             //debug
 
         ];
@@ -249,7 +249,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Gold"
+            "Purple", "Pearl", "Emerald"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -285,7 +285,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.16.13",
+    VERSION: "0.17.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
