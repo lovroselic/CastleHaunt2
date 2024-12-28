@@ -377,6 +377,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    NylonDomme: {
+        name: "NylonDomme",
+        sprite: "NylonDomme",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "Are you sure you are ready to face Hauntessa Spookish? Are you trained enough?",
+        interactionCategory: "oracle",
+    },
+    FishnetDomme: {
+        name: "FishnetDomme",
+        sprite: "FishnetDomme",
+        category: 'crest',
+        voice: "FemaleLow2",
+        text: "After you enter the crypt, you will not be able to save the game until Hauntessa Spookish is defeated.",
+        interactionCategory: "oracle",
+    },
     BlondeCutie: {
         name: "BlondeCutie",
         sprite: "BlondeCutie",
@@ -1458,6 +1474,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "You found this place. Obviously you are not so hopeless as we thought.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaBlood: {
+        name: "ApparitiaBlood",
+        sprite: "ApparitiaBlood",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Still following the trail of blood, Princess? Soon yours will be spilt. Muhahahaha.",
         interactionCategory: "oracle",
     },
 };

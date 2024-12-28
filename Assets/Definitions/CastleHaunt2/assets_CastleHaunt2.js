@@ -1036,6 +1036,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaEngineer.jpg", name: "ApparitiaEngineer" },
     { srcName: "EntityPictures/ApparitiaDropDead.jpg", name: "ApparitiaDropDead" },
     { srcName: "EntityPictures/ApparitiaHopeless.jpg", name: "ApparitiaHopeless" },
+    { srcName: "EntityPictures/ApparitiaBlood.jpg", name: "ApparitiaBlood" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1248,7 +1249,8 @@ LoadSprites = [
     { srcName: "EntityPictures/BlondeCutie.jpg", name: "BlondeCutie" },
     { srcName: "EntityPictures/PurpleCorset.jpg", name: "PurpleCorset" },
     { srcName: "EntityPictures/WhiteSorceress.jpg", name: "WhiteSorceress" },
-
+    { srcName: "EntityPictures/FishnetDomme.jpg", name: "FishnetDomme" },
+    { srcName: "EntityPictures/NylonDomme.jpg", name: "NylonDomme" },
     
     //{ srcName: "EntityPictures/SpartaKiss.jpg", name: "SpartaKiss" },
 

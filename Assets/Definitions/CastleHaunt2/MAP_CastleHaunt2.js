@@ -2105,19 +2105,23 @@ const MAP = {
         monsterList: '["Skeleton","RedSkeleton"]',
     }
     ,
-    87 : {
+    87: {
         name: "Emerald Exit",
         sg: 0,
         maxSpawned: -1,
         killCountdown: -1,
         spawnDelay: -1,
-        data: '{"width":"13","height":"13","map":"BB2ABB2AA3BB4AA42BB27ABB5ABB3ABB2AA2BABB70A$"}',
+        data: '{"width":"13","height":"13","map":"BB2ABABAA5BABAA9BABAA27BABB25ABABB17ABABB13ABABB14ABABB6ABB12ABB13$"}',
         wall: "RockWall_SDXL_016",
         floor: "IrregularTiledFloorCeil08",
         ceil: "Cracked04",
         start: '[89,3]',
-        gates: '[[90,3,"87.1","86.2","Closed"]]',
-        }
+        decals: '[[88,4,"PuddleDecal08","crest"],[80,4,"PuddleDecal08","crest"],[84,4,"PuddleDecal03","crest"],[82,4,"PuddleDecal08","crest"],[86,4,"PuddleDecal08","crest"],[66,5,"GameDommes_094","picture"],[92,5,"AI_pic203","picture"],[42,5,"PrincessDragonDomme_077","picture"],[120,5,"FemDommes_4171","picture"],[30,7,"FluxDommes3107","picture"],[34,7,"Wolfenstein50","picture"],[135,1,"Apparitias_027","picture"],[137,1,"GameDommes_101","picture"],[48,3,"Various6031","picture"],[126,3,"ImpossibleMsission111","picture"],[162,1,"FluxDommes2242","picture"]]',
+        lights: '[[62,3,"FluxLight113","standard"],[114,3,"DuaLLantern_020","standard"],[76,3,"DuaLLantern_016","standardDimmed"],[102,3,"DuaLLantern_015","standardDimmed"]]',
+        gates: '[[90,3,"87.1","86.2","Closed"],[78,5,"87.2","104.1","Down"]]',
+        skills: '[[149,"Attack"]]',
+        oracles: '[[19,7,"ApparitiaBlood"]]',
+    }
     ,
     88: {
         name: "Dragoness Lair",
@@ -2521,5 +2525,39 @@ const MAP = {
         movables: '[[182,"Life"],[181,"RoastPig"]]',
         lairs: '[[9,7,"Lair20"],[189,3,"Lair72"],[351,1,"Lair60"]]',
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
+    }
+    ,
+    104 : {
+        name: "Crypt Entrance",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"23","height":"25","map":"BB9AA3BABAA95BAA9BB4AA9BB2AA8BAA8BABAA3BB3AA2BB4AA15BB2AA4BB2AA2EAA11BAA23BB5AA7BB2AA21BB3AA43BB3AA2BB2AA3BB2AA7BAA2BAA20BAA4BAA2BB2AA4BB11AA2BB3AA2BAA2BB11AA5BB11AA2BB2AA2BB13ABB4AA2BB8AA3BB2AA2BB19AA6BB3ABB13AA4BAA3BB2AA3BB4AA2BB7AA5BAA7BB36AB$A"}',
+        wall: "RockWall_SDXL_016",
+        floor: "IrregularTiledFloorCeil08",
+        ceil: "Cracked04",
+        start: '[297,3]',
+        decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"]]',
+        lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
+        gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"]]',
+        doors: '[288]',
+        oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
+        lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
+        monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
+        }
+    ,
+    105: {
+        name: "Meet Hauntessa Spookish",
+        sg: 1,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"32","height":"32","map":"BB22AA105BB3AA24BB2AA365BAA19BAA26BABB2AA95BB27AA2BB32ABB27AA2BB56AA25BB184A$"}',
+        wall: "RockWall_SDXL_016",
+        floor: "IrregularTiledFloorCeil08",
+        ceil: "Cracked04",
+        start: '[534,3]',
+        gates: '[[535,3,"105.1","104.2","Up"]]',
     }
 };

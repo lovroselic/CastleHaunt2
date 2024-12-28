@@ -77,7 +77,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 87; 
+        GAME.level = 104; 
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -157,7 +157,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Emerald"
+            
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -189,11 +189,11 @@ const INI = {
     HEALTH_INC: 8,
     SCROLL_RANGE: 15,
     CRIPPLE_SPEED: 0.1,
-    INVISIBILITY_TIME: 59,
+    INVISIBILITY_TIME: 60,
 };
 
 const PRG = {
-    VERSION: "0.18.00",
+    VERSION: "0.18.01",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
