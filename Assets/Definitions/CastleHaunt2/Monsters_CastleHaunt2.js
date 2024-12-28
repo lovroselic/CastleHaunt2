@@ -28,6 +28,45 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    WhiteSorceress: {
+        name: "WhiteSorceress",
+        sprite: "WhiteSorceress",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 2999,
+        level: 5,
+        text: "Extensive training in Apparitias magic weaknesses, only 2999 gold. Yes, it is expensive but it is for your survival. Death is cheap.",
+        introduce: true,
+        voice: "FemaleLow2",
+    },
+    WolverineTrain: {
+        name: "WolverineTrain",
+        sprite: "WolverineTrain",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 999,
+        level: 2,
+        text: "Clawing your way up the ladder. Nice price.",
+        introduce: true,
+        voice: "FemaleLow",
+    },
+    PurpleCorset: {
+        name: "PurpleCorset",
+        sprite: "PurpleCorset",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 999,
+        level: 2,
+        text: "Secrets of the heart for absurdly low price.",
+        introduce: true,
+        voice: "Female2",
+    },
     BlondeDomme1: {
         name: "BlondeDomme1",
         sprite: "BlondeDomme1",
@@ -338,6 +377,30 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    BlondeCutie: {
+        name: "BlondeCutie",
+        sprite: "BlondeCutie",
+        category: 'crest',
+        voice: "FemaleLow2",
+        text: "Boss monsters are immune to some powerful scrolls. The warrant more personal engagement.",
+        interactionCategory: "oracle",
+    },
+    ChastityDomme: {
+        name: "ChastityDomme",
+        sprite: "ChastityDomme",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "Be careful when fighting with bosses and using scrolls. Bosses are called bosses for a reason.",
+        interactionCategory: "oracle",
+    },
+    BlondeDomme2: {
+        name: "BlondeDomme2",
+        sprite: "BlondeDomme2",
+        category: 'crest',
+        voice: "Female2",
+        text: "Explore to get more or run without fun?",
+        interactionCategory: "oracle",
+    },
     RecliningDomme: {
         name: "RecliningDomme",
         sprite: "RecliningDomme",
@@ -1379,6 +1442,22 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "We are breeding new class of colorful skeletons for a war against you. Aren't they pretty? And deadly?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaDropDead: {
+        name: "ApparitiaDropDead",
+        sprite: "ApparitiaDropDead",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Why don't you just drop dead. You are too relentless. We though we would have won by now. You probably want Lovro to make another game about you, you sleek bitch?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaHopeless: {
+        name: "ApparitiaHopeless",
+        sprite: "ApparitiaHopeless",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "You found this place. Obviously you are not so hopeless as we thought.",
         interactionCategory: "oracle",
     },
 };

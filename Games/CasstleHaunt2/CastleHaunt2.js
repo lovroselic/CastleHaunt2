@@ -50,134 +50,37 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area 5:
+        /** main area 6:
             
-            DONE * EngineerDomme wants: EmeraldIngots, Key mould :: makes -> Emerald key:
-                $$$$$$$$ DONE * Metallica  wants . metal records (LP 5x) gives --> "KeyMould"
-                $$$$$$$$ DONE * Dragoness wans babies(5x) gives --> EmeraldSteel procedure
-                $$$$$$$$ DONE * MetalGuitarist wants guitarpicks (3) gives --> 1LP
-            DONE AssMeralda wants : Emerald", "Emerald", "Emerald" gives --> EmeraldIngots
-                $$$$$$$$ DONE RubyErella wants Ruby 3x gives Emerald
-                $$$$$$$$ DONE SassyPhire wants Sapphire 3x gives Emerald
-            DONE Sparklyssa wants PinkDiamond 2x gives Emerald
-            DONE SpaceWarrior wants PocketRocket 1x gives PinkDiamond
-            DONE RocketScientist wants RocketTop, RocketBottom gives PocketRocket
-                $$$$$$$$ DONE BeachGirl wants Shell 2x gives Sapphire
-                $$$$$$$$ DONE Mermaid wants RedFishTail, RedLatexBra gives PinkDiamond
-                $$$$$$$$ ONE PinkPianoGirl wants : "PinkLatexGloves", "PinkBoots" gives LP
-                $$$$$$$$ DONE SpiderMom wants BabyGreenSpider 3x, gives ruby
-                $$$$$$$$ DONE Wolferine wants: "LittlePiggy","LittlePiggy","LittlePiggy" gives "PinkLatexGloves"
-                $$$$$$$$ DONE WaterNymph wants 'TropicalFish', "Fish" gives Sapphire"
-            DONE ForestHedgeHog: wants "Apple", "Pear","GreenApple" gives RocketBottom 
-            DONE WhiteAngel wants "WhiteFeather", "WhiteFeather", "WhiteFeather" gives PearlKey
-            DONE BlackAngels wants "RedFeather", "GreenFeather", "BlueFeather" gives PurpleKey
         * 
         * 
         * 
-            DONE * Document<- Dragoness
-            DONE* BabyDragon <- 86
-            DONE * BabyDragon <-- 88
-            DONE * BabyDragon <-- 91
-            DONE * BabyDragon <--- 97
-            DONE * BabyDragon <-- 94
-            DONE * "KeyMould", <-- Metallica
-            DONE * "EmeraldIngots" <-- Assmeralda
-            DONE * "LP", from MetalGuitarist
-            DONE* "LP",       <--98
-            DONE * "LP", <-- 91
-            DONE * "LP",   <-- PinkPianoGirl                 
-            DONE * "LP", <-- 100
-            DONE* "GuitarPick", <-- buy from Bass Player
-            DONE * "GuitarPick", 86
-            DONE  * "GuitarPick" <-- 98
-            DONE * Emerald", <-- RubyErella
-            DONE * "Emerald", <-- SassyPhire
-            DONE * "Emerald" <-- Sparklyssa
-            DONE * "Ruby", <--88
-            DONE * "Ruby", <-- SpiderMom
-            DONE * "Ruby" <- 92
-            DONE * "Sapphire",  <--BeachGirl
-            DONE * "Sapphire", < WaterNymph
-            DONE * "Sapphire" <-- 96
-            DONE * "PinkDiamond", <-- SpaceWarrior
-            DONE * "PinkDiamond" <-- Mermaid
-            DONE * "PocketRocket" <-- RocketScientist
-            DONE* RocketTop <-- 98
-            DONE * RocketBottom <-- ForestHedgeHog
-            DONE * "Shell", <-- 97
-            DONE * "Shell" <--ShesellsSeaShells
-            DONE "BabyGreenSpider", <-- 86
-            DONE "BabyGreenSpider", <-- 89
-            DONE "BabyGreenSpider", <-- 88
-            DONE RedFishTail", <-- 91
-            DONE "RedLatexBra" <-- 92
-            DONE "PinkLatexGloves", <-- Wolverine
-            DONE "PinkBoots" <--92
-            DONE "LittlePiggy", <-- 98
-            DONE "LittlePiggy", <-- 94
-            DONE "LittlePiggy" <--- 96
-            DONE 'TropicalFish', <-- 100
-            DONE "Fish" <--94
-            DONE "Acorn", <-- 101
-            DONE "Walnut", <-- 96
-            DONE "Hazelnuts" <-- 93
-            DONE "Apple",  <-- 99
-            DONE "Pear", <-- 93
-            DONE "GreenApple" <--101
-            DONE "WhiteFeather", <-- 99
-            DONE "WhiteFeather", <<--- 95
-            DONE "WhiteFeather",<-- 90
-            DONE "RedFeather",<--93
-            DONE "GreenFeather", <--95
-            DONE "BlueFeather",<--90
 
-        * coins sources (7x, missing 0x = 7):
-            floor - 86;
-            floor - 89;
-            floor - 94;
-            floor - 96
-            SquirellCoin: "Acorn", "Walnut", "Hazelnuts"
-            floor - 99  
-            floor - 93
- 
- 
+
+        * coins sources (x, missing x = ):
 
         *
-        * COINS used (7x):
-                $$$$$* TransparentTibetan magic 5x 
-                $$$$$* * Space trainer - attack 5x  
-            * Swimmer attack 3x
-                $$$$$ * cuddly bear attack 5x
-                $$$$$* * ApparitiaMagix magic 5x
-                $$$$$ * axe Babe attack 5x
-                $$$$$** SoreceressDomme magic 5x
+        * COINS used (x):
+
            
 
         
         * key not yet used:
             
          * missing placed keys: 
-                DONE * Gold key --> 93
-                DONE * Silver key --> 94
-                DONE * Red key <--88
-                DONE Green <-- 97
+
          * missing sources for: 
             * 
-        * temple of hope used:
-            * heart   
-            * magic
-            * attack
+        * temple 
 
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //86-->89-->(86)-->88-->(86)-->91-->(86)-->97-->98-->100 ----->(86 - 89)-->92-->91-->94-->100-->86
-        //86-->96-->86-->89-->99 -->91-->94-->86-->93-->86-->90-->101-->96-->99-->97-->96-->95-->94-->92-->93-->90-->101
-        GAME.level = 101;
+        GAME.level = 87; 
 
-        GAME.gold = 4001;
-        GAME.lives = 4;
+        GAME.gold = 1509;
+        GAME.lives = 5; //5
 
         HERO.hasCapacity = true;
         HERO.capacity = 5;
@@ -185,11 +88,11 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 57;
+        HERO.magic = 60;
         HERO.attack = 59;
 
-        HERO.health = 331;
-        HERO.maxHealth = 368;
+        HERO.health = 424;
+        HERO.maxHealth = 424;
 
 
         let actItems = [
@@ -205,18 +108,23 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
 
-            //INTERACTION_OBJECT.Champagne,
-            //MOVABLE_INTERACTION_OBJECT.RoastPig,
-            //MOVABLE_INTERACTION_OBJECT.RoastPig,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
@@ -225,7 +133,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "DestroyOrbs", "Cripple", "MagicSupremacy",
+            "Death", "Cripple", "MagicSupremacy","DestroyOrbs","DestroyOrbs",
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -249,7 +157,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Purple", "Pearl", "Emerald"
+            "Emerald"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -279,13 +187,13 @@ const INI = {
         RoastPig: 500,
     },
     HEALTH_INC: 8,
-    SCROLL_RANGE: 11,
+    SCROLL_RANGE: 15,
     CRIPPLE_SPEED: 0.1,
     INVISIBILITY_TIME: 59,
 };
 
 const PRG = {
-    VERSION: "0.17.00",
+    VERSION: "0.18.00",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

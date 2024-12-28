@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.02",
+  VERSION: "0.14.03",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -794,7 +794,6 @@ const GAME = {
         GAME.tileGrid();
         break;
     }
-
     if ($("input[name='grid']")[0].checked) GRID.grid();
     if ($("input[name='coord']")[0].checked) GRID.paintCoord("coord", $MAP.map, $("input[name='all_coord']")[0].checked);
     GAME.resizeGL_window();
@@ -1185,17 +1184,27 @@ const GAME = {
     $("#lair_type").val(lair).change();
   },
   randomLight() {
-    const pic = LIGHT_DECALS.chooseRandom();
+    const search_light = $('#searchLights').val().toLowerCase();
+    const filtered_light_decals = LIGHT_DECALS.filter(decal => decal.toLowerCase().includes(search_light));
+    const pic = filtered_light_decals.chooseRandom();
+    if (!pic) return;
     $("#light_decal").val(pic).change();
     ENGINE.drawToId("lightcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#light_decal")[0].value], INI.CANVAS_RESOLUTION));
   },
   randomPic() {
-    const pic = DECAL_PAINTINGS.chooseRandom();
+    const search_pic = $('#searchPics').val().toLowerCase();
+    const filtered_pics = DECAL_PAINTINGS.filter(decal => decal.toLowerCase().includes(search_pic));
+    const pic = filtered_pics.chooseRandom();
+    if (!pic) return;
     $("#picture_decal").val(pic).change();
     ENGINE.drawToId("picturecanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#picture_decal")[0].value], INI.CANVAS_RESOLUTION));
   },
   randomCrest() {
-    const pic = [...DECAL_CRESTS, ...BOTTOM_CRESTS, ...TOP_CRESTS].chooseRandom();
+    const CREST = [...DECAL_CRESTS, ...BOTTOM_CRESTS, ...TOP_CRESTS];
+    const search_crest = $('#searchDecals').val().toLowerCase();
+    const filtered_crests = CREST.filter(crest => crest.toLowerCase().includes(search_crest));
+    const pic = filtered_crests.chooseRandom();
+    if (!pic) return;
     $("#crest_decal").val(pic).change();
     ENGINE.drawToId("crestcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[$("#crest_decal")[0].value], INI.CANVAS_RESOLUTION));
   },

@@ -1034,7 +1034,8 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaAngelDemon.jpg", name: "ApparitiaAngelDemon" },
     { srcName: "EntityPictures/ApparitiaGalactic.jpg", name: "ApparitiaGalactic" },
     { srcName: "EntityPictures/ApparitiaEngineer.jpg", name: "ApparitiaEngineer" },
-
+    { srcName: "EntityPictures/ApparitiaDropDead.jpg", name: "ApparitiaDropDead" },
+    { srcName: "EntityPictures/ApparitiaHopeless.jpg", name: "ApparitiaHopeless" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1233,6 +1234,7 @@ LoadSprites = [
     { srcName: "EntityPictures/PinkPianoGirl.jpg", name: "PinkPianoGirl" },
     { srcName: "EntityPictures/TransparentTibetan.jpg", name: "TransparentTibetan" },
     { srcName: "EntityPictures/Wolverine1.jpg", name: "Wolverine" },
+    { srcName: "EntityPictures/Wolverine2.jpg", name: "WolverineTrain" },
     { srcName: "EntityPictures/WaterNymph.jpg", name: "WaterNymph" },
     { srcName: "EntityPictures/Squirrel7.jpg", name: "SquirrelCoin" },
     { srcName: "EntityPictures/SorceressDomme.jpg", name: "SorceressDomme" },
@@ -1240,7 +1242,15 @@ LoadSprites = [
     { srcName: "EntityPictures/WhiteAngel.jpg", name: "WhiteAngel" },
     { srcName: "EntityPictures/BlackAngel.jpg", name: "BlackAngel" },
     { srcName: "EntityPictures/BlondeDomme1.jpg", name: "BlondeDomme1" },
+    { srcName: "EntityPictures/BlondeDomme2.jpg", name: "BlondeDomme2" },
     { srcName: "EntityPictures/RecliningDomme.jpg", name: "RecliningDomme" },
+    { srcName: "EntityPictures/ChastityDomme.jpg", name: "ChastityDomme" },
+    { srcName: "EntityPictures/BlondeCutie.jpg", name: "BlondeCutie" },
+    { srcName: "EntityPictures/PurpleCorset.jpg", name: "PurpleCorset" },
+    { srcName: "EntityPictures/WhiteSorceress.jpg", name: "WhiteSorceress" },
+
+    
+    //{ srcName: "EntityPictures/SpartaKiss.jpg", name: "SpartaKiss" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
