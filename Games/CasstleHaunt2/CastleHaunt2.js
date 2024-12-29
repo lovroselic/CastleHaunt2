@@ -9,7 +9,7 @@
       
 TODO:
 
-    * 
+    * early oracles - defense
 
 known bugs: 
     * i don't do bugs
@@ -50,11 +50,23 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area 6:
+        /** main area LAST prepare:
             
+            DONE * FOX wants "Chicken","Chicken","Chicken" gives Health
+        ?Rat girl?
+        ?lizard?
+        SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
+
         * 
         * 
-        * 
+        * "Chicken", 
+        * "Chicken", 
+        * "Chicken"
+        * "Dagger", 
+        * "Sword", 
+        * "Spear",
+        * "BattleAxe", 
+        * "Mace"
 
 
         * coins sources (x, missing x = ):
@@ -77,7 +89,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 104; 
+        GAME.level = 104; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -149,6 +161,7 @@ const DEBUG = {
         let invItems = [
 
             //debug
+           
 
         ];
         for (let itm of invItems) {
@@ -190,10 +203,12 @@ const INI = {
     SCROLL_RANGE: 15,
     CRIPPLE_SPEED: 0.1,
     INVISIBILITY_TIME: 60,
+    DEFENSE_OFFSET: 10,
+    DEFENSE_FACTOR: 2,
 };
 
 const PRG = {
-    VERSION: "0.18.01",
+    VERSION: "0.18.02",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -728,6 +743,7 @@ const HERO = {
     raiseStat(which, level = 1) {
         console.info("raising stat", which, level);
         this[which] += level;
+        this.setDefense();
         TITLE.skills();
     },
     incExp() { },  //keep, TURN dependency
@@ -741,6 +757,11 @@ const HERO = {
     restore() {
         this.health = this.maxHealth;
         TITLE.health();
+    },
+    setDefense(){
+       
+        this.defense = Math.floor(Math.max(0, this.attack - INI.DEFENSE_OFFSET) / INI.DEFENSE_FACTOR);
+        console.log("DEFENSE", this.defense);
     },
     incStatus(type, level = 1) {
         let Type = type.capitalize();
@@ -1140,7 +1161,7 @@ const GAME = {
         HERO.player.matrixUpdate();
     },
     drawFirstFrame(level) {
-        console.log("drawing first frame");
+        if (DEBUG.VERBOSE) console.log("drawing first frame");
         TITLE.firstFrame();
         if (DEBUG._2D_display) {
             ENGINE.resizeBOX("LEVEL", MAP[level].pw, MAP[level].ph);

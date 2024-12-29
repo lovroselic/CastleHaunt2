@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104 : {
+    104: {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2540,12 +2540,14 @@ const MAP = {
         start: '[297,3]',
         decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"]]',
         lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
-        gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"]]',
+        gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"],[45,3,"104.3","106.1","Closed"],[551,3,"104.4","107.1","Closed"],[46,5,"104.5","108.1","Closed"],[506,5,"104.6","109.1","Closed"]]',
         doors: '[288]',
         oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
+        movables: '[[282,"RoastChicken"]]',
+        trainers: '[[10,7,"Fox"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-        }
+    }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2560,4 +2562,39 @@ const MAP = {
         start: '[534,3]',
         gates: '[[535,3,"105.1","104.2","Up"]]',
     }
+    ,
+    106: {
+        name: "The Last Temple",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"15","height":"15","map":"BB5AA4BAA4BB3AA17BAA45BB2AA8BABAA7BAA14BB2ABAA4BB10AA2BB2ABB5AA3BB6ABB4ABB2ABB4AA2BB3ABB5AA2BB11EABB20$BB2AA2BB10"}',
+        wall: "PebbleWall2",
+        floor: "Cracked09",
+        ceil: "OrnateWall1",
+        start: '[181,5]',
+        lights: '[[193,3,"WallLamp16","standard"],[108,1,"Candelabra09","standard"],[112,1,"Candelabra10","standard"],[116,1,"Candelabra15","standard"],[217,1,"Fireplace102","fire"]]',
+        gates: '[[180,5,"106.1","104.3","Closed"]]',
+        doors: '[172]',
+    }
+    ,
+    107: {
+        name: "Skeleton Farm",
+        sg: 0,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
+        data: '{"width":"17","height":"17","map":"BB2ABB7AA32BB4AA9BAA24BAA28BB3AA34BB3AA14BB11AA3BB2AA3BB13EBB7ABB7EBAA4BAA7BB28$BB17AA2BB11ABB5"}',
+        wall: "PebbleWall2",
+        floor: "Cracked09",
+        ceil: "OrnateWall1",
+        start: '[18,5]',
+        lights: '[[105,1,"DuaLLantern_028","standard"],[4,7,"DuaLLantern_025","dim"]]',
+        gates: '[[17,5,"107.1","104.4","Closed"]]',
+        doors: '[38,106]',
+    }
+    ,
+    108: {},
+    109: {},
 };

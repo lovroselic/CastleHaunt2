@@ -1251,6 +1251,7 @@ LoadSprites = [
     { srcName: "EntityPictures/WhiteSorceress.jpg", name: "WhiteSorceress" },
     { srcName: "EntityPictures/FishnetDomme.jpg", name: "FishnetDomme" },
     { srcName: "EntityPictures/NylonDomme.jpg", name: "NylonDomme" },
+    { srcName: "EntityPictures/Fox2.jpg", name: "Fox" },
     
     //{ srcName: "EntityPictures/SpartaKiss.jpg", name: "SpartaKiss" },
 
@@ -1547,6 +1548,9 @@ LoadSprites = [
     { srcName: "Items/RedFeather.png", name: "RedFeather" },
     { srcName: "Items/GreenFeather.png", name: "GreenFeather" },
     { srcName: "Items/BlueFeather.png", name: "BlueFeather" },
+    { srcName: "Items/Spear.png", name: "Spear" },
+    { srcName: "Items/BattleAxe.png", name: "BattleAxe" },
+    { srcName: "Items/Mace.png", name: "Mace" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

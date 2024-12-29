@@ -197,7 +197,7 @@ const SPAWN_TOOLS = {
             const face = DirectionToFace(dir);
             const lair = new Lair_Spawner(grid, face, SPRITE[pic], "lair", pic, dir);
             LAIR.add(lair);
-            console.log("lair", lair);
+            //console.log("lair", lair);
         }
     },
     keys(map, GA) {

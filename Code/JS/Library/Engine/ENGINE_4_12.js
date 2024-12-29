@@ -2326,7 +2326,7 @@ const ENGINE = {
       }
       //cont here
       ENGINE.BLOCKGRID.decalDraw(maze, CTX);
-      //if (ENGINE.verbose) console.log(`%cBLOCKGRID draw ${performance.now() - t0} ms`, ENGINE.CSS);
+      //if (ENGINE.verbose) console.log(`%cBLOCKGRID draw ${performance.now() - t0} ms`, ENGINE.CSS); //annoying, keep off
     },
     decalDraw(maze, CTX) {
       const decalWidth = 3;

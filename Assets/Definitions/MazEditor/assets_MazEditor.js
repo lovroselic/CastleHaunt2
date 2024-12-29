@@ -1061,6 +1061,9 @@ LoadSprites = [
     { srcName: "Items/RedFeather.png", name: "RedFeather" },
     { srcName: "Items/GreenFeather.png", name: "GreenFeather" },
     { srcName: "Items/BlueFeather.png", name: "BlueFeather" },
+    { srcName: "Items/Spear.png", name: "Spear" },
+    { srcName: "Items/BattleAxe.png", name: "BattleAxe" },
+    { srcName: "Items/Mace.png", name: "Mace" },
 
     //keys
     { srcName: "Keys/BlueKey.png", name: "BlueKey" },

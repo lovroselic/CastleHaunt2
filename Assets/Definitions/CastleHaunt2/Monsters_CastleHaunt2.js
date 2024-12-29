@@ -3863,6 +3863,24 @@ const INTERACTION_ITEM = {
         inventorySprite: "BlueFeather",
         text: "A feather. Blue."
     },
+    Spear: {
+        name: "Spear",
+        category: "interaction_item",
+        inventorySprite: "Spear",
+        text: "Pointy spear. Let's poke someone."
+    },
+    BattleAxe: {
+        name: "BattleAxe",
+        category: "interaction_item",
+        inventorySprite: "BattleAxe",
+        text: "Oooh. Head chopping utility."
+    },
+    Mace: {
+        name: "Mace",
+        category: "interaction_item",
+        inventorySprite: "Mace",
+        text: "For bashing heads."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -4962,6 +4980,21 @@ const INTERACTION_ENTITY = {
 };
 
 const INTERACTION_SHRINE = {
+    Fox: {
+        name: "Fox",
+        sprite: "Fox",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Chicken", "Chicken", "Chicken"],
+        gives: "HeartSkill",
+        level: 5,
+        text: {
+            intro: "Chickens are great for my health, and sometimes for yours too. Bring me three, and I'll show you the secret to staying hearty!",
+            progress: "A chicken delivered, but I'm still feeling peckish. Keep hunting!",
+            conclusion: "Three chickens! I'm feeling fit as a fiddle. Now, let me share my secret to improving your health. You're welcome!"
+        }
+    },
+
     SpiderDefense: {
         name: "SpiderDefense",
         sprite: "SpiderDefense",
