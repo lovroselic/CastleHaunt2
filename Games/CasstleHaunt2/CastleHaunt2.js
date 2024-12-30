@@ -53,10 +53,10 @@ const DEBUG = {
         /** main area LAST prepare:
             
             DONE * FOX wants "Chicken","Chicken","Chicken" gives Health
-        ?Rat girl?
+        BLueViper "Rat","Rat","Rat" gives attack
         ?lizard?
             DONE SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
-        IceQuee wants "IceCube","IceCube","IceCube" gives magic
+            DONE IceQuee wants "IceCube","IceCube","IceCube" gives magic
 
         * 
         * 
@@ -68,6 +68,9 @@ const DEBUG = {
         * "Spear",
         * "BattleAxe", 
         * "Mace"
+        * "IceCube", 
+        * "IceCube", 
+        * "IceCube"
 
 
         * coins sources (x, missing x = ):
@@ -90,7 +93,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 106; //104
+        GAME.level = 109; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -146,7 +149,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death", "Cripple", "MagicSupremacy","DestroyOrbs","DestroyOrbs",
+            "Death", "Cripple", "MagicSupremacy", "DestroyOrbs", "DestroyOrbs",
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -160,9 +163,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            
             //debug
-           
+
 
         ];
         for (let itm of invItems) {
@@ -171,7 +174,7 @@ const DEBUG = {
         }
 
         let keys = [
-            
+
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -209,7 +212,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.03",
+    VERSION: "0.18.04",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -759,8 +762,8 @@ const HERO = {
         this.health = this.maxHealth;
         TITLE.health();
     },
-    setDefense(){
-       
+    setDefense() {
+
         this.defense = Math.floor(Math.max(0, this.attack - INI.DEFENSE_OFFSET) / INI.DEFENSE_FACTOR);
         console.log("DEFENSE", this.defense);
     },

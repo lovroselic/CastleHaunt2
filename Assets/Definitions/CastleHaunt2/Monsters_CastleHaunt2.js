@@ -5010,6 +5010,20 @@ const INTERACTION_ENTITY = {
 };
 
 const INTERACTION_SHRINE = {
+    IceQueen: {
+        name: "IceQueen",
+        sprite: "IceQueen",
+        category: 'crest',
+        voice: "Female",
+        wants: ["IceCube", "IceCube", "IceCube"],
+        gives: "Magic",
+        level: 5,
+        text: {
+            intro: "Whiskey without ice? Unthinkable. Bring me some cubes, and perhaps my magical beauty will rub off on you.",
+            progress: "A cube or two, but my drink is still warm. Keep them coming!",
+            conclusion: "Ah, perfectly chilled! You've earned a touch of my magic. Use it wisely. Beauty like mine is rare."
+        }
+    },    
     SpartaKiss: {
         name: "SpartaKiss",
         sprite: "SpartaKiss",

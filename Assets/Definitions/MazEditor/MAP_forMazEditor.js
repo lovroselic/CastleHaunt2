@@ -445,7 +445,9 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "DuaLLantern_001", "DuaLLantern_002", "DuaLLantern_003", "DuaLLantern_004", "DuaLLantern_005", "DuaLLantern_006", "DuaLLantern_007", "DuaLLantern_008", "DuaLLantern_009", "DuaLLantern_010", "DuaLLantern_011",
     "DuaLLantern_012", "DuaLLantern_013", "DuaLLantern_014", "DuaLLantern_015", "DuaLLantern_016", "DuaLLantern_017", "DuaLLantern_018", "DuaLLantern_019", "DuaLLantern_020", "DuaLLantern_021", "DuaLLantern_022",
     "DuaLLantern_023", "DuaLLantern_024", "DuaLLantern_025", "DuaLLantern_026", "DuaLLantern_027", "DuaLLantern_028", "DuaLLantern_029", "DuaLLantern_030", "DuaLLantern_031",
-    "Moon50", "Moon51", "Moon52", "Moon54", "Moon55", "Moon56", "Moon58", "Moon59", "Moon60", "Moon62", "Moon63", "Sun1", "Sun2", "Sun3"
+    "Moon50", "Moon51", "Moon52", "Moon54", "Moon55", "Moon56", "Moon58", "Moon59", "Moon60", "Moon62", "Moon63", "Sun1", "Sun2", "Sun3",
+    "Candle50", "Candle51", "Candle52", "Candle53", "Candle54", "Candle55", "Candle56", "Candle57", "Candle58", "Candle59", "Candle60", "Candle61", "Candle62", "Candle63", "Candle64", "Candle65", "Candle66", "Candle67", "Candle68",
+    "Candle69", "Candle70", "Candle71", "Candle72", "SkullLantern50", "SkullLantern51", "SkullLantern52", "SkullLantern53", "SkullLantern54", "SkullLantern55", "SkullLantern56", "SkullLantern57", "SkullLantern58"
 ].sort();
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
