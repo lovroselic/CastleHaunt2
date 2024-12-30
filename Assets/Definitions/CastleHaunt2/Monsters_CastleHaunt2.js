@@ -374,6 +374,36 @@ const SHRINE_TYPE = {
         price: 5000,
         level: 5,
     },
+    PrincessSpringHeart: {
+        name: "PrincessSpringHeart",
+        sprite: "PrincessSpringHeart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 5000,
+        level: 5,
+    },
+    PrincessShield: {
+        name: "PrincessShield",
+        sprite: "PrincessShield",
+        which: "attack",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillKick",
+        price: 5000,
+        level: 5,
+    },
+    PrincessSpringOrb: {
+        name: "PrincessSpringOrb",
+        sprite: "PrincessSpringOrb",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 5000,
+        level: 5,
+    },
 };
 
 const ORACLE_TYPE = {
@@ -4980,6 +5010,20 @@ const INTERACTION_ENTITY = {
 };
 
 const INTERACTION_SHRINE = {
+    SpartaKiss: {
+        name: "SpartaKiss",
+        sprite: "SpartaKiss",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Dagger", "Sword", "Spear", "BattleAxe", "Mace"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "A true warrior knows the best defense is a strong offense. Bring me weapons for my collection, and I'll teach you the art of the attack.",
+            progress: "Another weapon for the arsenal, but the collection isn't complete. Bring me more tools of war!",
+            conclusion: "With these weapons, you've proven your warrior's spirit. Now, let me teach you how to strike like a warrior!"
+        }
+    },
     Fox: {
         name: "Fox",
         sprite: "Fox",
@@ -4994,7 +5038,6 @@ const INTERACTION_SHRINE = {
             conclusion: "Three chickens! I'm feeling fit as a fiddle. Now, let me share my secret to improving your health. You're welcome!"
         }
     },
-
     SpiderDefense: {
         name: "SpiderDefense",
         sprite: "SpiderDefense",

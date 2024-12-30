@@ -55,7 +55,8 @@ const DEBUG = {
             DONE * FOX wants "Chicken","Chicken","Chicken" gives Health
         ?Rat girl?
         ?lizard?
-        SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
+            DONE SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
+        IceQuee wants "IceCube","IceCube","IceCube" gives magic
 
         * 
         * 
@@ -89,7 +90,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 104; //104
+        GAME.level = 106; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -208,7 +209,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.02",
+    VERSION: "0.18.03",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

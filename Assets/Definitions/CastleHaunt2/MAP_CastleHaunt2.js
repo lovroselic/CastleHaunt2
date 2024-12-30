@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104: {
+    104 : {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2544,10 +2544,10 @@ const MAP = {
         doors: '[288]',
         oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
         movables: '[[282,"RoastChicken"]]',
-        trainers: '[[10,7,"Fox"]]',
+        trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-    }
+        }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2563,21 +2563,24 @@ const MAP = {
         gates: '[[535,3,"105.1","104.2","Up"]]',
     }
     ,
-    106: {
+    106 : {
         name: "The Last Temple",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"15","height":"15","map":"BB5AA4BAA4BB3AA17BAA45BB2AA8BABAA7BAA14BB2ABAA4BB10AA2BB2ABB5AA3BB6ABB4ABB2ABB4AA2BB3ABB5AA2BB11EABB20$BB2AA2BB10"}',
+        maxSpawned: 2,
+        killCountdown: 3,
+        spawnDelay: 9999,
+        data: '{"width":"15","height":"15","map":"BB6AA5BAA4BB2AA18BAA45BB2AA8BABAA8BAA14BB2ABAA3BB10AA2BB2ABB5AA3BB6ABB4AA2BB2ABB3AA2BB3ABB4ABB11EABB20$BB2AA2BB10"}',
         wall: "PebbleWall2",
         floor: "Cracked09",
         ceil: "OrnateWall1",
         start: '[181,5]',
         lights: '[[193,3,"WallLamp16","standard"],[108,1,"Candelabra09","standard"],[112,1,"Candelabra10","standard"],[116,1,"Candelabra15","standard"],[217,1,"Fireplace102","fire"]]',
         gates: '[[180,5,"106.1","104.3","Closed"]]',
+        shrines: '[[7,7,"PrincessSpringHeart"],[3,7,"PrincessShield"],[11,7,"PrincessSpringOrb"]]',
         doors: '[172]',
-    }
+        lairs: '[[135,5,"Lair33"],[149,3,"Lair03"]]',
+        monsterList: '["Bat","RedGoldBat","GreatChick"]',
+        }
     ,
     107: {
         name: "Skeleton Farm",
