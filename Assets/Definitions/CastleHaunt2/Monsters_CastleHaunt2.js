@@ -3911,6 +3911,96 @@ const INTERACTION_ITEM = {
         inventorySprite: "Mace",
         text: "For bashing heads."
     },
+    Shuriken: {
+        name: "Shuriken",
+        category: "interaction_item",
+        inventorySprite: "Shuriken",
+        text: "A deadly throwing star."
+    },
+    YoniBook: {
+        name: "YoniBook",
+        category: "interaction_item",
+        inventorySprite: "YoniBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    TaoBook: {
+        name: "TaoBook",
+        category: "interaction_item",
+        inventorySprite: "TaoBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    YinYangBook: {
+        name: "YinYangBook",
+        category: "interaction_item",
+        inventorySprite: "YinYangBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    PentagramBook: {
+        name: "PentagramBook",
+        category: "interaction_item",
+        inventorySprite: "PentagramBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    HexagramBook: {
+        name: "HexagramBook",
+        category: "interaction_item",
+        inventorySprite: "HexagramBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    TripleMoonBook: {
+        name: "TripleMoonBook",
+        category: "interaction_item",
+        inventorySprite: "TripleMoonBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    TriquetraBook: {
+        name: "TriquetraBook",
+        category: "interaction_item",
+        inventorySprite: "TriquetraBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    VenusBook: {
+        name: "VenusBook",
+        category: "interaction_item",
+        inventorySprite: "VenusBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    AnkhBook: {
+        name: "AnkhBook",
+        category: "interaction_item",
+        inventorySprite: "AnkhBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    FireballBook: {
+        name: "FireballBook",
+        category: "interaction_item",
+        inventorySprite: "FireballBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    OwlBook: {
+        name: "OwlBook",
+        category: "interaction_item",
+        inventorySprite: "OwlBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    PrincessBook: {
+        name: "PrincessBook",
+        category: "interaction_item",
+        inventorySprite: "PrincessBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    TreeOfLifeBook: {
+        name: "TreeOfLifeBook",
+        category: "interaction_item",
+        inventorySprite: "TreeOfLifeBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
+    RavenBook: {
+        name: "RavenBook",
+        category: "interaction_item",
+        inventorySprite: "RavenBook",
+        text: "It seems like an interesting book, full of ancient knowledge."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -5010,6 +5100,62 @@ const INTERACTION_ENTITY = {
 };
 
 const INTERACTION_SHRINE = {
+    NiqabBabe: {
+        name: "NiqabBabe",
+        sprite: "NiqabBabe",
+        category: 'crest',
+        voice: "Female",
+        wants: ["AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook"],
+        gives: "Magic",
+        level: 7,
+        text: {
+            intro: "Bismillah, the time has come to break free from these oppressive chains. Bring me books of wisdom, Habibi, and I will share the magic of my freedom with you.",
+            progress: "Shukran for this gift, but I need more knowledge to truly rise. Imshallah, you will bring them soon.",
+            conclusion: "With these books, I am reborn! No longer bound by false tenets, I offer you the magic of my newfound freedom. Go, Habibi, and use it to shape your destiny!"
+        }
+    },    
+    Nun: {
+        name: "Nun",
+        sprite: "Nun",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook"],
+        gives: "Magic",
+        level: 7,
+        text: {
+            intro: "O sancta simplicitas! Enough of praising imaginary friends. Bring me books of truth and forbidden wisdom, and I shall share my ars magica with you.",
+            progress: "A single book, gratias tibi, but my journey to enlightenment of apostasy is not complete. More knowledge is needed.",
+            conclusion: "Ah, sapientia lux est! With these tomes, I am free from the chains of the faith. In return, I gift you my newfound knowledge of nuclear power. Use it wisely, or not at all."
+        }
+    },
+    NinjaX: {
+        name: "NinjaX",
+        sprite: "NinjaX",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Shuriken", "Shuriken", "Shuriken"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "My throwing stars are missing, and without them, my art is incomplete. Bring them back, and I'll teach you the ways of stealth and death, ninja style.",
+            progress: "One shuriken recovered, but I need all three to regain my edge. Keep searching.",
+            conclusion: "All my stars are back where they belong. As promised, let me teach you the art of the ninja. Silent, swift, and deadly."
+        }
+    },
+    BlueViper: {
+        name: "BlueViper",
+        sprite: "BlueViper",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Rat", "Rat", "Rat"],
+        gives: "Attack",
+        level: 5,
+        text: {
+            intro: "I have a craving for rats. Bring me three, and I'll teach you to strike with the precision and speed of a viper.",
+            progress: "A rat delivered, but I need more to satisfy my hunger. Keep hunting!",
+            conclusion: "Three rats, delicious! Now, let me show you the art of the viper's strike. Quick, deadly, and unstoppable."
+        }
+    },
     IceQueen: {
         name: "IceQueen",
         sprite: "IceQueen",
@@ -5023,7 +5169,7 @@ const INTERACTION_SHRINE = {
             progress: "A cube or two, but my drink is still warm. Keep them coming!",
             conclusion: "Ah, perfectly chilled! You've earned a touch of my magic. Use it wisely. Beauty like mine is rare."
         }
-    },    
+    },
     SpartaKiss: {
         name: "SpartaKiss",
         sprite: "SpartaKiss",

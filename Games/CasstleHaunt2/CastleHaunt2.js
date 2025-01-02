@@ -52,11 +52,25 @@ const DEBUG = {
     checkPoint() {
         /** main area LAST prepare:
             
-            DONE * FOX wants "Chicken","Chicken","Chicken" gives Health
-        BLueViper "Rat","Rat","Rat" gives attack
-        ?lizard?
+        COUNT:
+            attack 3 (15)
+            magic 3 (19)
+            health 1 (5)
+
+            DONE FOX wants "Chicken","Chicken","Chicken" gives Health
+            DONE BLueViper "Rat","Rat","Rat" gives attack
             DONE SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
             DONE IceQuee wants "IceCube","IceCube","IceCube" gives magic
+            DONE SleekNinja wants "Shuriken","Shuriken","Shuriken" gives attack
+            DONE Nun "YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook" gives magic
+            DONE NiqabBabe "AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook" gives magic
+        ?lizard?
+        ?swimmer?
+        ?pitchfork farmer?
+        ?new witch
+
+        apparitias:
+
 
         * 
         * 
@@ -71,6 +85,20 @@ const DEBUG = {
         * "IceCube", 
         * "IceCube", 
         * "IceCube"
+        * "Rat"
+        * "Rat"
+        * "Rat"
+        * "Shuriken",
+        * "Shuriken",
+        * "Shuriken"
+        * "YoniBook", 
+        * "YinYangBook", 
+        * "VenusBook", 
+        * "TripleMoonBook"
+        * "AnkhBook", 
+        * "FireballBook", 
+        * "PrincessBook", 
+        * "TreeOfLifeBook"
 
 
         * coins sources (x, missing x = ):
@@ -93,7 +121,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 109; //104
+        GAME.level = 104; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -163,7 +191,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            
+
             //debug
 
 
@@ -212,7 +240,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.04",
+    VERSION: "0.18.05",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

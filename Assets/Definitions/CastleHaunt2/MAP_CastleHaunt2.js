@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104: {
+    104 : {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2544,10 +2544,10 @@ const MAP = {
         doors: '[288]',
         oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
         movables: '[[282,"RoastChicken"]]',
-        trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"]]',
+        trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-    }
+        }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2598,31 +2598,45 @@ const MAP = {
         doors: '[38,106]',
     }
     ,
-    108 : {
+    108: {
         name: "Northwest Tower",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB13AA24BAA91BAA42BB47AA12BB36ABB2ABB18$"}',
+        data: '{"width":"17","height":"17","map":"BB3ABB10AA36BAA78BAA28BAA13BABB13ABB20ABB12ABB2AA10BB6ABB14ABB14ABB18$"}',
         wall: "GoldishWall5",
         floor: "BloodMarbleFloorWall_SDXL_024",
         ceil: "DarkMossy9",
         start: '[270,3]',
-        gates: '[[271,3,"108.1","104.5","Closed"]]',
-        }
+        gates: '[[271,3,"108.1","104.5","Closed"],[273,1,"108.2","110.2","Closed"]]',
+    }
     ,
-    109 : {
+    109: {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB13AA11BAA105BAA41BB43ABB3AA11BB2ABB50$BB5A"}',
+        data: '{"width":"17","height":"17","map":"BB14AA117BAA40BABB28ABB20AA11BB3ABB18ABB14$BB17A"}',
         wall: "GlossyBrownBrickedWall53",
         floor: "OrnateFloor105",
         ceil: "WebbedFloor5",
         start: '[32,3]',
-        gates: '[[33,3,"109.1","104.6","Closed"]]',
+        gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"]]',
+    }
+    ,
+    110 : {
+        name: "West Wing",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB3AA2BB11AA143BABAA10BB16ABABB18ABB9AA3BB3AA9BB37ABB2ABB14$"}',
+        wall: "GlossyBrownBrickedWall60",
+        floor: "BloodMarbleFloorWall_SDXL_003",
+        ceil: "DarkMossy7",
+        start: '[270,1]',
+        gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"]]',
         }
 };

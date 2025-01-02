@@ -1254,6 +1254,10 @@ LoadSprites = [
     { srcName: "EntityPictures/Fox2.jpg", name: "Fox" },
     { srcName: "EntityPictures/SpartaKiss.jpg", name: "SpartaKiss" },
     { srcName: "EntityPictures/IceQueen2.jpg", name: "IceQueen" },
+    { srcName: "EntityPictures/BlueViper.jpg", name: "BlueViper" },
+    { srcName: "EntityPictures/NinjaX.jpg", name: "NinjaX" },
+    { srcName: "EntityPictures/Nun.jpg", name: "Nun" },
+    { srcName: "EntityPictures/NiqabBabe.jpg", name: "NiqabBabe" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1555,6 +1559,23 @@ LoadSprites = [
     { srcName: "Items/Spear.png", name: "Spear" },
     { srcName: "Items/BattleAxe.png", name: "BattleAxe" },
     { srcName: "Items/Mace.png", name: "Mace" },
+    { srcName: "Items/Shuriken.png", name: "Shuriken" },
+
+    { srcName: "Items/YoniBook.png", name: "YoniBook" },
+    { srcName: "Items/TaoBook.png", name: "TaoBook" },
+    { srcName: "Items/YinYangBook.png", name: "YinYangBook" },
+    { srcName: "Items/PentagramBook.png", name: "PentagramBook" },
+    { srcName: "Items/HexagramBook.png", name: "HexagramBook" },
+    { srcName: "Items/TripleMoonBook.png", name: "TripleMoonBook" },
+    { srcName: "Items/TriquetraBook.png", name: "TriquetraBook" },
+    { srcName: "Items/VenusBook.png", name: "VenusBook" },
+
+    { srcName: "Items/AnkhBook.png", name: "AnkhBook" },
+    { srcName: "Items/FireballBook.png", name: "FireballBook" },
+    { srcName: "Items/OwlBook.png", name: "OwlBook" },
+    { srcName: "Items/PrincessBook.png", name: "PrincessBook" },
+    { srcName: "Items/RavenBook.png", name: "RavenBook" },
+    { srcName: "Items/TreeOfLifeBook.png", name: "TreeOfLifeBook" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
