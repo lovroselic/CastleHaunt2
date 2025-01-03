@@ -1078,6 +1078,7 @@ LoadSprites = [
     { srcName: "Items/PrincessBook.png", name: "PrincessBook" },
     { srcName: "Items/RavenBook.png", name: "RavenBook" },
     { srcName: "Items/TreeOfLifeBook.png", name: "TreeOfLifeBook" },
+    { srcName: "Items/HealthBox.png", name: "HealthBox" },
 
     //keys
     { srcName: "Keys/BlueKey.png", name: "BlueKey" },

@@ -891,6 +891,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/CrateFragile.jpg", name: "CrateFragile" },
     { srcName: "ObjectTextures/BoringWood.jpg", name: "BoringWood" },
     { srcName: "ObjectTextures/LongBox.jpg", name: "LongBox" },
+    { srcName: "ObjectTextures/HealthBoxtexture.jpg", name: "HealthBoxtexture" },
 
     //decal-gates
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
@@ -1258,6 +1259,7 @@ LoadSprites = [
     { srcName: "EntityPictures/NinjaX.jpg", name: "NinjaX" },
     { srcName: "EntityPictures/Nun.jpg", name: "Nun" },
     { srcName: "EntityPictures/NiqabBabe.jpg", name: "NiqabBabe" },
+    { srcName: "EntityPictures/PitchforkFarmer.jpg", name: "PitchforkFarmer" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1560,6 +1562,7 @@ LoadSprites = [
     { srcName: "Items/BattleAxe.png", name: "BattleAxe" },
     { srcName: "Items/Mace.png", name: "Mace" },
     { srcName: "Items/Shuriken.png", name: "Shuriken" },
+    { srcName: "Items/HealthBox.png", name: "HealthBox" },
 
     { srcName: "Items/YoniBook.png", name: "YoniBook" },
     { srcName: "Items/TaoBook.png", name: "TaoBook" },

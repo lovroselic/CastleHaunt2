@@ -2937,8 +2937,22 @@ const INTERACTION_OBJECT = {
         glueToFloor: true,
         texture: "Wine",
         material: MATERIAL.standard,
+        rotateToNorth: 0,
         inventorySprite: "Champagne",
         text: "Expensive champagne. This will improve my spirits."
+    },
+    HealthBox: {
+        name: "HealthBox",
+        category: "action_item",
+        which: "health",
+        element: "FRAGILE_CRATE",
+        scale: 1.5 / 2 ** 5,
+        glueToFloor: true,
+        texture: "HealthBoxtexture",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0,
+        inventorySprite: "HealthBox",
+        text: "A full box of healing. I should save it for dark times."
     },
 };
 
@@ -4017,7 +4031,6 @@ const INTERACTION_ENTITY = {
             conclusion: "My wings are now a fashion statement! Here's the Purple Key. May it unlock a world of sinful pleasures."
         }
     },
-
     WhiteAngel: {
         name: "WhiteAngel",
         sprite: "WhiteAngel",
@@ -5100,6 +5113,20 @@ const INTERACTION_ENTITY = {
 };
 
 const INTERACTION_SHRINE = {
+    PitchforkFarmer: {
+        name: "PitchforkFarmer",
+        sprite: "PitchforkFarmer",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["BabySheep", "BabySheep", "BabySheep"],
+        gives: "HeartSkill",
+        level: 5,
+        text: {
+            intro: "Mary had a little lamb… or rather three of them. Now, where the heck are they gone?",
+            progress: "Lamb by lamb, we're inching closer to lambchops. Keep it up!",
+            conclusion: "Finally, all set for a barbecue feast! Your health will thank you for this."
+        }
+    },    
     NiqabBabe: {
         name: "NiqabBabe",
         sprite: "NiqabBabe",

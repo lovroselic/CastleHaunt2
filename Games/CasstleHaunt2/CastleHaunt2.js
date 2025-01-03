@@ -55,7 +55,7 @@ const DEBUG = {
         COUNT:
             attack 3 (15)
             magic 3 (19)
-            health 1 (5)
+            health 2 (10)
 
             DONE FOX wants "Chicken","Chicken","Chicken" gives Health
             DONE BLueViper "Rat","Rat","Rat" gives attack
@@ -64,9 +64,9 @@ const DEBUG = {
             DONE SleekNinja wants "Shuriken","Shuriken","Shuriken" gives attack
             DONE Nun "YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook" gives magic
             DONE NiqabBabe "AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook" gives magic
+            DONE PitchforkFarmer wants "BabySheep","BabySheep","BabySheep" give health
         ?lizard?
         ?swimmer?
-        ?pitchfork farmer?
         ?new witch
 
         apparitias:
@@ -99,6 +99,9 @@ const DEBUG = {
         * "FireballBook", 
         * "PrincessBook", 
         * "TreeOfLifeBook"
+        * "BabySheep",
+        * "BabySheep",
+        * "BabySheep"
 
 
         * coins sources (x, missing x = ):
@@ -191,7 +194,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-
+            "BabySheep", "BabySheep", "BabySheep",
             //debug
 
 
@@ -230,6 +233,7 @@ const INI = {
         Champagne: 175,
         RoastChicken: 250,
         RoastPig: 500,
+        HealthBox: 999,
     },
     HEALTH_INC: 8,
     SCROLL_RANGE: 15,
@@ -240,7 +244,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.05",
+    VERSION: "0.18.06",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
