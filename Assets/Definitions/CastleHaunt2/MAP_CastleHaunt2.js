@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104 : {
+    104: {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2547,7 +2547,7 @@ const MAP = {
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-        }
+    }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2582,21 +2582,27 @@ const MAP = {
         monsterList: '["Bat","RedGoldBat","GreatChick"]',
     }
     ,
-    107: {
+    107 : {
         name: "Skeleton Farm",
         sg: 0,
-        maxSpawned: -1,
-        killCountdown: -1,
-        spawnDelay: -1,
-        data: '{"width":"17","height":"17","map":"BB2ABB7AA32BB4AA9BAA24BAA28BB3AA34BB3AA14BB11AA3BB2AA3BB13EBB7ABB7EBAA4BAA7BB28$BB17AA2BB11ABB5"}',
+        maxSpawned: 5,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"17","height":"17","map":"BB3ABB3AA17BAA12BABAA2BAA6BAA2BB2ABAA2BABAA10BAA9BAA4BABABB2AA3BAA2BAA38BABAA6BB4AA5BABAA5BB9ABB4ABABABAA2BAA2BABB2ABB10ABB4ABB4ABB3AA2BB2AA2BABB5AEABB2AA2BAA5BAA3BEBB3ABB24A$ABB4ABB5"}',
         wall: "PebbleWall2",
         floor: "Cracked09",
         ceil: "OrnateWall1",
         start: '[18,5]',
-        lights: '[[105,1,"DuaLLantern_028","standard"],[4,7,"DuaLLantern_025","dim"]]',
-        gates: '[[17,5,"107.1","104.4","Closed"]]',
+        decals: '[[107,1,"Skull406","crest"],[37,1,"Skull314","crest"],[39,1,"Skull319","crest"],[37,7,"FemDommes6001","picture"],[39,7,"FemDommes_5058","picture"]]',
+        lights: '[[105,1,"DuaLLantern_028","standard"],[4,7,"DuaLLantern_025","dim"],[174,7,"WallLamp32","standardDimmed"],[180,7,"Lamp51","standardDimmed"],[131,5,"Candelabra10","standardDimmed"],[95,1,"DuaLLantern_019","standardDimmed"],[195,3,"FluxLight128","standardDimmed"],[131,3,"Candle67","weakCandle"]]',
+        gates: '[[17,5,"107.1","104.4","Closed"],[287,1,"107.2","111.1","Gold"]]',
+        keys: '[[69,0]]',
+        gold: '[[72,"SilverBar"],[225,"SilverBar"],[193,"SilverBar"],[232,"SilverBar"],[129,"SilverBar"],[63,"SilverBar"],[139,"GoldBar"],[77,"GoldBar"],[183,"GoldBar"],[236,"GoldBar"],[81,"GoldBar"],[132,"GoldSphere"]]',
         doors: '[38,106]',
-    }
+        oracles: '[[24,3,"FarrmerDaughter"],[276,1,"FarmerWife"],[283,1,"ApparitiaMajor"]]',
+        lairs: '[[170,5,"Lair03"],[186,3,"Lair82"],[280,1,"Lair15"],[10,7,"Lair49"]]',
+        monsterList: '["GoldSkeletonGold"]',
+        }
     ,
     108: {
         name: "Northwest Tower",
@@ -2626,7 +2632,7 @@ const MAP = {
         gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"]]',
     }
     ,
-    110 : {
+    110: {
         name: "West Wing",
         sg: 0,
         maxSpawned: 4,
@@ -2638,5 +2644,20 @@ const MAP = {
         ceil: "DarkMossy7",
         start: '[270,1]',
         gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"]]',
-        }
+    }
+    ,
+    111: {
+        name: "Another Skeleton Farm",
+        sg: 0,
+        maxSpawned: 5,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"17","height":"17","map":"BB2ABB10ABAA4BAA131BB6AA12BABB7AA5BABB23ABB6AA4BABB2AA5BB4ABB33ABB4$BB17A"}',
+        wall: "DarkMossy2",
+        floor: "BloodMarbleFloorWall_SDXL_023",
+        ceil: "Relief09",
+        start: '[18,7]',
+        lights: '[[154,1,"Candle66","darkYellow"]]',
+        gates: '[[1,7,"111.1","107.2","Closed"]]',
+    }
 };

@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.03",
+  VERSION: "0.14.04",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -1024,6 +1024,11 @@ const GAME = {
     for (const goldType in GOLD_ITEM_TYPE) {
       $("#gold_type").append(`<option value="${goldType}">${goldType}</option>`);
     }
+    $("#gold_type").change(function () {
+      const sprite = $("#gold_type")[0].value;
+      ENGINE.drawToId("gold_canvas", 0, 0, SPRITE[sprite]);
+    });
+    $("#gold_type").trigger("change");
 
     for (const skillType in SKILL_ITEM_TYPE) {
       $("#skill_type").append(`<option value="${skillType}">${skillType}</option>`);

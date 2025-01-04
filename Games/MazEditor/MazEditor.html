@@ -439,6 +439,9 @@
                                 <div class="d-flex justify-content-center">
                                     <select id="gold_type"> </select>
                                 </div>
+                                <div class="d-flex justify-content-center my-2">
+                                    <canvas id="gold_canvas" width="48" height="48"></canvas>
+                                </div>
                             </div>
                         </fieldset>
 
@@ -587,26 +590,26 @@
                             Export:
                         </legend>
                         <textarea id="exp" style="width: 1200px; height: 256px;">
-                            104 : {
-                                name: "Crypt Entrance",
+                            107 : {
+                                name: "Skeleton Farm",
                                 sg: 0,
-                                maxSpawned: 4,
-                                killCountdown: 5,
-                                spawnDelay: 9999,
-                                data: '{"width":"23","height":"25","map":"BB11AA103BAA7BB5AA9BB3AA17BABAA4BB2AA2BB2ABB2AA15BB2AA3BB2AA2EAA13BAA21BB5AA9BABAA18BB3AA43BB3AA2BB2AA3BB2AA8BAA2BAA22BABAA2BB2AA4BB11AA2BB4AA2BAA2BB10AA5BB11AA2BB2AA2BB13ABB4AA3BB7AA3BB2AA2BB12ABABB4AA5BB3ABB15AA2BAA6BABB2AA2BB7AA4BAA7BB36AB$A"}',
-                                wall: "RockWall_SDXL_016",
-                                floor: "IrregularTiledFloorCeil08",
-                                ceil: "Cracked04",
-                                start: '[297,3]',
-                                decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"]]',
-                                lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
-                                gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"],[45,3,"104.3","106.1","Closed"],[551,3,"104.4","107.1","Closed"],[46,5,"104.5","108.1","Closed"],[506,5,"104.6","109.1","Closed"]]',
-                                doors: '[288]',
-                                oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
-                                movables: '[[282,"RoastChicken"]]',
-                                trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
-                                lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
-                                monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
+                                maxSpawned: 5,
+                                killCountdown: 4,
+                                spawnDelay: 5000,
+                                data: '{"width":"17","height":"17","map":"BB3ABB3AA17BAA12BABAA2BAA6BAA2BB2ABAA2BABAA10BAA9BAA4BABABB2AA3BAA2BAA38BABAA6BB4AA5BABAA5BB9ABB4ABABABAA2BAA2BABB2ABB10ABB4ABB4ABB3AA2BB2AA2BABB5AEABB2AA2BAA5BAA3BEBB3ABB24A$ABB4ABB5"}',
+                                wall: "PebbleWall2",
+                                floor: "Cracked09",
+                                ceil: "OrnateWall1",
+                                start: '[18,5]',
+                                decals: '[[107,1,"Skull406","crest"],[37,1,"Skull314","crest"],[39,1,"Skull319","crest"],[37,7,"FemDommes6001","picture"],[39,7,"FemDommes_5058","picture"]]',
+                                lights: '[[105,1,"DuaLLantern_028","standard"],[4,7,"DuaLLantern_025","dim"],[174,7,"WallLamp32","standardDimmed"],[180,7,"Lamp51","standardDimmed"],[131,5,"Candelabra10","standardDimmed"],[95,1,"DuaLLantern_019","standardDimmed"],[195,3,"FluxLight128","standardDimmed"],[131,3,"Candle67","weakCandle"]]',
+                                gates: '[[17,5,"107.1","104.4","Closed"],[287,1,"107.2","111.1","Gold"]]',
+                                keys: '[[69,0]]',
+                                gold: '[[72,"SilverBar"],[225,"SilverBar"],[193,"SilverBar"],[232,"SilverBar"],[129,"SilverBar"],[63,"SilverBar"],[139,"GoldBar"],[77,"GoldBar"],[183,"GoldBar"],[236,"GoldBar"],[81,"GoldBar"],[132,"GoldSphere"]]',
+                                doors: '[38,106]',
+                                oracles: '[[24,3,"FarrmerDaughter"],[276,1,"FarmerWife"],[283,1,"ApparitiaMajor"]]',
+                                lairs: '[[170,5,"Lair03"],[186,3,"Lair82"],[280,1,"Lair15"],[10,7,"Lair49"]]',
+                                monsterList: '["GoldSkeletonGold"]',
                                 }
                         </textarea>
                     </fieldset>

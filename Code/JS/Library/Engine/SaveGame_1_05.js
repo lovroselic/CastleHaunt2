@@ -24,8 +24,14 @@ const SAVE_GAME = {
   IAMABR: "_IAM",
   GAABR: "_GA",
   MAPABR: "_MAP",
+  METAABR: "_META",
   CSS: "color: orange",
   that: window,
+  ENCODE: true,
+
+  debugMode() {
+    this.ENCODE = false;
+  },
   ready() {
     console.log(`%cSAVE_GAME module version ${SAVE_GAME.VERSION} loaded and ready.`, SAVE_GAME.CSS);
   },
@@ -154,6 +160,18 @@ const SAVE_GAME = {
     SAVE_GAME.saveTimers();
     SAVE_GAME.saveObjects();
     SAVE_GAME.save_map_properties();
+    SAVE_GAME.saveMeta();
+
+  },
+  saveMeta(MAP_REFERENCE = MAP) {
+    const meta_data = [];
+    const timestamp = Date.now();
+    meta_data.push(JSON.stringify({ "timestamp": timestamp }));
+    meta_data.push(JSON.stringify({ "name":  MAP_REFERENCE[GAME.level].name}));
+    if (ENGINE.verbose) console.info("saving meta data", meta_data);
+    const metaSTR = JSON.stringify(meta_data);
+    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.METAABR, SAVE_GAME.code(metaSTR));
+
   },
   save_map_properties(MAP_REFERENCE = MAP) {
     if (ENGINE.verbose) console.info("SAVE_GAME.map_properties", SAVE_GAME.map_properties);
@@ -217,11 +235,13 @@ const SAVE_GAME = {
     SAVE_GAME.load_map_properties();
   },
   code(string) {
+    if (!SAVE_GAME.ENCODE) return string;
     let codes = [...string].map(char => char.charCodeAt(0) + 13);
     let hcodes = codes.map(x => x.toString(16));
     return hcodes.join('');
   },
   decode(code) {
+    if (!SAVE_GAME.ENCODE) return code;
     let hcodes = code.splitByN(2);
     let icodes = hcodes.map(x => parseInt(x, 16) - 13);
     return String.fromCharCode(...icodes);

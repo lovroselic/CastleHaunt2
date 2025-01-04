@@ -65,6 +65,7 @@ const DEBUG = {
             DONE Nun "YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook" gives magic
             DONE NiqabBabe "AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook" gives magic
             DONE PitchforkFarmer wants "BabySheep","BabySheep","BabySheep" give health
+
         ?lizard?
         ?swimmer?
         ?new witch
@@ -124,7 +125,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 104; //104
+        GAME.level = 107; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -194,7 +195,6 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "BabySheep", "BabySheep", "BabySheep",
             //debug
 
 
@@ -244,7 +244,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.06",
+    VERSION: "0.18.07",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -319,6 +319,7 @@ const PRG = {
             //AI.VERBOSE = true;
             ENGINE.verbose = true;
             MAP_TOOLS.INI.VERBOSE = true;
+            SAVE_GAME.debugMode();
         }
     },
     start() {

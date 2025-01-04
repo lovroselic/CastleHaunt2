@@ -407,6 +407,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    FarmerWife: {
+        name: "FarmerWife",
+        sprite: "FarmerWife",
+        category: 'crest',
+        voice: "Female2",
+        text: "But some of those gold skeletons are incredibly rich. Maybe You should hunt them for gold?",
+        interactionCategory: "oracle",
+    },
+    FarrmerDaughter: {
+        name: "FarrmerDaughter",
+        sprite: "FarrmerDaughter",
+        category: 'crest',
+        voice: "Female",
+        text: "Are you sure you want to go forward? This area has been overrun by Apparitias, growing Gold Skeletons for their army.",
+        interactionCategory: "oracle",
+    },
     NylonDomme: {
         name: "NylonDomme",
         sprite: "NylonDomme",
@@ -1514,9 +1530,29 @@ const ORACLE_TYPE = {
         text: "Still following the trail of blood, Princess? Soon yours will be spilt. Muhahahaha.",
         interactionCategory: "oracle",
     },
+    ApparitiaMajor: {
+        name: "ApparitiaMajor",
+        sprite: "ApparitiaMajor",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Don't you like are shiny Golden Skeletons? They will GreenOrb you to death.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
+    GoldSphere: {
+        name: "GoldSphere",
+        category: "gold",
+        element: "BALL",
+        scale: 1.0 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Gold",
+        minVal: 100,
+        maxVal: 150,
+        value: 150,
+        material: MATERIAL.gold,
+    },
     GoldBar: {
         name: "GoldBar",
         category: "gold",
@@ -2401,6 +2437,58 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
         material: MATERIAL.standard,
+    },
+    GoldSkeletonGold: {
+        name: "GoldSkeletonGold",
+        texture: "Gold",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        inventory: GOLD_ITEM_TYPE.Coins,
+        gold: 100,
+        mana: 25,
+        health: 150,
+        attack: 175,
+        magic: 25,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [23, ["wanderer"], 20, ["shoot"]],
+        moveSpeed: 1.50,
+        shootDistance: 20,
+        stalkDistance: 10,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.gold,
+    },
+    GoldSkeleton: {
+        name: "GoldSkeleton",
+        texture: "Gold",
+        model: "Skeleton",
+        scale: 1.8 / 2 ** 3,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "SmokeExplosion",
+        mana: 25,
+        health: 150,
+        attack: 175,
+        magic: 25,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [23, ["wanderer"], 20, ["shoot"]],
+        moveSpeed: 1.50,
+        shootDistance: 20,
+        stalkDistance: 10,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+        material: MATERIAL.gold,
     },
     GreatChick: {
         name: "GreatChick",
@@ -4015,6 +4103,12 @@ const INTERACTION_ITEM = {
         inventorySprite: "RavenBook",
         text: "It seems like an interesting book, full of ancient knowledge."
     },
+    Kiss: {
+        name: "Kiss",
+        category: "interaction_item",
+        inventorySprite: "Kiss",
+        text: "This looks like a portable kiss voucher. What a fascinating concept."
+    },
 };
 
 const INTERACTION_ENTITY = {
@@ -5126,7 +5220,7 @@ const INTERACTION_SHRINE = {
             progress: "Lamb by lamb, we're inching closer to lambchops. Keep it up!",
             conclusion: "Finally, all set for a barbecue feast! Your health will thank you for this."
         }
-    },    
+    },
     NiqabBabe: {
         name: "NiqabBabe",
         sprite: "NiqabBabe",
@@ -5140,7 +5234,7 @@ const INTERACTION_SHRINE = {
             progress: "Shukran for this gift, but I need more knowledge to truly rise. Imshallah, you will bring them soon.",
             conclusion: "With these books, I am reborn! No longer bound by false tenets, I offer you the magic of my newfound freedom. Go, Habibi, and use it to shape your destiny!"
         }
-    },    
+    },
     Nun: {
         name: "Nun",
         sprite: "Nun",
