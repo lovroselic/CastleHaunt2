@@ -4112,6 +4112,33 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    Frogessa: {
+        name: "Frogessa",
+        sprite: "Frogessa",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Kiss"],
+        gives: "Fins",
+        text: {
+            intro: "I am a princess trapped in the body of a frog. Surely a kiss will break the curse. Wink, wink.",
+            progress: null,
+            conclusion: "Alas, the curse remains unbroken. But I am grateful for your effort. Take my spare fins. They might be more useful than my fairy tale."
+        }
+    },
+    
+    CorridorSwimmer: {
+        name: "CorridorSwimmer",
+        sprite: "CorridorSwimmer",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["ScubaMask", "Fins"],
+        gives: "Shuriken",
+        text: {
+            intro: "I spotted a strange, dark metal object in the waters. Bring me the right gear, and I'll dive in to retrieve it for you.",
+            progress: "I've got part of the gear, but I still need more to take the plunge. Keep going!",
+            conclusion: "All set! The dive was successful. Here's the shuriken I found. Turns out, even the depths can be deadly!"
+        }
+    },
     BlackAngel: {
         name: "BlackAngel",
         sprite: "BlackAngel",

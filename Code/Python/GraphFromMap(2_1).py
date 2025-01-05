@@ -3,7 +3,7 @@
 Created on Thu Oct  5 07:59:53 2023
 
 @author: lovro
-v 0.2.2
+v 0.2.3
 
 https://networkx.org/documentation/stable/reference/introduction.html
 """
@@ -42,6 +42,8 @@ def getColor(col):
         return "#50C878"
     if col == "Purple":
         return "#800080"
+    if col == "Pearl":
+        return "#FFAAAA"
     return col
 
 

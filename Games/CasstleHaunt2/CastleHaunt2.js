@@ -65,9 +65,10 @@ const DEBUG = {
             DONE Nun "YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook" gives magic
             DONE NiqabBabe "AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook" gives magic
             DONE PitchforkFarmer wants "BabySheep","BabySheep","BabySheep" give health
-
+            DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives Shuriken
+            DONE "Frogessa" wants "Kiss" gives "Fins"
+            DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives "shuriken"
         ?lizard?
-        ?swimmer?
         ?new witch
 
         apparitias:
@@ -89,7 +90,7 @@ const DEBUG = {
         * "Rat"
         * "Rat"
         * "Rat"
-        * "Shuriken",
+            DONE * "Shuriken", <-- "CorridorSwimmer" (108)
         * "Shuriken",
         * "Shuriken"
         * "YoniBook", 
@@ -103,6 +104,9 @@ const DEBUG = {
         * "BabySheep",
         * "BabySheep",
         * "BabySheep"
+        * "ScubaMask", 
+            DONE * "Fins" <--"Frogessa" wants kiss (112)
+        * "Kiss"
 
 
         * coins sources (x, missing x = ):
@@ -125,7 +129,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 107; //104
+        GAME.level = 104; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -196,8 +200,6 @@ const DEBUG = {
 
         let invItems = [
             //debug
-
-
         ];
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
@@ -244,7 +246,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.07",
+    VERSION: "0.18.08",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

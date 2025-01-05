@@ -429,7 +429,17 @@ const DECAL_PAINTINGS = [
     "FemDommes_6336", "FemDommes_6337", "FemDommes_6338", "FemDommes_6339", "FemDommes_6340", "FemDommes_6341", "FemDommes_6342", "FemDommes_6343", "FemDommes_6344", "FemDommes_6345", "FemDommes_6346", "FemDommes_6347",
     "FemDommes_6348", "FemDommes_6349", "FemDommes_6350", "FemDommes_6351", "FemDommes_6352", "FemDommes_6353", "FemDommes_6354", "FemDommes_6355", "FemDommes_6356", "FemDommes_6357", "FemDommes_6358", "FemDommes_6359",
     "FemDommes_6360", "FemDommes_6361", "FemDommes_6362", "FemDommes_6363", "FemDommes_6364", "FemDommes_6365", "FemDommes_6366", "FemDommes_6367", "FemDommes_6368", "FemDommes_6369", "FemDommes_6370", "FemDommes_6371",
-    "FemDommes_6372", "FemDommes_6373", "FemDommes_6374", "FemDommes_6375", "FemDommes_6376"
+    "FemDommes_6372", "FemDommes_6373", "FemDommes_6374", "FemDommes_6375", "FemDommes_6376",
+    "CCC_001", "CCC_002", "CCC_003", "CCC_004", "CCC_005", "CCC_006", "CCC_007", "CCC_008", "CCC_009", "CCC_010", "CCC_011", "CCC_012", "CCC_013", "CCC_014", "CCC_015", "CCC_016", "CCC_017", "CCC_018", "CCC_019", "CCC_020",
+    "CCC_021", "CCC_022", "CCC_023", "CCC_024", "CCC_025", "CCC_026", "CCC_027", "CCC_028", "CCC_029", "CCC_030", "CCC_031", "CCC_032", "CCC_033", "CCC_034", "CCC_035", "CCC_036", "CCC_037", "CCC_038", "CCC_039", "CCC_040",
+    "CCC_041", "CCC_042", "CCC_043", "CCC_044", "CCC_045", "CCC_046", "CCC_047", "CCC_048", "CCC_049", "CCC_050", "CCC_051", "CCC_052", "CCC_053", "CCC_054", "CCC_055", "CCC_056", "CCC_057", "CCC_058", "CCC_059", "CCC_060",
+    "CCC_061", "CCC_062", "CCC_063", "CCC_064", "CCC_065", "CCC_066", "CCC_067", "CCC_068", "CCC_069", "CCC_070", "CCC_071", "CCC_072", "CCC_073", "CCC_074", "CCC_075", "CCC_076", "CCC_077", "CCC_078", "CCC_079", "CCC_080",
+    "CCC_081", "CCC_082", "CCC_083", "CCC_084", "CCC_085", "CCC_086", "CCC_087", "CCC_088", "CCC_089", "CCC_090", "CCC_091", "CCC_092", "CCC_093", "CCC_094", "CCC_095", "CCC_096", "CCC_097", "CCC_098", "CCC_099", "CCC_100",
+    "CCC_101", "CCC_102", "CCC_103", "CCC_104", "CCC_105", "CCC_106", "CCC_107", "CCC_108", "CCC_109", "CCC_110", "CCC_111", "CCC_112", "CCC_113", "CCC_114", "CCC_115", "CCC_116", "CCC_117", "CCC_118", "CCC_119", "CCC_120",
+    "CCC_121", "CCC_122", "CCC_123", "CCC_124", "CCC_125", "CCC_126", "CCC_127", "CCC_128", "CCC_129", "CCC_130", "CCC_131", "CCC_132", "CCC_133", "CCC_134", "CCC_135", "CCC_136", "CCC_137", "CCC_138", "CCC_139", "CCC_140",
+    "CCC_141", "CCC_142", "CCC_143", "CCC_144", "CCC_145", "CCC_146", "CCC_147", "CCC_148", "CCC_149", "CCC_150", "CCC_151", "CCC_152", "CCC_153", "CCC_154", "CCC_155", "CCC_156", "CCC_157", "CCC_158", "CCC_159", "CCC_160",
+    "CCC_161", "CCC_162", "CCC_163", "CCC_164", "CCC_165", "CCC_166", "CCC_167", "CCC_168", "CCC_169", "CCC_170", "CCC_171", "CCC_172", "CCC_173", "CCC_174", "CCC_175", "CCC_176", "CCC_177", "CCC_178", "CCC_179", "CCC_180",
+    "CCC_181", "CCC_182", "CCC_183", "CCC_184", "CCC_185", "CCC_186", "CCC_187", "CCC_188", "CCC_189", "CCC_190", "CCC_191"
 ].sort();
 
 

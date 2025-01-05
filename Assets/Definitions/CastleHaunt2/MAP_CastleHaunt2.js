@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104: {
+    104 : {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2538,7 +2538,7 @@ const MAP = {
         floor: "IrregularTiledFloorCeil08",
         ceil: "Cracked04",
         start: '[297,3]',
-        decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"]]',
+        decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"],[274,3,"CCC_124","picture"],[320,3,"Wolfenstein70","picture"]]',
         lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
         gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"],[45,3,"104.3","106.1","Closed"],[551,3,"104.4","107.1","Closed"],[46,5,"104.5","108.1","Closed"],[506,5,"104.6","109.1","Closed"]]',
         doors: '[288]',
@@ -2547,7 +2547,7 @@ const MAP = {
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-    }
+        }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2582,7 +2582,7 @@ const MAP = {
         monsterList: '["Bat","RedGoldBat","GreatChick"]',
     }
     ,
-    107 : {
+    107: {
         name: "Skeleton Farm",
         sg: 0,
         maxSpawned: 5,
@@ -2602,7 +2602,7 @@ const MAP = {
         oracles: '[[24,3,"FarrmerDaughter"],[276,1,"FarmerWife"],[283,1,"ApparitiaMajor"]]',
         lairs: '[[170,5,"Lair03"],[186,3,"Lair82"],[280,1,"Lair15"],[10,7,"Lair49"]]',
         monsterList: '["GoldSkeletonGold"]',
-        }
+    }
     ,
     108: {
         name: "Northwest Tower",
@@ -2610,27 +2610,30 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB3ABB10AA36BAA78BAA28BAA13BABB13ABB20ABB12ABB2AA10BB6ABB14ABB14ABB18$"}',
+        data: '{"width":"17","height":"17","map":"BB4ABABAA4BB2AA8BAA7BAA9BAA17BAA2BAA5BAA6BB2AA6BAA13BAA10BAA7BAA30BAA15BAA3BABB9ABABABB2AA2BB3ABB19AA2BB5ABB6ABB2AA2BB3ABABB5AA5BB2ABB13ABB15ABB12$"}',
         wall: "GoldishWall5",
         floor: "BloodMarbleFloorWall_SDXL_024",
         ceil: "DarkMossy9",
         start: '[270,3]',
-        gates: '[[271,3,"108.1","104.5","Closed"],[273,1,"108.2","110.2","Closed"]]',
+        decals: '[[137,4,"Water30","texture"],[121,4,"Water30","texture"],[138,4,"Water30","texture"],[155,4,"Water30","texture"]]',
+        lights: '[[160,3,"Candle72","standard"],[179,7,"Lamp45","standard"],[110,1,"Candle55","standard"],[129,5,"DuaLLantern_020","standard"]]',
+        gates: '[[271,3,"108.1","104.5","Closed"],[273,1,"108.2","110.2","Closed"],[33,3,"108.3","112.1","Closed"]]',
+        entities: '[[136,5,"CorridorSwimmer"]]',
     }
     ,
-    109: {
+    109 : {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB14AA117BAA40BABB28ABB20AA11BB3ABB18ABB14$BB17A"}',
+        data: '{"width":"17","height":"17","map":"BB13AA24BAA91BB2AA42BAA2BB29ABB22AA11BB4ABB25ABB14ABB3A$"}',
         wall: "GlossyBrownBrickedWall53",
         floor: "OrnateFloor105",
         ceil: "WebbedFloor5",
         start: '[32,3]',
-        gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"]]',
-    }
+        gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"],[271,3,"109.3","116.2","Closed"]]',
+        }
     ,
     110: {
         name: "West Wing",
@@ -2660,4 +2663,76 @@ const MAP = {
         lights: '[[154,1,"Candle66","darkYellow"]]',
         gates: '[[1,7,"111.1","107.2","Closed"]]',
     }
+    ,
+    112: {
+        name: "North Spire",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB11AA60BB2AA21BABAA15BAA12BAA18BAA11BAA3BABB12ABB21ABB2ABB19AA2BAA8BB7AA2BB6ABB10ABB18ABB5ABB7$"}',
+        wall: "BigGreyBricks1",
+        floor: "FloorTiles_SDXL_009",
+        ceil: "RedishBricks101",
+        start: '[256,5]',
+        lights: '[[127,1,"FluxLight101","standard"]]',
+        gates: '[[255,5,"112.1","108.3","Closed"],[271,3,"112.2","113.1","Closed"]]',
+        entities: '[[8,7,"Frogessa"]]',
+    }
+    ,
+    113: {
+        name: "North East Tower",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB4AA2BABB7AA89BAA15BAA9BABB15ABB36AA2BB29AA8BB55ABB3ABAA2BB2A$"}',
+        wall: "BlackWall44",
+        floor: "FloorTiles_SDXL_011",
+        ceil: "OrnateFloor105",
+        start: '[18,5]',
+        gates: '[[17,5,"113.1","112.2","Closed"],[287,1,"113.2","114.1","Closed"]]',
+    }
+    ,
+    114: {
+        name: "East Wing",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB3AA2BB4ABB2ABB2AA12BAA74BAA12BB8AA11BB2ABB4AA2BAA5BB34ABB13AA2BAA3BAA5BB10ABB50AA2BABB3$BB11A"}',
+        wall: "BlackWall44",
+        floor: "FloorTiles_SDXL_011",
+        ceil: "OrnateFloor105",
+        start: '[18,7]',
+        gates: '[[1,7,"114.1","113.2","Closed"],[275,1,"114.2","115.1","Closed"]]',
+    }
+    ,
+    115: {
+        name: "South East Tower",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB2AA2BB10AA9BAA84BAA13BAA10BABB2ABB11ABB16ABB23ABB10ABB18AA8BB18ABB11ABB15ABB3ABB6$BB3A"}',
+        wall: "BlackWall44",
+        floor: "FloorTiles_SDXL_011",
+        ceil: "OrnateFloor105",
+        start: '[19,7]',
+        gates: '[[2,7,"115.1","114.2","Closed"],[255,5,"115.2","116.1","Closed"]]',
+    }
+    ,
+    116 : {
+        name: "South Spire",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 5,
+        spawnDelay: 9999,
+        data: '{"width":"17","height":"17","map":"BB2ABB5ABB5AA65BAA47BAA2BB43ABB26AA4BAA5BB3ABB19ABB29$BB25A"}',
+        wall: "BlackWall44",
+        floor: "FloorTiles_SDXL_011",
+        ceil: "OrnateFloor105",
+        start: '[32,3]',
+        gates: '[[33,3,"116.1","115.2","Closed"],[136,5,"116.2","109.3","Closed"]]',
+        }
 };
