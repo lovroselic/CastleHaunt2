@@ -14,13 +14,13 @@ import time
 
 start_time = time.time()
 
-directory = 'C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Graphics'
+directory = 'C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Graphics'
 extensions = ['*.png', '*.jpg']
 
 
-asset_file = "C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/assets_CastleHaunt2.js"
-map_file = "C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
-monster_file = "C:/Users/lovro/OneDrive/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/Monsters_CastleHaunt2.js"
+asset_file = "C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/assets_CastleHaunt2.js"
+map_file = "C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/MAP_CastleHaunt2.js"
+monster_file = "C:/Users/Uporabnik/Documents/JS/CastleHaunt2/Assets/Definitions/CastleHaunt2/Monsters_CastleHaunt2.js"
 
 with open(asset_file, encoding="utf8") as fh:
     asset_data = fh.read()
@@ -32,11 +32,13 @@ with open(monster_file, encoding="utf8") as fh:
     monster_data = fh.read()
 
 
-def search_dirs(directory):
-    dir_list = []
-    for root, dirs, files in os.walk(directory):
-        dir_list.append(root)
-    return dir_list
+# =============================================================================
+# def search_dirs(directory):
+#     dir_list = []
+#     for root, dirs, files in os.walk(directory):
+#         dir_list.append(root)
+#     return dir_list
+# =============================================================================
 
 
 def search_files(directory, extensions):

@@ -68,6 +68,7 @@ const DEBUG = {
             DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives Shuriken
             DONE "Frogessa" wants "Kiss" gives "Fins"
             DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives "shuriken"
+            DONE YoniLibrARIAn wants "Spectacles" give YoniBook
         ?lizard?
         ?new witch
 
@@ -93,7 +94,7 @@ const DEBUG = {
             DONE * "Shuriken", <-- "CorridorSwimmer" (108)
         * "Shuriken",
         * "Shuriken"
-        * "YoniBook", 
+            DONE * "YoniBook",  <-- YoniLibrARIAn (109)
         * "YinYangBook", 
         * "VenusBook", 
         * "TripleMoonBook"
@@ -107,6 +108,7 @@ const DEBUG = {
         * "ScubaMask", 
             DONE * "Fins" <--"Frogessa" wants kiss (112)
         * "Kiss"
+         "Spectacles"
 
 
         * coins sources (x, missing x = ):
@@ -129,7 +131,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 104; //104
+        GAME.level = 109; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -200,7 +202,9 @@ const DEBUG = {
 
         let invItems = [
             //debug
+           
         ];
+
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
@@ -246,7 +250,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.08",
+    VERSION: "0.18.09",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

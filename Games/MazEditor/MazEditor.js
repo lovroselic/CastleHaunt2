@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.04",
+  VERSION: "0.14.05",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -995,10 +995,7 @@ const GAME = {
     });
     $("#key_type").trigger("change");
 
-    $("#randpic").click(GAME.randomPic);
-    $("#randcrest").click(GAME.randomCrest);
-    $("#randtriggerdecal").click(GAME.randomTrigger);
-    $("#randlight").click(GAME.randomLight);
+
 
     for (const monsterType in MONSTER_TYPE) {
       $("#monster_type").append(`<option value="${monsterType}">${monsterType} A: ${MONSTER_TYPE[monsterType].attack} D: ${MONSTER_TYPE[monsterType].defense} M: ${MONSTER_TYPE[monsterType].magic}</option>`);
@@ -1038,6 +1035,13 @@ const GAME = {
       $("#container_type").append(`<option value="${containerType}">${containerType}</option>`);
     }
 
+    $("#container_type").change(function () {
+      const container_type = $("#container_type")[0].value;
+      ENGINE.drawToId("containercanvas", 0, 0, ENGINE.conditionalResize(TEXTURE[CONTAINER_ITEM_TYPE[container_type].texture], INI.CANVAS_RESOLUTION));
+    });
+    $("#container_type").trigger("change");
+
+
     for (const contentType of CONTAINER_CONTENT_LIST) {
       $("#content_type").append(`<option value="${contentType}">${contentType}</option>`);
     }
@@ -1046,6 +1050,9 @@ const GAME = {
       ENGINE.drawToId("container_item_canvas", 0, 0, SPRITE[sprite]);
     });
     $("#content_type").trigger("change");
+
+
+
 
     for (const shrineType in SHRINE_TYPE) {
       $("#shrine_type").append(`<option value="${shrineType}">${shrineType}</option>`);
@@ -1117,15 +1124,19 @@ const GAME = {
     });
     $("#lair_type").trigger("change");
 
-    $("#randlair").click(GAME.random_lair);
-
-
     $("#randwall").click(GAME.randomTexture.bind(null, TextureList, "#walltexture", "#wallcanvas"));
     $("#randfloor").click(GAME.randomTexture.bind(null, TextureList, "#floortexture", "#floorcanvas"));
     $("#randceil").click(GAME.randomTexture.bind(null, TextureList, "#ceiltexture", "#ceilcanvas"));
 
     $("#clear_list").click(GAME.clearMonsterList);
     $("#add_monster_list").click(GAME.addToMonsterList);
+
+    $("#randpic").click(GAME.randomPic);
+    $("#randcrest").click(GAME.randomCrest);
+    $("#randtriggerdecal").click(GAME.randomTrigger);
+    $("#randlight").click(GAME.randomLight);
+    $("#randcontainer").click(GAME.randomContainer);
+    $("#randlair").click(GAME.random_lair);
 
     /** search inputs */
     const filterOptions = (selectId, searchId) => {
@@ -1138,6 +1149,7 @@ const GAME = {
     };
 
     $('#searchItems').on('keyup', () => filterOptions("#content_type", "#searchItems"));
+    $('#searchContainers').on('keyup', () => filterOptions("#container_type", "#searchContainers"));
     $('#searchDecalTexture').on('keyup', () => filterOptions("#texture_decal", "#searchDecalTexture"));
     $('#searchDecals').on('keyup', () => filterOptions("#crest_decal", "#searchDecals"));
     $('#searchPics').on('keyup', () => filterOptions("#picture_decal", "#searchPics"));
@@ -1187,6 +1199,13 @@ const GAME = {
   random_lair() {
     const lair = LAIR_DECALS.chooseRandom();
     $("#lair_type").val(lair).change();
+  },
+  randomContainer() {
+    const searchContainer = $('#searchContainers').val().toLowerCase();
+    const filtered_containers = CONTAINER_LIST.filter(cont => cont.toLowerCase().includes(searchContainer));
+    const container = filtered_containers.chooseRandom();
+    if (!container) return;
+    $("#container_type").val(container).change();
   },
   randomLight() {
     const search_light = $('#searchLights').val().toLowerCase();

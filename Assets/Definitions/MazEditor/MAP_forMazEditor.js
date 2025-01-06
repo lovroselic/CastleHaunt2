@@ -501,4 +501,9 @@ for (let i = 1; i <= MAX_LAIR_COUNT; i++) {
     LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
 }
 console.info("LAIR_DECALS", LAIR_DECALS);
+
+const CONTAINER_LIST = [];
+for (const container in CONTAINER_ITEM_TYPE) {
+    CONTAINER_LIST.push(container);
+}
 console.log("%cMAP for MazEditor loaded.", "color: #888");

@@ -2627,12 +2627,15 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB13AA24BAA91BB2AA42BAA2BB29ABB22AA11BB4ABB25ABB14ABB3A$"}',
+        data: '{"width":"17","height":"17","map":"BB8AA3BB2AA13BAA30BAA15BAA7BB2AA17BAA3BAA5BABB2AA2BAA52BAA2BB12ABB2AA2BAA2BB7ABB21AA3BB4AA4BABB2ABB4AA3BB25ABB14ABB3A$"}',
         wall: "GlossyBrownBrickedWall53",
         floor: "OrnateFloor105",
         ceil: "WebbedFloor5",
         start: '[32,3]',
+        decals: '[[102,5,"BookShelf12","crest"],[170,5,"BookShelf14","crest"]]',
+        lights: '[[144,3,"WallLamp18","standard"],[144,5,"FluxLight112","standard"],[108,3,"Candle71","standardDimmed"],[176,3,"Candle53","standardDimmed"],[112,5,"Candle54","standardDimmed"],[180,5,"Candle69","standardDimmed"],[144,1,"FluxLight123","standard"],[144,7,"FluxLight106","standard"]]',
         gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"],[271,3,"109.3","116.2","Closed"]]',
+        entities: '[[136,5,"YoniLibrarian"]]',
         }
     ,
     110: {

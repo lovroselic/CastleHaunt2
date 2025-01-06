@@ -1865,7 +1865,179 @@ const CONTAINER_ITEM_TYPE = {
         texture: "IronChest",
         material: MATERIAL.silver,
         rotateToNorth: Math.PI,
+    },
+
+    MetalCrate50: {
+        name: "MetalCrate50",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.25 / (2 ** 4),
+        glueToFloor: true,
+        texture: "MetalCrateTexture50",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    MetalCrate51: {
+        name: "MetalCrate51",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.13 / (2 ** 4),
+        glueToFloor: true,
+        texture: "MetalCrateTexture51",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    MetalCrate52: {
+        name: "MetalCrate52",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.3 / (2 ** 4),
+        glueToFloor: true,
+        texture: "MetalCrateTexture52",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    MetalCrate53: {
+        name: "MetalCrate53",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.15 / (2 ** 4),
+        glueToFloor: true,
+        texture: "MetalCrateTexture53",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    MetalCrate54: {
+        name: "MetalCrate54",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.29 / (2 ** 4),
+        glueToFloor: true,
+        texture: "MetalCrateTexture54",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate50: {
+        name: "WoodenCrate50",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.05 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture50",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate51: {
+        name: "WoodenCrate51",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.22 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture51",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate52: {
+        name: "WoodenCrate52",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.48 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture52",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate53: {
+        name: "WoodenCrate53",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.18 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture53",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate54: {
+        name: "WoodenCrate54",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.22 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture54",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate55: {
+        name: "WoodenCrate55",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.25 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture55",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate56: {
+        name: "WoodenCrate56",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.25 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture56",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate57: {
+        name: "WoodenCrate57",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.26 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture57",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate58: {
+        name: "WoodenCrate58",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.18 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture58",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate59: {
+        name: "WoodenCrate59",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.37 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture59",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate60: {
+        name: "WoodenCrate60",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.36 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture60",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
+    },
+    WoodenCrate61: {
+        name: "WoodenCrate61",
+        category: "chest",
+        element: "FRAGILE_CRATE",
+        scale: 1.05 / (2 ** 4),
+        glueToFloor: true,
+        texture: "WoodenCrateTexture61",
+        material: MATERIAL.standardShine,
+        rotateToNorth: 0
     }
+
 };
 
 const DOOR_TYPE = {
@@ -4109,9 +4281,29 @@ const INTERACTION_ITEM = {
         inventorySprite: "Kiss",
         text: "This looks like a portable kiss voucher. What a fascinating concept."
     },
+    Spectacles: {
+        name: "Spectacles",
+        category: "interaction_item",
+        inventorySprite: "Spectacles",
+        text: "Spectacles with round rims. This is a fashion hit of the Castle Creep."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    YoniLibrarian: {
+        name: "YoniLibrarian",
+        sprite: "YoniLibrarian",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Spectacles"],
+        gives: "YoniBook",
+        text: {
+            intro: "These old spectacles are so last century. Help me find something more fashionable, and I'll share a rare treasure from my collection.",
+            progress: null,
+            conclusion: "Ah, these new spectacles are perfect! I'm so grateful, I'll gift you a rare and sacred text about worshipping goddess Yoni. Was it goddess or baddass?."
+        }
+    },
+
     Frogessa: {
         name: "Frogessa",
         sprite: "Frogessa",
@@ -4125,7 +4317,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Alas, the curse remains unbroken. But I am grateful for your effort. Take my spare fins. They might be more useful than my fairy tale."
         }
     },
-    
     CorridorSwimmer: {
         name: "CorridorSwimmer",
         sprite: "CorridorSwimmer",
