@@ -69,8 +69,8 @@ const DEBUG = {
             DONE "Frogessa" wants "Kiss" gives "Fins"
             DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives "shuriken"
             DONE YoniLibrARIAn wants "Spectacles" give YoniBook
-        ?lizard?
-        ?new witch
+            DONE KnightWithoutHelmet wants helmet gives MAce
+            DONE Shroomess wants "Mushroom", "Mushroom", "Mushroom" gives "TreeOfLifeBook"
 
         apparitias:
 
@@ -84,15 +84,15 @@ const DEBUG = {
         * "Sword", 
         * "Spear",
         * "BattleAxe", 
-        * "Mace"
-        * "IceCube", 
-        * "IceCube", 
-        * "IceCube"
+            DONE * "Mace" <-- KnightWithoutHelmet (110)
+            DONE * "IceCube",117
+            DONE * "IceCube",117
+            DONE * "IceCube" 117
         * "Rat"
         * "Rat"
         * "Rat"
             DONE * "Shuriken", <-- "CorridorSwimmer" (108)
-        * "Shuriken",
+            DONE * "Shuriken", <-- 110
         * "Shuriken"
             DONE * "YoniBook",  <-- YoniLibrARIAn (109)
         * "YinYangBook", 
@@ -101,14 +101,18 @@ const DEBUG = {
         * "AnkhBook", 
         * "FireballBook", 
         * "PrincessBook", 
-        * "TreeOfLifeBook"
-        * "BabySheep",
+            DONE * "TreeOfLifeBook" <-- Shroomess (113)
+            DONE* "BabySheep", 114
         * "BabySheep",
         * "BabySheep"
         * "ScubaMask", 
             DONE * "Fins" <--"Frogessa" wants kiss (112)
         * "Kiss"
-         "Spectacles"
+        "Spectacles"
+        "Helmet"
+        "Mushroom", 
+        "Mushroom", 
+        "Mushroom"
 
 
         * coins sources (x, missing x = ):
@@ -122,6 +126,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
+            * Silver
 
          * missing sources for: 
             * 
@@ -131,7 +136,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 109; //104
+        GAME.level = 114; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -202,7 +207,7 @@ const DEBUG = {
 
         let invItems = [
             //debug
-           
+            
         ];
 
         for (let itm of invItems) {
@@ -250,7 +255,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.09",
+    VERSION: "0.18.10",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

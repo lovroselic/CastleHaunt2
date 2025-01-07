@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104 : {
+    104: {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2547,7 +2547,7 @@ const MAP = {
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-        }
+    }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2621,13 +2621,13 @@ const MAP = {
         entities: '[[136,5,"CorridorSwimmer"]]',
     }
     ,
-    109 : {
+    109: {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB8AA3BB2AA13BAA30BAA15BAA7BB2AA17BAA3BAA5BABB2AA2BAA52BAA2BB12ABB2AA2BAA2BB7ABB21AA3BB4AA4BABB2ABB4AA3BB25ABB14ABB3A$"}',
+        data: '{"width":"17","height":"17","map":"BB2ABB6AA4BB2AA3BAA40BABAA22BB2AA25BAA3BB3AA7BABAA27BAA4BAA12BB2ABB12ABB3AA5BB9ABB6ABB4ABB5ABB4AA3BB5AA2BB10AA5BB3ABB2ABB11ABB15A$"}',
         wall: "GlossyBrownBrickedWall53",
         floor: "OrnateFloor105",
         ceil: "WebbedFloor5",
@@ -2635,8 +2635,9 @@ const MAP = {
         decals: '[[102,5,"BookShelf12","crest"],[170,5,"BookShelf14","crest"]]',
         lights: '[[144,3,"WallLamp18","standard"],[144,5,"FluxLight112","standard"],[108,3,"Candle71","standardDimmed"],[176,3,"Candle53","standardDimmed"],[112,5,"Candle54","standardDimmed"],[180,5,"Candle69","standardDimmed"],[144,1,"FluxLight123","standard"],[144,7,"FluxLight106","standard"]]',
         gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"],[271,3,"109.3","116.2","Closed"]]',
+        containers: '[[65,"WoodenCrate61","GOLD_ITEM_TYPE.GoldBar",7]]',
         entities: '[[136,5,"YoniLibrarian"]]',
-        }
+    }
     ,
     110: {
         name: "West Wing",
@@ -2644,12 +2645,17 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB3AA2BB11AA143BABAA10BB16ABABB18ABB9AA3BB3AA9BB37ABB2ABB14$"}',
+        data: '{"width":"17","height":"17","map":"BB4AA2BB3ABAA2BAA9BB2AA33BAA4BAA13BB2AA4BAA12BAA18BAA2BB2AA36BABAA8BB13AA2BB4AA3BAA2BB2ABB12ABB3ABB2AA2BB2ABB2AA2BB3AA2BB2AA2BB3AA2BB34ABB2ABB14$"}',
         wall: "GlossyBrownBrickedWall60",
         floor: "BloodMarbleFloorWall_SDXL_003",
         ceil: "DarkMossy7",
         start: '[270,1]',
+        lights: '[[142,3,"Lamp45","standard"],[63,5,"Candle72","dimCandle"],[233,5,"Candle56","dimCandle"],[126,5,"DuaLLantern_001","standard"],[160,5,"FluxLight121","standard"],[148,3,"FluxLight104","standard"]]',
         gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"]]',
+        containers: '[[144,"WoodenCrate50","INTERACTION_ITEM.Shuriken",5]]',
+        entities: '[[136,5,"KnightWithoutHelmet"]]',
+        lairs: '[[68,5,"Lair71"],[204,5,"Lair12"]]',
+        monsterList: '["GreenSkeleton","BlueSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton"]',
     }
     ,
     111: {
@@ -2689,27 +2695,38 @@ const MAP = {
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB4AA2BABB7AA89BAA15BAA9BABB15ABB36AA2BB29AA8BB55ABB3ABAA2BB2A$"}',
+        data: '{"width":"17","height":"17","map":"BB3AA2BABABB2AA18BABAA9BAA2BAA2BAA4BAA7BAA4BAA7BAA12BAA4BAA5BB3AA36BAA3BB5ABB6AA9BB10AA3BABB3ABB4ABB8ABB11AA2BABB2ABAA5BAA3BB3ABB2AA2BB8ABABABB2ABABB2ABB2AA2BB5AA2BB7ABB18A$"}',
         wall: "BlackWall44",
         floor: "FloorTiles_SDXL_011",
         ceil: "OrnateFloor105",
         start: '[18,5]',
-        gates: '[[17,5,"113.1","112.2","Closed"],[287,1,"113.2","114.1","Closed"]]',
+        decals: '[[117,3,"Forest114","texture"],[151,3,"Forest114","texture"],[151,1,"Forest114","texture"],[117,7,"Forest114","texture"],[116,4,"ForestFloor03","texture"],[133,4,"ForestFloor03","texture"],[150,4,"ForestFloor03","texture"],[134,4,"ForestFloor03","texture"]]',
+        lights: '[[110,5,"Lamp44","standard"],[143,5,"DuaLLantern_018","standard"],[176,5,"WallLamp18","standard"],[209,5,"FluxLight106","standard"],[77,5,"Candle64","weakCandle"],[15,7,"Candle55","weakCandle"],[68,5,"Fireplace203","fire"],[204,5,"Fireplace11","fire"]]',
+        gates: '[[17,5,"113.1","112.2","Closed"],[287,1,"113.2","114.1","Closed"],[83,1,"113.3","117.1","Silver"]]',
+        skills: '[[25,"Heart"]]',
+        triggers: '[[160,4,"SmoothWallButton",1,22],[264,4,"SmoothWallButton",1,21]]',
+        entities: '[[135,3,"Shroomess"]]',
+        lairs: '[[278,1,"Lair63"],[281,1,"Lair03"],[284,1,"Lair82"]]',
+        monsterList: '["GreenSkeleton"]',
     }
     ,
-    114: {
+    114 : {
         name: "East Wing",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
-        spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB3AA2BB4ABB2ABB2AA12BAA74BAA12BB8AA11BB2ABB4AA2BAA5BB34ABB13AA2BAA3BAA5BB10ABB50AA2BABB3$BB11A"}',
-        wall: "BlackWall44",
-        floor: "FloorTiles_SDXL_011",
-        ceil: "OrnateFloor105",
+        spawnDelay: 6000,
+        data: '{"width":"17","height":"17","map":"BB2ABB3AA5BAA4BB5AA16BAA70BAA12BB7AA3BB2AA2BAA6BB2ABB4AA2BAA5BB9AA2BB6ABB3ABB2ABAA2BB7ABB9ABAA3BABB10ABB50AA2BABB3$BB11A"}',
+        wall: "DarkWall10001",
+        floor: "GrayFloor23",
+        ceil: "RockWall_SDXL_009",
         start: '[18,7]',
+        lights: '[[120,1,"FluxLight127","standard"],[120,7,"Candle60","standard"],[121,5,"DuaLLantern_010","standard"]]',
         gates: '[[1,7,"114.1","113.2","Closed"],[275,1,"114.2","115.1","Closed"]]',
-    }
+        movables: '[[132,"BabySheep"]]',
+        lairs: '[[101,3,"Lair51"],[203,3,"Lair81"],[117,7,"Lair23"],[185,1,"Lair32"]]',
+        monsterList: '["GoldSkeleton"]',
+        }
     ,
     115: {
         name: "South East Tower",
@@ -2725,7 +2742,7 @@ const MAP = {
         gates: '[[2,7,"115.1","114.2","Closed"],[255,5,"115.2","116.1","Closed"]]',
     }
     ,
-    116 : {
+    116: {
         name: "South Spire",
         sg: 0,
         maxSpawned: 4,
@@ -2737,5 +2754,23 @@ const MAP = {
         ceil: "OrnateFloor105",
         start: '[32,3]',
         gates: '[[33,3,"116.1","115.2","Closed"],[136,5,"116.2","109.3","Closed"]]',
+    }
+    ,
+    117 : {
+        name: "Ice Pie",
+        sg: 0,
+        maxSpawned: 6,
+        killCountdown: 4,
+        spawnDelay: 5000,
+        data: '{"width":"17","height":"17","map":"BB2ABABAA4BAA2BB2AA6BABB8ABABAA2BB2AA2BAA4BAA16BB5ABB3AA4BAA5BB6ABB6ABB2ABABB4AA4BB9ABB9ABAA4BAA5BB2AA2BAA9BABB6AA2BB7AA3BB3AA2BB2AA2BB2ABB2AA6BAA4BABB2ABB4AA3BB6AA2BB9AA5BB3AA4BB6ABB7AA3BB5ABABB3ABB19A$"}',
+        wall: "IceWall29",
+        floor: "IceFloor33",
+        ceil: "IceWall7",
+        start: '[18,7]',
+        gates: '[[1,7,"117.1","113.3","Closed"]]',
+        triggers: '[[36,7,"SmoothWallButton",1,22],[273,1,"SmoothWallButton",1,69]]',
+        objects: '[[256,"IceCube"],[162,"IceCube"],[132,"IceCube"]]',
+        lairs: '[[39,7,"Lair36"],[157,5,"Lair29"],[287,1,"Lair13"],[234,1,"Lair74"]]',
+        monsterList: '["GreenSkeleton"]',
         }
 };

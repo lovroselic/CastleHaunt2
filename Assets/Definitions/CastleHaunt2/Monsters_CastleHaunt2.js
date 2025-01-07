@@ -4290,6 +4290,32 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    Shroomess: {
+        name: "Shroomess",
+        sprite: "Shroomess",
+        category: 'crest',
+        voice: "FemaleLow",
+        wants: ["Mushroom", "Mushroom", "Mushroom"],
+        gives: "TreeOfLifeBook",
+        text: {
+            intro: "Life's deeper truths lie hidden in the shrooms. Bring me enough, and I'll share the wisdom I've gathered in my Tree of Life book.",
+            progress: "Another shroom delivered, but my trip isn't complete. Keep gathering!",
+            conclusion: "Ah, the shrooms have spoken! As promised, here's my Tree of Life book. May it open your mind as it did mine."
+        }
+    },    
+    KnightWithoutHelmet: {
+        name: "KnightWithoutHelmet",
+        sprite: "KnightWithoutHelmet",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Helmet"],
+        gives: "Mace",
+        text: {
+            intro: "A true knight must protect her golden locks, even in battle. Bring me a helmet, and I'll part with my spare mace as I am more of a sword girl myself.",
+            progress: null,
+            conclusion: "Ah, finally, my hair is safe! As promised, take my mace. May it serve you well in your battles."
+        }
+    },
     YoniLibrarian: {
         name: "YoniLibrarian",
         sprite: "YoniLibrarian",
@@ -4303,7 +4329,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Ah, these new spectacles are perfect! I'm so grateful, I'll gift you a rare and sacred text about worshipping goddess Yoni. Was it goddess or baddass?."
         }
     },
-
     Frogessa: {
         name: "Frogessa",
         sprite: "Frogessa",

@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.05",
+  VERSION: "0.14.06",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -995,8 +995,6 @@ const GAME = {
     });
     $("#key_type").trigger("change");
 
-
-
     for (const monsterType in MONSTER_TYPE) {
       $("#monster_type").append(`<option value="${monsterType}">${monsterType} A: ${MONSTER_TYPE[monsterType].attack} D: ${MONSTER_TYPE[monsterType].defense} M: ${MONSTER_TYPE[monsterType].magic}</option>`);
     }
@@ -1018,6 +1016,7 @@ const GAME = {
     });
     $("#potion_type").trigger("change");
 
+
     for (const goldType in GOLD_ITEM_TYPE) {
       $("#gold_type").append(`<option value="${goldType}">${goldType}</option>`);
     }
@@ -1030,11 +1029,15 @@ const GAME = {
     for (const skillType in SKILL_ITEM_TYPE) {
       $("#skill_type").append(`<option value="${skillType}">${skillType}</option>`);
     }
+    $("#skill_type").change(function () {
+      const skill_type = $("#skill_type")[0].value;
+      ENGINE.drawToId("skillcanvas", 0, 0, ENGINE.conditionalResize(SPRITE[SKILL_ITEM_TYPE[skill_type].inventorySprite], INI.CANVAS_RESOLUTION));
+    });
+    $("#skill_type").trigger("change");
 
     for (const containerType in CONTAINER_ITEM_TYPE) {
       $("#container_type").append(`<option value="${containerType}">${containerType}</option>`);
     }
-
     $("#container_type").change(function () {
       const container_type = $("#container_type")[0].value;
       ENGINE.drawToId("containercanvas", 0, 0, ENGINE.conditionalResize(TEXTURE[CONTAINER_ITEM_TYPE[container_type].texture], INI.CANVAS_RESOLUTION));
@@ -1051,20 +1054,35 @@ const GAME = {
     });
     $("#content_type").trigger("change");
 
-
-
-
     for (const shrineType in SHRINE_TYPE) {
       $("#shrine_type").append(`<option value="${shrineType}">${shrineType}</option>`);
     }
+    $("#shrine_type").change(function () {
+      const entity = $("#shrine_type")[0].value;
+      ENGINE.drawToId("shrinecanvas", 0, 0, ENGINE.conditionalResize(SPRITE[entity], INI.CANVAS_RESOLUTION));
+    });
+    $("#shrine_type").trigger("change");
+
 
     for (const item_shrine_type in INTERACTION_SHRINE) {
       $("#item_shrine_type").append(`<option value="${item_shrine_type}">${item_shrine_type}</option>`);
     }
+    $("#item_shrine_type").change(function () {
+      const entity = $("#item_shrine_type")[0].value;
+      ENGINE.drawToId("trainercanvas", 0, 0, ENGINE.conditionalResize(SPRITE[entity], INI.CANVAS_RESOLUTION));
+    });
+    $("#item_shrine_type").trigger("change");
+
 
     for (const oracleType in ORACLE_TYPE) {
       $("#oracle_type").append(`<option value="${oracleType}">${oracleType}</option>`);
     }
+    $("#oracle_type").change(function () {
+      const entity = $("#oracle_type")[0].value;
+      ENGINE.drawToId("oraclecanvas", 0, 0, ENGINE.conditionalResize(SPRITE[entity], INI.CANVAS_RESOLUTION));
+    });
+    $("#oracle_type").trigger("change");
+
 
     for (const triggerDecal of TRIGGER_DECALS) {
       $("#trigger_decal").append(`<option value="${triggerDecal}">${triggerDecal}</option>`);
@@ -1081,6 +1099,11 @@ const GAME = {
     for (const entity in INTERACTION_ENTITY) {
       $("#entity_type").append(`<option value="${entity}">${entity}</option>`);
     }
+    $("#entity_type").change(function () {
+      const entity = $("#entity_type")[0].value;
+      ENGINE.drawToId("entitycanvas", 0, 0, ENGINE.conditionalResize(SPRITE[entity], INI.CANVAS_RESOLUTION));
+    });
+    $("#entity_type").trigger("change");
 
     for (const obj in INTERACTION_OBJECT) {
       $("#interaction_object_type").append(`<option value="${obj}">${obj}</option>`);

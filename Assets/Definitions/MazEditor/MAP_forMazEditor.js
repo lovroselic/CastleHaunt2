@@ -494,6 +494,7 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
 ].sort();
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
 
+
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
 const MAX_LAIR_COUNT = 82;

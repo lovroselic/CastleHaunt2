@@ -2,9 +2,21 @@
 /*jshint -W097 */
 /*jshint -W117 */
 /*jshint -W061 */
-//Assets for CastleHaunt2
+//Assets for CastleHaunt2 (and MAzEditor())
 "use strict";
 console.log("%cAssets for CastleHaunt started.", "color: orange");
+
+/** MazeEditor dependencies */
+LoadSheetSequences = [
+    { srcName: "BrownWall64.png", count: 12, name: "WallTile", trim: false },
+    { srcName: "BlackWall64.png", count: 2, name: "BackgroundTile", trim: false },
+    { srcName: "d3-64.png", count: 6, name: "D3", trim: false },
+    { srcName: "VertiWall64.png", count: 1, name: "VerticalWall", trim: false },
+    { srcName: "HoriWall64.png", count: 1, name: "HorizontalWall", trim: true },
+    { srcName: "BlockWall64.png", count: 1, name: "BlockWall", trim: false },
+];
+
+/** END */
 
 LoadFonts = [
     { srcName: "PentaGram.ttf", name: "Pentagram" },
@@ -813,6 +825,36 @@ LoadTextures = [
     { srcName: "Wall/SeaWaterWall.jpg", name: "SeaWaterWall" },
     { srcName: "Wall/SeaWater1.jpg", name: "SeaWater1" },
     { srcName: "Wall/SeaWater2.jpg", name: "SeaWater2" },
+    { srcName: "Wall/BlackWall215.jpg", name: "BlackWall215" },
+    { srcName: "Wall/GrayFloor23.jpg", name: "GrayFloor23" },
+    { srcName: "Wall/GreyFloor21.jpg", name: "GreyFloor21" },
+    { srcName: "Wall/GreyFloor26.jpg", name: "GreyFloor26" },
+    { srcName: "Wall/GreyFloor27.jpg", name: "GreyFloor27" },
+    { srcName: "Wall/GreyFloor29.jpg", name: "GreyFloor29" },
+    { srcName: "Wall/GreyFloorWall30.jpg", name: "GreyFloorWall30" },
+    { srcName: "Wall/IceFloor22.jpg", name: "IceFloor22" },
+    { srcName: "Wall/IceFloor24.jpg", name: "IceFloor24" },
+    { srcName: "Wall/IceFloor28.jpg", name: "IceFloor28" },
+    { srcName: "Wall/IceFloor31.jpg", name: "IceFloor31" },
+    { srcName: "Wall/IceFloor32.jpg", name: "IceFloor32" },
+    { srcName: "Wall/IceFloor33.jpg", name: "IceFloor33" },
+    { srcName: "Wall/IceFloor37.jpg", name: "IceFloor37" },
+    { srcName: "Wall/IceWall11.jpg", name: "IceWall11" },
+    { srcName: "Wall/IceWall12.jpg", name: "IceWall12" },
+    { srcName: "Wall/IceWall13.jpg", name: "IceWall13" },
+    { srcName: "Wall/IceWall21.jpg", name: "IceWall21" },
+    { srcName: "Wall/IceWall22.jpg", name: "IceWall22" },
+    { srcName: "Wall/IceWall23.jpg", name: "IceWall23" },
+    { srcName: "Wall/IceWall27.jpg", name: "IceWall27" },
+    { srcName: "Wall/IceWall29.jpg", name: "IceWall29" },
+    { srcName: "Wall/RedBricks100.jpg", name: "RedBricks100" },
+    { srcName: "Wall/RedBricks101.jpg", name: "RedBricks101" },
+    { srcName: "Wall/WetBlackWall35.jpg", name: "WetBlackWall35" },
+    { srcName: "Wall/WetBlackWall36.jpg", name: "WetBlackWall36" },
+    { srcName: "Wall/WhiteWall24.jpg", name: "WhiteWall24" },
+    { srcName: "Wall/WhiteWall25.jpg", name: "WhiteWall25" },
+    { srcName: "Wall/WhiteWall26.jpg", name: "WhiteWall26" },
+    { srcName: "Wall/WhiteWall28.jpg", name: "WhiteWall28" },
     /** decals that are textures */
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 
@@ -947,10 +989,8 @@ LoadAudio = [
     { srcName: "AngryCat.mp3", name: "AngryCat" },
     { srcName: "Sheep.mp3", name: "Sheep" },
     { srcName: "Banshee.mp3", name: "Banshee" },
-
     { srcName: "CatchFireball.mp3", name: "CatchFireball" },
     { srcName: "PrincessScream.mp3", name: "PrincessScream" },
-
     { srcName: "Eating.mp3", name: "Eating" },
 
     //monstersounds
@@ -1280,6 +1320,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Swimmer1.jpg", name: "CorridorSwimmer" },
     { srcName: "EntityPictures/Frogessa.jpg", name: "Frogessa" },
     { srcName: "EntityPictures/YoniLibrarian.jpg", name: "YoniLibrarian" },
+    { srcName: "EntityPictures/KnightWithoutHelmet.jpg", name: "KnightWithoutHelmet" },
+    { srcName: "EntityPictures/Shroomess.jpg", name: "Shroomess" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1421,11 +1463,22 @@ LoadSprites = [
     { srcName: "Shrines/PrincessSpringHeart.jpg", name: "PrincessSpringHeart" },
     { srcName: "Shrines/PrincessSpringOrb.jpg", name: "PrincessSpringOrb" },
 
-
     //scrolls
+    { srcName: "Scrolls/SCR_BoostArmor.png", name: "SCR_BoostArmor" },
+    { srcName: "Scrolls/SCR_BoostWeapon.png", name: "SCR_BoostWeapon" },
     { srcName: "Scrolls/SCR_Cripple2.png", name: "SCR_Cripple" },
+    { srcName: "Scrolls/SCR_DestroyArmor.png", name: "SCR_DestroyArmor" },
+    { srcName: "Scrolls/SCR_DestroyWeapon.png", name: "SCR_DestroyWeapon" },
+    { srcName: "Scrolls/SCR_DrainMana.png", name: "SCR_DrainMana" },
     { srcName: "Scrolls/SCR_Explode2.png", name: "SCR_Explode" },
     { srcName: "Scrolls/SCR_HalfLife2.png", name: "SCR_HalfLife" },
+    { srcName: "Scrolls/SCR_Light.png", name: "SCR_Light" },
+    { srcName: "Scrolls/SCR_Luck.png", name: "SCR_Luck" },
+    { srcName: "Scrolls/SCR_MagicBoost.png", name: "SCR_MagicBoost" },
+    { srcName: "Scrolls/SCR_Map.png", name: "SCR_Map" },
+    { srcName: "Scrolls/SCR_Petrify.png", name: "SCR_Petrify" },
+    { srcName: "Scrolls/SCR_Radar.png", name: "SCR_Radar" },
+    { srcName: "Scrolls/SCR_TeleportTemple.png", name: "SCR_TeleportTemple" },
     { srcName: "Scrolls/SCR_Death.png", name: "SCR_Death" },
     { srcName: "Scrolls/SCR_MagicSupremacy.png", name: "SCR_MagicSupremacy" },
     { srcName: "Scrolls/SCR_DestroyOrbs.png", name: "SCR_DestroyOrbs" },
@@ -1710,7 +1763,6 @@ LoadSprites = [
     { srcName: "Lights/Candelabra16.png", name: "Candelabra16" },
     { srcName: "Lights/Candelabra17.png", name: "Candelabra17" },
     { srcName: "Lights/Candelabra18.png", name: "Candelabra18" },
-
     { srcName: "Lights/Fireplace101.jpg", name: "Fireplace101" },
     { srcName: "Lights/Fireplace102.jpg", name: "Fireplace102" },
     { srcName: "Lights/Fireplace103.jpg", name: "Fireplace103" },
@@ -1718,7 +1770,6 @@ LoadSprites = [
     { srcName: "Lights/Fireplace105.jpg", name: "Fireplace105" },
     { srcName: "Lights/Fireplace106.jpg", name: "Fireplace106" },
     { srcName: "Lights/Fireplace107.jpg", name: "Fireplace107" },
-
     { srcName: "Lights/Fireplace201.jpg", name: "Fireplace201" },
     { srcName: "Lights/Fireplace202.jpg", name: "Fireplace202" },
     { srcName: "Lights/Fireplace203.jpg", name: "Fireplace203" },
