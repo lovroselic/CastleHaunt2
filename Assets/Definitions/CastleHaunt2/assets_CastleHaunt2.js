@@ -1029,7 +1029,7 @@ LoadObjects = [
 
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
-    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf", "Dragon.gltf", "SkeleDwarf.gltf", "Astro.gltf"
+    "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf", "Dragon.gltf", "SkeleDwarf.gltf", "Astro.gltf", "Hulk.gltf",
 ];
 
 LoadSprites = [
@@ -1093,6 +1093,7 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaHopeless.jpg", name: "ApparitiaHopeless" },
     { srcName: "EntityPictures/ApparitiaBlood.jpg", name: "ApparitiaBlood" },
     { srcName: "EntityPictures/ApparitiaMajor.jpg", name: "ApparitiaMajor" },
+    { srcName: "EntityPictures/ApparitiaSword.jpg", name: "ApparitiaSword" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1322,6 +1323,9 @@ LoadSprites = [
     { srcName: "EntityPictures/YoniLibrarian.jpg", name: "YoniLibrarian" },
     { srcName: "EntityPictures/KnightWithoutHelmet.jpg", name: "KnightWithoutHelmet" },
     { srcName: "EntityPictures/Shroomess.jpg", name: "Shroomess" },
+    { srcName: "EntityPictures/Viking.jpg", name: "Viking" },
+    { srcName: "EntityPictures/ApparitiaDefector.jpg", name: "ApparitiaDefector" },
+    { srcName: "EntityPictures/Narancina.jpg", name: "Narancina" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1655,6 +1659,10 @@ LoadSprites = [
     { srcName: "Items/GoldSphere.png", name: "GoldSphere" },
     { srcName: "Items/Kiss.png", name: "Kiss" },
     { srcName: "Items/Spectacles.png", name: "Spectacles" },
+    { srcName: "Items/OrangeLeggings.png", name: "OrangeLeggings" },
+    { srcName: "Items/OrangeBoots.png", name: "OrangeBoots" },
+    { srcName: "Items/OrangeBra.png", name: "OrangeBra" },
+    { srcName: "Items/SkullNecklace.png", name: "SkullNecklace" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

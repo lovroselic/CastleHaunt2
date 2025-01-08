@@ -71,7 +71,9 @@ const DEBUG = {
             DONE YoniLibrARIAn wants "Spectacles" give YoniBook
             DONE KnightWithoutHelmet wants helmet gives MAce
             DONE Shroomess wants "Mushroom", "Mushroom", "Mushroom" gives "TreeOfLifeBook"
-
+            DONE Viking wants "Beer", "GlassOfBeer" give "battleaXe"
+            DONE ApparitiaDefector wants "OrangeLeggings", "OrangeBra", "OrangeBoots" gives spear
+            DONE Narancina wants "SkullNecklace" give "OrangeBoots"
         apparitias:
 
 
@@ -81,9 +83,9 @@ const DEBUG = {
         * "Chicken", 
         * "Chicken"
         * "Dagger", 
-        * "Sword", 
-        * "Spear",
-        * "BattleAxe", 
+            DONE * "Sword", <-- 114
+            DONE * "Spear", <--ApparitiaDefector (115)
+            DONE * "BattleAxe", <-- Viking (114)
             DONE * "Mace" <-- KnightWithoutHelmet (110)
             DONE * "IceCube",117
             DONE * "IceCube",117
@@ -113,6 +115,12 @@ const DEBUG = {
         "Mushroom", 
         "Mushroom", 
         "Mushroom"
+        "Beer", 
+        "GlassOfBeer"
+        "OrangeLeggings", 
+        "OrangeBra", 
+            DONE "OrangeBoots" <-- Narancina (116)
+        "SkullNecklace"
 
 
         * coins sources (x, missing x = ):
@@ -136,7 +144,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 114; //104
+        GAME.level = 116; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -207,7 +215,7 @@ const DEBUG = {
 
         let invItems = [
             //debug
-            
+            "SkullNecklace"
         ];
 
         for (let itm of invItems) {
@@ -255,7 +263,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.10",
+    VERSION: "0.18.11",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -1257,7 +1265,7 @@ const GAME = {
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
             DYNAMIC_ITEM3D.drawVector2D();
-            //WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
+           // WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
         }
     },
     processInteraction(interaction) {
@@ -1671,6 +1679,8 @@ const GAME = {
         console.info("RESURECT");
         ENGINE.clearLayer("text");
         HERO.revive();
+        ENTITY3D.POOL.clear();
+        MISSILE3D.POOL.clear();
         GAME.levelStart();
     },
     gameOverRun(lapsedTime) {

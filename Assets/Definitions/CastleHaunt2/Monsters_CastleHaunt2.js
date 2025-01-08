@@ -1538,6 +1538,14 @@ const ORACLE_TYPE = {
         text: "Don't you like are shiny Golden Skeletons? They will GreenOrb you to death.",
         interactionCategory: "oracle",
     },
+    ApparitiaSword: {
+        name: "ApparitiaSword",
+        sprite: "ApparitiaSword",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Are you preparing for the final battle? We are waiting for you. Come Princess.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -2792,6 +2800,25 @@ const MONSTER_TYPE = {
         material: MATERIAL.redShine,
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
+    Hulk: {
+        name: "Hulk",
+        model: "Hulk",
+        scale: 1.5 / 2 ** 6,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 100,
+        attack: 200,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "HumanAttack1",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [10, ["wanderer"], 4, ["advancer"]],
+        moveSpeed: 1.0,
+        material: MATERIAL.greenShine,
     },
 };
 
@@ -4287,9 +4314,72 @@ const INTERACTION_ITEM = {
         inventorySprite: "Spectacles",
         text: "Spectacles with round rims. This is a fashion hit of the Castle Creep."
     },
+    OrangeLeggings: {
+        name: "OrangeLeggings",
+        category: "interaction_item",
+        inventorySprite: "OrangeLeggings",
+        text: "Cute stuff. Befitting a princess. But not my style."
+    },
+    OrangeBra: {
+        name: "OrangeBra",
+        category: "interaction_item",
+        inventorySprite: "OrangeBra",
+        text: "Cute stuff. Befitting a princess. But not my style."
+    },
+    OrangeBoots: {
+        name: "OrangeBoots",
+        category: "interaction_item",
+        inventorySprite: "OrangeBoots",
+        text: "Cute stuff. Befitting a princess. But not my style."
+    },
+    SkullNecklace: {
+        name: "SkullNecklace",
+        category: "interaction_item",
+        inventorySprite: "SkullNecklace",
+        text: "Golden necklace with the skull pendant. Amazing."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    Narancina: {
+        name: "Narancina",
+        sprite: "Narancina",
+        category: 'crest',
+        voice: "Female",
+        wants: ["SkullNecklace"],
+        gives: "OrangeBoots",
+        text: {
+            intro: "A girl needs her bling! A gold necklace with a skull pendant. Perfect for my style. Bring me one, and I'll trade you my fancy orange boots.",
+            progress: null,
+            conclusion: "This necklace is to die for! As promised, here are my orange leather boots. Walk in style, darling."
+        }
+    },    
+    ApparitiaDefector: {
+        name: "ApparitiaDefector",
+        sprite: "ApparitiaDefector",
+        category: 'crest',
+        voice: "Apparitia",
+        wants: ["OrangeLeggings", "OrangeBra", "OrangeBoots"],
+        gives: "Spear",
+        text: {
+            intro: "I'm ready to defect to your side, Princess. But I'll need a disguise. Orange is the new white, after all. Help me out, and my spear is yours.",
+            progress: "One sleek piece closer to a brighter disguise, but I still stand out like a ghost. Keep going!",
+            conclusion: "I'm fully orange and no longer glaringly white! As promised, here's my spear. May it serve you better than my old allies. Now off to the changing room."
+        }
+    },
+    Viking: {
+        name: "Viking",
+        sprite: "Viking",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Beer", "GlassOfBeer"],
+        gives: "BattleAxe",
+        text: {
+            intro: "After battle, a shield maiden needs her beer! Two beer, or not two beer?  No beer, no deal. What's it gonna be?",
+            progress: "One beer down, but I'm still parched. Don't leave me hanging. Bring the second! A different one.",
+            conclusion: "Ah, now that hits the spot! A promise is a promise. Here's my trusty battleaxe. Go chop some heads with honor!"
+        }
+    },
     Shroomess: {
         name: "Shroomess",
         sprite: "Shroomess",
@@ -4302,7 +4392,7 @@ const INTERACTION_ENTITY = {
             progress: "Another shroom delivered, but my trip isn't complete. Keep gathering!",
             conclusion: "Ah, the shrooms have spoken! As promised, here's my Tree of Life book. May it open your mind as it did mine."
         }
-    },    
+    },
     KnightWithoutHelmet: {
         name: "KnightWithoutHelmet",
         sprite: "KnightWithoutHelmet",

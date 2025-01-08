@@ -58,7 +58,7 @@ const INI = {
   CANVAS_RESOLUTION: 256,
 };
 const PRG = {
-  VERSION: "0.14.06",
+  VERSION: "0.14.07",
   NAME: "MazEditor",
   YEAR: "2022, 2023, 2024",
   CSS: "color: #239AFF;",
@@ -995,10 +995,12 @@ const GAME = {
     });
     $("#key_type").trigger("change");
 
+    /** monster */
     for (const monsterType in MONSTER_TYPE) {
-      $("#monster_type").append(`<option value="${monsterType}">${monsterType} A: ${MONSTER_TYPE[monsterType].attack} D: ${MONSTER_TYPE[monsterType].defense} M: ${MONSTER_TYPE[monsterType].magic}</option>`);
+      $("#monster_type").append(`<option value="${monsterType}">${monsterType} A: ${MONSTER_TYPE[monsterType].attack} H: ${MONSTER_TYPE[monsterType].health} M: ${MONSTER_TYPE[monsterType].magic}</option>`);
     }
 
+    /** scrolls */
     for (const scrollType of SCROLL_TYPE) {
       $("#scroll_type").append(`<option value="${scrollType}">${scrollType}`);
     }

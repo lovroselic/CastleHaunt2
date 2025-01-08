@@ -58,7 +58,7 @@ const ENGINE = {
     MAX_PATH: 999,
     MOUSE_IDLE: 3000,
     OVERLAP_TOLERANCE: 4,
-    MAX_JOINTS: 128,                //don't mess with this, it's hardcoded in fragment shader, both needs to be corrected at the same time
+    MAX_JOINTS: 160,                //don't mess with this, it's hardcoded in fragment shader, both needs to be corrected at the same time
   },
   verbose: false,
   setGridSize(size = 48) {
