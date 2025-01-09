@@ -88,8 +88,6 @@ const MAP_TOOLS = {
         const SG = this.MAP[level].sg || null;
         this.MAP[level].map.sg = SG;
         this.MAP[level].map.storage = new IAM_Storage();
-        this.MAP[level].map.textureMap = GA.toTextureMap();
-
         this.MAP[level].map.killCount = this.MAP[level].killCount || 0;
         this.MAP[level].map.maxSpawned = this.MAP[level].maxSpawned || -1;
         this.MAP[level].map.killCountdown = this.MAP[level].killCountdown || -1;
@@ -106,10 +104,22 @@ const MAP_TOOLS = {
      * direct accesses WebGL
      * @param {*} level - leved/dungeon/room id
      */
+    setOcclusionMap(level) {
+        const GA = this.MAP[level].map.GA;
+        const map = this.MAP[level].map;
+        map.textureMap = GA.toTextureMap();
+        map.occlusionMap = WebGL.createOcclusionTexture(map.textureMap, map.width, map.height);
+    },
+
+    /**
+     * direct accesses WebGL
+     * @param {*} level - leved/dungeon/room id
+     */
     rebuild_3D_world(level) {
         this.MAP[level].world = WORLD.build(this.MAP[level].map);
         WebGL.setWorld(this.MAP[level].world);
         this.MAP[level].map.rebuilt = true;
+        this.setOcclusionMap(level);
     },
     applyStorageActions(level) {
         if (!this.MAP[level].unused_storage) return;
@@ -137,6 +147,9 @@ const SPAWN_TOOLS = {
         methods.forEach(method => {
             this[method](map, GA);
         });
+
+        console.log("spawned", level);
+        MAP_TOOLS.setOcclusionMap(level);
     },
     decals(map, GA) {
         for (const D of map.decals) {

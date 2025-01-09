@@ -291,10 +291,6 @@ const WebGL = {
         EXPLOSION3D.init(map, hero);
         LAIR.init(map, hero);
         this.hero = hero;
-        if (map.textureMap) {
-            map.occlusionMap = this.createOcclusionTexture(map.textureMap, map.width, map.height);
-            if (this.VERBOSE) console.log("WebGL occlusionMap set:", map.occlusionMap);
-        }
     },
     setCamera(camera) {
         this.camera = camera;
@@ -313,8 +309,7 @@ const WebGL = {
         const gl = this.CTX;
         const paddedWidth = POT(width);
         const paddedHeight = POT(height);
-        //if (this.VERBOSE) console.log("new occlusion texture creation", width, height, "->", paddedWidth, paddedHeight);
-        //if (this.previousOcclusionTexture) gl.deleteTexture(this.previousOcclusionTexture);
+        //if (true) console.log("new occlusion texture creation", width, height, "->", paddedWidth, paddedHeight, "pixelData", pixelData);
 
         const texture = gl.createTexture();
         gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
@@ -327,7 +322,6 @@ const WebGL = {
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
 
-        //this.previousOcclusionTexture = texture;
         return texture;
     },
     visualizeTexture(texture, width, height, CTX, scale = 8) {
@@ -336,7 +330,6 @@ const WebGL = {
         height = POT(height);
 
         if (this.VERBOSE) console.warn("WebGL.visualizeTexture", width, height, texture);
-        //if (this.frameBuffer) gl.deleteFramebuffer(this.frameBuffer);
 
         CTX.canvas.width = width * scale;
         CTX.canvas.height = width * scale;
@@ -370,7 +363,6 @@ const WebGL = {
         CTX.drawImage(offscreenCanvas, 0, 0, width * scale, height * scale);
 
         if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) !== gl.FRAMEBUFFER_COMPLETE) console.error("Framebuffer is not complete.");
-        //this.frameBuffer = framebuffer;
 
         // Cleanup
         gl.bindFramebuffer(gl.FRAMEBUFFER, null);
@@ -2433,7 +2425,7 @@ class Missile extends Drawable_object {
         let length = (lapsedTime / 1000) * this.moveSpeed;
         const pos = this.pos.translate(this.dir, length);
         if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(pos)))) {
-            console.error("..moved to wall, lapsedTime", lapsedTime);
+            if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime);
             return this.move(lapsedTime / 2, GA);
         }
         this.pos = pos;

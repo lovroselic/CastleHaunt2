@@ -28,7 +28,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: false,
+    INVINCIBLE: true,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -262,7 +262,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.12",
+    VERSION: "0.18.13",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
@@ -317,6 +317,7 @@ const PRG = {
         ENGINE.titleHEIGHT = 80;
         ENGINE.bottomHEIGHT = 80;
         ENGINE.bottomWIDTH = ENGINE.titleWIDTH;
+        MAP_TOOLS.INI.FOG = false;
 
         $("#bottom").css("margin-top", ENGINE.gameHEIGHT + ENGINE.titleHEIGHT + ENGINE.bottomHEIGHT);
         $(ENGINE.gameWindowId).width(ENGINE.gameWIDTH + 2 * ENGINE.sideWIDTH + 4);
@@ -1264,7 +1265,7 @@ const GAME = {
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
             DYNAMIC_ITEM3D.drawVector2D();
-           // WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
+            //WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
         }
     },
     processInteraction(interaction) {
@@ -1303,6 +1304,7 @@ const GAME = {
                 break;
             case 'title':
                 TITLE[interaction.section]();
+                MAP_TOOLS.setOcclusionMap(GAME.level);
                 break;
             case 'gold':
                 GAME.gold += interaction.value;

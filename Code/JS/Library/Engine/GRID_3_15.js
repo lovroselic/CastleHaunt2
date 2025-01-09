@@ -165,13 +165,15 @@ const GRID = {
     return;
   },
   translatePosition3D(entity, lapsedTime) {
-    //console.info(`${entity.name} ${entity.id} lapsed time: ${lapsedTime}`);
     const length = (lapsedTime / 1000) * entity.moveSpeed;
     const realDir = Vector3.from_2D_dir(entity.moveState.realDir); //2D to 3D
     entity.moveState.pos = entity.moveState.pos.translate(realDir, length);
-    const distance = Vector3.to_FP_Grid(entity.moveState.pos).EuclidianDistance(entity.moveState.endPos);
-    if (distance < GRID.SETTING.EPSILON) {
+
+    const overallDistance = Vector3.to_FP_Grid(entity.moveState.pos).EuclidianDistance(entity.moveState.startPos);
+    //console.warn(`${entity.name} ${entity.id} overallDistance: ${overallDistance}`);
+    if (overallDistance > 1.0) {
       entity.moveState.moving = false;
+      //console.info(`${entity.name} ${entity.id} lapsed time: ${lapsedTime} went too far.`);
     }
   },
   translatePosition(entity, lapsedTime) {
@@ -1302,9 +1304,9 @@ class GridArray extends ArrayBasedDataStructure {
     return GA;
   }
   toTextureMap() {
+    /** 0 - light can pass through */
     const paddedWidth = POT(this.width);
     const paddedHeight = POT(this.height);
-
     const pixelData = new Uint8Array(paddedWidth * paddedHeight).fill(255);
 
     for (let y = 0; y < this.height; y++) {
