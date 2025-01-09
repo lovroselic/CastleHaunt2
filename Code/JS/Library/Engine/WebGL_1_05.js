@@ -44,12 +44,14 @@ const WebGL = {
     VERBOSE: false, //default: false
     INI: {
         PIC_WIDTH: 0.5,
+        PIC_HEIGHT: 0.7,
         PIC_TOP: 0.2,
         PIC_OUT: 0.001, //0.001
         LIGHT_OUT: 0.001, //0.001, 
         ITEM_UP: 0.01,
         LIGHT_WIDTH: 0.4,
-        LIGHT_TOP: 0.10,
+        LIGHT_HEIGHT: 0.5,
+        LIGHT_TOP: 0.1,
         LIGHT_SCALE_FACTOR: 0.5,
         LIGHT_ADJUSTMENT_LIMIT: 0.075,
         DEFAULT_RESOLUTION: 256,
@@ -1082,36 +1084,17 @@ const WORLD = {
 
         switch (cat) {
             case "picture":
-                leftX = ((1 - WebGL.INI.PIC_WIDTH) / 2.0);
-                rightX = 1.0 - leftX;
-                topY = 1.0 - WebGL.INI.PIC_TOP;
-                bottomY = 1.0 - ((WebGL.INI.PIC_WIDTH / R) + WebGL.INI.PIC_TOP);
-
-                let relHeight = topY - bottomY;
-                if (relHeight > 2 * WebGL.INI.PIC_TOP) {
-                    let adjustment = (1.0 - relHeight) / 2;
-                    topY = 1.0 - adjustment;
-                    bottomY = adjustment;
+                if (R >= 1) {
+                    [leftX, rightX, topY, bottomY] = calcWide("PIC", R);
+                } else {
+                    [leftX, rightX, topY, bottomY] = calcTall("PIC", R);
                 }
-
-                if (WebGL.VERBOSE && (bottomY < 0 || (1.0 - relHeight) / 2 < 0)) console.error("Picture too high", bottomY, "H", H);
                 break;
             case "light":
-                leftX = ((1 - WebGL.INI.LIGHT_WIDTH) / 2.0);
-                rightX = 1.0 - leftX;
-                topY = 1.0 - WebGL.INI.LIGHT_TOP;
-                bottomY = 1.0 - ((WebGL.INI.LIGHT_WIDTH / R) + WebGL.INI.LIGHT_TOP);
-                let relHeightLight = topY - bottomY;
-                //console.info(",,relHeightLight", relHeightLight, "*",leftX,rightX, topY, bottomY);
-
-                if (relHeightLight > 1) {
-                    return this.getBoundaries("texture", W, H, resolution / WebGL.INI.LIGHT_SCALE_FACTOR);
-                } else if (relHeightLight > (1.0 - 2 * WebGL.INI.LIGHT_TOP)) {
-                    let adjustment = (1.0 - relHeightLight) / 2;
-                    if (adjustment < WebGL.INI.LIGHT_ADJUSTMENT_LIMIT) return this.getBoundaries("texture", W, H, resolution / WebGL.INI.LIGHT_SCALE_FACTOR);
-                    topY = 1.0 - adjustment;
-                    bottomY = adjustment;
-                    //console.warn("adjustment", leftX, rightX, topY, bottomY, "relHeightLight", relHeightLight);
+                if (R >= 1) {
+                    [leftX, rightX, topY, bottomY] = calcWide("LIGHT", R);
+                } else {
+                    [leftX, rightX, topY, bottomY] = calcTall("LIGHT", R);
                 }
                 break;
             case "crest":
@@ -1130,6 +1113,22 @@ const WORLD = {
                 break;
         }
         return [leftX, rightX, topY, bottomY];
+
+        function calcWide(CAT, R) {
+            leftX = ((1 - WebGL.INI[`${CAT}_WIDTH`]) / 2.0);
+            rightX = 1.0 - leftX;
+            topY = 1.0 - WebGL.INI[`${CAT}_TOP`];
+            bottomY = 1.0 - ((WebGL.INI[`${CAT}_WIDTH`] / R) + WebGL.INI[`${CAT}_TOP`]);
+            return [leftX, rightX, topY, bottomY];
+        }
+        function calcTall(CAT, R) {
+            topY = 1.0 - WebGL.INI[`${CAT}_TOP`];
+            bottomY = topY - WebGL.INI[`${CAT}_HEIGHT`];
+            const scaledWidth = WebGL.INI[`${CAT}_HEIGHT`] * R;
+            leftX = ((1 - scaledWidth) / 2.0);
+            rightX = 1.0 - leftX;
+            return [leftX, rightX, topY, bottomY];
+        }
     },
     divineResolution(pic) {
         let maxDimension = Math.max(pic.width, pic.height);
@@ -1149,7 +1148,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        //console.info("..............addpic", decal, decal.category, decal.name, resolution);
+        //if(decal.category === "picture") console.warn("..addpic", decal, decal.category, decal.name, resolution); //DEBUG
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();

@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104: {
+    104 : {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2538,7 +2538,7 @@ const MAP = {
         floor: "IrregularTiledFloorCeil08",
         ceil: "Cracked04",
         start: '[297,3]',
-        decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"],[274,3,"CCC_124","picture"],[320,3,"Wolfenstein70","picture"]]',
+        decals: '[[265,5,"Skull303","crest"],[311,5,"Skull321","crest"],[263,5,"Skull308","crest"],[309,5,"Skull406","crest"],[241,7,"Skull21","crest"],[333,1,"Skull322","crest"],[295,4,"PuddleDecal08","crest"],[271,4,"PuddleDecal08","crest"],[270,4,"PuddleDecal08","crest"],[269,4,"PuddleDecal08","crest"],[290,4,"PuddleDecal08","crest"],[289,4,"PuddleDecal08","crest"],[287,4,"PuddleDecal08","crest"],[286,4,"PuddleDecal08","crest"],[260,3,"Skull403","crest"],[306,3,"Skull405","crest"],[352,3,"Skull403","crest"],[214,3,"Skull304","crest"],[274,3,"CCC_124","picture"],[320,3,"Wolfenstein70","picture"],[113,3,"PrincessDragonDomme_013","picture"],[481,3,"FemDommes_6374","picture"]]',
         lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
         gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"],[45,3,"104.3","106.1","Closed"],[551,3,"104.4","107.1","Closed"],[46,5,"104.5","108.1","Closed"],[506,5,"104.6","109.1","Closed"]]',
         doors: '[288]',
@@ -2547,7 +2547,7 @@ const MAP = {
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-    }
+        }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2760,12 +2760,14 @@ const MAP = {
         floor: "GreyFloor29",
         ceil: "RockWall_SDXL_020",
         start: '[32,3]',
-        lights: '[[149,7,"SkullLantern53","standard"],[80,1,"FluxLight125","weakCandle"],[80,5,"Candle60","weakCandle"]]',
+        lights: '[[149,7,"SkullLantern53","standard"],[80,1,"FluxLight125","weakCandle"],[80,5,"Candle60","weakCandle"],[142,3,"SkullLantern57","standard"],[2,7,"SkullLantern56","standardDimmed"],[26,3,"Candle66","weakCandle"]]',
         gates: '[[33,3,"116.1","115.2","Closed"],[136,5,"116.2","109.3","Closed"]]',
+        keys: '[[243,1]]',
         doors: '[55,46,151,232,247,189]',
         entities: '[[285,1,"Narancina"]]',
+        objects: '[[25,"Dagger"]]',
         lairs: '[[126,1,"Lair10"],[143,7,"Lair46"]]',
-        monsterList: '["GoldSkeletonGold","Hulk"]',
+        monsterList: '["GoldSkeleton","Hulk"]',
         }
     ,
     117 : {

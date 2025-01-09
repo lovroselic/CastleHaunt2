@@ -442,9 +442,6 @@ const DECAL_PAINTINGS = [
     "CCC_181", "CCC_182", "CCC_183", "CCC_184", "CCC_185", "CCC_186", "CCC_187", "CCC_188", "CCC_189", "CCC_190", "CCC_191"
 ].sort();
 
-
-
-
 /** Crests */
 
 const DECAL_CRESTS = ["LS", "Skull4", "Skull3", "Skull2", "Skull1", "Crack4", "Crack3", "Skeleton11", "Skeleton12", "Crack20", "Crack21", "DancingSkeletons2",
@@ -492,16 +489,15 @@ const LIGHT_DECALS = ["WallLamp", "WallLamp2", "WallLamp3", "WallTorch", "Lamp4"
     "Candle50", "Candle51", "Candle52", "Candle53", "Candle54", "Candle55", "Candle56", "Candle57", "Candle58", "Candle59", "Candle60", "Candle61", "Candle62", "Candle63", "Candle64", "Candle65", "Candle66", "Candle67", "Candle68",
     "Candle69", "Candle70", "Candle71", "Candle72", "SkullLantern50", "SkullLantern51", "SkullLantern52", "SkullLantern53", "SkullLantern54", "SkullLantern55", "SkullLantern56", "SkullLantern57", "SkullLantern58"
 ].sort();
+
 const TRIGGER_DECALS = ["SmoothWallButton", "RockTriggerButton", "MarbleTriggerButton", "PurpleTriggerButton"];
-
-
 const LAIR_DECALS = [];
 /** hardcoded maxlair! */
 const MAX_LAIR_COUNT = 82;
 for (let i = 1; i <= MAX_LAIR_COUNT; i++) {
     LAIR_DECALS.push(`Lair${i.toString().padStart(2, "0")}`);
 }
-console.info("LAIR_DECALS", LAIR_DECALS);
+//console.info("LAIR_DECALS", LAIR_DECALS);
 
 const CONTAINER_LIST = [];
 for (const container in CONTAINER_ITEM_TYPE) {

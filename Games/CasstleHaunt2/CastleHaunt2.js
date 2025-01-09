@@ -82,7 +82,7 @@ const DEBUG = {
         * "Chicken", 
         * "Chicken", 
         * "Chicken"
-        * "Dagger", 
+            DONE * "Dagger", <-- 116
             DONE * "Sword", <-- 114
             DONE * "Spear", <--ApparitiaDefector (115)
             DONE * "BattleAxe", <-- Viking (114)
@@ -134,7 +134,7 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-            * Silver
+        
 
          * missing sources for: 
             * 
@@ -144,7 +144,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 116; //104
+        GAME.level = 104; //104
 
         GAME.gold = 1509;
         GAME.lives = 5; //5
@@ -215,7 +215,6 @@ const DEBUG = {
 
         let invItems = [
             //debug
-            "SkullNecklace"
         ];
 
         for (let itm of invItems) {
@@ -263,7 +262,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.11",
+    VERSION: "0.18.12",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
