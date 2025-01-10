@@ -2563,7 +2563,7 @@ const MAP = {
         gates: '[[535,3,"105.1","104.2","Up"]]',
     }
     ,
-    106: {
+    106 : {
         name: "The Last Temple",
         sg: 0,
         maxSpawned: 2,
@@ -2574,13 +2574,17 @@ const MAP = {
         floor: "Cracked09",
         ceil: "OrnateWall1",
         start: '[181,5]',
+        decals: '[[82,4,"FloorGrille105","crest"],[52,4,"RustyFloorGrille_07","crest"],[65,4,"FloorGrille102","crest"],[69,4,"FloorGrille104","crest"],[20,7,"LargePicLadies14","picture"],[24,7,"AI_Pic_114","picture"],[108,7,"UnusedEntities5115","picture"],[112,7,"KingsQuest50","picture"],[116,7,"GemDommes_195","picture"],[171,7,"UnusedEntities106","picture"],[173,7,"UnusedEntities5072","picture"],[168,7,"Domme365","picture"],[168,1,"AI_pic235","picture"],[176,1,"PrincessDragonDomme_022","picture"],[162,1,"FemDommes_5162","picture"],[152,1,"C64_ZX_Classics213","picture"],[121,1,"PrincessAI_11","picture"],[133,1,"Hero81","picture"],[200,1,"GemDommes_189","picture"],[204,1,"GameDommes_246","picture"],[31,7,"GemDommes_302","picture"],[43,7,"WhoDaresWins1","picture"],[60,5,"Domme321","picture"],[90,5,"Hero103","picture"],[108,5,"CastleLady59","picture"],[112,5,"BlackBeret_014","picture"],[116,5,"FemDommes_5180","picture"],[200,5,"AticAtac202","picture"],[204,3,"Commando100","picture"],[112,3,"FemDommes_5276","picture"],[116,3,"FemDommes_6187","picture"],[108,3,"AI_Pic_111","picture"],[74,3,"AI_Pic_120","picture"],[104,3,"ShortBlackSkirt_035","picture"]]',
         lights: '[[193,3,"WallLamp16","standard"],[108,1,"Candelabra09","standard"],[112,1,"Candelabra10","standard"],[116,1,"Candelabra15","standard"],[217,1,"Fireplace102","fire"],[170,1,"Candle63","dimCandle"],[174,1,"Candle51","dimCandle"]]',
         gates: '[[180,5,"106.1","104.3","Closed"]]',
+        gold: '[[48,"GoldSphere"],[97,"GoldSphere"],[72,"GoldSphere"],[203,"GoldSphere"],[140,"GoldSphere"]]',
+        containers: '[[35,"WoodenCrate61","GOLD_ITEM_TYPE.GoldBar",7],[39,"MetalCrate50","GOLD_ITEM_TYPE.GoldBar",7],[76,"Crate2","GOLD_ITEM_TYPE.GoldBar",5],[88,"WoodenCrate51","GOLD_ITEM_TYPE.GoldBar",3],[127,"Barrel","GOLD_ITEM_TYPE.SilverBar",7],[192,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",3]]',
         shrines: '[[7,7,"PrincessSpringHeart"],[3,7,"PrincessShield"],[11,7,"PrincessSpringOrb"]]',
         doors: '[172]',
+        movables: '[[67,"Chicken"]]',
         lairs: '[[135,5,"Lair33"],[149,3,"Lair03"]]',
         monsterList: '["Bat","RedGoldBat","GreatChick"]',
-    }
+        }
     ,
     107: {
         name: "Skeleton Farm",
@@ -2604,40 +2608,53 @@ const MAP = {
         monsterList: '["GoldSkeletonGold"]',
     }
     ,
-    108: {
+    108 : {
         name: "Northwest Tower",
         sg: 0,
         maxSpawned: 4,
-        killCountdown: 5,
+        killCountdown: 4,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB4ABABAA4BB2AA8BAA7BAA9BAA17BAA2BAA5BAA6BB2AA6BAA13BAA10BAA7BAA30BAA15BAA3BABB9ABABABB2AA2BB3ABB19AA2BB5ABB6ABB2AA2BB3ABABB5AA5BB2ABB13ABB15ABB12$"}',
+        data: '{"width":"17","height":"17","map":"BB5AA8BAA2BAA3BAA5BAA2BAA7BAA20BAA6BAA2BABB2AA4BAA2BAA24BAA6BABAA31BB3AA8BABB4ABABAA5BAA4BB6ABAA2BB2AA2BB2AA2BABB11ABB2ABABB7ABB2AA4BB2ABB5ABB4ABABABB2AA4BB2AA2BB6ABAA2BB23A$"}',
         wall: "GoldishWall5",
         floor: "BloodMarbleFloorWall_SDXL_024",
         ceil: "DarkMossy9",
         start: '[270,3]',
-        decals: '[[137,4,"Water30","texture"],[121,4,"Water30","texture"],[138,4,"Water30","texture"],[155,4,"Water30","texture"]]',
-        lights: '[[160,3,"Candle72","standard"],[179,7,"Lamp45","standard"],[110,1,"Candle55","standard"],[129,5,"DuaLLantern_020","standard"]]',
+        decals: '[[137,4,"Water30","texture"],[121,4,"Water30","texture"],[138,4,"Water30","texture"],[155,4,"Water30","texture"],[10,7,"BookShelf13","crest"],[4,7,"BookShelf11","crest"],[1,7,"UnusedEntities2095","picture"],[53,7,"GameDommes_034","picture"],[23,7,"FemDommes_5235","picture"],[26,7,"FemDommes_5249","picture"],[46,7,"C64_ZX_Classics119","picture"],[13,7,"GemDommes_137","picture"],[110,7,"UnusedEntities2045","picture"],[129,7,"GemDommes_248","picture"],[160,7,"FemDommes_5192","picture"],[172,7,"GameDommes_233","picture"],[205,7,"FemDommes_6375","picture"],[167,7,"ShinyBlackRuberella14","picture"]]',
+        lights: '[[160,3,"Candle72","standard"],[179,7,"Lamp45","standard"],[110,1,"Candle55","standard"],[129,5,"DuaLLantern_020","standard"],[216,7,"Candle66","weakCandle"],[86,1,"WallLamp34","standardDimmed"]]',
         gates: '[[271,3,"108.1","104.5","Closed"],[273,1,"108.2","110.2","Closed"],[33,3,"108.3","112.1","Closed"]]',
-        entities: '[[136,5,"CorridorSwimmer"]]',
-    }
+        scrolls: '[[202,16],[127,15]]',
+        gold: '[[144,"RedGem"],[72,"GoldSphere"],[230,"GoldSphere"],[61,"GoldBar"],[208,"GoldBar"],[80,"SilverBar"],[140,"SilverBar"]]',
+        containers: '[[27,"BookShelf","INTERACTION_ITEM.TripleMoonBook",7],[260,"WoodenCrate57","GOLD_ITEM_TYPE.GoldSphere",1],[219,"MetalCrate52","GOLD_ITEM_TYPE.GoldSphere",1],[112,"WoodenCrate51","GOLD_ITEM_TYPE.GoldSphere",1],[39,"WoodenCrate52","GOLD_ITEM_TYPE.GoldSphere",7],[189,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",5]]',
+        entities: '[[136,5,"CorridorSwimmer"],[135,3,"Owl"]]',
+        objects: '[[18,"Rat"]]',
+        oracles: '[[83,3,"ApparitiaGun"]]',
+        lairs: '[[7,7,"Lair46"],[280,1,"Lair46"]]',
+        monsterList: '["GoldSkeleton","GreenSkeleton","GreenSkeleton","BlueSkeleton","Hulk"]',
+        }
     ,
-    109: {
+    109 : {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
-        killCountdown: 5,
+        killCountdown: 4,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB2ABB6AA4BB2AA3BAA40BABAA22BB2AA25BAA3BB3AA7BABAA27BAA4BAA12BB2ABB12ABB3AA5BB9ABB6ABB4ABB5ABB4AA3BB5AA2BB10AA5BB3ABB2ABB11ABB15A$"}',
+        data: '{"width":"17","height":"17","map":"BB2ABB5AA3BB2AA35BABAA9BAA9BB2AA13BAA2BB2AA8BAA3BB2ABAA9BABAA4BAA10BAA10BAA5BAA9BB2AA3BAA2BAA7BB10AA2BB6AA6BB11ABB5ABB3AA5BB2ABB4ABB4AA2BB2ABB3ABB5AA2BB3AA5BABB24A$"}',
         wall: "GlossyBrownBrickedWall53",
         floor: "OrnateFloor105",
         ceil: "WebbedFloor5",
         start: '[32,3]',
         decals: '[[102,5,"BookShelf12","crest"],[170,5,"BookShelf14","crest"]]',
-        lights: '[[144,3,"WallLamp18","standard"],[144,5,"FluxLight112","standard"],[108,3,"Candle71","standardDimmed"],[176,3,"Candle53","standardDimmed"],[112,5,"Candle54","standardDimmed"],[180,5,"Candle69","standardDimmed"],[144,1,"FluxLight123","standard"],[144,7,"FluxLight106","standard"]]',
+        lights: '[[144,3,"WallLamp18","standard"],[144,5,"FluxLight112","standard"],[108,3,"Candle71","standardDimmed"],[176,3,"Candle53","standardDimmed"],[112,5,"Candle54","standardDimmed"],[180,5,"Candle69","standardDimmed"],[144,1,"FluxLight123","standard"],[144,7,"FluxLight106","standard"],[222,7,"Candle61","weakCandle"],[260,5,"Fireplace105","fire"],[11,7,"DuaLLantern_023","standardDimmed"],[8,7,"Fireplace14","fire"]]',
         gates: '[[33,3,"109.1","104.6","Closed"],[1,7,"109.2","110.1","Closed"],[271,3,"109.3","116.2","Closed"]]',
-        containers: '[[65,"WoodenCrate61","GOLD_ITEM_TYPE.GoldBar",7]]',
-        entities: '[[136,5,"YoniLibrarian"]]',
-    }
+        gold: '[[60,"GoldBar"],[122,"GoldBar"],[190,"GoldBar"],[216,"GoldBar"],[74,"SilverBar"],[161,"SilverBar"],[263,"SilverBar"],[147,"SilverBar"],[97,"GoldCube"],[157,"GoldCube"]]',
+        containers: '[[65,"WoodenCrate61","GOLD_ITEM_TYPE.GoldBar",7],[256,"Barrel","INTERACTION_ITEM.Beer",1],[40,"MetalCrate54","GOLD_ITEM_TYPE.GoldSphere",7],[125,"WoodenCrate56","GOLD_ITEM_TYPE.GoldSphere",7],[201,"Crate","GOLD_ITEM_TYPE.GoldSphere",7],[261,"MetalCrate54","GOLD_ITEM_TYPE.GoldSphere",1],[249,"WoodenCrate55","GOLD_ITEM_TYPE.GoldSphere",1],[226,"WoodenCrate58","GOLD_ITEM_TYPE.GoldSphere",1]]',
+        entities: '[[136,5,"YoniLibrarian"],[152,3,"Juggles"]]',
+        objects: '[[178,"Mushroom"],[21,"Rat"]]',
+        oracles: '[[101,3,"ApparitiaGreenOrb"]]',
+        movables: '[[142,"Chicken"],[146,"RoastChicken"]]',
+        lairs: '[[237,3,"Lair59"],[265,3,"Lair35"],[4,7,"Lair80"]]',
+        monsterList: '["BlueSkeleton","GreenSkeleton","GreenSkeleton","GoldSkeleton","GreatChick","Hulk","Dragon"]',
+        }
     ,
     110: {
         name: "West Wing",

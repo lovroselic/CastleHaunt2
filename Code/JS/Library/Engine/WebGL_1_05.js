@@ -1140,7 +1140,7 @@ const WORLD = {
             resolution = this.divineResolution(decal.texture);
             decal.resolution = resolution;
         }
-        //if(decal.category === "picture") console.warn("..addpic", decal, decal.category, decal.name, resolution); //DEBUG
+        //console.warn("..addpic", decal, decal.category, decal.name, resolution); //DEBUG
         const [leftX, rightX, topY, bottomY] = this.getBoundaries(decal.category, decal.width, decal.height, resolution);
         const E = ELEMENT[`${decal.face}_FACE`];
         let positions = E.positions.slice();

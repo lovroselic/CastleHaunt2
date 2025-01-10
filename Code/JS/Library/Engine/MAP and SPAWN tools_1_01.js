@@ -17,6 +17,7 @@ const MAP_TOOLS = {
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 512,
+        TEXTURE_WIDTH: 1024,
         VERBOSE: false,
     },
     manageMAP(level) {
@@ -128,6 +129,7 @@ const MAP_TOOLS = {
         this.MAP[level].unused_storage.apply();
         this.MAP[level].map.storage.addStorage(this.MAP[level].unused_storage);
         console.log("this.MAP[level].map.storage", this.MAP[level].map.storage);
+        MAP_TOOLS.setOcclusionMap(level);
     }
 };
 
@@ -162,6 +164,7 @@ const SPAWN_TOOLS = {
             if (type === "texture") {
                 decal = TEXTURE[picture];
             } else decal = SPRITE[picture];
+            if (decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH) type = "texture";
             DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }
     },

@@ -1546,6 +1546,22 @@ const ORACLE_TYPE = {
         text: "Are you preparing for the final battle? We are waiting for you. Come Princess.",
         interactionCategory: "oracle",
     },
+    ApparitiaGun: {
+        name: "ApparitiaGun",
+        sprite: "ApparitiaGun",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Do you really think you have a chance againts us? Armed with tiny fireballs and heels?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaGreenOrb: {
+        name: "ApparitiaGreenOrb",
+        sprite: "ApparitiaGreenOrb",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am the famous inventor of the Green Bouncing Orbs. Do you like them so far? Getting them in your back? Or face?",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -3028,6 +3044,17 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.standard,
         text: "Creeepy?"
     },
+    GoldSphere: {
+        name: "GoldSphere",
+        category: "interaction_item",
+        element: "BALL",
+        scale: 1.1 / 2 ** 5,
+        glueToFloor: true,
+        texture: "Gold",
+        inventorySprite: "GoldSphere",
+        material: MATERIAL.gold,
+        text: "This one goes in the bag. Who knows ..."
+    },
     GoldBar: {
         name: "GoldBar",
         category: "interaction_item",
@@ -4338,9 +4365,42 @@ const INTERACTION_ITEM = {
         inventorySprite: "SkullNecklace",
         text: "Golden necklace with the skull pendant. Amazing."
     },
+    Rat: {
+        name: "Rat",
+        category: "interaction_item",
+        inventorySprite: "Rat",
+        text: "Rat? Maybe I'll be hungry later."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    Juggles: {
+        name: "Juggles",
+        sprite: "Juggles",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldSphere", "GoldSphere", "GoldSphere"],
+        gives: "SkullNecklace",
+        text: {
+            intro: "My act needs an upgrade, golden balls are all the rage! Bring me three, and I'll part with my golden skull necklace.",
+            progress: "Another sphere for the show, but I still need more to dazzle the crowd. Keep going!",
+            conclusion: "Perfect! My act is now golden, and as promised, here's my skull necklace. It's a statement piece, wouldn't you agree?"
+        }
+    },
+    
+    Owl: {
+        name: "Owl",
+        sprite: "Owl",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Mouse", "Mouse"],
+        gives: "Rat",
+        text: {
+            intro: "Wise and fair, that's me. Bring me two delicious little mice, and I'll trade you a plump rat. A fair deal, don't you think?",
+            progress: "One mouse down, but wisdom says two make the trade. Keep hunting!",
+            conclusion: "Two mice delivered, and a deal's a deal. Here's your rat. Enjoy, if you dare!"
+        }
+    },
     Narancina: {
         name: "Narancina",
         sprite: "Narancina",
@@ -4353,7 +4413,7 @@ const INTERACTION_ENTITY = {
             progress: null,
             conclusion: "This necklace is to die for! As promised, here are my orange leather boots. Walk in style, darling."
         }
-    },    
+    },
     ApparitiaDefector: {
         name: "ApparitiaDefector",
         sprite: "ApparitiaDefector",

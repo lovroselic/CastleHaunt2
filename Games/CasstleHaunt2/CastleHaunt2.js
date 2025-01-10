@@ -74,14 +74,17 @@ const DEBUG = {
             DONE Viking wants "Beer", "GlassOfBeer" give "battleaXe"
             DONE ApparitiaDefector wants "OrangeLeggings", "OrangeBra", "OrangeBoots" gives spear
             DONE Narancina wants "SkullNecklace" give "OrangeBoots"
+            DONE Owl wants "Mouse", "Mouse" give "Rat"
+            DONE Juggles wasn "GoldSphere", "GoldSphere", "GoldSphere" gives "SkullNecklace"
+
         apparitias:
 
 
         * 
         * 
         * "Chicken", 
-        * "Chicken", 
-        * "Chicken"
+            DONE * "Chicken",  <-- 109
+            DONE * "Chicken" <-- 106
             DONE * "Dagger", <-- 116
             DONE * "Sword", <-- 114
             DONE * "Spear", <--ApparitiaDefector (115)
@@ -90,16 +93,16 @@ const DEBUG = {
             DONE * "IceCube",117
             DONE * "IceCube",117
             DONE * "IceCube" 117
-        * "Rat"
-        * "Rat"
-        * "Rat"
+            DONE * "Rat" <-- Owl (108)
+            DONE * "Rat" <-- 108
+            DONE * "Rat" <-- 109
             DONE * "Shuriken", <-- "CorridorSwimmer" (108)
             DONE * "Shuriken", <-- 110
         * "Shuriken"
             DONE * "YoniBook",  <-- YoniLibrARIAn (109)
         * "YinYangBook", 
         * "VenusBook", 
-        * "TripleMoonBook"
+            DONE * "TripleMoonBook" <-- 108
         * "AnkhBook", 
         * "FireballBook", 
         * "PrincessBook", 
@@ -112,15 +115,20 @@ const DEBUG = {
         * "Kiss"
         "Spectacles"
         "Helmet"
-        "Mushroom", 
+            DONE "Mushroom", <-- 109
         "Mushroom", 
         "Mushroom"
-        "Beer", 
+            DONE "Beer",  <-- 109
         "GlassOfBeer"
         "OrangeLeggings", 
         "OrangeBra", 
             DONE "OrangeBoots" <-- Narancina (116)
-        "SkullNecklace"
+            DONE "SkullNecklace" Juggles (109)
+        "Mouse", 
+        "Mouse"
+        "GoldSphere", 
+        "GoldSphere", 
+        "GoldSphere"
 
 
         * coins sources (x, missing x = ):
@@ -144,9 +152,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 104; //104
+        GAME.level = 109; //104
 
-        GAME.gold = 1509;
+        GAME.gold = 2589;
         GAME.lives = 5; //5
 
         HERO.hasCapacity = true;
@@ -158,7 +166,7 @@ const DEBUG = {
         HERO.magic = 60;
         HERO.attack = 59;
 
-        HERO.health = 424;
+        HERO.health = 358;
         HERO.maxHealth = 424;
 
 
@@ -214,7 +222,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
+            "Chicken",
             //debug
+        
         ];
 
         for (let itm of invItems) {
@@ -262,7 +272,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.13",
+    VERSION: "0.18.14",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
