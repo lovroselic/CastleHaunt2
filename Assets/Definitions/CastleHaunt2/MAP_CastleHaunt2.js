@@ -2656,24 +2656,28 @@ const MAP = {
         monsterList: '["BlueSkeleton","GreenSkeleton","GreenSkeleton","GoldSkeleton","GreatChick","Hulk","Dragon"]',
         }
     ,
-    110: {
+    110 : {
         name: "West Wing",
         sg: 0,
         maxSpawned: 4,
         killCountdown: 5,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB4AA2BB3ABAA2BAA9BB2AA33BAA4BAA13BB2AA4BAA12BAA18BAA2BB2AA36BABAA8BB13AA2BB4AA3BAA2BB2ABB12ABB3ABB2AA2BB2ABB2AA2BB3AA2BB2AA2BB3AA2BB34ABB2ABB14$"}',
+        data: '{"width":"17","height":"17","map":"BB4AA2BB3ABAA2BAA9BB2AA33BAA4BAA13BB2AA4BAA12BAA17BABAA2BB2ABAA37BB4AA2BB2AA3BAA4BAA2BB12AA2BB5AA3BAA2BB3ABB4ABB12ABAA2BB2AA2BB2ABB2AA2BB2ABB2AA2BAA2BB2AA2BB2AA2BABAA2BB25A$"}',
         wall: "GlossyBrownBrickedWall60",
         floor: "BloodMarbleFloorWall_SDXL_003",
         ceil: "DarkMossy7",
         start: '[270,1]',
-        lights: '[[142,3,"Lamp45","standard"],[63,5,"Candle72","dimCandle"],[233,5,"Candle56","dimCandle"],[126,5,"DuaLLantern_001","standard"],[160,5,"FluxLight121","standard"],[148,3,"FluxLight104","standard"]]',
+        decals: '[[8,7,"BookShelf02","crest"]]',
+        lights: '[[142,3,"Lamp45","standard"],[63,5,"Candle72","dimCandle"],[233,5,"Candle56","dimCandle"],[126,5,"DuaLLantern_001","standard"],[160,5,"FluxLight121","standard"],[148,3,"FluxLight104","standard"],[160,7,"Candle60","dim"]]',
         gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"]]',
-        containers: '[[144,"WoodenCrate50","INTERACTION_ITEM.Shuriken",5]]',
-        entities: '[[136,5,"KnightWithoutHelmet"]]',
+        containers: '[[144,"WoodenCrate50","INTERACTION_ITEM.Shuriken",5],[25,"BookShelf","INTERACTION_ITEM.PrincessBook",5]]',
+        entities: '[[136,5,"KnightWithoutHelmet"],[279,1,"Bunny"]]',
+        objects: '[[208,"GoldSphere"]]',
+        oracles: '[[152,3,"ApparitiaPretty"]]',
+        movables: '[[140,"Chicken"]]',
         lairs: '[[68,5,"Lair71"],[204,5,"Lair12"]]',
         monsterList: '["GreenSkeleton","BlueSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton"]',
-    }
+        }
     ,
     111: {
         name: "Another Skeleton Farm",
@@ -2690,21 +2694,27 @@ const MAP = {
         gates: '[[1,7,"111.1","107.2","Closed"]]',
     }
     ,
-    112: {
+    112 : {
         name: "North Spire",
         sg: 0,
         maxSpawned: 4,
-        killCountdown: 5,
+        killCountdown: 4,
         spawnDelay: 9999,
-        data: '{"width":"17","height":"17","map":"BB11AA60BB2AA21BABAA15BAA12BAA18BAA11BAA3BABB12ABB21ABB2ABB19AA2BAA8BB7AA2BB6ABB10ABB18ABB5ABB7$"}',
+        data: '{"width":"17","height":"17","map":"BB3AA3BABB2AA5BAA11BAA6BAA3BAA14BAA5BAA8BAA7BAA6BAA8BAA5BB2AA6BAA2BABAA16BABAA6BB3ABAA3BB2AA5BB2ABAA2BB2ABAA2BB6AA2BB3ABB3ABB5ABB9ABB2ABB6ABB3ABB2ABB3AA3BAA4BAA2BAA2BABABB2ABB7AA3BB6ABAA2BAA2BB9ABB18A$"}',
         wall: "BigGreyBricks1",
         floor: "FloorTiles_SDXL_009",
         ceil: "RedishBricks101",
         start: '[256,5]',
-        lights: '[[127,1,"FluxLight101","standard"]]',
+        lights: '[[127,1,"FluxLight101","standard"],[261,3,"Lamp47","standardDimmed"],[265,5,"FluxLight123","standardDimmed"],[227,1,"DuaLLantern_017","standard"],[231,1,"DuaLLantern_026","standard"],[88,7,"FluxLight116","standardDimmed"],[98,7,"FluxLight127","standardDimmed"],[127,7,"DuaLLantern_018","fire"],[185,3,"Candle71","standardDimmed"],[85,5,"Lights105","standardDimmed"],[33,3,"Candelabra04","dim"]]',
         gates: '[[255,5,"112.1","108.3","Closed"],[271,3,"112.2","113.1","Closed"]]',
-        entities: '[[8,7,"Frogessa"]]',
-    }
+        containers: '[[20,"LongBox","INTERACTION_ITEM.ScubaMask",3],[219,"MetalCrate50","INTERACTION_ITEM.OrangeBra",1],[66,"WoodenCrate55","INTERACTION_ITEM.Mouse",1]]',
+        entities: '[[8,7,"Frogessa"],[280,1,"DeMonique"]]',
+        objects: '[[232,"Candle"]]',
+        oracles: '[[222,1,"ApparitiaBored2"],[82,7,"ApparitiaGoldSword"]]',
+        movables: '[[110,"BabySheep"]]',
+        lairs: '[[136,5,"Lair29"],[152,3,"Lair21"]]',
+        monsterList: '["GoldSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton","BlueSkeleton","Dragon","Hulk","RedDragon"]',
+        }
     ,
     113: {
         name: "North East Tower",

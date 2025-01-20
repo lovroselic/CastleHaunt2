@@ -949,6 +949,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/WoodenCrateTexture59.jpg", name: "WoodenCrateTexture59" },
     { srcName: "ObjectTextures/WoodenCrateTexture60.jpg", name: "WoodenCrateTexture60" },
     { srcName: "ObjectTextures/WoodenCrateTexture61.jpg", name: "WoodenCrateTexture61" },
+    { srcName: "ObjectTextures/CandleWax.jpg", name: "CandleWax" },
 
     //decal-gates
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
@@ -1024,7 +1025,7 @@ LoadObjects = [
     "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj",
     "banana.obj", "steak.obj", "green apple.obj", "can.obj", "fish.obj",
     "bone.obj", "wine.obj", "crate2.obj", "Barell2.obj", "Barell3.obj", "Box.obj", "WoodenCrate.obj",
-    "crateFragile.obj", "LongBox.obj",
+    "crateFragile.obj", "LongBox.obj", "Candle.obj",
 ];
 
 LoadModels = [
@@ -1096,6 +1097,9 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaSword.jpg", name: "ApparitiaSword" },
     { srcName: "EntityPictures/ApparitiaGun.jpg", name: "ApparitiaGun" },
     { srcName: "EntityPictures/ApparitiaGreenOrb.jpg", name: "ApparitiaGreenOrb" },
+    { srcName: "EntityPictures/ApparitiaPretty.jpg", name: "ApparitiaPretty" },
+    { srcName: "EntityPictures/ApparitiaBored2.jpg", name: "ApparitiaBored2" },
+    { srcName: "EntityPictures/ApparitiaGoldSword.jpg", name: "ApparitiaGoldSword" },
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
@@ -1330,6 +1334,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Narancina.jpg", name: "Narancina" },
     { srcName: "EntityPictures/Owl2.jpg", name: "Owl" },
     { srcName: "EntityPictures/Juggles.jpg", name: "Juggles" },
+    { srcName: "EntityPictures/Bunny.jpg", name: "Bunny" },
+    { srcName: "EntityPictures/DeMonique.jpg", name: "DeMonique" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1667,6 +1673,7 @@ LoadSprites = [
     { srcName: "Items/OrangeBoots.png", name: "OrangeBoots" },
     { srcName: "Items/OrangeBra.png", name: "OrangeBra" },
     { srcName: "Items/SkullNecklace.png", name: "SkullNecklace" },
+    { srcName: "Items/Carrot.png", name: "Carrot" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },

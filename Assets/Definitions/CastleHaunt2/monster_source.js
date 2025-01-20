@@ -51,34 +51,7 @@ const MONSTER_TYPE_BAK = {
         missileType: COMMON_ITEM_TYPE.Fireball,
     },
     
-    RedDragon: {
-        name: "RedDragon",
-        texture: "RedDragon",
-        model: "Dragon",
-        scale: 1.92 / 2 ** 4,
-        rotateToNorth: Math.PI,
-        midHeight: 0.25,
-        fly: 0.25,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 48,
-        defense: 35,
-        magic: 40,
-        health: 50,
-        xp: 120,
-        gold: 125,
-        attackSound: "MonsterAttack1",
-        hurtSound: "MonsterHurt",
-        behaviourArguments: [10, ["wanderer"], 7, ["shoot"]],
-        moveSpeed: 1.05,
-        mana: 5,
-        caster: true,
-        shootDistance: 7,
-        stalkDistance: 8,
-        material: MATERIAL.gold,
-        missile: Missile,
-        missileType: COMMON_ITEM_TYPE.Fireball,
-    },
+   
    
 
     GreenRex: {

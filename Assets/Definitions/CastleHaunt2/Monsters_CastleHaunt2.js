@@ -1249,6 +1249,14 @@ const ORACLE_TYPE = {
         text: "I am bored of your incompetence Princess. You are letting us win to easy.",
         interactionCategory: "oracle",
     },
+    ApparitiaBored2: {
+        name: "ApparitiaBored2",
+        sprite: "ApparitiaBored2",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am bored Princess. Please challenge us. We are waiting.",
+        interactionCategory: "oracle",
+    },
     ApparitiaFashion: {
         name: "ApparitiaFashion",
         sprite: "ApparitiaFashion",
@@ -1560,6 +1568,22 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Apparitia",
         text: "I am the famous inventor of the Green Bouncing Orbs. Do you like them so far? Getting them in your back? Or face?",
+        interactionCategory: "oracle",
+    },
+    ApparitiaPretty: {
+        name: "ApparitiaPretty",
+        sprite: "ApparitiaPretty",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "The call me Pretty. Because I am pretty deadly. Hahahaha.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaGoldSword: {
+        name: "ApparitiaGoldSword",
+        sprite: "ApparitiaGoldSword",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Be afraid. Be very afraid. I have the Golden Sword. And I am not afraid to use it.",
         interactionCategory: "oracle",
     },
 };
@@ -2768,6 +2792,32 @@ const MONSTER_TYPE = {
         missile: BouncingMissile,
         missileType: COMMON_ITEM_TYPE.Bounceball,
     },
+    RedDragon: {
+        name: "RedDragon",
+        texture: "RedDragon",
+        model: "Dragon",
+        scale: 1.92 / 2 ** 4,
+        rotateToNorth: Math.PI,
+        midHeight: 0.25,
+        fly: 0.25,
+        deathType: "BloodExplosion",
+        mana: 25,
+        health: 100,
+        attack: 125,
+        magic: 20,
+        defense: 0,
+        caster: true,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack1",
+        hurtSound: "MonsterHurt",
+        behaviourArguments: [20, ["wanderer"], 15, ["shoot"]],
+        moveSpeed: 1.0,
+        shootDistance: 15,
+        stalkDistance: 8,
+        material: MATERIAL.gold,
+        missile: BouncingMissile,
+        missileType: COMMON_ITEM_TYPE.Bounceball,
+    },
     Astro: {
         name: "Astro",
         model: "Astro",
@@ -3267,6 +3317,17 @@ const INTERACTION_OBJECT = {
         rotateToNorth: 0,
         inventorySprite: "HealthBox",
         text: "A full box of healing. I should save it for dark times."
+    },
+    Candle: {
+        name: "Candle",
+        category: "interaction_item",
+        element: "CANDLE",
+        scale: 1.0 / 2 ** 2,
+        glueToFloor: true,
+        texture: "CandleWax",
+        material: MATERIAL.standard,
+        inventorySprite: "Candle",
+        text: "Simple wax candle. I can light it. Or not."
     },
 };
 
@@ -4315,7 +4376,7 @@ const INTERACTION_ITEM = {
         name: "PrincessBook",
         category: "interaction_item",
         inventorySprite: "PrincessBook",
-        text: "It seems like an interesting book, full of ancient knowledge."
+        text: "Amazing story about my adventures. Everybody should read this."
     },
     TreeOfLifeBook: {
         name: "TreeOfLifeBook",
@@ -4371,9 +4432,41 @@ const INTERACTION_ITEM = {
         inventorySprite: "Rat",
         text: "Rat? Maybe I'll be hungry later."
     },
+    Carrot: {
+        name: "Carrot",
+        category: "interaction_item",
+        inventorySprite: "Carrot",
+        text: "Juicy carrot. Let's nibble it."
+    },
 };
 
 const INTERACTION_ENTITY = {
+    DeMonique: {
+        name: "DeMonique",
+        sprite: "DeMonique",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Skull", "Skull", "Skull"],
+        gives: "Kiss",
+        text: {
+            intro: "Do you know what I crave? Bring me what I desire, and I'll reward you with a kiss so unique, you can carry it in your backpack.",
+            progress: "You're getting closer to earning my kiss, but something's still missing. Keep going.",
+            conclusion: "Ah, now you've satisfied my longing. Mwah. Here's my kiss. Cold, rigid, and perfectly yours to take with you."
+        }
+    }, 
+    Bunny: {
+        name: "Bunny",
+        sprite: "Bunny",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Carrot", "Carrot"],
+        gives: "Spectacles",
+        text: {
+            intro: "They say carrots are great for eyesight, and I'm testing the theory. Bring me a couple, and I might not need these spectacles anymore!",
+            progress: "One carrot down, but I'm still squinting. Bring another, please!",
+            conclusion: "Two carrots later, and I can finally see clearly! Take my spectacles, they're all yours now."
+        }
+    },
     Juggles: {
         name: "Juggles",
         sprite: "Juggles",
@@ -4387,7 +4480,6 @@ const INTERACTION_ENTITY = {
             conclusion: "Perfect! My act is now golden, and as promised, here's my skull necklace. It's a statement piece, wouldn't you agree?"
         }
     },
-    
     Owl: {
         name: "Owl",
         sprite: "Owl",

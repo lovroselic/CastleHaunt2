@@ -76,13 +76,16 @@ const DEBUG = {
             DONE Narancina wants "SkullNecklace" give "OrangeBoots"
             DONE Owl wants "Mouse", "Mouse" give "Rat"
             DONE Juggles wasn "GoldSphere", "GoldSphere", "GoldSphere" gives "SkullNecklace"
+            DONE Bunny wants "Carrot", "Carrot" gives "Spectacles"
+            DONE DeMonique wants "Skull","Skull","Skull" gives "Kiss"
+        HornyMonica wants "Candle","Candle","Candle" gives ... 
 
         apparitias:
 
 
         * 
         * 
-        * "Chicken", 
+            DONE * "Chicken", <-- 110
             DONE * "Chicken",  <-- 109
             DONE * "Chicken" <-- 106
             DONE * "Dagger", <-- 116
@@ -105,15 +108,15 @@ const DEBUG = {
             DONE * "TripleMoonBook" <-- 108
         * "AnkhBook", 
         * "FireballBook", 
-        * "PrincessBook", 
+            DONE * "PrincessBook",  <-- 110
             DONE * "TreeOfLifeBook" <-- Shroomess (113)
             DONE* "BabySheep", 114
-        * "BabySheep",
+            DONE * "BabySheep", <-- 112
         * "BabySheep"
-        * "ScubaMask", 
+            DONE * "ScubaMask",  <--- 112
             DONE * "Fins" <--"Frogessa" wants kiss (112)
-        * "Kiss"
-        "Spectacles"
+            DONE * "Kiss" <-- DeMonique 112
+            DONE "Spectacles" <-- Bunny (110)
         "Helmet"
             DONE "Mushroom", <-- 109
         "Mushroom", 
@@ -121,14 +124,22 @@ const DEBUG = {
             DONE "Beer",  <-- 109
         "GlassOfBeer"
         "OrangeLeggings", 
-        "OrangeBra", 
+            DONE "OrangeBra", <-- 112
             DONE "OrangeBoots" <-- Narancina (116)
             DONE "SkullNecklace" Juggles (109)
-        "Mouse", 
+            DONE "Mouse", <-- 112
         "Mouse"
-        "GoldSphere", 
+            DONE "GoldSphere", <-- 110
         "GoldSphere", 
         "GoldSphere"
+        "Carrot", 
+        "Carrot"
+        "Skull",
+        "Skull",
+        "Skull"
+            DONE"Candle", <-- 112
+        "Candle"
+        "Candle"
 
 
         * coins sources (x, missing x = ):
@@ -152,7 +163,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 109; //104
+        GAME.level = 112; //104
 
         GAME.gold = 2589;
         GAME.lives = 5; //5
@@ -224,7 +235,7 @@ const DEBUG = {
         let invItems = [
             "Chicken",
             //debug
-        
+            "Skull", "Skull", "Skull"
         ];
 
         for (let itm of invItems) {
@@ -272,7 +283,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.14",
+    VERSION: "0.18.15",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
