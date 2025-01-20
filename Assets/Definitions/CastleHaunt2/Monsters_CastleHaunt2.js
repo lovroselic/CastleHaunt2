@@ -4441,6 +4441,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    HornyMonica: {
+        name: "HornyMonica",
+        sprite: "HornyMonica",
+        category: 'crest',
+        voice: "Female",
+        wants: ["Candle", "Candle", "Candle"],
+        gives: "YinYangBook",
+        text: {
+            intro: "I seek illumination, both the warm glow of candles and the deeper light of wisdom. Bring me what I desire, and I'll share the wisdom with you.",
+            progress: "The light grows brighter, but I need more candles to fully illuminate my path. Keep searching.",
+            conclusion: "The glow is complete, and so is my enlightenment. Take this book, may it's wisdom guide you as it has me."
+        }
+    },
     DeMonique: {
         name: "DeMonique",
         sprite: "DeMonique",
@@ -4453,7 +4466,7 @@ const INTERACTION_ENTITY = {
             progress: "You're getting closer to earning my kiss, but something's still missing. Keep going.",
             conclusion: "Ah, now you've satisfied my longing. Mwah. Here's my kiss. Cold, rigid, and perfectly yours to take with you."
         }
-    }, 
+    },
     Bunny: {
         name: "Bunny",
         sprite: "Bunny",

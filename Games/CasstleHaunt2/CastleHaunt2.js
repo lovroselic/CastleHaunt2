@@ -78,7 +78,7 @@ const DEBUG = {
             DONE Juggles wasn "GoldSphere", "GoldSphere", "GoldSphere" gives "SkullNecklace"
             DONE Bunny wants "Carrot", "Carrot" gives "Spectacles"
             DONE DeMonique wants "Skull","Skull","Skull" gives "Kiss"
-        HornyMonica wants "Candle","Candle","Candle" gives ... 
+            DONE HornyMonica wants "Candle","Candle","Candle" gives YinYangBook 
 
         apparitias:
 
@@ -101,10 +101,10 @@ const DEBUG = {
             DONE * "Rat" <-- 109
             DONE * "Shuriken", <-- "CorridorSwimmer" (108)
             DONE * "Shuriken", <-- 110
-        * "Shuriken"
+            DONE * "Shuriken" <-- 113
             DONE * "YoniBook",  <-- YoniLibrARIAn (109)
-        * "YinYangBook", 
-        * "VenusBook", 
+            DONE * "YinYangBook",  <-- HornyMonica (113)
+            DONE * "VenusBook", <-- 114
             DONE * "TripleMoonBook" <-- 108
         * "AnkhBook", 
         * "FireballBook", 
@@ -112,14 +112,14 @@ const DEBUG = {
             DONE * "TreeOfLifeBook" <-- Shroomess (113)
             DONE* "BabySheep", 114
             DONE * "BabySheep", <-- 112
-        * "BabySheep"
+            DONE * "BabySheep" <-- 113
             DONE * "ScubaMask",  <--- 112
             DONE * "Fins" <--"Frogessa" wants kiss (112)
             DONE * "Kiss" <-- DeMonique 112
             DONE "Spectacles" <-- Bunny (110)
         "Helmet"
             DONE "Mushroom", <-- 109
-        "Mushroom", 
+            DONE "Mushroom", <-- 114
         "Mushroom"
             DONE "Beer",  <-- 109
         "GlassOfBeer"
@@ -132,9 +132,9 @@ const DEBUG = {
             DONE "GoldSphere", <-- 110
         "GoldSphere", 
         "GoldSphere"
-        "Carrot", 
+            DONE "Carrot", <-- 114
         "Carrot"
-        "Skull",
+            DONE "Skull", <-- 113
         "Skull",
         "Skull"
             DONE"Candle", <-- 112
@@ -163,7 +163,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 112; //104
+        GAME.level = 115; //104
 
         GAME.gold = 2589;
         GAME.lives = 5; //5
@@ -235,7 +235,6 @@ const DEBUG = {
         let invItems = [
             "Chicken",
             //debug
-            "Skull", "Skull", "Skull"
         ];
 
         for (let itm of invItems) {
@@ -283,7 +282,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.15",
+    VERSION: "0.18.16",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
