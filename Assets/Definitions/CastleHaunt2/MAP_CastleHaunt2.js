@@ -2542,6 +2542,7 @@ const MAP = {
         lights: '[[293,3,"DuaLLantern_007","standard"],[293,1,"DuaLLantern_005","standard"],[293,7,"DuaLLantern_023","standard"],[293,5,"FluxLight121","dim"],[244,7,"Candelabra08","dimCandle"],[336,1,"Candelabra03","dimCandle"],[140,5,"Lamp53","standard"],[232,5,"DuaLLantern_019","standard"],[324,5,"DuaLLantern_014","standard"],[416,5,"FluxLight116","standard"],[16,7,"Fireplace210","fire"],[568,1,"Fireplace101","fire"],[535,1,"Lights106","standard"],[29,7,"FluxLight126","standard"],[28,3,"Candelabra04","weakCandle"],[534,3,"Candelabra16","weakCandle"]]',
         gates: '[[298,3,"104.1","87.2","Up"],[285,5,"104.2","105.1","Down"],[45,3,"104.3","106.1","Closed"],[551,3,"104.4","107.1","Closed"],[46,5,"104.5","108.1","Closed"],[506,5,"104.6","109.1","Closed"]]',
         doors: '[288]',
+        objects: '[[194,"GoldCoin"],[401,"Skull"],[487,"Shield"]]',
         oracles: '[[220,7,"FishnetDomme"],[562,1,"NylonDomme"],[358,1,"NylonDomme"]]',
         movables: '[[282,"RoastChicken"]]',
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
@@ -2586,7 +2587,7 @@ const MAP = {
         monsterList: '["Bat","RedGoldBat","GreatChick"]',
         }
     ,
-    107: {
+    107 : {
         name: "Skeleton Farm",
         sg: 0,
         maxSpawned: 5,
@@ -2603,10 +2604,11 @@ const MAP = {
         keys: '[[69,0]]',
         gold: '[[72,"SilverBar"],[225,"SilverBar"],[193,"SilverBar"],[232,"SilverBar"],[129,"SilverBar"],[63,"SilverBar"],[139,"GoldBar"],[77,"GoldBar"],[183,"GoldBar"],[236,"GoldBar"],[81,"GoldBar"],[132,"GoldSphere"]]',
         doors: '[38,106]',
+        objects: '[[228,"GoldCoin"]]',
         oracles: '[[24,3,"FarrmerDaughter"],[276,1,"FarmerWife"],[283,1,"ApparitiaMajor"]]',
         lairs: '[[170,5,"Lair03"],[186,3,"Lair82"],[280,1,"Lair15"],[10,7,"Lair49"]]',
         monsterList: '["GoldSkeletonGold"]',
-    }
+        }
     ,
     108 : {
         name: "Northwest Tower",
@@ -2679,20 +2681,23 @@ const MAP = {
         monsterList: '["GreenSkeleton","BlueSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton"]',
         }
     ,
-    111: {
+    111 : {
         name: "Another Skeleton Farm",
         sg: 0,
         maxSpawned: 5,
-        killCountdown: 4,
+        killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB2ABB10ABAA4BAA131BB6AA12BABB7AA5BABB23ABB6AA4BABB2AA5BB4ABB33ABB4$BB17A"}',
+        data: '{"width":"17","height":"17","map":"BB2ABAA4BABAA4BABABABAA4BAA10BB3AA7BAA20BABB2AA7BAA2BAA21BAA15BAA3BB3AA16BB2ABAA2BB5AA3BAA16BB2ABB3AA3BB6ABB2ABABABB2ABB2ABB6AA2BB3AA2BAA6BB5AA2BB3ABB3AA2BB2ABB2AA3BABB3AA2BB10ABB3ABB19A$"}',
         wall: "DarkMossy2",
         floor: "BloodMarbleFloorWall_SDXL_023",
         ceil: "Relief09",
         start: '[18,7]',
-        lights: '[[154,1,"Candle66","darkYellow"]]',
+        lights: '[[154,1,"Candle66","darkYellow"],[66,3,"FluxLight111","dim"],[100,3,"Candelabra14","dim"],[134,3,"FluxLight105","dim"],[168,3,"FluxLight124","dim"],[202,3,"DuaLLantern_031","dim"],[236,3,"DuaLLantern_016","dim"],[3,7,"Candle54","dim"],[44,5,"FluxLight113","dim"],[265,5,"Lights115","dim"],[274,1,"Fireplace01","fire"]]',
         gates: '[[1,7,"111.1","107.2","Closed"]]',
-    }
+        objects: '[[250,"Shield"],[109,"Candle"]]',
+        lairs: '[[84,3,"Lair63"],[118,3,"Lair42"],[152,3,"Lair21"],[186,3,"Lair41"],[220,3,"Lair55"]]',
+        monsterList: '["GoldSkeletonGold"]',
+        }
     ,
     112 : {
         name: "North Spire",
@@ -2775,7 +2780,10 @@ const MAP = {
         start: '[19,7]',
         lights: '[[132,1,"Lamp51","standard"],[35,7,"DuaLLantern_002","dim"],[167,7,"Candle58","standard"],[280,1,"SkullLantern51","standard"],[193,3,"Candle71","standardDimmed"],[193,1,"DuaLLantern_017","standard"],[44,7,"SkullLantern50","dim"]]',
         gates: '[[2,7,"115.1","114.2","Closed"],[255,5,"115.2","116.1","Closed"]]',
-        entities: '[[13,7,"ApparitiaDefector"]]',
+        containers: '[[116,"WoodenCrate53","INTERACTION_ITEM.AnkhBook",1]]',
+        entities: '[[13,7,"ApparitiaDefector"],[286,1,"Armored"]]',
+        objects: '[[143,"Mushroom"],[208,"GoldSphere"]]',
+        oracles: '[[23,7,"ApparitiaThrone"]]',
         lairs: '[[136,5,"Lair73"],[152,3,"Lair58"]]',
         monsterList: '["Hulk","GoldSkeleton"]',
         }
@@ -2794,9 +2802,11 @@ const MAP = {
         lights: '[[149,7,"SkullLantern53","standard"],[80,1,"FluxLight125","weakCandle"],[80,5,"Candle60","weakCandle"],[142,3,"SkullLantern57","standard"],[2,7,"SkullLantern56","standardDimmed"],[26,3,"Candle66","weakCandle"]]',
         gates: '[[33,3,"116.1","115.2","Closed"],[136,5,"116.2","109.3","Closed"]]',
         keys: '[[243,1]]',
+        containers: '[[211,"WoodenCrate50","INTERACTION_ITEM.OrangeLeggings",1],[35,"TreasureChest","INTERACTION_ITEM.Mouse",5]]',
         doors: '[55,46,151,232,247,189]',
-        entities: '[[285,1,"Narancina"]]',
-        objects: '[[25,"Dagger"]]',
+        entities: '[[285,1,"Narancina"],[87,1,"CuteBarmaiden"]]',
+        objects: '[[25,"Dagger"],[83,"GoldSphere"],[200,"Skull"]]',
+        oracles: '[[225,1,"ApparitiaSitting"]]',
         lairs: '[[126,1,"Lair10"],[143,7,"Lair46"]]',
         monsterList: '["GoldSkeleton","Hulk"]',
         }

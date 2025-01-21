@@ -1586,6 +1586,22 @@ const ORACLE_TYPE = {
         text: "Be afraid. Be very afraid. I have the Golden Sword. And I am not afraid to use it.",
         interactionCategory: "oracle",
     },
+    ApparitiaThrone: {
+        name: "ApparitiaThrone",
+        sprite: "ApparitiaThrone",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Maybe Hauntessa will let me rule your castle. I am already practicing.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaSitting: {
+        name: "ApparitiaSitting",
+        sprite: "ApparitiaSitting",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I can kill you with my stare. Right? No? Ok, my weapons then.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {
@@ -4166,7 +4182,7 @@ const INTERACTION_ITEM = {
         name: "Mouse",
         category: "interaction_item",
         inventorySprite: "Mouse",
-        text: "Cute little mose. Someone will want to eat it."
+        text: "Cute little mouse. Someone will want to eat it."
     },
     RedSandals: {
         name: "RedSandals",
@@ -4441,6 +4457,32 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    CuteBarmaiden: {
+        name: "CuteBarmaiden",
+        sprite: "CuteBarmaiden",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["GoldCoin", "GoldCoin"],
+        gives: "GlassOfBeer",
+        text: {
+            intro: "Hey Princess, care to buy a round? Two gold coins get us two beers, one for me, one for you. Cheers!",
+            progress: "One coin down, but this bar doesn't do tabs. Another coin, please!",
+            conclusion: "Thanks for the round! Here's your beer to go. Drink responsibly, Princess!"
+        }
+    },
+    Armored: {
+        name: "Armored",
+        sprite: "Armored",
+        category: 'crest',
+        voice: "Female2",
+        wants: ["Shield", "Shield"],
+        gives: "Helmet",
+        text: {
+            intro: "A maiden can never have too many shields! Bring me more, and I'll part with this helmet. I'm far too pretty to wear it anyway.",
+            progress: "One shield is nice, but my collection isn't complete. Keep them coming!",
+            conclusion: "With my shields stacked high, this helmet is all yours. It's better suited to you anyway! When did you see yourself in the mirror the last time?"
+        }
+    },
     HornyMonica: {
         name: "HornyMonica",
         sprite: "HornyMonica",
