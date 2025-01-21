@@ -2527,7 +2527,7 @@ const MAP = {
         monsterList: '["Dragon","SilverSkeleton","RedSkeleton"]',
     }
     ,
-    104 : {
+    104: {
         name: "Crypt Entrance",
         sg: 0,
         maxSpawned: 4,
@@ -2548,7 +2548,7 @@ const MAP = {
         trainers: '[[10,7,"Fox"],[276,5,"SpartaKiss"],[184,5,"IceQueen"],[368,5,"BlueViper"],[160,3,"NinjaX"],[367,3,"Nun"],[229,3,"NiqabBabe"],[436,3,"PitchforkFarmer"]]',
         lairs: '[[238,3,"Lair67"],[284,3,"Lair81"],[330,3,"Lair46"]]',
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
-        }
+    }
     ,
     105: {
         name: "Meet Hauntessa Spookish",
@@ -2564,7 +2564,7 @@ const MAP = {
         gates: '[[535,3,"105.1","104.2","Up"]]',
     }
     ,
-    106 : {
+    106: {
         name: "The Last Temple",
         sg: 0,
         maxSpawned: 2,
@@ -2585,9 +2585,9 @@ const MAP = {
         movables: '[[67,"Chicken"]]',
         lairs: '[[135,5,"Lair33"],[149,3,"Lair03"]]',
         monsterList: '["Bat","RedGoldBat","GreatChick"]',
-        }
+    }
     ,
-    107 : {
+    107: {
         name: "Skeleton Farm",
         sg: 0,
         maxSpawned: 5,
@@ -2608,9 +2608,9 @@ const MAP = {
         oracles: '[[24,3,"FarrmerDaughter"],[276,1,"FarmerWife"],[283,1,"ApparitiaMajor"]]',
         lairs: '[[170,5,"Lair03"],[186,3,"Lair82"],[280,1,"Lair15"],[10,7,"Lair49"]]',
         monsterList: '["GoldSkeletonGold"]',
-        }
+    }
     ,
-    108 : {
+    108: {
         name: "Northwest Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2632,9 +2632,9 @@ const MAP = {
         oracles: '[[83,3,"ApparitiaGun"]]',
         lairs: '[[7,7,"Lair46"],[280,1,"Lair46"]]',
         monsterList: '["GoldSkeleton","GreenSkeleton","GreenSkeleton","BlueSkeleton","Hulk"]',
-        }
+    }
     ,
-    109 : {
+    109: {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2656,9 +2656,9 @@ const MAP = {
         movables: '[[142,"Chicken"],[146,"RoastChicken"]]',
         lairs: '[[237,3,"Lair59"],[265,3,"Lair35"],[4,7,"Lair80"]]',
         monsterList: '["BlueSkeleton","GreenSkeleton","GreenSkeleton","GoldSkeleton","GreatChick","Hulk","Dragon"]',
-        }
+    }
     ,
-    110 : {
+    110: {
         name: "West Wing",
         sg: 0,
         maxSpawned: 4,
@@ -2679,27 +2679,29 @@ const MAP = {
         movables: '[[140,"Chicken"]]',
         lairs: '[[68,5,"Lair71"],[204,5,"Lair12"]]',
         monsterList: '["GreenSkeleton","BlueSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton"]',
-        }
+    }
     ,
-    111 : {
+    111: {
         name: "Another Skeleton Farm",
         sg: 0,
         maxSpawned: 5,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"17","height":"17","map":"BB2ABAA4BABAA4BABABABAA4BAA10BB3AA7BAA20BABB2AA7BAA2BAA21BAA15BAA3BB3AA16BB2ABAA2BB5AA3BAA16BB2ABB3AA3BB6ABB2ABABABB2ABB2ABB6AA2BB3AA2BAA6BB5AA2BB3ABB3AA2BB2ABB2AA3BABB3AA2BB10ABB3ABB19A$"}',
+        data: '{"width":"17","height":"17","map":"BB2ABAA4BABAA4BABAA2BAA4BAA9BAA6BAA2BABAA9BAA4BABAA7BAA2BAA25BAA2BAA7BABAA2BB2AA3BAA13BB2ABB2AA2BABB4AA3BAA16BB2ABB3AA3BB3ABB3ABAA2BABB2ABABB2ABB7ABABB2AA5BB2ABB5ABABB3ABB3AA3BB2ABB2AA4BABB3AA2BB14AA2BB19A$"}',
         wall: "DarkMossy2",
         floor: "BloodMarbleFloorWall_SDXL_023",
         ceil: "Relief09",
         start: '[18,7]',
-        lights: '[[154,1,"Candle66","darkYellow"],[66,3,"FluxLight111","dim"],[100,3,"Candelabra14","dim"],[134,3,"FluxLight105","dim"],[168,3,"FluxLight124","dim"],[202,3,"DuaLLantern_031","dim"],[236,3,"DuaLLantern_016","dim"],[3,7,"Candle54","dim"],[44,5,"FluxLight113","dim"],[265,5,"Lights115","dim"],[274,1,"Fireplace01","fire"]]',
+        lights: '[[154,1,"Candle66","darkYellow"],[66,3,"FluxLight111","dim"],[100,3,"Candelabra14","dim"],[134,3,"FluxLight105","dim"],[168,3,"FluxLight124","dim"],[202,3,"DuaLLantern_031","dim"],[236,3,"DuaLLantern_016","dim"],[3,7,"Candle54","dim"],[44,5,"FluxLight113","dim"],[265,5,"Lights115","dim"],[274,1,"Fireplace01","fire"],[245,1,"Lamp40","dim"]]',
         gates: '[[1,7,"111.1","107.2","Closed"]]',
+        containers: '[[31,"MetalCrate52","GOLD_ITEM_TYPE.GoldBar",7],[178,"WoodenCrate","GOLD_ITEM_TYPE.GoldBar",7],[205,"WoodenCrate56","GOLD_ITEM_TYPE.GoldBar",7],[269,"WoodenCrate57","GOLD_ITEM_TYPE.GoldBar",1],[231,"MetalCrate54","GOLD_ITEM_TYPE.GoldBar",1],[73,"WoodenCrate60","GOLD_ITEM_TYPE.GoldBar",1]]',
+        entities: '[[143,7,"CastleOfficeGamer"]]',
         objects: '[[250,"Shield"],[109,"Candle"]]',
         lairs: '[[84,3,"Lair63"],[118,3,"Lair42"],[152,3,"Lair21"],[186,3,"Lair41"],[220,3,"Lair55"]]',
         monsterList: '["GoldSkeletonGold"]',
-        }
+    }
     ,
-    112 : {
+    112: {
         name: "North Spire",
         sg: 0,
         maxSpawned: 4,
@@ -2719,9 +2721,9 @@ const MAP = {
         movables: '[[110,"BabySheep"]]',
         lairs: '[[136,5,"Lair29"],[152,3,"Lair21"]]',
         monsterList: '["GoldSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton","BlueSkeleton","Dragon","Hulk","RedDragon"]',
-        }
+    }
     ,
-    113 : {
+    113: {
         name: "North East Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2743,9 +2745,9 @@ const MAP = {
         movables: '[[215,"BabySheep"]]',
         lairs: '[[278,1,"Lair63"],[281,1,"Lair03"],[284,1,"Lair82"]]',
         monsterList: '["GreenSkeleton"]',
-        }
+    }
     ,
-    114 : {
+    114: {
         name: "East Wing",
         sg: 0,
         maxSpawned: 4,
@@ -2757,7 +2759,7 @@ const MAP = {
         ceil: "RockWall_SDXL_009",
         start: '[18,7]',
         lights: '[[120,1,"FluxLight127","standard"],[120,7,"Candle60","standard"],[121,5,"DuaLLantern_010","standard"],[33,3,"Candle72","standardDimmed"],[271,3,"Lamp41","standardDimmed"],[90,1,"Lights115","standardDimmed"],[160,7,"WallLamp32","standardDimmed"],[128,5,"DuaLLantern_026","standard"]]',
-        gates: '[[1,7,"114.1","113.2","Closed"],[275,1,"114.2","115.1","Closed"]]',
+        gates: '[[1,7,"114.1","113.2","Closed"],[275,1,"114.2","115.1","Closed"],[264,5,"114.3","118.1","Up"]]',
         containers: '[[161,"WoodenCrate57","INTERACTION_ITEM.VenusBook",7],[232,"MetalCrate53","INTERACTION_ITEM.Carrot",1]]',
         entities: '[[5,7,"Viking"]]',
         objects: '[[26,"Sword"],[210,"Mushroom"]]',
@@ -2765,9 +2767,9 @@ const MAP = {
         movables: '[[132,"BabySheep"]]',
         lairs: '[[101,3,"Lair51"],[203,3,"Lair81"],[117,7,"Lair23"],[185,1,"Lair32"]]',
         monsterList: '["GoldSkeleton","Hulk"]',
-        }
+    }
     ,
-    115 : {
+    115: {
         name: "South East Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2786,9 +2788,9 @@ const MAP = {
         oracles: '[[23,7,"ApparitiaThrone"]]',
         lairs: '[[136,5,"Lair73"],[152,3,"Lair58"]]',
         monsterList: '["Hulk","GoldSkeleton"]',
-        }
+    }
     ,
-    116 : {
+    116: {
         name: "South Spire",
         sg: 0,
         maxSpawned: 4,
@@ -2809,9 +2811,9 @@ const MAP = {
         oracles: '[[225,1,"ApparitiaSitting"]]',
         lairs: '[[126,1,"Lair10"],[143,7,"Lair46"]]',
         monsterList: '["GoldSkeleton","Hulk"]',
-        }
+    }
     ,
-    117 : {
+    117: {
         name: "Ice Pie",
         sg: 0,
         maxSpawned: 6,
@@ -2827,5 +2829,24 @@ const MAP = {
         objects: '[[256,"IceCube"],[162,"IceCube"],[132,"IceCube"]]',
         lairs: '[[39,7,"Lair36"],[157,5,"Lair29"],[287,1,"Lair13"],[234,1,"Lair74"]]',
         monsterList: '["GreenSkeleton"]',
+    }
+    ,
+    118 : {
+        name: "Tower Top",
+        sg: 0,
+        maxSpawned: 4,
+        killCountdown: 4,
+        spawnDelay: 6000,
+        data: '{"width":"17","height":"17","map":"BB7AA7BABAA41BAA13BB2AA4BB2AA2BAA9BB2AA5BB2AA21BB11AA10BABB4ABB4ABAA2BB2ABAA2BB4AA2BAA5BAA2BB2AA2BB4ABB2ABB3AA8BB7AA2BB4AA2BAA6BABB6ABB18ABAA4BABB3ABB3ABB20AB$"}',
+        wall: "BlackWall215",
+        floor: "PlainRockWall",
+        ceil: "RoughCave15",
+        start: '[270,3]',
+        lights: '[[109,1,"FluxLight108","standard"],[111,1,"DuaLLantern_030","standard"],[177,7,"FluxLight127","standard"],[179,7,"Lamp49","standard"],[125,3,"Candle60","standard"],[159,3,"DuaLLantern_012","standard"],[129,5,"DuaLLantern_028","standard"],[163,5,"DuaLLantern_019","standard"]]',
+        gates: '[[271,3,"118.1","114.3","Down"]]',
+        containers: '[[19,"WoodenCrate60","INTERACTION_ITEM.Floppy",5]]',
+        objects: '[[66,"Candle"]]',
+        lairs: '[[127,1,"Lair74"],[143,3,"Lair36"],[145,5,"Lair46"],[161,7,"Lair07"]]',
+        monsterList: '["Hulk"]',
         }
 };

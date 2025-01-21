@@ -4457,6 +4457,19 @@ const INTERACTION_ITEM = {
 };
 
 const INTERACTION_ENTITY = {
+    CastleOfficeGamer: {
+        name: "CastleOfficeGamer",
+        sprite: "CastleOfficeGamer",
+        category: 'crest',
+        voice: "FemaleLow2",
+        wants: ["Floppy", "Floppy"],
+        gives: "Carrot",
+        text: {
+            intro: "CastleHaunt runs on two floppies, and I'm dying to play. Bring them to me, and I'll share my vegan lunch. Sadly, it's all I've got.",
+            progress: "One floppy loaded, but the game needs both disks. Keep looking!",
+            conclusion: "Game on! As promised, here's my carrot. Vegan life isn't for everyone, Princess."
+        }
+    },
     CuteBarmaiden: {
         name: "CuteBarmaiden",
         sprite: "CuteBarmaiden",

@@ -9,17 +9,12 @@
       
 TODO:
 
-    * early oracles - defense
+    * 
 
 known bugs: 
     * i don't do bugs
 retests:
     * 
-log:
-    * Hauntessa Spookish, the great haunteress from the Hauntosphere
-    * you have been invaded, castle is occupied, ...
-
-
  */
 ////////////////////////////////////////////////////
 
@@ -81,6 +76,7 @@ const DEBUG = {
             DONE HornyMonica wants "Candle","Candle","Candle" gives YinYangBook 
             DONE Armored wants "Shield", "Shield" gives Helmet
             DONE CuteBarmaiden wants "GoldCoin","GoldCoin" gives GlassOfBeer
+            DONE CastleOfficeGamer wants "Floppy", "Floppy" gives "Carrot"
 
         apparitias:
 
@@ -135,17 +131,19 @@ const DEBUG = {
             DONE "GoldSphere", <-- 115
             DONE "GoldSphere" <-- 116
             DONE "Carrot", <-- 114
-        "Carrot"
+            DONE "Carrot" <-- CastleOfficeGamer (111)
             DONE "Skull", <-- 113
             DONE "Skull", <-- 116
-            "Skull" <-- 104
+            DONE "Skull" <-- 104
             DONE"Candle", <-- 112
             DONE "Candle" <--- 111
-        "Candle"
+            DONE "Candle" <--- 118
             DONE "Shield", <-- 104
             DONE "Shield", <-- 111
             DONE "GoldCoin", <-- 107
             DONE"GoldCoin" <-- 104
+            DONE "Floppy", <-- 118
+        "Floppy"
 
 
         * coins sources (x, missing x = ):
@@ -169,7 +167,7 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 111; //104
+        GAME.level = 114; //104
 
         GAME.gold = 2589;
         GAME.lives = 5; //5
@@ -241,7 +239,7 @@ const DEBUG = {
         let invItems = [
             "Chicken",
             //debug
-           
+           "Floppy","Floppy",
         ];
 
         for (let itm of invItems) {
@@ -289,7 +287,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.17",
+    VERSION: "0.18.18",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",
