@@ -60,7 +60,7 @@ const INI = {
 const PRG = {
   VERSION: "0.14.07",
   NAME: "MazEditor",
-  YEAR: "2022, 2023, 2024",
+  YEAR: "2022, 2023, 2024, 2025",
   CSS: "color: #239AFF;",
   INIT() {
 
