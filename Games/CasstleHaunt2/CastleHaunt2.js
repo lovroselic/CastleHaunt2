@@ -77,6 +77,7 @@ const DEBUG = {
             DONE Armored wants "Shield", "Shield" gives Helmet
             DONE CuteBarmaiden wants "GoldCoin","GoldCoin" gives GlassOfBeer
             DONE CastleOfficeGamer wants "Floppy", "Floppy" gives "Carrot"
+        FireballReader wants "FireExtinguisher" gives "FireballBook"
 
         apparitias:
 
@@ -105,7 +106,7 @@ const DEBUG = {
             DONE * "VenusBook", <-- 114
             DONE * "TripleMoonBook" <-- 108
             DONE * "AnkhBook", <-- 115
-        * "FireballBook", 
+        * "FireballBook", <-- FireballReader (114)
             DONE * "PrincessBook",  <-- 110
             DONE * "TreeOfLifeBook" <-- Shroomess (113)
             DONE* "BabySheep", 114
@@ -144,6 +145,7 @@ const DEBUG = {
             DONE"GoldCoin" <-- 104
             DONE "Floppy", <-- 118
         "Floppy"
+        "FireExtinguisher"
 
 
         * coins sources (x, missing x = ):
@@ -239,7 +241,7 @@ const DEBUG = {
         let invItems = [
             "Chicken",
             //debug
-           "Floppy","Floppy",
+            "FireExtinguisher"
         ];
 
         for (let itm of invItems) {
@@ -287,7 +289,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.18.18",
+    VERSION: "0.18.19",
     NAME: "Castle Haunt II",
     YEAR: "2024",
     SG: "CH2",

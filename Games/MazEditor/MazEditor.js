@@ -982,6 +982,8 @@ const GAME = {
     $("#key_type").change(function () {
       let selectedOption = $("#key_type").val().toLowerCase();
 
+      ENGINE.drawToId("keycanvas", 0, 0, SPRITE[`${selectedOption.capitalize()}Key`]);
+
       switch (selectedOption) {
         case "emerald":
           selectedOption = "#50C878";
@@ -992,6 +994,7 @@ const GAME = {
 
       }
       $("#key_selection").css("background-color", selectedOption);
+      
     });
     $("#key_type").trigger("change");
 

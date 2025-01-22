@@ -950,6 +950,10 @@ LoadTextures = [
     { srcName: "ObjectTextures/WoodenCrateTexture60.jpg", name: "WoodenCrateTexture60" },
     { srcName: "ObjectTextures/WoodenCrateTexture61.jpg", name: "WoodenCrateTexture61" },
     { srcName: "ObjectTextures/CandleWax.jpg", name: "CandleWax" },
+    { srcName: "ObjectTextures/PinkMetal.jpg", name: "PinkMetal" },
+    { srcName: "ObjectTextures/OrangeMetal.jpg", name: "OrangeMetal" },
+    { srcName: "ObjectTextures/CyanMetal.jpg", name: "CyanMetal" },
+    
 
     //decal-gates
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
@@ -1342,6 +1346,7 @@ LoadSprites = [
     { srcName: "EntityPictures/Armored.jpg", name: "Armored" },
     { srcName: "EntityPictures/CuteBarmaiden.jpg", name: "CuteBarmaiden" },
     { srcName: "EntityPictures/CastleOfficeGamer.jpg", name: "CastleOfficeGamer" },
+    { srcName: "EntityPictures/FireballReader.jpg", name: "FireballReader" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },
@@ -1456,6 +1461,10 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Silver2.png", name: "DungeonDoor_Silver" },
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
     { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
+
+    { srcName: "Doors/DungeonDoor_Cyan.png", name: "DungeonDoor_Cyan" },
+    { srcName: "Doors/DungeonDoor_Orange.png", name: "DungeonDoor_Orange" },
+    { srcName: "Doors/DungeonDoor_Pink.png", name: "DungeonDoor_Pink" },
 
     //shrines
     { srcName: "Shrines/KickShrine.jpg", name: "KickShrine" },
@@ -1680,6 +1689,7 @@ LoadSprites = [
     { srcName: "Items/OrangeBra.png", name: "OrangeBra" },
     { srcName: "Items/SkullNecklace.png", name: "SkullNecklace" },
     { srcName: "Items/Carrot.png", name: "Carrot" },
+    { srcName: "Items/FireExtinguisher.png", name: "FireExtinguisher" },
 
     //UI
     { srcName: "UI/CompassRose.png", name: "CompassRose" },
@@ -1866,7 +1876,6 @@ LoadSprites = [
     { srcName: "Lights/DuaLLantern_029.png", name: "DuaLLantern_029" },
     { srcName: "Lights/DuaLLantern_030.png", name: "DuaLLantern_030" },
     { srcName: "Lights/DuaLLantern_031.png", name: "DuaLLantern_031" },
-
     { srcName: "Lights/Moon50.png", name: "Moon50" },
     { srcName: "Lights/Moon51.png", name: "Moon51" },
     { srcName: "Lights/Moon52.png", name: "Moon52" },
@@ -1881,7 +1890,6 @@ LoadSprites = [
     { srcName: "Lights/Sun1.png", name: "Sun1" },
     { srcName: "Lights/Sun2.png", name: "Sun2" },
     { srcName: "Lights/Sun3.png", name: "Sun3" },
-
     { srcName: "Lights/Candle50.png", name: "Candle50" },
     { srcName: "Lights/Candle51.png", name: "Candle51" },
     { srcName: "Lights/Candle52.png", name: "Candle52" },
@@ -1916,14 +1924,17 @@ LoadSprites = [
     { srcName: "Lights/SkullLantern58.png", name: "SkullLantern58" },
 
     //keys
-    { srcName: "Keys/BlueKey.png", name: "BlueKey" },
-    { srcName: "Keys/EmeraldKey.png", name: "EmeraldKey" },
-    { srcName: "Keys/GoldKey.png", name: "GoldKey" },
-    { srcName: "Keys/GreenKey.png", name: "GreenKey" },
-    { srcName: "Keys/PearlKey.png", name: "PearlKey" },
-    { srcName: "Keys/PurpleKey.png", name: "PurpleKey" },
-    { srcName: "Keys/RedKey.png", name: "RedKey" },
-    { srcName: "Keys/SilverKey.png", name: "SilverKey" },
+    { srcName: "Keys/BlueKey2.png", name: "BlueKey" },
+    { srcName: "Keys/EmeraldKey2.png", name: "EmeraldKey" },
+    { srcName: "Keys/GoldKey2.png", name: "GoldKey" },
+    { srcName: "Keys/GreenKey2.png", name: "GreenKey" },
+    { srcName: "Keys/PearlKey2.png", name: "PearlKey" },
+    { srcName: "Keys/PurpleKey2.png", name: "PurpleKey" },
+    { srcName: "Keys/RedKey2.png", name: "RedKey" },
+    { srcName: "Keys/SilverKey2.png", name: "SilverKey" },
+    { srcName: "Keys/OrangeKey.png", name: "OrangeKey" },
+    { srcName: "Keys/PinkKey.png", name: "PinkKey" },
+    { srcName: "Keys/CyanKey.png", name: "CyanKey" },
 
     //ObjDecals - all
     { srcName: "ObjDecals/CrownDecal.png", name: "CrownDecal" },

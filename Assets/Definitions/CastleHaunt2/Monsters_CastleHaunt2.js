@@ -13,10 +13,10 @@
 "use strict";
 console.log("%cMonsters for CastleHaunt2 loaded.", "color: #888");
 
-const GATE_TYPES = ["Open", "Closed", "Gold", "Silver", "Red", "Green", "Blue", "Up", "Down", "Emerald", "Purple", "Pearl"];
-const KEY_TYPES = ["Gold", "Silver", "Red", "Green", "Blue", "Emerald", "Purple", "Pearl"];
-const KEY_TEXTURES = ["Gold", "Silver", "RedMetal", "GreenMetal", "BlueMetal", "EmeraldTexture", "PurpleMetal", "PearlTexture"];
-const KEY_MATERIAL = ["gold", "silver", "redShine", "greenShine", "blueShine", "standard", "standard", "whiteShine"];
+const GATE_TYPES = ["Open", "Closed", "Gold", "Silver", "Red", "Green", "Blue", "Up", "Down", "Emerald", "Purple", "Pearl", "Cyan", "Orange", "Pink"];
+const KEY_TYPES = ["Gold", "Silver", "Red", "Green", "Blue", "Emerald", "Purple", "Pearl", "Cyan", "Orange", "Pink"];
+const KEY_TEXTURES = ["Gold", "Silver", "RedMetal", "GreenMetal", "BlueMetal", "EmeraldTexture", "PurpleMetal", "PearlTexture", "CyanMetal", "OrangeMetal", "PinkMetal"];
+const KEY_MATERIAL = ["gold", "silver", "redShine", "greenShine", "blueShine", "standard", "standard", "whiteShine", "cyanShine", "orangeShine", "pinkShine"];
 const KEY_TYPE = {};
 
 for (let [index, key] of KEY_TYPES.entries()) {
@@ -4454,9 +4454,28 @@ const INTERACTION_ITEM = {
         inventorySprite: "Carrot",
         text: "Juicy carrot. Let's nibble it."
     },
+    FireExtinguisher: {
+        name: "FireExtinguisher",
+        category: "interaction_item",
+        inventorySprite: "FireExtinguisher",
+        text: "Fire extinguisher. Is there a fire nearby?"
+    },
 };
 
 const INTERACTION_ENTITY = {
+    FireballReader: {
+        name: "FireballReader",
+        sprite: "FireballReader",
+        category: 'crest',
+        voice: "Female",
+        wants: ["FireExtinguisher"],
+        gives: "FireballBook",
+        text: {
+            intro: "I'm diving into some very HOT topics here, and things are getting a little out of hand. Bring me a fire extinguisher, and I'll share the secrets of the FireballBook with you.",
+            progress: null,
+            conclusion: "Crisis averted! As promised, here is the FireballBook. Handle it with care, it's sizzling with knowledge."
+        }
+    },
     CastleOfficeGamer: {
         name: "CastleOfficeGamer",
         sprite: "CastleOfficeGamer",

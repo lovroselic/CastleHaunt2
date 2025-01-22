@@ -2747,7 +2747,7 @@ const MAP = {
         monsterList: '["GreenSkeleton"]',
     }
     ,
-    114: {
+    114 : {
         name: "East Wing",
         sg: 0,
         maxSpawned: 4,
@@ -2761,13 +2761,13 @@ const MAP = {
         lights: '[[120,1,"FluxLight127","standard"],[120,7,"Candle60","standard"],[121,5,"DuaLLantern_010","standard"],[33,3,"Candle72","standardDimmed"],[271,3,"Lamp41","standardDimmed"],[90,1,"Lights115","standardDimmed"],[160,7,"WallLamp32","standardDimmed"],[128,5,"DuaLLantern_026","standard"]]',
         gates: '[[1,7,"114.1","113.2","Closed"],[275,1,"114.2","115.1","Closed"],[264,5,"114.3","118.1","Up"]]',
         containers: '[[161,"WoodenCrate57","INTERACTION_ITEM.VenusBook",7],[232,"MetalCrate53","INTERACTION_ITEM.Carrot",1]]',
-        entities: '[[5,7,"Viking"]]',
+        entities: '[[5,7,"Viking"],[127,3,"FireballReader"]]',
         objects: '[[26,"Sword"],[210,"Mushroom"]]',
         oracles: '[[25,5,"ApparitiaSword"]]',
         movables: '[[132,"BabySheep"]]',
         lairs: '[[101,3,"Lair51"],[203,3,"Lair81"],[117,7,"Lair23"],[185,1,"Lair32"]]',
         monsterList: '["GoldSkeleton","Hulk"]',
-    }
+        }
     ,
     115: {
         name: "South East Tower",
