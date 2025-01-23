@@ -407,6 +407,14 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Galacticass: {
+        name: "Galacticass",
+        sprite: "Galacticass",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I'm not Apparitia, I'm Galacticass. I'm here to help you. I'm not like the others. Did you fell for it?",
+        interactionCategory: "oracle",
+    },
     FarmerWife: {
         name: "FarmerWife",
         sprite: "FarmerWife",
@@ -2909,6 +2917,25 @@ const MONSTER_TYPE = {
         behaviourArguments: [10, ["wanderer"], 4, ["advancer"]],
         moveSpeed: 1.0,
         material: MATERIAL.greenShine,
+    },
+    Basilisk: {
+        name: "Basilisk",
+        model: "Basilisk",
+        scale: 1.8 / 2 ** 9,
+        rotateToNorth: Math.PI,
+        midHeight: 0.5,
+        deathType: "BloodExplosion",
+        mana: 0,
+        health: 200,
+        attack: 250,
+        magic: 0,
+        defense: 0,
+        directMagicDamage: true,
+        attackSound: "MonsterAttack2",
+        hurtSound: "MonsterHurt2",
+        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
+        moveSpeed: 0.9,
+        material: MATERIAL.greenFluence,
     },
 };
 

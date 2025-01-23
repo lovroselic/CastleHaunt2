@@ -1035,6 +1035,7 @@ LoadObjects = [
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
     "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf", "Dragon.gltf", "SkeleDwarf.gltf", "Astro.gltf", "Hulk.gltf",
+    "Basilisk.gltf",
 ];
 
 LoadSprites = [
@@ -1348,6 +1349,7 @@ LoadSprites = [
     { srcName: "EntityPictures/CuteBarmaiden.jpg", name: "CuteBarmaiden" },
     { srcName: "EntityPictures/CastleOfficeGamer.jpg", name: "CastleOfficeGamer" },
     { srcName: "EntityPictures/FireballReader.jpg", name: "FireballReader" },
+    { srcName: "EntityPictures/Galacticass.jpg", name: "Galacticass" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

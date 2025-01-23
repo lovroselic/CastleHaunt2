@@ -144,8 +144,8 @@ const DEBUG = {
             DONE "GoldCoin", <-- 107
             DONE"GoldCoin" <-- 104
             DONE "Floppy", <-- 118
-        "Floppy" <-- 104
-        "FireExtinguisher" <-- 104
+            DONE "Floppy" <-- 104
+            DONE "FireExtinguisher" <-- 104
 
 
         * coins sources (x, missing x = ):
@@ -165,15 +165,16 @@ const DEBUG = {
             * 
         * temple usage
             * health
+            * attack
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113
-        GAME.level = 113;
+        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113-->114-->106-->118-->114
+        GAME.level = 115; //115
 
-        GAME.gold = 4699;
-        GAME.lives = 5; //5
+        GAME.gold = 4702;
+        GAME.lives = 3; //5
 
         HERO.hasCapacity = true;
         HERO.capacity = 5;
@@ -182,10 +183,10 @@ const DEBUG = {
         HERO.orbs = 5;
         HERO.orbsLost = 0;
         HERO.magic = 60;
-        HERO.attack = 59;
+        HERO.attack = 64;
 
-        HERO.health = 260;
-        HERO.maxHealth = 464;
+        HERO.health = 217;
+        HERO.maxHealth = 472;
 
 
         let actItems = [
@@ -216,6 +217,7 @@ const DEBUG = {
             INTERACTION_OBJECT.Champagne,
             INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
@@ -227,12 +229,12 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "MagicSupremacy"
+            "Death", "Cripple"
             //"DestroyOrbs", "MagicSupremacy",
             //"Death", "DestroyOrbs",
             //"Death", "Death",
             //"DestroyOrbs",
-            //"MagicSupremacy",
+            //"MagicSupremacy", "Cripple"
         ];
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -243,7 +245,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Chicken", "FireExtinguisher", "Skull", "GoldCoin", "Floppy", "Shield", "GoldCoin", "Shield", "Candle", "TripleMoonBook", "Rat", "ScubaMask", "Mouse", "BabySheep", "Candle"
+            //"Chicken",  "Skull", "GoldCoin", "Floppy", "Shield", "GoldCoin", "Shield", "Candle", "TripleMoonBook", "Rat", "ScubaMask", "Mouse", "BabySheep", "Candle", "Shuriken", "BabySheep", "Skull" //hide for debug
+            //current 
+            "FireballBook", "Mushroom", "BabySheep", "Carrot", "VenusBook", "Sword", "Floppy", "Candle",
             //debug
 
         ];
@@ -293,7 +297,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.02",
+    VERSION: "0.19.03",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",

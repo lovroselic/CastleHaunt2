@@ -4,26 +4,7 @@
 
 const MONSTER_TYPE_BAK = {
     
-    Basilisk: {
-        name: "Basilisk",
-        model: "Basilisk",
-        scale: 1.8 / 2 ** 9,
-        rotateToNorth: Math.PI,
-        midHeight: 0.5,
-        deathType: "BloodExplosion",
-        inventory: GOLD_ITEM_TYPE.Coins,
-        attack: 40,
-        defense: 30,
-        magic: 25,
-        health: 50,
-        xp: 100,
-        gold: 100,
-        attackSound: "MonsterAttack2",
-        hurtSound: "MonsterHurt2",
-        behaviourArguments: [8, ["wanderer"], 6, ["advancer"]],
-        moveSpeed: 0.85,
-        material: MATERIAL.greenFluence,
-    },
+    
     Rex: {
         name: "Rex",
         model: "Rex",
