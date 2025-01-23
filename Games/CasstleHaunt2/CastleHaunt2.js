@@ -163,15 +163,16 @@ const DEBUG = {
 
          * missing sources for: 
             * 
-        * temple 
-
+        * temple usage
+            * health
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 107; //104
+        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113
+        GAME.level = 113;
 
-        GAME.gold = 4249;
+        GAME.gold = 4699;
         GAME.lives = 5; //5
 
         HERO.hasCapacity = true;
@@ -183,8 +184,8 @@ const DEBUG = {
         HERO.magic = 60;
         HERO.attack = 59;
 
-        HERO.health = 201;
-        HERO.maxHealth = 424;
+        HERO.health = 260;
+        HERO.maxHealth = 464;
 
 
         let actItems = [
@@ -200,25 +201,25 @@ const DEBUG = {
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
+            //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
 
-            INTERACTION_OBJECT.Champagne,
-            INTERACTION_OBJECT.Champagne,
+            //INTERACTION_OBJECT.Champagne,
+            //INTERACTION_OBJECT.Champagne,
             INTERACTION_OBJECT.Champagne,
             INTERACTION_OBJECT.Champagne,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -226,7 +227,9 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death", "Cripple", "MagicSupremacy", "DestroyOrbs", "DestroyOrbs",
+            "MagicSupremacy"
+            //"DestroyOrbs", "MagicSupremacy",
+            //"Death", "DestroyOrbs",
             //"Death", "Death",
             //"DestroyOrbs",
             //"MagicSupremacy",
@@ -240,9 +243,9 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Chicken", "FireExtinguisher", "Skull", "GoldCoin", "Floppy", "Shield",
+            "Chicken", "FireExtinguisher", "Skull", "GoldCoin", "Floppy", "Shield", "GoldCoin", "Shield", "Candle", "TripleMoonBook", "Rat", "ScubaMask", "Mouse", "BabySheep", "Candle"
             //debug
-            
+
         ];
 
         for (let itm of invItems) {
@@ -290,7 +293,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.01",
+    VERSION: "0.19.02",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -1703,7 +1706,8 @@ const GAME = {
         console.info("RESURECT");
         ENGINE.clearLayer("text");
         HERO.revive();
-        ENTITY3D.POOL.clear();
+        //ENTITY3D.POOL.clear(); //will also remove bosses!
+        ENTITY3D.POOL = ENTITY3D.POOL.filter(enemy => enemy.boss === true); //removes all but bosses, explicit check!
         MISSILE3D.POOL.clear();
         GAME.levelStart();
     },
