@@ -1602,6 +1602,14 @@ const ORACLE_TYPE = {
         text: "I can kill you with my stare. Right? No? Ok, my weapons then.",
         interactionCategory: "oracle",
     },
+    ApparitiaAirforce: {
+        name: "ApparitiaAirforce",
+        sprite: "ApparitiaAirforce",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "Behold! Me. A commander of the Hauntingsphere's Air force. Loyal general of Her Majesty Hauntessa Spookish.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

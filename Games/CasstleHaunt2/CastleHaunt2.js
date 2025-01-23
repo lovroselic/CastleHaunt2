@@ -169,9 +169,9 @@ const DEBUG = {
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        GAME.level = 114; //104
+        GAME.level = 107; //104
 
-        GAME.gold = 2589;
+        GAME.gold = 4249;
         GAME.lives = 5; //5
 
         HERO.hasCapacity = true;
@@ -183,7 +183,7 @@ const DEBUG = {
         HERO.magic = 60;
         HERO.attack = 59;
 
-        HERO.health = 358;
+        HERO.health = 201;
         HERO.maxHealth = 424;
 
 
@@ -218,6 +218,7 @@ const DEBUG = {
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -239,7 +240,7 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "Chicken",
+            "Chicken", "FireExtinguisher", "Skull", "GoldCoin", "Floppy", "Shield",
             //debug
             
         ];
@@ -289,7 +290,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.00",
+    VERSION: "0.19.01",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -592,7 +593,7 @@ const HERO = {
         this.attack = 5;
         this.defense = 0;   //defense is 0 for all
         this.luck = 0;      //luck is 0 for all
-        this.mana = 0;      //unusd, compatibility
+        this.mana = 0;      //unused, compatibility
         this.ressurection = false;
         this.revive();
         this.visible();
@@ -945,7 +946,6 @@ const GAME = {
         $("#pause").prop("disabled", false);
         $("#pause").off();
         GAME.paused = true;
-        //$("#p1").prop("disabled", false);
 
         let GameRD = new RenderData("Pentagram", 60, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
@@ -957,11 +957,7 @@ const GAME = {
         GAME.completed = false;
         //GAME.lives = 3;
         GAME.lives = 1;
-        GAME.level = 1;                 //start
-        //GAME.level = 2;
-        //GAME.level = 3;              
-        //GAME.level = 4;              
-        //GAME.level = 5;              
+        GAME.level = 1;                 //start           
         GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D", "LAIR"];
