@@ -166,14 +166,17 @@ const DEBUG = {
         * temple usage
             * health
             * attack
+            * magic
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113-->114-->106-->118-->114
-        GAME.level = 115; //115
+        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113-->114-->106-->118-->114-->115-->116-->106-->116-->109
+        //109-->104--->113--->112--->111-->109-->110
+        //110-->114-->110-->113-->108-->104-->109-->110-->109-->110
+        GAME.level = 110; //110
 
-        GAME.gold = 4702;
+        GAME.gold = 4047;
         GAME.lives = 3; //5
 
         HERO.hasCapacity = true;
@@ -182,11 +185,11 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 60;
-        HERO.attack = 64;
+        HERO.magic = 65;
+        HERO.attack = 69;
 
-        HERO.health = 217;
-        HERO.maxHealth = 472;
+        HERO.health = 443;
+        HERO.maxHealth = 512;
 
 
         let actItems = [
@@ -214,10 +217,11 @@ const DEBUG = {
 
             //INTERACTION_OBJECT.Champagne,
             //INTERACTION_OBJECT.Champagne,
-            INTERACTION_OBJECT.Champagne,
-            INTERACTION_OBJECT.Champagne,
+            //INTERACTION_OBJECT.Champagne,
+            //INTERACTION_OBJECT.Champagne,
+            //MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
@@ -229,7 +233,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "Death", "Cripple"
+            //"DestroyOrbs",
             //"DestroyOrbs", "MagicSupremacy",
             //"Death", "DestroyOrbs",
             //"Death", "Death",
@@ -245,9 +249,14 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            //"Chicken",  "Skull", "GoldCoin", "Floppy", "Shield", "GoldCoin", "Shield", "Candle", "TripleMoonBook", "Rat", "ScubaMask", "Mouse", "BabySheep", "Candle", "Shuriken", "BabySheep", "Skull" //hide for debug
-            //current 
-            "FireballBook", "Mushroom", "BabySheep", "Carrot", "VenusBook", "Sword", "Floppy", "Candle",
+            "AnkhBook", "TripleMoonBook", "VenusBook", "YinYangBook", "FireballBook", "TreeOfLifeBook", "YoniBook",
+            "BattleAxe", "Dagger", "Mace", "Sword",
+            "Chicken", "Chicken",
+            "GoldSphere", "GoldSphere",
+            "OrangeLeggings",
+            "Shuriken", "Shuriken",
+
+
             //debug
 
         ];
@@ -258,7 +267,7 @@ const DEBUG = {
         }
 
         let keys = [
-
+            "Silver"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -297,7 +306,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.03",
+    VERSION: "0.19.04",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",

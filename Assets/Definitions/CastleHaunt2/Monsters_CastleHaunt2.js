@@ -407,6 +407,22 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Amanita: {
+        name: "Amanita",
+        sprite: "Amanita",
+        category: 'crest',
+        voice: "Female2",
+        text: "Don't eat poisonous mushrooms. They are bad for your health, silly.",
+        interactionCategory: "oracle",
+    },
+    LadyOnTheTop: {
+        name: "LadyOnTheTop",
+        sprite: "LadyOnTheTop",
+        category: 'crest',
+        voice: "Female",
+        text: "I like to be on the top. How about you, Princess?",
+        interactionCategory: "oracle",
+    },
     Galacticass: {
         name: "Galacticass",
         sprite: "Galacticass",
