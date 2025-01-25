@@ -113,6 +113,23 @@ const MAP_TEXT = {
     101: "",
     102: "",
     103: "",
+    104: "",
+    105: "",
+    106: "",
+    107: "",
+    108: "",
+    109: "",
+    110: "",
+    111: "",
+    112: "",
+    113: "",
+    114: "",
+    115: "",
+    116: "",
+    117: "",
+    118: "",
+    119: "",
+    120: "",
 };
 
 /** Map definitions */
@@ -2614,7 +2631,7 @@ const MAP = {
         monsterList: '["GoldSkeletonGold"]',
     }
     ,
-    108 : {
+    108: {
         name: "Northwest Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2636,9 +2653,9 @@ const MAP = {
         oracles: '[[83,3,"ApparitiaGun"]]',
         lairs: '[[7,7,"Lair46"],[280,1,"Lair46"]]',
         monsterList: '["GoldSkeleton","GreenSkeleton","GreenSkeleton","BlueSkeleton","Hulk"]',
-        }
+    }
     ,
-    109 : {
+    109: {
         name: "Southwest Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2661,7 +2678,7 @@ const MAP = {
         movables: '[[142,"Chicken"],[146,"RoastChicken"]]',
         lairs: '[[237,3,"Lair59"],[265,3,"Lair35"],[4,7,"Lair80"]]',
         monsterList: '["BlueSkeleton","GreenSkeleton","GreenSkeleton","GoldSkeleton","GreatChick","Hulk","Dragon"]',
-        }
+    }
     ,
     110: {
         name: "West Wing",
@@ -2674,13 +2691,15 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_003",
         ceil: "DarkMossy7",
         start: '[270,1]',
-        decals: '[[8,7,"BookShelf02","crest"]]',
+        decals: '[[8,7,"BookShelf02","crest"],[67,3,"GemDommes_035","picture"],[237,3,"GameDommes_061","picture"],[83,3,"GameDommes_300","picture"],[219,3,"FalconPatrol7","picture"],[185,3,"FemDommes_8078","picture"],[117,3,"EyeOfTheBeholder110","picture"],[126,3,"ShinyBlackRuberella17","picture"],[160,3,"FemDommes_4045","picture"],[233,3,"FemDommes_8420","picture"],[63,3,"Shamus91","picture"],[259,3,"FemDommes_6044","picture"],[21,3,"FemDommes_5031","picture"],[2,7,"GameDommes_279","picture"],[11,7,"LastNinja10","picture"],[48,7,"CastleBabes34","picture"],[30,7,"BookShelf22","picture"],[63,7,"FemDommes913","picture"],[148,7,"PrincessDragonDomme_086","picture"],[142,7,"AI_PIC_442","picture"],[172,7,"Domme303","picture"],[24,7,"FemDommes_6218","picture"],[274,1,"NurseAlchemyMagic_033","picture"],[104,1,"CCC_061","picture"],[126,1,"UnusedEntities5113","picture"],[148,1,"CastleLady75","picture"],[233,1,"FemDommes_5166","picture"],[260,1,"PrincessDragonDomme_097","picture"],[264,1,"FemDommes_8293","picture"],[282,1,"FemDommes_8266","picture"],[268,1,"FemDommes_6229","picture"],[252,1,"Apparitias_015","picture"],[143,5,"PrincessDragonDomme_035","picture"],[148,5,"Athanor201","picture"],[239,5,"FemDommes_6185","picture"],[172,5,"FemDommes_8098","picture"],[104,5,"FemDommes_8441","picture"],[35,5,"FluxDommes2218","picture"]]',
         lights: '[[142,3,"Lamp45","standard"],[63,5,"Candle72","dimCandle"],[233,5,"Candle56","dimCandle"],[126,5,"DuaLLantern_001","standard"],[160,5,"FluxLight121","standard"],[148,3,"FluxLight104","standard"],[160,7,"Candle60","dim"]]',
-        gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"]]',
-        containers: '[[144,"WoodenCrate50","INTERACTION_ITEM.Shuriken",5],[25,"BookShelf","INTERACTION_ITEM.PrincessBook",5]]',
+        gates: '[[287,1,"110.1","109.2","Closed"],[15,7,"110.2","108.2","Closed"],[17,5,"110.3","119.1","Pink"],[255,5,"120.1","110.4","Cyan"]]',
+        scrolls: '[[22,16],[151,15]]',
+        gold: '[[92,"GoldBar"],[106,"GoldBar"],[139,"GoldBar"],[192,"GoldBar"],[211,"GoldBar"],[197,"GoldBar"],[112,"GoldBar"],[133,"GoldBar"],[200,"GoldBar"],[61,"GoldBar"],[54,"GoldBar"],[57,"GoldCube"],[97,"GoldCube"],[163,"GoldCube"],[224,"GoldCube"],[183,"GoldCube"]]',
+        containers: '[[144,"WoodenCrate50","INTERACTION_ITEM.Shuriken",5],[25,"BookShelf","INTERACTION_ITEM.PrincessBook",5],[28,"FragileCrate","GOLD_ITEM_TYPE.GoldBar",7],[159,"WoodenCrate55","GOLD_ITEM_TYPE.GoldBar",7],[189,"WoodenCrate51","GOLD_ITEM_TYPE.GoldBar",7],[87,"MetalCrate50","GOLD_ITEM_TYPE.GoldBar",1],[265,"MetalCrate53","GOLD_ITEM_TYPE.GoldBar",1],[131,"Barrel","GOLD_ITEM_TYPE.GoldBar",1],[125,"Barell3","GOLD_ITEM_TYPE.GoldBar",1]]',
         entities: '[[136,5,"KnightWithoutHelmet"],[279,1,"Bunny"]]',
-        objects: '[[208,"GoldSphere"]]',
-        oracles: '[[152,3,"ApparitiaPretty"]]',
+        objects: '[[208,"GoldSphere"],[241,"Steak"],[81,"Steak"]]',
+        oracles: '[[152,3,"ApparitiaPretty"],[5,7,"ApparitiaShades"]]',
         movables: '[[140,"Chicken"]]',
         lairs: '[[68,5,"Lair71"],[204,5,"Lair12"]]',
         monsterList: '["GreenSkeleton","BlueSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton"]',
@@ -2709,7 +2728,7 @@ const MAP = {
         monsterList: '["GoldSkeletonGold"]',
     }
     ,
-    112 : {
+    112: {
         name: "North Spire",
         sg: 0,
         maxSpawned: 4,
@@ -2723,18 +2742,19 @@ const MAP = {
         decals: '[[187,5,"TheHobbit72","picture"],[17,5,"CastleBabes18","picture"],[28,5,"FemDommes_8250","picture"],[55,5,"FemDommes_4095","picture"],[71,5,"FluxDommes2255","picture"],[127,5,"ReturnToCastleWolfenstein12","picture"],[103,5,"Commando200","picture"],[171,5,"FemDommes6059","picture"],[206,5,"AI_PIC_310","picture"],[21,3,"Various7003","picture"],[64,3,"GameDommes_049","picture"],[98,3,"GameDommes_233","picture"],[117,3,"FemDommes_6135","picture"],[203,3,"EyeOfTheBeholder112","picture"],[218,3,"FluxDommes2141","picture"],[234,3,"Pitfall27","picture"],[227,3,"GemDommes_043","picture"],[127,3,"SP68","picture"],[88,3,"FluxDommes3061","picture"],[276,1,"FemDommes_4244","picture"],[284,1,"FluxDommes2152","picture"],[249,1,"GemDommes_199","picture"],[243,1,"PrincessDragonDomme_056","picture"],[206,1,"FemDommes_6356","picture"],[218,1,"ShortBlackSkirt_026","picture"],[103,1,"GemDommes_186","picture"],[83,1,"FemDommes_8211","picture"],[1,7,"FluxDommes3045","picture"],[12,7,"FemDommes911","picture"],[40,7,"FemDommes_5243","picture"],[44,7,"PrincessDragonDomme_063","picture"],[70,7,"FemDommes_8268","picture"],[55,7,"FemDommes_4246","picture"]]',
         lights: '[[127,1,"FluxLight101","standard"],[261,3,"Lamp47","standardDimmed"],[265,5,"FluxLight123","standardDimmed"],[227,1,"DuaLLantern_017","standard"],[231,1,"DuaLLantern_026","standard"],[88,7,"FluxLight116","standardDimmed"],[98,7,"FluxLight127","standardDimmed"],[127,7,"DuaLLantern_018","fire"],[185,3,"Candle71","standardDimmed"],[85,5,"Lights105","standardDimmed"],[33,3,"Candelabra04","dim"]]',
         gates: '[[255,5,"112.1","108.3","Closed"],[271,3,"112.2","113.1","Closed"]]',
+        keys: '[[180,10]]',
         scrolls: '[[205,11],[99,15]]',
         gold: '[[161,"GoldSphere"],[182,"GoldSphere"],[35,"GoldSphere"],[122,"GoldSphere"],[76,"GoldBar"],[91,"GoldBar"],[173,"GoldBar"],[193,"GoldBar"],[259,"GoldBar"],[268,"GoldBar"],[116,"GoldBar"],[31,"GoldBar"]]',
         containers: '[[20,"LongBox","INTERACTION_ITEM.ScubaMask",3],[219,"MetalCrate50","INTERACTION_ITEM.OrangeBra",1],[66,"WoodenCrate55","INTERACTION_ITEM.Mouse",1],[56,"WoodenCrate53","GOLD_ITEM_TYPE.GoldBar",7],[43,"WoodenCrate","GOLD_ITEM_TYPE.GoldBar",7],[226,"MetalCrate52","GOLD_ITEM_TYPE.GoldBar",1],[128,"Barell3","GOLD_ITEM_TYPE.SilverBar",5]]',
         entities: '[[8,7,"Frogessa"],[280,1,"DeMonique"]]',
-        objects: '[[232,"Candle"],[195,"Champagne"]]',
+        objects: '[[232,"Candle"],[195,"Champagne"],[200,"Steak"]]',
         oracles: '[[222,1,"ApparitiaBored2"],[82,7,"ApparitiaGoldSword"]]',
         movables: '[[110,"BabySheep"],[124,"RoastChicken"],[130,"RoastChicken"]]',
         lairs: '[[136,5,"Lair29"],[152,3,"Lair21"]]',
         monsterList: '["GoldSkeleton","GoldSkeleton","GoldSkeletonGold","GreenSkeleton","BlueSkeleton","Dragon","Hulk","RedDragon"]',
-        }
+    }
     ,
-    113 : {
+    113: {
         name: "North East Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2758,9 +2778,9 @@ const MAP = {
         movables: '[[215,"BabySheep"]]',
         lairs: '[[278,1,"Lair63"],[281,1,"Lair03"],[284,1,"Lair82"]]',
         monsterList: '["GreenSkeleton","Hulk","RedDragon","GreenSkeleton","GreenSkeleton","GoldSkeletonGold"]',
-        }
+    }
     ,
-    114 : {
+    114: {
         name: "East Wing",
         sg: 0,
         maxSpawned: 4,
@@ -2783,9 +2803,9 @@ const MAP = {
         movables: '[[132,"BabySheep"]]',
         lairs: '[[101,3,"Lair51"],[203,3,"Lair81"],[117,7,"Lair23"],[185,1,"Lair32"]]',
         monsterList: '["GoldSkeleton","Hulk","RedDragon","GreenSkeleton","GreenSkeleton"]',
-        }
+    }
     ,
-    115 : {
+    115: {
         name: "South East Tower",
         sg: 0,
         maxSpawned: 4,
@@ -2799,6 +2819,7 @@ const MAP = {
         decals: '[[125,4,"FloorGrille102","crest"],[197,4,"RustyFloorGrille_07","crest"],[262,4,"FloorGrille103","crest"],[81,4,"RustyFloorGrille_10","crest"],[71,7,"BlackBeret_017","picture"],[38,7,"Barbarian112","picture"],[8,7,"FemDommes_8051","picture"],[45,7,"GemDommes_063","picture"],[49,7,"SP64","picture"],[193,7,"Various7003","picture"],[241,7,"C64_ZX_Classics212","picture"],[245,7,"Scarab200","picture"],[132,7,"BlackBeret_062","picture"],[155,1,"CreepyWindow_07","picture"],[121,1,"Domme308","picture"],[103,1,"FemDommes_8475","picture"],[182,1,"FemDommes_5074","picture"],[249,1,"CCC_070","picture"],[247,1,"FemDommes_8256","picture"],[245,1,"GameDommes_300","picture"],[243,1,"GameDommes_133","picture"],[241,1,"FemDommes6036","picture"],[277,1,"FemDommes_8122","picture"],[85,5,"Domme309","picture"],[71,5,"FemDommes_6075","picture"],[24,5,"SnakeGirl_004","picture"],[216,5,"Scramble501","picture"],[193,5,"FemDommes_6230","picture"],[155,5,"FluxDommes3102","picture"],[121,5,"GameDommes_096","picture"],[132,3,"GameDommes_027","picture"],[166,3,"FemDommes_6049","picture"],[203,3,"RetroGames050","picture"],[237,3,"RetroGames070","picture"],[266,3,"FemDommes_5072","picture"],[216,3,"GemDommes_157","picture"],[84,3,"FluxDommes2107","picture"],[54,3,"FemDommes_5119","picture"],[223,5,"FemDommes_8378","picture"]]',
         lights: '[[132,1,"Lamp51","standard"],[35,7,"DuaLLantern_002","dim"],[167,7,"Candle58","standard"],[280,1,"SkullLantern51","standard"],[193,3,"Candle71","standardDimmed"],[193,1,"DuaLLantern_017","standard"],[44,7,"SkullLantern50","dim"]]',
         gates: '[[2,7,"115.1","114.2","Closed"],[255,5,"115.2","116.1","Closed"]]',
+        keys: '[[265,8]]',
         scrolls: '[[246,16],[149,16]]',
         gold: '[[90,"SilverBar"],[94,"SilverBar"],[65,"SilverBar"],[93,"SilverBar"],[140,"SilverBar"],[174,"SilverBar"],[213,"SilverBar"],[189,"SilverBar"],[234,"SilverBar"],[145,"SilverBar"],[181,"SilverBar"],[97,"SilverBar"]]',
         containers: '[[116,"WoodenCrate53","INTERACTION_ITEM.AnkhBook",1],[224,"Barrel2","GOLD_ITEM_TYPE.GoldBar",1],[225,"Barrel2","GOLD_ITEM_TYPE.GoldBar",1],[226,"Barrel2","GOLD_ITEM_TYPE.GoldBar",1],[232,"Barrel","GOLD_ITEM_TYPE.GoldBar",1],[219,"Barell3","GOLD_ITEM_TYPE.GoldBar",3],[55,"WoodenCrate60","GOLD_ITEM_TYPE.GoldBar",7],[58,"WoodenCrate54","GOLD_ITEM_TYPE.GoldBar",7],[62,"MetalCrate54","GOLD_ITEM_TYPE.GoldBar",7],[66,"MetalCrate52","GOLD_ITEM_TYPE.GoldBar",7]]',
@@ -2807,9 +2828,9 @@ const MAP = {
         oracles: '[[23,7,"ApparitiaThrone"],[187,5,"LadyOnTheTop"],[27,3,"Amanita"]]',
         lairs: '[[136,5,"Lair73"],[152,3,"Lair58"]]',
         monsterList: '["Hulk","GoldSkeleton","Basilisk","Basilisk","RedDragon","Dragon","RedDragon"]',
-        }
+    }
     ,
-    116 : {
+    116: {
         name: "South Spire",
         sg: 0,
         maxSpawned: 4,
@@ -2834,7 +2855,7 @@ const MAP = {
         movables: '[[113,"RoastChicken"]]',
         lairs: '[[126,1,"Lair10"],[143,7,"Lair46"]]',
         monsterList: '["GoldSkeleton","Hulk","Basilisk","Basilisk","Dragon","Dragon","RedDragon"]',
-        }
+    }
     ,
     117: {
         name: "Ice Pie",
@@ -2847,14 +2868,16 @@ const MAP = {
         floor: "IceFloor33",
         ceil: "IceWall7",
         start: '[18,7]',
+        decals: '[[3,7,"FemDommes_8302","picture"],[7,7,"BlackBeret_017","picture"],[9,7,"BrianBloodaxe70","picture"],[15,7,"Morana035","picture"],[45,7,"FluxDommes2269","picture"],[47,7,"UnusedEntities149","picture"],[77,7,"FluxDommes3048","picture"],[113,7,"FemDommes_6084","picture"],[117,7,"GameDommes_033","picture"],[145,7,"BlackBeret_081","picture"],[181,7,"FemDommes_5286","picture"],[234,7,"BookShelf23","picture"],[75,7,"BookShelf23","picture"],[105,7,"FemDommes_8003","picture"],[175,7,"FemDommes_6124","picture"],[207,7,"FluxDommes2066","picture"],[71,1,"CastleWolfenstein21","picture"],[75,1,"PrincessDragonDomme_100","picture"],[77,1,"Various7016","picture"],[117,1,"TimeTunnel70","picture"],[115,1,"NurseAlchemyMagic_110","picture"],[113,1,"FluxDommes2226","picture"],[145,1,"GemDommes_077","picture"],[285,1,"Princess610","picture"],[249,1,"FemDommes_8556","picture"],[245,1,"GameDommes_036","picture"],[277,1,"FemDommes_8106","picture"],[275,1,"CCC_029","picture"],[207,1,"FluxDommes2187","picture"],[141,1,"BlackBeret_142","picture"],[51,5,"FemDommes_8357","picture"],[25,5,"FluxDommes3100","picture"],[61,5,"AI_pic251","picture"],[97,5,"Princess610","picture"],[93,5,"FemDommes_8044","picture"],[127,5,"LaraCroft102","picture"],[131,5,"AMC2","picture"],[195,5,"FluxDommes4022","picture"],[250,5,"FemDommes_4235","picture"],[259,5,"GameDommes_180","picture"],[189,5,"FemDommes_5062","picture"],[121,5,"GirlSwims05","picture"],[85,5,"FemDommes_8104","picture"],[221,5,"FemDommes_8114","picture"],[255,5,"GemDommes_267","picture"],[55,3,"FemDommes_4009","picture"],[25,3,"Domme243","picture"],[61,3,"FluxDommes2060","picture"],[33,3,"FemDommes_4262","picture"],[101,3,"UnusedEntities2073","picture"],[169,3,"SeaWolf60","picture"],[201,3,"Domme302","picture"],[233,3,"BlackBeret_066","picture"],[254,3,"FemDommes_6291","picture"],[269,3,"NurseAlchemyMagic_021","picture"],[193,3,"AI_pic262","picture"],[125,3,"FluxDommes2223","picture"],[93,3,"GirlSwims19","picture"],[259,3,"GirlSwims19","picture"],[57,5,"UnusedEdtitiesFramed_056","picture"],[163,5,"GameDommes_240","picture"],[97,3,"PrincessDragonDomme_024","picture"],[72,7,"GhostFace3","picture"],[161,3,"UnusedEntities2101","picture"]]',
         gates: '[[1,7,"117.1","113.3","Closed"]]',
+        gold: '[[59,"GoldCube"],[29,"GoldCube"],[99,"GoldCube"],[95,"GoldCube"],[128,"GoldCube"],[166,"GoldCube"],[202,"GoldCube"],[232,"GoldCube"],[177,"GoldCube"],[124,"GoldCube"],[156,"GoldCube"],[241,"GoldCube"],[263,"GoldCube"],[267,"GoldCube"],[217,"GoldSphere"],[270,"GoldSphere"],[159,"GoldSphere"]]',
         triggers: '[[36,7,"SmoothWallButton",1,22],[273,1,"SmoothWallButton",1,69]]',
         objects: '[[256,"IceCube"],[162,"IceCube"],[132,"IceCube"]]',
         lairs: '[[39,7,"Lair36"],[157,5,"Lair29"],[287,1,"Lair13"],[234,1,"Lair74"]]',
-        monsterList: '["GreenSkeleton"]',
+        monsterList: '["GreenSkeleton","Basilisk","GoldSkeleton"]',
     }
     ,
-    118 : {
+    118: {
         name: "Tower Top",
         sg: 0,
         maxSpawned: 5,
@@ -2874,5 +2897,9 @@ const MAP = {
         movables: '[[74,"RoastChicken"],[26,"RoastPig"]]',
         lairs: '[[127,1,"Lair74"],[143,3,"Lair36"],[145,5,"Lair46"],[161,7,"Lair07"]]',
         monsterList: '["Hulk","Basilisk","Basilisk"]',
-        }
+    }
+    ,
+    119: {}
+    ,
+    120: {}
 };

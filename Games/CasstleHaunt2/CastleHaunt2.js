@@ -159,7 +159,8 @@ const DEBUG = {
         * key not yet used:
             
          * missing placed keys: 
-        
+            * cyan
+  
 
          * missing sources for: 
             * 
@@ -173,10 +174,11 @@ const DEBUG = {
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
         //104-->106-->104-->107-->111---->106-->104-->108-->112-->113-->114-->106-->118-->114-->115-->116-->106-->116-->109
         //109-->104--->113--->112--->111-->109-->110
-        //110-->114-->110-->113-->108-->104-->109-->110-->109-->110
+        //110-->114-->110-->113-->108-->104-->109-->110-->109-->110-->104-->109-->116--112-->115-->104-->113
+        //113-->117-->104-->110
         GAME.level = 110; //110
 
-        GAME.gold = 4047;
+        GAME.gold = 6626;
         GAME.lives = 3; //5
 
         HERO.hasCapacity = true;
@@ -185,11 +187,11 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 65;
-        HERO.attack = 69;
+        HERO.magic = 84;
+        HERO.attack = 79;
 
-        HERO.health = 443;
-        HERO.maxHealth = 512;
+        HERO.health = 256;
+        HERO.maxHealth = 552;
 
 
         let actItems = [
@@ -209,7 +211,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -222,8 +224,8 @@ const DEBUG = {
             //MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
@@ -233,6 +235,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
+            "MagicSupremacy"
             //"DestroyOrbs",
             //"DestroyOrbs", "MagicSupremacy",
             //"Death", "DestroyOrbs",
@@ -249,14 +252,6 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            "AnkhBook", "TripleMoonBook", "VenusBook", "YinYangBook", "FireballBook", "TreeOfLifeBook", "YoniBook",
-            "BattleAxe", "Dagger", "Mace", "Sword",
-            "Chicken", "Chicken",
-            "GoldSphere", "GoldSphere",
-            "OrangeLeggings",
-            "Shuriken", "Shuriken",
-
-
             //debug
 
         ];
@@ -267,7 +262,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Silver"
+            "Pink", "Cyan"
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -306,7 +301,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.04",
+    VERSION: "0.19.05",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",

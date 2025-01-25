@@ -1634,6 +1634,14 @@ const ORACLE_TYPE = {
         text: "Behold! Me. A commander of the Hauntingsphere's Air force. Loyal general of Her Majesty Hauntessa Spookish.",
         interactionCategory: "oracle",
     },
+    ApparitiaShades: {
+        name: "ApparitiaShades",
+        sprite: "ApparitiaShades",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "I am not Apparitia. See? No red eyes. Hahahahaha.",
+        interactionCategory: "oracle",
+    },
 };
 
 const GOLD_ITEM_TYPE = {

@@ -58,7 +58,7 @@ const ENGINE = {
     MAX_PATH: 999,
     MOUSE_IDLE: 3000,
     OVERLAP_TOLERANCE: 4,
-    MAX_JOINTS: 160,                //don't mess with this, it's hardcoded in fragment shader, both needs to be corrected at the same time
+    MAX_JOINTS: 160,                  //don't mess with this, it's hardcoded in fragment shader, both needs to be corrected at the same time
   },
   verbose: false,
   setGridSize(size = 48) {
@@ -87,7 +87,7 @@ const ENGINE = {
   SHADER_SOURCE: "/Code/GLSL/Shaders/",
   OBJECT_SOURCE: "/Assets/Objects/",
   MODEL_SOURCE: "/Assets/Models/",
-  checkProximity: true, //check proximity before pixel perfect evaluation of collision to background //very obsolete!!
+  checkProximity: true,             //check proximity before pixel perfect evaluation of collision to background //very obsolete!!
   LOAD_W: 160,
   LOAD_H: 22,
   autostart: false,
@@ -2470,6 +2470,15 @@ const ENGINE = {
             case "Pearl":
               color = "whitesmoke";
               break;
+            case "Cyan":
+              color = "cyan";
+              break;
+            case "Pink":
+              color = "pink";
+              break;
+            case "Orange":
+              color = "orange";
+              break;
           }
           ENGINE.drawCircle(CTX, mid, decalWidth * 2, color);
           let dir = Vector.fromInt(gate[1]);
@@ -2502,7 +2511,7 @@ const ENGINE = {
       }
       if (maze.keys && Array.isArray(maze.keys)) {
         for (const key of maze.keys) {
-          const KEY_COLORS = ["gold", "silver", "red", "green", "blue", "#50C878", "purple", "beige"];
+          const KEY_COLORS = ["gold", "silver", "red", "green", "blue", "#50C878", "purple", "beige", "cyan", "pink", "orange"];
           const color = KEY_COLORS[key[1]];
           let grid = GA.indexToGrid(key[0]);
           let mid = GRID.gridToCenterPX(grid).translate(LEFT, W / 2);
