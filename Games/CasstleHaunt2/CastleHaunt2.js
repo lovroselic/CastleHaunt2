@@ -176,9 +176,10 @@ const DEBUG = {
         //109-->104--->113--->112--->111-->109-->110
         //110-->114-->110-->113-->108-->104-->109-->110-->109-->110-->104-->109-->116--112-->115-->104-->113
         //113-->117-->104-->110
-        GAME.level = 110; //110
+        //119-->110-->120
+        GAME.level = 120; //120
 
-        GAME.gold = 6626;
+        GAME.gold = 2993;
         GAME.lives = 3; //5
 
         HERO.hasCapacity = true;
@@ -188,25 +189,25 @@ const DEBUG = {
         HERO.orbs = 5;
         HERO.orbsLost = 0;
         HERO.magic = 84;
-        HERO.attack = 79;
+        HERO.attack = 82;
 
-        HERO.health = 256;
-        HERO.maxHealth = 552;
+        HERO.health = 576;
+        HERO.maxHealth = 576;
 
 
         let actItems = [
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
+            INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Cake,
             //INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Steak,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
             //INTERACTION_OBJECT.BeerHealth,
@@ -221,7 +222,7 @@ const DEBUG = {
             //INTERACTION_OBJECT.Champagne,
             //INTERACTION_OBJECT.Champagne,
             //INTERACTION_OBJECT.Champagne,
-            //MOVABLE_INTERACTION_OBJECT.RoastPig,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
             //MOVABLE_INTERACTION_OBJECT.RoastChicken,
@@ -235,7 +236,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "MagicSupremacy"
+            "MagicSupremacy","Death","Cripple",
             //"DestroyOrbs",
             //"DestroyOrbs", "MagicSupremacy",
             //"Death", "DestroyOrbs",
@@ -262,7 +263,7 @@ const DEBUG = {
         }
 
         let keys = [
-            "Pink", "Cyan"
+           
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -301,7 +302,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.05",
+    VERSION: "0.19.06",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
