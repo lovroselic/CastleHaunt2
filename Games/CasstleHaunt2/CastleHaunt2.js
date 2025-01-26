@@ -45,142 +45,26 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** main area LAST prepare:
-            
-        COUNT:
-            attack 3 (15)
-            magic 3 (19)
-            health 2 (10)
+        /** LST BATTLE:
 
-            DONE FOX wants "Chicken","Chicken","Chicken" gives Health
-            DONE BLueViper "Rat","Rat","Rat" gives attack
-            DONE SpartaKiss wants "Dagger", "Sword", "Spear","BattleAxe", "Mace" givest Attack
-            DONE IceQuee wants "IceCube","IceCube","IceCube" gives magic
-            DONE SleekNinja wants "Shuriken","Shuriken","Shuriken" gives attack
-            DONE Nun "YoniBook", "YinYangBook", "VenusBook", "TripleMoonBook" gives magic
-            DONE NiqabBabe "AnkhBook", "FireballBook", "PrincessBook", "TreeOfLifeBook" gives magic
-            DONE PitchforkFarmer wants "BabySheep","BabySheep","BabySheep" give health
-            DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives Shuriken
-            DONE "Frogessa" wants "Kiss" gives "Fins"
-            DONE "CorridorSwimmer" wants "ScubaMask", "Fins" gives "shuriken"
-            DONE YoniLibrARIAn wants "Spectacles" give YoniBook
-            DONE KnightWithoutHelmet wants helmet gives MAce
-            DONE Shroomess wants "Mushroom", "Mushroom", "Mushroom" gives "TreeOfLifeBook"
-            DONE Viking wants "Beer", "GlassOfBeer" give "battleaXe"
-            DONE ApparitiaDefector wants "OrangeLeggings", "OrangeBra", "OrangeBoots" gives spear
-            DONE Narancina wants "SkullNecklace" give "OrangeBoots"
-            DONE Owl wants "Mouse", "Mouse" give "Rat"
-            DONE Juggles wasn "GoldSphere", "GoldSphere", "GoldSphere" gives "SkullNecklace"
-            DONE Bunny wants "Carrot", "Carrot" gives "Spectacles"
-            DONE DeMonique wants "Skull","Skull","Skull" gives "Kiss"
-            DONE HornyMonica wants "Candle","Candle","Candle" gives YinYangBook 
-            DONE Armored wants "Shield", "Shield" gives Helmet
-            DONE CuteBarmaiden wants "GoldCoin","GoldCoin" gives GlassOfBeer
-            DONE CastleOfficeGamer wants "Floppy", "Floppy" gives "Carrot"
-            DONE FireballReader wants "FireExtinguisher" gives "FireballBook"
-
-        apparitias:
-
-
-        * 
-        * 
-            DONE * "Chicken", <-- 110
-            DONE * "Chicken",  <-- 109
-            DONE * "Chicken" <-- 106
-            DONE * "Dagger", <-- 116
-            DONE * "Sword", <-- 114
-            DONE * "Spear", <--ApparitiaDefector (115)
-            DONE * "BattleAxe", <-- Viking (114)
-            DONE * "Mace" <-- KnightWithoutHelmet (110)
-            DONE * "IceCube",117
-            DONE * "IceCube",117
-            DONE * "IceCube" 117
-            DONE * "Rat" <-- Owl (108)
-            DONE * "Rat" <-- 108
-            DONE * "Rat" <-- 109
-            DONE * "Shuriken", <-- "CorridorSwimmer" (108)
-            DONE * "Shuriken", <-- 110
-            DONE * "Shuriken" <-- 113
-            DONE * "YoniBook",  <-- YoniLibrARIAn (109)
-            DONE * "YinYangBook",  <-- HornyMonica (113)
-            DONE * "VenusBook", <-- 114
-            DONE * "TripleMoonBook" <-- 108
-            DONE * "AnkhBook", <-- 115
-            DONE * "FireballBook", <-- FireballReader (114)
-            DONE * "PrincessBook",  <-- 110
-            DONE * "TreeOfLifeBook" <-- Shroomess (113)
-            DONE* "BabySheep", 114
-            DONE * "BabySheep", <-- 112
-            DONE * "BabySheep" <-- 113
-            DONE * "ScubaMask",  <--- 112
-            DONE * "Fins" <--"Frogessa" wants kiss (112)
-            DONE * "Kiss" <-- DeMonique 112
-            DONE "Spectacles" <-- Bunny (110)
-            DONE "Helmet" <-- Armored (115)
-            DONE "Mushroom", <-- 109
-            DONE "Mushroom", <-- 114
-            DONE "Mushroom" <-- 115
-            DONE "Beer",  <-- 109
-            DONE "GlassOfBeer" <-- CuteBarmaiden
-            DONE "OrangeLeggings", <-- 116
-            DONE "OrangeBra", <-- 112
-            DONE "OrangeBoots" <-- Narancina (116)
-            DONE "SkullNecklace" Juggles (109)
-            DONE "Mouse", <-- 112
-            DONE "Mouse" <-- 116
-            DONE "GoldSphere", <-- 110
-            DONE "GoldSphere", <-- 115
-            DONE "GoldSphere" <-- 116
-            DONE "Carrot", <-- 114
-            DONE "Carrot" <-- CastleOfficeGamer (111)
-            DONE "Skull", <-- 113
-            DONE "Skull", <-- 116
-            DONE "Skull" <-- 104
-            DONE"Candle", <-- 112
-            DONE "Candle" <--- 111
-            DONE "Candle" <--- 118
-            DONE "Shield", <-- 104
-            DONE "Shield", <-- 111
-            DONE "GoldCoin", <-- 107
-            DONE"GoldCoin" <-- 104
-            DONE "Floppy", <-- 118
-            DONE "Floppy" <-- 104
-            DONE "FireExtinguisher" <-- 104
-
-
-        * coins sources (x, missing x = ):
-
-        *
-        * COINS used (x):
-
-           
-
-        
         * key not yet used:
             
          * missing placed keys: 
-            * cyan
   
 
          * missing sources for: 
             * 
         * temple usage
-            * health
-            * attack
-            * magic
+
 
          */
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
-        //104-->106-->104-->107-->111---->106-->104-->108-->112-->113-->114-->106-->118-->114-->115-->116-->106-->116-->109
-        //109-->104--->113--->112--->111-->109-->110
-        //110-->114-->110-->113-->108-->104-->109-->110-->109-->110-->104-->109-->116--112-->115-->104-->113
-        //113-->117-->104-->110
-        //119-->110-->120
-        GAME.level = 120; //120
 
-        GAME.gold = 2993;
-        GAME.lives = 3; //5
+        GAME.level = 105; //104
+
+        GAME.gold = 1711;
+        GAME.lives = 3; //6
 
         HERO.hasCapacity = true;
         HERO.capacity = 5;
@@ -188,7 +72,7 @@ const DEBUG = {
 
         HERO.orbs = 5;
         HERO.orbsLost = 0;
-        HERO.magic = 84;
+        HERO.magic = 87;
         HERO.attack = 82;
 
         HERO.health = 576;
@@ -196,39 +80,25 @@ const DEBUG = {
 
 
         let actItems = [
+            INTERACTION_OBJECT.HealthBox,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Cake,
-            //INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Cake,
             INTERACTION_OBJECT.Steak,
             INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
             INTERACTION_OBJECT.Steak,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-            //INTERACTION_OBJECT.BeerHealth,
-
-            //INTERACTION_OBJECT.Champagne,
-            //INTERACTION_OBJECT.Champagne,
-            //INTERACTION_OBJECT.Champagne,
-            //INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.BeerHealth,
+            INTERACTION_OBJECT.Steak,
+            INTERACTION_OBJECT.Champagne,
+            INTERACTION_OBJECT.Champagne,
+            MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastPig,
             MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            //MOVABLE_INTERACTION_OBJECT.RoastChicken,
+            MOVABLE_INTERACTION_OBJECT.RoastChicken,
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -302,7 +172,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.19.06",
+    VERSION: "0.20.00",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",

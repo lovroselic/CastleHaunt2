@@ -2934,10 +2934,14 @@ const MAP = {
         floor: "BloodMarbleFloorWall_SDXL_018",
         ceil: "Relief01",
         start: '[36,3]',
-        decals: '[[34,5,"Apparitia_1052","picture"]]',
+        decals: '[[34,5,"Apparitia_1052","picture"],[3,7,"FluxDommes3084","picture"],[6,7,"AI_Pic_125","picture"],[11,7,"FemDommes_8221","picture"],[31,7,"FemDommes_4027","picture"],[53,7,"PrincessDragonDomme_087","picture"],[86,7,"FluxDommes4037","picture"],[102,7,"FluxDommes4033","picture"],[99,7,"FemDommes_8573","picture"],[117,7,"BookShelf18","picture"],[199,7,"FemDommes_6131","picture"],[283,7,"FemDommes_6019","picture"],[295,7,"FemDommes_6023","picture"],[272,7,"GemDommes_210","picture"],[252,7,"FemaleWarrior211","picture"],[251,7,"FemDommes_6274","picture"],[269,7,"Shamus4","picture"],[344,1,"Apparitias_010","picture"],[346,1,"Blackwyche110","picture"],[349,1,"FemDommes_6227","picture"],[353,1,"FluxDommes2103","picture"],[335,1,"CastleBabes28","picture"],[359,1,"AI_pic204","picture"],[319,1,"FluxDommes3007","picture"],[276,1,"Princess604","picture"],[254,1,"Geek_001","picture"],[251,1,"FemDommes_5288","picture"],[231,1,"GameDommes_214","picture"],[161,1,"FemDommes_6170","picture"],[99,1,"FemDommes_6054","picture"],[100,1,"CreepyWindow_03","picture"],[78,1,"FemDommes_5140","picture"],[82,1,"GirlSwims05","picture"],[67,1,"GameDommes_252","picture"],[92,1,"AirWolf31","picture"],[47,5,"GemDommes_300","picture"],[86,5,"FemDommes_8560","picture"],[161,5,"SpyVsSpy501","picture"],[199,5,"GameDommes_303","picture"],[104,5,"AticAtac140","picture"],[135,5,"Vixen51","picture"],[211,5,"PrincessDragonDomme_055","picture"],[276,5,"FemDommes_4032","picture"],[299,5,"FemDommes_6073","picture"],[313,5,"CCC_173","picture"],[74,3,"FemDommes_8093","picture"],[64,3,"GemDommes_229","picture"],[161,3,"FluxDommes2216","picture"],[199,3,"GameScreen2034","picture"],[92,3,"FemDommes_4015","picture"],[282,3,"DM106","picture"],[149,3,"FemDommes_5089","picture"],[225,3,"FemDommes_4089","picture"],[187,3,"BrianBloodaxe70","picture"],[303,3,"AI_Pic_136","picture"],[341,3,"FemDommes_5257","picture"],[292,3,"GemDommes_020","picture"]]',
         lights: '[[46,3,"DuaLLantern_008","standard"],[179,3,"Lamp52","standard"],[312,3,"Candle59","standard"],[181,5,"Moon60","standard"],[71,7,"FluxLight109","standard"],[299,1,"DuaLLantern_019","standard"],[336,5,"Fireplace06","fire"]]',
         gates: '[[37,3,"120.1","110.4","Closed"]]',
+        monsters: '[[42,"Basilisk"],[308,"Basilisk"],[176,"Basilisk"],[185,"Basilisk"]]',
+        gold: '[[41,"GoldBar"],[26,"GoldBar"],[69,"GoldBar"],[127,"GoldBar"],[184,"GoldBar"],[259,"GoldBar"],[315,"GoldBar"],[328,"GoldBar"],[307,"GoldBar"],[141,"GoldBar"],[173,"GoldBar"],[215,"GoldBar"],[321,"GoldBar"]]',
         containers: '[[80,"WoodenCrate","GOLD_ITEM_TYPE.GoldBar",1],[81,"WoodenCrate59","GOLD_ITEM_TYPE.GoldBar",1],[270,"WoodenCrate55","GOLD_ITEM_TYPE.GoldBar",7],[271,"WoodenCrate50","GOLD_ITEM_TYPE.GoldBar",7]]',
-        shrines: '[[171,5,"PrincessMercyfulHeart"],[38,5,"PrincessGun"]]',
+        shrines: '[[171,5,"PrincessMercyfulHeart"],[38,5,"PrincessGun"],[304,5,"PrincessThroneBall"]]',
+        objects: '[[311,"HealthBox"],[45,"Champagne"],[182,"Champagne"],[177,"Cake"],[128,"BeerHealth"],[242,"BeerHealth"]]',
+        movables: '[[337,"Life"],[138,"RoastChicken"],[214,"RoastPig"]]',
         }
 };

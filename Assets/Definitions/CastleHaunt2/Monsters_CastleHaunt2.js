@@ -430,6 +430,19 @@ const SHRINE_TYPE = {
         introduce: true,
         voice: "Princess",
     },
+    PrincessThroneBall: {
+        name: "PrincessThroneBall",
+        sprite: "PrincessThroneBall",
+        which: "magic",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "SkillFireball",
+        price: 2500,
+        level: 3,
+        text: "2500 gold for magic upgrade. I can't afford not to buy it. My life is at stake.",
+        introduce: true,
+        voice: "Princess",
+    },
 };
 
 const ORACLE_TYPE = {
