@@ -28,6 +28,17 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    OrangeScrollSellerFluxInvisibility: {
+        name: "OrangeScrollSellerFluxInvisibility",
+        sprite: "OrangeScrollSellerFluxInvisibility",
+        which: "Invisibility",
+        category: 'crest',
+        interactionCategory: 'scrollshop',
+        introduce: true,
+        price: 3000,
+        voice: "FemaleLow",
+        text: "Invisibility scroll - 3000 gold"
+    },
     GreenScrollSellerHalfLife: {
         name: "GreenScrollSellerHalfLife",
         sprite: "GreenScrollSellerHalfLife",
