@@ -953,6 +953,7 @@ LoadTextures = [
     { srcName: "ObjectTextures/PinkMetal.jpg", name: "PinkMetal" },
     { srcName: "ObjectTextures/OrangeMetal.jpg", name: "OrangeMetal" },
     { srcName: "ObjectTextures/CyanMetal.jpg", name: "CyanMetal" },
+    { srcName: "ObjectTextures/RedLatexTexture.jpg", name: "RedLatexTexture" },
 
 
     //decal-gates
@@ -1035,7 +1036,7 @@ LoadObjects = [
 LoadModels = [
     'ThePrincess.gltf', 'MissGalaxy.gltf', 'Goblin.gltf', 'Bat.gltf', 'Spider.gltf', "Wolf.gltf", "Sheep.gltf", "GhostFace.gltf", "Viking.gltf",
     "MissWhite.gltf", "Skeleton.gltf", "Chicken.gltf", "Cat.gltf", "Pig.gltf", "Dragon.gltf", "SkeleDwarf.gltf", "Astro.gltf", "Hulk.gltf",
-    "Basilisk.gltf",
+    "Basilisk.gltf", "Rex.gltf", "Drax.gltf", "MissGhostFace.gltf",
 ];
 
 LoadSprites = [
@@ -1355,6 +1356,8 @@ LoadSprites = [
     { srcName: "EntityPictures/Amanita.jpg", name: "Amanita" },
     { srcName: "EntityPictures/Swimmer3.jpg", name: "BasiliskTest" },
     { srcName: "EntityPictures/NinjaID.jpg", name: "NinjaID" },
+    { srcName: "EntityPictures/HauntessaSpookish.jpg", name: "HauntessaSpookish" },
+    { srcName: "EntityPictures/GreenScrollSellerHalfLife.jpg", name: "GreenScrollSellerHalfLife" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

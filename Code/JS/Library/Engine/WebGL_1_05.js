@@ -65,7 +65,7 @@ const WebGL = {
         BLOOD_DURATION_MS: 2500,
         SMUDGE_DURATION_MS: 500,
         MIN_R: 0.25,
-        MAX_R: 0.5001,
+        MAX_R: 0.44999, //0.5001
         INTERACTION_TIMEOUT: 4000,
         BLAST_RADIUS: 1.495,
         BLAST_DAMAGE: 100,
@@ -2422,10 +2422,11 @@ class Missile extends Drawable_object {
         ENGINE.VECTOR2D.drawPerspective(this, "#F00");
     }
     move(lapsedTime, GA) {
+        if (lapsedTime < 1) throw "debug";
         let length = (lapsedTime / 1000) * this.moveSpeed;
         const pos = this.pos.translate(this.dir, length);
         if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(pos)))) {
-            if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime);
+            if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime, "length", length, "old pos", this.pos, "new pos", pos, "old pos in wall", GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
             return this.move(lapsedTime / 2, GA);
         }
         this.pos = pos;
@@ -3564,6 +3565,7 @@ class $3D_Entity {
         if (missile.friendly) {
             const damage = Math.max(missile.calcDamage(this.magic, this.directMagicDamage), 1);
             let exp = Math.min(this.health, damage);
+            //console.log("monster hitByMissile", damage); //
             this.applyDamage(damage, exp);
             missile.explode(MISSILE3D);
             this.dropOrb(missile);
@@ -3579,15 +3581,19 @@ class $3D_Entity {
     drainMana() {
         this.mana = 0;
     }
-    shoot() {
+    shoot(GA) {
         const dir = Vector3.from_2D_dir(this.moveState.lookDir);
-        this.canShoot = false;
-        this.caster = false;
-        const manaCost = this.missile.calcMana(this.magic);
-        this.mana -= manaCost;
         let position = this.moveState.pos.translate(dir, this.r);
         position.set_y(0.5);
+        const manaCost = this.missile.calcMana(this.magic);
         const missile = new this.missile(position, dir, this.missileType, this.magic);
+
+        if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(missile.pos)))) return; //missile wil be created in wall
+
+        this.canShoot = false;
+        this.caster = false;
+        this.mana -= manaCost;
+
         MISSILE3D.add(missile);
         setTimeout(this.resetShooting.bind(this), INI.MONSTER_SHOOT_TIMEOUT);
     }

@@ -974,7 +974,8 @@ class Animated_3d_entity extends IAM {
     }
     manage(lapsedTime, date, flagArray) {
         this.reIndex();
-        let map = this.map;
+        const map = this.map;
+        const GA = this.map.GA;
         map[this.IA] = new IndexArray(map.width, map.height, 4, 4);
         this.poolToIA(map[this.IA]);
         GRID.calcDistancesBFS_A(Vector3.toGrid(this.hero.player.pos), map);
@@ -1044,7 +1045,7 @@ class Animated_3d_entity extends IAM {
                 if (!this.hero.dead) {
                     if (entity.canShoot) {
                         entity.setView(this.hero.player.pos);
-                        entity.shoot();
+                        entity.shoot(GA);
                         if (IndexArrayManagers.VERBOSE) console.info(`${entity.name}-${entity.id} shooting`);
                     }
                 }

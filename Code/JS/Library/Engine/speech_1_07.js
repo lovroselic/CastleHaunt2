@@ -232,5 +232,9 @@ const VOICE = {
     voice: 1,
     setting: new VoiceSetting(1.65, 1.8, 1.0)
   },
+  'Hauntessa': {
+    voice: 1,
+    setting: new VoiceSetting(0.85, 0.02, 1.0)
+  },
 };
 console.log(`%cSPEECH ${SPEECH.VERSION} loaded.`, SPEECH.CSS);

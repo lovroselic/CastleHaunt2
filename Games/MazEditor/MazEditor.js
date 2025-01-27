@@ -132,9 +132,8 @@ const GAME = {
     GAME.setFirstPerson();
     WebGL.renderScene($MAP.map);
     // render occlusion map
-    console.info("rendering occlusion map ...", $MAP.map, $MAP.map.textureMap);
     $MAP.map.occlusionMap = WebGL.createOcclusionTexture($MAP.map.textureMap, $MAP.map.width, $MAP.map.height);
-    WebGL.visualizeTexture($MAP.map.occlusionMap, $MAP.map.width, $MAP.map.height, LAYER.debug);
+    //WebGL.visualizeTexture($MAP.map.occlusionMap, $MAP.map.width, $MAP.map.height, LAYER.debug);
   },
   setFirstPerson() {
     WebGL.CONFIG.set("first_person", false);

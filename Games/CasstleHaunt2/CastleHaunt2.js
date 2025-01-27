@@ -63,7 +63,7 @@ const DEBUG = {
 
         GAME.level = 105; //104
 
-        GAME.gold = 1711;
+        GAME.gold = 9999; //1711
         GAME.lives = 3; //6
 
         HERO.hasCapacity = true;
@@ -172,7 +172,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.20.00",
+    VERSION: "0.20.01",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -560,6 +560,7 @@ const HERO = {
             missile.remove(MISSILE3D);
         } else {
             const damage = Math.max(missile.calcDamage(HERO.magic, true), 1) - HERO.luck;
+            //console.warn("HERO hit by missile","damage", damage); //
             HERO.applyDamage(damage);
             missile.explode(MISSILE3D);
         }
