@@ -61,9 +61,9 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
 
-        GAME.level = 105; //104
+        GAME.level = 2; //104, 105, 122, 2
 
-        GAME.gold = 9999; //1711
+        GAME.gold = 1711; //1711
         GAME.lives = 3; //6
 
         HERO.hasCapacity = true;
@@ -124,6 +124,7 @@ const DEBUG = {
 
         let invItems = [
             //debug
+            "Crown"
 
         ];
 
@@ -133,7 +134,7 @@ const DEBUG = {
         }
 
         let keys = [
-           
+          
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -172,7 +173,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.20.02",
+    VERSION: "0.20.03",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -726,7 +727,6 @@ const HERO = {
         TITLE.health();
     },
     setDefense() {
-
         this.defense = Math.floor(Math.max(0, this.attack - INI.DEFENSE_OFFSET) / INI.DEFENSE_FACTOR);
         console.log("DEFENSE", this.defense);
     },
@@ -1152,7 +1152,7 @@ const GAME = {
         GAME.frameDraw(lapsedTime);
         HERO.concludeAction();
         if (HERO.dead) IAM.checkIfProcessesComplete([EXPLOSION3D], HERO.death);
-        //if (GAME.completed) GAME.won();
+        if (GAME.completed) GAME.won();
     },
     frameDraw(lapsedTime) {
         if (DEBUG._2D_display) {
@@ -1615,6 +1615,9 @@ const GAME = {
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
         }
+    },
+    won(){
+        console.log("GAME won");
     }
 };
 

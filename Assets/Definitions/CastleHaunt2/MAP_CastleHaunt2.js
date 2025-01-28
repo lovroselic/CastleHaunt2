@@ -131,6 +131,7 @@ const MAP_TEXT = {
     119: "",
     120: "",
     121: "",
+    122: "",
 };
 
 /** Map definitions */
@@ -168,7 +169,7 @@ const MAP = {
         start: '[31,7]',
         decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"],[90,4,"PuddleDecal03","crest"],[89,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal09","crest"],[76,4,"Grate1_128","crest"],[77,4,"Grate1_128","crest"],[75,4,"Grate1_128","crest"],[149,4,"PuddleDecal08","crest"],[129,4,"PuddleDecal10","crest"]]',
         lights: '[[114,7,"Lamp42","standardDimmed"],[116,7,"Lamp42","standardDimmed"],[176,3,"Lamp41","standardDimmed"],[180,5,"Lamp41","standardDimmed"],[238,7,"Lamp46","standardDimmed"],[244,7,"Lamp46","standardDimmed"],[2,7,"Lamp52","fire"],[18,7,"Lamp52","fire"],[422,1,"Lamp52","fire"],[438,1,"Lamp52","fire"]]',
-        gates: '[[10,7,"2.1","1.1","Open"],[147,5,"2.2","3.1","Red"]]',
+        gates: '[[10,7,"2.1","1.1","Open"],[147,5,"2.2","3.1","Red"],[335,3,"2.3","122.2","Closed"]]',
         keys: '[[60,2]]',
         monsters: '[[130,"Bat"],[142,"Bat"],[339,"RedGoldBat"],[353,"RedGoldBat"]]',
         containers: '[[22,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[40,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[192,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[185,"Chest","GOLD_ITEM_TYPE.SilverBar",null]]',
@@ -2570,7 +2571,7 @@ const MAP = {
         monsterList: '["Dragon","SkeleDwarf","GreenSkeleton","BlueSkeleton","SilverSkeleton"]',
     }
     ,
-    105 : {
+    105: {
         name: "Meet Hauntessa Spookish",
         sg: 1,
         maxSpawned: 8,
@@ -2589,14 +2590,14 @@ const MAP = {
         gold: '[[175,"GoldBar"],[168,"GoldBar"],[327,"GoldBar"],[454,"GoldBar"],[458,"GoldBar"],[400,"GoldBar"],[240,"GoldBar"],[405,"GoldBar"],[152,"GoldBar"],[313,"GoldBar"],[411,"GoldBar"],[475,"GoldBar"],[658,"GoldBar"],[682,"GoldBar"],[710,"GoldBar"],[673,"GoldBar"],[839,"GoldBar"],[877,"GoldBar"],[725,"GoldBar"],[857,"GoldBar"],[734,"GoldBar"],[982,"GoldBar"],[970,"GoldBar"],[257,"GoldBar"],[161,"GoldBar"],[42,"GoldBar"],[50,"GoldBar"],[56,"GoldBar"],[254,"GoldBar"],[382,"GoldBar"],[68,"GoldSphere"],[117,"RedGem"],[914,"GreenGem"],[688,"BlueGem"]]',
         skills: '[[833,"Heart"],[541,"Magic"],[330,"Magic"],[277,"Magic"],[789,"Magic"],[713,"Magic"]]',
         containers: '[[103,"WoodenCrate56","GOLD_ITEM_TYPE.GoldSphere",7],[111,"WoodenCrate53","GOLD_ITEM_TYPE.GoldSphere",7],[120,"WoodenCrate58","GOLD_ITEM_TYPE.GoldSphere",7],[905,"MetalCrate53","GOLD_ITEM_TYPE.GoldSphere",1],[911,"WoodenCrate57","GOLD_ITEM_TYPE.GoldSphere",1],[920,"MetalCrate52","GOLD_ITEM_TYPE.GoldSphere",1],[252,"WoodenCrate55","GOLD_ITEM_TYPE.GoldSphere",3],[796,"FragileCrate","GOLD_ITEM_TYPE.GoldSphere",3],[291,"WoodenCrate51","GOLD_ITEM_TYPE.GoldSphere",5],[739,"WoodenCrate61","GOLD_ITEM_TYPE.GoldSphere",5]]',
-        shrines: '[[64,5,"GreenScrollSellerHalfLife"],[1021,1,"OrangeScrollSellerFluxInvisibility"]]',
+        shrines: '[[64,5,"GreenScrollSellerHalfLife"],[1021,1,"OrangeScrollSellerFluxInvisibility"],[29,7,"BlueScrollSellerFluxCripple"],[994,1,"GreyHeart"]]',
         doors: '[101,157,894,900]',
-        objects: '[[522,"Orb"],[261,"Orb"],[138,"Orb"],[148,"Orb"],[282,"Orb"],[741,"Orb"],[875,"Orb"],[882,"Orb"],[762,"Orb"]]',
+        objects: '[[522,"Orb"],[261,"Orb"],[138,"Orb"],[148,"Orb"],[282,"Orb"],[741,"Orb"],[875,"Orb"],[882,"Orb"],[762,"Orb"],[931,"HealthBox"]]',
         oracles: '[[543,3,"HauntessaSpookish"]]',
         movables: '[[202,"RoastPig"],[181,"RoastPig"],[885,"RoastPig"],[809,"RoastPig"],[263,"RoastChicken"],[247,"RoastChicken"],[743,"RoastChicken"],[793,"RoastChicken"]]',
         lairs: '[[298,7,"Lair08"],[245,7,"Lair56"],[821,1,"Lair19"],[745,1,"Lair43"]]',
         monsterList: '["GoldSkeletonGold","GoldSkeleton","RedDragon","GreenBasilisk","Rex","GreenRex","Drax","Drax"]',
-        }
+    }
     ,
     106: {
         name: "The Last Temple",
@@ -2960,5 +2961,38 @@ const MAP = {
         movables: '[[337,"Life"],[138,"RoastChicken"],[214,"RoastPig"]]',
     }
     ,
-    121: {}
+    121: {
+        name: "Victory Hall",
+        sg: 2,
+        maxSpawned: 8,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"23","height":"15","map":"BB2AA2BB4AA55BB2AA5BB2AA2BB2AA5BB2AA6BB2ABAA4BAA25BB2AA8BABAA2BB2AA6BAA5BAA32BB5ABB7AA6BB4AA2BB6AA2BB29ABB6AA2BB2AA2BABB7AA4BABB2ABB7ABABB10AA4BABABB38A$"}',
+        wall: "OrnateWall2",
+        floor: "BloodMarbleFloorWall_SDXL_009",
+        ceil: "MossyWall10",
+        start: '[182,3]',
+        decals: '[[159,3,"Skull314","crest"],[205,3,"Skull320","crest"],[139,5,"KnightStatue104","crest"],[185,5,"KnightStatue110","crest"]]',
+        lights: '[[142,1,"DuaLLantern_006","standard"],[156,1,"DuaLLantern_030","standard"],[149,1,"Lamp45","standard"],[188,7,"FluxLight114","standard"],[195,7,"WallLamp31","standard"],[202,7,"FluxLight108","standard"],[142,5,"WallLamp34","standard"],[188,5,"DuaLLantern_023","standard"],[142,3,"WallLamp11","standardDimmed"],[188,3,"DuaLLantern_021","standardDimmed"],[156,3,"DuaLLantern_027","standard"],[202,3,"DuaLLantern_016","standard"],[156,5,"Candle70","standardDimmed"],[202,5,"Lamp41","standardDimmed"]]',
+        gates: '[[183,3,"121.1","105.2","Closed"],[161,5,"121.2","122.1","Orange"]]',
+        keys: '[[163,9]]',
+    }
+    ,
+    122 : {
+        name: "Crown Room",
+        sg: 2,
+        maxSpawned: 8,
+        killCountdown: 5,
+        spawnDelay: 5000,
+        data: '{"width":"15","height":"15","map":"BB7AA23BABB3AÁAÁAA4BB5EABB4ÁAA6BAA3BAA42BB7ABB3AA2BAA6ÁÁ2BB5ABB7AA3BAA3BB14ABB16ABB7$BB15AA3BB6AÁÁ2AA3ÁÁ4BB2"}',
+        wall: "GoldishWall6",
+        floor: "MarbleFloor101",
+        ceil: "FloorPebbles1",
+        start: '[43,3]',
+        lights: '[[81,3,"WallLamp34","standard"],[111,3,"WallLamp35","standard"],[193,3,"Lamp45","standard"],[26,7,"Lamp50","standard"],[2,7,"Candelabra01","standardDimmed"],[167,1,"Candelabra03","standardDimmed"]]',
+        gates: '[[44,3,"122.1","121.2","Closed"],[180,5,"122.2","2.3","Closed"]]',
+        doors: '[99]',
+        triggers: '[[90,5,"SmoothWallButton",1,189],[96,4,"SmoothWallButton",0,95]]',
+        objects: '[[92,"Crown"]]',
+        }
 };

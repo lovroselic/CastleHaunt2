@@ -1030,7 +1030,7 @@ LoadObjects = [
     "bookshelf.obj", "pirate_chest.obj", "closet4.obj", "dagger.obj", "iron_chest.obj",
     "banana.obj", "steak.obj", "green apple.obj", "can.obj", "fish.obj",
     "bone.obj", "wine.obj", "crate2.obj", "Barell2.obj", "Barell3.obj", "Box.obj", "WoodenCrate.obj",
-    "crateFragile.obj", "LongBox.obj", "Candle.obj",
+    "crateFragile.obj", "LongBox.obj", "Candle.obj", "crown.obj"
 ];
 
 LoadModels = [
@@ -1113,7 +1113,7 @@ LoadSprites = [
 
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
-    { srcName: "EntityPictures/PrincessOnThrone2.jpg", name: "PrincessOnThrone" },
+    { srcName: "EntityPictures/PrincessOnThrone2.jpg", name: "PrincessOnThroneFinal" },
     { srcName: "EntityPictures/TheThrone2.jpg", name: "TheThrone" },
     { srcName: "EntityPictures/DarkEva.jpg", name: "DarkEva" },
     { srcName: "EntityPictures/ApplePicker.jpg", name: "ApplePicker" },
@@ -1359,6 +1359,8 @@ LoadSprites = [
     { srcName: "EntityPictures/HauntessaSpookish.jpg", name: "HauntessaSpookish" },
     { srcName: "EntityPictures/GreenScrollSellerHalfLife.jpg", name: "GreenScrollSellerHalfLife" },
     { srcName: "EntityPictures/OrangeScrollSellerFluxInvisibility.jpg", name: "OrangeScrollSellerFluxInvisibility" },
+    { srcName: "EntityPictures/BlueScrollSellerFluxCripple.jpg", name: "BlueScrollSellerFluxCripple" },
+    { srcName: "EntityPictures/GreyHeart.jpg", name: "GreyHeart" },
 
     //action movables
     { srcName: "ActionMovables/GreenSpider.png", name: "BabyGreenSpider" },

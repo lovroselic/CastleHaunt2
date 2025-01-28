@@ -28,6 +28,30 @@ const SCROLL_TYPE = ["Light", "Invisibility", "DrainMana", "Cripple", "BoostWeap
     "Death", "MagicSupremacy", "DestroyOrbs"];
 
 const SHRINE_TYPE = {
+    GreyHeart: {
+        name: "GreyHeart",
+        sprite: "GreyHeart",
+        which: "health",
+        category: 'crest',
+        interactionCategory: 'shrine',
+        inventorySprite: "HeartSkill",
+        price: 2999,
+        level: 3,
+        text: "Battlefield healing and health upgrade. Only 2999 gold.",
+        introduce: true,
+        voice: "Female2",
+    },
+    BlueScrollSellerFluxCripple: {
+        name: "BlueScrollSellerFluxCripple",
+        sprite: "BlueScrollSellerFluxCripple",
+        which: "Cripple",
+        category: 'crest',
+        interactionCategory: 'scrollshop',
+        introduce: true,
+        price: 2000,
+        voice: "FemaleLow2",
+        text: "Cripple scroll - 2000 gold"
+    },
     OrangeScrollSellerFluxInvisibility: {
         name: "OrangeScrollSellerFluxInvisibility",
         sprite: "OrangeScrollSellerFluxInvisibility",
@@ -3615,6 +3639,17 @@ const INTERACTION_OBJECT = {
         inventorySprite: "Candle",
         text: "Simple wax candle. I can light it. Or not."
     },
+    Crown: {
+        name: "Crown",
+        category: "interaction_item",
+        element: "CROWN",
+        scale: 1.7 / 2 ** 2,
+        glueToFloor: true,
+        texture: "Gold",
+        material: MATERIAL.gold,
+        inventorySprite: "Crown",
+        text: "This is my crown, fuckers. Now to claim the throne."
+    },
 };
 
 const MOVABLE_INTERACTION_OBJECT = {
@@ -6639,7 +6674,6 @@ const INTERACTION_SHRINE = {
             conclusion: "Your payment is received. Feel the surge of magic coursing through you. Now you are a true sorceress."
         }
     },
-
 };
 
 const INTERACTOR = {
@@ -6649,7 +6683,7 @@ const INTERACTOR = {
         category: 'crest',
         voice: "Princess",
         wants: ["Crown"],
-        spriteChange: "PrincessOnThrone",
+        spriteChange: "PrincessOnThroneFinal",
         action: "concludeGame",
         text: {
             intro: "At last, my journey's path leads here, To reclaim what's mine, the throne so dear.",

@@ -2770,7 +2770,7 @@ class InterActor extends InteractionEntity {
 
     }
     changeTexture() {
-        this.texture = WebGL.createTexture(SPRITE[this.spriteChange]);
+        this.texture = WebGL.createTexture(SPRITE[this.spriteChange], null, true);
     }
 }
 

@@ -17,7 +17,7 @@ const MAP_TOOLS = {
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 512,
-        TEXTURE_WIDTH: 1024,
+        TEXTURE_WIDTH: 512,
         VERBOSE: false,
     },
     manageMAP(level) {
