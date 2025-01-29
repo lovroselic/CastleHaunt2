@@ -61,7 +61,7 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
 
-        GAME.level = 2; //104, 105, 122, 2
+        GAME.level = 104; //104, 105
 
         GAME.gold = 1711; //1711
         GAME.lives = 3; //6
@@ -106,14 +106,9 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "MagicSupremacy","Death","Cripple",
-            //"DestroyOrbs",
-            //"DestroyOrbs", "MagicSupremacy",
-            //"Death", "DestroyOrbs",
-            //"Death", "Death",
-            //"DestroyOrbs",
-            //"MagicSupremacy", "Cripple"
+            "MagicSupremacy", "Death", "Cripple",
         ];
+
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
             HERO.inventory.scroll.add(scroll);
@@ -123,8 +118,6 @@ const DEBUG = {
         TITLE.scrolls();
 
         let invItems = [
-            //debug
-            "Crown"
 
         ];
 
@@ -134,7 +127,7 @@ const DEBUG = {
         }
 
         let keys = [
-          
+
         ];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
@@ -173,7 +166,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.20.03",
+    VERSION: "0.21.00",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -1616,8 +1609,34 @@ const GAME = {
             ENTITY3D.drawVector2D();
         }
     },
-    won(){
-        console.log("GAME won");
+    won() {
+        console.info("GAME WON");
+        ENGINE.TIMERS.stop();
+        ENGINE.GAME.ANIMATION.resetTimer();
+        TITLE.setEndingCreditsScroll();
+        $("#pause").prop("disabled", true);
+        $("#pause").off();
+        const layersToClear = ["FPS", "info"];
+        layersToClear.forEach(item => ENGINE.layersToClear.add(item));
+        ENGINE.clearLayerStack();
+        ENGINE.GAME.ANIMATION.stop();
+        const delay = 4000;
+        setTimeout(function () {
+            ENGINE.clearLayer("subtitle");
+            TITLE.music();
+            ENGINE.GAME.ANIMATION.next(GAME.wonRun);
+        }, delay);
+    },
+    wonRun(lapsedTime) {
+        if (ENGINE.GAME.stopAnimation) return;
+        GAME.endingCreditText.process(lapsedTime);
+        GAME.wonFrameDraw();
+        if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) {
+            ENGINE.GAME.ANIMATION.next(TITLE.startTitle);
+        }
+    },
+    wonFrameDraw() {
+        GAME.endingCreditText.draw();
     }
 };
 
@@ -2019,6 +2038,50 @@ const TITLE = {
         }
 
         ENGINE.draw("save", x, y, SPRITE[sprite]);
+    },
+    setEndingCreditsScroll() {
+        console.group("endingCredits");
+        const text = this.generateEndingCredits();
+        const RD = new RenderData("Pentagram", 30, "#DAA520", "text", "#000", 1, 1, 1);
+        GAME.endingCreditText = new VerticalScrollingText(text, 1, RD);
+        console.groupEnd("endingCredits");
+    },
+    generateEndingCredits() {
+        const text = `Congratulations!
+        You have completed
+        The Castle Haunt II.
+        in ${GAME.time.timeString()}.
+
+        Apparatias were defeated, but Hauntessa Spookish 
+        still lives to haunt you.
+        And she will ...
+
+        You are living happily ever after as The Princess.
+        Or at least until the next game.
+        Or until you get bored.
+        
+        CREDITS:
+        all libraries and game code: Lovro Selic,
+        written in JavaScript and GLSL,
+        except of course,  JQUERY: John Resig et al,
+        glMatrix library by Brandon Jones and 
+        Colin MacKenzie IV.
+
+        Graphics taken from (hopefully) free resources
+        or drawn with PiskelApp or made with Blender.
+        Most textures and images were created by AI: 
+        StableDiffusion, Ideogram, Flux, 
+
+        Supplementary tools written in 
+        JavaScript or Python or C++.
+          
+        Music: 'And The Abyss Gazed Back'
+        written and performed by LaughingSkull, 
+        ${"\u00A9"} 2011 Lovro Selic.
+    
+        thanks for sticking 'till the end.\n`;
+        return text;
+
     },
 };
 

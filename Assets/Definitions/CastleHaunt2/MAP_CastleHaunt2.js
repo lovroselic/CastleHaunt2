@@ -156,7 +156,7 @@ const MAP = {
         oracles: '[[5,7,"PrincessBed"]]',
     }
     ,
-    2: {
+    2 : {
         name: "The Throne Room",
         sg: 0,
         maxSpawned: -1,
@@ -167,15 +167,16 @@ const MAP = {
         floor: "DarkMarble1",
         ceil: "Wood5",
         start: '[31,7]',
-        decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"],[90,4,"PuddleDecal03","crest"],[89,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal09","crest"],[76,4,"Grate1_128","crest"],[77,4,"Grate1_128","crest"],[75,4,"Grate1_128","crest"],[149,4,"PuddleDecal08","crest"],[129,4,"PuddleDecal10","crest"]]',
-        lights: '[[114,7,"Lamp42","standardDimmed"],[116,7,"Lamp42","standardDimmed"],[176,3,"Lamp41","standardDimmed"],[180,5,"Lamp41","standardDimmed"],[238,7,"Lamp46","standardDimmed"],[244,7,"Lamp46","standardDimmed"],[2,7,"Lamp52","fire"],[18,7,"Lamp52","fire"],[422,1,"Lamp52","fire"],[438,1,"Lamp52","fire"]]',
+        decals: '[[30,7,"CrownDecal","crest"],[32,7,"CrownDecal","crest"],[127,5,"KnightStatue101","crest"],[169,5,"KnightStatue110","crest"],[25,7,"WhoDaresWins50","picture"],[37,7,"Galaxians10","picture"],[27,7,"BackToFuture200","picture"],[114,1,"CrystalCastles200","picture"],[116,1,"MontyMole111","picture"],[114,3,"IM13","picture"],[103,3,"OlympicSkier6","picture"],[62,3,"Valhalla88","picture"],[116,5,"TombRaider99","picture"],[42,5,"LastNinja10","picture"],[176,5,"Cavelon4","picture"],[176,1,"AticAtac113","picture"],[180,1,"GatewayToApshai140","picture"],[238,1,"Elvira1","picture"],[244,1,"Witcher130","picture"],[90,4,"PuddleDecal03","crest"],[89,4,"PuddleDecal10","crest"],[120,4,"PuddleDecal09","crest"],[76,4,"Grate1_128","crest"],[77,4,"Grate1_128","crest"],[75,4,"Grate1_128","crest"],[149,4,"PuddleDecal08","crest"],[129,4,"PuddleDecal10","crest"],[274,5,"F4","picture"],[337,5,"FemDommes_8473","picture"],[378,5,"IM13","picture"],[393,5,"FemDommes_8255","picture"],[349,5,"GemDommes_154","picture"],[244,5,"FemDommes6024","picture"],[355,3,"ShinyBlackRuberella103","picture"],[292,3,"CastleLady70","picture"],[398,3,"FemDommes_5306","picture"],[343,3,"FemDommes_8513","picture"],[383,3,"FemDommes_6287","picture"],[238,3,"DonkeyKong200","picture"],[244,3,"SP62","picture"],[238,5,"FluxDommes2108","picture"],[176,7,"GameDommes_210","picture"],[180,7,"FluxDommes2163","picture"],[363,1,"FemDommes_8111","picture"],[371,1,"FemDommes_5021","picture"],[403,1,"LargePicLadies18","picture"],[415,1,"FemDommes_5136","picture"],[343,1,"KnightStatue105","crest"],[349,1,"KnightStatue104","crest"],[369,1,"KnightStatue105","crest"],[365,1,"KnightStatue106","crest"]]',
+        lights: '[[114,7,"Lamp42","standardDimmed"],[116,7,"Lamp42","standardDimmed"],[176,3,"Lamp41","standardDimmed"],[180,5,"Lamp41","standardDimmed"],[238,7,"Lamp46","standardDimmed"],[244,7,"Lamp46","standardDimmed"],[2,7,"Lamp52","fire"],[18,7,"Lamp52","fire"],[422,1,"Lamp52","fire"],[438,1,"Lamp52","fire"],[251,3,"Fireplace206","fire"],[231,5,"Fireplace208","fire"]]',
         gates: '[[10,7,"2.1","1.1","Open"],[147,5,"2.2","3.1","Red"],[335,3,"2.3","122.2","Closed"]]',
         keys: '[[60,2]]',
-        monsters: '[[130,"Bat"],[142,"Bat"],[339,"RedGoldBat"],[353,"RedGoldBat"]]',
-        containers: '[[22,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[40,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[192,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[185,"Chest","GOLD_ITEM_TYPE.SilverBar",null]]',
-        oracles: '[[146,3,"ApparitiaResistance"],[14,7,"ApparitiaWelcome"],[84,5,"Pinka"]]',
+        monsters: '[[130,"Bat"],[142,"Bat"],[339,"RedGoldBat"],[353,"RedGoldBat"],[325,"Bat"],[193,"Bat"],[183,"Bat"]]',
+        containers: '[[22,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[40,"Barrel","GOLD_ITEM_TYPE.GoldCube",7],[192,"Crate","GOLD_ITEM_TYPE.SilverBar",1],[185,"Chest","GOLD_ITEM_TYPE.SilverBar",null],[400,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[401,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[402,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[416,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[417,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[418,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[362,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1],[372,"TreasureChest","GOLD_ITEM_TYPE.GoldSphere",1]]',
+        oracles: '[[146,3,"ApparitiaResistance"],[14,7,"ApparitiaWelcome"],[84,5,"Pinka"],[315,5,"Thinker"]]',
         interactors: '[[409,1,"TheThrone"]]',
-    }
+        monsterList: '["Bat"]',
+        }
     ,
     3: {
         name: "Escape Corridor",
@@ -2961,22 +2962,26 @@ const MAP = {
         movables: '[[337,"Life"],[138,"RoastChicken"],[214,"RoastPig"]]',
     }
     ,
-    121: {
+    121 : {
         name: "Victory Hall",
         sg: 2,
-        maxSpawned: 8,
-        killCountdown: 5,
-        spawnDelay: 5000,
+        maxSpawned: -1,
+        killCountdown: -1,
+        spawnDelay: -1,
         data: '{"width":"23","height":"15","map":"BB2AA2BB4AA55BB2AA5BB2AA2BB2AA5BB2AA6BB2ABAA4BAA25BB2AA8BABAA2BB2AA6BAA5BAA32BB5ABB7AA6BB4AA2BB6AA2BB29ABB6AA2BB2AA2BABB7AA4BABB2ABB7ABABB10AA4BABABB38A$"}',
         wall: "OrnateWall2",
         floor: "BloodMarbleFloorWall_SDXL_009",
         ceil: "MossyWall10",
         start: '[182,3]',
-        decals: '[[159,3,"Skull314","crest"],[205,3,"Skull320","crest"],[139,5,"KnightStatue104","crest"],[185,5,"KnightStatue110","crest"]]',
+        decals: '[[159,3,"Skull314","crest"],[205,3,"Skull320","crest"],[139,5,"KnightStatue104","crest"],[185,5,"KnightStatue110","crest"],[260,1,"FemDommes_4142","picture"],[268,1,"FluxDommes2235","picture"],[76,7,"FemDommes_8213","picture"],[84,7,"FemDommes_8094","picture"],[149,3,"FemDommes_4143","picture"],[195,3,"PrincessDragonDomme_041","picture"],[113,3,"Apparitia_1059","picture"],[251,3,"FemDommes_8287","picture"],[93,5,"AI_Pic_127","picture"],[231,5,"FemDommes_5194","picture"],[149,5,"FemDommes_4247","picture"],[195,5,"FemDommes_8537","picture"],[84,5,"FluxDommes2023","picture"],[76,5,"CCC_172","picture"],[268,5,"LeisureSuitLarry300","picture"],[260,5,"FemDommes_8287","picture"],[76,3,"GameScreens051","picture"],[260,3,"BlackBeret_086","picture"],[268,3,"AMC3","picture"],[48,7,"GameDommes_271","picture"],[32,7,"AI_pic222","picture"],[36,7,"FluxDommes2135","picture"],[66,7,"HalfLife88","picture"],[278,1,"FemDommes_8466","picture"],[308,1,"FemDommes_8210","picture"],[312,1,"Apparitia_1017","picture"],[296,1,"Pyjamarama70","picture"]]',
         lights: '[[142,1,"DuaLLantern_006","standard"],[156,1,"DuaLLantern_030","standard"],[149,1,"Lamp45","standard"],[188,7,"FluxLight114","standard"],[195,7,"WallLamp31","standard"],[202,7,"FluxLight108","standard"],[142,5,"WallLamp34","standard"],[188,5,"DuaLLantern_023","standard"],[142,3,"WallLamp11","standardDimmed"],[188,3,"DuaLLantern_021","standardDimmed"],[156,3,"DuaLLantern_027","standard"],[202,3,"DuaLLantern_016","standard"],[156,5,"Candle70","standardDimmed"],[202,5,"Lamp41","standardDimmed"]]',
         gates: '[[183,3,"121.1","105.2","Closed"],[161,5,"121.2","122.1","Orange"]]',
         keys: '[[163,9]]',
-    }
+        monsters: '[[104,"Bat"],[221,"Bat"],[87,"Bat"],[214,"Bat"],[95,"Bat"]]',
+        gold: '[[73,"BlueGem"],[80,"BlueGem"],[64,"BlueGem"],[271,"BlueGem"],[264,"BlueGem"],[257,"BlueGem"],[172,"BlueGem"],[165,"BlueGem"],[179,"BlueGem"]]',
+        objects: '[[176,"HealthBox"]]',
+        oracles: '[[18,7,"CelebratoryDrink"],[4,7,"WinterDelight"],[326,1,"SaraFrost"],[11,7,"Rubberella10"],[333,1,"LeatherCutie"],[340,1,"LeatherCutie2"]]',
+        }
     ,
     122 : {
         name: "Crown Room",
@@ -2984,15 +2989,18 @@ const MAP = {
         maxSpawned: 8,
         killCountdown: 5,
         spawnDelay: 5000,
-        data: '{"width":"15","height":"15","map":"BB7AA23BABB3AÁAÁAA4BB5EABB4ÁAA6BAA3BAA42BB7ABB3AA2BAA6ÁÁ2BB5ABB7AA3BAA3BB14ABB16ABB7$BB15AA3BB6AÁÁ2AA3ÁÁ4BB2"}',
+        data: '{"width":"15","height":"15","map":"BB7AA17BAA6BEAA2BB3AÁAÁAA5BB6AA2BB3ÁAA6BAA3BAA38BAA6BB8ABB3ABAA7ÁÁ2BB6ABB4ABB4AA3BB2AA2BB5ABABB9ABB16ABB7$BAA3BB6AÁÁ2AA3ÁÁ4BB2"}',
         wall: "GoldishWall6",
         floor: "MarbleFloor101",
         ceil: "FloorPebbles1",
         start: '[43,3]',
-        lights: '[[81,3,"WallLamp34","standard"],[111,3,"WallLamp35","standard"],[193,3,"Lamp45","standard"],[26,7,"Lamp50","standard"],[2,7,"Candelabra01","standardDimmed"],[167,1,"Candelabra03","standardDimmed"]]',
+        decals: '[[84,5,"CrownDecal","crest"],[114,5,"CrownDecal","crest"],[81,5,"CrownDecal","crest"],[111,5,"CrownDecal","crest"],[75,5,"CrownDecal","crest"],[105,5,"CrownDecal","crest"],[196,5,"CrownDecal","crest"],[174,5,"CrownDecal","crest"],[39,5,"FemDommes_9147","picture"],[144,5,"GemDommes_253","picture"],[61,5,"GameScreen1018","picture"],[121,5,"FemDommes_6338","picture"],[150,5,"FemaleWarrior103","picture"],[30,5,"FemDommes_8452","picture"],[73,3,"GemDommes_092","picture"],[133,3,"ManicMiner64","picture"],[163,3,"Various6036","picture"],[84,3,"DommeInGrass1","picture"],[114,3,"CCC_174","picture"],[144,3,"FemDommes_8424","picture"],[54,3,"BlackBeret_141","picture"],[24,3,"FemDommes_6011","picture"],[4,7,"CCC_045","picture"],[7,7,"UnusedEntities5023","picture"],[25,7,"TheHobbit13","picture"],[27,7,"NurseAlchemyMagic_099","picture"],[111,7,"FluxDommes3102","picture"],[168,7,"FemDommes_8327","picture"],[171,7,"AI_PIC_445","picture"],[81,1,"GemDommes_013","picture"],[61,1,"Apparitia_1045","picture"],[214,1,"FemDommes_6047","picture"],[205,1,"AI_Pic_143","picture"],[121,7,"FemDommes_8293","picture"]]',
+        lights: '[[81,3,"WallLamp34","standard"],[111,3,"WallLamp35","standard"],[193,3,"Lamp45","standard"],[26,7,"Lamp50","standard"],[2,7,"Candelabra01","standardDimmed"],[167,1,"Candelabra03","standardDimmed"],[104,3,"Fireplace08","fire"],[202,3,"WallLamp18","standard"]]',
         gates: '[[44,3,"122.1","121.2","Closed"],[180,5,"122.2","2.3","Closed"]]',
+        monsters: '[[33,"RedGoldBat"],[52,"RedGoldBat"],[154,"RedGoldBat"],[131,"RedGoldBat"],[199,"RedGoldBat"]]',
         doors: '[99]',
         triggers: '[[90,5,"SmoothWallButton",1,189],[96,4,"SmoothWallButton",0,95]]',
         objects: '[[92,"Crown"]]',
+        oracles: '[[221,1,"ApparitiaHurt"]]',
         }
 };

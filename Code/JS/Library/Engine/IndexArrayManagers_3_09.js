@@ -855,16 +855,17 @@ class Missile3D extends IAM {
         this.reIndex();
         this.map[this.IA] = new IndexArray(this.map.width, this.map.height, 4, 4);
         this.poolToIA(this.map[this.IA]);
+        const GA = this.map.GA;
 
         for (let obj of this.POOL) {
             if (obj) {
-                obj.move(lapsedTime, this.map.GA);
+                obj.move(lapsedTime, GA);
 
                 //check wall hit
                 const pos = Vector3.to_FP_Grid(obj.pos);
-                let [wallHit, point] = this.map.GA.entityInWallPoint(pos, Vector3.to_FP_Vector(obj.dir), obj.r);
+                let [wallHit, point] = GA.entityInWallPoint(pos, Vector3.to_FP_Vector(obj.dir), obj.r);
                 if (wallHit) {
-                    obj.hitWall(this, point, this.map.GA);
+                    obj.hitWall(this, point, GA);
                     continue;
                 }
 
@@ -878,7 +879,7 @@ class Missile3D extends IAM {
                         if (monster === null) continue;
                         const monsterHit = GRID.circleCollision2D(monster.moveState.grid, Vector3.to_FP_Grid(obj.pos), monster.r + obj.r);
                         if (monsterHit) {
-                            monster.hitByMissile(obj);
+                            monster.hitByMissile(obj, GA);
                             continue;
                         }
                     }

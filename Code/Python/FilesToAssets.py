@@ -3,10 +3,12 @@
 Created on Mon Sep 20 14:51:00 2021
 
 @author: lovro
-@version 0.3.0
+@version 0.3.1
 """
 from os.path import join
 from glob import glob
+
+N_files = 12
 
 # Directory = 'C:/Users/lovro/OneDrive/Pictures/Games Screens/Done'
 # Directory = 'C:/Users/lovro/OneDrive/Pictures/Games Screens/Done_decals'
@@ -45,4 +47,7 @@ files = sorted([f.split('\\')[1] for f in files])
 assets = [f'{{ srcName: "{Prefix}{f}", name: "{f.split(".")[0]}"}},' for f in files]
 # assets = [f'{{ srcName: "{Prefix}{f}", name: "{f.split(".")[0]}", {rotate} }},' for f in files]
 assetText = "\n".join(assets)
-nameText = ",".join([f'"{f.split(".")[0]}"' for f in files])
+# nameText = ",".join([f'"{f.split(".")[0]}"' for f in files])
+name_chunks = [",".join([f'"{f.split(".")[0]}"' for f in files[i:i+N_files]]) for i in range(0, len(files), N_files)]
+nameText = ",\n".join(name_chunks)
+

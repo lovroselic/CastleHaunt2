@@ -492,6 +492,62 @@ const SHRINE_TYPE = {
 };
 
 const ORACLE_TYPE = {
+    Thinker: {
+        name: "Thinker",
+        sprite: "Thinker",
+        category: 'crest',
+        voice: "Female",
+        text: "Don't you wonder? You went west from throne room, and down many times, and west even more times, and now you are back in the throne room. So even our world is not flat? Fucking hell.",
+        interactionCategory: "oracle",
+    },
+    LeatherCutie2: {
+        name: "LeatherCutie2",
+        sprite: "LeatherCutie2",
+        category: 'crest',
+        voice: "Female2",
+        text: "I think we will need another game in which you, the Princess will need to go to the Hauntessa and haunt her ass to oblivion. What do you think?",
+        interactionCategory: "oracle",
+    },
+    LeatherCutie: {
+        name: "LeatherCutie",
+        sprite: "LeatherCutie",
+        category: 'crest',
+        voice: "Female",
+        text: "Hey. Don't forget to pick up the crown and reclaim the throne. It's your destiny.",
+        interactionCategory: "oracle",
+    },
+    Rubberella10: {
+        name: "Rubberella10",
+        sprite: "Rubberella10",
+        category: 'crest',
+        voice: "FemaleLow2",
+        text: "Lovro also wrote the music. You have to love the guy. He made us feel alive. At least while you play the game.",
+        interactionCategory: "oracle",
+    },
+    SaraFrost: {
+        name: "SaraFrost",
+        sprite: "SaraFrost",
+        category: 'crest',
+        voice: "Female2",
+        text: "Lovro wrote all the code. We are kind of proud of him. But he is a bit of a control freak.",
+        interactionCategory: "oracle",
+    },
+    WinterDelight: {
+        name: "WinterDelight",
+        sprite: "WinterDelight",
+        category: 'crest',
+        voice: "FemaleLow",
+        text: "We were created using different AI models, Stable Diffusion, Ideogram and FLux. We are not real. We are just a dream.",
+        interactionCategory: "oracle",
+    },
+    CelebratoryDrink: {
+        name: "CelebratoryDrink",
+        sprite: "CelebratoryDrink",
+        category: 'crest',
+        voice: "Female",
+        text: "Congratulations Princess, what a sweet victory. Let's have a drink to celebrate. Apparitias have run away in fear.",
+        interactionCategory: "oracle",
+    },
     NinjaID: {
         name: "NinjaID",
         sprite: "NinjaID",
@@ -1749,6 +1805,14 @@ const ORACLE_TYPE = {
         category: 'crest',
         voice: "Hauntessa",
         text: "Did you think I would come in person? I always send my minions. Have you met my cousin, GhostFace the Fourth? Even if you defeat them this time, I will haunt you forever.",
+        interactionCategory: "oracle",
+    },
+    ApparitiaHurt: {
+        name: "ApparitiaHurt",
+        sprite: "ApparitiaHurt",
+        category: 'crest',
+        voice: "Apparitia",
+        text: "No Apparitia was hurt in the making of this game ... What a crock of lies, Lovro. I have broken a nail! See you in the next game.",
         interactionCategory: "oracle",
     },
 };

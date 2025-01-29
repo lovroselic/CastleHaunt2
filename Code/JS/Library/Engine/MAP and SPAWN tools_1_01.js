@@ -17,7 +17,7 @@ const MAP_TOOLS = {
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 512,
-        TEXTURE_WIDTH: 512,
+        TEXTURE_WIDTH: 1024,
         VERBOSE: false,
     },
     manageMAP(level) {
@@ -164,7 +164,10 @@ const SPAWN_TOOLS = {
             if (type === "texture") {
                 decal = TEXTURE[picture];
             } else decal = SPRITE[picture];
-            if (decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH) type = "texture";
+            //console.info("*", picture, decal.width, type);
+            if (type === "picture" && decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH) {
+                type = "texture";
+            } else if (type === "crest" && decal.width >= MAP_TOOLS.INI.LEGACY_WIDTH) type = "texture";
             DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }
     },

@@ -2426,7 +2426,7 @@ class Missile extends Drawable_object {
         let length = (lapsedTime / 1000) * this.moveSpeed;
         const pos = this.pos.translate(this.dir, length);
         if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(pos)))) {
-            if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime, "length", length, "old pos", this.pos, "new pos", pos, "old pos in wall", GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
+            //if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime, "length", length, "old pos", this.pos, "new pos", pos, "old pos in wall", GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
             return this.move(lapsedTime / 2, GA);
         }
         this.pos = pos;
@@ -2502,19 +2502,22 @@ class BouncingMissile extends Missile {
             this.mScaleMatrix = mScaleMatrix;
 
         } else if (this.collectible) {
-            this.drop();
+            this.drop(GA);
             this.explode(IAM)
         } else {
             this.explode(IAM);
         };
 
     }
-    drop() {
-        console.log("dropping bouncing missile", this);
-        const dropped = new FloorItem3D(Vector3.to_FP_Grid(this.pos), this.collectibleType);
-        dropped.createTexture();
-        dropped.dropped = true;
-        ITEM3D.add(dropped);
+    drop(GA) {
+        const position = Vector3.to_FP_Grid(this.pos);
+        const placement_possible = GA.positionIsNotExcluded(position, ITEM_DROP_EXCLUSION);
+        if (placement_possible) {
+            const dropped = new FloorItem3D(position, this.collectibleType);
+            dropped.createTexture();
+            dropped.dropped = true;
+            ITEM3D.add(dropped);
+        } else console.error("orb cannot be placed at", position, "orb is lost!");
     }
     explode(IAM) {
         IAM.remove(this.id);
@@ -3561,22 +3564,14 @@ class $3D_Entity {
         let exp = this.health;
         this.applyDamage(damage, exp);
     }
-    hitByMissile(missile) {
+    hitByMissile(missile, GA) {
         if (missile.friendly) {
             const damage = Math.max(missile.calcDamage(this.magic, this.directMagicDamage), 1);
             let exp = Math.min(this.health, damage);
-            //console.log("monster hitByMissile", damage); //
             this.applyDamage(damage, exp);
             missile.explode(MISSILE3D);
-            this.dropOrb(missile);
+            missile.drop(GA);
         }
-    }
-    dropOrb(missile) {
-        const position = Vector3.to_FP_Grid(missile.pos);
-        const orb = new FloorItem3D(position, INTERACTION_OBJECT.Orb);
-        orb.dropped = true;
-        orb.createTexture();
-        ITEM3D.add(orb);
     }
     drainMana() {
         this.mana = 0;
