@@ -23,7 +23,7 @@ const DEBUG = {
     SETTING: true,
     VERBOSE: true,
     _2D_display: true,
-    INVINCIBLE: true,
+    INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
     displayInv() {
@@ -61,7 +61,7 @@ const DEBUG = {
 
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
 
-        GAME.level = 104; //104, 105
+        GAME.level = 1; //104, 105
 
         GAME.gold = 1711; //1711
         GAME.lives = 3; //6
@@ -166,7 +166,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.21.00",
+    VERSION: "0.21.01",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -846,7 +846,7 @@ const GAME = {
         GAME.time = new Timer("Main");
 
         /** DEBUG */
-        DEBUG.checkPoint();
+        //DEBUG.checkPoint();
         /** END DEBUG */
 
         //SAVE GAME
@@ -1674,7 +1674,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls","save"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },

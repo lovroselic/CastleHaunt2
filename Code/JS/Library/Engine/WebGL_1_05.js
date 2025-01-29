@@ -3571,6 +3571,8 @@ class $3D_Entity {
             this.applyDamage(damage, exp);
             missile.explode(MISSILE3D);
             missile.drop(GA);
+            //
+            if (this.boss) console.info("boss damage", damage, "health", this.health);
         }
     }
     drainMana() {

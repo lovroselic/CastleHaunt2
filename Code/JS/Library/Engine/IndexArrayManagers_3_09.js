@@ -904,7 +904,7 @@ class Missile3D extends IAM {
                         const hit = GRID.circleCollision2D(Vector3.to_FP_Grid(missile.pos), Vector3.to_FP_Grid(obj.pos), missile.r + obj.r);
                         if (hit) {
                             for (const M of [obj, missile]) {
-                                if (M.friendly) M.drop();
+                                if (M.friendly) M.drop(GA);
                                 M.explode(this);
                             }
                         }
