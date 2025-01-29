@@ -1579,7 +1579,7 @@ const ENGINE = {
             const modelName = model.scenes[0].name;
             if (ENGINE.verbose) console.info(modelName, model);
 
-            
+
             if (model.buffers.length > 1) throw new Error(`Expected single buffer, got ${model.buffers.length}`);                                           //assume single buffer!
             if (model.nodes.length > ENGINE.INI.MAX_JOINTS) throw new Error(`Expected ${ENGINE.INI.MAX_JOINTS} nodes, but got ${model.nodes.length}`);      //assume no more than ENGINE.INI.MAX_JOINTS joints, this is hardcoded in fragment shader
             const bin_name = ENGINE.MODEL_SOURCE + model.buffers[0].uri;
@@ -3720,6 +3720,26 @@ class Timer {
     this.register();
     this.class = this.constructor.name;
   }
+  static timeStampToString(time) {
+    return this.toTimeString(this.toHMS(time));
+  }
+  static toHMS(time) {
+    let hours = Math.floor(time / 3600);
+    let min = Math.floor((time % 3600) / 60);
+    let sec = Math.floor((time % 3600) % 60);
+
+    return {
+      h: hours,
+      m: min,
+      s: sec
+    };
+  }
+  static toTimeString(time) {
+    let str = time.h.toString().padStart(2, "0") + ":";
+    str += time.m.toString().padStart(2, "0") + ":";
+    str += time.s.toString().padStart(2, "0");
+    return str;
+  }
   load(template) {
     this.delta = template.delta;
   }
@@ -3735,21 +3755,11 @@ class Timer {
     } else {
       time = this.delta / 1000;
     }
-    let hours = Math.floor(time / 3600);
-    let min = Math.floor((time % 3600) / 60);
-    let sec = Math.floor((time % 3600) % 60);
-    return {
-      h: hours,
-      m: min,
-      s: sec
-    };
+    return Timer.toHMS(time);
   }
   timeString() {
     let time = this.time();
-    let str = time.h.toString().padStart(2, "0") + ":";
-    str += time.m.toString().padStart(2, "0") + ":";
-    str += time.s.toString().padStart(2, "0");
-    return str;
+    return Timer.toTimeString(time);
   }
   stop() {
     this.runs = false;

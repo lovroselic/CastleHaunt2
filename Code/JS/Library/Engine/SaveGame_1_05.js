@@ -25,9 +25,11 @@ const SAVE_GAME = {
   GAABR: "_GA",
   MAPABR: "_MAP",
   METAABR: "_META",
+  MANAGERABR: "_MNG",
   CSS: "color: orange",
   that: window,
   ENCODE: true,
+  SLOTS: 5,
 
   debugMode() {
     this.ENCODE = false;
@@ -167,7 +169,7 @@ const SAVE_GAME = {
     const meta_data = [];
     const timestamp = Date.now();
     meta_data.push(JSON.stringify({ "timestamp": timestamp }));
-    meta_data.push(JSON.stringify({ "name":  MAP_REFERENCE[GAME.level].name}));
+    meta_data.push(JSON.stringify({ "name": MAP_REFERENCE[GAME.level].name }));
     if (ENGINE.verbose) console.info("saving meta data", meta_data);
     const metaSTR = JSON.stringify(meta_data);
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.METAABR, SAVE_GAME.code(metaSTR));
@@ -249,7 +251,56 @@ const SAVE_GAME = {
   delete(sg) {
     localStorage.removeItem(sg);
     console.log(`%cDeleted ....: ${sg}`, SAVE_GAME.CSS);
-  }
+  },
+  manager_MTML(id) {
+    console.error("-----------------------------");
+    id = `#${id}`;
+    this.setManager();
+    const activeSG = localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR];
+    let active, isSG;
+
+    if (activeSG) {
+      const meta = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.METAABR]);
+      const room = JSON.parse(meta[1]).name;
+      const timestamp = new Date(parseInt(JSON.parse(meta[0]).timestamp)).ISO();
+      console.log("ACTIVE timestamp", timestamp);
+      const timers = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.TIMEABR]));
+      const game_time = Timer.timeStampToString(JSON.parse(timers.value).now);
+      active = `<p>Active save game: <strong>${room}</strong>, game time: ${game_time}. Saved: ${timestamp} </p><hr>`;
+      isSG = true;
+    } else {
+      active = "<p>No active save game</p><hr>";
+      isSG = false;
+    }
+
+    $(id).append(active);
+    if (!isSG) return;
+
+    for (let i = 0; i < SAVE_GAME.SLOTS; i++) {
+      console.log("i", i);
+      let line = "<p>";
+      line += `<input type='button' class= "copy_to_slot" id ='copy_to_slot_${i}' value= "Copy Active Save game to slot ${i + 1}">`;
+      line += `Currently stored: `;
+      if (localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i] !== "null") {
+        console.warn(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i]);
+      } else {
+        line += "Nothing";
+      }
+
+      line += "</p>"
+      $(id).append(line);
+    }
+
+
+    console.error("-----------------------------");
+  },
+  setManager() {
+    if (localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR] > 0) return;
+    localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR] = SAVE_GAME.SLOTS;
+    for (let i = 0; i < SAVE_GAME.SLOTS; i++) {
+      localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i] = null;
+    }
+  },
 };
 
 const SAVE_MAP_IAM = {

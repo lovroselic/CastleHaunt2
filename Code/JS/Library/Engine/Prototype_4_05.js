@@ -228,6 +228,9 @@ Date.prototype.stringify = function () {
   const y = this.getFullYear();
   return `${d}/${m}/${y}`;
 };
+Date.prototype.ISO = function(){
+  return this.toISOString().replace('T', ' ').split('.')[0]; 
+};
 
 /** Math */
 

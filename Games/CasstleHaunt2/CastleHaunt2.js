@@ -9,12 +9,16 @@
       
 TODO:
 
-    * 
+    * SAVE game manage
+    * previously movie
 
 known bugs: 
     * i don't do bugs
 retests:
     * 
+size before cleanmup:
+    Total File Size: 895.62 MB
+    Total Number of Lines: 40204
  */
 ////////////////////////////////////////////////////
 
@@ -45,24 +49,9 @@ const DEBUG = {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
     },
     checkPoint() {
-        /** LST BATTLE:
-
-        * key not yet used:
-            
-         * missing placed keys: 
-  
-
-         * missing sources for: 
-            * 
-        * temple usage
-
-
-         */
-
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
 
         GAME.level = 1; //104, 105
-
         GAME.gold = 1711; //1711
         GAME.lives = 3; //6
 
@@ -80,25 +69,7 @@ const DEBUG = {
 
 
         let actItems = [
-            INTERACTION_OBJECT.HealthBox,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Cake,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.BeerHealth,
-            INTERACTION_OBJECT.Steak,
-            INTERACTION_OBJECT.Champagne,
-            INTERACTION_OBJECT.Champagne,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastPig,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
-            MOVABLE_INTERACTION_OBJECT.RoastChicken,
+           
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -106,7 +77,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            "MagicSupremacy", "Death", "Cripple",
+            
         ];
 
         for (let scrType of scrollTypes) {
@@ -166,7 +137,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.21.01",
+    VERSION: "0.21.02",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -211,6 +182,9 @@ const PRG = {
 
         $("#toggleVersion").click(function () {
             $("#debug").toggle(400);
+        });
+        $("#toggleSaveGame").click(function () {
+            $("#savegame_manager").toggle(400);
         });
 
         //boxes
@@ -259,6 +233,8 @@ const PRG = {
                 event.preventDefault();
             }
         });
+
+        SAVE_GAME.manager_MTML("sgm_content");
         TITLE.startTitle();
     }
 };
