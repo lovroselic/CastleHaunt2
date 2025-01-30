@@ -137,7 +137,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.21.02",
+    VERSION: "0.21.03",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -214,9 +214,9 @@ const PRG = {
         if (DEBUG.VERBOSE) {
             //WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
-            ENGINE.verbose = true;
-            MAP_TOOLS.INI.VERBOSE = true;
-            SAVE_GAME.debugMode();
+            //ENGINE.verbose = true;
+            //MAP_TOOLS.INI.VERBOSE = true;
+            //SAVE_GAME.debugMode();
         }
     },
     start() {
@@ -234,7 +234,7 @@ const PRG = {
             }
         });
 
-        SAVE_GAME.manager_MTML("sgm_content");
+        SAVE_GAME.manager_HTML();
         TITLE.startTitle();
     }
 };
@@ -550,7 +550,7 @@ const HERO = {
         if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
-        console.debug("getting orb:", missile);
+        //console.debug("getting orb:", missile);
         TITLE.orbs();
         AUDIO.CatchFireball.play();
         if (this.orbsLost > 0) {
@@ -576,7 +576,7 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        console.debug("catching orb", missile);
+        //console.debug("catching orb", missile);
         return this.getOrb(text, missile);
     },
     pickOrb() {
@@ -619,7 +619,7 @@ const HERO = {
         ];
 
         this.speak(text.chooseRandom());
-        console.warn("refusing orb:", missile)
+        //console.warn("refusing orb:", missile)
         if (missile) {
             missile.drop();
         } else this.dropOrb();
@@ -678,7 +678,7 @@ const HERO = {
         ENGINE.GAME.ANIMATION.next(GAME.gameOverRun);
     },
     raiseStat(which, level = 1) {
-        console.info("raising stat", which, level);
+        //console.info("raising stat", which, level);
         this[which] += level;
         this.setDefense();
         TITLE.skills();
@@ -697,7 +697,7 @@ const HERO = {
     },
     setDefense() {
         this.defense = Math.floor(Math.max(0, this.attack - INI.DEFENSE_OFFSET) / INI.DEFENSE_FACTOR);
-        console.log("DEFENSE", this.defense);
+        //console.log("DEFENSE", this.defense);
     },
     incStatus(type, level = 1) {
         let Type = type.capitalize();
