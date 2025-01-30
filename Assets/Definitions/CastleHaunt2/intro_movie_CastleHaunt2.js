@@ -22,7 +22,7 @@ const INTRO_MOV = {
         sprite: "RuberellaInventory",
         text: `Naturally, the ghosts in the castle got fed up.
         They rebelled, evicted her, and locked the doors.
-        Lucky for her, she sweet-talked one ghost, Ghosty,
+        Lucky for her, she sweet talked one ghost, Ghosty,
         into helping her reclaim the castle.
         But once she had it back, she forgot about Ghosty.
         Typical.`,

@@ -135,7 +135,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.01",
+    VERSION: "0.22.02",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -1612,13 +1612,14 @@ const GAME = {
     },
     slideRun(lapsedTime) {
         if (ENGINE.GAME.stopAnimation) return;
-        //console.log("lapsedTime", lapsedTime);
         GAME.previously.process(lapsedTime);
         GAME.slideFrameDraw();
         if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) GAME.previously.next();
 
     },
-    slideFrameDraw() { },
+    slideFrameDraw() { 
+        GAME.previously.verticalText.draw();
+    },
 };
 
 const TITLE = {
@@ -1703,7 +1704,7 @@ const TITLE = {
     },
     titlePlot() {
         const CTX = LAYER.title;
-        var fs = 64;
+        const fs = 64;
         CTX.font = fs + "px Pentagram";
         CTX.textAlign = "center";
         let txt = CTX.measureText(PRG.NAME);
@@ -2073,7 +2074,6 @@ const TITLE = {
         return text;
     },
     previously() {
-        console.log("PREVIOUSLY");
         if (AUDIO.Title) {
             AUDIO.Title.pause();
             AUDIO.Title.currentTime = 0;
@@ -2086,13 +2086,13 @@ const TITLE = {
         $("#pause").prop("disabled", false);
         $("#pause").off();
 
-        ENGINE.GAME.ANIMATION.stop();
-
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         const RD = new RenderData("Pentagram", 30, "#DAA520", "text", "#000", 1, 1, 1);
-        GAME.previously = new SlideShow(INTRO_MOV, TITLE.startTitle, RD);
-
+        const layers = {title: "title", sprite: "background"}
+        GAME.previously = new SlideShow(INTRO_MOV, TITLE.startTitle, RD, layers);
+        GAME.previously.next();
+        SPEECH.use("Princess");
         ENGINE.GAME.ANIMATION.next(GAME.slideRun);
     }
 };

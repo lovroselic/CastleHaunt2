@@ -176,6 +176,10 @@ class VoiceSetting {
 }
 
 const VOICE = {
+  'MaleLow': {
+    voice: 0,
+    setting: new VoiceSetting(0.75, 0.5, 1.0)
+  },
   'Male': {
     voice: 0,
     setting: new VoiceSetting(0.75, 1.0, 1.0)

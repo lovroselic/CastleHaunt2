@@ -4088,17 +4088,54 @@ const FILTER = {
 };
 
 class SlideShow {
-  constructor(json, exitFunc, RD, timeOut = 10000) {
+  constructor(json, exitFunc, RD, layers, timeOut = 9999) {
     this.json = json;
     this.exitFunc = exitFunc;
     this.RD = RD;
+    this.layers = layers;
     this.timeOut = timeOut;
+    this.frame = -1;
+    this.titles = [];
+    this.sprites = [];
+    this.texts = [];
+    this.prepare();
+    this.frameOverflow = this.titles.length;
+    this.verticalText = null;
+  }
+  prepare() {
+    for (const frame in this.json) {
+      this.titles.push(this.json[frame].title);
+      this.sprites.push(this.json[frame].sprite);
+      this.texts.push(this.json[frame].text);
+    }
   }
   process(lapsedTime) {
-    console.log("process", lapsedTime);
+    this.verticalText.process();
   }
   next() {
-    console.warn("next");
+    const fs = 64;
+    ENGINE.GAME.keymap[ENGINE.KEY.map.enter] = false;
+    this.frame++;
+    console.warn("next", this.frame);
+    if (this.frame >= this.frameOverflow) return this.exitFunc.call();
+
+    TURN.subtitle("ENTER to continue");
+    ENGINE.draw(this.layers.sprite, (ENGINE.gameWIDTH - TEXTURE.Title.width) / 2, (ENGINE.gameHEIGHT - TEXTURE.Title.height) / 2, SPRITE[this.sprites[this.frame]]);
+
+    ENGINE.clearLayer(this.layers.title);
+    const CTX = LAYER[this.layers.title];
+    CTX.fillStyle = "#000";
+    CTX.roundRect(0, 0, ENGINE.titleWIDTH, ENGINE.titleHEIGHT, { upperLeft: 20, upperRight: 20, lowerLeft: 0, lowerRight: 0 }, true, true);
+    let x = ENGINE.titleWIDTH / 2;
+    let y = fs;
+    CTX.fillStyle = "gold";
+    CTX.shadowColor = "#cec967";
+    CTX.shadowOffsetX = 2;
+    CTX.shadowOffsetY = 2;
+    CTX.shadowBlur = 3;
+    CTX.fillText(this.titles[this.frame], x, y);
+    this.verticalText = new VerticalScrollingText(this.texts[this.frame], 1, this.RD);
+    SPEECH.speakWithArticulation(this.texts[this.frame]);
   }
 }
 
