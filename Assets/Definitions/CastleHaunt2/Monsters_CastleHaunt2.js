@@ -970,7 +970,7 @@ const ORACLE_TYPE = {
         sprite: "PrincessBed",
         category: 'crest',
         voice: "Princess",
-        text: "Yes, this is my bed, but I do not have time to sleep now.",
+        text: "Yes, this is my bed, but I do not have time to sleep now. Something is off.",
         interactionCategory: "oracle",
         price: 0,
     },

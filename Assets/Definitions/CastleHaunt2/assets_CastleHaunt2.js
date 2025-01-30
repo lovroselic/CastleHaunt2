@@ -4,7 +4,6 @@
 /*jshint -W061 */
 //Assets for CastleHaunt2 (and MAzEditor())
 "use strict";
-console.log("%cAssets for CastleHaunt started.", "color: orange");
 
 /** MazeEditor dependencies */
 LoadSheetSequences = [
@@ -1040,6 +1039,8 @@ LoadModels = [
 ];
 
 LoadSprites = [
+    //intro
+
     // frescoes - entities
     { srcName: "EntityPictures/PrincessBed.jpg", name: "PrincessBed" },
     { srcName: "EntityPictures/Apparitia1.jpg", name: "ApparitiaResistance" },
@@ -8327,4 +8328,4 @@ LoadSprites = [
 { srcName: "PicDecals/FemDommes_10150.jpg", name: "FemDommes_10150"},
 ];
 
-console.log("%cAssets for CastleHaunt ready.", "color: orange");
+console.log("%cAssets for CastleHaunt2 ready.", "color: orange");

@@ -135,7 +135,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.00",
+    VERSION: "0.22.01",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -173,11 +173,9 @@ const PRG = {
         $("#toggleHelp").click(function () {
             $("#help").toggle(400);
         });
-
         $("#toggleAbout").click(function () {
             $("#about").toggle(400);
         });
-
         $("#toggleVersion").click(function () {
             $("#debug").toggle(400);
         });
@@ -201,7 +199,7 @@ const PRG = {
         ENGINE.addBOX("LSIDE", INI.SCREEN_BORDER, ENGINE.gameHEIGHT, ["Lsideback", "health"], "side");
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs", "skills"], "fside");
-        ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle",], null);
+        ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle"], null);
 
         if (DEBUG._2D_display) {
             ENGINE.addBOX("LEVEL", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["pacgrid", "grid", "coord", "player"], null);
@@ -781,6 +779,7 @@ const GAME = {
     gold: 0,                                // WebGl relies on this as default gold source, keep! 
     loadWayPoint: null,                     // save game pointer, keep!
     canBeSaved: true,
+    previously: null,
     start() {
         console.log("GAME started");
         if (AUDIO.Title) {
@@ -1610,7 +1609,16 @@ const GAME = {
     },
     wonFrameDraw() {
         GAME.endingCreditText.draw();
-    }
+    },
+    slideRun(lapsedTime) {
+        if (ENGINE.GAME.stopAnimation) return;
+        //console.log("lapsedTime", lapsedTime);
+        GAME.previously.process(lapsedTime);
+        GAME.slideFrameDraw();
+        if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) GAME.previously.next();
+
+    },
+    slideFrameDraw() { },
 };
 
 const TITLE = {
@@ -1633,7 +1641,7 @@ const TITLE = {
     },
     startTitle() {
         console.log("TITLE started");
-        //if (AUDIO.Title) AUDIO.Title.play(); //dev
+        if (AUDIO.Title) AUDIO.Title.play(); //dev
         $("#pause").prop("disabled", true);
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
@@ -1647,7 +1655,9 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls", "save"]);
+        ENGINE.layersToClear = new Set(["text",
+            "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls", "save",
+            "bottomText"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -1714,14 +1724,21 @@ const TITLE = {
         ENGINE.clearLayer("button");
         FORM.BUTTON.POOL.clear();
         let x = 8;
-        let y = 668;
         const w = 100;
         const h = 24;
         const F = 1.5;
-        let startBA = new Area(x, y, w, h);
+        let y = 668 - F * h;
+
         const buttonColors = new ColorInfo("#F00", "#A00", "#222", "#666", 13);
         const musicColors = new ColorInfo("#0E0", "#090", "#222", "#666", 13);
-        const checkpointColors = new ColorInfo("#FFF", "#A0A", "#222", "#666", 10);
+        const checkpointColors = new ColorInfo("#FFF", "#AAA", "#222", "#888", 13);
+        const prevColors = new ColorInfo("#00F", "#00D", "#222", "#666", 13);
+
+        let prevBA = new Area(x, y, w, h);
+        FORM.BUTTON.POOL.push(new Button("Previously", prevBA, prevColors, TITLE.previously));
+
+        y += F * h;
+        let startBA = new Area(x, y, w, h);
         FORM.BUTTON.POOL.push(new Button("Start game", startBA, buttonColors, GAME.start));
 
         const sg = localStorage.getItem(PRG.SG);
@@ -1735,6 +1752,7 @@ const TITLE = {
         y += F * h;
         let music = new Area(x, y, w, h);
         FORM.BUTTON.POOL.push(new Button("Title music", music, musicColors, TITLE.music));
+
         FORM.BUTTON.draw();
         $(ENGINE.topCanvas).on("mousemove", { layer: ENGINE.topCanvas }, ENGINE.mouseOver);
         $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, ENGINE.mouseClick);
@@ -2053,8 +2071,30 @@ const TITLE = {
     
         thanks for sticking 'till the end.\n`;
         return text;
-
     },
+    previously() {
+        console.log("PREVIOUSLY");
+        if (AUDIO.Title) {
+            AUDIO.Title.pause();
+            AUDIO.Title.currentTime = 0;
+        }
+        $(ENGINE.topCanvas).off("mousemove", ENGINE.mouseOver);
+        $(ENGINE.topCanvas).off("click", ENGINE.mouseClick);
+        $(ENGINE.topCanvas).css("cursor", "");
+        ENGINE.hideMouse();
+
+        $("#pause").prop("disabled", false);
+        $("#pause").off();
+
+        ENGINE.GAME.ANIMATION.stop();
+
+        TITLE.clearAllLayers();
+        TITLE.blackBackgrounds();
+        const RD = new RenderData("Pentagram", 30, "#DAA520", "text", "#000", 1, 1, 1);
+        GAME.previously = new SlideShow(INTRO_MOV, TITLE.startTitle, RD);
+
+        ENGINE.GAME.ANIMATION.next(GAME.slideRun);
+    }
 };
 
 // -- main --

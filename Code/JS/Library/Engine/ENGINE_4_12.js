@@ -4087,5 +4087,20 @@ const FILTER = {
   }
 };
 
+class SlideShow {
+  constructor(json, exitFunc, RD, timeOut = 10000) {
+    this.json = json;
+    this.exitFunc = exitFunc;
+    this.RD = RD;
+    this.timeOut = timeOut;
+  }
+  process(lapsedTime) {
+    console.log("process", lapsedTime);
+  }
+  next() {
+    console.warn("next");
+  }
+}
+
 //END
 console.log(`%cENGINE ${ENGINE.VERSION} loaded.`, ENGINE.CSS);
