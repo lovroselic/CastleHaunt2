@@ -8,8 +8,6 @@
 /*
       
 TODO:
-
-    * SAVE game manage
     * previously movie
 
 known bugs: 
@@ -25,8 +23,8 @@ size before cleanmup:
 const DEBUG = {
     FPS: true,
     SETTING: true,
-    VERBOSE: true,
-    _2D_display: true,
+    VERBOSE: false,
+    _2D_display: false,
     INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
@@ -69,7 +67,7 @@ const DEBUG = {
 
 
         let actItems = [
-           
+
         ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
@@ -77,7 +75,7 @@ const DEBUG = {
         }
 
         let scrollTypes = [
-            
+
         ];
 
         for (let scrType of scrollTypes) {
@@ -137,7 +135,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.21.03",
+    VERSION: "0.22.00",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -269,7 +267,6 @@ class ActionItem {
         this.saveDefinition = ['class', 'type', "spriteClass"];
     }
     action() {
-        console.warn("action item action", this);
         switch (this.type) {
             case "inventory":
                 HERO.bagStart();
@@ -838,7 +835,7 @@ const GAME = {
 
         //load from checkpoint
         if (GAME.fromCheckpoint) {
-            console.log(`%c ... Loading part 1...`, GAME.CSS);
+            if (DEBUG.VERBOSE) console.log(`%c ... Loading part 1...`, GAME.CSS);
             GAME.load();
         }
         //end load
@@ -889,7 +886,7 @@ const GAME = {
         }
     },
     initLevel(level) {
-        console.info("init level", level);
+        if (DEBUG.VERBOSE) console.info("init level", level);
         this.newDungeon(level);
 
         WebGL.MOUSE.initialize("ROOM");
@@ -932,7 +929,7 @@ const GAME = {
         console.timeEnd("setWorld");
     },
     buildWorld(level) {
-        console.info("building world, room/dungeon/level:", level, "ressurection", HERO.ressurection);
+        if (DEBUG.VERBOSE) console.info("building world, room/dungeon/level:", level, "ressurection", HERO.ressurection);
         WebGL.init_required_IAM(MAP[level].map, HERO);
 
         if (HERO.ressurection) {
@@ -949,7 +946,7 @@ const GAME = {
         GAME.deathPlaceDecals.clear();
 
         if (GAME.fromCheckpoint) {
-            console.log(`%c ... loading part 3: affecting MAP and SPAWN from checkpoint ...`, GAME.CSS);
+            if (DEBUG.VERBOSE) console.log(`%c ... loading part 3: affecting MAP and SPAWN from checkpoint ...`, GAME.CSS);
             SAVE_MAP_IAM.load_map(MAP);
             WebGL.CTX.pixelStorei(WebGL.CTX.UNPACK_FLIP_Y_WEBGL, true);
             MAP_TOOLS.applyStorageActions(level);
@@ -1650,7 +1647,7 @@ const TITLE = {
         ENGINE.GAME.ANIMATION.next(GAME.runTitle);
     },
     clearAllLayers() {
-        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls","save"]);
+        ENGINE.layersToClear = new Set(["text", "sideback", "button", "title", "FPS", "keys", "info", "subtitle", "compassRose", "compassNeedle", "health", "lives", "skills", "gold", "time", "orbs", "scrolls", "save"]);
         ENGINE.clearLayerStack();
         WebGL.transparent();
     },
@@ -1743,7 +1740,6 @@ const TITLE = {
         $(ENGINE.topCanvas).on("click", { layer: ENGINE.topCanvas }, ENGINE.mouseClick);
     },
     firstFrame() {
-        console.info("title first frame");
         TITLE.titlePlot();
         TITLE.compass();
         TITLE.sidebackground_static();

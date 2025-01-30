@@ -257,7 +257,6 @@ const SAVE_GAME = {
     console.log(`%cDeleted ....: ${sg}`, SAVE_GAME.CSS);
   },
   manager_HTML() {
-    //console.error("-----------------------------");
     const id = SAVE_GAME.SG_MANAGER_ID;
     $(id).html("");
     SAVE_GAME.setManager();
@@ -265,13 +264,9 @@ const SAVE_GAME = {
     let active, isSG;
 
     if (activeSG) {
-
-      //console.debug(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.METAABR]));
-
       const meta = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.METAABR]));
       const room = JSON.parse(meta[1]).name;
       const timestamp = new Date(parseInt(JSON.parse(meta[0]).timestamp)).ISO();
-      //console.log("ACTIVE timestamp", timestamp);
       const timers = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.TIMEABR]));
       const game_time = Timer.timeStampToString(JSON.parse(timers.value).now);
       active = `<p>Active save game: <strong>${room}</strong>, game time: ${game_time}. Saved: ${timestamp} `;
@@ -289,7 +284,6 @@ const SAVE_GAME = {
     const unpacked = new Array(SAVE_GAME.SLOTS);
 
     for (let i = 0; i < SAVE_GAME.SLOTS; i++) {
-      //console.log("i", i);
       let line = "<p>";
       line += `${i + 1}. `;
       line += `<input type='button' class= "copy_to_slot" id ='copy_to_slot_${i}' value= "Copy Active Save game to slot ${i + 1}"> `;
@@ -298,12 +292,12 @@ const SAVE_GAME = {
       if (localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i] !== "null") {
         const parsedArray = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i]));
         unpacked[i] = SAVE_GAME.unpackSlot(parsedArray);
-        //console.warn(i, "unpacked[i]", unpacked[i]);
+
         const room = JSON.parse(unpacked[i]._META[1]).name;
         const timestamp = new Date(parseInt(JSON.parse(unpacked[i]._META[0]).timestamp)).ISO();
         const timers = JSON.parse(unpacked[i]._TMR.value);
         const game_time = Timer.timeStampToString(timers.now);
-        //console.log("...", room, timestamp, game_time);
+
         line += `<strong>${room}</strong>, game time: ${game_time}. Saved: ${timestamp}  `;
         line += `<input type="button" class= "red_button export_to_active" id ="export_to_active_${i}" value="Export to active" style="color:white">`;
       } else {
@@ -314,8 +308,6 @@ const SAVE_GAME = {
       $(id).append(line);
     }
 
-    //console.log("unpacked", unpacked);
-    //console.error("-----------------------------");
     $(document).on("click", ".copy_to_slot", handleCopyToSlotClick);
     $(document).on("click", ".export_to_active", handleExportClick);
     $("#Refresh_SG_manager").on("click", SAVE_GAME.manager_HTML);
@@ -332,31 +324,22 @@ const SAVE_GAME = {
   },
   exportSlot(id) {
     let slotNumber = id.split("_").pop();
-    //console.warn("******************************");
-    //console.log(" EXPORTING slot", slotNumber);
     const slot = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber]));
-    //console.info("slot", slot);
     for (const el of slot) {
-      //console.log("..", el.abr, el.aspect);
       localStorage.setItem(SAVE_GAME.key + el.abr, el.aspect);
     }
 
-    //console.warn("******************************");
     SAVE_GAME.manager_HTML();
   },
   unpackSlot(parsedArray) {
-    //console.log("unpackSlot", parsedArray);
     const slot = {};
     for (const el of parsedArray) {
-      console.log(el.abr, SAVE_GAME.decode(el.aspect));
       slot[el.abr] = JSON.parse(SAVE_GAME.decode(el.aspect));
-      //slot[el.abr] = SAVE_GAME.decode(el.aspect);
     }
     return slot;
   },
   copyToSlot(id) {
     let slotNumber = id.split("_").pop();
-    //console.log("Copying save game to slot:", slotNumber);
     const slot = [];
 
     for (const abr of SAVE_GAME.slot_save_list) {
@@ -367,7 +350,6 @@ const SAVE_GAME = {
     const slotSTR = JSON.stringify(slot);
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber, SAVE_GAME.code(slotSTR));
 
-    //console.log("slot", slotSTR);
     SAVE_GAME.manager_HTML();
   },
   setManager() {

@@ -125,10 +125,10 @@ const MAP_TOOLS = {
     applyStorageActions(level) {
         if (!this.MAP[level].unused_storage) return;
         if (!this.MAP[level].map.storage.empty()) return;
-        console.info("Applying actions for level", level);
+        if (ENGINE.verbose) console.info("Applying actions for level", level);
         this.MAP[level].unused_storage.apply();
         this.MAP[level].map.storage.addStorage(this.MAP[level].unused_storage);
-        console.log("this.MAP[level].map.storage", this.MAP[level].map.storage);
+        if (ENGINE.verbose) console.log("this.MAP[level].map.storage", this.MAP[level].map.storage);
         MAP_TOOLS.setOcclusionMap(level);
     }
 };
@@ -150,7 +150,6 @@ const SPAWN_TOOLS = {
             this[method](map, GA);
         });
 
-        console.log("spawned", level);
         MAP_TOOLS.setOcclusionMap(level);
     },
     decals(map, GA) {
@@ -387,12 +386,12 @@ class IAM_Storage {
     }
     apply() {
         for (const action of this.action_list) {
-            console.log(". action", action);
+            if (ENGINE.verbose) console.log(". action", action);
             const IAM = eval(action.IAM);
             const obj = IAM.POOL[action.id - 1];
-            console.log(".... trying", obj, action.action, action.arg);
+            if (ENGINE.verbose) console.log(".... trying", obj, action.action, action.arg);
             obj[action.action](action.arg);
-            console.log("........ OK", obj, action.action, action.arg);
+            if (ENGINE.verbose) console.log("........ OK", obj, action.action, action.arg);
         }
     }
     add(item) {
