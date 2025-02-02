@@ -308,9 +308,9 @@ const SAVE_GAME = {
       $(id).append(line);
     }
 
-    $(document).on("click", ".copy_to_slot", handleCopyToSlotClick);
-    $(document).on("click", ".export_to_active", handleExportClick);
-    $("#Refresh_SG_manager").on("click", SAVE_GAME.manager_HTML);
+    $(document).off("click", ".copy_to_slot").one("click", ".copy_to_slot", handleCopyToSlotClick);
+    $(document).off("click", ".export_to_active").one("click", ".export_to_active", handleExportClick);
+    $("#Refresh_SG_manager").off("click").one("click", SAVE_GAME.manager_HTML);
 
     function handleCopyToSlotClick() {
       let clickedId = $(this).attr("id");
@@ -323,6 +323,7 @@ const SAVE_GAME = {
     }
   },
   exportSlot(id) {
+    console.time("exportSave");
     let slotNumber = id.split("_").pop();
     const slot = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber]);
     for (const el of slot) {
@@ -330,6 +331,7 @@ const SAVE_GAME = {
     }
 
     SAVE_GAME.manager_HTML();
+    console.timeEnd("exportSave");
   },
   unpackSlot(parsedArray) {
     const slot = {};
@@ -341,6 +343,7 @@ const SAVE_GAME = {
     return slot;
   },
   copyToSlot(id) {
+    console.time("copySave");
     let slotNumber = id.split("_").pop();
     const slot = [];
 
@@ -352,6 +355,7 @@ const SAVE_GAME = {
     const slotSTR = JSON.stringify(slot);
     localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber, slotSTR);
     SAVE_GAME.manager_HTML();
+    console.timeEnd("copySave");
   },
   setManager() {
     if (localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR] > 0) return;

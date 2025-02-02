@@ -2511,6 +2511,7 @@ class BouncingMissile extends Missile {
 
     }
     drop(GA) {
+        if (!GA) GA = this.IAM.map.GA;
         const position = Vector3.to_FP_Grid(this.pos);
         const placement_possible = GA.positionIsNotExcluded(position, ITEM_DROP_EXCLUSION);
         if (placement_possible) {

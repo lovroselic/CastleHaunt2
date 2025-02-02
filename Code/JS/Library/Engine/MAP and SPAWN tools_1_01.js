@@ -18,7 +18,7 @@ const MAP_TOOLS = {
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 512,
         TEXTURE_WIDTH: 1024,
-        VERBOSE: true,
+        VERBOSE: false,
     },
     manageMAP(level) {
         if (MAP[level].map.stopSpawning) return;
@@ -175,6 +175,7 @@ const SPAWN_TOOLS = {
             const grid = GA.indexToGrid(L[0]);
             const face = DirectionToFace(Vector.fromInt(L[1]));
             const picture = L[2];
+            //console.log("picture",picture);
             const type = L[3];
             const sprite = SPRITE[picture];
             let expand = false;

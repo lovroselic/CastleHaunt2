@@ -5492,7 +5492,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "I am so very hungry.",
             progress: "Fly tasted marvelous, but I am still hungry.",
-            conclusion: "My appetite is sated. You con continue your fight."
+            conclusion: "My appetite is sated. You can continue your fight."
         }
     },
     Librarian: {

@@ -39,7 +39,7 @@ const MAP_TEXT = {
     27: "Seems like a small room. Or maybe my eyes deceive me.",
     28: "Watch your step on the stairs.",
     29: "You better make me rich so I can afford all this training.",
-    30: "I shold prepare myself for what is comming.",
+    30: "I should prepare myself for what is comming.",
     31: "I sense the battle comming up.",
     32: "",
     33: "",
@@ -490,7 +490,7 @@ const MAP = {
         monsterList: '["MissGalaxy","MissGalaxy","Goblin"]',
     }
     ,
-    17: {
+    17 : {
         name: "Underground Forest",
         sg: 0,
         maxSpawned: 3,
@@ -501,7 +501,7 @@ const MAP = {
         floor: "ForestFloor02",
         ceil: "DarkSky04",
         start: '[30,7]',
-        lights: '[[55,7,"Lights112","dim"],[64,7,"Lights112","dim"],[127,7,"Lights112","dim"],[193,7,"Lights112","dim"],[199,7,"Lights112","dim"],[253,3,"Lights112","dim"],[185,3,"Lights112","dim"],[117,3,"Lights112","dim"],[239,5,"Lights112","dim"],[171,5,"Lights112","dim"],[103,5,"Lights112","dim"],[35,5,"Lights112","dim"]]',
+        lights: '[[55,7,"Moon50","dim"],[64,7,"Moon51","dim"],[127,7,"Moon52","dim"],[193,7,"Moon54","dim"],[199,7,"Moon55","dim"],[253,3,"Moon56","dim"],[185,3,"Moon58","dim"],[117,3,"Moon59","dim"],[239,5,"Moon60","dim"],[171,5,"Moon63","dim"],[103,5,"Moon62","dim"],[35,5,"Moon52","dim"]]',
         gates: '[[13,7,"17.1","16.2","Open"]]',
         monsters: '[[106,"Wolf"],[111,"Wolf"],[115,"Wolf"]]',
         gold: '[[70,"GoldBar"],[61,"GoldBar"],[164,"GoldBar"],[212,"GoldBar"],[244,"GoldBar"],[140,"SilverBar"],[235,"SilverBar"],[121,"GoldCube"],[38,"GoldCube"],[223,"GoldCube"],[179,"GoldCube"]]',
@@ -512,7 +512,7 @@ const MAP = {
         movables: '[[229,"WolfPuppy"],[225,"WolfPuppy"],[233,"WolfPuppy"]]',
         lairs: '[[152,3,"Lair23"],[136,5,"Lair21"]]',
         monsterList: '["MissGalaxy","MissGalaxy","Goblin","MissGalaxy"]',
-    }
+        }
     ,
     18: {
         name: "Fashion District",

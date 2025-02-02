@@ -24,7 +24,7 @@ const DEBUG = {
     FPS: true,
     SETTING: true,
     VERBOSE: false,
-    _2D_display: true,
+    _2D_display: false,
     INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
@@ -135,7 +135,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.04",
+    VERSION: "0.22.05",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -512,9 +512,7 @@ const HERO = {
         const missile = new BouncingMissile(position, HERO.player.dir, COMMON_ITEM_TYPE.Orb, HERO.magic, ParticleExplosion, true, INTERACTION_OBJECT.Orb);
         MISSILE3D.add(missile);
         this.orbsLost++;
-        console.debug("inc orbsLost", this.orbsLost);
         this.orbsLost = Math.min(this.orbsLost, this.capacity);
-        console.debug("shooting, orbsLost", this.orbsLost);
         setTimeout(() => (HERO.canShoot = true), INI.HERO_SHOOT_TIMEOUT);
         return;
     },
@@ -545,7 +543,6 @@ const HERO = {
         if (this.orbs === this.capacity) return this.refusePickingOrb(missile);
         this.speak(text.chooseRandom());
         this.orbs++;
-        //console.debug("getting orb:", missile);
         TITLE.orbs();
         AUDIO.CatchFireball.play();
         if (this.orbsLost > 0) {
@@ -571,7 +568,6 @@ const HERO = {
             "Return to sender.",
             "Boomerang orb.",
         ];
-        //console.debug("catching orb", missile);
         return this.getOrb(text, missile);
     },
     pickOrb() {

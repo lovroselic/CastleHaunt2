@@ -132,8 +132,10 @@ class IAM {
         }
         callback();
     }
-    getSize() {
-        return this.POOL.length || null;
+    getSize(filter_null = true) {
+        if (!filter_null) return this.POOL.length || null;
+        const filtered = this.POOL.filter((el) => el !== null);
+        return filtered.length;
     }
 }
 
