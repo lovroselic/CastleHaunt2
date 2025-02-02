@@ -24,6 +24,7 @@ class IAM {
         this.IA = null;
         this.reIndexRequired = false;
         this.reIndexSwitch = false;
+        this.usingReIndex = false;
     }
     setReindex() {
         this.reIndexRequired = true;
@@ -937,10 +938,15 @@ class ParticleEmmission3D extends IAM {
 }
 
 class Animated_3d_entity extends IAM {
-    constructor() {
+    constructor(usingReIndex = false) {
         super();
         this.POOL = [];
         this.IA = "enemyIA";
+        this.usingReIndex = usingReIndex;
+        if (this.usingReIndex) this.reIndexSwitch = true;
+    }
+    useReindex() {
+        this.usingReIndex = true;
         this.reIndexSwitch = true;
     }
     resetTime() {

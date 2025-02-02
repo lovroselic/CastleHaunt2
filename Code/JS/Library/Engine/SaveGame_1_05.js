@@ -290,7 +290,7 @@ const SAVE_GAME = {
       line += `Currently stored: `;
 
       if (localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i] !== "null") {
-        const parsedArray = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i]));
+        const parsedArray = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + i]);
         unpacked[i] = SAVE_GAME.unpackSlot(parsedArray);
 
         const room = JSON.parse(unpacked[i]._META[1]).name;
@@ -324,7 +324,7 @@ const SAVE_GAME = {
   },
   exportSlot(id) {
     let slotNumber = id.split("_").pop();
-    const slot = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber]));
+    const slot = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber]);
     for (const el of slot) {
       localStorage.setItem(SAVE_GAME.key + el.abr, el.aspect);
     }
@@ -334,7 +334,9 @@ const SAVE_GAME = {
   unpackSlot(parsedArray) {
     const slot = {};
     for (const el of parsedArray) {
-      slot[el.abr] = JSON.parse(SAVE_GAME.decode(el.aspect));
+      let aspect = el.aspect;
+      if (el.abr !== "_GA") aspect = SAVE_GAME.decode(el.aspect);
+      slot[el.abr] = JSON.parse(aspect);
     }
     return slot;
   },
@@ -348,8 +350,7 @@ const SAVE_GAME = {
     }
 
     const slotSTR = JSON.stringify(slot);
-    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber, SAVE_GAME.code(slotSTR));
-
+    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.MANAGERABR + "_" + slotNumber, slotSTR);
     SAVE_GAME.manager_HTML();
   },
   setManager() {
@@ -397,10 +398,11 @@ const SAVE_MAP_IAM = {
       }
     }
     const map_GA_string = JSON.stringify(map_GA);
-    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.GAABR, SAVE_GAME.code(map_GA_string));
+    if (ENGINE.verbose) console.warn("save_GA",map_GA_string);
+    localStorage.setItem(SAVE_GAME.key + SAVE_GAME.GAABR, map_GA_string);
   },
   load_GA(MAP_REFERENCE = MAP) {
-    const map_GA = JSON.parse(SAVE_GAME.decode(localStorage[SAVE_GAME.key + SAVE_GAME.GAABR]));
+    const map_GA = JSON.parse(localStorage[SAVE_GAME.key + SAVE_GAME.GAABR]);
     if (ENGINE.verbose) console.log("loaded map_GA", map_GA);
     for (const level in map_GA) {
       MAP_REFERENCE[level].adapted_data = map_GA[level];

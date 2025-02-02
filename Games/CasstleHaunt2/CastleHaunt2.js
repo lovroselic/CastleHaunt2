@@ -24,7 +24,7 @@ const DEBUG = {
     FPS: true,
     SETTING: true,
     VERBOSE: false,
-    _2D_display: false,
+    _2D_display: true,
     INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
@@ -135,7 +135,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.03",
+    VERSION: "0.22.04",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -210,7 +210,7 @@ const PRG = {
         if (DEBUG.VERBOSE) {
             //WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
-            //ENGINE.verbose = true;
+            ENGINE.verbose = true;
             //MAP_TOOLS.INI.VERBOSE = true;
             //SAVE_GAME.debugMode();
         }
@@ -805,7 +805,7 @@ const GAME = {
         GAME.completed = false;
         //GAME.lives = 3;
         GAME.lives = 1;
-        GAME.level = 1;                 //start           
+        GAME.level = 1;                 //1           
         GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D", "LAIR"];

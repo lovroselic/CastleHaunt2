@@ -13,12 +13,12 @@ const MAP_TOOLS = {
         'shrines', 'doors', 'triggers', 'entities', 'objects', 'traps', 'oracles', 'movables', 'trainers', 'interactors', 'lairs'],
     lists: ['monsterList'],
     INI: {
-        FOG: true,
+        FOG: true, //true
         GA_BYTE_SIZE: 2,
         SPAWN_DELAY_INC_FACTOR: 1.5,
         LEGACY_WIDTH: 512,
         TEXTURE_WIDTH: 1024,
-        VERBOSE: false,
+        VERBOSE: true,
     },
     manageMAP(level) {
         if (MAP[level].map.stopSpawning) return;
@@ -164,9 +164,9 @@ const SPAWN_TOOLS = {
                 decal = TEXTURE[picture];
             } else decal = SPRITE[picture];
             //console.info("*", picture, decal.width, type);
-            if (type === "picture" && decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH) {
+            if (type === "picture" && (decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH || decal.height >= MAP_TOOLS.INI.TEXTURE_WIDTH)) {
                 type = "texture";
-            } else if (type === "crest" && decal.width >= MAP_TOOLS.INI.LEGACY_WIDTH) type = "texture";
+            } else if (type === "crest" && (decal.width >= MAP_TOOLS.INI.LEGACY_WIDTH || decal.height >= MAP_TOOLS.INI.LEGACY_WIDTH)) type = "texture";
             DECAL3D.add(new StaticDecal(grid, face, decal, type, picture, expand));
         }
     },

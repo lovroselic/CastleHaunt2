@@ -1302,6 +1302,7 @@ const WORLD = {
 
         for (let [index, value] of GA.map.entries()) {
             let grid = GA.indexToGrid(index);
+            let initial = value;
             value &= (2 ** GA.gridSizeBit - 1 - (MAPDICT.FOG + MAPDICT.RESERVED + MAPDICT.ROOM));
             switch (value) {
                 case MAPDICT.EMPTY:
@@ -1325,7 +1326,7 @@ const WORLD = {
                     this.addCube(Y + 1, grid, "ceil");
                     break;
                 default:
-                    console.error("world building GA value error", value);
+                    console.error("world building GA value error", value, initial, "grid", grid);
             }
         }
 
@@ -3547,7 +3548,7 @@ class $3D_Entity {
         this.storageLog();
         exp += this.xp;
         this.remove();
-        this.IAM.setReindex();
+        if (this.IAM.usingReIndex) this.IAM.setReindex();
         this.dropInventory();
         EXPLOSION3D.add(new (eval(this.deathType))(this.moveState.pos.translate(DIR_UP, this.midHeight)));
         this.IAM.hero.incExp(exp, expType);

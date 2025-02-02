@@ -1059,7 +1059,7 @@ const ORACLE_TYPE = {
         sprite: "HealthAdvisor",
         category: 'crest',
         voice: "Female2",
-        text: "If you don't want to get trasparent, you should eat some cake. That will make you more full, fool.",
+        text: "If you don't want to get transparent, you should eat some cake. That will make you more full, fool.",
         interactionCategory: "oracle",
     },
     WhereDoYouWantToStart: {
