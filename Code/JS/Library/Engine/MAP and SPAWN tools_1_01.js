@@ -15,7 +15,7 @@ const MAP_TOOLS = {
     INI: {
         FOG: true, //true
         GA_BYTE_SIZE: 2,
-        SPAWN_DELAY_INC_FACTOR: 1.5,
+        SPAWN_DELAY_INC_FACTOR: 1.2,
         LEGACY_WIDTH: 512,
         TEXTURE_WIDTH: 1024,
         VERBOSE: false,
@@ -26,7 +26,7 @@ const MAP_TOOLS = {
         if (MAP[level].map.killCount >= MAP[level].map.killCountdown) {
             MAP[level].map.killCountdown = Math.max(1, --MAP[level].map.killCountdown);
             MAP[level].map.maxSpawned = Math.max(1, --MAP[level].map.maxSpawned);
-            if (MAP[level].map.killCountdown === 1) MAP[level].map.killCountdown = Infinity;
+            if (MAP[level].map.killCountdown === 1) MAP[level].map.killCountdown = 999;
             MAP[level].map.spawnDelay = Math.round(MAP[level].map.spawnDelay * MAP_TOOLS.INI.SPAWN_DELAY_INC_FACTOR);
             MAP[level].map.killCount = 0;
             LAIR.set_timeout(MAP[level].map.spawnDelay);
@@ -86,6 +86,11 @@ const MAP_TOOLS = {
             this.MAP[level].name = `Room - ${level}`;
         }
         /** initialize global map proterties */
+        /**
+        MAP[GAME.level].map.killsRequiredToStopSpawning = 28;
+        MAP[GAME.level].map.stopSpawning = false;
+        MAP[GAME.level].map.spawnDelay = 7500;
+         */
         const SG = this.MAP[level].sg || null;
         this.MAP[level].map.sg = SG;
         this.MAP[level].map.storage = new IAM_Storage();

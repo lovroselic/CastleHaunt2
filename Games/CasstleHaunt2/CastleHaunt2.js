@@ -103,7 +103,10 @@ const DEBUG = {
             HERO.inventory.key.push(K);
         }
         TITLE.keys();
-    }
+    },
+    killStatus() {
+        console.warn("level:", GAME.level, "totalKills", MAP[GAME.level].map.totalKills, "killsRequiredToStopSpawning", MAP[GAME.level].map.killsRequiredToStopSpawning, "stopped", MAP[GAME.level].map.stopSpawning, "delay", MAP[GAME.level].map.spawnDelay);
+    },
 };
 
 const INI = {
@@ -135,7 +138,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.05",
+    VERSION: "0.22.06",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -799,7 +802,6 @@ const GAME = {
         AI.immobileWander = true;
 
         GAME.completed = false;
-        //GAME.lives = 3;
         GAME.lives = 1;
         GAME.level = 1;                 //1           
         GAME.gold = 1;
@@ -821,11 +823,11 @@ const GAME = {
         SAVE_GAME.pointers = [...HERO.attributesForSaveGame,
             'GAME.level', 'GAME.gold',
             "HERO.inventory.item", "HERO.inventory.key",
-            "GAME.loadWayPoint",
+            "GAME.loadWayPoint", "GAME.lives"
         ];
         SAVE_GAME.lists = ["HERO.inventory.scroll"];
         SAVE_GAME.timers = ["Main"];
-        SAVE_GAME.map_properties = ["killCount", "maxSpawned", "killCountdown", "spawnDelay", "totalKills", "stopSpawning"];
+        SAVE_GAME.map_properties = ["killCount", "maxSpawned", "killCountdown", "spawnDelay", "totalKills", "stopSpawning","killsRequiredToStopSpawning"];
         //end SAVE
 
         //load from checkpoint
@@ -1343,6 +1345,7 @@ const GAME = {
             console.log("HERO.orbsLost", HERO.orbsLost);
             console.info("Inventory:");
             DEBUG.displayInv();
+            DEBUG.killStatus();
             console.log("#######################################################");
             ENGINE.GAME.keymap[ENGINE.KEY.map.F9] = false;
         }
@@ -1547,8 +1550,7 @@ const GAME = {
         console.info("RESURECT");
         ENGINE.clearLayer("text");
         HERO.revive();
-        //ENTITY3D.POOL.clear(); //will also remove bosses!
-        ENTITY3D.POOL = ENTITY3D.POOL.filter(enemy => enemy.boss === true); //removes all but bosses, explicit check!
+        ENTITY3D.POOL = ENTITY3D.POOL.filter(enemy => enemy && enemy.boss === true); //removes all but bosses, explicit check!
         MISSILE3D.POOL.clear();
         GAME.levelStart();
     },
@@ -1613,7 +1615,7 @@ const GAME = {
         if (ENGINE.GAME.keymap[ENGINE.KEY.map.enter]) GAME.previously.next();
 
     },
-    slideFrameDraw() { 
+    slideFrameDraw() {
         GAME.previously.verticalText.draw();
     },
 };
@@ -2085,7 +2087,7 @@ const TITLE = {
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         const RD = new RenderData("Pentagram", 30, "#DAA520", "text", "#000", 1, 1, 1);
-        const layers = {title: "title", sprite: "background"}
+        const layers = { title: "title", sprite: "background" }
         GAME.previously = new SlideShow(INTRO_MOV, TITLE.startTitle, RD, layers);
         GAME.previously.next();
         SPEECH.use("Princess");

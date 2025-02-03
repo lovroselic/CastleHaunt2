@@ -5167,7 +5167,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "You won't believe this, but I found a sapphire on the beach! Trade me two shells, and it's yours.",
             progress: "One shell down, but I need two for the trade. Keep searching!",
-            conclusion: "Two shells? Deal! Here’s your sapphire. Who knew beachcombing could be so lucrative?"
+            conclusion: "Two shells? Deal! Here's your sapphire. Who knew beachcombing could be so lucrative?"
         }
     },
     RocketScientist: {
@@ -5440,7 +5440,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "I'm stuck down here, my barrels are gone! Bring me three, and I'll share just one.",
             progress: "A barrel here, a barrel there... Keep 'em coming, we're almost there!",
-            conclusion: "Three barrels back, my cellar's cheer! Enjoy this prize — a glass of beer!"
+            conclusion: "Three barrels back, my cellar's cheer! Enjoy this prize, a glass of beer!"
         }
     },
     ApparitiaCorruption: {
@@ -5815,7 +5815,7 @@ const INTERACTION_ENTITY = {
         wants: ["BabySheep", "Scissors", "RedColor"],
         gives: "Shawl",
         text: {
-            intro: "A sheep to prune, scissors to snip, and red to dye-bring them all, and a fine shawl is nigh.",
+            intro: "A sheep to prune, scissors to snip, and red to dye. Bring them all, and a fine shawl is nigh.",
             progress: "You've found one, but not the rest, Keep searching, so I can weave my best.",
             conclusion: "With sheep, scissors, and red all in hand, your new shawl is ready, just as planned."
         }
@@ -5908,7 +5908,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "I can dive deep for that lost pearl, but I need the right gear. Bring me a scuba mask and fins, and I'll fetch it for you.",
             progress: "I've got some gear, but I still need the rest before I dive.",
-            conclusion: "All set! I'll dive and retrieve your pearl. Here you go — straight from the depths!"
+            conclusion: "All set! I'll dive and retrieve your pearl. Here you go, straight from the depths!"
         }
     },
     Finette: {
@@ -5921,7 +5921,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "From ocean's depths, a plea for respect, Ancestors' remains, I wish to collect.",
             progress: "One relic returned to the sea's embrace, Seek another, to complete the grace.",
-            conclusion: "Ancestors honored, their rest now serene, For you, a spare set of fins — a small, fitting tribute from the sea."
+            conclusion: "Ancestors honored, their rest now serene, For you, a spare set of fins, a small, fitting tribute from the sea."
         }
     },
     BootMaker: {
@@ -5932,7 +5932,7 @@ const INTERACTION_ENTITY = {
         wants: ["LeatherHide", "LeatherHide"],
         gives: "HikingBoot",
         text: {
-            intro: "So, you want a hiking boot? Well, I could whip one up, but I'll need two pieces of hide — from a 'dangerous' beast. Yep, a cow.",
+            intro: "So, you want a hiking boot? Well, I could whip one up, but I'll need two pieces of hide, from a 'dangerous' beast. Yep, a cow.",
             progress: "One hide down, but I still need another from that 'fearsome' cow before I can finish your masterpiece.",
             conclusion: "Two hides? Wow, you survived the cows! Here's your one hiking boot. Maybe you'll find the other... someday."
         }
@@ -6010,7 +6010,7 @@ const INTERACTION_ENTITY = {
         wants: ["Moon", "Moon"],
         gives: "Moonstone",
         text: {
-            intro: "I collect moons — two are already mine, but I need two more to complete my collection. Bring them to me, and I'll gift you a MoonStone.",
+            intro: "I collect moons, two are already mine, but I need two more to complete my collection. Bring them to me, and I'll gift you a MoonStone.",
             progress: "One moon shines in my hand, but the collection is still incomplete.",
             conclusion: "With two more moons, my collection is now whole. As promised, here's your MoonStone, glowing with celestial energy."
         }
@@ -6077,7 +6077,7 @@ const INTERACTION_ENTITY = {
         text: {
             intro: "I need two perfect shells to complete my - um, beach outfit. Help me out, and I'll give you this Gold Key. No space for it in this tight bikini, anyway!",
             progress: "One shell down, but I still need another to finish the look!",
-            conclusion: "Thanks! Now my bra is  complete. Here's the Gold Key—trust me, I wasn't hiding it anywhere in this bikini."
+            conclusion: "Thanks! Now my bra is  complete. Here's the Gold Key,trust me, I wasn't hiding it anywhere in this bikini."
         }
     },
     Rugrat: {
@@ -6359,7 +6359,7 @@ const INTERACTION_SHRINE = {
         wants: ["GoldCoin"],
         gives: "Attack",
         text: {
-            intro: "Climbing mountains isn't just about endurance. It iss about strength and precision. For a gold coin, I'll teach you to fight like you're scaling the highest peaks.",
+            intro: "Climbing mountains isn't just about endurance. It is about strength and precision. For a gold coin, I'll teach you to fight like you're scaling the highest peaks.",
             progress: null,
             conclusion: "With that coin, you've gained the strength and agility of a climber. Now scale your battles with ease!"
         }

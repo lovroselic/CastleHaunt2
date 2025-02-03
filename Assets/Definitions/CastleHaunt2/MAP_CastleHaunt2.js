@@ -62,7 +62,7 @@ const MAP_TEXT = {
     50: "",
     51: "",
     52: "",
-    53: "",
+    53: "I can gat new boots here. With higher heels.",
     54: "",
     55: "",
     56: "",
@@ -1085,7 +1085,7 @@ const MAP = {
         floor: "GrassMeadow101",
         ceil: "Overcast2",
         start: '[148,5]',
-        lights: '[[110,1,"Lights112","standardDimmed"],[121,1,"Lights112","standardDimmed"],[197,7,"Lights112","standardDimmed"],[201,7,"Lights112","standardDimmed"]]',
+        lights: '[[110,1,"Sun1","standardDimmed"],[121,1,"Sun2","standardDimmed"],[197,7,"Sun1","standardDimmed"],[201,7,"Sun2","standardDimmed"]]',
         gates: '[[147,5,"43.1","42.2","Closed"],[167,3,"43.2","44.1","Closed"],[10,7,"43.3","45.1","Up"]]',
         monsters: '[[68,"AngrySheep"],[79,"AngrySheep"],[239,"AngrySheep"],[243,"AngrySheep"]]',
         gold: '[[72,"SilverBar"],[87,"SilverBar"],[192,"SilverBar"],[234,"SilverBar"],[261,"SilverBar"],[186,"SilverBar"],[246,"SilverBar"],[156,"SilverBar"],[117,"SilverBar"],[59,"SilverBar"]]',
@@ -1121,7 +1121,7 @@ const MAP = {
         monsterList: '["MissGalaxyGold","Goblin","GhostMinion"]',
     }
     ,
-    45: {
+    45 : {
         name: "Alps",
         sg: 0,
         maxSpawned: 4,
@@ -1133,7 +1133,7 @@ const MAP = {
         ceil: "Overcast1",
         start: '[202,1]',
         decals: '[[91,7,"Hills5","texture"],[92,7,"Hills5","texture"],[121,1,"Hills5","texture"],[122,1,"Hills5","texture"],[92,5,"Hills5","texture"],[122,5,"Hills5","texture"],[102,7,"Hills1","texture"],[103,7,"Hills1","texture"],[132,1,"Hills1","texture"],[133,1,"Hills1","texture"],[102,3,"Hills1","texture"],[132,3,"Hills1","texture"]]',
-        lights: '[[18,7,"Candelabra08","standard"],[26,7,"Candelabra08","standard"],[199,1,"Candelabra10","standardDimmed"],[205,1,"Candelabra10","standardDimmed"]]',
+        lights: '[[18,7,"Sun1","standard"],[26,7,"Sun2","standard"],[199,1,"Sun2","standardDimmed"],[205,1,"Sun1","standardDimmed"]]',
         gates: '[[217,1,"45.1","43.3","Down"]]',
         monsters: '[[67,"AngrySheep"],[107,"AngrySheep"],[117,"AngrySheep"]]',
         gold: '[[16,"RedGem"],[28,"RedGem"],[49,"GoldBar"],[70,"GoldBar"],[167,"GoldBar"],[161,"GoldBar"]]',
@@ -1143,7 +1143,7 @@ const MAP = {
         trainers: '[[105,5,"Alpinist"]]',
         lairs: '[[1,7,"Lair01"],[13,7,"Lair27"],[179,3,"Lair15"],[165,5,"Lair23"]]',
         monsterList: '["AngrySheep"]',
-    }
+        }
     ,
     46: {
         name: "KeyMistress",
