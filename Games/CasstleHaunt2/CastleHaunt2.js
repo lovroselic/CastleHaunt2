@@ -107,6 +107,25 @@ const DEBUG = {
     killStatus() {
         console.warn("level:", GAME.level, "totalKills", MAP[GAME.level].map.totalKills, "killsRequiredToStopSpawning", MAP[GAME.level].map.killsRequiredToStopSpawning, "stopped", MAP[GAME.level].map.stopSpawning, "delay", MAP[GAME.level].map.spawnDelay);
     },
+    displayCompleteness() {
+        console.log("HERO position", Vector3.toGrid(HERO.player.pos));
+        const remains = ITEM3D.POOL.filter(el => el.active);
+        if (remains.length > 0) {
+            console.log("remains", remains);
+            console.log("---- remaining items ----");
+            for (const item of remains) {
+                console.log(item.id, item.name, item.grid, item.instanceIdentification, "category", item.category);
+            }
+        }
+        console.log("-------------------------------------------");
+        const int_decals = INTERACTIVE_DECAL3D.POOL.filter(el => el.interactive);
+        if (int_decals.length > 0) {
+            console.log("int_decals", int_decals);
+            for (const ent of int_decals) {
+                console.log(ent.id, ent.name, ent.grid, ent.wants);
+            }
+        }
+    }
 };
 
 const INI = {
@@ -138,7 +157,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.06",
+    VERSION: "0.22.07",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -803,7 +822,7 @@ const GAME = {
 
         GAME.completed = false;
         GAME.lives = 1;
-        GAME.level = 1;                 //1           
+        GAME.level = 35;                 //1           
         GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D", "LAIR"];
@@ -827,7 +846,7 @@ const GAME = {
         ];
         SAVE_GAME.lists = ["HERO.inventory.scroll"];
         SAVE_GAME.timers = ["Main"];
-        SAVE_GAME.map_properties = ["killCount", "maxSpawned", "killCountdown", "spawnDelay", "totalKills", "stopSpawning","killsRequiredToStopSpawning"];
+        SAVE_GAME.map_properties = ["killCount", "maxSpawned", "killCountdown", "spawnDelay", "totalKills", "stopSpawning", "killsRequiredToStopSpawning"];
         //end SAVE
 
         //load from checkpoint
@@ -1346,6 +1365,7 @@ const GAME = {
             console.info("Inventory:");
             DEBUG.displayInv();
             DEBUG.killStatus();
+            DEBUG.displayCompleteness();
             console.log("#######################################################");
             ENGINE.GAME.keymap[ENGINE.KEY.map.F9] = false;
         }

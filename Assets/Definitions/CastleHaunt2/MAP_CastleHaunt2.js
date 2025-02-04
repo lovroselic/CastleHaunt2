@@ -55,14 +55,14 @@ const MAP_TEXT = {
     43: "",
     44: "",
     45: "So cold and windy.",
-    46: "",
+    46: "I hope I will not lose myself in this maze.",
     47: "",
     48: "",
     49: "",
     50: "",
     51: "",
     52: "",
-    53: "I can gat new boots here. With higher heels.",
+    53: "I can get new boots here. With higher heels.",
     54: "",
     55: "",
     56: "",
@@ -901,7 +901,7 @@ const MAP = {
         start: '[25,7]',
         decals: '[[23,7,"HalfLife91","picture"],[27,7,"AI_pic227","picture"],[15,7,"Domme218","picture"],[1,7,"TombRaider101","picture"],[257,1,"AticAtac204","picture"],[269,1,"Babes407","picture"],[34,5,"CastleBabes13","picture"],[103,5,"DigDug2","picture"],[188,5,"AI_Pic_144","picture"],[238,5,"AI_PIC_306","picture"],[50,3,"SeaWolf60","picture"],[117,3,"AI_pic239","picture"],[202,3,"MontyMole111","picture"],[254,3,"FF5","picture"]]',
         lights: '[[259,1,"Candelabra06","standard"],[267,1,"Candelabra06","standard"],[66,3,"Lights108","standard"],[52,5,"Candelabra15","standard"]]',
-        gates: '[[8,7,"35.1","34.1","Open"]]',
+        gates: '[[8,7,"35.1","34.2","Closed"]]',
         scrolls: '[[55,15],[63,16],[195,12]]',
         gold: '[[256,"GreenGem"],[270,"RedGem"],[154,"GoldBar"],[168,"GoldBar"]]',
         containers: '[[18,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",7],[32,"Barrel","GOLD_ITEM_TYPE.GoldBar",7]]',
@@ -1145,7 +1145,7 @@ const MAP = {
         monsterList: '["AngrySheep"]',
         }
     ,
-    46: {
+    46 : {
         name: "KeyMistress",
         sg: 0,
         maxSpawned: 6,
@@ -1156,7 +1156,7 @@ const MAP = {
         floor: "MossyWall33",
         ceil: "GoldBlackWallwithPillar",
         start: '[187,3]',
-        decals: '[[205,3,"LaughingSkeleton2","crest"],[163,3,"LaughingSkeleton2","crest"],[163,5,"LaughingSkeleton1","crest"],[205,5,"LaughingSkeleton1","crest"],[182,5,"LaughingSkeleton6","crest"],[121,5,"RedWarrior1","picture"],[226,5,"BookShelf19","picture"],[59,5,"AI_Pic_123","picture"],[54,5,"GirlSwims02","picture"],[109,5,"Domme108","picture"],[189,5,"RobinsonsRequiem1","picture"],[231,5,"Domme340","picture"],[90,5,"ZimSalaBim201","picture"],[239,5,"Witcher102","picture"],[285,5,"CastleLady42","picture"],[63,5,"Domme132","picture"],[273,5,"Pacman201","picture"],[215,1,"ApparitiaFrame239","picture"],[355,1,"Babes405","picture"],[265,1,"Morana041","picture"],[280,1,"AI_pic258","picture"],[225,1,"FemaleWarrior206","picture"],[349,1,"Zeppelin89","picture"],[344,1,"Nature04","picture"],[133,1,"Domme358","picture"],[166,1,"Domme348","picture"],[335,3,"AI_Pic_137","picture"],[230,3,"Domme356","picture"],[208,7,"AI_pic235","picture"],[40,3,"Miner70","picture"],[59,3,"ShinyBlackRuberella14","picture"],[36,5,"LargePicLadies12","picture"],[142,3,"TheHobbit14","picture"],[102,3,"CodenameIceman98","picture"],[247,3,"CrawlMaster115","picture"],[178,3,"Paperboy2","picture"],[239,3,"Domme243","picture"],[256,3,"WizardOfWor500","picture"],[214,3,"CastleLady29","picture"],[25,5,"Domme403","picture"],[51,7,"CastleLady43","picture"],[75,3,"Fred100","picture"],[98,5,"KokotoniWilf2","picture"],[180,5,"AztecChallenge100","picture"],[222,5,"Invaders_AI_1","picture"],[220,3,"MrRobot60","picture"],[115,7,"Skull3","crest"],[117,7,"SatanRam9","crest"],[262,1,"DemonSkull2","crest"],[309,1,"SittingSkelly14","crest"],[291,3,"Scramble60","picture"],[215,7,"AI_pic253","picture"],[109,3,"Underwurlde130","picture"],[151,3,"Domme335","picture"],[134,5,"Domme346","picture"]]',
+        decals: '[[205,3,"LaughingSkeleton2","crest"],[163,3,"LaughingSkeleton2","crest"],[163,5,"LaughingSkeleton1","crest"],[205,5,"LaughingSkeleton1","crest"],[182,5,"LaughingSkeleton6","crest"],[121,5,"RedWarrior1","picture"],[226,5,"BookShelf19","picture"],[59,5,"AI_Pic_123","picture"],[54,5,"GirlSwims02","picture"],[109,5,"Domme108","picture"],[189,5,"RobinsonsRequiem1","picture"],[231,5,"Domme340","picture"],[90,5,"ZimSalaBim201","picture"],[239,5,"Witcher102","picture"],[285,5,"CastleLady42","picture"],[63,5,"Domme132","picture"],[273,5,"Pacman201","picture"],[215,1,"ApparitiaFrame239","picture"],[355,1,"Babes405","picture"],[265,1,"Morana041","picture"],[280,1,"AI_pic258","picture"],[225,1,"FemaleWarrior206","picture"],[349,1,"Zeppelin89","picture"],[344,1,"Nature04","picture"],[133,1,"Domme358","picture"],[166,1,"Domme348","picture"],[335,3,"AI_Pic_137","picture"],[230,3,"Domme356","picture"],[208,7,"AI_pic235","picture"],[40,3,"Miner70","picture"],[59,3,"ShinyBlackRuberella14","picture"],[36,5,"LargePicLadies12","picture"],[142,3,"TheHobbit14","picture"],[102,3,"CodenameIceman98","picture"],[247,3,"CrawlMaster115","picture"],[178,3,"Paperboy2","picture"],[239,3,"Domme243","picture"],[256,3,"WizardOfWor500","picture"],[214,3,"CastleLady29","picture"],[25,5,"Domme403","picture"],[51,7,"CastleLady43","picture"],[75,3,"Fred100","picture"],[98,5,"KokotoniWilf2","picture"],[180,5,"AztecChallenge100","picture"],[222,5,"Invaders_AI_1","picture"],[220,3,"MrRobot60","picture"],[115,7,"Skull3","crest"],[117,7,"SatanRam9","crest"],[262,1,"DemonSkull2","crest"],[309,1,"SittingSkelly14","crest"],[291,3,"Scramble60","picture"],[215,7,"AI_pic253","picture"],[109,3,"Underwurlde130","picture"],[151,3,"Domme335","picture"],[134,5,"Domme346","picture"],[16,7,"Apparitias_042","picture"],[89,7,"FemDommes_5008","picture"],[225,7,"C64_ZX_Classics122","picture"],[265,7,"GirlSwims05","picture"],[172,7,"UnusedEntities5004","picture"]]',
         lights: '[[170,7,"Lamp40","standardDimmed"],[80,7,"Candelabra01","weakCandle"],[353,1,"Candelabra03","weakCandle"],[40,7,"Candelabra03","weakCandle"],[11,7,"Candelabra04","weakCandle"],[7,7,"Candelabra05","weakCandle"],[13,7,"Candelabra06","weakCandle"],[341,1,"Candelabra07","weakCandle"],[347,1,"Candelabra08","weakCandle"],[282,1,"Candelabra09","weakCandle"],[133,7,"Candelabra10","weakCandle"],[86,1,"Lamp44","darkgray"]]',
         gates: '[[188,3,"46.1","34.5","Closed"]]',
         keys: '[[191,1]]',
@@ -1170,9 +1170,9 @@ const MAP = {
         oracles: '[[2,7,"Masked"]]',
         lairs: '[[281,7,"Lair06"]]',
         monsterList: '["GhostMinionGreen","Viking","GhostMinion","GhostMinion","AngrySheep","Goblin","MissGalaxyGold","Wolf"]',
-    }
+        }
     ,
-    47: {
+    47 : {
         name: "Smithy",
         sg: 0,
         maxSpawned: 6,
@@ -1185,14 +1185,14 @@ const MAP = {
         start: '[137,5]',
         decals: '[[140,3,"LaughingSkeleton3","crest"],[5,7,"CastleLady107","picture"],[9,7,"Dominatrix11","picture"],[12,7,"BoogaBoo90","picture"],[15,7,"CastleBabes10","picture"],[1,7,"AI_PIC_317","picture"],[88,7,"Domme342","picture"],[190,7,"Witcher103","picture"],[80,7,"BookShelf26","picture"],[211,7,"Domme126","picture"],[83,7,"Unknown502","picture"],[215,7,"Drelbs3","picture"],[185,7,"Princess9","picture"],[154,7,"RedWarrior1","picture"],[189,1,"AI_PIC_315","picture"],[120,1,"CastleLady12","picture"],[195,1,"CrawlMaster131","picture"],[134,1,"Ishar98","picture"],[185,1,"Fred102","picture"],[287,1,"Domme324","picture"],[283,1,"Serpentine50","picture"],[273,1,"CastleBabes13","picture"],[275,1,"AticAtac200","picture"],[88,1,"AI_pic253","picture"],[277,1,"CastleLady50","picture"],[279,1,"LargePicLadies16","picture"],[251,1,"Ishar14","picture"],[199,1,"TombRaider101","picture"],[80,1,"GirlSwims15","picture"],[77,1,"Hero104","picture"],[3,7,"MoonPatrol500","picture"],[134,7,"Domme105","picture"],[76,7,"ShieldDecal08","crest"],[67,3,"CastleLady73","picture"],[74,3,"AI_PIC_314","picture"],[271,3,"Fred21","picture"],[244,3,"Scarab200","picture"],[210,3,"Apshai10","picture"],[203,3,"SVS101","picture"],[169,3,"Domme302","picture"],[101,3,"SVS131","picture"],[133,3,"Tutankhamun88","picture"],[68,5,"ShinyBlackRuberella08","picture"],[17,5,"Barbarian3","picture"],[204,5,"RobinOfTheWood4","picture"],[227,5,"Domme350","picture"],[120,5,"DemonSkull3","crest"],[154,5,"DemonSkull3","crest"],[92,5,"Skull20","crest"],[177,5,"Skull20","crest"],[130,4,"Grate1_128","crest"],[55,5,"CastleLady57","picture"],[240,5,"CastleBabes19","picture"],[45,7,"Pitfall96","picture"],[263,5,"Domme219","picture"],[142,3,"LaughingSkeleton5","crest"],[160,5,"LaughingSkeleton4","crest"]]',
         lights: '[[78,7,"Candelabra17","standardDimmed"],[108,3,"Candelabra17","weakCandle"],[176,3,"Candelabra12","weakCandle"],[33,3,"WallLamp19","standard"],[237,3,"WallLamp35","standard"]]',
-        gates: '[[136,5,"47.1","34.6","Closed"]]',
+        gates: '[[136,5,"47.1","34.6","Up"]]',
         monsters: '[[117,"GhostMinion"],[168,"GhostMinion"],[49,"GhostMinion"],[43,"GhostMinion"],[39,"GhostMinion"],[71,"GhostMinion"],[224,"GhostMinion"],[258,"GhostMinion"],[261,"GhostMinion"],[231,"GhostMinion"],[268,"GhostMinion"],[201,"GhostMinion"],[146,"GhostMinion"]]',
         gold: '[[151,"GoldBar"],[103,"GoldCube"],[69,"GoldCube"],[73,"GoldCube"],[107,"GoldCube"],[22,"GoldCube"],[18,"GoldCube"],[54,"GoldCube"],[26,"GoldCube"],[60,"GoldCube"],[63,"GoldCube"],[29,"GoldCube"],[32,"GoldCube"],[66,"GoldCube"],[171,"GoldCube"],[175,"GoldCube"],[205,"GoldCube"],[209,"GoldCube"],[207,"GoldCube"],[241,"GoldCube"],[243,"GoldCube"],[256,"GoldCube"],[262,"GoldCube"],[228,"GoldCube"],[232,"GoldCube"],[266,"GoldCube"],[270,"GoldCube"],[236,"GoldCube"],[234,"GoldCube"],[200,"GoldCube"],[202,"GoldCube"]]',
         containers: '[[264,"Barrel","INTERACTION_ITEM.LeatherHide",5]]',
         entities: '[[214,1,"AlloyaPinkass"]]',
         objects: '[[117,"GoldBar"],[19,"Cake"],[257,"Cake"],[129,"Steak"]]',
         oracles: '[[125,5,"PacGirl"]]',
-    }
+        }
     ,
     48: {
         name: "Gem Mine",
