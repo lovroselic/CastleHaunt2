@@ -105,7 +105,9 @@ const DEBUG = {
         TITLE.keys();
     },
     killStatus() {
-        console.warn("level:", GAME.level, "totalKills", MAP[GAME.level].map.totalKills, "killsRequiredToStopSpawning", MAP[GAME.level].map.killsRequiredToStopSpawning, "stopped", MAP[GAME.level].map.stopSpawning, "delay", MAP[GAME.level].map.spawnDelay);
+        console.warn("level:", GAME.level, "totalKills", MAP[GAME.level].map.totalKills, "killsRequiredToStopSpawning", MAP[GAME.level].map.killsRequiredToStopSpawning, "stopped", MAP[GAME.level].map.stopSpawning, "delay", MAP[GAME.level].map.spawnDelay,
+            "killCount", MAP[GAME.level].map.killCount, "killCountdown", MAP[GAME.level].map.killCountdown, "maxSpawned", MAP[GAME.level].map.maxSpawned, "lairs:", LAIR.POOL.length
+        );
     },
     displayCompleteness() {
         console.log("HERO position", Vector3.toGrid(HERO.player.pos));
@@ -122,8 +124,21 @@ const DEBUG = {
         if (int_decals.length > 0) {
             console.log("int_decals", int_decals);
             for (const ent of int_decals) {
-                console.log(ent.id, ent.name, ent.grid, ent.wants);
+                console.log(ent.id, ent.name, ent.grid, ent.wants, ent.gives);
             }
+        }
+        console.log("-------------------------------------------");
+        const dynamic = DYNAMIC_ITEM3D.POOL.filter(el => el);
+        if (dynamic.length > 0) {
+            console.log("dynamic", dynamic);
+            for (const din of dynamic) {
+                console.log(din.id, din.name, din.grid);
+            }
+        }
+        console.log("-------------------------------------------");
+        console.log("INTERACTIVE_BUMP3D", INTERACTIVE_BUMP3D);
+        for (const gate of INTERACTIVE_BUMP3D.POOL) {
+            console.log(gate.name, gate.grid, gate.destination.level, gate.color);
         }
     }
 };
@@ -157,7 +172,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.07",
+    VERSION: "0.22.08",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
