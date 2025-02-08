@@ -1435,7 +1435,7 @@ const ORACLE_TYPE = {
         sprite: "ApparitiaBored2",
         category: 'crest',
         voice: "Apparitia",
-        text: "I am bored Princess. Please challenge us. We are waiting.",
+        text: "I am bored, Princess. Please challenge us. We are waiting.",
         interactionCategory: "oracle",
     },
     ApparitiaFashion: {
@@ -5308,9 +5308,9 @@ const INTERACTION_ENTITY = {
         wants: ["Bone"],
         gives: "GoldCoin",
         text: {
-            intro: "Bring the old lady a bone to chew on, would you, dear?.",
+            intro: "Bring the old lady a bone to chew on, would you, dear?",
             progress: null,
-            conclusion: "Excellent! Is it vegan? WHo cares. Here's the gold coin. I have no use for it."
+            conclusion: "Excellent! Is it vegan? Who cares. Here's the gold coin. I have no use for it."
         }
     },
     CatQueen: {

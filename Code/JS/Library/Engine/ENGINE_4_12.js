@@ -114,6 +114,22 @@ const ENGINE = {
   circle: [UP, UpRight, RIGHT, DownRight, DOWN, DownLeft, LEFT, UpLeft],
   dirCircle: [UP, RIGHT, DOWN, LEFT],
   layersToClear: new Set(),
+  disableDefaultKeys() {
+    /** prevent some default keys and behaviour, including tab close*/
+    $(document).keydown(function (event) {
+      if (event.which === 32 || event.which === 13) {
+        event.preventDefault();
+      }
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "w") {
+        event.preventDefault();
+      }
+    });
+
+    window.addEventListener("beforeunload", function (event) {
+      GAME.pause();
+      event.preventDefault();
+    });
+  },
   disableKey(key) {
     $(document).on('keydown keyup keypress', function (event) {
       if (event.which === ENGINE.KEY.map[key]) {

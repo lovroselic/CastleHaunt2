@@ -28,6 +28,7 @@ const DEBUG = {
     INVINCIBLE: false,
     FREE_MAGIC: false,
     keys: true,
+    killAllAllowed: false,
     displayInv() {
         HERO.inventory.scroll.display();
         const list = [];
@@ -38,10 +39,19 @@ const DEBUG = {
         console.log(`"${list.join('", "')}"`);
     },
     kill() {
-        console.log("KILL all");
-        LAIR.stop();
-        ENTITY3D.POOL.clear();
-        MISSILE3D.POOL.clear();
+        if (DEBUG.killAllAllowed) {
+            console.log("KILL all");
+            LAIR.stop();
+            ENTITY3D.POOL.clear();
+            MISSILE3D.POOL.clear();
+        }
+        const alive = ENTITY3D.POOL.filter(el => el);
+        if (alive.length > 0) {
+            console.log("-------------------------------------------");
+            for (const enemy of alive) {
+                console.log(enemy.id, enemy.name, enemy.health);
+            }
+        }
     },
     goto(grid) {
         HERO.player.pos = Vector3.from_Grid(Grid.toCenter(grid), 0.5);
@@ -108,6 +118,7 @@ const DEBUG = {
         console.warn("level:", GAME.level, "totalKills", MAP[GAME.level].map.totalKills, "killsRequiredToStopSpawning", MAP[GAME.level].map.killsRequiredToStopSpawning, "stopped", MAP[GAME.level].map.stopSpawning, "delay", MAP[GAME.level].map.spawnDelay,
             "killCount", MAP[GAME.level].map.killCount, "killCountdown", MAP[GAME.level].map.killCountdown, "maxSpawned", MAP[GAME.level].map.maxSpawned, "lairs:", LAIR.POOL.length
         );
+        console.info(MAP[GAME.level].monsterList);
     },
     displayCompleteness() {
         console.log("HERO position", Vector3.toGrid(HERO.player.pos));
@@ -124,7 +135,7 @@ const DEBUG = {
         if (int_decals.length > 0) {
             console.log("int_decals", int_decals);
             for (const ent of int_decals) {
-                console.log(ent.id, ent.name, ent.grid, ent.wants, ent.gives);
+                console.log(ent.id, ent.name, ent.grid, ent.wants, ent.gives, ent.which, ent.interactionCategory, ent.price);
             }
         }
         console.log("-------------------------------------------");
@@ -136,7 +147,7 @@ const DEBUG = {
             }
         }
         console.log("-------------------------------------------");
-        console.log("INTERACTIVE_BUMP3D", INTERACTIVE_BUMP3D);
+        //console.log("INTERACTIVE_BUMP3D", INTERACTIVE_BUMP3D);
         for (const gate of INTERACTIVE_BUMP3D.POOL) {
             console.log(gate.name, gate.grid, gate.destination.level, gate.color);
         }
@@ -172,7 +183,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.08",
+    VERSION: "0.22.09",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -261,12 +272,7 @@ const PRG = {
         $(ENGINE.topCanvas).css("cursor", "");
 
         $("#startGame").addClass("hidden");
-        $(document).keypress(function (event) {
-            if (event.which === 32 || event.which === 13) {
-                event.preventDefault();
-            }
-        });
-
+        ENGINE.disableDefaultKeys();
         SAVE_GAME.manager_HTML();
         TITLE.startTitle();
     }
@@ -492,6 +498,8 @@ const HERO = {
         this.dead = false;
         this.health = this.maxHealth;
         this.canShoot = true;
+        this.orbs = this.capacity;
+        this.orbsLost = 0;
     },
     bagStart() {
         if (this.hasCapacity) {
@@ -837,7 +845,7 @@ const GAME = {
 
         GAME.completed = false;
         GAME.lives = 1;
-        GAME.level = 35;                 //1           
+        GAME.level = 1;                 //1           
         GAME.gold = 1;
 
         const storeList = ["DECAL3D", "LIGHTS3D", "GATE3D", "VANISHING3D", "ITEM3D", "MISSILE3D", "INTERACTIVE_DECAL3D", "INTERACTIVE_BUMP3D", "ENTITY3D", "EXPLOSION3D", "DYNAMIC_ITEM3D", "LAIR"];
@@ -1367,6 +1375,7 @@ const GAME = {
         if (map[ENGINE.KEY.map.F8]) {
             if (!DEBUG.keys) return;
             DEBUG.kill();
+            ENGINE.GAME.keymap[ENGINE.KEY.map.F8] = false;
         }
         if (map[ENGINE.KEY.map.F9]) {
             if (!DEBUG.keys) return;
@@ -1408,6 +1417,7 @@ const GAME = {
         if (map[ENGINE.KEY.map.ctrl]) {
             HERO.shoot();
             ENGINE.GAME.keymap[ENGINE.KEY.map.ctrl] = false; //NO repeat
+
         }
         if (map[ENGINE.KEY.map.up]) { }
         if (map[ENGINE.KEY.map.down]) { }
