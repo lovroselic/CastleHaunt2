@@ -175,7 +175,7 @@ const INI = {
         HealthBox: 999,
     },
     HEALTH_INC: 8,
-    SCROLL_RANGE: 15,
+    SCROLL_RANGE: 23,
     CRIPPLE_SPEED: 0.1,
     INVISIBILITY_TIME: 60,
     DEFENSE_OFFSET: 10,
@@ -183,7 +183,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.22.09",
+    VERSION: "0.23.00",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -698,7 +698,6 @@ const HERO = {
 
         HERO.ressurection = true;
         GAME.STORE.storeIAM(MAP[GAME.level].map);
-        //console.info("save IAM", MAP[GAME.level].map.store);
         ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
         ENGINE.GAME.ANIMATION.resetTimer();
         ENGINE.GAME.ANIMATION.next(GAME.lifeLostRun);
@@ -838,7 +837,8 @@ const GAME = {
 
         let GameRD = new RenderData("Pentagram", 60, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
-        ENGINE.watchVisibility(GAME.lostFocus);
+        ENGINE.watchVisibility(ENGINE.GAME.lostFocus);
+        ENGINE.GAME.setGameLoop(GAME.run);
         ENGINE.GAME.start(16);
 
         AI.immobileWander = true;
@@ -897,7 +897,7 @@ const GAME = {
     levelExecute() {
         GAME.drawFirstFrame(GAME.level);
         LAIR.start();
-        GAME.resume();
+        ENGINE.GAME.resume();
         HERO.speak("I feel something is wrong in my castle. Shall we investigate? My heels are on. Let's go.");
     },
     setCamera() {
@@ -1042,36 +1042,6 @@ const GAME = {
     },
     titleFrameDraw() {
         GAME.movingText.draw();
-    },
-    lostFocus() {
-        if (GAME.paused || HERO.dead) return;
-        GAME.clickPause();
-    },
-    clickPause() {
-        $("#pause").trigger("click");
-        ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
-    },
-    pause() {
-        if (GAME.paused) return;
-        console.log("%cGAME paused.", PRG.CSS);
-        $("#pause").prop("value", "Resume Game [F4]");
-        $("#pause").off("click", GAME.pause);
-        $("#pause").on("click", GAME.resume);
-        ENGINE.GAME.ANIMATION.next(ENGINE.KEY.waitFor.bind(null, GAME.clickPause, "F4"));
-        ENGINE.TEXT.centeredText("Game Paused", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
-        GAME.paused = true;
-        ENGINE.TIMERS.stop();
-    },
-    resume() {
-        console.log("%cGAME resumed.", PRG.CSS);
-        $("#pause").prop("value", "Pause Game [F4]");
-        $("#pause").off("click", GAME.resume);
-        $("#pause").on("click", GAME.pause);
-        ENGINE.clearLayer("text");
-        ENGINE.TIMERS.start();
-        ENGINE.GAME.ANIMATION.resetTimer();
-        ENGINE.GAME.ANIMATION.next(GAME.run);
-        GAME.paused = false;
     },
     disableViewButton(which) {
         const button_ids = ["#p1", "#p3", "#pt5", "#pt7"];
@@ -1363,11 +1333,10 @@ const GAME = {
             GAME.setOrtoTopDownView();
             return;
         }
-        if (map[ENGINE.KEY.map.F4]) {
-            $("#pause").trigger("click");
-            ENGINE.TIMERS.display();
-            ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
-        }
+
+        ENGINE.GAME.respond(lapsedTime);
+
+
         if (map[ENGINE.KEY.map.F7]) {
             if (!DEBUG.keys) return;
 

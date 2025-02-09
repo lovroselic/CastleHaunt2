@@ -126,7 +126,7 @@ const ENGINE = {
     });
 
     window.addEventListener("beforeunload", function (event) {
-      GAME.pause();
+      ENGINE.GAME.pause();
       event.preventDefault();
     });
   },
@@ -1158,7 +1158,67 @@ const ENGINE = {
       resetTimer() {
         ENGINE.GAME.frame.start = null;
       }
+    },
+    pauseID: "#pause",
+    paused: true,
+    gameLoop: null,
+    textLayer: "text",
+    setGameLoop(func) {
+      ENGINE.GAME.gameLoop = func;
+    },
+    lostFocus() {
+      if (ENGINE.GAME.paused || HERO.dead) return;
+      ENGINE.GAME.clickPause();
+    },
+    clickPause() {
+      $(ENGINE.GAME.pauseID).trigger("click");
+      ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
+    },
+    pause() {
+      /**
+       * F4 key used to pause - hardcoded
+       * text RD should be set before calling this function by the GAME, else defaults are used
+       */
+      if (ENGINE.GAME.paused) return;
+      console.log("%cGAME paused.", ENGINE.CSS);
+      $(ENGINE.GAME.pauseID).prop("value", "Resume Game [F4]");
+      $(ENGINE.GAME.pauseID).off("click", ENGINE.GAME.pause);
+      $(ENGINE.GAME.pauseID).on("click", ENGINE.GAME.resume);
+      ENGINE.GAME.ANIMATION.next(ENGINE.KEY.waitFor.bind(null, ENGINE.GAME.clickPause, "F4"));
+      ENGINE.TEXT.centeredText("Game Paused", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);
+      ENGINE.GAME.paused = true;
+      ENGINE.TIMERS.stop();
+    },
+    resume() {
+      /**
+       * default layer text needs to exist before calling this function, or new one needs to be set, else function with throw uncaught exception
+       * F4 key used to pause - hardcoded
+       */
+      console.log("%cGAME resumed.", ENGINE.CSS);
+      $(ENGINE.GAME.pauseID).prop("value", "Pause Game [F4]");
+      $(ENGINE.GAME.pauseID).off("click", ENGINE.GAME.resume);
+      $(ENGINE.GAME.pauseID).on("click", ENGINE.GAME.pause);
+      ENGINE.clearLayer(ENGINE.GAME.textLayer);
+      ENGINE.TIMERS.start();
+      ENGINE.GAME.ANIMATION.resetTimer();
+      ENGINE.GAME.ANIMATION.next(ENGINE.GAME.gameLoop);
+      ENGINE.GAME.paused = false;
+    },
+    respond(lapsedTime) {
+      /**
+       * engine specific function to respond to user input
+       * F4 key used to pause - hardcoded
+       */
+
+      //pause game
+      const map = ENGINE.GAME.keymap;
+      if (map[ENGINE.KEY.map.F4]) {
+        $(ENGINE.GAME.pauseID).trigger("click");
+        ENGINE.TIMERS.display();
+        ENGINE.GAME.keymap[ENGINE.KEY.map.F4] = false;
+      }
     }
+
   },
   VIEWPORT: {
     max: {

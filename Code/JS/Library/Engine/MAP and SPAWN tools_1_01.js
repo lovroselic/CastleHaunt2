@@ -87,6 +87,7 @@ const MAP_TOOLS = {
         }
         /** initialize global map proterties */
         /**
+        MAP[GAME.level].map.killCountdown = 4;
         MAP[GAME.level].map.killsRequiredToStopSpawning = 28;
         MAP[GAME.level].map.stopSpawning = false;
         MAP[GAME.level].map.spawnDelay = 7500;
