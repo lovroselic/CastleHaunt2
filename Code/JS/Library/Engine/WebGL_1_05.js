@@ -309,7 +309,6 @@ const WebGL = {
         const gl = this.CTX;
         const paddedWidth = POT(width);
         const paddedHeight = POT(height);
-        //if (true) console.log("new occlusion texture creation", width, height, "->", paddedWidth, paddedHeight, "pixelData", pixelData);
 
         const texture = gl.createTexture();
         gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
@@ -783,7 +782,6 @@ const WebGL = {
         gl.activeTexture(gl.TEXTURE1); // Use texture unit 1
         gl.bindTexture(gl.TEXTURE_2D, map.occlusionMap);
         gl.uniform1i(this.program.uniformLocations.uOcclusionMap, 1);
-        //gl.uniform2f(this.program.uniformLocations.uGridSize, paddedWidth, paddedHeight); //
         gl.uniform2fv(this.program.uniformLocations.uGridSize, new Float32Array([paddedWidth, paddedHeight])); //
 
         //set global uniforms for model program - could be extended to loop over more programs if required
@@ -1959,7 +1957,6 @@ class LightDecal extends Decal {
         this.setPosition(grid, face);
     }
     setPosition(grid, face) {
-        //let off = FaceToOffset(face, WebGL.INI.PIC_OUT);
         let off = FaceToOffset(face, WebGL.INI.LIGHT_OUT);
         let pos = FP_Grid.toClass(grid).add(off);
         this.position = new Vector3(pos.x, 1.0 - WebGL.INI.LIGHT_TOP, pos.y);
@@ -2004,7 +2001,9 @@ class ExternalGate extends Portal {
         }
     }
     block() {
-        //console.warn("WebGL::blocking door", this);
+        /**
+         * this has never been used, it should probably be deprecated
+         */
         this.open = false;
         this.interactive = false;
         this.color = "Blocked";
@@ -2481,7 +2480,7 @@ class Missile extends Drawable_object {
         this.pos = position;
         this.dir = direction;
         this.magic = magic;
-        //this.casterId = casterId;                   //legacy - obsolete
+        //this.casterId = casterId;                   //legacy - obsolete, use friendly flag!
         this.distance = null;
         for (const prop in type) {
             this[prop] = type[prop];
@@ -2518,7 +2517,6 @@ class Missile extends Drawable_object {
         let length = (lapsedTime / 1000) * this.moveSpeed;
         const pos = this.pos.translate(this.dir, length);
         if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(pos)))) {
-            //if (ENGINE.verbose) console.error("..moved to wall, lapsedTime", lapsedTime, "length", length, "old pos", this.pos, "new pos", pos, "old pos in wall", GA.isWall(Grid.toClass(Vector3.to_FP_Grid(this.pos))));
             return this.move(lapsedTime / 2, GA);
         }
         this.pos = pos;
@@ -3339,7 +3337,6 @@ class StaticParticleBomb extends ParticleEmmiter {
         this.callback = this.explode;
     }
     explode() {
-        console.log("StaticParticleBomb EXPLODES", this);
         AUDIO.Fuse.stop();
         EXPLOSION3D.add(new BigFireExplosion(this.pos));
         AUDIO.Explosion.volume = RAY.volume(0);
@@ -3664,8 +3661,6 @@ class $3D_Entity {
             this.applyDamage(damage, exp);
             missile.explode(MISSILE3D);
             missile.drop(GA);
-            //
-            if (this.boss) console.info("boss damage", damage, "health", this.health);
         }
     }
     drainMana() {
@@ -3678,7 +3673,7 @@ class $3D_Entity {
         const manaCost = this.missile.calcMana(this.magic);
         const missile = new this.missile(position, dir, this.missileType, this.magic);
 
-        if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(missile.pos)))) return; //missile wil be created in wall
+        if (GA.isWall(Grid.toClass(Vector3.to_FP_Grid(missile.pos)))) return;               //missile could be created in wall
 
         this.canShoot = false;
         this.caster = false;
@@ -4231,7 +4226,6 @@ const UNIFORM = {
         SPHERE_R: 0.20,
         MIN_VELOCITY_FACTOR: 0.01,
         MAX_VELOCITY_FACTOR: 0.6,
-        MAX_JOINTS: 256,                //compare to model vShader
     },
     setup() {
         this.spherical_distributed(this.INI.MAX_N_PARTICLES, this.INI.SPHERE_R);

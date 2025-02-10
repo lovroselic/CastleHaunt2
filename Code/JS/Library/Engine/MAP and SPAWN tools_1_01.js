@@ -87,6 +87,7 @@ const MAP_TOOLS = {
         }
         /** initialize global map proterties */
         /**
+         * hotfixes:
         MAP[GAME.level].map.killCountdown = 4;
         MAP[GAME.level].map.killsRequiredToStopSpawning = 28;
         MAP[GAME.level].map.stopSpawning = false;
@@ -169,7 +170,6 @@ const SPAWN_TOOLS = {
             if (type === "texture") {
                 decal = TEXTURE[picture];
             } else decal = SPRITE[picture];
-            //console.info("*", picture, decal.width, type);
             if (type === "picture" && (decal.width >= MAP_TOOLS.INI.TEXTURE_WIDTH || decal.height >= MAP_TOOLS.INI.TEXTURE_WIDTH)) {
                 type = "texture";
             } else if (type === "crest" && (decal.width >= MAP_TOOLS.INI.LEGACY_WIDTH || decal.height >= MAP_TOOLS.INI.LEGACY_WIDTH)) type = "texture";
@@ -181,15 +181,15 @@ const SPAWN_TOOLS = {
             const grid = GA.indexToGrid(L[0]);
             const face = DirectionToFace(Vector.fromInt(L[1]));
             const picture = L[2];
-            //console.log("picture",picture);
             const type = L[3];
             const sprite = SPRITE[picture];
             let expand = false;
             let category = "light";
+            // all decals with width above legacy 512 will be expanded as they are considered crests
             if (sprite.width >= MAP_TOOLS.INI.LEGACY_WIDTH) {
                 expand = true;
                 category = "crest";
-            };                                // all decals with width above legacy 512 will be expanded as they are considered crests
+            };
             LIGHTS3D.add(new LightDecal(grid, face, sprite, category, picture, LIGHT_COLORS[type], expand));
         }
     },

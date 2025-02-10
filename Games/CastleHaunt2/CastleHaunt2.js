@@ -21,13 +21,13 @@ size before cleanmup:
 ////////////////////////////////////////////////////
 
 const DEBUG = {
-    FPS: true,
+    FPS: false,
     SETTING: true,
     VERBOSE: false,
     _2D_display: false,
     INVINCIBLE: false,
     FREE_MAGIC: false,
-    keys: true,
+    keys: false,
     killAllAllowed: false,
     displayInv() {
         HERO.inventory.scroll.display();
@@ -59,9 +59,9 @@ const DEBUG = {
     checkPoint() {
         console.info("DEBUG::Loading from checkpoint, this may clash with LOAD");
 
-        GAME.level = 1; //104, 105
-        GAME.gold = 1711; //1711
-        GAME.lives = 3; //6
+        GAME.level = 1;
+        GAME.gold = 1;
+        GAME.lives = 3;
 
         HERO.hasCapacity = true;
         HERO.capacity = 5;
@@ -75,18 +75,14 @@ const DEBUG = {
         HERO.health = 576;
         HERO.maxHealth = 576;
 
+        let actItems = [];
 
-        let actItems = [
-
-        ];
         for (let obj of actItems) {
             let item = new ActionItem(obj.which, obj.inventorySprite);
             HERO.inventory.scroll.add(item);
         }
 
-        let scrollTypes = [
-
-        ];
+        let scrollTypes = [];
 
         for (let scrType of scrollTypes) {
             let scroll = new Scroll(scrType);
@@ -96,18 +92,14 @@ const DEBUG = {
         TITLE.stack.scrollIndex = Math.max(TITLE.stack.scrollIndex, 0);
         TITLE.scrolls();
 
-        let invItems = [
-
-        ];
+        let invItems = [];
 
         for (let itm of invItems) {
             const item = new NamedInventoryItem(itm, itm);
             HERO.inventory.item.push(item);
         }
 
-        let keys = [
-
-        ];
+        let keys = [];
         for (let key of keys) {
             const K = new Key(key, `${key}Key`);
             HERO.inventory.key.push(K);
@@ -147,7 +139,6 @@ const DEBUG = {
             }
         }
         console.log("-------------------------------------------");
-        //console.log("INTERACTIVE_BUMP3D", INTERACTIVE_BUMP3D);
         for (const gate of INTERACTIVE_BUMP3D.POOL) {
             console.log(gate.name, gate.grid, gate.destination.level, gate.color);
         }
@@ -183,7 +174,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.23.01",
+    VERSION: "0.23.02",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -260,7 +251,7 @@ const PRG = {
         if (DEBUG.VERBOSE) {
             //WebGL.VERBOSE = true;
             //AI.VERBOSE = true;
-            ENGINE.verbose = true;
+            //ENGINE.verbose = true;
             //MAP_TOOLS.INI.VERBOSE = true;
             //SAVE_GAME.debugMode();
         }
@@ -570,7 +561,6 @@ const HERO = {
             missile.remove(MISSILE3D);
         } else {
             const damage = Math.max(missile.calcDamage(HERO.magic, true), 1) - HERO.luck;
-            //console.warn("HERO hit by missile","damage", damage); //
             HERO.applyDamage(damage);
             missile.explode(MISSILE3D);
         }
@@ -657,7 +647,6 @@ const HERO = {
         ];
 
         this.speak(text.chooseRandom());
-        //console.warn("refusing orb:", missile)
         if (missile) {
             missile.drop();
         } else this.dropOrb();
@@ -715,7 +704,6 @@ const HERO = {
         ENGINE.GAME.ANIMATION.next(GAME.gameOverRun);
     },
     raiseStat(which, level = 1) {
-        //console.info("raising stat", which, level);
         this[which] += level;
         this.setDefense();
         TITLE.skills();
@@ -734,7 +722,6 @@ const HERO = {
     },
     setDefense() {
         this.defense = Math.floor(Math.max(0, this.attack - INI.DEFENSE_OFFSET) / INI.DEFENSE_FACTOR);
-        //console.log("DEFENSE", this.defense);
     },
     incStatus(type, level = 1) {
         let Type = type.capitalize();
@@ -832,10 +819,8 @@ const GAME = {
         $(ENGINE.topCanvas).off("click", ENGINE.mouseClick);
         $(ENGINE.topCanvas).css("cursor", "");
         ENGINE.hideMouse();
-
-        $("#pause").prop("disabled", false);
-        $("#pause").off();
-        GAME.paused = true;
+        ENGINE.GAME.pauseBlock();
+        ENGINE.GAME.paused = true;
 
         let GameRD = new RenderData("Pentagram", 60, "#f6602d", "text", "#F22", 2, 2, 2);
         ENGINE.TEXT.setRD(GameRD);
@@ -902,33 +887,6 @@ const GAME = {
         ENGINE.GAME.resume();
         HERO.speak("I feel something is wrong in my castle. Shall we investigate? My heels are on. Let's go.");
     },
-    /**
-     setCamera() {
-        console.warn("**********", WebGL.hero);
-        HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
-        HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
-        HERO.orto_overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 4, new Vector3(0, -1, 0), 0.4, 80);
-
-        switch (WebGL.CONFIG.cameraType) {
-            case "first_person":
-                break;
-            case "third_person":
-                HERO.player.associateExternalCamera(HERO.topCamera);
-                WebGL.setCamera(HERO.topCamera);
-                break;
-            case "top_down":
-                HERO.player.associateExternalCamera(HERO.overheadCamera);
-                WebGL.setCamera(HERO.overheadCamera);
-                break;
-            case "orto_top_down":
-                HERO.player.associateExternalCamera(HERO.orto_overheadCamera);
-                WebGL.setCamera(HERO.orto_overheadCamera);
-                break;
-            default:
-                throw "WebGL.CONFIG.cameraType error";
-        }
-    },
-     */
     setCameraView() {
         WebGL.hero.topCamera = new $3D_Camera(WebGL.hero.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
         WebGL.hero.overheadCamera = new $3D_Camera(WebGL.hero.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
@@ -991,9 +949,9 @@ const GAME = {
         WebGL.updateShaders();
 
         if (WebGL.CONFIG.firstperson) {
-            WebGL.init('webgl', MAP[level].world, textureData, HERO.player, decalsAreSet);              //firstperson
+            WebGL.init('webgl', MAP[level].world, textureData, WebGL.hero.player, decalsAreSet);              //firstperson
         } else {
-            WebGL.init('webgl', MAP[level].world, textureData, HERO.topCamera, decalsAreSet);           //thirdperson
+            WebGL.init('webgl', MAP[level].world, textureData, WebGL.hero.topCamera, decalsAreSet);           //thirdperson
         }
         LAIR.set_timeout(MAP[level].map.spawnDelay);
         console.timeEnd("setWorld");
@@ -1120,7 +1078,7 @@ const GAME = {
             MISSILE3D.draw();
             ENTITY3D.drawVector2D();
             DYNAMIC_ITEM3D.drawVector2D();
-            //WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug);
+            //WebGL.visualizeTexture(map.occlusionMap, map.width, map.height, LAYER.debug); //debug
         }
     },
     processInteraction(interaction) {
@@ -1206,7 +1164,6 @@ const GAME = {
                 AUDIO.Scroll.play();
                 break;
             case 'shrine':
-                console.log("SHRINE", interaction);
                 if (interaction.which === 'health') {
                     interaction.category = 'status';
                     return GAME.processInteraction(interaction);
@@ -1484,7 +1441,6 @@ const GAME = {
         if (MAP[GAME.level].map.stopSpawning) return false;
         if (!LAIR.getSize()) return false;
         if (ENTITY3D.getSize() >= MAP[GAME.level].map.maxSpawned) return false;
-        //console.error("CAN SPAWN");
         return true;
     },
     spawn(lair) {
@@ -1521,7 +1477,7 @@ const GAME = {
         }
     },
     resurect() {
-        console.info("RESURECT");
+        if (DEBUG.VERBOSE) console.info("RESURECT");
         ENGINE.clearLayer("text");
         HERO.revive();
         ENTITY3D.POOL = ENTITY3D.POOL.filter(enemy => enemy && enemy.boss === true); //removes all but bosses, explicit check!
@@ -1558,8 +1514,7 @@ const GAME = {
         ENGINE.TIMERS.stop();
         ENGINE.GAME.ANIMATION.resetTimer();
         TITLE.setEndingCreditsScroll();
-        $("#pause").prop("disabled", true);
-        $("#pause").off();
+        ENGINE.GAME.pauseBlock();
         const layersToClear = ["FPS", "info"];
         layersToClear.forEach(item => ENGINE.layersToClear.add(item));
         ENGINE.clearLayerStack();
@@ -1613,9 +1568,9 @@ const TITLE = {
         goldY: 40,
     },
     startTitle() {
-        console.log("TITLE started");
+        if (DEBUG.VERBOSE) console.log("TITLE started");
         if (AUDIO.Title) AUDIO.Title.play(); //dev
-        $("#pause").prop("disabled", true);
+        ENGINE.GAME.pauseBlock();
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         TITLE.titlePlot();
@@ -1833,7 +1788,6 @@ const TITLE = {
     time() {
         const fs = 14;
         let y = (SPRITE.LineTop.height + fs * 1.2) | 0;
-        //y--;
         let cX = ((ENGINE.sideWIDTH) / 2) | 0;
 
         const CTX = LAYER.time;
@@ -2054,10 +2008,7 @@ const TITLE = {
         $(ENGINE.topCanvas).off("click", ENGINE.mouseClick);
         $(ENGINE.topCanvas).css("cursor", "");
         ENGINE.hideMouse();
-
-        $("#pause").prop("disabled", false);
-        $("#pause").off();
-
+        ENGINE.GAME.pauseBlock();
         TITLE.clearAllLayers();
         TITLE.blackBackgrounds();
         const RD = new RenderData("Pentagram", 30, "#DAA520", "text", "#000", 1, 1, 1);

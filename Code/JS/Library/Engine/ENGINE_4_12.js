@@ -87,7 +87,7 @@ const ENGINE = {
   SHADER_SOURCE: "/Code/GLSL/Shaders/",
   OBJECT_SOURCE: "/Assets/Objects/",
   MODEL_SOURCE: "/Assets/Models/",
-  checkProximity: true,             //check proximity before pixel perfect evaluation of collision to background //very obsolete!!
+  checkProximity: true,                             //check proximity before pixel perfect evaluation of collision to background //very obsolete!!
   LOAD_W: 160,
   LOAD_H: 22,
   autostart: false,
@@ -1181,6 +1181,7 @@ const ENGINE = {
        */
       if (ENGINE.GAME.paused) return;
       console.log("%cGAME paused.", ENGINE.CSS);
+      $(ENGINE.GAME.pauseID).prop("disabled", false);
       $(ENGINE.GAME.pauseID).prop("value", "Resume Game [F4]");
       $(ENGINE.GAME.pauseID).off("click", ENGINE.GAME.pause);
       $(ENGINE.GAME.pauseID).on("click", ENGINE.GAME.resume);
@@ -1195,6 +1196,7 @@ const ENGINE = {
        * F4 key used to pause - hardcoded
        */
       console.log("%cGAME resumed.", ENGINE.CSS);
+      $(ENGINE.GAME.pauseID).prop("disabled", false);
       $(ENGINE.GAME.pauseID).prop("value", "Pause Game [F4]");
       $(ENGINE.GAME.pauseID).off("click", ENGINE.GAME.resume);
       $(ENGINE.GAME.pauseID).on("click", ENGINE.GAME.pause);
@@ -1203,6 +1205,10 @@ const ENGINE = {
       ENGINE.GAME.ANIMATION.resetTimer();
       ENGINE.GAME.ANIMATION.next(ENGINE.GAME.gameLoop);
       ENGINE.GAME.paused = false;
+    },
+    pauseBlock() {
+      $(ENGINE.GAME.pauseID).prop("disabled", true);
+      $(ENGINE.GAME.pauseID).off();
     },
     respond(lapsedTime) {
       /**
@@ -2400,9 +2406,7 @@ const ENGINE = {
           }
         }
       }
-      //cont here
       ENGINE.BLOCKGRID.decalDraw(maze, CTX);
-      //if (ENGINE.verbose) console.log(`%cBLOCKGRID draw ${performance.now() - t0} ms`, ENGINE.CSS); //annoying, keep off
     },
     decalDraw(maze, CTX) {
       const decalWidth = 3;
@@ -3362,9 +3366,9 @@ class $3D_ACTOR {
 }
 class $3D_MoveState {
   constructor(translation_vector, dir, rotation_to_north, parent) {
-    this.pos = translation_vector;              //Vector3
-    this.dir = dir;                             //2D dir
-    this.rotation_to_north = rotation_to_north; // rad
+    this.pos = translation_vector;                            //Vector3
+    this.dir = dir;                                           //2D dir
+    this.rotation_to_north = rotation_to_north;               // rad
     this.parent = parent;
     this.update();
     this.startPos = Vector3.to_FP_Grid(this.pos);
@@ -3386,7 +3390,7 @@ class $3D_MoveState {
   next(dir) {
     if (!dir) throw new Error(`Direction ${dir} not defined error. Stopping execution!`);
     this.startPos = this.endPos;
-    this.dir = dir;                             //2D dir
+    this.dir = dir;                                         //2D dir
     this.endPos = this.startPos.add(this.dir);
     this.realDir = Vector3.to_FP_Grid(this.pos).direction(this.endPos);
     this.moving = true;
@@ -3445,7 +3449,7 @@ class MoveState {
     this.dir = dir || null;
     this.homeGrid = Grid.toClass(startGrid);
     this.endGrid = Grid.toClass(startGrid);
-    this.pos = this.homeGrid; //compatibility with 3D MS
+    this.pos = this.homeGrid;                             //compatibility with 3D MS
     this.moving = false;
     this.gridArray = null;
     if (GA) {

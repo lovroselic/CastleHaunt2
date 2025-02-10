@@ -46,7 +46,7 @@ class IAM {
         this.POOL.push(obj);
         obj.id = this.POOL.length;
         obj.IAM = this;
-        obj.parent = this; //compatibility with AI
+        obj.parent = this;                                  //compatibility with AI
     }
     remove(id) {
         this.POOL[id - 1] = null;
@@ -103,7 +103,7 @@ class IAM {
     }
     setup() {
         let map = this.map;
-        map[this.IA] = new IndexArray(map.width, map.height, 2, 1); //1 bank, 16bit
+        map[this.IA] = new IndexArray(map.width, map.height, 2, 1);                     //1 bank, 16bit
         this.poolToIA(map[this.IA]);
     }
     clean() {
@@ -786,7 +786,7 @@ class Decal_IA_3D extends IAM {
     }
     manage() {
         let map = this.map;
-        map[this.IA] = new IndexArray(map.width, map.height, 2, 1); //1 bank, 16bit
+        map[this.IA] = new IndexArray(map.width, map.height, 2, 1);                             //1 bank, 16bit
         this.poolToIA(map[this.IA]);
     }
     update() {
