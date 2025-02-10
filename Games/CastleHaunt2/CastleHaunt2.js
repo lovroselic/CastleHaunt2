@@ -183,7 +183,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.23.00",
+    VERSION: "0.23.01",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -248,6 +248,8 @@ const PRG = {
         ENGINE.addBOX("ROOM", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["background", "3d_webgl", "info", "text", "FPS", "button", "click"], "side");
         ENGINE.addBOX("SIDE", ENGINE.sideWIDTH, ENGINE.gameHEIGHT, ["sideback", "keys", "time", "scrolls", "orbs", "skills"], "fside");
         ENGINE.addBOX("DOWN", ENGINE.bottomWIDTH, ENGINE.bottomHEIGHT, ["bottom", "bottomText", "subtitle"], null);
+
+        WebGL.HTML.addButtons();
 
         if (DEBUG._2D_display) {
             ENGINE.addBOX("LEVEL", ENGINE.gameWIDTH, ENGINE.gameHEIGHT, ["pacgrid", "grid", "coord", "player"], null);
@@ -687,7 +689,7 @@ const HERO = {
         GAME.lives--;
         TITLE.lives();
         HERO.player.pos.set_y(0.1);
-        GAME.setFirstPerson();
+        WebGL.GAME.setFirstPerson();
         if (GAME.lives <= 0) return HERO.finalDeath();
 
         const grid = Vector3.toGrid(HERO.player.pos);
@@ -888,7 +890,7 @@ const GAME = {
         console.log("starting level", GAME.level);
         WebGL.playerList.clear();                       //requred for restart after resurrection
         GAME.initLevel(GAME.level);
-        GAME.setFirstPerson();                        //my preference
+        WebGL.GAME.setFirstPerson();                        //my preference
         GAME.continueLevel(GAME.level);
     },
     continueLevel(level) {
@@ -900,7 +902,9 @@ const GAME = {
         ENGINE.GAME.resume();
         HERO.speak("I feel something is wrong in my castle. Shall we investigate? My heels are on. Let's go.");
     },
-    setCamera() {
+    /**
+     setCamera() {
+        console.warn("**********", WebGL.hero);
         HERO.topCamera = new $3D_Camera(HERO.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
         HERO.overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
         HERO.orto_overheadCamera = new $3D_Camera(HERO.player, DIR_UP, 4, new Vector3(0, -1, 0), 0.4, 80);
@@ -919,6 +923,31 @@ const GAME = {
             case "orto_top_down":
                 HERO.player.associateExternalCamera(HERO.orto_overheadCamera);
                 WebGL.setCamera(HERO.orto_overheadCamera);
+                break;
+            default:
+                throw "WebGL.CONFIG.cameraType error";
+        }
+    },
+     */
+    setCameraView() {
+        WebGL.hero.topCamera = new $3D_Camera(WebGL.hero.player, DIR_UP, 0.9, new Vector3(0, -0.5, 0), 1, 70);
+        WebGL.hero.overheadCamera = new $3D_Camera(WebGL.hero.player, DIR_UP, 2.5, new Vector3(0, -1, 0), 1, 80);
+        WebGL.hero.orto_overheadCamera = new $3D_Camera(WebGL.hero.player, DIR_UP, 4, new Vector3(0, -1, 0), 0.4, 80);
+
+        switch (WebGL.CONFIG.cameraType) {
+            case "first_person":
+                break;
+            case "third_person":
+                WebGL.hero.player.associateExternalCamera(WebGL.hero.topCamera);
+                WebGL.setCamera(WebGL.hero.topCamera);
+                break;
+            case "top_down":
+                WebGL.hero.player.associateExternalCamera(WebGL.hero.overheadCamera);
+                WebGL.setCamera(WebGL.hero.overheadCamera);
+                break;
+            case "orto_top_down":
+                WebGL.hero.player.associateExternalCamera(WebGL.hero.orto_overheadCamera);
+                WebGL.setCamera(WebGL.hero.orto_overheadCamera);
                 break;
             default:
                 throw "WebGL.CONFIG.cameraType error";
@@ -944,9 +973,11 @@ const GAME = {
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
         HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
         HERO.player.addToTextureMap("invisible", TEXTURE.TheInvisiblePrincess);
-        this.setCamera();
+
+        GAME.setCameraView();
+
         AI.initialize(HERO.player, "3D");
-        this.setWorld(level);
+        GAME.setWorld(level);
         ENTITY3D.resetTime();
     },
     setWorld(level, decalsAreSet = false) {
@@ -1005,10 +1036,7 @@ const GAME = {
     async setup() {
         console.log("GAME SETUP started");
         $("#conv").remove();
-        $("#p1").on("click", GAME.setFirstPerson);
-        $("#p3").on("click", GAME.setThirdPerson);
-        $("#pt5").on("click", GAME.setTopDownView);
-        $("#pt7").on("click", GAME.setOrtoTopDownView);
+        WebGL.GAME.setViewButtons();
         await GAME.initializeImageData();
         const totalPixels = SPRITE.Avatar.width * SPRITE.Avatar.height;
         IMAGE_DATA.INDICES.set(3, "Avatar", totalPixels, IMAGE_DATA.Avatar.data);
@@ -1042,60 +1070,6 @@ const GAME = {
     },
     titleFrameDraw() {
         GAME.movingText.draw();
-    },
-    disableViewButton(which) {
-        const button_ids = ["#p1", "#p3", "#pt5", "#pt7"];
-        for (const btn of button_ids) {
-            if (btn !== which) {
-                $(btn).prop("disabled", false);
-            }
-        }
-        $(which).prop("disabled", true);
-    },
-    setFirstPerson() {
-        GAME.disableViewButton("#p1");
-        if (WebGL.CONFIG.cameraType === "first_person") return;
-        //console.info("#### Setting FIRST person view ####");
-        WebGL.CONFIG.set("first_person", true);
-        HERO.player.clearCamera();
-        HERO.player.moveSpeed = 2.0;
-        WebGL.setCamera(HERO.player);
-    },
-    setThirdPerson() {
-        GAME.disableViewButton("#p3");
-        if (WebGL.CONFIG.cameraType === "third_person") return;
-        //console.info("#### Setting THIRD person view ####");
-        WebGL.CONFIG.set("third_person", true);
-        HERO.player.associateExternalCamera(HERO.topCamera);
-        HERO.player.moveSpeed = 2.0;
-        WebGL.setCamera(HERO.topCamera);
-        //position  update
-        HERO.player.camera.update();
-        HERO.player.matrixUpdate();
-    },
-    setTopDownView() {
-        GAME.disableViewButton("#pt5");
-        if (WebGL.CONFIG.cameraType === "top_down") return;
-        //console.info("*** Setting TOP DOWN view ***");
-        WebGL.CONFIG.set("top_down", true);
-        HERO.player.associateExternalCamera(HERO.overheadCamera);
-        HERO.player.moveSpeed = 2.0;
-        WebGL.setCamera(HERO.overheadCamera);
-        //position  update
-        HERO.player.camera.update();
-        HERO.player.matrixUpdate();
-    },
-    setOrtoTopDownView() {
-        GAME.disableViewButton("#pt7");
-        if (WebGL.CONFIG.cameraType === "orto_top_down") return;
-        //console.info("*** Setting ORTO TOP DOWN view ***");
-        WebGL.CONFIG.set("orto_top_down", true);
-        HERO.player.associateExternalCamera(HERO.orto_overheadCamera);
-        HERO.player.moveSpeed = 2.0;
-        WebGL.setCamera(HERO.orto_overheadCamera);
-        //position  update
-        HERO.player.camera.update();
-        HERO.player.matrixUpdate();
     },
     drawFirstFrame(level) {
         if (DEBUG.VERBOSE) console.log("drawing first frame");
@@ -1315,31 +1289,16 @@ const GAME = {
     },
     respond(lapsedTime) {
         if (HERO.dead) return;
-        HERO.player.respond(lapsedTime);
-        const map = ENGINE.GAME.keymap;
-        if (map[ENGINE.KEY.map["1"]]) {
-            GAME.setFirstPerson();
-            return;
-        }
-        if (map[ENGINE.KEY.map["3"]]) {
-            GAME.setThirdPerson();
-            return;
-        }
-        if (map[ENGINE.KEY.map["5"]]) {
-            GAME.setTopDownView();
-            return;
-        }
-        if (map[ENGINE.KEY.map["7"]]) {
-            GAME.setOrtoTopDownView();
-            return;
-        }
 
+        HERO.player.respond(lapsedTime);
+        WebGL.GAME.respond(lapsedTime);
         ENGINE.GAME.respond(lapsedTime);
 
+        const map = ENGINE.GAME.keymap;
 
+        //debug
         if (map[ENGINE.KEY.map.F7]) {
             if (!DEBUG.keys) return;
-
         }
         if (map[ENGINE.KEY.map.F8]) {
             if (!DEBUG.keys) return;
@@ -1354,7 +1313,6 @@ const GAME = {
             console.log("map", MAP[GAME.level].map);
             console.log("MAP", MAP[GAME.level]);
             console.log("HERO", HERO);
-            console.log("HERO.orbsLost", HERO.orbsLost);
             console.info("Inventory:");
             DEBUG.displayInv();
             DEBUG.killStatus();
@@ -1362,6 +1320,8 @@ const GAME = {
             console.log("#######################################################");
             ENGINE.GAME.keymap[ENGINE.KEY.map.F9] = false;
         }
+
+        //controls
         if (map[ENGINE.KEY.map.left]) {
             TITLE.stack.scrollIndex--;
             TITLE.stack.scrollIndex = Math.max(0, TITLE.stack.scrollIndex);
@@ -1457,7 +1417,7 @@ const GAME = {
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
         HERO.player.setPos(start_grid);
         HERO.player.setDir(Vector3.from_2D_dir(start_dir));
-        GAME.setCamera();
+        GAME.setCameraView();
 
         /** SAVE GAME each time */
         GAME.save(destination);                           //to be developed

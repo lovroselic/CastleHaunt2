@@ -1037,7 +1037,98 @@ const WebGL = {
                 }
             }
         }
-    }
+    },
+    HTML: {
+        buttons: `
+        <div>
+            <input type='button' id='p1' value='First person view [1]' disabled="disabled">
+            <input type='button' id='p3' value='Third person view [3]' disabled="disabled">
+            <input type='button' id='pt5' value='Top down view [5]' disabled="disabled">
+            <input type='button' id='pt7' value='Overhead view [7]' disabled="disabled">
+        </div>
+        `,
+        addButtons() {
+            $("#buttons").append(WebGL.HTML.buttons);
+        }
+    },
+    GAME: {
+        setViewButtons() {
+            $("#p1").on("click", WebGL.GAME.setFirstPerson);
+            $("#p3").on("click", WebGL.GAME.setThirdPerson);
+            $("#pt5").on("click", WebGL.GAME.setTopDownView);
+            $("#pt7").on("click", WebGL.GAME.setOrtoTopDownView);
+        },
+        disableViewButton(which) {
+            const button_ids = ["#p1", "#p3", "#pt5", "#pt7"];
+            for (const btn of button_ids) {
+                if (btn !== which) {
+                    $(btn).prop("disabled", false);
+                }
+            }
+            $(which).prop("disabled", true);
+        },
+        setFirstPerson() {
+            WebGL.GAME.disableViewButton("#p1");
+            if (WebGL.CONFIG.cameraType === "first_person") return;
+            WebGL.CONFIG.set("first_person", true);
+            WebGL.hero.player.clearCamera();
+            WebGL.hero.player.moveSpeed = 2.0;
+            WebGL.setCamera(WebGL.hero.player);
+        },
+        setThirdPerson() {
+            WebGL.GAME.disableViewButton("#p3");
+            if (WebGL.CONFIG.cameraType === "third_person") return;
+            WebGL.CONFIG.set("third_person", true);
+            WebGL.hero.player.associateExternalCamera(WebGL.hero.topCamera);
+            WebGL.hero.player.moveSpeed = 2.0;
+            WebGL.setCamera(WebGL.hero.topCamera);
+            //position  update
+            WebGL.hero.player.camera.update();
+            WebGL.hero.player.matrixUpdate();
+        },
+        setTopDownView() {
+            WebGL.GAME.disableViewButton("#pt5");
+            if (WebGL.CONFIG.cameraType === "top_down") return;
+            WebGL.CONFIG.set("top_down", true);
+            WebGL.hero.player.associateExternalCamera(WebGL.hero.overheadCamera);
+            WebGL.hero.player.moveSpeed = 2.0;
+            WebGL.setCamera(WebGL.hero.overheadCamera);
+            //position  update
+            WebGL.hero.player.camera.update();
+            WebGL.hero.player.matrixUpdate();
+        },
+        setOrtoTopDownView() {
+            WebGL.GAME.disableViewButton("#pt7");
+            if (WebGL.CONFIG.cameraType === "orto_top_down") return;
+            WebGL.CONFIG.set("orto_top_down", true);
+            WebGL.hero.player.associateExternalCamera(WebGL.hero.orto_overheadCamera);
+            WebGL.hero.player.moveSpeed = 2.0;
+            WebGL.setCamera(WebGL.hero.orto_overheadCamera);
+            //position  update
+            WebGL.hero.player.camera.update();
+            WebGL.hero.player.matrixUpdate();
+        },
+        respond(lapsedTime) {
+            const map = ENGINE.GAME.keymap;
+
+            if (map[ENGINE.KEY.map["1"]]) {
+                WebGL.GAME.setFirstPerson();
+                return;
+            }
+            if (map[ENGINE.KEY.map["3"]]) {
+                WebGL.GAME.setThirdPerson();
+                return;
+            }
+            if (map[ENGINE.KEY.map["5"]]) {
+                WebGL.GAME.setTopDownView();
+                return;
+            }
+            if (map[ENGINE.KEY.map["7"]]) {
+                WebGL.GAME.setOrtoTopDownView();
+                return;
+            }
+        }
+    },
 };
 
 const RAY = {
