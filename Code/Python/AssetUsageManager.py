@@ -3,7 +3,7 @@
 Created on Wed Aug 28 14:35:06 2024
 
 @author: lovro
-v 0.2.0
+v 0.2.1
 """
 
 import os
@@ -30,16 +30,6 @@ with open(map_file, encoding="utf8") as fh:
 
 with open(monster_file, encoding="utf8") as fh:
     monster_data = fh.read()
-
-
-# =============================================================================
-# def search_dirs(directory):
-#     dir_list = []
-#     for root, dirs, files in os.walk(directory):
-#         dir_list.append(root)
-#     return dir_list
-# =============================================================================
-
 
 def search_files(directory, extensions):
     files_list = []
@@ -170,6 +160,8 @@ for room in MAP:
             if (item_category == "GOLD_ITEM_TYPE"):
                 sprite = re.search(texture_regex, ITEM).group(1)
             elif (item_category == "INTERACTION_ITEM"):
+                sprite = re.search(sprite_regex, ITEM).group(1)
+            elif (item_category == "SKILL_ITEM_TYPE"):
                 sprite = re.search(sprite_regex, ITEM).group(1)
             else:
                 print(f"Warning: Not found: '{item_category}'")

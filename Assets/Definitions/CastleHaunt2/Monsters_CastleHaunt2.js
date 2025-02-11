@@ -1320,7 +1320,7 @@ const ORACLE_TYPE = {
     },
     Bathy: {
         name: "Bathy",
-        sprite: "Bathy",
+        sprite: "Bathy2",
         category: 'crest',
         voice: "Female",
         text: "I am resting, saving my strength for the Curse of the Castle Creep 2. Do you think it will be made?",
@@ -3673,7 +3673,7 @@ const INTERACTION_OBJECT = {
         element: "WINE",
         scale: 1.5 / 2 ** 7,
         glueToFloor: true,
-        texture: "Wine",
+        texture: "WineBottle",
         material: MATERIAL.standard,
         rotateToNorth: 0,
         inventorySprite: "Champagne",

@@ -17,6 +17,9 @@ retests:
 size before cleanmup:
     Total File Size: 895.62 MB
     Total Number of Lines: 40204
+size after MaeEditor removal:
+    Total File Size: 895.85 MB
+    Total Number of Lines: 37971
  */
 ////////////////////////////////////////////////////
 
@@ -174,7 +177,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.30.01",
+    VERSION: "0.30.02",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
