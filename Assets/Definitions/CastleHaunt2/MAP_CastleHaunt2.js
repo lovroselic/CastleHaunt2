@@ -974,7 +974,7 @@ const MAP = {
         gates: '[[136,5,"38.1","37.2","Up"],[152,3,"38.2","39.1","Closed"],[11,7,"38.3","57.1","Closed"],[277,1,"38.4","58.1","Closed"]]',
         containers: '[[36,"Barrel","INTERACTION_ITEM.SunScreen",7],[252,"Barrel","INTERACTION_ITEM.Towel",1],[240,"Barrel","GOLD_ITEM_TYPE.GoldBar",1],[48,"Barrel","GOLD_ITEM_TYPE.GoldBar",7],[133,"Barrel","GOLD_ITEM_TYPE.SilverBar",4],[167,"Barrel","GOLD_ITEM_TYPE.SilverBar",4]]',
         entities: '[[280,1,"Scooby"],[220,3,"Finette"],[84,3,"Surfer"],[204,5,"Venus"]]',
-        oracles: '[[68,5,"Bathy"],[8,7,"ApparitiaWet"]]',
+        oracles: '[[68,5,"Bathy2"],[8,7,"ApparitiaWet"]]',
         lairs: '[[5,7,"Lair30"],[283,1,"Lair34"]]',
         monsterList: '["Goblin","Goblin","MissGalaxyGold","GhostMinion"]',
     }
@@ -1431,7 +1431,7 @@ const MAP = {
         gold: '[[22,"GoldBar"],[168,"SilverBar"],[176,"SilverBar"],[72,"SilverBar"],[47,"SilverBar"],[95,"GoldCube"],[143,"GoldCube"],[146,"GoldCube"],[136,"GoldCube"],[116,"GoldCube"]]',
         containers: '[[196,"TreasureChest","GOLD_ITEM_TYPE.GoldBar",5],[208,"PirateChest","GOLD_ITEM_TYPE.GoldBar",3]]',
         objects: '[[21,"Cake"]]',
-        trainers: '[[52,7,"Reaper"]]',
+        trainers: '[[52,7,"TheReaper"]]',
         lairs: '[[2,7,"Lair25"],[12,7,"Lair17"],[220,1,"Lair33"],[214,1,"Lair26"]]',
         monsterList: '["GhostMinion","GhostMinion","GhostMinion","MissGalaxyGold","Goblin"]',
     }

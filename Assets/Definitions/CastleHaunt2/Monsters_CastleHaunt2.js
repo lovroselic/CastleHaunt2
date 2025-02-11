@@ -1318,8 +1318,8 @@ const ORACLE_TYPE = {
         text: "You can please only one, so choose wisely.",
         interactionCategory: "oracle",
     },
-    Bathy: {
-        name: "Bathy",
+    Bathy2: {
+        name: "Bathy2",
         sprite: "Bathy2",
         category: 'crest',
         voice: "Female",
@@ -2590,11 +2590,11 @@ const MONSTER_TYPE = {
         directMagicDamage: true,
         //
         caster: true,
-        shootDistance: 10,
-        stalkDistance: 11,
+        shootDistance: 11,
+        stalkDistance: 10,
         attackSound: "HumanAttack1",
         hurtSound: "Ow",
-        behaviourArguments: [10, ["wanderer"], 11, ["shoot"]],
+        behaviourArguments: [11, ["wanderer"], 10, ["shoot"]],
         moveSpeed: 1.0,
         material: MATERIAL.gold,
         missile: BouncingMissile,
@@ -6327,7 +6327,7 @@ const INTERACTION_SHRINE = {
             conclusion: "With that coin, you've gained the power of fire. Now go burn bright - or burn them down!"
         }
     },
-    Reaper: {
+    TheReaper: {
         name: "TheReaper",
         sprite: "TheReaper",
         category: 'crest',

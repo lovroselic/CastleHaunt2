@@ -235,7 +235,7 @@ for index, row in notLoaded.iterrows():
     file_path = os.path.join(row['path'],row['filename'])
     
     if os.path.exists(file_path): 
-        #send2trash(file_path) 
+        send2trash(file_path) 
         print(f"Deleting: {file_path}")
     else:
         print(f"...Not found: {file_path}")

@@ -4196,7 +4196,6 @@ class SlideShow {
     const fs = 64;
     ENGINE.GAME.keymap[ENGINE.KEY.map.enter] = false;
     this.frame++;
-    console.warn("next", this.frame);
     if (this.frame >= this.frameOverflow) return this.exitFunc.call();
 
     TURN.subtitle("ENTER to continue");

@@ -158,6 +158,7 @@ const SPAWN_TOOLS = {
         });
 
         MAP_TOOLS.setOcclusionMap(level);
+        console.info(`Level ${level} spawned.`);
     },
     decals(map, GA) {
         for (const D of map.decals) {

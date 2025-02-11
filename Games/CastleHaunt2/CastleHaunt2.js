@@ -28,6 +28,7 @@ after deletion of not loaded:
 
 const DEBUG = {
     SETTING: true,
+    AUTO_TEST: false,
     FPS: false,
     VERBOSE: false,
     _2D_display: false,
@@ -148,7 +149,19 @@ const DEBUG = {
         for (const gate of INTERACTIVE_BUMP3D.POOL) {
             console.log(gate.name, gate.grid, gate.destination.level, gate.color);
         }
-    }
+    },
+    automaticTests() {
+        console.time("automaticTests");
+        console.info("***** Automatic level testing *****");
+        for (let level = 1; level <= 122; level++) {
+            console.log("testing level", level);
+            GAME.level = level;
+            GAME.levelStart();
+            GAME.frameDraw(17);
+        }
+        console.info("***** Automatic level testing END *****");
+        console.timeEnd("automaticTests");
+    },
 };
 
 const INI = {
@@ -180,7 +193,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.30.03",
+    VERSION: "0.30.04",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -871,14 +884,18 @@ const GAME = {
         }
         //end load
 
-
         LAIR.configure(INI.SPAWN_DELAY, GAME.canSpawn, GAME.spawn, HERO);
+
+        if (DEBUG.AUTO_TEST) {
+            return DEBUG.automaticTests();
+        }
+
         GAME.levelStart();
     },
     deathPlaceDecals: [],
     levelStart() {
         console.log("starting level", GAME.level);
-        WebGL.playerList.clear();                       //requred for restart after resurrection
+        WebGL.playerList.clear();                           //requred for restart after resurrection
         GAME.initLevel(GAME.level);
         WebGL.GAME.setFirstPerson();                        //my preference
         GAME.continueLevel(GAME.level);
@@ -919,7 +936,6 @@ const GAME = {
     initLevel(level) {
         if (DEBUG.VERBOSE) console.info("init level", level);
         this.newDungeon(level);
-
         WebGL.MOUSE.initialize("ROOM");
         WebGL.setContext('webgl');
         this.buildWorld(level);
@@ -933,12 +949,11 @@ const GAME = {
             start_dir = MAP[level].map.startPosition.vector;
             start_grid = MAP[level].map.startPosition.grid;
         }
+
         start_grid = Vector3.from_Grid(Grid.toCenter(start_grid), HERO.height);
         HERO.player = new $3D_player(start_grid, Vector3.from_2D_dir(start_dir), MAP[level].map, HERO_TYPE.ThePrincess);
         HERO.player.addToTextureMap("invisible", TEXTURE.TheInvisiblePrincess);
-
         GAME.setCameraView();
-
         AI.initialize(HERO.player, "3D");
         GAME.setWorld(level);
         ENTITY3D.resetTime();
