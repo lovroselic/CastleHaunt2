@@ -3589,17 +3589,6 @@ const INTERACTION_OBJECT = {
         material: MATERIAL.gold,
         text: "Face on the coin looks like my mother."
     },
-    Blood: {
-        name: "Blood",
-        category: "interaction_item",
-        element: "FLASK",
-        scale: 1.1 / 2 ** 5,
-        glueToFloor: true,
-        texture: "BloodTexture",
-        inventorySprite: "Blood",
-        material: MATERIAL.redShine,
-        text: "Disgusting. Give it to someone else."
-    },
     Milk: {
         name: "Milk",
         category: "interaction_item",
@@ -3883,11 +3872,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "Fly",
         text: "Ugly fly? Who would want that?"
     },
-    Hat: {
-        name: "Hat",
-        category: "interaction_item",
-        inventorySprite: "Hat",
-    },
     Mirror: {
         name: "Mirror",
         category: "interaction_item",
@@ -3917,11 +3901,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "Frog",
         text: "Is that a prince?"
     },
-    MagicWand: {
-        name: "MagicWand",
-        category: "interaction_item",
-        inventorySprite: "MagicWand",
-    },
     Book: {
         name: "Book",
         category: "interaction_item",
@@ -3944,12 +3923,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "BlueRose",
     },
-    Chip: {
-        name: "Chip",
-        category: "interaction_item",
-        inventorySprite: "Chip",
-        text: "An eight bit processor. Priceless."
-    },
     Mushroom: {
         name: "Mushroom",
         category: "interaction_item",
@@ -3961,11 +3934,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "Floppy",
         text: "Floppy disk? I can store my memoirs on it."
-    },
-    Crest: {
-        name: "Crest",
-        category: "interaction_item",
-        inventorySprite: "Crest",
     },
     GoldKey: {
         name: "GoldKey",
@@ -4015,17 +3983,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "RedKey",
         color: "Red"
     },
-    Quill: {
-        name: "Quill",
-        category: "interaction_item",
-        inventorySprite: "Quill",
-    },
-    Blood: {
-        name: "Blood",
-        category: "interaction_item",
-        inventorySprite: "Blood",
-        text: "Blood? Yuck."
-    },
     GoldenBook: {
         name: "GoldenBook",
         category: "interaction_item",
@@ -4054,11 +4011,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "LittleChicken",
     },
-    ChickenBones: {
-        name: "ChickenBones",
-        category: "interaction_item",
-        inventorySprite: "ChickenBones",
-    },
     GoldCoin: {
         name: "GoldCoin",
         category: "interaction_item",
@@ -4083,23 +4035,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "LeoPumps",
         text: "Looks like something Purrscilla would wear."
     },
-    Whip: {
-        name: "Whip",
-        category: "interaction_item",
-        inventorySprite: "Whip",
-        text: "I can punish GhostFace."
-    },
-    Handcuffs: {
-        name: "Handcuffs",
-        category: "interaction_item",
-        inventorySprite: "Handcuffs",
-        text: "Should I arrest or kill GhostFace?"
-    },
-    Revolver: {
-        name: "Revolver",
-        category: "interaction_item",
-        inventorySprite: "Revolver",
-    },
     Sponge: {
         name: "Sponge",
         category: "interaction_item",
@@ -4118,11 +4053,6 @@ const INTERACTION_ITEM = {
         inventorySprite: "Candle",
         text: "Common baby light my fire."
     },
-    Ammo: {
-        name: "Ammo",
-        category: "interaction_item",
-        inventorySprite: "Ammo",
-    },
     GoldBar: {
         name: "GoldBar",
         category: "interaction_item",
@@ -4133,12 +4063,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "LP",
         text: "Some nice death metal."
-    },
-    Ribbon: {
-        name: "Ribbon",
-        category: "interaction_item",
-        inventorySprite: "Ribbon",
-        text: "I will look pretty with this."
     },
     HairBrush: {
         name: "HairBrush",
@@ -4178,12 +4102,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "Diamond",
         text: "Diamond? My best friend."
-    },
-    Wasp: {
-        name: "Wasp",
-        category: "interaction_item",
-        inventorySprite: "Wasp",
-        text: "Stingy?"
     },
     Beer: {
         name: "Beer",
@@ -4241,11 +4159,6 @@ const INTERACTION_ITEM = {
         name: "Egg",
         category: "interaction_item",
         inventorySprite: "Egg",
-    },
-    WolfLeader: {
-        name: "WolfLeader",
-        category: "interaction_item",
-        inventorySprite: "WolfLeader",
     },
     WolfPuppy: {
         name: "WolfPuppy",
@@ -4332,7 +4245,6 @@ const INTERACTION_ITEM = {
         category: "interaction_item",
         inventorySprite: "RedGem",
     },
-    //
     Attack: {
         name: "Attack",
         category: "skill",
@@ -4354,7 +4266,6 @@ const INTERACTION_ITEM = {
         which: "health",
         level: 1,
     },
-    //
     Skull: {
         name: "Skull",
         category: "interaction_item",
@@ -6769,6 +6680,8 @@ const TRAP_ACTIONS = {
     Spawn: listObjectKeys(MONSTER_TYPE)
 };
 const TRAP_ACTION_LIST = listObjectKeys(TRAP_ACTIONS);
+
+/*
 const POTION_TYPES = ["Red", "Blue"];
 const POTION_TEXTURES = ["RedLiquid", "BlueLiquid"];
 const POTION_MATERIAL = ["redShine", "blueShine"];
@@ -6776,7 +6689,9 @@ const POTION_TYPE = {};
 for (let [index, potion] of POTION_TYPES.entries()) {
     POTION_TYPE[potion] = new PotionTypeDefinition(`${potion}Potion`, `${potion}Potion24`, potion.toLowerCase(), POTION_TEXTURES[index], MATERIAL[POTION_MATERIAL[index]]);
 }
+*/
 
+/*
 //lairs
 const maxLair = 11;
 const LairDecals = [];
@@ -6788,3 +6703,4 @@ for (const L of LairDecals) {
     LAIR_TYPE[L] = {};
     LAIR_TYPE[L].sprite = L;
 }
+*/

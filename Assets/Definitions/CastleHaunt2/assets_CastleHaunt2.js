@@ -2,20 +2,8 @@
 /*jshint -W097 */
 /*jshint -W117 */
 /*jshint -W061 */
-//Assets for CastleHaunt2 (and MAzEditor())
+//Assets for CastleHaunt2 (MAzEditor dependencies removed)
 "use strict";
-
-/** MazeEditor dependencies */
-LoadSheetSequences = [
-    { srcName: "BrownWall64.png", count: 12, name: "WallTile", trim: false },
-    { srcName: "BlackWall64.png", count: 2, name: "BackgroundTile", trim: false },
-    { srcName: "d3-64.png", count: 6, name: "D3", trim: false },
-    { srcName: "VertiWall64.png", count: 1, name: "VerticalWall", trim: false },
-    { srcName: "HoriWall64.png", count: 1, name: "HorizontalWall", trim: true },
-    { srcName: "BlockWall64.png", count: 1, name: "BlockWall", trim: false },
-];
-
-/** END */
 
 LoadFonts = [
     { srcName: "PentaGram.ttf", name: "Pentagram" },
@@ -205,7 +193,6 @@ LoadTextures = [
     { srcName: "Wall/GrassTerrain.jpg", name: "GrassTerrain" },
     { srcName: "Wall/GreenDungeonWall.jpg", name: "GreenDungeonWall" },
     { srcName: "Wall/GreenDungeonWall128.jpg", name: "GreenDungeonWall128" },
-    { srcName: "Wall/GreenMetal.jpg", name: "GreenMetal" },
     { srcName: "Wall/GreenMossy.jpg", name: "GreenMossy" },
     { srcName: "Wall/GreenWall1.jpg", name: "GreenWall1" },
     { srcName: "Wall/GreyBricks45.jpg", name: "GreyBricks45" },
@@ -487,7 +474,6 @@ LoadTextures = [
     { srcName: "Wall/StrangeWall1.jpg", name: "StrangeWall1" },
     { srcName: "Wall/ThatchFloor.jpg", name: "ThatchFloor" },
     { srcName: "Wall/ThatchFloor128.jpg", name: "ThatchFloor128" },
-    { srcName: "Wall/Tile.jpg", name: "Tile" },
     { srcName: "Wall/Tile1.jpg", name: "Tile1" },
     { srcName: "Wall/Tile5_48.png", name: "Tile5_48" },
     { srcName: "Wall/TileFloor.jpg", name: "TileFloor" },
@@ -858,9 +844,12 @@ LoadTextures = [
     { srcName: "Wall/Nook1.jpg", name: "Nook1" },
 
     //explosions
-    { srcName: "Wall/GreenMetal.jpg", name: "GreenMetal" },
+    { srcName: "ObjectTextures/GreenMetal.jpg", name: "GreenMetal" },
     { srcName: "ObjectTextures/ScrapedMetal.jpg", name: "ScrapedMetal" },
     { srcName: "ObjectTextures/Explosion3.jpg", name: "Explosion" },
+    { srcName: "ObjectTextures/Tile.jpg", name: "Tile" },
+    { srcName: "ObjectTextures/WoodTexture.jpg", name: "WoodTexture" },
+    { srcName: "ObjectTextures/RedLiquid.jpg", name: "RedLiquid" },
 
     /** object textures */
     { srcName: "ObjectTextures/Explosion2.jpg", name: "Explosion2" },
@@ -911,14 +900,12 @@ LoadTextures = [
     { srcName: "ObjectTextures/RatTexture.jpg", name: "RatTexture" },
     { srcName: "ObjectTextures/RedDragon.jpg", name: "RedDragon" },
     { srcName: "ObjectTextures/RedGoldBat.jpg", name: "RedGoldBat" },
-    { srcName: "ObjectTextures/RedLiquid.jpg", name: "RedLiquid" },
     { srcName: "ObjectTextures/RedMetal.jpg", name: "RedMetal" },
     { srcName: "ObjectTextures/ScrollTexture.jpg", name: "ScrollTexture" },
     { srcName: "ObjectTextures/Skull_texture.jpg", name: "Skull_texture" },
     { srcName: "ObjectTextures/Sword.jpg", name: "Sword" },
     { srcName: "ObjectTextures/TreasureChest.JPG", name: "TreasureChest" },
     { srcName: "ObjectTextures/Wardrobe.jpg", name: "Wardrobe" },
-    { srcName: "ObjectTextures/Wood1.jpg", name: "WoodTexture" },
     { srcName: "ObjectTextures/SpiderGreen.jpg", name: "SpiderGreen" },
     { srcName: "ObjectTextures/WineBottle.jpg", name: "WineBottle" },
     { srcName: "ObjectTextures/Crate2.jpg", name: "Crate2" },
@@ -953,7 +940,6 @@ LoadTextures = [
     { srcName: "ObjectTextures/OrangeMetal.jpg", name: "OrangeMetal" },
     { srcName: "ObjectTextures/CyanMetal.jpg", name: "CyanMetal" },
     { srcName: "ObjectTextures/RedLatexTexture.jpg", name: "RedLatexTexture" },
-
 
     //decal-gates
     { srcName: "Gates/WoodenGate2.jpg", name: "WoodenGate1" },
@@ -1039,6 +1025,9 @@ LoadModels = [
 ];
 
 LoadSprites = [
+    //reserved
+    { srcName: "Reserved/DeathPlace.png", name: "DeathPlace" },
+
     //intro
     { srcName: "Slides/IntroF1.jpg", name: "IntroF1" },
     { srcName: "Slides/IntroF2.jpg", name: "IntroF2" },
@@ -1116,7 +1105,6 @@ LoadSprites = [
     { srcName: "EntityPictures/ApparitiaAirforce.jpg", name: "ApparitiaAirforce" },
     { srcName: "EntityPictures/ApparitiaShades.jpg", name: "ApparitiaShades" },
     { srcName: "EntityPictures/ApparitiaHurt.jpg", name: "ApparitiaHurt" },
-
     { srcName: "EntityPictures/Pinka.jpg", name: "Pinka" },
     { srcName: "EntityPictures/Azura.jpg", name: "Azura" },
     { srcName: "EntityPictures/PrincessOnThrone2.jpg", name: "PrincessOnThroneFinal" },
@@ -1488,7 +1476,6 @@ LoadSprites = [
     { srcName: "Doors/DungeonDoor_Silver2.png", name: "DungeonDoor_Silver" },
     { srcName: "Doors/DungeonDoor_Up3.jpg", name: "DungeonDoor_Up" },
     { srcName: "Doors/DungeonDoor_Down3.jpg", name: "DungeonDoor_Down" },
-
     { srcName: "Doors/DungeonDoor_Cyan.png", name: "DungeonDoor_Cyan" },
     { srcName: "Doors/DungeonDoor_Orange.png", name: "DungeonDoor_Orange" },
     { srcName: "Doors/DungeonDoor_Pink.png", name: "DungeonDoor_Pink" },
@@ -1523,21 +1510,9 @@ LoadSprites = [
     { srcName: "Shrines/PrincessThroneBall.jpg", name: "PrincessThroneBall" },
 
     //scrolls
-    { srcName: "Scrolls/SCR_BoostArmor.png", name: "SCR_BoostArmor" },
-    { srcName: "Scrolls/SCR_BoostWeapon.png", name: "SCR_BoostWeapon" },
     { srcName: "Scrolls/SCR_Cripple2.png", name: "SCR_Cripple" },
-    { srcName: "Scrolls/SCR_DestroyArmor.png", name: "SCR_DestroyArmor" },
-    { srcName: "Scrolls/SCR_DestroyWeapon.png", name: "SCR_DestroyWeapon" },
-    { srcName: "Scrolls/SCR_DrainMana.png", name: "SCR_DrainMana" },
     { srcName: "Scrolls/SCR_Explode2.png", name: "SCR_Explode" },
     { srcName: "Scrolls/SCR_HalfLife2.png", name: "SCR_HalfLife" },
-    { srcName: "Scrolls/SCR_Light.png", name: "SCR_Light" },
-    { srcName: "Scrolls/SCR_Luck.png", name: "SCR_Luck" },
-    { srcName: "Scrolls/SCR_MagicBoost.png", name: "SCR_MagicBoost" },
-    { srcName: "Scrolls/SCR_Map.png", name: "SCR_Map" },
-    { srcName: "Scrolls/SCR_Petrify.png", name: "SCR_Petrify" },
-    { srcName: "Scrolls/SCR_Radar.png", name: "SCR_Radar" },
-    { srcName: "Scrolls/SCR_TeleportTemple.png", name: "SCR_TeleportTemple" },
     { srcName: "Scrolls/SCR_Death.png", name: "SCR_Death" },
     { srcName: "Scrolls/SCR_MagicSupremacy.png", name: "SCR_MagicSupremacy" },
     { srcName: "Scrolls/SCR_DestroyOrbs.png", name: "SCR_DestroyOrbs" },
@@ -1968,7 +1943,6 @@ LoadSprites = [
 
     //ObjDecals - all
     { srcName: "ObjDecals/CrownDecal.png", name: "CrownDecal" },
-    { srcName: "ObjDecals/DeathPlace.png", name: "DeathPlace" },
     { srcName: "ObjDecals/KnightStatue101.png", name: "KnightStatue101" },
     { srcName: "ObjDecals/KnightStatue102.png", name: "KnightStatue102" },
     { srcName: "ObjDecals/KnightStatue103.png", name: "KnightStatue103" },
@@ -2199,7 +2173,6 @@ LoadSprites = [
     { srcName: "ObjDecals/Moss15.png", name: "Moss15" },
 
     //decal-pics - all
-
     { srcName: "PicDecals/BookShelf16.png", name: "BookShelf16" },
     { srcName: "PicDecals/BookShelf17.png", name: "BookShelf17" },
     { srcName: "PicDecals/BookShelf18.png", name: "BookShelf18" },
@@ -2998,7 +2971,6 @@ LoadSprites = [
     { srcName: "PicDecals/Movie.png", name: "Movie" },
     { srcName: "PicDecals/SpyHunter200.png", name: "SpyHunter200" },
     { srcName: "PicDecals/LeisureSuitLarry300.png", name: "LeisureSuitLarry300" },
-
     { srcName: "PicDecals/AI_Pic_102.png", name: "AI_Pic_102" },
     { srcName: "PicDecals/AI_Pic_103.png", name: "AI_Pic_103" },
     { srcName: "PicDecals/AI_Pic_104.png", name: "AI_Pic_104" },
@@ -3047,7 +3019,6 @@ LoadSprites = [
     { srcName: "PicDecals/AI_Pic_147.png", name: "AI_Pic_147" },
     { srcName: "PicDecals/AI_Pic_148.png", name: "AI_Pic_148" },
     { srcName: "PicDecals/AI_Pic_149.png", name: "AI_Pic_149" },
-
     { srcName: "PicDecals/AI_pic201.png", name: "AI_pic201" },
     { srcName: "PicDecals/AI_pic202.png", name: "AI_pic202" },
     { srcName: "PicDecals/AI_pic203.png", name: "AI_pic203" },
@@ -3111,7 +3082,6 @@ LoadSprites = [
     { srcName: "PicDecals/AI_pic261.png", name: "AI_pic261" },
     { srcName: "PicDecals/AI_pic262.png", name: "AI_pic262" },
     { srcName: "PicDecals/AI_pic263.png", name: "AI_pic263" },
-
     { srcName: "PicDecals/AI_PIC_301.png", name: "AI_PIC_301" },
     { srcName: "PicDecals/AI_PIC_302.png", name: "AI_PIC_302" },
     { srcName: "PicDecals/AI_PIC_303.png", name: "AI_PIC_303" },

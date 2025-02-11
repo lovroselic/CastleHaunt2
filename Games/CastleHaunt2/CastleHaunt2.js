@@ -8,9 +8,10 @@
 /*
       
 TODO:
-    * previously movie
+    * game is done
 
 known bugs: 
+    * returning to no save room fucks saving forever!
     * i don't do bugs
 retests:
     * 
@@ -20,12 +21,14 @@ size before cleanmup:
 size after MaeEditor removal:
     Total File Size: 895.85 MB
     Total Number of Lines: 37971
+after deletion of not loaded:
+    Total File Size: 866.69 MB
  */
 ////////////////////////////////////////////////////
 
 const DEBUG = {
-    FPS: false,
     SETTING: true,
+    FPS: false,
     VERBOSE: false,
     _2D_display: false,
     INVINCIBLE: false,
@@ -177,7 +180,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.30.02",
+    VERSION: "0.30.03",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -689,7 +692,6 @@ const HERO = {
         const decal = SPRITE.DeathPlace;
         const deathPlace = new StaticDecal(grid, face, decal, "crest", "DeathPlace", true);
         GAME.deathPlaceDecals.push(deathPlace);
-
         HERO.ressurection = true;
         GAME.STORE.storeIAM(MAP[GAME.level].map);
         ENGINE.TEXT.centeredText("Press ENTER to resurect The Princess", ENGINE.gameWIDTH, ENGINE.gameHEIGHT / 2);

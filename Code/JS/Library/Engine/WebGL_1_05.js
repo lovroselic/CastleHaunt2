@@ -3283,7 +3283,7 @@ class SpawnCloud extends ParticleEmmiter {
 }
 
 class WoodExplosion extends ParticleEmmiter {
-    constructor(position, duration = WebGL.INI.EXPLOSION_DURATION_MS, texture = TEXTURE.Wood1, number = WebGL.INI.EXPLOSION_N_PARTICLES) {
+    constructor(position, duration = WebGL.INI.EXPLOSION_DURATION_MS, texture = TEXTURE.WoodTexture, number = WebGL.INI.EXPLOSION_N_PARTICLES) {
         super(position, texture);
         this.number = number;
         this.duration = duration;
