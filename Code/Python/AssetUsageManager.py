@@ -129,7 +129,7 @@ itr_sprite_regex = re.compile(r'spriteChange:\s*"(\w+)"')
 itr_object_regex = re.compile(r'const\sINTERACTION_OBJECT\s=\s{([\w\W]*?)};')
 
 # =============================================================================
-# # Used - Monsters
+# # Used - interactive items from Monsters
 # =============================================================================
 
 ITEMS = re.search(item_regex, monster_data).group(1)

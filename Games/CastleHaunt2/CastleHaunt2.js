@@ -9,20 +9,13 @@
       
 TODO:
     * game is done
-
 known bugs: 
-    * returning to no save room fucks saving forever!
     * i don't do bugs
 retests:
-    * 
-size before cleanmup:
-    Total File Size: 895.62 MB
-    Total Number of Lines: 40204
-size after MaeEditor removal:
-    Total File Size: 895.85 MB
-    Total Number of Lines: 37971
-after deletion of not loaded:
-    Total File Size: 866.69 MB
+
+after final pruning:
+    Total File Size: 442.05 MB
+    Total Number of Lines: 33519
  */
 ////////////////////////////////////////////////////
 
@@ -193,7 +186,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "0.30.04",
+    VERSION: "0.40.0",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
