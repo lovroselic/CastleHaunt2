@@ -186,7 +186,7 @@ const INI = {
 };
 
 const PRG = {
-    VERSION: "1.0.0",
+    VERSION: "1.1",
     NAME: "Castle Haunt II",
     YEAR: "2024, 2025",
     SG: "CH2",
@@ -216,7 +216,7 @@ const PRG = {
             $("#lib_version").html(LIB.VERSION);
             $("#webgl_version").html(WebGL.VERSION);
             $("#maptools_version").html(MAP_TOOLS.VERSION);
-
+            $("#speech_version").html(SPEECH.VERSION);
         } else {
             $('#debug').hide();
         }
@@ -1038,6 +1038,7 @@ const GAME = {
         if (ENGINE.GAME.stopAnimation) return;
         GAME.movingText.process();
         GAME.titleFrameDraw();
+        SPEECH.silence();
     },
     titleFrameDraw() {
         GAME.movingText.draw();
